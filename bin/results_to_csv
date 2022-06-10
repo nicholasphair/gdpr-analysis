@@ -1,0 +1,116 @@
+#!/usr/bin/env bash
+# Given a path to the output directory, produce a fail.txt and a success.txt
+# csv of the output.
+
+RESULTS_DIR="$1"
+
+SUCCESS="success.csv"
+FAILURE="fail.csv"
+
+join() {
+  sep="$1"
+  shift
+
+  while [ $# -gt 1 ] ; do
+    printf "${1}${sep}"
+    shift
+  done
+  printf "${1}\n"
+}
+
+init_output() {
+  join , \
+    name \
+    pii_found \
+    access_violation \
+    delete_violation \
+    third_party_violation \
+    encryption_violation \
+    violation > $SUCCESS
+
+  cp $SUCCESS $FAILURE
+}
+
+plugin_from_filename() {
+  filename="$1"
+  plugin="$(awk '{print $NF}' <<< $filename)"
+  echo "${plugin%%.txt}"
+}
+
+violated_delete() {
+  res="$(awk '/deletion in violation/{ printf ($NF == "True") ? "true" : "false"}' "$1")"
+  : "${res:=false}"
+  echo "$res"
+}
+
+violated_access() {
+  res="$(awk '/access in violation/{ printf ($NF == "True") ? "true" : "false"}' "$1")"
+  : "${res:=false}"
+  echo "$res"
+}
+
+violated_third_party() {
+  res="$(awk '/third_party in violation/{ printf ($NF == "True") ? "true" : "false"}' "$1")"
+  : "${res:=false}"
+  echo "$res"
+}
+
+violated_encryption() {
+  res="$(awk '/encryption in violation/{ printf ($NF == "True") ? "true" : "false"}' "$1")"
+  : "${res:=false}"
+  echo "$res"
+}
+
+is_violation() {
+  # NB (nphair): Typo is suppose to be here.
+  res="$(awk '/Complaint/{ printf ($NF == "True") ? "false" : "true"}' "$1")"
+  : "${res:=false}"
+  echo "$res"
+}
+
+process_success() {
+  result="$1"
+  plugin="$(plugin_from_filename "$result")"
+  if grep "Found no personal data" "$result" > /dev/null; then
+    join , "$plugin" "false" "false" "false" "false" "false" "false" >> "$SUCCESS"
+  else
+    join , \
+      "$plugin" \
+      "true" \
+      "$(violated_access "$result")" \
+      "$(violated_delete "$result")" \
+      "$(violated_third_party "$result")" \
+      "$(violated_encryption "$result")" \
+      "$(is_violation "$result")" >> "$SUCCESS"
+  fi
+}
+
+process_failure() {
+  result="$1"
+  plugin="$(plugin_from_filename "$result")"
+  join , "$plugin" "" "" "" "" "" "" >> "$FAILURE"
+}
+
+if [ -z "${RESULTS_DIR}" ]; then
+  echo "error: missing argument. please supply a directory to process"
+  exit 1
+fi
+
+pushd "$RESULTS_DIR" &> /dev/null
+init_output
+
+for file in *.txt; do
+  output="result_$file"
+  parse_results='/Applicable GDPR/,$p'
+  parse_results_no_pii='/No analysis needed/,$p'
+  if sed -n "$parse_results" "$file" | tee "$output" | grep Complaint > /dev/null; then
+    process_success "$output"
+  elif sed -n "$parse_results_no_pii" "$file" | tee "$output" | grep Complaint > /dev/null; then
+    process_success "$output"
+  else
+    process_failure "$output"
+  fi
+  rm "$output"
+done
+
+popd &> /dev/null

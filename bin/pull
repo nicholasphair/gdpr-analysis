@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+AWS_PROFILE=gdpr
+output=/home/ec2-user/GDPR-CCPA-violation-checker/results/output
+
+d="$(date '+%s')"
+mkdir "$d"
+pushd "$d"
+
+fetch_results() {
+  for x in {1..6}; do
+    scp -r "gdpr${x}:${output}" .
+    mv output/* .
+    rmdir output
+  done
+}
+
+fetch_results
+
+popd
+
