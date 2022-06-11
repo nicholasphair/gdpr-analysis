@@ -1,0 +1,733 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on fv-feedburner-replacement
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.422506.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.914950.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 30 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.319563.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.563687.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 308 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.804082.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.543219.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.085856.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 127 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.671414.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2629
+Added 2162 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2629
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.094974.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fv-feedburner-replacement/fv-feedburner-replacement.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fv-feedburner-replacement/newsletter-bridge.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.222761.
+
+30 PHP_REACHES edges created
+2 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2597 PHP_REACHES edges created
+2629 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 940 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.020953.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 2 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.645030.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 8 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.545892.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 54 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.197576.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.224603.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.093166.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010752.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.038168.
+
+2 CALLS edges created
+62 PHP_REACHES edges created
+64 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 39 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.123428.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+23 SQL operations to process.
+SELECT name,email FROM $wpdbnewsletter WHERE status = 'C'
+SQL command (SELECT name,email FROM $wpdbnewsletter WHERE status = 'C') cannot be parsed correct.
+SELECT id, name FROM $wpdbnewsletter WHERE token = '$wpdb->escape($_REQUEST["fvfr"])' 
+SQL command (SELECT id, name FROM $wpdbnewsletter WHERE token = '$wpdb->escape($_REQUEST["fvfr"])' ) cannot be parsed correct.
+create table if not exists $wpdbnewsletter (id int auto_increment, `email` varchar(100) not null default '', primary key (id), unique key email (email)) $charset_collate
+SQL command (create table if not exists $wpdbnewsletter (id int auto_increment, `email` varchar(100) not null default '', primary key (id), unique key email (email)) $charset_collate) cannot be parsed correct.
+alter table $wpdbnewsletter add column name varchar(100) not null default ''
+SQL command (alter table $wpdbnewsletter add column name varchar(100) not null default '') cannot be parsed correct.
+alter table $wpdbnewsletter add column surname varchar(100) not null default ''
+SQL command (alter table $wpdbnewsletter add column surname varchar(100) not null default '') cannot be parsed correct.
+alter table $wpdbnewsletter add column sex char(1) not null default ''
+SQL command (alter table $wpdbnewsletter add column sex char(1) not null default '') cannot be parsed correct.
+alter table $wpdbnewsletter add column status char(1) not null default 'S'
+SQL command (alter table $wpdbnewsletter add column status char(1) not null default 'S') cannot be parsed correct.
+alter table $wpdbnewsletter add column created timestamp not null default current_timestamp
+SQL command (alter table $wpdbnewsletter add column created timestamp not null default current_timestamp) cannot be parsed correct.
+alter table $wpdbnewsletter add column token varchar(50) not null default ''
+SQL command (alter table $wpdbnewsletter add column token varchar(50) not null default '') cannot be parsed correct.
+alter table $wpdbnewsletter add column followup_time bigint(20) not null default 0
+SQL command (alter table $wpdbnewsletter add column followup_time bigint(20) not null default 0) cannot be parsed correct.
+alter table $wpdbnewsletter add column followup_step tinyint(4) not null default 0
+SQL command (alter table $wpdbnewsletter add column followup_step tinyint(4) not null default 0) cannot be parsed correct.
+alter table $wpdbnewsletter add column followup tinyint(4) not null default 0
+SQL command (alter table $wpdbnewsletter add column followup tinyint(4) not null default 0) cannot be parsed correct.
+alter table $wpdbnewsletter add column feed tinyint(4) not null default 0
+SQL command (alter table $wpdbnewsletter add column feed tinyint(4) not null default 0) cannot be parsed correct.
+alter table $wpdbnewsletter add column feed_time bigint(20) not null default 0
+SQL command (alter table $wpdbnewsletter add column feed_time bigint(20) not null default 0) cannot be parsed correct.
+alter table $wpdbnewsletter add column list_1 tinyint(4) not null default 0
+SQL command (alter table $wpdbnewsletter add column list_1 tinyint(4) not null default 0) cannot be parsed correct.
+alter table $wpdbnewsletter add column profile_1 varchar(255) not null default ''
+SQL command (alter table $wpdbnewsletter add column profile_1 varchar(255) not null default '') cannot be parsed correct.
+alter table $wpdbnewsletter add column referrer varchar(50) not null default ''
+SQL command (alter table $wpdbnewsletter add column referrer varchar(50) not null default '') cannot be parsed correct.
+alter table $wpdbnewsletter add column http_referer varchar(255) not null default ''
+SQL command (alter table $wpdbnewsletter add column http_referer varchar(255) not null default '') cannot be parsed correct.
+alter table $wpdbnewsletter add column wp_user_id int not null default 0
+SQL command (alter table $wpdbnewsletter add column wp_user_id int not null default 0) cannot be parsed correct.
+alter table $wpdbnewsletter add column ip varchar(50) not null default ''
+SQL command (alter table $wpdbnewsletter add column ip varchar(50) not null default '') cannot be parsed correct.
+alter table $wpdbnewsletter add column test tinyint(4) not null default 0
+SQL command (alter table $wpdbnewsletter add column test tinyint(4) not null default 0) cannot be parsed correct.
+alter table $wpdbnewsletter add column flow tinyint(4) not null default 0
+SQL command (alter table $wpdbnewsletter add column flow tinyint(4) not null default 0) cannot be parsed correct.
+UPDATE $wpdbnewsletter SET status = 'C' WHERE token = '$wpdb->escape($_REQUEST["fvfr"])'
+SQL command (UPDATE $wpdbnewsletter SET status = 'C' WHERE token = '$wpdb->escape($_REQUEST["fvfr"])') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [3729, 3652, 3319, 3335, 3348, 3361, 3374, 3387, 3400, 3413, 3426, 3439, 3452, 3465, 3494, 3525, 3540, 3552, 3564, 3576, 3588, 3600, 3677]
+Added 0 SQL nodes. 0 out of 23 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:06.303195.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<meta name="description" content="get_option("fv_feedburner_replacement")_description" /
+'' cannot be parsed correct.
+HTML code '$'$this->notice()'' cannot be parsed correct.
+HTML code '$'$this->notice()'' cannot be parsed correct.
+HTML code '$'<link rel="stylesheet" type="text/css" href="plugins_url("css/style.css", )" /
+'' cannot be parsed correct.
+HTML code '$'<div class="updated">
+       <p>get_option("fv_feedburner_replacement_deferred_notices")</p>
+    </div>'' cannot be parsed correct.
+HTML code '$'<div class="error">
+       <p>get_option("fv_feedburner_replacement_deferred_errors")</p>
+    </div>'' cannot be parsed correct.
+HTML code '$'<style type="text/css">
+get_option("fv_feedburner_replacement")_form_css
+</style>
+'' cannot be parsed correct.
+HTML code '$'plugins_url("images/led-monitor.png", )'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_title'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_description'' cannot be parsed correct.
+HTML code '$'strlen($options["description"])'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_form_code'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_form_css'' cannot be parsed correct.
+HTML code '$'Are you having any problems or questions? Use our <a target="_blank" href="http://foliovision.com/support/fv-feedburner-replacement/">support forums</a>.'' cannot be parsed correct.
+HTML code '$'$this->get_rss2_url()'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_feedburner_message'' cannot be parsed correct.
+HTML code '$'$newsletter_bridge->get_count()'' cannot be parsed correct.
+HTML code '$'$this->get_admin_page_url()'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_message_subscr_succ'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_message_subscr_conf'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_mail_confirmation_subject'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_mail_confirmation_mail'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_message_error_email'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_message_error_name'' cannot be parsed correct.
+HTML code '$'get_option("fv_feedburner_replacement")_message_subscr_exists'' cannot be parsed correct.
+HTML code '$'Name,E-mail
+'' cannot be parsed correct.
+HTML code '$'"> </a>
+  		</div>
+  </div>
+ '' cannot be parsed correct.
+HTML code '$'    <div id="poststuff" class="ui-sortable">
+      <div class="postbox">
+        <h3>
+        '' cannot be parsed correct.
+HTML code '$'        </h3>
+        <div class="inside">
+          <table class="form-table">
+            <tr>
+              <td>
+                <label for="title">
+                  Title<br />
+                  <input type="text" class="large-text code" name="title" id="title" value="'' cannot be parsed correct.
+HTML code '$'</small>     
+                </label>
+              </td>
+            </tr>                 
+            <tr>
+              <td>
+                <label for="form_code">
+                  Enter your newsletter/feed subscription code here. You can use HTML and also plugin shortcodes:<br />
+                  <textarea class="large-text code" cols="50" rows="10" name="form_code" id="form_code">'' cannot be parsed correct.
+HTML code '$'</textarea>
+                  <p class="description">If you don\'t have a newsletter service yet, we recommend Newsletter Pro (Wordpress plugin) or <a target="_blank" href="http://foliovision.com/apps/mailchimp">MailChimp</a> (provides full newsletter service).</p>                  
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#" onclick="jQuery(\'#wrap-form_css\').show(); jQuery(this).hide(); return false">Change CSS</a>
+                <div id="wrap-form_css" style="display: none; "> 
+                  <label for="form_css">
+                    CSS Tweaks<br />
+                    <textarea class="large-text code" cols="50" rows="5" name="form_css" id="form_css">'' cannot be parsed correct.
+HTML code '$'</textarea>        
+                    <p class="description">These will be put into <tt>&lt;head&gt;</tt> section on the subscription page only.</p>
+                  </label>
+                </div>
+              </td>
+            </tr>            
+            <tr>
+              <td>
+                <label for="show_links">
+                  <input type="checkbox" name="show_links" id="show_links" value="1" '' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'" />
+          </p>
+        </div>
+      </div>
+      <p'' cannot be parsed correct.
+HTML code '$'        </h3>
+        <div class="inside">
+          <table class="form-table">
+            <tr>
+              <td>
+                <label for="feedburner_include">
+                  <input type="checkbox" name="feedburner_include" id="feedburner_include" value="1" '' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'</textarea>     
+                  <p class="description">This can be used to notify your Feedburner subscribers to re-subscribe.</p>                
+                </label>
+              </td>
+            </tr>          
+          </table>
+          <p>
+            <input type="submit" name="fv_feedburner_replacement_submit" class="button-primary" value="'' cannot be parsed correct.
+HTML code '$'" />
+          </p>          
+        </div>
+      </div>
+    </div>   
+    <div id="poststuff" class="ui-sortable">
+      <div class="postbox">
+        <h3>
+        '' cannot be parsed correct.
+HTML code '$'        </h3>
+        <div class="inside">
+          <p>The default form uses the same subscribers list as the Newsletter plugin by Stefano Lissa, so you can start bulding your newsletter list right after this plugin is installed.</p>
+'' cannot be parsed correct.
+HTML code '$'&export=true">CSV export</a>
+ '' cannot be parsed correct.
+HTML code '$'</textarea>     
+                  <p class="description">Use <code>%name%</code> for subscriber name.</p>  
+                </label>
+              </td>
+            </tr>    
+            <tr>
+              <td>
+                <label for="message_subscr_conf">
+                  Subscription was successfully verified<br />
+                  <textarea class="large-text code" cols="50" rows="2" name="message_subscr_conf" id="message_subscr_conf">'' cannot be parsed correct.
+HTML code '$'</textarea>     
+                  <p class="description">Use <code>%name%</code> for subscriber name.</p>  
+                </label>
+              </td>
+            </tr>                      
+            <tr>
+              <td>
+                <label for="message_subscr_exists">
+                  Mail - Subject for confrimation message<br />
+                  <input type="text" class="large-text code" name="mail_confirmation_subject" id="mail_confirmation_subject" value="'' cannot be parsed correct.
+HTML code '$'</textarea>    
+                  <p class="description">Use <code>%confirmation%</code> for the confirmation link. And <code>%name%</code> for subscriber name.</p>     
+                </label>
+              </td>
+            </tr>                            
+            <!--<tr>
+              <td>
+                <label for="message_error_email">
+                  Error - Missing Email Address<br />
+                  <input type="text" class="large-text code" name="message_error_email" id="message_error_email" value="'' cannot be parsed correct.
+HTML code '$'" />
+          </p>                  
+        </div>
+      </div>
+    </div>         
+  </form>
+  <form onsubmit="return confirm(\'Are you sure you want to reset the form and CSS codes?\');" method="post" action="">
+    '' cannot be parsed correct.
+HTML code '$'    <p>
+      <input type="submit" name="fv_feedburner_replacement_submit_restore" class="button-primary" value="'' cannot be parsed correct.
+HTML code '$'" />
+    </p>  
+  </form>
+</div>
+<script type="text/JavaScript">
+function fv_feedburner_replacement_countChars(field, cntfield) {
+  if( !field.value ) return;
+  cntfield.value = field.value.length;
+  
+  if( field.name == \'description\' ) {
+    if( field.value.length > 145 ) {
+      jQuery(\'#description\').css(\'background\', \'red\').css(\'color\', \'black\');
+    }
+    else if( field.value.length > 134 ) {
+      jQuery(\'#description\').css(\'background\', \'yellow\').css(\'color\', \'black\');
+    }
+    else {
+      jQuery(\'#description\').css(\'background\', \'white\').css(\'color\', \'black\');
+    }
+  }
+}
+fv_feedburner_replacement_countChars(document.getElementById(\'description\'),document.getElementById(\'length_description\'));
+</script>
+<style>
+#fv_feedburner_replacement_form .inputcounter {
+  background: none repeat scroll 0 0 white;
+  color: #000000;
+  font-size: 85%;
+  padding: 0;
+  text-align: center;
+}
+</style>
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.314343.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.042867.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 5 do_action/apply_filters calls and 28 add_action/add_filter calls. Now connecting do-add pairs.
+Added 4 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.319268.
+
+4 PHP_REACHES edges created
+4 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running FrontBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PostgreSQLDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running MySQLiDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+newsletter-bridge.php:154
+  - Request variable '$_REQUEST["email"]' of personal types {'email'} is found.
+  - Data types: email
+newsletter-bridge.php:164
+  - Request variable '$_REQUEST["email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+newsletter-bridge.php:168
+  - MD5 called with parameters [rand]. Ignore if [rand] does not contain personal information. 
+
+newsletter-bridge.php:89
+  - object property '$subscribers_item->email' of personal types {'email'} is found.
+  - Data types: email 
+
+newsletter-bridge.php:164
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+newsletter-bridge.php:170
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+newsletter-bridge.php:176
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+newsletter-bridge.php:214
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+fv-feedburner-replacement.php:66
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:88
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:123
+  - RETRIEVAL call to get_option("fv_feedburner_replacement_deferred_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:130
+  - RETRIEVAL call to get_option("fv_feedburner_replacement_deferred_errors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:179
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:195
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:213
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:352
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:360
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:372
+  - RETRIEVAL call to get_option("fv_feedburner_replacement", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:409
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:431
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:442
+  - RETRIEVAL call to get_option("fv_feedburner_replacement_ad_disable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:782
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fv-feedburner-replacement.php:801
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+newsletter-bridge.php:106
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+newsletter-bridge.php:212
+  - RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+fv-feedburner-replacement.php:67
+  - STORAGE call to update_option("fv_feedburner_replacement", ["show_links" => true, "title" => get_bloginfo("name") . " feeds", "description" => "Subscribe via email or RSS to " . get_bloginfo("name"), "form_code" => $this->default_form_code, "feedburner_message" => "Please resubscribe on <a href=" . get_bloginfo("rss2_url") . """ . get_bloginfo("name") . " subscription page</a> to get the latest news!", "form_css" => $this->default_form_css, "message_error_email" => "Please enter valid email address.", "message_error_name" => "Please enter your name.", "message_subscr_exists" => "You are already subscribed.", "message_subscr_succ" => "%name%, you were successfully subscribed." . "
+
+" . "Please check your mailbox for the confirmation email. If you don\'t see it in 15 minutes, please check your spam folder.", "message_subscr_conf" => "Hello %name%," . "
+
+" . "your subscription was successfully verified.", "mail_confirmation_subject" => get_bloginfo("name") . " - Confirm Your Subscription", "mail_confirmation_mail" => "Hello %name%," . "
+
+" . "Thank you for your subscription to " . get_bloginfo("name") . "
+
+" . "To confirm your subscription, please click the following link: %confirmation%" . "
+"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fv-feedburner-replacement.php:86
+  - STORAGE call to update_option("fv_feedburner_replacement_deferred_notices", "Site subscription page installed - check <a href=" . $this->get_admin_page_url() . "">FV Feedburner Replacement settings</a> for details!<br /><br /" . $this->notice()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fv-feedburner-replacement.php:91
+  - STORAGE call to update_option("fv_feedburner_replacement_deferred_errors", "It appears you use WP Super Cache. Make sure that caching of feeds is turned off (Settings => WP Super Cache => Advanced => Accepted Filenames & Rejected URIs => Feeds (is_feed)), otherwise there might be issues with the FV Feedburner Replacement plugin.") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fv-feedburner-replacement.php:127
+  - STORAGE call to delete_option("fv_feedburner_replacement_deferred_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+fv-feedburner-replacement.php:134
+  - STORAGE call to delete_option("fv_feedburner_replacement_deferred_errors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+fv-feedburner-replacement.php:393
+  - STORAGE call to update_option("fv_feedburner_replacement", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fv-feedburner-replacement.php:414
+  - STORAGE call to update_option("fv_feedburner_replacement", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+fv-feedburner-replacement.php:127
+  - DELETION call to delete_option("fv_feedburner_replacement_deferred_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+fv-feedburner-replacement.php:134
+  - DELETION call to delete_option("fv_feedburner_replacement_deferred_errors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+none
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressStorageDetector.update_option("fv_feedburner_replacement", ["show_links" => true, "title" => get_bloginfo("name") . " feeds", "description" => "Subscribe via email or RSS to " . get_bloginfo("name"), "form_code" => $this->default_form_code, "feedburner_message" => "Please resubscribe on <a href=" . get_bloginfo("rss2_url") . """ . get_bloginfo("name") . " subscription page</a> to get the latest news!", "form_css" => $this->default_form_css, "message_error_email" => "Please enter valid email address.", "message_error_name" => "Please enter your name.", "message_subscr_exists" => "You are already subscribed.", "message_subscr_succ" => "%name%, you were successfully subscribed." . "
+
+" . "Please check your mailbox for the confirmation email. If you don\'t see it in 15 minutes, please check your spam folder.", "message_subscr_conf" => "Hello %name%," . "
+
+" . "your subscription was successfully verified.", "mail_confirmation_subject" => get_bloginfo("name") . " - Confirm Your Subscription", "mail_confirmation_mail" => "Hello %name%," . "
+
+" . "Thank you for your subscription to " . get_bloginfo("name") . "
+
+" . "To confirm your subscription, please click the following link: %confirmation%" . "
+"]) - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement", []) - {'option'}
+	DeletionDetector.delete_option("fv_feedburner_replacement_deferred_notices") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressStorageDetector.update_option("fv_feedburner_replacement_deferred_notices", "Site subscription page installed - check <a href=" . $this->get_admin_page_url() . "">FV Feedburner Replacement settings</a> for details!<br /><br /" . $this->notice()) - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressStorageDetector.update_option("fv_feedburner_replacement", $options) - {'option'}
+	DeletionDetector.delete_option("fv_feedburner_replacement_deferred_errors") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement_deferred_notices") - {'option'}
+	WordPressStorageDetector.delete_option("fv_feedburner_replacement_deferred_errors") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement_ad_disable") - {'option'}
+	WordPressStorageDetector.delete_option("fv_feedburner_replacement_deferred_notices") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressStorageDetector.update_option("fv_feedburner_replacement", $options) - {'option'}
+	WordPressStorageDetector.update_option("fv_feedburner_replacement_deferred_errors", "It appears you use WP Super Cache. Make sure that caching of feeds is turned off (Settings => WP Super Cache => Advanced => Accepted Filenames & Rejected URIs => Feeds (is_feed)), otherwise there might be issues with the FV Feedburner Replacement plugin.") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement_deferred_errors") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+	WordPressRetrievalDetector.get_option("fv_feedburner_replacement") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.713089.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 119 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.267491.
+
+119 STORE_REACHES edges created
+119 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 33 nodes as PERSONAL
+In total, tainted 33 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 1 nodes as ENCRYPTED
+In total, tainted 1 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.771997.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:44.777637!
+Request variable '$_REQUEST["email"]' of personal types {'email'} is found.,,None
+Request variable '$_REQUEST["email"]' of personal types {'email'} is found.,,None
+DELETION call to delete_option("fv_feedburner_replacement_deferred_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("fv_feedburner_replacement_deferred_errors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+MD5 called with parameters [rand]. Ignore if [rand] does not contain personal information.,md5,None
+object property '$subscribers_item->email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_option("fv_feedburner_replacement_deferred_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement_deferred_errors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement_ad_disable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("fv_feedburner_replacement") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to delete_option("fv_feedburner_replacement_deferred_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("fv_feedburner_replacement_deferred_errors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("fv_feedburner_replacement", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("fv_feedburner_replacement", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("fv_feedburner_replacement", ["show_links" => true, "title" => get_bloginfo("name") . " feeds", "description" => "Subscribe via email or RSS to " . get_bloginfo("name"), "form_code" => $this->default_form_code, "feedburner_message" => "Please resubscribe on <a href=" . get_bloginfo("rss2_url") . """ . get_bloginfo("name") . " subscription page</a> to get the latest news!", "form_css" => $this->default_form_css, "message_error_email" => "Please enter valid email address.", "message_error_name" => "Please enter your name.", "message_subscr_exists" => "You are already subscribed.", "message_subscr_succ" => "%name%, you were successfully subscribed." . "
+
+" . "Please check your mailbox for the confirmation email. If you don\'t see it in 15 minutes, please check your spam folder.", "message_subscr_conf" => "Hello %name%," . "
+
+" . "your subscription was successfully verified.", "mail_confirmation_subject" => get_bloginfo("name") . " - Confirm Your Subscription", "mail_confirmation_mail" => "Hello %name%," . "
+
+" . "Thank you for your subscription to " . get_bloginfo("name") . "
+
+" . "To confirm your subscription, please click the following link: %confirmation%" . "
+"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("fv_feedburner_replacement_deferred_notices", "Site subscription page installed - check <a href=" . $this->get_admin_page_url() . "">FV Feedburner Replacement settings</a> for details!<br /><br /" . $this->notice()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("fv_feedburner_replacement_deferred_errors", "It appears you use WP Super Cache. Make sure that caching of feeds is turned off (Settings => WP Super Cache => Advanced => Accepted Filenames & Rejected URIs => Feeds (is_feed)), otherwise there might be issues with the FV Feedburner Replacement plugin.") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

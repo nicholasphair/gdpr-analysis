@@ -1,0 +1,549 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on hearthisat
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.525769.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.866498.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 55 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.458257.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.472547.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 323 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.699099.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 4 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.844859.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+Added 1 PHP_REACHES edges.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.072663.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 115 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.864716.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2343
+Added 1844 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2664
+Added 321 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.068075.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/hearthis.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/admin/class-hearthis-admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/admin/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/admin/partials/hearthis-admin-display.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/includes/class-hearthis-activator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/includes/class-hearthis-deactivator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/includes/class-hearthis-i18n.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/includes/class-hearthis-loader.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/includes/class-hearthis.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/includes/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/public/class-hearthis-public.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/public/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hearthisat/public/partials/hearthis-public-display.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.464084.
+
+55 PHP_REACHES edges created
+1 REACHES edges created
+325 PHP_REACHES edges created
+2 CALLS edges created
+1000 PHP_REACHES edges created
+1960 PHP_REACHES edges created
+321 PHP_REACHES edges created
+2664 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 836 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.973760.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 2 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.543278.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 112 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.949096.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 101 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.157015.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.043059.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.906327.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.022417.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.047635.
+
+2 CALLS edges created
+213 PHP_REACHES edges created
+215 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 203 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.124605.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.141217.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'http_build_query(array_filter(["width" => get_option("hearthis_width"), "height" => get_option("hearthis_height"), "theme" => get_option("hearthis_theme"), "hcolor" => get_option("hearthis_hcolor"), "color" => get_option("hearthis_color"), "style" => get_option("hearthis_style"), "background" => get_option("hearthis_background"), "waveform" => get_option("hearthis_waveform"), "autoplay" => get_option("hearthis_autoplay"), "cover" => get_option("hearthis_cover"), "block_size" => get_option("hearthis_block_size"), "block_space" => get_option("hearthis_block_space"), "css" => get_option("hearthis_css")]))'' cannot be parsed correct.
+HTML code '$'get_option("hearthis_width")'' cannot be parsed correct.
+HTML code '$'get_option("hearthis_height")'' cannot be parsed correct.
+HTML code '$'get_option("hearthis_color")'' cannot be parsed correct.
+HTML code '$'get_option("hearthis_hcolor")'' cannot be parsed correct.
+HTML code '$'get_option("hearthis_cover")'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'get_option("hearthis_waveform")'' cannot be parsed correct.
+HTML code '$'get_option("hearthis_background", "0")'' cannot be parsed correct.
+HTML code '$'get_option("hearthis_autoplay")'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'2'' cannot be parsed correct.
+HTML code '$'get_option("hearthis_css")'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$' disabled="disabled"'' cannot be parsed correct.
+HTML code '$' disabled="disabled"'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.178437.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.053286.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 3 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.492991.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running CubridDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running FileProDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running MySQLiDetector
+### Start running SqliteDetector
+### Finish running maxdbDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SqliteDetector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running PHPRetrievalDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running PhpCurlDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+public/class-hearthis-public.php:897
+  - RETRIEVAL call to file_get_contents($url, false, $context).
+  - Data types: file 
+
+admin/class-hearthis-admin.php:133
+  - RETRIEVAL call to get_option("hearthis_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:134
+  - RETRIEVAL call to get_option("hearthis_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:135
+  - RETRIEVAL call to get_option("hearthis_theme") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:136
+  - RETRIEVAL call to get_option("hearthis_hcolor") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:137
+  - RETRIEVAL call to get_option("hearthis_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:138
+  - RETRIEVAL call to get_option("hearthis_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:139
+  - RETRIEVAL call to get_option("hearthis_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:140
+  - RETRIEVAL call to get_option("hearthis_waveform") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:141
+  - RETRIEVAL call to get_option("hearthis_autoplay") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:142
+  - RETRIEVAL call to get_option("hearthis_cover") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:143
+  - RETRIEVAL call to get_option("hearthis_block_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:144
+  - RETRIEVAL call to get_option("hearthis_block_space") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:145
+  - RETRIEVAL call to get_option("hearthis_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:213
+  - RETRIEVAL call to get_option("hearthis_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:221
+  - RETRIEVAL call to get_option("hearthis_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:231
+  - RETRIEVAL call to get_option("hearthis_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:237
+  - RETRIEVAL call to get_option("hearthis_hcolor") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:246
+  - RETRIEVAL call to get_option("hearthis_theme") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:249
+  - RETRIEVAL call to get_option("hearthis_theme") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:258
+  - RETRIEVAL call to get_option("hearthis_cover") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:258
+  - RETRIEVAL call to get_option("hearthis_cover") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:267
+  - RETRIEVAL call to get_option("hearthis_waveform") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:267
+  - RETRIEVAL call to get_option("hearthis_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:278
+  - RETRIEVAL call to get_option("hearthis_background", "0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:278
+  - RETRIEVAL call to get_option("hearthis_waveform") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:289
+  - RETRIEVAL call to get_option("hearthis_autoplay") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:289
+  - RETRIEVAL call to get_option("hearthis_autoplay") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:296
+  - RETRIEVAL call to get_option("hearthis_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:298
+  - RETRIEVAL call to get_option("hearthis_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:307
+  - RETRIEVAL call to get_option("hearthis_block_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:307
+  - RETRIEVAL call to get_option("hearthis_block_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:314
+  - RETRIEVAL call to get_option("hearthis_block_space") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:314
+  - RETRIEVAL call to get_option("hearthis_block_space") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-hearthis-admin.php:324
+  - RETRIEVAL call to get_option("hearthis_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:388
+  - RETRIEVAL call to get_option("hearthis_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:389
+  - RETRIEVAL call to get_option("hearthis_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:390
+  - RETRIEVAL call to get_option("hearthis_theme") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:391
+  - RETRIEVAL call to get_option("hearthis_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:392
+  - RETRIEVAL call to get_option("hearthis_hcolor") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:393
+  - RETRIEVAL call to get_option("hearthis_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:394
+  - RETRIEVAL call to get_option("hearthis_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:395
+  - RETRIEVAL call to get_option("hearthis_waveform") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:396
+  - RETRIEVAL call to get_option("hearthis_autoplay") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:397
+  - RETRIEVAL call to get_option("hearthis_cover") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:398
+  - RETRIEVAL call to get_option("hearthis_block_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:399
+  - RETRIEVAL call to get_option("hearthis_block_space") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-hearthis-public.php:400
+  - RETRIEVAL call to get_option("hearthis_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents($url, false, $context) - {'file'}
+option
+	WordPressRetrievalDetector.get_option("hearthis_autoplay") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_cover") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_block_size") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_cover") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_style") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_cover") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_background") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_height") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_background", "0") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_theme") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_waveform") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_height") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_color") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_color") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_autoplay") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_style") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_block_space") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_waveform") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_cover") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_waveform") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_block_size") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_theme") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_css") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_hcolor") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_block_size") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_style") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_width") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_theme") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_background") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_autoplay") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_width") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_css") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_block_space") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_block_space") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_block_size") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_style") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_autoplay") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_hcolor") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_css") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_waveform") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_color") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_height") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_width") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_block_space") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_theme") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_background") - {'option'}
+	WordPressRetrievalDetector.get_option("hearthis_hcolor") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.207306.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.478383.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.009254.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:36.733552!
+RETRIEVAL call to file_get_contents($url, false, $context).,None,None
+RETRIEVAL call to get_option("hearthis_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_theme") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_hcolor") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_waveform") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_autoplay") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_cover") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_block_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_block_space") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_hcolor") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_theme") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_theme") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_cover") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_cover") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_waveform") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_background", "0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_waveform") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_autoplay") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_autoplay") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_block_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_block_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_block_space") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_block_space") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_theme") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_hcolor") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_waveform") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_autoplay") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_cover") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_block_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_block_space") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("hearthis_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

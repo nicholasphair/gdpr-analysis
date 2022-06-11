@@ -1,0 +1,2494 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on rollbar-logging
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.588406.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.810934.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 29 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.324272.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.425643.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 34 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.519115.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.552949.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.090721.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 21 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.513109.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 695
+Added 611 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1097
+Added 402 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.931471.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/plugin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/lib/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/lib/RollbarAdminConfig.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/lib/RollbarJSLogging.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/lib/RollbarPHPLogging.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/vendor/index.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/vendor/index.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/vendor/Level.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/vendor/Level.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/vendor/rollbar.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rollbar-logging/vendor/rollbar.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.944219.
+
+9 Nodes Created
+695 PHP_REACHES edges created
+402 PHP_REACHES edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+1106 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 252 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.935390.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.112874.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.132865.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 1 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.175385.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.010797.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005554.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008060.
+
+╔[18] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[18] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005669.
+
+╔[19] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[19] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004159.
+
+╔[20] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[20] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008343.
+
+╔[21] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[21] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005654.
+
+╔[22] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[22] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003732.
+
+╔[23] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[23] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009870.
+
+╔[24] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[24] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004850.
+
+╔[25] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[25] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004874.
+
+╔[26] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[26] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008149.
+
+╔[27] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[27] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004690.
+
+╔[28] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[28] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003965.
+
+╔[29] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[29] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.017436.
+
+╔[30] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[30] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.006296.
+
+╔[31] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[31] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004663.
+
+╔[32] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[32] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007006.
+
+╔[33] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[33] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004788.
+
+╔[34] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[34] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004542.
+
+╔[35] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[35] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007243.
+
+╔[36] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[36] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005927.
+
+╔[37] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[37] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004635.
+
+╔[38] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[38] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008894.
+
+╔[39] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[39] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005103.
+
+╔[40] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[40] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004760.
+
+╔[41] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[41] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011102.
+
+╔[42] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[42] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.040163.
+
+╔[43] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[43] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.041690.
+
+╔[44] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[44] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.045996.
+
+╔[45] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[45] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.008636.
+
+╔[46] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[46] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005113.
+
+╔[47] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[47] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008370.
+
+╔[48] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[48] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005579.
+
+╔[49] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[49] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004253.
+
+╔[50] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[50] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009327.
+
+╔[51] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[51] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004801.
+
+╔[52] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[52] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.007112.
+
+╔[53] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[53] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011411.
+
+╔[54] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[54] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005247.
+
+╔[55] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[55] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005000.
+
+╔[56] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[56] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006628.
+
+╔[57] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[57] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004704.
+
+╔[58] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[58] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.009849.
+
+╔[59] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[59] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007321.
+
+╔[60] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[60] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004511.
+
+╔[61] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[61] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003844.
+
+╔[62] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[62] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007867.
+
+╔[63] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[63] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004782.
+
+╔[64] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[64] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.007941.
+
+╔[65] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[65] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006919.
+
+╔[66] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[66] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004867.
+
+╔[67] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[67] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004203.
+
+╔[68] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[68] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010269.
+
+╔[69] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[69] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005226.
+
+╔[70] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[70] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004178.
+
+╔[71] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[71] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008334.
+
+╔[72] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[72] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005203.
+
+╔[73] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[73] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005705.
+
+╔[74] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[74] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007617.
+
+╔[75] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[75] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004843.
+
+╔[76] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[76] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.009683.
+
+╔[77] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[77] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010171.
+
+╔[78] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[78] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.006164.
+
+╔[79] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[79] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004177.
+
+╔[80] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[80] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006125.
+
+╔[81] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[81] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004912.
+
+╔[82] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[82] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005132.
+
+╔[83] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[83] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008099.
+
+╔[84] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[84] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004105.
+
+╔[85] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[85] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003310.
+
+╔[86] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[86] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010077.
+
+╔[87] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[87] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.009783.
+
+╔[88] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[88] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003614.
+
+╔[89] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[89] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007552.
+
+╔[90] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[90] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004111.
+
+╔[91] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[91] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003200.
+
+╔[92] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[92] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006868.
+
+╔[93] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[93] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.006094.
+
+╔[94] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[94] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.011039.
+
+╔[95] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[95] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006940.
+
+╔[96] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[96] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004533.
+
+╔[97] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[97] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002956.
+
+╔[98] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[98] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005860.
+
+╔[99] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[99] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004110.
+
+╔[100] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[100] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003227.
+
+╔[101] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[101] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010976.
+
+╔[102] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[102] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004465.
+
+╔[103] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[103] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.007715.
+
+╔[104] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[104] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006500.
+
+╔[105] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[105] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004158.
+
+╔[106] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[106] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003330.
+
+╔[107] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[107] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008941.
+
+╔[108] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[108] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.008159.
+
+╔[109] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[109] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.012464.
+
+╔[110] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[110] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010780.
+
+╔[111] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[111] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005244.
+
+╔[112] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[112] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005658.
+
+╔[113] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[113] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.013647.
+
+╔[114] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[114] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005337.
+
+╔[115] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[115] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004724.
+
+╔[116] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[116] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009592.
+
+╔[117] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[117] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004578.
+
+╔[118] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[118] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004190.
+
+╔[119] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[119] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010354.
+
+╔[120] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[120] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004822.
+
+╔[121] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[121] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004173.
+
+╔[122] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[122] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006020.
+
+╔[123] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[123] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004301.
+
+╔[124] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[124] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003280.
+
+╔[125] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[125] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005807.
+
+╔[126] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[126] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005333.
+
+╔[127] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[127] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003867.
+
+╔[128] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[128] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011845.
+
+╔[129] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[129] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004642.
+
+╔[130] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[130] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004022.
+
+╔[131] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[131] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006168.
+
+╔[132] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[132] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004055.
+
+╔[133] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[133] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.009917.
+
+╔[134] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[134] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006340.
+
+╔[135] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[135] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004749.
+
+╔[136] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[136] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003977.
+
+╔[137] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[137] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006109.
+
+╔[138] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[138] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004743.
+
+╔[139] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[139] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003830.
+
+╔[140] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[140] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011192.
+
+╔[141] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[141] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004934.
+
+╔[142] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[142] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004275.
+
+╔[143] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[143] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006517.
+
+╔[144] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[144] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003914.
+
+╔[145] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[145] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005958.
+
+╔[146] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[146] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004713.
+
+╔[147] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[147] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003373.
+
+╔[148] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[148] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003217.
+
+╔[149] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[149] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006500.
+
+╔[150] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[150] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003827.
+
+╔[151] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[151] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004466.
+
+╔[152] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[152] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005058.
+
+╔[153] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[153] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003471.
+
+╔[154] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[154] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004895.
+
+╔[155] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[155] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004523.
+
+╔[156] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[156] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003296.
+
+╔[157] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[157] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004340.
+
+╔[158] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[158] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008817.
+
+╔[159] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[159] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004059.
+
+╔[160] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[160] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002556.
+
+╔[161] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[161] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005549.
+
+╔[162] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[162] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003502.
+
+╔[163] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[163] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003023.
+
+╔[164] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[164] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005067.
+
+╔[165] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[165] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003278.
+
+╔[166] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[166] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002722.
+
+╔[167] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[167] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004978.
+
+╔[168] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[168] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003244.
+
+╔[169] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[169] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.007163.
+
+╔[170] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[170] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009363.
+
+╔[171] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[171] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004425.
+
+╔[172] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[172] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004391.
+
+╔[173] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[173] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005491.
+
+╔[174] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[174] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003923.
+
+╔[175] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[175] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003121.
+
+╔[176] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[176] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005407.
+
+╔[177] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[177] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003595.
+
+╔[178] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[178] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003046.
+
+╔[179] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[179] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005322.
+
+╔[180] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[180] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004463.
+
+╔[181] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[181] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003007.
+
+╔[182] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[182] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007320.
+
+╔[183] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[183] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004440.
+
+╔[184] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[184] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003365.
+
+╔[185] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[185] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005921.
+
+╔[186] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[186] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004335.
+
+╔[187] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[187] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005638.
+
+╔[188] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[188] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004531.
+
+╔[189] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[189] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003481.
+
+╔[190] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[190] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002801.
+
+╔[191] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[191] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004165.
+
+╔[192] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[192] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003452.
+
+╔[193] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[193] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003297.
+
+╔[194] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[194] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007848.
+
+╔[195] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[195] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.006282.
+
+╔[196] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[196] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003566.
+
+╔[197] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[197] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005706.
+
+╔[198] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[198] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004174.
+
+╔[199] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[199] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.006105.
+
+╔[200] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[200] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009091.
+
+╔[201] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[201] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004546.
+
+╔[202] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[202] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003850.
+
+╔[203] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[203] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006147.
+
+╔[204] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[204] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003936.
+
+╔[205] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[205] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004564.
+
+╔[206] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[206] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005593.
+
+╔[207] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[207] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004259.
+
+╔[208] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[208] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004188.
+
+╔[209] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[209] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009209.
+
+╔[210] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[210] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.007140.
+
+╔[211] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[211] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005062.
+
+╔[212] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[212] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005071.
+
+╔[213] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[213] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003871.
+
+╔[214] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[214] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002769.
+
+╔[215] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[215] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006185.
+
+╔[216] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[216] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003679.
+
+╔[217] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[217] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003026.
+
+╔[218] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[218] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005366.
+
+╔[219] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[219] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004100.
+
+╔[220] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[220] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.010654.
+
+╔[221] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[221] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006288.
+
+╔[222] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[222] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004466.
+
+╔[223] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[223] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003448.
+
+╔[224] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[224] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010624.
+
+╔[225] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[225] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004725.
+
+╔[226] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[226] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005047.
+
+╔[227] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[227] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005778.
+
+╔[228] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[228] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004113.
+
+╔[229] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[229] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003403.
+
+╔[230] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[230] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008003.
+
+╔[231] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[231] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004041.
+
+╔[232] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[232] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003302.
+
+╔[233] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[233] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009244.
+
+╔[234] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[234] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004007.
+
+╔[235] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[235] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002517.
+
+╔[236] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[236] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005559.
+
+╔[237] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[237] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003968.
+
+╔[238] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[238] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003521.
+
+╔[239] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[239] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005263.
+
+╔[240] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[240] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003178.
+
+╔[241] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[241] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004585.
+
+╔[242] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[242] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006621.
+
+╔[243] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[243] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003803.
+
+╔[244] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[244] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002921.
+
+╔[245] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[245] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.014249.
+
+╔[246] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[246] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004744.
+
+╔[247] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[247] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003633.
+
+╔[248] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[248] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004443.
+
+╔[249] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[249] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004130.
+
+╔[250] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[250] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004969.
+
+╔[251] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[251] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005486.
+
+╔[252] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[252] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003696.
+
+╔[253] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[253] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003164.
+
+╔[254] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[254] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005390.
+
+╔[255] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[255] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003588.
+
+╔[256] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[256] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002793.
+
+╔[257] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[257] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004264.
+
+╔[258] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[258] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003675.
+
+╔[259] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[259] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002857.
+
+╔[260] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[260] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005045.
+
+╔[261] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[261] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003700.
+
+╔[262] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[262] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002223.
+
+╔[263] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[263] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006781.
+
+╔[264] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[264] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003883.
+
+╔[265] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[265] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003050.
+
+╔[266] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[266] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007763.
+
+╔[267] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[267] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003715.
+
+╔[268] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[268] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002983.
+
+╔[269] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[269] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004764.
+
+╔[270] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[270] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005688.
+
+╔[271] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[271] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005073.
+
+╔[272] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[272] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012680.
+
+╔[273] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[273] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004230.
+
+╔[274] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[274] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003609.
+
+╔[275] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[275] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004998.
+
+╔[276] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[276] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002828.
+
+╔[277] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[277] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004429.
+
+╔[278] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[278] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005210.
+
+╔[279] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[279] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002715.
+
+╔[280] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[280] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002786.
+
+╔[281] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[281] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005421.
+
+╔[282] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[282] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004199.
+
+╔[283] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[283] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002819.
+
+╔[284] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[284] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004609.
+
+╔[285] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[285] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002973.
+
+╔[286] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[286] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003211.
+
+╔[287] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[287] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005379.
+
+╔[288] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[288] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004713.
+
+╔[289] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[289] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002207.
+
+╔[290] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[290] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003957.
+
+╔[291] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[291] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002518.
+
+╔[292] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[292] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002092.
+
+╔[293] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[293] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004443.
+
+╔[294] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[294] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003845.
+
+╔[295] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[295] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002802.
+
+╔[296] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[296] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004613.
+
+╔[297] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[297] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003119.
+
+╔[298] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[298] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002757.
+
+╔[299] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[299] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008175.
+
+╔[300] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[300] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003786.
+
+╔[301] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[301] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003008.
+
+╔[302] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[302] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004672.
+
+╔[303] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[303] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002654.
+
+╔[304] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[304] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003944.
+
+╔[305] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[305] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003819.
+
+╔[306] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[306] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002841.
+
+╔[307] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[307] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002766.
+
+╔[308] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[308] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004359.
+
+╔[309] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[309] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002706.
+
+╔[310] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[310] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002761.
+
+╔[311] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[311] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004439.
+
+╔[312] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[312] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003189.
+
+╔[313] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[313] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002916.
+
+╔[314] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[314] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004264.
+
+╔[315] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[315] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003597.
+
+╔[316] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[316] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002975.
+
+╔[317] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[317] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008449.
+
+╔[318] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[318] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005831.
+
+╔[319] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[319] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003382.
+
+╔[320] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[320] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005515.
+
+╔[321] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[321] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003775.
+
+╔[322] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[322] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003380.
+
+╔[323] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[323] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008913.
+
+╔[324] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[324] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004167.
+
+╔[325] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[325] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003757.
+
+╔[326] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[326] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006018.
+
+╔[327] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[327] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004240.
+
+╔[328] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[328] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002833.
+
+╔[329] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[329] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003806.
+
+╔[330] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[330] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003115.
+
+╔[331] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[331] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002559.
+
+╔[332] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[332] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004313.
+
+╔[333] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[333] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003151.
+
+╔[334] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[334] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002737.
+
+╔[335] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[335] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003948.
+
+╔[336] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[336] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003111.
+
+╔[337] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[337] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004030.
+
+╔[338] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[338] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005341.
+
+╔[339] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[339] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003637.
+
+╔[340] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[340] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003294.
+
+╔[341] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[341] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007385.
+
+╔[342] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[342] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004392.
+
+╔[343] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[343] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002909.
+
+╔[344] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[344] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005126.
+
+╔[345] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[345] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003707.
+
+╔[346] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[346] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002990.
+
+╔[347] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[347] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012518.
+
+╔[348] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[348] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004024.
+
+╔[349] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[349] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004780.
+
+╔[350] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[350] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011314.
+
+╔[351] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[351] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004346.
+
+╔[352] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[352] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005037.
+
+╔[353] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[353] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006214.
+
+╔[354] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[354] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002751.
+
+╔[355] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[355] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002619.
+
+╔[356] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[356] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003704.
+
+╔[357] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[357] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003164.
+
+╔[358] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[358] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002438.
+
+╔[359] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[359] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004675.
+
+╔[360] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[360] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003293.
+
+╔[361] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[361] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002892.
+
+╔[362] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[362] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007598.
+
+╔[363] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[363] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004518.
+
+╔[364] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[364] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002984.
+
+╔[365] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[365] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005695.
+
+╔[366] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[366] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004185.
+
+╔[367] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[367] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003078.
+
+╔[368] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[368] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006475.
+
+╔[369] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[369] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003870.
+
+╔[370] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[370] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002999.
+
+╔[371] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[371] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004643.
+
+╔[372] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[372] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003402.
+
+╔[373] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[373] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002870.
+
+╔[374] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[374] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004468.
+
+╔[375] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[375] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003301.
+
+╔[376] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[376] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002494.
+
+╔[377] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[377] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006211.
+
+╔[378] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[378] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003277.
+
+╔[379] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[379] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002721.
+
+╔[380] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[380] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004480.
+
+╔[381] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[381] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003057.
+
+╔[382] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[382] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002512.
+
+╔[383] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[383] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004900.
+
+╔[384] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[384] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003090.
+
+╔[385] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[385] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002903.
+
+╔[386] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[386] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003734.
+
+╔[387] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[387] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002826.
+
+╔[388] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[388] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003528.
+
+╔[389] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[389] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004411.
+
+╔[390] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[390] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003126.
+
+╔[391] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[391] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002706.
+
+╔[392] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[392] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005814.
+
+╔[393] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[393] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003186.
+
+╔[394] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[394] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002929.
+
+╔[395] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[395] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004434.
+
+╔[396] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[396] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003013.
+
+╔[397] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[397] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002568.
+
+╔[398] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[398] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007761.
+
+╔[399] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[399] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003706.
+
+╔[400] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[400] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.011602.
+
+╔[401] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[401] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004949.
+
+╔[402] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[402] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003169.
+
+╔[403] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[403] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002566.
+
+╔[404] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[404] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004300.
+
+╔[405] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[405] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002835.
+
+╔[406] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[406] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002581.
+
+╔[407] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[407] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005290.
+
+╔[408] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[408] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003125.
+
+╔[409] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[409] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003388.
+
+╔[410] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[410] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004150.
+
+╔[411] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[411] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002685.
+
+╔[412] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[412] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002111.
+
+╔[413] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[413] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004051.
+
+╔[414] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[414] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003436.
+
+╔[415] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[415] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.007098.
+
+╔[416] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[416] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004556.
+
+╔[417] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[417] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003222.
+
+╔[418] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[418] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002733.
+
+╔[419] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[419] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009495.
+
+╔[420] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[420] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003680.
+
+╔[421] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[421] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.010215.
+
+╔[422] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[422] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005028.
+
+╔[423] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[423] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003548.
+
+╔[424] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[424] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002883.
+
+╔[425] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[425] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.028991.
+
+╔[426] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[426] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004856.
+
+╔[427] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[427] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004599.
+
+╔[428] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[428] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008008.
+
+╔[429] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[429] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005021.
+
+╔[430] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[430] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004961.
+
+╔[431] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[431] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.014217.
+
+╔[432] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[432] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004708.
+
+╔[433] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[433] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003647.
+
+╔[434] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[434] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005493.
+
+╔[435] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[435] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003989.
+
+╔[436] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[436] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003307.
+
+╔[437] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[437] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006504.
+
+╔[438] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[438] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003836.
+
+╔[439] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[439] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003343.
+
+╔[440] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[440] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005746.
+
+╔[441] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[441] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004025.
+
+╔[442] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[442] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.006860.
+
+╔[443] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[443] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018480.
+
+╔[444] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[444] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005312.
+
+╔[445] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[445] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003654.
+
+╔[446] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[446] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007046.
+
+╔[447] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[447] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004093.
+
+╔[448] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[448] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003305.
+
+╔[449] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[449] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006658.
+
+╔[450] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[450] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004294.
+
+╔[451] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[451] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003451.
+
+╔[452] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[452] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010850.
+
+╔[453] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[453] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004458.
+
+╔[454] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[454] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.012441.
+
+╔[455] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[455] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008135.
+
+╔[456] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[456] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004006.
+
+╔[457] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[457] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003294.
+
+╔[458] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[458] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011152.
+
+╔[459] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[459] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.010181.
+
+╔[460] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[460] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005178.
+
+╔[461] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[461] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.014467.
+
+╔[462] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[462] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004823.
+
+╔[463] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[463] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.005498.
+
+╔[464] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[464] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.019762.
+
+╔[465] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[465] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.007687.
+
+╔[466] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[466] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003429.
+
+╔[467] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[467] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005515.
+
+╔[468] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[468] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003553.
+
+╔[469] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[469] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002808.
+
+╔[470] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[470] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.024772.
+
+╔[471] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[471] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004566.
+
+╔[472] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[472] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003053.
+
+╔[473] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[473] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.013072.
+
+╔[474] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[474] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004406.
+
+╔[475] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[475] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003366.
+
+╔[476] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[476] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.017911.
+
+╔[477] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[477] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004479.
+
+╔[478] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[478] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004492.
+
+╔[479] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[479] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009405.
+
+╔[480] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[480] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003907.
+
+╔[481] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[481] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002943.
+
+╔[482] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[482] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.023759.
+
+╔[483] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[483] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004350.
+
+╔[484] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[484] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003122.
+
+╔[485] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[485] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010243.
+
+╔[486] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[486] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003999.
+
+╔[487] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[487] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002840.
+
+╔[488] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[488] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.023605.
+
+╔[489] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[489] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004303.
+
+╔[490] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[490] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003122.
+
+╔[491] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[491] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010356.
+
+╔[492] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[492] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003945.
+
+╔[493] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[493] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003590.
+
+╔[494] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[494] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006531.
+
+╔[495] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[495] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005370.
+
+╔[496] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[496] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003102.
+
+╔[497] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[497] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006613.
+
+╔[498] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[498] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003529.
+
+╔[499] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[499] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003174.
+
+╔[500] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[500] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012960.
+
+╔[501] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[501] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003923.
+
+╔[502] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[502] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002990.
+
+╔[503] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[503] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010420.
+
+╔[504] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[504] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003676.
+
+╔[505] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[505] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002763.
+
+╔[506] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[506] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006031.
+
+╔[507] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[507] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005346.
+
+╔[508] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[508] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003957.
+
+╔[509] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[509] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006318.
+
+╔[510] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[510] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004273.
+
+╔[511] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[511] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.008173.
+
+╔[512] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[512] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010618.
+
+╔[513] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[513] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003972.
+
+╔[514] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[514] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.009528.
+
+╔[515] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[515] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.020014.
+
+╔[516] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[516] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004323.
+
+╔[517] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[517] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003122.
+
+╔[518] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[518] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009700.
+
+╔[519] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[519] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004082.
+
+╔[520] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[520] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003425.
+
+╔[521] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[521] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004702.
+
+╔[522] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[522] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003349.
+
+╔[523] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[523] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003005.
+
+╔[524] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[524] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006447.
+
+╔[525] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[525] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003268.
+
+╔[526] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[526] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002525.
+
+╔[527] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[527] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008641.
+
+╔[528] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[528] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003799.
+
+╔[529] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[529] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.006353.
+
+╔[530] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[530] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006246.
+
+╔[531] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[531] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003344.
+
+╔[532] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[532] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002682.
+
+╔[533] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[533] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005444.
+
+╔[534] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[534] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003137.
+
+╔[535] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[535] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002439.
+
+╔[536] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[536] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004094.
+
+╔[537] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[537] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002863.
+
+╔[538] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[538] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002432.
+
+╔[539] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[539] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004492.
+
+╔[540] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[540] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003420.
+
+╔[541] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[541] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002969.
+
+╔[542] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[542] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004885.
+
+╔[543] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[543] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003110.
+
+╔[544] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[544] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002298.
+
+╔[545] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[545] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004189.
+
+╔[546] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[546] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002933.
+
+╔[547] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[547] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002249.
+
+╔[548] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[548] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004099.
+
+╔[549] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[549] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002711.
+
+╔[550] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[550] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002265.
+
+╔[551] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[551] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004142.
+
+╔[552] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[552] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002703.
+
+╔[553] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[553] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003953.
+
+╔[554] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[554] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005435.
+
+╔[555] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[555] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003000.
+
+╔[556] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[556] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002578.
+
+╔[557] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[557] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004362.
+
+╔[558] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[558] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002803.
+
+╔[559] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[559] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002527.
+
+╔[560] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[560] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004055.
+
+╔[561] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[561] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002741.
+
+╔[562] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[562] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002334.
+
+╔[563] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[563] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003876.
+
+╔[564] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[564] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002851.
+
+╔[565] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[565] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002484.
+
+╔[566] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[566] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003801.
+
+╔[567] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[567] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002552.
+
+╔[568] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[568] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002191.
+
+╔[569] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[569] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003913.
+
+╔[570] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[570] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002571.
+
+╔[571] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[571] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002414.
+
+╔[572] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[572] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004700.
+
+╔[573] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[573] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005264.
+
+╔[574] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[574] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002644.
+
+╔[575] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[575] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009245.
+
+╔[576] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[576] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003217.
+
+╔[577] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[577] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002684.
+
+╔[578] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[578] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004424.
+
+╔[579] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[579] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002923.
+
+╔[580] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[580] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002530.
+
+╔[581] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[581] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009812.
+
+╔[582] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[582] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005403.
+
+╔[583] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[583] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003079.
+
+╔[584] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[584] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004825.
+
+╔[585] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[585] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003281.
+
+╔[586] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[586] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002463.
+
+╔[587] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[587] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005946.
+
+╔[588] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[588] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003171.
+
+╔[589] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[589] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002643.
+
+╔[590] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[590] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003261.
+
+╔[591] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[591] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002218.
+
+╔[592] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[592] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.001753.
+
+╔[593] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[593] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003110.
+
+╔[594] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[594] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.002660.
+
+╔[595] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[595] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002473.
+
+╔[596] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[596] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003795.
+
+╔[597] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[597] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003225.
+
+╔[598] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[598] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002263.
+
+╔[599] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[599] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006170.
+
+╔[600] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[600] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003103.
+
+╔[601] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[601] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002430.
+
+╔[602] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[602] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007253.
+
+╔[603] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[603] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003714.
+
+╔[604] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[604] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.004547.
+
+╔[605] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[605] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011215.
+
+╔[606] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[606] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004422.
+
+╔[607] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[607] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.003089.
+
+╔[608] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[608] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004773.
+
+╔[609] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[609] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.003441.
+
+╔[610] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+╚[610] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.002618.
+
+╔[611] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[611] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.003560.
+
+╔[612] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[612] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.048724.
+
+1 PHP_REACHES edges created
+1 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[613] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[613] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.137323.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[614] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[614] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.157776.
+
+╔[615] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'trim(wp_json_encode($this->option["post_client_item"]))'' cannot be parsed correct.
+HTML code '$'false'' cannot be parsed correct.
+HTML code '$'true'' cannot be parsed correct.
+HTML code '$'$this->ignore()'' cannot be parsed correct.
+HTML code '$'trim(wp_json_encode($this->option["environment"]))'' cannot be parsed correct.
+HTML code '$',
+        captureUncaught: true,
+        verbose: '' cannot be parsed correct.
+HTML code '$'        }
+      };
+      // Rollbar Snippet
+      !function(r){function e(t){if(o[t])return o[t].exports;var n=o[t]={exports:{},id:t,loaded:!1};return r[t].call(n.exports,n,n.exports,e),n.loaded=!0,n.exports}var o={};return e.m=r,e.c=o,e.p="",e(0)}([function(r,e,o){"use strict";var t=o(1).Rollbar,n=o(2);_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://d37gvrvc0wt4s1.cloudfront.net/js/v1.9/rollbar.min.js";var a=t.init(window,_rollbarConfig),i=n(a,_rollbarConfig);a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,i)},function(r,e){"use strict";function o(r){return function(){try{return r.apply(this,arguments)}catch(e){try{console.error("[Rollbar]: Internal error",e)}catch(o){}}}}function t(r,e,o){window._rollbarWrappedError&&(o[4]||(o[4]=window._rollbarWrappedError),o[5]||(o[5]=window._rollbarWrappedError._rollbarContext),window._rollbarWrappedError=null),r.uncaughtError.apply(r,o),e&&e.apply(window,o)}function n(r){var e=function(){var e=Array.prototype.slice.call(arguments,0);t(r,r._rollbarOldOnError,e)};return e.belongsToShim=!0,e}function a(r){this.shimId=++c,this.notifier=null,this.parentShim=r,this._rollbarOldOnError=null}function i(r){var e=a;return o(function(){if(this.notifier)return this.notifier[r].apply(this.notifier,arguments);var o=this,t="scope"===r;t&&(o=new e(this));var n=Array.prototype.slice.call(arguments,0),a={shim:o,method:r,args:n,ts:new Date};return window._rollbarShimQueue.push(a),t?o:void 0})}function l(r,e){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){var o=e.addEventListener;e.addEventListener=function(e,t,n){o.call(this,e,r.wrap(t),n)};var t=e.removeEventListener;e.removeEventListener=function(r,e,o){t.call(this,r,e&&e._wrapped?e._wrapped:e,o)}}}var c=0;a.init=function(r,e){var t=e.globalAlias||"Rollbar";if("object"==typeof r[t])return r[t];r._rollbarShimQueue=[],r._rollbarWrappedError=null,e=e||{};var i=new a;return o(function(){if(i.configure(e),e.captureUncaught){i._rollbarOldOnError=r.onerror,r.onerror=n(i);var o,a,c="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(o=0;o<c.length;++o)a=c[o],r[a]&&r[a].prototype&&l(i,r[a].prototype)}return e.captureUnhandledRejections&&(i._unhandledRejectionHandler=function(r){var e=r.reason,o=r.promise,t=r.detail;!e&&t&&(e=t.reason,o=t.promise),i.unhandledRejection(e,o)},r.addEventListener("unhandledrejection",i._unhandledRejectionHandler)),r[t]=i,i})()},a.prototype.loadFull=function(r,e,t,n,a){var i=function(){var e;if(void 0===r._rollbarPayloadQueue){var o,t,n,i;for(e=new Error("rollbar.js did not load");o=r._rollbarShimQueue.shift();)for(n=o.args,i=0;i<n.length;++i)if(t=n[i],"function"==typeof t){t(e);break}}"function"==typeof a&&a(e)},l=!1,c=e.createElement("script"),p=e.getElementsByTagName("script")[0],d=p.parentNode;c.crossOrigin="",c.src=n.rollbarJsUrl,c.async=!t,c.onload=c.onreadystatechange=o(function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){c.onload=c.onreadystatechange=null;try{d.removeChild(c)}catch(r){}l=!0,i()}}),d.insertBefore(c,p)},a.prototype.wrap=function(r,e){try{var o;if(o="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._wrapped){r._wrapped=function(){try{return r.apply(this,arguments)}catch(e){throw"string"==typeof e&&(e=new String(e)),e._rollbarContext=o()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e,e}},r._wrapped._isWrap=!0;for(var t in r)r.hasOwnProperty(t)&&(r._wrapped[t]=r[t])}return r._wrapped}catch(n){return r}};for(var p="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError,unhandledRejection".split(","),d=0;d<p.length;++d)a.prototype[p[d]]=i(p[d]);r.exports={Rollbar:a,_rollbarWindowOnError:t}},function(r,e){"use strict";r.exports=function(r,e){return function(o){if(!o&&!window._rollbarInitialized){var t=window.RollbarNotifier,n=e||{},a=n.globalAlias||"Rollbar",i=window.Rollbar.init(n,r);i._processShimQueue(window._rollbarShimQueue||[]),window[a]=i,window._rollbarInitialized=!0,t.processPayloads()}}}}]);
+      // End Rollbar Snippet
+    </script>
+
+    '' cannot be parsed correct.
+╚[615] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.788005.
+
+╔[616] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[616] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.051588.
+
+╔[617] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 10 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[617] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.529863.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[618] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running CubridDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running FileProDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MongoDbDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running ArrayElementDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running MySQLiDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+lib/RollbarAdminConfig.php:56
+  - RETRIEVAL call to get_option("rollbar_logging_config") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/RollbarJSLogging.php:8
+  - RETRIEVAL call to get_option("rollbar_logging_config") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/RollbarPHPLogging.php:14
+  - RETRIEVAL call to get_option("rollbar_logging_config") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("rollbar_logging_config") - {'option'}
+	WordPressRetrievalDetector.get_option("rollbar_logging_config") - {'option'}
+	WordPressRetrievalDetector.get_option("rollbar_logging_config") - {'option'}
+╚[618] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.131787.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[619] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[619] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.041331.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[620] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[620] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.008430.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:24.952037!
+RETRIEVAL call to get_option("rollbar_logging_config") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rollbar_logging_config") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rollbar_logging_config") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

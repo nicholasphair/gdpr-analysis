@@ -1,0 +1,466 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on chessonline
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.812814.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.876921.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.308301.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.732122.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 614 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.058256.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.583345.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.109556.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 234 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.076059.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2817
+Added 1967 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 5765
+Added 2948 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.215147.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/chessonline/chessonline.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.167641.
+
+2 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2815 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2948 PHP_REACHES edges created
+5765 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 752 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.055622.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.197049.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 83 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.190744.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 67 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.168237.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.031691.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.765196.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018037.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.036482.
+
+150 PHP_REACHES edges created
+150 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 84 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.136466.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.157325.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'co__("settings")'' cannot be parsed correct.
+HTML code '$'get_option("co_chessboard_size")'' cannot be parsed correct.
+HTML code '$'co__("px")'' cannot be parsed correct.
+HTML code '$'get_option("co_chessboard_alignment")'' cannot be parsed correct.
+HTML code '$'co__(get_option("co_chessboard_alignment"))'' cannot be parsed correct.
+HTML code '$'co__("center")'' cannot be parsed correct.
+HTML code '$'co__("align left")'' cannot be parsed correct.
+HTML code '$'co__("align right")'' cannot be parsed correct.
+HTML code '$'co__("float left")'' cannot be parsed correct.
+HTML code '$'co__("float right")'' cannot be parsed correct.
+HTML code '$'get_option("co_lightsquare_color")'' cannot be parsed correct.
+HTML code '$'co__("HEX code or standard CSS color name")'' cannot be parsed correct.
+HTML code '$'get_option("co_darksquare_color")'' cannot be parsed correct.
+HTML code '$'co__("HEX code or standard CSS color name")'' cannot be parsed correct.
+HTML code '$'co__("yes")'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'co__("no")'' cannot be parsed correct.
+HTML code '$'get_option("co_link_url")'' cannot be parsed correct.
+HTML code '$'co__("Use {FEN} as placeholder to pass the FEN")'' cannot be parsed correct.
+HTML code '$'get_option("co_link_text")'' cannot be parsed correct.
+HTML code '$'get_option("co_link_target")'' cannot be parsed correct.
+HTML code '$'co__(get_option("co_link_target"))'' cannot be parsed correct.
+HTML code '$'co__("overlay")'' cannot be parsed correct.
+HTML code '$'co__("new window")'' cannot be parsed correct.
+HTML code '$'co__("same window")'' cannot be parsed correct.
+HTML code '$'co__("Save Changes")'' cannot be parsed correct.
+HTML code '$'<div id="icon-tools" class="icon32"></div><h2>co__("ChessOnline FEN Editor")</h2>'' cannot be parsed correct.
+HTML code '$'<button id="co_fen_mceupdate" class="button-primary" tabindex="100">co__("Add FEN")</button>'' cannot be parsed correct.
+HTML code '$'co__("To use this tool, you must enable JavaScript.")'' cannot be parsed correct.
+HTML code '$'<div class="co_fenfields">'' cannot be parsed correct.
+HTML code '$'<div class="co_editorboard">'' cannot be parsed correct.
+HTML code '$'<div class="co_repo">'' cannot be parsed correct.
+HTML code '$'<div class="co_fenoutput">'' cannot be parsed correct.
+HTML code '$'<!--  FEN editor -->
+'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<!--  FEN editor end -->
+'' cannot be parsed correct.
+HTML code '$'<!--  FEN editor -->
+'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<div style="display: none;">'' cannot be parsed correct.
+HTML code '$'<div id="co_fen_mce">'' cannot be parsed correct.
+HTML code '$'</div></div></div>'' cannot be parsed correct.
+HTML code '$'
+<!--  FEN editor end -->
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.293200.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.062612.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.545340.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running FileProDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PropertyDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running PHPRetrievalDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running MySQLiDetector
+### Finish running maxdbDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+chessonline.php:260
+  - RETRIEVAL call to get_option("co_chessboard_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:265
+  - RETRIEVAL call to get_option("co_chessboard_alignment") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:266
+  - RETRIEVAL call to get_option("co_chessboard_alignment") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:266
+  - RETRIEVAL call to get_option("co_chessboard_alignment") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:277
+  - RETRIEVAL call to get_option("co_lightsquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:281
+  - RETRIEVAL call to get_option("co_darksquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:287
+  - RETRIEVAL call to get_option("co_display_infolabel") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:292
+  - RETRIEVAL call to get_option("co_link_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:296
+  - RETRIEVAL call to get_option("co_link_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:301
+  - RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:302
+  - RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:302
+  - RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:370
+  - RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta
+chessonline.php:446
+  - RETRIEVAL call to get_option("co_chessboard_alignment") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:465
+  - RETRIEVAL call to get_option("co_darksquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:465
+  - RETRIEVAL call to get_option("co_darksquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:466
+  - RETRIEVAL call to get_option("co_lightsquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:466
+  - RETRIEVAL call to get_option("co_lightsquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:474
+  - RETRIEVAL call to get_option("co_chessboard_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:474
+  - RETRIEVAL call to get_option("co_chessboard_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:492
+  - RETRIEVAL call to get_option("co_display_infolabel") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:495
+  - RETRIEVAL call to get_option("co_link_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:495
+  - RETRIEVAL call to get_option("co_link_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:498
+  - RETRIEVAL call to get_option("co_link_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:498
+  - RETRIEVAL call to get_option("co_link_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:513
+  - RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+chessonline.php:513
+  - RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("co_display_infolabel") - {'option'}
+	WordPressRetrievalDetector.get_option("co_darksquare_color") - {'option'}
+	WordPressRetrievalDetector.get_option("co_lightsquare_color") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_target") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_target") - {'option'}
+	WordPressRetrievalDetector.get_option("co_chessboard_size") - {'option'}
+	WordPressRetrievalDetector.get_option("co_display_infolabel") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_target") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_target") - {'option'}
+	WordPressRetrievalDetector.get_option("co_lightsquare_color") - {'option'}
+	WordPressRetrievalDetector.get_option("co_chessboard_size") - {'option'}
+	WordPressRetrievalDetector.get_option("co_darksquare_color") - {'option'}
+	WordPressRetrievalDetector.get_option("co_chessboard_alignment") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_text") - {'option'}
+	WordPressRetrievalDetector.get_option("co_darksquare_color") - {'option'}
+	WordPressRetrievalDetector.get_option("co_chessboard_size") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_url") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_text") - {'option'}
+	WordPressRetrievalDetector.get_option("co_chessboard_alignment") - {'option'}
+	WordPressRetrievalDetector.get_option("co_chessboard_alignment") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_target") - {'option'}
+	WordPressRetrievalDetector.get_option("co_lightsquare_color") - {'option'}
+	WordPressRetrievalDetector.get_option("co_chessboard_alignment") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_url") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_text") - {'option'}
+	WordPressRetrievalDetector.get_option("co_link_url") - {'option'}
+user_meta
+	WordPressRetrievalDetector.get_user_option("rich_editing") - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.683766.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.194201.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 1 nodes as PERSONAL
+In total, tainted 1 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.136176.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:33.962051!
+RETRIEVAL call to get_option("co_chessboard_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_chessboard_alignment") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_chessboard_alignment") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_chessboard_alignment") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_lightsquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_darksquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_display_infolabel") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_chessboard_alignment") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_darksquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_darksquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_lightsquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_lightsquare_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_chessboard_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_chessboard_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_display_infolabel") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("co_link_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

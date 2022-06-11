@@ -1,0 +1,767 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on simple-content-construction-kit
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.341057.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.057258.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 23 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.373183.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 11 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.850614.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 2058 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.486374.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.488815.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.074092.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 676 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:10.034315.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 12324
+Added 9556 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 12324
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.998207.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-content-construction-kit/wp-simple-cck-base.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-content-construction-kit/wp-simple-cck-build.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-content-construction-kit/wp-simple-cck-content.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-content-construction-kit/wp-simple-cck-fields.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-content-construction-kit/wp-simple-cck.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-content-construction-kit/wp-simple-cck-settings.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.633304.
+
+23 PHP_REACHES edges created
+11 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+10000 PHP_REACHES edges created
+11000 PHP_REACHES edges created
+12000 PHP_REACHES edges created
+12290 PHP_REACHES edges created
+12324 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 4355 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.386194.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:06.850017.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 341 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:08.159215.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 132 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.232470.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.567949.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.580304.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.036804.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.032373.
+
+473 PHP_REACHES edges created
+473 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 556 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.162377.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+90 SQL operations to process.
+select * from $wpdbscck_content_type where 	enable = 1 and product_machine_name not in('post','page')
+SQL command (select * from $wpdbscck_content_type where enable = 1 and product_machine_name not in('post','page')) cannot be parsed correct.
+select sctf.* from $wpdbscck_content_type_fields sctf
+  inner join $wpdbscck_content_type_fields_detail sctfd on sctf.id = sctfd.field_id
+  where sctf.content_type_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type where product_machine_name = \'"$post_type"\'")' and sctfd.attribute_name = 'show_in_list' and sctfd.	attribute_value = 1 
+  
+SQL command (select sctf.* from $wpdbscck_content_type_fields sctf inner join $wpdbscck_content_type_fields_detail sctfd on sctf.id = sctfd.field_id where sctf.content_type_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type where product_machine_name = \'"$post_type"\'")' and sctfd.attribute_name = 'show_in_list' and sctfd. attribute_value = 1 ) cannot be parsed correct.
+select sctf.* from $wpdbscck_content_type_fields sctf
+  inner join $wpdbscck_content_type_fields_detail sctfd on sctf.id = sctfd.field_id
+  where sctf.content_type_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type where product_machine_name = \'"$post_type"\'")' and sctfd.attribute_name = 'show_in_list' and sctfd.	attribute_value = 1 
+  
+SQL command (select sctf.* from $wpdbscck_content_type_fields sctf inner join $wpdbscck_content_type_fields_detail sctfd on sctf.id = sctfd.field_id where sctf.content_type_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type where product_machine_name = \'"$post_type"\'")' and sctfd.attribute_name = 'show_in_list' and sctfd. attribute_value = 1 ) cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_group where content_type_id = '$wpdb->get_var($sql)' order by weight asc
+SQL command (select * from $wpdbscck_content_type_fields_group where content_type_id = '$wpdb->get_var($sql)' order by weight asc) cannot be parsed correct.
+ select ctf.* from $wpdbscck_content_type_fields ctf
+   INNER JOIN  $wpdbscck_content_type_fields_group_rel ctfgr
+   ON ctfgr.field_id = ctf.id
+   WHERE ctfgr.group_id = '$params_args_group_id '  order by ctfgr.weight
+SQL command ( select ctf.* from $wpdbscck_content_type_fields ctf INNER JOIN $wpdbscck_content_type_fields_group_rel ctfgr ON ctfgr.field_id = ctf.id WHERE ctfgr.group_id = '$params_args_group_id ' order by ctfgr.weight) cannot be parsed correct.
+implode(" union ", $role_sql)
+SQL command (implode(" union ", $role_sql)) cannot be parsed correct.
+select ID,post_title from $wpdbposts where post_title like '%$_POST_field_value%' and  post_type in ('implode("\',\'", $content_reference_post_type_arr)') and post_status = 'publish'
+SQL command (select ID,post_title from $wpdbposts where post_title like '%$_POST_field_value%' and post_type in ('implode("\',\'", $content_reference_post_type_arr)') and post_status = 'publish') cannot be parsed correct.
+select ID,post_title from $wpdbposts where post_title like '%$_POST_field_value%' and  post_type in ('implode("\',\'", $content_reference_post_type_arr)') and post_status = 'publish'
+SQL command (select ID,post_title from $wpdbposts where post_title like '%$_POST_field_value%' and post_type in ('implode("\',\'", $content_reference_post_type_arr)') and post_status = 'publish') cannot be parsed correct.
+implode(" union ", $role_sql)
+SQL command (implode(" union ", $role_sql)) cannot be parsed correct.
+select ID, post_title from $wpdbposts where post_type in ('implode("\',\'", $content_reference_post_type_arr)') and post_status = 'publish'
+SQL command (select ID, post_title from $wpdbposts where post_type in ('implode("\',\'", $content_reference_post_type_arr)') and post_status = 'publish') cannot be parsed correct.
+implode(" union ", $role_sql)
+SQL command (implode(" union ", $role_sql)) cannot be parsed correct.
+select ctf.*,sct.product_machine_name from $wpdbscck_content_type_fields ctf
+                                       INNER JOIN $wpdbscck_content_type  sct
+                                       on sct.id = ctf.content_type_id 
+                                       where field_type = 'taxonomy' and sct.enable = 1 
+SQL command (select ctf.*,sct.product_machine_name from $wpdbscck_content_type_fields ctf INNER JOIN $wpdbscck_content_type sct on sct.id = ctf.content_type_id where field_type = 'taxonomy' and sct.enable = 1 ) cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail where field_id = '$wpdb->get_results("select ctf.*,sct.product_machine_name from " . $wpdb->prefix . "scck_content_type_fields ctf
+                                       INNER JOIN " . $wpdb->prefix . "scck_content_type  sct
+                                       on sct.id = ctf.content_type_id 
+                                       where field_type = \'taxonomy\' and sct.enable = 1 ")_0_id'
+SQL command (select * from $wpdbscck_content_type_fields_detail where field_id = '$wpdb->get_results("select ctf.*,sct.product_machine_name from " . $wpdb->prefix . "scck_content_type_fields ctf INNER JOIN " . $wpdb->prefix . "scck_content_type sct on sct.id = ctf.content_type_id where field_type = \'taxonomy\' and sct.enable = 1 ")_0_id') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields where content_type_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type where product_machine_name = \'"$post->post_type"\'")' 
+SQL command (select * from $wpdbscck_content_type_fields where content_type_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type where product_machine_name = \'"$post->post_type"\'")' ) cannot be parsed correct.
+update $wpdbposts set post_title = 'trim($_POST[$alt_tag])', post_content = 'trim($_POST[$alt_tag])' where ID = 'get_post_meta($post_id, $row->field_name, true)'
+SQL command (update $wpdbposts set post_title = 'trim($_POST[$alt_tag])', post_content = 'trim($_POST[$alt_tag])' where ID = 'get_post_meta($post_id, $row->field_name, true)') cannot be parsed correct.
+update $wpdbscck_content_type set implode(",", $data) where id = '$_POST_content_type_id'
+SQL command (update $wpdbscck_content_type set implode(",", $data) where id = '$_POST_content_type_id') cannot be parsed correct.
+insert into  $wpdbscck_content_type set implode(",", $data)
+SQL command (insert into $wpdbscck_content_type set implode(",", $data)) cannot be parsed correct.
+insert into  $wpdbscck_content_type_fields_group set implode(",", $data)
+SQL command (insert into $wpdbscck_content_type_fields_group set implode(",", $data)) cannot be parsed correct.
+update $wpdbscck_menu set weight = '$menu_weight' where id = '$id'
+SQL command (update $wpdbscck_menu set weight = '$menu_weight' where id = '$id') cannot be parsed correct.
+update $wpdbscck_content_type set show_in_menu = 0 , menu_id = '$id', weight = '$cck_weight' where id = '$id'
+SQL command (update $wpdbscck_content_type set show_in_menu = 0 , menu_id = '$id', weight = '$cck_weight' where id = '$id') cannot be parsed correct.
+update $wpdbscck_content_type set show_in_menu = 1 ,menu_id = '$this->get_default_menu()', weight = '$cck_weight' where id = '$id'
+SQL command (update $wpdbscck_content_type set show_in_menu = 1 ,menu_id = '$this->get_default_menu()', weight = '$cck_weight' where id = '$id') cannot be parsed correct.
+select * from $wpdbscck_content_type where id = '$_REQUEST_content_type_id'
+SQL command (select * from $wpdbscck_content_type where id = '$_REQUEST_content_type_id') cannot be parsed correct.
+update $wpdbscck_content_type set menu_id = '$this->get_default_menu()' where menu_id = '$_POST_menu_id'
+SQL command (update $wpdbscck_content_type set menu_id = '$this->get_default_menu()' where menu_id = '$_POST_menu_id') cannot be parsed correct.
+delete from $wpdbscck_menu where id = '$_POST_menu_id'
+SQL command (delete from $wpdbscck_menu where id = '$_POST_menu_id') cannot be parsed correct.
+select * from $wpdbscck_menu order by weight
+SQL command (select * from $wpdbscck_menu order by weight) cannot be parsed correct.
+select * from $wpdbscck_content_type where menu_id = '$wpdb->get_results("select * from " . $wpdb->prefix . "scck_menu order by weight")_0_id' order by weight
+SQL command (select * from $wpdbscck_content_type where menu_id = '$wpdb->get_results("select * from " . $wpdb->prefix . "scck_menu order by weight")_0_id' order by weight) cannot be parsed correct.
+select * from $wpdbscck_content_type where menu_id = '0' order by weight
+SQL command (select * from $wpdbscck_content_type where menu_id = '0' order by weight) cannot be parsed correct.
+update $wpdbscck_menu set implode(",", $data) where id = 'trim($_POST["menu_id"])'
+SQL command (update $wpdbscck_menu set implode(",", $data) where id = 'trim($_POST["menu_id"])') cannot be parsed correct.
+insert into $wpdbscck_menu set implode(",", $data)
+SQL command (insert into $wpdbscck_menu set implode(",", $data)) cannot be parsed correct.
+insert into $wpdbscck_content_type set implode(",", $data)
+SQL command (insert into $wpdbscck_content_type set implode(",", $data)) cannot be parsed correct.
+select * from $wpdbscck_content_type_fields where id= '$_POST_field_id'
+SQL command (select * from $wpdbscck_content_type_fields where id= '$_POST_field_id') cannot be parsed correct.
+delete from $wpdbscck_content_type_fields_group_rel where field_id = '$_POST_field_id'
+SQL command (delete from $wpdbscck_content_type_fields_group_rel where field_id = '$_POST_field_id') cannot be parsed correct.
+delete from $wpdbscck_content_type_fields_detail_tx where field_id = '$_POST_field_id'
+SQL command (delete from $wpdbscck_content_type_fields_detail_tx where field_id = '$_POST_field_id') cannot be parsed correct.
+delete from $wpdbscck_content_type_fields_detail where field_id = '$_POST_field_id'
+SQL command (delete from $wpdbscck_content_type_fields_detail where field_id = '$_POST_field_id') cannot be parsed correct.
+delete from $wpdbpostmeta where meta_key = '$wpdb->get_row("select * from " . $wpdb->prefix . "scck_content_type_fields where id= \'"$field_id"\'")_field_name'
+SQL command (delete from $wpdbpostmeta where meta_key = '$wpdb->get_row("select * from " . $wpdb->prefix . "scck_content_type_fields where id= \'"$field_id"\'")_field_name') cannot be parsed correct.
+select * from $wpdbscck_content_type where id = 'trim($_POST["content_type_id"])'
+SQL command (select * from $wpdbscck_content_type where id = 'trim($_POST["content_type_id"])') cannot be parsed correct.
+delete from $wpdbscck_content_type_fields where id = '$_POST_field_id'
+SQL command (delete from $wpdbscck_content_type_fields where id = '$_POST_field_id') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields where id= '$this_field_id'
+SQL command (select * from $wpdbscck_content_type_fields where id= '$this_field_id') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields where id = '$_GET_field_id'
+SQL command (select * from $wpdbscck_content_type_fields where id = '$_GET_field_id') cannot be parsed correct.
+update $wpdbscck_content_type_fields set implode(",", $data) where id = '$_POST_field_id'
+SQL command (update $wpdbscck_content_type_fields set implode(",", $data) where id = '$_POST_field_id') cannot be parsed correct.
+insert into $wpdbscck_content_type_fields set implode(",", $data)
+SQL command (insert into $wpdbscck_content_type_fields set implode(",", $data)) cannot be parsed correct.
+update $wpdbscck_content_type_fields_group_rel set implode(",", $data) where field_id = '$this->get_field_id($field_name)'
+SQL command (update $wpdbscck_content_type_fields_group_rel set implode(",", $data) where field_id = '$this->get_field_id($field_name)') cannot be parsed correct.
+insert into $wpdbscck_content_type_fields_group_rel set implode(",", $data)
+SQL command (insert into $wpdbscck_content_type_fields_group_rel set implode(",", $data)) cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_group where content_type_id = '$_REQUEST_content_type_id'
+SQL command (select * from $wpdbscck_content_type_fields_group where content_type_id = '$_REQUEST_content_type_id') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_group where content_type_id = '$_REQUEST_content_type_id' order by weight asc
+SQL command (select * from $wpdbscck_content_type_fields_group where content_type_id = '$_REQUEST_content_type_id' order by weight asc) cannot be parsed correct.
+select ctf.* from $wpdbscck_content_type_fields ctf
+    INNER JOIN $wpdbscck_content_type_fields_group_rel gr
+    on gr.field_id = ctf.id
+    where gr.group_id = '$wpdb->get_results("select * from " . $wpdb->prefix . "scck_content_type_fields_group where content_type_id = \'"$content_type_id"\' order by weight asc")_0_id' order by gr.weight
+SQL command (select ctf.* from $wpdbscck_content_type_fields ctf INNER JOIN $wpdbscck_content_type_fields_group_rel gr on gr.field_id = ctf.id where gr.group_id = '$wpdb->get_results("select * from " . $wpdb->prefix . "scck_content_type_fields_group where content_type_id = \'"$content_type_id"\' order by weight asc")_0_id' order by gr.weight) cannot be parsed correct.
+update $wpdbscck_content_type_fields_group_rel set weight = '0',group_id = '$this->get_default_group()' where field_id = '$id'
+SQL command (update $wpdbscck_content_type_fields_group_rel set weight = '0',group_id = '$this->get_default_group()' where field_id = '$id') cannot be parsed correct.
+update $wpdbscck_content_type_fields_group set weight = '0' where id = '$id'
+SQL command (update $wpdbscck_content_type_fields_group set weight = '0' where id = '$id') cannot be parsed correct.
+select * from $wpdbscck_content_type where id = '$_REQUEST_content_type_id'
+SQL command (select * from $wpdbscck_content_type where id = '$_REQUEST_content_type_id') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields where content_type_id = '$_REQUEST_content_type_id'
+SQL command (select * from $wpdbscck_content_type_fields where content_type_id = '$_REQUEST_content_type_id') cannot be parsed correct.
+update $wpdbscck_content_type_fields set implode(",", $data) where id = '$_POST_field_id'
+SQL command (update $wpdbscck_content_type_fields set implode(",", $data) where id = '$_POST_field_id') cannot be parsed correct.
+insert into $wpdbscck_content_type_fields set implode(",", $data)
+SQL command (insert into $wpdbscck_content_type_fields set implode(",", $data)) cannot be parsed correct.
+select * from $wpdbscck_content_type where id = '$_REQUEST_content_type_id'
+SQL command (select * from $wpdbscck_content_type where id = '$_REQUEST_content_type_id') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_group where content_type_id = '$_REQUEST_content_type_id'
+SQL command (select * from $wpdbscck_content_type_fields_group where content_type_id = '$_REQUEST_content_type_id') cannot be parsed correct.
+select a.* from $wpdbscck_content_type_fields_group a
+                 INNER JOIN  $wpdbscck_content_type_fields_group_rel b
+                 on a.id = b.group_id and b.field_id = '$_REQUEST_field_id'
+                 
+SQL command (select a.* from $wpdbscck_content_type_fields_group a INNER JOIN $wpdbscck_content_type_fields_group_rel b on a.id = b.group_id and b.field_id = '$_REQUEST_field_id' ) cannot be parsed correct.
+update $wpdbscck_content_type_fields_group_rel set group_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type_fields_group where group_name = \'default\'")' where group_id = '$_POST_group_id'
+SQL command (update $wpdbscck_content_type_fields_group_rel set group_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type_fields_group where group_name = \'default\'")' where group_id = '$_POST_group_id') cannot be parsed correct.
+delete from  $wpdbscck_content_type_fields_group where id = '$_POST_group_id'
+SQL command (delete from $wpdbscck_content_type_fields_group where id = '$_POST_group_id') cannot be parsed correct.
+update  $wpdbscck_content_type_fields_group set implode(",", $data) where id = '$_POST_group_id'
+SQL command (update $wpdbscck_content_type_fields_group set implode(",", $data) where id = '$_POST_group_id') cannot be parsed correct.
+insert into $wpdbscck_content_type_fields_group set implode(",", $data)
+SQL command (insert into $wpdbscck_content_type_fields_group set implode(",", $data)) cannot be parsed correct.
+select * from $wpdbscck_content_type_fields where content_type_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type where product_machine_name = \'"$post_type"\'")'
+SQL command (select * from $wpdbscck_content_type_fields where content_type_id = '$wpdb->get_var("select id from " . $wpdb->prefix . "scck_content_type where product_machine_name = \'"$post_type"\'")') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields where id = '$this'
+SQL command (select * from $wpdbscck_content_type_fields where id = '$this') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+select post_type from $wpdbposts group by post_type
+SQL command (select post_type from $wpdbposts group by post_type) cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail_tx where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail_tx where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail_tx where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail_tx where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail_tx where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail_tx where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+select * from $wpdbscck_content_type_fields_detail_tx where field_id = '$this' and attribute_name = '$field'
+SQL command (select * from $wpdbscck_content_type_fields_detail_tx where field_id = '$this' and attribute_name = '$field') cannot be parsed correct.
+update $wpdbscck_content_type_fields_detail set implode(",", $data) where id= '$wpdb->get_var("select id from "$table" where attribute_name = \'"$attribute_name"\' and field_id = \'"$field_id"\'")'
+SQL command (update $wpdbscck_content_type_fields_detail set implode(",", $data) where id= '$wpdb->get_var("select id from "$table" where attribute_name = \'"$attribute_name"\' and field_id = \'"$field_id"\'")') cannot be parsed correct.
+insert into $wpdbscck_content_type_fields_detail set implode(",", $data)
+SQL command (insert into $wpdbscck_content_type_fields_detail set implode(",", $data)) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$this` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `enable` int(1) NOT NULL,
+    `product_machine_name` varchar(50) NOT NULL,
+    `product_label` varchar(50) NOT NULL,
+    `add_new_label` varchar(50) NOT NULL,
+    `edit_label` varchar(50) NOT NULL,
+    `all_product_label` varchar(50) NOT NULL,
+    `view_label` varchar(50) NOT NULL,
+    `search_label` varchar(50) NOT NULL,
+    `menu_label` varchar(50) NOT NULL,
+    `product_public` int(1) NOT NULL,
+    `has_archive` int(1) NOT NULL,
+    `publicly_queryable` int(1) NOT NULL,
+    `exclude_from_search` int(1) NOT NULL,
+    `show_ui` int(1) NOT NULL,
+    `show_in_menu` int(1) NOT NULL,
+    `menu_id` int(11) NOT NULL,
+    `weight` int(11) NOT NULL,
+    `category` int(1) NOT NULL,
+    `post_tag` int(1) NOT NULL,
+    `supports` text NOT NULL,
+    `meta_title` text NOT NULL,
+    `meta_desc` text NOT NULL,
+    `meta_keyword` text NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+SQL command (CREATE TABLE IF NOT EXISTS `$this` ( `id` int(11) NOT NULL AUTO_INCREMENT, `enable` int(1) NOT NULL, `product_machine_name` varchar(50) NOT NULL, `product_label` varchar(50) NOT NULL, `add_new_label` varchar(50) NOT NULL, `edit_label` varchar(50) NOT NULL, `all_product_label` varchar(50) NOT NULL, `view_label` varchar(50) NOT NULL, `search_label` varchar(50) NOT NULL, `menu_label` varchar(50) NOT NULL, `product_public` int(1) NOT NULL, `has_archive` int(1) NOT NULL, `publicly_queryable` int(1) NOT NULL, `exclude_from_search` int(1) NOT NULL, `show_ui` int(1) NOT NULL, `show_in_menu` int(1) NOT NULL, `menu_id` int(11) NOT NULL, `weight` int(11) NOT NULL, `category` int(1) NOT NULL, `post_tag` int(1) NOT NULL, `supports` text NOT NULL, `meta_title` text NOT NULL, `meta_desc` text NOT NULL, `meta_keyword` text NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$this` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `content_type_id` int(11) NOT NULL,
+    `field_name` varchar(250) NOT NULL,
+    `field_type` varchar(50) NOT NULL,
+    `field_label` varchar(50) NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+SQL command (CREATE TABLE IF NOT EXISTS `$this` ( `id` int(11) NOT NULL AUTO_INCREMENT, `content_type_id` int(11) NOT NULL, `field_name` varchar(250) NOT NULL, `field_type` varchar(50) NOT NULL, `field_label` varchar(50) NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$this` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `field_id` int(11) NOT NULL,
+    `attribute_name` varchar(100) NOT NULL,
+    `attribute_value` varchar(25) NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+SQL command (CREATE TABLE IF NOT EXISTS `$this` ( `id` int(11) NOT NULL AUTO_INCREMENT, `field_id` int(11) NOT NULL, `attribute_name` varchar(100) NOT NULL, `attribute_value` varchar(25) NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$this` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `field_id` int(11) NOT NULL,
+    `attribute_name` varchar(100) NOT NULL,
+    `attribute_value` text NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+SQL command (CREATE TABLE IF NOT EXISTS `$this` ( `id` int(11) NOT NULL AUTO_INCREMENT, `field_id` int(11) NOT NULL, `attribute_name` varchar(100) NOT NULL, `attribute_value` text NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$this` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `content_type_id` int(11) NOT NULL,
+    `group_name` varchar(100) NOT NULL,
+    `group_title` varchar(100) NOT NULL,
+    `weight` int(11) NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+SQL command (CREATE TABLE IF NOT EXISTS `$this` ( `id` int(11) NOT NULL AUTO_INCREMENT, `content_type_id` int(11) NOT NULL, `group_name` varchar(100) NOT NULL, `group_title` varchar(100) NOT NULL, `weight` int(11) NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$this` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `field_id` int(11) NOT NULL,
+    `group_id` int(11) NOT NULL,
+    `weight` int(11) NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+SQL command (CREATE TABLE IF NOT EXISTS `$this` ( `id` int(11) NOT NULL AUTO_INCREMENT, `field_id` int(11) NOT NULL, `group_id` int(11) NOT NULL, `weight` int(11) NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=latin1;) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$this` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `menuname` varchar(50) NOT NULL,
+    `position` int(11) NOT NULL,
+    `weight` int(11) NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+SQL command (CREATE TABLE IF NOT EXISTS `$this` ( `id` int(11) NOT NULL AUTO_INCREMENT, `menuname` varchar(50) NOT NULL, `position` int(11) NOT NULL, `weight` int(11) NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;) cannot be parsed correct.
+INSERT INTO `$this` (`id`, `menuname`, `position`, `weight`) VALUES (1, 'No Menu', 14, -1);
+SQL command (INSERT INTO `$this` (`id`, `menuname`, `position`, `weight`) VALUES (1, 'No Menu', 14, -1);) cannot be parsed correct.
+INSERT INTO `$this`
+    (`id`, `enable`, `product_machine_name`, `product_label`, `add_new_label`, `edit_label`, `all_product_label`, `view_label`, `search_label`, `menu_label`, `product_public`, `has_archive`, `publicly_queryable`, `exclude_from_search`, `show_ui`, `show_in_menu`, `menu_id`, `weight`)
+    VALUES
+    (1, 1, 'post', 'post', 'Add New post', 'Edit post', 'All posts', 'View post', 'Search post', 'post', 1, 1, 1, 1, 1, 1, 1, 0),
+    (2, 1, 'page', 'page', 'Add New page', 'Edit page', 'All pages', 'View page', 'Search page', 'page', 1, 1, 1, 1, 1, 1, 1, 0);
+SQL command (INSERT INTO `$this` (`id`, `enable`, `product_machine_name`, `product_label`, `add_new_label`, `edit_label`, `all_product_label`, `view_label`, `search_label`, `menu_label`, `product_public`, `has_archive`, `publicly_queryable`, `exclude_from_search`, `show_ui`, `show_in_menu`, `menu_id`, `weight`) VALUES (1, 1, 'post', 'post', 'Add New post', 'Edit post', 'All posts', 'View post', 'Search post', 'post', 1, 1, 1, 1, 1, 1, 1, 0), (2, 1, 'page', 'page', 'Add New page', 'Edit page', 'All pages', 'View page', 'Search page', 'page', 1, 1, 1, 1, 1, 1, 1, 0);) cannot be parsed correct.
+INSERT INTO `$this`
+   (`id`, `content_type_id`, `group_name`, `group_title`, `weight`) VALUES
+   (1, 1, 'default', 'More post Detail', 0),
+   (2, 2, 'default', 'More page Detail', 0);
+SQL command (INSERT INTO `$this` (`id`, `content_type_id`, `group_name`, `group_title`, `weight`) VALUES (1, 1, 'default', 'More post Detail', 0), (2, 2, 'default', 'More page Detail', 0);) cannot be parsed correct.
+select meta_title,meta_desc,meta_keyword from $wpdbscck_content_type where product_machine_name='get_query_var("post_type")'
+SQL command (select meta_title,meta_desc,meta_keyword from $wpdbscck_content_type where product_machine_name='get_query_var("post_type")') cannot be parsed correct.
+select meta_title,meta_desc,meta_keyword from $wpdbscck_content_type where product_machine_name='get_query_var("post_type")'
+SQL command (select meta_title,meta_desc,meta_keyword from $wpdbscck_content_type where product_machine_name='get_query_var("post_type")') cannot be parsed correct.
+select * from $wpdbscck_content_type where  	product_machine_name = 'get_post_type($post)'
+SQL command (select * from $wpdbscck_content_type where product_machine_name = 'get_post_type($post)') cannot be parsed correct.
+select * from $wpdbscck_menu where menuname != 'No Menu' order by weight
+SQL command (select * from $wpdbscck_menu where menuname != 'No Menu' order by weight) cannot be parsed correct.
+select * from wp_scck_content_type where enable = 1 and menu_id = '$wpdb->get_results("select * from " . $wpdb->prefix . "scck_menu where menuname != \'No Menu\' order by weight")_0_id'
+SQL command (select * from wp_scck_content_type where enable = 1 and menu_id = '$wpdb->get_results("select * from " . $wpdb->prefix . "scck_menu where menuname != \'No Menu\' order by weight")_0_id') cannot be parsed correct.
+select * from wp_scck_content_type where enable = 1 and menu_id = 'explode("-", $_GET["page"])_2'
+SQL command (select * from wp_scck_content_type where enable = 1 and menu_id = 'explode("-", $_GET["page"])_2') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [37, 584, 703, 857, 1055, 1426, 1514, 1524, 1752, 2124, 2552, 4504, 4578, 4853, 5581, 6167, 6196, 6322, 6419, 6462, 6488, 6735, 7179, 7199, 7325, 7599, 7787, 8098, 8133, 8421, 8793, 8810, 8827, 8844, 8861, 8883, 8900, 8937, 9044, 9273, 9411, 9590, 9620, 9710, 9882, 10199, 10641, 10679, 10753, 10810, 11297, 11415, 11546, 11603, 11877, 11959, 11979, 12135, 12177, 12474, 12697, 13309, 13360, 13623, 13863, 14149, 14279, 14425, 14544, 14744, 14863, 14990, 15713, 15740, 15774, 15791, 15808, 15825, 15842, 15859, 15876, 15893, 15910, 15927, 16542, 16601, 16787, 16928, 17014, 17126]
+Added 0 SQL nodes. 0 out of 90 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:23.072933.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$string'' cannot be parsed correct.
+HTML code '$'</b> of type <b>'' cannot be parsed correct.
+HTML code '$'<b></td>
+    </tr>
+    <tr>
+      <td>All data will be deleted</td>
+    </tr>
+    </table>
+    
+    <input type="submit" value="Cofirm Delete" class="button-primary">
+    </form>
+    </div>
+'' cannot be parsed correct.
+HTML code '$'></td>
+       <td><label for="field_type">Select Field Type:</label></td>
+       <td>
+        <select name="field_type" id="field_type" '' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$' enctype="multipart/form-data"'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:00.703837.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045903.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 26 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.078347.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PhpCurlDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running HashDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PHPRetrievalDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running OpenSSLDetector
+### Start running SqliteDetector
+### Finish running MySQLiDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running SybaseDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running PhpVarDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running SqlServerDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running VariableDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+wp-simple-cck-build.php:81
+  - RETRIEVAL call to get_post_meta($post_ID, $rows[$i]->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:307
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:308
+  - RETRIEVAL call to get_post($post_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+wp-simple-cck-build.php:366
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:367
+  - RETRIEVAL call to get_userdata($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+wp-simple-cck-build.php:411
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:424
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:425
+  - RETRIEVAL call to get_post($attach_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+wp-simple-cck-build.php:447
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:486
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:526
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:553
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:583
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:634
+  - RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-build.php:787
+  - RETRIEVAL call to get_post_meta($post_id, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-settings.php:39
+  - RETRIEVAL call to get_post_meta($id, $fields[$i]->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-settings.php:40
+  - RETRIEVAL call to get_post($attach_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+wp-simple-cck-settings.php:46
+  - RETRIEVAL call to get_post_meta($id, $fields[$i]->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-settings.php:52
+  - RETRIEVAL call to get_post_meta($id, $fields[$i]->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+wp-simple-cck-settings.php:782
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-simple-cck-settings.php:792
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-simple-cck-settings.php:801
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-simple-cck-settings.php:810
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-simple-cck-settings.php:820
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-simple-cck-settings.php:829
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-simple-cck-settings.php:838
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-simple-cck-settings.php:841
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-simple-cck-settings.php:849
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-simple-cck-settings.php:856
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+wp-simple-cck-build.php:705
+  - STORAGE call to update_post_meta($post_id, $fields_row[$i]->field_name, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+wp-simple-cck-build.php:769
+  - STORAGE call to update_post_meta($post_id, $row->field_name, $attach_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+wp-simple-cck-build.php:826
+  - STORAGE call to update_post_meta($post_id, $row->field_name, $attach_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+wp-simple-cck-build.php:750
+  - DELETION call to wp_delete_attachment($_POST[$filename_id], true) alters data types {'attachment_meta', 'attachment'}. Passed arguments: 0: $post_id (int), 1: $force_delete (bool). Returns (WP_Post|false|null).
+  - Data types: attachment_meta, attachment
+wp-simple-cck-build.php:806
+  - DELETION call to wp_delete_attachment($prev_attach_id, true) alters data types {'attachment_meta', 'attachment'}. Passed arguments: 0: $post_id (int), 1: $force_delete (bool). Returns (WP_Post|false|null).
+  - Data types: attachment_meta, attachment 
+
+By data type:
+attachment
+	DeletionDetector.wp_delete_attachment($_POST[$filename_id], true) - {'attachment_meta', 'attachment'}
+	DeletionDetector.wp_delete_attachment($prev_attach_id, true) - {'attachment_meta', 'attachment'}
+attachment_meta
+	DeletionDetector.wp_delete_attachment($_POST[$filename_id], true) - {'attachment_meta', 'attachment'}
+	DeletionDetector.wp_delete_attachment($prev_attach_id, true) - {'attachment_meta', 'attachment'}
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+post
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($attach_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($attach_id) - {'post', 'post_meta', 'wp_post'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id, $fields[$i]->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, $row->field_name, $attach_id) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, $row->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($attach_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, $rows[$i]->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($attach_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id, $fields[$i]->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id, $fields[$i]->field_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, $fields_row[$i]->field_name, $value) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, $row->field_name, $attach_id) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $row->field_name, true) - {'post_meta'}
+user
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user', 'user_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($attach_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($attach_id) - {'post', 'post_meta', 'wp_post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.170985.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 54 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.235068.
+
+54 STORE_REACHES edges created
+54 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 2 nodes as PERSONAL
+In total, tainted 2 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.171721.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:34.965097!
+DELETION call to wp_delete_attachment($_POST[$filename_id], true) alters data types {'attachment_meta', 'attachment'}. Passed arguments: 0: $post_id (int), 1: $force_delete (bool). Returns (WP_Post|false|null).,None,None
+DELETION call to wp_delete_attachment($prev_attach_id, true) alters data types {'attachment_meta', 'attachment'}. Passed arguments: 0: $post_id (int), 1: $force_delete (bool). Returns (WP_Post|false|null).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($post_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_userdata($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($attach_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, $row->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, $rows[$i]->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($id, $fields[$i]->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($attach_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($id, $fields[$i]->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($id, $fields[$i]->field_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to update_post_meta($post_id, $fields_row[$i]->field_name, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, $row->field_name, $attach_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, $row->field_name, $attach_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

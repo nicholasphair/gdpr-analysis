@@ -1,0 +1,392 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on wordpress-aggregator
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.332312.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.837067.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.273151.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.503715.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 407 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.867203.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.626513.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.098160.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 200 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.411326.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2117
+Added 1510 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2117
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.122659.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wordpress-aggregator/wp-aggregator.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.198250.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2117 PHP_REACHES edges created
+2117 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 704 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.137377.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.782855.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 34 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.697381.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 15 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.177543.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.362756.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.353847.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007306.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.056763.
+
+49 PHP_REACHES edges created
+49 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 34 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.122019.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+10 SQL operations to process.
+CREATE TABLE $wpdbaggregator (
+		id bigint(20) unsigned NOT NULL auto_increment,
+		title text NOT NULL,
+		url varchar(255) NOT NULL default '',
+		content longtext NOT NULL,
+		author varchar(255) NOT NULL default '',
+		date datetime NOT NULL default '0000-00-00 00:00:00',
+		blog_title text NOT NULL,
+		blog_url varchar(255) NOT NULL default '',
+		guid varchar(255) NOT NULL default '',
+		PRIMARY KEY  (id)
+		) ENGINE=MyISAM  CHARACTER SET DB_CHARSET;
+SQL command (CREATE TABLE $wpdbaggregator ( id bigint(20) unsigned NOT NULL auto_increment, title text NOT NULL, url varchar(255) NOT NULL default '', content longtext NOT NULL, author varchar(255) NOT NULL default '', date datetime NOT NULL default '0000-00-00 00:00:00', blog_title text NOT NULL, blog_url varchar(255) NOT NULL default '', guid varchar(255) NOT NULL default '', PRIMARY KEY (id) ) ENGINE=MyISAM CHARACTER SET DB_CHARSET;) cannot be parsed correct.
+SELECT * FROM $wpdbaggregator order by date desc LIMIT intval($perpage),intval($perpage)
+SQL command (SELECT * FROM $wpdbaggregator order by date desc LIMIT intval($perpage),intval($perpage)) cannot be parsed correct.
+SELECT * FROM $wpdbaggregator 
+SQL command (SELECT * FROM $wpdbaggregator ) cannot be parsed correct.
+DELETE from $wpdbaggregator WHERE id = $id
+SQL command (DELETE from $wpdbaggregator WHERE id = $id) cannot be parsed correct.
+DELETE FROM $wpdbaggregator 
+		WHERE id IN (implode(", ", $ids))
+SQL command (DELETE FROM $wpdbaggregator WHERE id IN (implode(", ", $ids))) cannot be parsed correct.
+SELECT id FROM $wpdbaggregator where guid = '$item->get_id()'
+SQL command (SELECT id FROM $wpdbaggregator where guid = '$item->get_id()') cannot be parsed correct.
+UPDATE $wpdbaggregator SET title = 'strip_tags($item->get_title())', url='wp_filter_kses($item->get_permalink())', content='$content', author='strip_tags($author_array->get_name())', blog_title='strip_tags($feed->get_title())',blog_url='wp_filter_kses($feed->get_permalink())', date='date_i18n("Y-m-d H:i:s", strtotime($item->get_date()))' WHERE guid = '$item->get_id()'
+SQL command (UPDATE $wpdbaggregator SET title = 'strip_tags($item->get_title())', url='wp_filter_kses($item->get_permalink())', content='$content', author='strip_tags($author_array->get_name())', blog_title='strip_tags($feed->get_title())',blog_url='wp_filter_kses($feed->get_permalink())', date='date_i18n("Y-m-d H:i:s", strtotime($item->get_date()))' WHERE guid = '$item->get_id()') cannot be parsed correct.
+SELECT id FROM $wpdbaggregator
+SQL command (SELECT id FROM $wpdbaggregator) cannot be parsed correct.
+SELECT id FROM $wpdbaggregator
+SQL command (SELECT id FROM $wpdbaggregator) cannot be parsed correct.
+SELECT * FROM $wpdbaggregator 
+SQL command (SELECT * FROM $wpdbaggregator ) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [225, 1029, 2454, 1860, 1939, 749, 839, 963, 2201, 2373]
+Added 0 SQL nodes. 0 out of 10 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:05.309170.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'showpage($paged, $perpage, $total_page, $total_numer, $maxto)'' cannot be parsed correct.
+HTML code '$'WP_PLUGIN_URL'' cannot be parsed correct.
+HTML code '$'Save changes'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:00.550367.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.048054.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.305334.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running OpenSSLDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running ArrayElementDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PhpVarDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running SqlServerDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running VariableDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+wp-aggregator.php:31
+  - RETRIEVAL call to get_option("aggregator_feeds") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-aggregator.php:36
+  - RETRIEVAL call to get_option("aggregator_update_items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-aggregator.php:65
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-aggregator.php:78
+  - RETRIEVAL call to get_option("last_update") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-aggregator.php:121
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-aggregator.php:160
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-aggregator.php:217
+  - RETRIEVAL call to get_option("permalink_structure") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-aggregator.php:268
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-aggregator.php:328
+  - RETRIEVAL call to get_option("aggregator_feeds") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-aggregator.php:330
+  - RETRIEVAL call to get_option("aggregator_update_items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+wp-aggregator.php:69
+  - STORAGE call to add_option("aggregator_feeds", "http://feed.loosky.net/") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-aggregator.php:70
+  - STORAGE call to add_option("aggregator_update_items", "2") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-aggregator.php:89
+  - STORAGE call to update_option("last_update", $last_update + $i) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-aggregator.php:314
+  - STORAGE call to update_option("aggregator_feeds", $aggregator_feeds) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-aggregator.php:315
+  - STORAGE call to update_option("aggregator_update_items", $aggregator_update_items) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-aggregator.php:329
+  - STORAGE call to update_option("aggregator_feeds", "http://feed.loosky.net/") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-aggregator.php:331
+  - STORAGE call to update_option("aggregator_update_items", "2") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressStorageDetector.update_option("aggregator_update_items", "2") - {'option'}
+	WordPressRetrievalDetector.get_option("permalink_structure") - {'option'}
+	WordPressStorageDetector.update_option("aggregator_feeds", "http://feed.loosky.net/") - {'option'}
+	WordPressRetrievalDetector.get_option("last_update") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+	WordPressRetrievalDetector.get_option("aggregator_feeds") - {'option'}
+	WordPressStorageDetector.update_option("last_update", $last_update + $i) - {'option'}
+	WordPressStorageDetector.add_option("aggregator_feeds", "http://feed.loosky.net/") - {'option'}
+	WordPressRetrievalDetector.get_option("aggregator_update_items") - {'option'}
+	WordPressRetrievalDetector.get_option("aggregator_update_items") - {'option'}
+	WordPressStorageDetector.add_option("aggregator_update_items", "2") - {'option'}
+	WordPressStorageDetector.update_option("aggregator_feeds", $aggregator_feeds) - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressStorageDetector.update_option("aggregator_update_items", $aggregator_update_items) - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+	WordPressRetrievalDetector.get_option("aggregator_feeds") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.302726.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 63 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.142266.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 626
+63 STORE_REACHES edges created
+63 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005604.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:32.352035!
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("permalink_structure") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aggregator_feeds") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aggregator_feeds") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aggregator_update_items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aggregator_update_items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_option("last_update") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("aggregator_feeds", $aggregator_feeds) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("aggregator_update_items", $aggregator_update_items) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("aggregator_feeds", "http://feed.loosky.net/") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("aggregator_update_items", "2") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("aggregator_feeds", "http://feed.loosky.net/") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("aggregator_update_items", "2") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("last_update", $last_update + $i) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

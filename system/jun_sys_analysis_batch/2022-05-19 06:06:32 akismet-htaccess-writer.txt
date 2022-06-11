@@ -1,0 +1,403 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on akismet-htaccess-writer
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.329028.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.098935.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 68 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.364302.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.415201.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 204 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.651096.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.594241.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.098681.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 51 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.895489.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1252
+Added 929 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1252
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.028326.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/akismet-htaccess-writer/akismet-htaccess-writer.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.147063.
+
+1000 PHP_REACHES edges created
+1252 PHP_REACHES edges created
+1252 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 398 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.013532.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.432697.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 12 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.071006.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 53 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.164954.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.015059.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.226753.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.013880.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.042709.
+
+65 PHP_REACHES edges created
+65 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 28 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.119690.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+SELECT * FROM $wpdb WHERE comment_approved = 'spam' GROUP BY comment_author_IP ORDER BY comment_date DESC
+SQL command (SELECT * FROM $wpdb WHERE comment_approved = 'spam' GROUP BY comment_author_IP ORDER BY comment_date DESC) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [538]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.405531.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div class="wrap"><h2>Akismet htaccess writer : $this_version</h2>
+'' cannot be parsed correct.
+HTML code '$'<li>perhaps, the setting is not preserved. please check the file with the "check file" button, and preserve the setting with the "save setting" button if it is OK</li>
+'' cannot be parsed correct.
+HTML code '$'<li>the filename set to the text input field is a filename that Akismet htaccess writer plug-in guessed. please correct it according to the environment used</li>
+'' cannot be parsed correct.
+HTML code '$'<p style="color:#ff1493; font-weight:bold;">save done</p>
+'' cannot be parsed correct.
+HTML code '$'<p style="color:#ff1493; font-weight:bold;">save fail</p>
+'' cannot be parsed correct.
+HTML code '$'<p style="color:#ff1493; font-weight:bold;">it wrote it in the .htaccess file</p>
+'' cannot be parsed correct.
+HTML code '$'<p><label for="h_fname">.htaccess filename to be written</label><br />
+'' cannot be parsed correct.
+HTML code '$'<input type="text" id="h_fname" name="ahw_options[h_fname]" size="80" value="$this_options_htaccess_filename" /></p>'' cannot be parsed correct.
+HTML code '$'<input type="submit" class="button" name="ahw_options[save]" value="save setting" />'' cannot be parsed correct.
+HTML code '$'<input type="submit" class="button" name="ahw_options[check]" value="check file" />'' cannot be parsed correct.
+HTML code '$'<input type="submit" class="button" name="ahw_options[write]" value="write now" /><br />'' cannot be parsed correct.
+HTML code '$'<p>the content of .htaccess is as follows by pushing the "write now" button</p>
+'' cannot be parsed correct.
+HTML code '$'$this->ahw_update_htaccess(FALSE)_output'' cannot be parsed correct.
+HTML code '$'<p>list of SPAM transmission former IP address</p>
+'' cannot be parsed correct.
+HTML code '$'$ip
+'' cannot be parsed correct.
+HTML code '$'copyright &copy; 2008 <a href="mailto$this_address_author_email">zodiac</a'' cannot be parsed correct.
+HTML code '$'<p style="color:#ff1493; font-weight:bold;">check OK</p>
+'' cannot be parsed correct.
+HTML code '$'<p style="color:#ff1493; font-weight:bold;">file not found</p>
+'' cannot be parsed correct.
+HTML code '$'<p style="color:#ff1493; font-weight:bold;">not writeable .htaccess file</p>
+'' cannot be parsed correct.
+HTML code '$'<p style="color:#ff1493; font-weight:bold;">not specified .htaccess file</p>
+'' cannot be parsed correct.
+HTML code '$'[date($LogDateTime)] $text'' cannot be parsed correct.
+HTML code '$'<ul>
+'' cannot be parsed correct.
+HTML code '$'</ul>
+'' cannot be parsed correct.
+HTML code '$'<form id="ahw_options" method="post">
+'' cannot be parsed correct.
+HTML code '$'<p style="font-weight:bold; color:#ff1493;">'' cannot be parsed correct.
+HTML code '$'</p>
+'' cannot be parsed correct.
+HTML code '$'</form>
+'' cannot be parsed correct.
+HTML code '$'<textarea cols="80" rows="10" readonly="readonly">'' cannot be parsed correct.
+HTML code '$'</textarea>
+'' cannot be parsed correct.
+HTML code '$'<textarea cols="80" rows="10" readonly="readonly">'' cannot be parsed correct.
+HTML code '$'</textarea>
+'' cannot be parsed correct.
+HTML code '$'<div style="margin:2em; border:none; border-top:1px solid #dadada; text-align:center;">'' cannot be parsed correct.
+HTML code '$'</div>
+'' cannot be parsed correct.
+HTML code '$'</div>
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.597438.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.109774.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 6 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.614125.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running MySQLiDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running maxdbDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running PHPRetrievalDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running PHPStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+akismet-htaccess-writer.php:270
+  - SHA1 called with parameters [iplist]. Ignore if [iplist] does not contain personal information. 
+
+akismet-htaccess-writer.php:208
+  - RETRIEVAL call to file($this->options["htaccess_filename"], FILE_IGNORE_NEW_LINES).
+  - Data types: file 
+
+akismet-htaccess-writer.php:262
+  - STORAGE call to fwrite($f, $this->output).
+  - Data types: file
+akismet-htaccess-writer.php:436
+  - STORAGE call to fwrite($log, $buffer).
+  - Data types: file 
+
+akismet-htaccess-writer.php:378
+  - object property '$this->address' of personal types {'address'} is found.
+  - Data types: address 
+
+akismet-htaccess-writer.php:54
+  - RETRIEVAL call to get_option($this->ID . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+akismet-htaccess-writer.php:139
+  - RETRIEVAL call to get_option($this->ID . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+akismet-htaccess-writer.php:140
+  - STORAGE call to add_option($this->ID . "_options", [], "Akismet htaccess writer plugin settings.", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+akismet-htaccess-writer.php:150
+  - STORAGE call to delete_option($this->ID . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+akismet-htaccess-writer.php:331
+  - STORAGE call to update_option($this->ID . "_options", $this->options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+akismet-htaccess-writer.php:150
+  - DELETION call to delete_option($this->ID . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+address
+	PropertyDetector.(unknown) - {'address'}
+file
+	PHPStorageDetector.fwrite($f, $this->output) - {'file'}
+	PHPRetrievalDetector.file($this->options["htaccess_filename"], FILE_IGNORE_NEW_LINES) - {'file'}
+	PHPStorageDetector.fwrite($log, $buffer) - {'file'}
+none
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option($this->ID . "_options") - {'option'}
+	DeletionDetector.delete_option($this->ID . "_options") - {'option'}
+	WordPressStorageDetector.add_option($this->ID . "_options", [], "Akismet htaccess writer plugin settings.", "no") - {'option'}
+	WordPressRetrievalDetector.get_option($this->ID . "_options") - {'option'}
+	WordPressStorageDetector.delete_option($this->ID . "_options") - {'option'}
+	WordPressStorageDetector.update_option($this->ID . "_options", $this->options) - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.201244.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 8 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.081946.
+
+8 STORE_REACHES edges created
+8 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 5 nodes as PERSONAL
+In total, tainted 5 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 1 nodes as ENCRYPTED
+In total, tainted 1 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.277640.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:31.419316!
+DELETION call to delete_option($this->ID . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+SHA1 called with parameters [iplist]. Ignore if [iplist] does not contain personal information.,sha1,None
+RETRIEVAL call to file($this->options["htaccess_filename"], FILE_IGNORE_NEW_LINES).,None,None
+STORAGE call to fwrite($f, $this->output).,None,None
+STORAGE call to fwrite($log, $buffer).,None,None
+object property '$this->address' of personal types {'address'} is found.,,None
+RETRIEVAL call to get_option($this->ID . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->ID . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option($this->ID . "_options", [], "Akismet htaccess writer plugin settings.", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option($this->ID . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option($this->ID . "_options", $this->options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

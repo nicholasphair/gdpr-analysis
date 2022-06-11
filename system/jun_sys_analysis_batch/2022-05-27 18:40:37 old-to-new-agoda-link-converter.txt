@@ -1,0 +1,430 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on old-to-new-agoda-link-converter
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.384008.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.985412.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 19 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.352236.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.411892.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 452 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.927225.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.594958.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.095536.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 186 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.003476.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2603
+Added 1946 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2603
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.199392.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/old-to-new-agoda-link-converter/agoda.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/old-to-new-agoda-link-converter/includes/AGLinkConverter.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/old-to-new-agoda-link-converter/includes/AgSqlInsert.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/old-to-new-agoda-link-converter/includes/InformationApi.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/old-to-new-agoda-link-converter/includes/settings.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.548538.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2603 PHP_REACHES edges created
+2603 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 919 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.048877.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.729438.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 20 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.770702.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 28 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.171313.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.236417.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.303868.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018436.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.044693.
+
+48 PHP_REACHES edges created
+48 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 41 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.148200.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+20 SQL operations to process.
+CREATE TABLE IF NOT EXISTS `$wpdbagoda_settings` (
+          `setting_id` int(11) NOT NULL DEFAULT '1',
+          `affiliate_id` VARCHAR(255) NULL DEFAULT 'XXXXXX',
+		  `max_links_per_page` int(11)  DEFAULT 10,
+		  `disable_keyword_conversion` int(4) DEFAULT 0,
+		  `exclude_post_ids` VARCHAR (255)  NULL,
+		  `exclude_cat_ids` VARCHAR (255)  DEFAULT ''
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+		
+		INSERT INTO `$wpdbagoda_settings` (`setting_id`, `max_links_per_page`, `disable_keyword_conversion`) VALUES
+		(1, '10', '1');
+SQL command (CREATE TABLE IF NOT EXISTS `$wpdbagoda_settings` ( `setting_id` int(11) NOT NULL DEFAULT '1', `affiliate_id` VARCHAR(255) NULL DEFAULT 'XXXXXX', `max_links_per_page` int(11) DEFAULT 10, `disable_keyword_conversion` int(4) DEFAULT 0, `exclude_post_ids` VARCHAR (255) NULL, `exclude_cat_ids` VARCHAR (255) DEFAULT '' ) ENGINE=MyISAM DEFAULT CHARSET=latin1; INSERT INTO `$wpdbagoda_settings` (`setting_id`, `max_links_per_page`, `disable_keyword_conversion`) VALUES (1, '10', '1');) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$wpdbagoda_countries` (
+          `dest` varchar(255) NOT NULL DEFAULT '',
+          `url` varchar(255) NOT NULL DEFAULT '',
+          INDEX `dest` (`dest`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+SQL command (CREATE TABLE IF NOT EXISTS `$wpdbagoda_countries` ( `dest` varchar(255) NOT NULL DEFAULT '', `url` varchar(255) NOT NULL DEFAULT '', INDEX `dest` (`dest`) ) ENGINE=MyISAM DEFAULT CHARSET=latin1;) cannot be parsed correct.
+SELECT * FROM $wpdbagoda_countries
+SQL command (SELECT * FROM $wpdbagoda_countries) cannot be parsed correct.
+SELECT * FROM $wpdbagoda_settings  WHERE setting_id = '1'
+SQL command (SELECT * FROM $wpdbagoda_settings WHERE setting_id = '1') cannot be parsed correct.
+SELECT * FROM $wpdbagoda_settings  WHERE setting_id = '1'
+SQL command (SELECT * FROM $wpdbagoda_settings WHERE setting_id = '1') cannot be parsed correct.
+SELECT * FROM $wpdbagoda_hotel  WHERE hotel_name LIKE '%$hotel%'
+SQL command (SELECT * FROM $wpdbagoda_hotel WHERE hotel_name LIKE '%$hotel%') cannot be parsed correct.
+SELECT * FROM $wpdbagoda_landmark  WHERE landmark_name LIKE '%$landmark%'
+SQL command (SELECT * FROM $wpdbagoda_landmark WHERE landmark_name LIKE '%$landmark%') cannot be parsed correct.
+SELECT * FROM $wpdbagoda_city  WHERE city_name LIKE '%$city%'
+SQL command (SELECT * FROM $wpdbagoda_city WHERE city_name LIKE '%$city%') cannot be parsed correct.
+SELECT * FROM $wpdbagoda_area  WHERE area_name LIKE '%$area%'
+SQL command (SELECT * FROM $wpdbagoda_area WHERE area_name LIKE '%$area%') cannot be parsed correct.
+SELECT * FROM $wpdbagoda_settings  WHERE setting_id = '1'
+SQL command (SELECT * FROM $wpdbagoda_settings WHERE setting_id = '1') cannot be parsed correct.
+SELECT * FROM $wpdbagoda_settings  WHERE setting_id = '1'
+SQL command (SELECT * FROM $wpdbagoda_settings WHERE setting_id = '1') cannot be parsed correct.
+DROP TABLE $wpdbagoda_settings
+SQL command (DROP TABLE $wpdbagoda_settings) cannot be parsed correct.
+DROP TABLE $wpdbagoda_countries
+SQL command (DROP TABLE $wpdbagoda_countries) cannot be parsed correct.
+INSERT INTO $wpdbagoda_hotel (hotel_id,hotel_name) VALUES('esc_sql($data[0])','esc_sql($data[1])')
+SQL command (INSERT INTO $wpdbagoda_hotel (hotel_id,hotel_name) VALUES('esc_sql($data[0])','esc_sql($data[1])')) cannot be parsed correct.
+INSERT INTO $wpdbagoda_city (city_id,city_name) VALUES('esc_sql($data[0])','esc_sql($data[1])')
+SQL command (INSERT INTO $wpdbagoda_city (city_id,city_name) VALUES('esc_sql($data[0])','esc_sql($data[1])')) cannot be parsed correct.
+INSERT INTO $wpdbagoda_area (area_id,city_id,area_name) VALUES('esc_sql($data[0])','esc_sql($data[1])','esc_sql($data[2])')
+SQL command (INSERT INTO $wpdbagoda_area (area_id,city_id,area_name) VALUES('esc_sql($data[0])','esc_sql($data[1])','esc_sql($data[2])')) cannot be parsed correct.
+INSERT INTO $wpdbagoda_landmark (landmark_id,city_id,area_id,landmark_name) VALUES('esc_sql($data[0])','esc_sql($data[1])','esc_sql($data[2])','esc_sql($data[3])')
+SQL command (INSERT INTO $wpdbagoda_landmark (landmark_id,city_id,area_id,landmark_name) VALUES('esc_sql($data[0])','esc_sql($data[1])','esc_sql($data[2])','esc_sql($data[3])')) cannot be parsed correct.
+INSERT INTO $wpdbagoda_countries (dest,url) VALUES('strip_tags(utf8_decode(esc_sql($data[0])))','fgetcsv($handle, 1000, ";")_1')
+SQL command (INSERT INTO $wpdbagoda_countries (dest,url) VALUES('strip_tags(utf8_decode(esc_sql($data[0])))','fgetcsv($handle, 1000, ";")_1')) cannot be parsed correct.
+ ALTER TABLE wp_agoda_settings ADD exclude_cat_ids VARCHAR (255) DEFAULT '', ADD disable_keyword_conversion int(4) DEFAULT 0;
+SQL command ( ALTER TABLE wp_agoda_settings ADD exclude_cat_ids VARCHAR (255) DEFAULT '', ADD disable_keyword_conversion int(4) DEFAULT 0;) cannot be parsed correct.
+UPDATE $wpdbagoda_settings SET
+                max_links_per_page = 'sanitize_text_field($_POST["max_links_per_page"])',
+                affiliate_id = 'sanitize_text_field($_POST["affiliate_id"])'
+                WHERE setting_id = '1'
+SQL command (UPDATE $wpdbagoda_settings SET max_links_per_page = 'sanitize_text_field($_POST["max_links_per_page"])', affiliate_id = 'sanitize_text_field($_POST["affiliate_id"])' WHERE setting_id = '1') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [141, 157, 2251, 58, 305, 604, 670, 736, 808, 3648, 3687, 219, 232, 3114, 3237, 3360, 3494, 2990, 3677, 3800]
+Added 0 SQL nodes. 0 out of 20 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:06.073374.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'plugins_url("agoda-logo.png", dirname() . "/images/")'' cannot be parsed correct.
+HTML code '$'str_replace("%7E", "~", $_SERVER["REQUEST_URI"])'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "agoda_settings  WHERE setting_id = \\'1\\'", ARRAY_A)'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:00.926539.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.042926.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.328481.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PropertyDetector
+### Start running SqliteDetector
+### Finish running Sqlite3Detector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PHPStorageDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressStorageDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running VariableDetector
+### Finish running PHPRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+includes/AgSqlInsert.php:24
+  - RETRIEVAL call to fgetcsv($handle, 1000, ";").
+  - Data types: file
+includes/AgSqlInsert.php:45
+  - RETRIEVAL call to fgetcsv($handle, 1000, ";").
+  - Data types: file
+includes/AgSqlInsert.php:67
+  - RETRIEVAL call to fgetcsv($handle, 1000, ",").
+  - Data types: file
+includes/AgSqlInsert.php:87
+  - RETRIEVAL call to fgetcsv($handle, 1000, ",").
+  - Data types: file
+includes/AgSqlInsert.php:106
+  - RETRIEVAL call to fgetcsv($handle, 1000, ",").
+  - Data types: file 
+
+agoda.php:78
+  - STORAGE call to file_put_contents(dirname() . "/error_activation.txt", ob_get_contents()).
+  - Data types: file 
+
+includes/AGLinkConverter.php:212
+  - variable '$split_country' of personal types {'country'} is found.
+  - Data types: country
+includes/AGLinkConverter.php:213
+  - variable '$split_country' of personal types {'country'} is found.
+  - Data types: country
+includes/AGLinkConverter.php:213
+  - variable '$split_country' of personal types {'country'} is found.
+  - Data types: country
+includes/AGLinkConverter.php:214
+  - variable '$split_country' of personal types {'country'} is found.
+  - Data types: country
+includes/AGLinkConverter.php:214
+  - variable '$split_country' of personal types {'country'} is found.
+  - Data types: country 
+
+includes/InformationApi.php:25
+  - API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote 
+
+agoda.php:55
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+agoda.php:61
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+agoda.php:128
+  - RETRIEVAL call to get_post() alters data types {'wp_post', 'post', 'post_meta'}. Returns (WP_Post|array|null).
+  - Data types: wp_post, post, post_meta 
+
+By data type:
+country
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+file
+	PHPStorageDetector.file_put_contents(dirname() . "/error_activation.txt", ob_get_contents()) - {'file'}
+	PHPRetrievalDetector.fgetcsv($handle, 1000, ",") - {'file'}
+	PHPRetrievalDetector.fgetcsv($handle, 1000, ",") - {'file'}
+	PHPRetrievalDetector.fgetcsv($handle, 1000, ";") - {'file'}
+	PHPRetrievalDetector.fgetcsv($handle, 1000, ",") - {'file'}
+	PHPRetrievalDetector.fgetcsv($handle, 1000, ";") - {'file'}
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+post
+	WordPressRetrievalDetector.get_post() - {'wp_post', 'post', 'post_meta'}
+post_meta
+	WordPressRetrievalDetector.get_post() - {'wp_post', 'post', 'post_meta'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+wp_post
+	WordPressRetrievalDetector.get_post() - {'wp_post', 'post', 'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.491183.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 5 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.100390.
+
+5 STORE_REACHES edges created
+5 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 15 nodes as PERSONAL
+In total, tainted 15 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.425150.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:35.798562!
+RETRIEVAL call to fgetcsv($handle, 1000, ",").,None,None
+RETRIEVAL call to fgetcsv($handle, 1000, ";").,None,None
+RETRIEVAL call to fgetcsv($handle, 1000, ";").,None,None
+RETRIEVAL call to fgetcsv($handle, 1000, ",").,None,None
+RETRIEVAL call to fgetcsv($handle, 1000, ",").,None,None
+STORAGE call to file_put_contents(dirname() . "/error_activation.txt", ob_get_contents()).,None,None
+variable '$split_country' of personal types {'country'} is found.,,None
+variable '$split_country' of personal types {'country'} is found.,,None
+variable '$split_country' of personal types {'country'} is found.,,None
+variable '$split_country' of personal types {'country'} is found.,,None
+variable '$split_country' of personal types {'country'} is found.,,None
+API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).,,['http://agd-plugin.com/api.php']
+RETRIEVAL call to get_post() alters data types {'wp_post', 'post', 'post_meta'}. Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

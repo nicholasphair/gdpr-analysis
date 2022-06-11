@@ -1,0 +1,394 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on simple-shortcodes
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.496280.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.347917.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 54 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.407293.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.422558.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 198 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.833533.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.536895.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.119952.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 67 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.215372.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1192
+Added 873 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1192
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.988514.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-shortcodes/MB_SS_Handler.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-shortcodes/simple_shortcodes.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.272754.
+
+1000 PHP_REACHES edges created
+1192 PHP_REACHES edges created
+1192 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 420 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.999706.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 1 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.808154.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 23 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.451564.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 15 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.155991.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.046046.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.320672.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008935.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.042095.
+
+1 CALLS edges created
+38 PHP_REACHES edges created
+39 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 36 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.133609.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+3 SQL operations to process.
+SHOW TABLES
+SQL command (SHOW TABLES) cannot be parsed correct.
+CREATE TABLE $this_db_table_name (
+				name VARCHAR(255) NOT NULL  PRIMARY KEY,
+				value LONGTEXT
+				);
+SQL command (CREATE TABLE $this_db_table_name ( name VARCHAR(255) NOT NULL PRIMARY KEY, value LONGTEXT );) cannot be parsed correct.
+INSERT INTO $this_db_table_name (name, value) VALUES ('$wpdb->escape($initial_name)','$wpdb->escape($initial_value)')
+SQL command (INSERT INTO $this_db_table_name (name, value) VALUES ('$wpdb->escape($initial_name)','$wpdb->escape($initial_value)')) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [269, 1694, 1744]
+Added 0 SQL nodes. 0 out of 3 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:02.421916.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'Could not successfully run query (SELECT name, value 
+			FROM   $this_db_table_name
+			WHERE  1) from $this_db_table_name: mysql_error()'' cannot be parsed correct.
+HTML code '$'Could not successfully run query (REPLACE INTO $this_db_table_name VALUES(\'$_POST_SS_name\',\'$_POST_SS_value\')) on $this_db_table_name: mysql_error()'' cannot be parsed correct.
+HTML code '$'Could not successfully run query (DELETE FROM $this_db_table_name WHERE name=\'$_GET_name\') on $this_db_table_name: mysql_error()'' cannot be parsed correct.
+HTML code '$'($this_handler_filename).'' cannot be parsed correct.
+HTML code '$'basename($this->handler_filename)'' cannot be parsed correct.
+HTML code '$'$_POST_SS_name'' cannot be parsed correct.
+HTML code '$'$this_adminOptions_SSValueWidth'' cannot be parsed correct.
+HTML code '$'$_POST_SS_value'' cannot be parsed correct.
+HTML code '$'$this_adminOptions_SSValueWidth'' cannot be parsed correct.
+HTML code '$'$this_adminOptions_SSValueHeight'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($SS_value)'' cannot be parsed correct.
+HTML code '$'$SS_name1'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($SS_value1)'' cannot be parsed correct.
+HTML code '$'$this_configurePage'' cannot be parsed correct.
+HTML code '$'$SS_name1'' cannot be parsed correct.
+HTML code '$'$this_configurePage'' cannot be parsed correct.
+HTML code '$'$SS_name1'' cannot be parsed correct.
+HTML code '$'$this_adminOptions_SSValueWidth'' cannot be parsed correct.
+HTML code '$'$this_adminOptions_SSValueHeight'' cannot be parsed correct.
+HTML code '$'$this_adminOptions_DisplayMarkup'' cannot be parsed correct.
+HTML code '$'$this_handler_filename'' cannot be parsed correct.
+HTML code '$'MB_SS_get_handlers($this->shortcode_pairs)'' cannot be parsed correct.
+HTML code '$'">
+				<thead>
+				<tr>
+				<th align=\'left\'><strong>Shortcode Name</strong></th>
+				<th align=\'left\'><strong>Shortcode Value</strong></th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td><input type="text" name="SS_name" size="15" maxlength="255" id="SS_name" value="'' cannot be parsed correct.
+HTML code '$'" /></td>
+				<td><input type="hidden" name="action" value="Save" /></td>
+				</tr>
+				'' cannot be parsed correct.
+HTML code '$'?page='' cannot be parsed correct.
+HTML code '$'&amp;action=Edit&amp;name='' cannot be parsed correct.
+HTML code '$'</a></td><td><a href='' cannot be parsed correct.
+HTML code '$'?page='' cannot be parsed correct.
+HTML code '$'&amp;action=Delete&amp;name='' cannot be parsed correct.
+HTML code '$'</a></td></tr>
+					<tr>
+				'' cannot be parsed correct.
+HTML code '$'">
+				<tr>
+				<td><label for="SSValueWidth">'' cannot be parsed correct.
+HTML code '$'</label></td>
+				<td><input type="text" size="5" maxlength="3" id="SSValueWidth" name="SSValueWidth" value="'' cannot be parsed correct.
+HTML code '$'" ></td>
+				</tr>
+				<tr>
+				<td><label for="SSValueHeight">'' cannot be parsed correct.
+HTML code '$'</label></td>
+				<td><input type="text" size="5" maxlength="3" id="SSValueHeight" name="SSValueHeight" value="'' cannot be parsed correct.
+HTML code '$'" ></td>
+				</tr>
+				<tr>
+				<td><label for="DisplayMarkup">'' cannot be parsed correct.
+HTML code '$'</label></td>
+				<td><input type="text" size="5" maxlength="5" id="DisplayMarkup" name="DisplayMarkup" value="'' cannot be parsed correct.
+HTML code '$'" ></td>
+				</tr>
+				<tr>
+				<td></td><td><input type="hidden" name="action" value="Options" /><input type="submit" name="options" id="SS_options" value="'' cannot be parsed correct.
+HTML code '$'" /></td>
+				</tr>
+				</table>
+				</form>
+			'' cannot be parsed correct.
+HTML code '$'</textarea></pre>
+				'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.867556.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045849.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 1 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.330173.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running Sqlite3Detector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running maxdbDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+Error in GenericDatabaseUsageDetector:
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running PHPStorageDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+simple_shortcodes.php:545
+  - STORAGE call to fwrite($handle, $handlers).
+  - Data types: file 
+
+simple_shortcodes.php:211
+  - RETRIEVAL call to get_option($this->adminOptionsName) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+simple_shortcodes.php:445
+  - RETRIEVAL call to get_option("simple_shortcodes_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+simple_shortcodes.php:460
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+simple_shortcodes.php:218
+  - STORAGE call to update_option($this->adminOptionsName, $adminOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+simple_shortcodes.php:305
+  - STORAGE call to update_option($this->adminOptionsName, $this->adminOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+simple_shortcodes.php:472
+  - STORAGE call to update_option("simple_shortcodes_db_version", $plugin_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.fwrite($handle, $handlers) - {'file'}
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressStorageDetector.update_option("simple_shortcodes_db_version", $plugin_db_version) - {'option'}
+	WordPressStorageDetector.update_option($this->adminOptionsName, $adminOptions) - {'option'}
+	WordPressStorageDetector.update_option($this->adminOptionsName, $this->adminOptions) - {'option'}
+	WordPressRetrievalDetector.get_option($this->adminOptionsName) - {'option'}
+	WordPressRetrievalDetector.get_option("simple_shortcodes_db_version") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.840092.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 6 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.079329.
+
+6 STORE_REACHES edges created
+6 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006277.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:30.513358!
+STORAGE call to fwrite($handle, $handlers).,None,None
+RETRIEVAL call to get_option($this->adminOptionsName) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("simple_shortcodes_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to update_option($this->adminOptionsName, $adminOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->adminOptionsName, $this->adminOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("simple_shortcodes_db_version", $plugin_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

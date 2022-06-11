@@ -1,0 +1,622 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on logora
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.397636.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.043031.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 57 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.607201.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.679547.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 197 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.598322.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 6 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.690286.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.155171.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 114 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.707321.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1879
+Added 1503 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1879
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.172353.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/logora.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/admin/class-logora-admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/admin/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/class-logora-activator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/class-logora-app-shortcode.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/class-logora-deactivator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/class-logora-debate.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/class-logora-loader.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/class-logora-metabox.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/class-logora.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/class-logora-synthesis-shortcode.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/class-logora-utils.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/includes/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/public/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/logora/templates/template-logora-app.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.674612.
+
+57 PHP_REACHES edges created
+2 REACHES edges created
+197 PHP_REACHES edges created
+6 CALLS edges created
+1000 PHP_REACHES edges created
+1617 PHP_REACHES edges created
+1879 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 683 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.063284.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 2 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.615848.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 63 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.442389.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 22 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.205561.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.027842.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.557555.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007291.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.031837.
+
+2 CALLS edges created
+85 PHP_REACHES edges created
+87 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 97 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.140833.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.131982.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<span>_e("To finalize the Logora installation, input your application name and secret key that can be found in", "logora")<a href="https://admin.logora.fr" target="_blank">_e("your administration panel", "logora")</a>.</span><br>'' cannot be parsed correct.
+HTML code '$'get_admin_page_title()'' cannot be parsed correct.
+HTML code '$'
+			<input type="checkbox" name="logora_metabox_allow_debate" value="is_allowed" checked($checked, true, false) />
+			<label for="logora_metabox_allow_debate">Allow debate for this post</label><br><br>
+			<label for="logora_metabox_debate_title">Debate question</label>
+			<input type="text" name="logora_metabox_debate_title" style="width:100%" value="$debateTitle" />
+			<label for="logora_metabox_debate_pro_thesis">Side 1</label>
+			<input type="text" name="logora_metabox_debate_pro_thesis" style="width:100%" value="$debateProThesis" />
+			<label for="logora_metabox_debate_against_thesis">Side 2</label>
+			<input type="text" name="logora_metabox_debate_against_thesis" style="width:100%" value="$debateAgainstThesis" />
+       '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.229360.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045470.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 2 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.351404.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running CubridDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running FileProDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running HashDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PostgreSQLDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running GenericEncryptionDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+includes/class-logora-utils.php:61
+  - hash_hmac called with unapproved hash algorithm sha1. Ignore if this is not encrypting personal information 
+
+includes/class-logora-utils.php:61
+  - SHA1 called with parameters []. Ignore if [] does not contain personal information. 
+
+includes/class-logora-utils.php:30
+  - object property '$current_user->user_firstname' of personal types {'user_meta', 'user', 'first_name'} is found.
+  - Data types: user_meta, user, first_name
+includes/class-logora-utils.php:30
+  - object property '$current_user->user_firstname' of personal types {'user_meta', 'user', 'first_name'} is found.
+  - Data types: user_meta, user, first_name
+includes/class-logora-utils.php:31
+  - object property '$current_user->user_lastname' of personal types {'user_meta', 'user', 'last_name'} is found.
+  - Data types: user_meta, user, last_name
+includes/class-logora-utils.php:31
+  - object property '$current_user->user_lastname' of personal types {'user_meta', 'user', 'last_name'} is found.
+  - Data types: user_meta, user, last_name
+includes/class-logora-utils.php:41
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+includes/class-logora-utils.php:30
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+includes/class-logora-utils.php:31
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+includes/class-logora-utils.php:32
+  - variable '$user_name' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+includes/class-logora-utils.php:34
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+includes/class-logora-utils.php:34
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+includes/class-logora-utils.php:34
+  - variable '$user_name' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+includes/class-logora-utils.php:35
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+includes/class-logora-utils.php:35
+  - variable '$user_name' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+includes/class-logora-utils.php:39
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+includes/class-logora-utils.php:40
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name 
+
+admin/class-logora-admin.php:133
+  - RETRIEVAL call to get_option($option_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-logora-admin.php:140
+  - RETRIEVAL call to get_option($option_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-logora-activator.php:46
+  - RETRIEVAL call to get_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-logora-activator.php:68
+  - RETRIEVAL call to get_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-logora-app-shortcode.php:84
+  - RETRIEVAL call to get_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-logora-app-shortcode.php:104
+  - RETRIEVAL call to get_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-logora-app-shortcode.php:112
+  - RETRIEVAL call to get_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-logora-debate.php:65
+  - RETRIEVAL call to get_post_meta(get_the_ID(), "_wp_page_template", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/class-logora-synthesis-shortcode.php:101
+  - RETRIEVAL call to get_post_meta($post_id, "logora_debate_title", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/class-logora-synthesis-shortcode.php:102
+  - RETRIEVAL call to get_post_meta($post_id, "logora_debate_pro_thesis", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/class-logora-synthesis-shortcode.php:103
+  - RETRIEVAL call to get_post_meta($post_id, "logora_debate_against_thesis", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/class-logora-synthesis-shortcode.php:137
+  - RETRIEVAL call to get_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-logora-synthesis-shortcode.php:186
+  - RETRIEVAL call to get_option("logora_shortname", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/class-logora-synthesis-shortcode.php:193
+  - RETRIEVAL call to get_post_meta($post->ID, "logora_allow_debate", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/class-logora-utils.php:29
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).
+  - Data types: user_meta, user
+includes/class-logora-utils.php:57
+  - RETRIEVAL call to get_option("logora_secret_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+includes/class-logora-activator.php:30
+  - STORAGE call to add_option("logora_prefix_path", "espace-debat") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/class-logora-activator.php:75
+  - STORAGE call to wp_insert_post($logora_app_page). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+includes/class-logora-activator.php:78
+  - STORAGE call to update_post_meta($post_id, "_wp_page_template", $template_path) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-logora-deactivator.php:34
+  - STORAGE call to wp_delete_post($post_id, true) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: post_meta, wp_post, post
+includes/class-logora-metabox.php:112
+  - STORAGE call to update_post_meta($post_id, "logora_allow_debate", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-logora-metabox.php:114
+  - STORAGE call to update_post_meta($post_id, "logora_allow_debate", false) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-logora-metabox.php:117
+  - STORAGE call to update_post_meta($post_id, "logora_allow_debate", false) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-logora-metabox.php:123
+  - STORAGE call to update_post_meta($post_id, "logora_debate_title", $debateTitle) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-logora-metabox.php:128
+  - STORAGE call to update_post_meta($post_id, "logora_debate_pro_thesis", $debateProThesis) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-logora-metabox.php:131
+  - STORAGE call to update_post_meta($post_id, "logora_debate_pro_thesis", __("Yes", "logora")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-logora-metabox.php:137
+  - STORAGE call to update_post_meta($post_id, "logora_debate_against_thesis", $debateAgainstThesis) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-logora-metabox.php:140
+  - STORAGE call to update_post_meta($post_id, "logora_debate_against_thesis", __("No", "logora")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+uninstall.php:20
+  - STORAGE call to delete_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:21
+  - STORAGE call to delete_option("logora_secret_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:22
+  - STORAGE call to delete_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+includes/class-logora-utils.php:61
+  - CRYPTOGRAPHY call to hash_hmac("sha1", $message . " " . $timestamp, $secret). 
+
+includes/class-logora-deactivator.php:34
+  - DELETION call to wp_delete_post($post_id, true) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: post_meta, wp_post, post
+uninstall.php:20
+  - DELETION call to delete_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:21
+  - DELETION call to delete_option("logora_secret_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:22
+  - DELETION call to delete_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+uninstall.php:20
+  - Uninstall deletion call: DELETION call to delete_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:21
+  - Uninstall deletion call: DELETION call to delete_option("logora_secret_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:22
+  - Uninstall deletion call: DELETION call to delete_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	PropertyDetector.(unknown) - {'email'}
+first_name
+	VariableDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+last_name
+	VariableDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+none
+	GenericEncryptionDetector.hash_hmac("sha1", $message . " " . $timestamp, $secret) - set()
+	PHPIncludedDetector.(unknown) - set()
+	WordPressStorageDetector.wp_insert_post($logora_app_page) - set()
+	HashDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option($option_name) - {'option'}
+	DeletionDetector.delete_option("logora_shortname") - {'option'}
+	WordPressStorageDetector.delete_option("logora_shortname") - {'option'}
+	WordPressStorageDetector.delete_option("logora_secret_key") - {'option'}
+	WordPressRetrievalDetector.get_option($option_name) - {'option'}
+	DeletionDetector.delete_option("logora_prefix_path") - {'option'}
+	DeletionDetector.delete_option("logora_secret_key") - {'option'}
+	WordPressRetrievalDetector.get_option("logora_prefix_path") - {'option'}
+	UninstallDetector.delete_option("logora_secret_key") - {'option'}
+	WordPressRetrievalDetector.get_option("logora_shortname", "") - {'option'}
+	UninstallDetector.delete_option("logora_shortname") - {'option'}
+	UninstallDetector.delete_option("logora_prefix_path") - {'option'}
+	WordPressRetrievalDetector.get_option("logora_shortname") - {'option'}
+	WordPressRetrievalDetector.get_option("logora_secret_key") - {'option'}
+	WordPressRetrievalDetector.get_option("logora_prefix_path") - {'option'}
+	WordPressStorageDetector.add_option("logora_prefix_path", "espace-debat") - {'option'}
+	WordPressStorageDetector.delete_option("logora_prefix_path") - {'option'}
+	WordPressRetrievalDetector.get_option("logora_prefix_path") - {'option'}
+	WordPressRetrievalDetector.get_option("logora_shortname") - {'option'}
+	WordPressRetrievalDetector.get_option("logora_shortname") - {'option'}
+post
+	DeletionDetector.wp_delete_post($post_id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressStorageDetector.wp_delete_post($post_id, true) - {'post_meta', 'wp_post', 'post'}
+post_meta
+	WordPressStorageDetector.update_post_meta($post_id, "_wp_page_template", $template_path) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta(get_the_ID(), "_wp_page_template", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "logora_debate_title", $debateTitle) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "logora_allow_debate", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "logora_debate_title", true) - {'post_meta'}
+	DeletionDetector.wp_delete_post($post_id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressStorageDetector.update_post_meta($post_id, "logora_debate_pro_thesis", __("Yes", "logora")) - {'post_meta'}
+	WordPressStorageDetector.wp_delete_post($post_id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressStorageDetector.update_post_meta($post_id, "logora_debate_pro_thesis", $debateProThesis) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "logora_allow_debate", false) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "logora_debate_against_thesis", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "logora_allow_debate", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "logora_debate_against_thesis", __("No", "logora")) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "logora_debate_pro_thesis", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "logora_debate_against_thesis", $debateAgainstThesis) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "logora_allow_debate", false) - {'post_meta'}
+user
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'first_name'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'last_name'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'first_name'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'last_name'}
+user_meta
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'first_name'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'last_name'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'first_name'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'user', 'last_name'}
+wp_post
+	DeletionDetector.wp_delete_post($post_id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressStorageDetector.wp_delete_post($post_id, true) - {'post_meta', 'wp_post', 'post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.324972.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 90 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.210565.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 2577
+90 STORE_REACHES edges created
+90 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 51 nodes as PERSONAL
+In total, tainted 51 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 13 nodes as ENCRYPTED
+In total, tainted 13 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.581736.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:33.507638!
+DELETION call to wp_delete_post($post_id, true) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+DELETION call to delete_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("logora_secret_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+CRYPTOGRAPHY call to hash_hmac("sha1", $message . " " . $timestamp, $secret).,None,None
+hash_hmac called with unapproved hash algorithm sha1. Ignore if this is not encrypting personal information,sha1,None
+SHA1 called with parameters []. Ignore if [] does not contain personal information.,sha1,None
+object property '$current_user->user_firstname' of personal types {'user_meta', 'user', 'first_name'} is found.,,None
+object property '$current_user->user_firstname' of personal types {'user_meta', 'user', 'first_name'} is found.,,None
+object property '$current_user->user_lastname' of personal types {'user_meta', 'user', 'last_name'} is found.,,None
+object property '$current_user->user_lastname' of personal types {'user_meta', 'user', 'last_name'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+Uninstall deletion call: DELETION call to delete_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("logora_secret_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$user_name' of personal types {'user_meta', 'user'} is found.,,None
+variable '$user_name' of personal types {'user_meta', 'user'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$user_name' of personal types {'user_meta', 'user'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+RETRIEVAL call to get_option($option_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($option_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta(get_the_ID(), "_wp_page_template", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "logora_debate_title", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "logora_debate_pro_thesis", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "logora_debate_against_thesis", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("logora_shortname", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "logora_allow_debate", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("logora_secret_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("logora_prefix_path", "espace-debat") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_insert_post($logora_app_page). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to update_post_meta($post_id, "_wp_page_template", $template_path) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to wp_delete_post($post_id, true) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+STORAGE call to update_post_meta($post_id, "logora_allow_debate", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "logora_allow_debate", false) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "logora_allow_debate", false) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "logora_debate_title", $debateTitle) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "logora_debate_pro_thesis", $debateProThesis) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "logora_debate_pro_thesis", __("Yes", "logora")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "logora_debate_against_thesis", $debateAgainstThesis) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "logora_debate_against_thesis", __("No", "logora")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_option("logora_shortname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("logora_secret_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("logora_prefix_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

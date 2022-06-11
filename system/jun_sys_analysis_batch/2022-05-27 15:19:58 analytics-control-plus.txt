@@ -1,0 +1,529 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on analytics-control-plus
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.420619.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.919299.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 50 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.454575.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.407288.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 240 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.616686.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 34 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.617466.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+Added 3 PHP_REACHES edges.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.086537.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 118 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.515668.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1692
+Added 1247 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1692
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.107824.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/analytics-control-plus/analytics-control-plus.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.136829.
+
+323 PHP_REACHES edges created
+1 CALLS edges created
+1000 PHP_REACHES edges created
+1368 PHP_REACHES edges created
+1692 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 566 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.063217.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.412104.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.298664.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 9 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.151140.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.017881.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.012771.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007407.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.034600.
+
+10 PHP_REACHES edges created
+10 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 6 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.119625.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.089413.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = \'//www.google-analytics.com/plugins/ga/inpage_linkid.js\';'' cannot be parsed correct.
+HTML code '$'<!--- Analytics Control Plus is working but not showing code due to you being logged in as  -->'' cannot be parsed correct.
+HTML code '$'https://webcheck.aykira.com.au/report/?url=urlencode(site_url())'' cannot be parsed correct.
+HTML code '$'<input id=\'analytics_id\' name=\'[analytics_id]\' type=\'text\' value=\'\' size=\'20\'/>'' cannot be parsed correct.
+HTML code '$'<input id=\'analytics_js\' name=\'[analytics_js]\' type=\'checkbox\' value=\'Y\''' cannot be parsed correct.
+HTML code '$' /> <small><a target=\'_blank\' href=\'https://developers.google.com/analytics/devguides/collection/upgrade/guide\'>Google Help details</a>. (site domain = $this->siteDomain()). Migrate to Universal Analytics first in GA before turning on!</small>'' cannot be parsed correct.
+HTML code '$'<input id=\'inpage_tracking\' name=\'[inpage_tracking]\' type=\'checkbox\' value=\'Y\''' cannot be parsed correct.
+HTML code '$'<input id=\'demographics\' name=\'[demographics]\' type=\'checkbox\' value=\'Y\''' cannot be parsed correct.
+HTML code '$'<input id=\'bounce_timeout\' name=\'[bounce_timeout]\' type=\'text\' value=\'get_option(self::"PLUGIN_OPTIONS")_bounce_timeout\' size=\'3\'/> (seconds) <small>Minimum 5 seconds.</small>'' cannot be parsed correct.
+HTML code '$'<input id=\'in_footer\' name=\'[in_footer]\' type=\'checkbox\' value=\'Y\''' cannot be parsed correct.
+HTML code '$'<input id=\'excluded_ips\' name=\'[excluded_ips]\' type=\'text\' value=\'get_option(self::"PLUGIN_OPTIONS")_excluded_ips\' size=\'30\'/><br/><small>Comma separated list of IP\'s excluded (or subnets)<br/>&nbsp;Current IP = $this->get_ip()</small>'' cannot be parsed correct.
+HTML code '$'&nbsp;&nbsp;<input type=\'checkbox\' name=\'[role_$role]\' value=\'Y\''' cannot be parsed correct.
+HTML code '$'> $role<br/>'' cannot be parsed correct.
+HTML code '$'<input id=\'ua_userid\' name=\'[ua_userid]\' type=\'checkbox\' value=\'Y\''' cannot be parsed correct.
+HTML code '$'<input id=\'ua_ecommerce\' name=\'[ua_ecommerce]\' type=\'checkbox\' value=\'Y\''' cannot be parsed correct.
+HTML code '$'<input id=\'display_features\' name=\'[display_features]\' type=\'checkbox\' value=\'Y\''' cannot be parsed correct.
+HTML code '$'<textarea id=\'display_features\' name=\'[addon_javascript]\' rows=\'6\' cols=\'45\'>get_option(self::"PLUGIN_OPTIONS")_addon_javascript</textarea><br/><small>Enter here any other Tracking JavaScript you want under display control. No need for the outer &lt;script> &lt/script>tags.</small>'' cannot be parsed correct.
+HTML code '$'<label for="acp_dont_track">Disable Google Analytics</label> &nbsp;'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" id="acp_dont_track" name="acp_dont_track" value="Y"'' cannot be parsed correct.
+HTML code '$' checked'' cannot be parsed correct.
+HTML code '$'/>'' cannot be parsed correct.
+HTML code '$'<!--- GA disabled for this page -->'' cannot be parsed correct.
+HTML code '$'<h2>Analytics Control Plus Configuration</h2>'' cannot be parsed correct.
+HTML code '$'<p><b>Note:</b> If you turn on the Enhanced Link Attribution or Demographics &amp; Interest Reports you need to configure Google Analytics to use the information; this is done under <i>Admin > Property > Property Settings > Advanced Settings</i> - just flick the toggles to ON and save the changes. Log on to Google Analytics <a href="http://www.google.com/analytics/" target="_blank">here</a>.</p>'' cannot be parsed correct.
+HTML code '$' checked=\'yes\''' cannot be parsed correct.
+HTML code '$' checked=\'yes\''' cannot be parsed correct.
+HTML code '$' /> <small><a target=\'_blank\' href=\'https://support.google.com/analytics/answer/2558867?hl=en&utm_id=ad\'>Google Help details</a>. Turn on in GA as well!</small>'' cannot be parsed correct.
+HTML code '$' checked=\'yes\''' cannot be parsed correct.
+HTML code '$' /> <small><a target=\'_blank\' href=\'https://support.google.com/analytics/answer/2444872?hl=en&utm_id=ad\'>Google Help details</a>. Turn on in GA as well!</small>'' cannot be parsed correct.
+HTML code '$' checked=\'yes\''' cannot be parsed correct.
+HTML code '$' /> <small>Put in the footer if you have JavaScript clashes.</small>'' cannot be parsed correct.
+HTML code '$' checked'' cannot be parsed correct.
+HTML code '$'<small>Select those roles who you do <u>not</u> want tracked on site.</small>'' cannot be parsed correct.
+HTML code '$' checked=\'yes\''' cannot be parsed correct.
+HTML code '$' /> <small><a href=\'https://support.google.com/analytics/answer/3123669?hl=en&ref_topic=3276066\' target=\'_blank\'>Google details.</a> Track userID sessions (UA only)</small>'' cannot be parsed correct.
+HTML code '$' checked=\'yes\''' cannot be parsed correct.
+HTML code '$' /> <small><a href=\'https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce\' target=\'_blank\'>Google details.</a> Record Transaction data (UA only)</small>'' cannot be parsed correct.
+HTML code '$' checked=\'yes\''' cannot be parsed correct.
+HTML code '$' /> <small><a href=\'https://support.google.com/adwords/answer/2476688?hl=en\' target=\'_blank\'>Google details.</a> Turns on Display Advertising Support</small>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.470339.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.056838.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.341425.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPIncludedDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running VariableDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running PropertyDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running MySQLiDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+analytics-control-plus.php:276
+  - MD5 called with parameters [current_user, site_url, user_email]. Ignore if [current_user, site_url, user_email] does not contain personal information. 
+
+analytics-control-plus.php:276
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email
+analytics-control-plus.php:404
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email
+analytics-control-plus.php:404
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email
+analytics-control-plus.php:405
+  - object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.
+  - Data types: user_meta, first_name, user
+analytics-control-plus.php:405
+  - object property '$current_user->user_lastname' of personal types {'last_name', 'user_meta', 'user'} is found.
+  - Data types: last_name, user_meta, user
+analytics-control-plus.php:405
+  - object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.
+  - Data types: user_meta, first_name, user
+analytics-control-plus.php:405
+  - object property '$current_user->user_lastname' of personal types {'last_name', 'user_meta', 'user'} is found.
+  - Data types: last_name, user_meta, user
+analytics-control-plus.php:406
+  - object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.
+  - Data types: user_meta, first_name, user
+analytics-control-plus.php:406
+  - object property '$current_user->user_lastname' of personal types {'last_name', 'user_meta', 'user'} is found.
+  - Data types: last_name, user_meta, user
+analytics-control-plus.php:406
+  - object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.
+  - Data types: user_meta, first_name, user
+analytics-control-plus.php:406
+  - object property '$current_user->user_lastname' of personal types {'last_name', 'user_meta', 'user'} is found.
+  - Data types: last_name, user_meta, user 
+
+analytics-control-plus.php:43
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:44
+  - RETRIEVAL call to get_option("PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:64
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:177
+  - RETRIEVAL call to get_post_meta($post->ID, self::"META_KEY", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+analytics-control-plus.php:263
+  - RETRIEVAL call to get_post_meta($page_id, self::"META_KEY", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+analytics-control-plus.php:273
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).
+  - Data types: user_meta, user
+analytics-control-plus.php:361
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).
+  - Data types: user_meta, user
+analytics-control-plus.php:402
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).
+  - Data types: user_meta, user
+analytics-control-plus.php:475
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:482
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:489
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:496
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:503
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:509
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:517
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:523
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:537
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:544
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:551
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+analytics-control-plus.php:558
+  - RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+analytics-control-plus.php:46
+  - STORAGE call to add_option(self::"PLUGIN_OPTIONS", $opt) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+analytics-control-plus.php:49
+  - STORAGE call to add_option(self::"PLUGIN_OPTIONS", ["bounce_timeout" => 30, "analytics_js" => "N", "inpage_tracking" => "N", "demographics" => "N", "excluded_ips" => "", "roles_off" => "administrator", "in_footer" => "N", "ua_userid" => "N", "ua_ecommerce" => "N", "display_features" => "N", "addon_javascript" => ""]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+analytics-control-plus.php:220
+  - STORAGE call to update_post_meta($post_id, self::"META_KEY", $mydata) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+By data type:
+email
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+first_name
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+last_name
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+none
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressStorageDetector.add_option(self::"PLUGIN_OPTIONS", $opt) - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option("PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressStorageDetector.add_option(self::"PLUGIN_OPTIONS", ["bounce_timeout" => 30, "analytics_js" => "N", "inpage_tracking" => "N", "demographics" => "N", "excluded_ips" => "", "roles_off" => "administrator", "in_footer" => "N", "ua_userid" => "N", "ua_ecommerce" => "N", "display_features" => "N", "addon_javascript" => ""]) - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"PLUGIN_OPTIONS") - {'option'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post->ID, self::"META_KEY", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, self::"META_KEY", $mydata) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($page_id, self::"META_KEY", true) - {'post_meta'}
+user
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+user_meta
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'last_name', 'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.031092.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 32 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.188759.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1454
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1675
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1807
+32 STORE_REACHES edges created
+32 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 61 nodes as PERSONAL
+In total, tainted 61 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 1 nodes as ENCRYPTED
+In total, tainted 1 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.327281.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:37.182379!
+MD5 called with parameters [current_user, site_url, user_email]. Ignore if [current_user, site_url, user_email] does not contain personal information.,md5,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+object property '$current_user->user_lastname' of personal types {'last_name', 'user_meta', 'user'} is found.,,None
+object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.,,None
+object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.,,None
+object property '$current_user->user_lastname' of personal types {'last_name', 'user_meta', 'user'} is found.,,None
+object property '$current_user->user_lastname' of personal types {'last_name', 'user_meta', 'user'} is found.,,None
+object property '$current_user->user_lastname' of personal types {'last_name', 'user_meta', 'user'} is found.,,None
+object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.,,None
+object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.,,None
+RETRIEVAL call to get_post_meta($post->ID, self::"META_KEY", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($page_id, self::"META_KEY", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"PLUGIN_OPTIONS") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_post_meta($post_id, self::"META_KEY", $mydata) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to add_option(self::"PLUGIN_OPTIONS", $opt) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option(self::"PLUGIN_OPTIONS", ["bounce_timeout" => 30, "analytics_js" => "N", "inpage_tracking" => "N", "demographics" => "N", "excluded_ips" => "", "roles_off" => "administrator", "in_footer" => "N", "ua_userid" => "N", "ua_ecommerce" => "N", "display_features" => "N", "addon_javascript" => ""]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

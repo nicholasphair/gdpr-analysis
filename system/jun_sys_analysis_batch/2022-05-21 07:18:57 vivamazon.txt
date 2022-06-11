@@ -1,0 +1,521 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on vivamazon
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.399948.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.957704.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.194345.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.693809.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 295 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.645813.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.502651.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.088771.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 127 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.355767.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1812
+Added 1389 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1812
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.240730.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vivamazon/vivamazon_admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vivamazon/vivamazon.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.239366.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1811 PHP_REACHES edges created
+1812 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 610 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.169686.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.033944.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 45 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.329522.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 30 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.163449.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.060996.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.400872.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008322.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035540.
+
+75 PHP_REACHES edges created
+75 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 45 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.139145.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+4 SQL operations to process.
+CREATE TABLE $wpdbvivamazon_main (
+	  id mediumint(9) NOT NULL AUTO_INCREMENT,
+	  asin VARCHAR(15) NOT NULL,
+	  post mediumint(5) DEFAULT '0' NOT NULL,
+	  last_update bigint(11) DEFAULT '0' NOT NULL,
+	  UNIQUE KEY id (id)
+	);
+SQL command (CREATE TABLE $wpdbvivamazon_main ( id mediumint(9) NOT NULL AUTO_INCREMENT, asin VARCHAR(15) NOT NULL, post mediumint(5) DEFAULT '0' NOT NULL, last_update bigint(11) DEFAULT '0' NOT NULL, UNIQUE KEY id (id) );) cannot be parsed correct.
+DELETE FROM $wpdbvivamazon_main WHERE post='viv_is_post_in_db($item->ASIN)'
+SQL command (DELETE FROM $wpdbvivamazon_main WHERE post='viv_is_post_in_db($item->ASIN)') cannot be parsed correct.
+
+		SELECT post
+		FROM $wpdbvivamazon_main
+SQL command ( SELECT post FROM $wpdbvivamazon_main) cannot be parsed correct.
+SELECT post FROM $wpdbvivamazon_main WHERE asin = '$item_asin'
+SQL command (SELECT post FROM $wpdbvivamazon_main WHERE asin = '$item_asin') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [114, 2384, 2415, 2507]
+Added 0 SQL nodes. 0 out of 4 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:02.843672.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<li><input type="checkbox" name="check0" value="$category'' cannot be parsed correct.
+HTML code '$'/><span style="padding-left:10px;">$category</span></li>'' cannot be parsed correct.
+HTML code '$'<p>Last Request:get_option("vivazon_last_req")</p>'' cannot be parsed correct.
+HTML code '$'<p>Total posted:0</p>'' cannot be parsed correct.
+HTML code '$'<p>Remaining:$to_be_posted</p>'' cannot be parsed correct.
+HTML code '$'<p>Found duplicate ASIN:$item in post viv_is_post_in_db($item->ASIN). Moving it to Trash.</p>'' cannot be parsed correct.
+HTML code '$'<h2>Set Amazon Product Advertising API Settings</h2>'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_id_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_key_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_run_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_posts_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_index_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_keywords_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_lend_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_del_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_id'' cannot be parsed correct.
+HTML code '$'$_POST_mt_vivamazon_id'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_key'' cannot be parsed correct.
+HTML code '$'get_option($opt_name2)'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_posts'' cannot be parsed correct.
+HTML code '$'$_POST_mt_vivamazon_posts'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_lend'' cannot be parsed correct.
+HTML code '$'$_POST_mt_vivamazon_lend'' cannot be parsed correct.
+HTML code '$'<option value=$index"'' cannot be parsed correct.
+HTML code '$' >$index</option>'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_keywords'' cannot be parsed correct.
+HTML code '$'get_option($opt_name7)'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_index_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_run_hidden'' cannot be parsed correct.
+HTML code '$'mt_vivamazon_del_hidden'' cannot be parsed correct.
+HTML code '$'<p>Creating entry for $item_title"</p'' cannot be parsed correct.
+HTML code '$'<p>Deleting Entry:Post ID(intval($id)|$id)</p>'' cannot be parsed correct.
+HTML code '$'<p>Existing posts for item with ASIN $item_asin:count($asin_posts)</p>'' cannot be parsed correct.
+HTML code '$'checked '' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<p>Deleting ASIN entry in the main table also failed.</p>'' cannot be parsed correct.
+HTML code '$'<p>Trashing failed. Deleting ASIN entry anyway. Please review manually</p>'' cannot be parsed correct.
+HTML code '$'<p>Failed to create post. Item will not show up in final result.</p>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<select name="indices" style="padding-left:30px;">'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'" />
+        <input type="submit" onclick="document.getElementsByName(\''' cannot be parsed correct.
+HTML code '$'" />
+	<input type="submit" onclick="document.getElementsByName(\''' cannot be parsed correct.
+HTML code '$'" />
+    </p>
+    <p>
+    	
+    </p>
+    </form>
+</div>'' cannot be parsed correct.
+HTML code '$'Categories:'' cannot be parsed correct.
+HTML code '$'<ul style="padding-left:30px;" >'' cannot be parsed correct.
+HTML code '$'<br />Number 2:<br />'' cannot be parsed correct.
+HTML code '$'<p>Adding as Discounted Item</p>'' cannot be parsed correct.
+HTML code '$'<p>Failed</p>'' cannot be parsed correct.
+HTML code '$'<p>Deleting ASIN entry in the main table also failed.</p>'' cannot be parsed correct.
+HTML code '$'<p>Trashing failed. Deleting ASIN entry. Please review manually</p>'' cannot be parsed correct.
+HTML code '$'Multiple posts with same ASIN. This might be problematic.'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:05.681311.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046349.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 1 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.254316.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running OpenSSLDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running PHPRetrievalDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running GenericEncryptionDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+vivamazon_admin.php:621
+  - hash_hmac called with approved hash algorithm sha256. 
+
+vivamazon_admin.php:631
+  - RETRIEVAL call to file_get_contents($request).
+  - Data types: file 
+
+vivamazon.php:64
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+vivamazon_admin.php:40
+  - RETRIEVAL call to get_option($opt_name1) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:41
+  - RETRIEVAL call to get_option($opt_name2) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:42
+  - RETRIEVAL call to get_option($opt_name4) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:43
+  - RETRIEVAL call to get_option($opt_name5) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:44
+  - RETRIEVAL call to get_option($opt_name6) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:45
+  - RETRIEVAL call to get_option($opt_name7) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:46
+  - RETRIEVAL call to get_option($opt_name8) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:245
+  - RETRIEVAL call to get_option("vivazon_post_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:254
+  - RETRIEVAL call to get_option("vivazon_index") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:254
+  - RETRIEVAL call to get_option("vivazon_keywords") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:254
+  - RETRIEVAL call to get_option("vivazon_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:254
+  - RETRIEVAL call to get_option("vivazon_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:255
+  - RETRIEVAL call to get_option("vivazon_last_req") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:331
+  - RETRIEVAL call to get_option(vivazon_len_desc) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:381
+  - RETRIEVAL call to get_option("vivazon_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:381
+  - RETRIEVAL call to get_option("vivazon_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:388
+  - RETRIEVAL call to get_option("vivazon_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:388
+  - RETRIEVAL call to get_option("vivazon_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:430
+  - RETRIEVAL call to get_option("vivazon_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:430
+  - RETRIEVAL call to get_option("vivazon_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vivamazon_admin.php:487
+  - RETRIEVAL call to get_option("vivazon_category") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+vivamazon_admin.php:68
+  - STORAGE call to update_option($opt_name1, $opt_val1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vivamazon_admin.php:79
+  - STORAGE call to update_option($opt_name2, $opt_val2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vivamazon_admin.php:102
+  - STORAGE call to update_option($opt_name4, $arr) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vivamazon_admin.php:111
+  - STORAGE call to update_option($opt_name5, $opt_val5) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vivamazon_admin.php:121
+  - STORAGE call to update_option($opt_name6, $opt_val6) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vivamazon_admin.php:131
+  - STORAGE call to update_option($opt_name7, $opt_val7) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vivamazon_admin.php:141
+  - STORAGE call to update_option($opt_name8, $opt_val8) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vivamazon_admin.php:499
+  - STORAGE call to wp_insert_post($my_post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+vivamazon_admin.php:628
+  - STORAGE call to update_option("vivazon_last_req", $request) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+vivamazon_admin.php:621
+  - CRYPTOGRAPHY call to hash_hmac("sha256", $string_to_sign, $private_key, True). 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents($request) - {'file'}
+none
+	WordPressStorageDetector.wp_insert_post($my_post) - set()
+	HashDetector.(unknown) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	GenericEncryptionDetector.hash_hmac("sha256", $string_to_sign, $private_key, True) - set()
+option
+	WordPressStorageDetector.update_option($opt_name4, $arr) - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_post_count") - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_key") - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_id") - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_key") - {'option'}
+	WordPressRetrievalDetector.get_option($opt_name6) - {'option'}
+	WordPressStorageDetector.update_option($opt_name8, $opt_val8) - {'option'}
+	WordPressRetrievalDetector.get_option($opt_name4) - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_last_req") - {'option'}
+	WordPressRetrievalDetector.get_option($opt_name2) - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_key") - {'option'}
+	WordPressRetrievalDetector.get_option($opt_name5) - {'option'}
+	WordPressRetrievalDetector.get_option($opt_name1) - {'option'}
+	WordPressStorageDetector.update_option($opt_name1, $opt_val1) - {'option'}
+	WordPressStorageDetector.update_option($opt_name6, $opt_val6) - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_key") - {'option'}
+	WordPressStorageDetector.update_option("vivazon_last_req", $request) - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_id") - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_id") - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_keywords") - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_category") - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_id") - {'option'}
+	WordPressStorageDetector.update_option($opt_name7, $opt_val7) - {'option'}
+	WordPressRetrievalDetector.get_option($opt_name8) - {'option'}
+	WordPressStorageDetector.update_option($opt_name2, $opt_val2) - {'option'}
+	WordPressStorageDetector.update_option($opt_name5, $opt_val5) - {'option'}
+	WordPressRetrievalDetector.get_option(vivazon_len_desc) - {'option'}
+	WordPressRetrievalDetector.get_option("vivazon_index") - {'option'}
+	WordPressRetrievalDetector.get_option($opt_name7) - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.772382.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 168 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.267044.
+
+168 STORE_REACHES edges created
+168 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 210 nodes as ENCRYPTED
+In total, tainted 210 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:02.741428.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:37.442107!
+CRYPTOGRAPHY call to hash_hmac("sha256", $string_to_sign, $private_key, True).,None,None
+hash_hmac called with approved hash algorithm sha256.,sha256,None
+RETRIEVAL call to file_get_contents($request).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_option("vivazon_post_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_keywords") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_index") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_last_req") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(vivazon_len_desc) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($opt_name1) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($opt_name2) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($opt_name4) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($opt_name5) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($opt_name6) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($opt_name7) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($opt_name8) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vivazon_category") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option($opt_name4, $arr) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($opt_name5, $opt_val5) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($opt_name6, $opt_val6) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($opt_name7, $opt_val7) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($opt_name8, $opt_val8) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_insert_post($my_post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to update_option("vivazon_last_req", $request) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($opt_name1, $opt_val1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($opt_name2, $opt_val2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

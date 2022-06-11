@@ -1,0 +1,419 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on simple-instant-search
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.528059.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.875288.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 57 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.340835.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 12 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.822085.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 636 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.753872.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.488527.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.107096.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 172 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.496577.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3757
+Added 2880 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3912
+Added 155 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.198669.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-instant-search/simple-instant-search.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-instant-search/admin/adminp.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-instant-search/admin/instant_search_panel.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.400730.
+
+57 PHP_REACHES edges created
+12 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3688 PHP_REACHES edges created
+155 PHP_REACHES edges created
+3912 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1217 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.029971.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.008538.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 36 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.754415.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 1 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.148157.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.145579.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.343004.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011186.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.033222.
+
+37 PHP_REACHES edges created
+37 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 77 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.115362.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+apply_filters("instant_search_q_query", $query)
+SQL command (apply_filters("instant_search_q_query", $query)) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [4831]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.842949.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<td width="25%"><label for="$box_id"$box_label:</label></td>'' cannot be parsed correct.
+HTML code '$'<li><a href="$id"$name</a></li>'' cannot be parsed correct.
+HTML code '$'<div id=$box_id"'' cannot be parsed correct.
+HTML code '$'<h2>$box_label</h2>'' cannot be parsed correct.
+HTML code '$'<h3>$box_label</h3>'' cannot be parsed correct.
+HTML code '$'<p>$box_text</p>'' cannot be parsed correct.
+HTML code '$'<h2>$this_args_page_title</h2>'' cannot be parsed correct.
+HTML code '$'<div class="updated settings-error"><p><strong>Settings saved.</strong></p></div>'' cannot be parsed correct.
+HTML code '$'</select><br /> <span class="description">$box_desc</span>'' cannot be parsed correct.
+HTML code '$'<select name=$this_args_option_group[$box_id]" id="$this_args_option_group[$box_id]"'' cannot be parsed correct.
+HTML code '$'<td><input type="checkbox" name="$this_args_option_group[$box_id]" id="$this_args_option_group[$box_id]" value="true"  /><br /> <label for=$box_id"$box_desc</label></td>'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" name="$this_args_option_group[$box_id][]" id="$this_args_option_group[$box_id][]" value="$option" /> <label for=$box_id"$option</label> <br/> '' cannot be parsed correct.
+HTML code '$'$box_desc'' cannot be parsed correct.
+HTML code '$'<input type="radio" name="$this_args_option_group[$box_id]" id="$box_id_$value" value="$value"checked="checked" /> <label for=$box_id_$value"$label</label><br>'' cannot be parsed correct.
+HTML code '$'<input type="radio" name="$this_args_option_group[$box_id]" id="$box_id_$value" value="$value"checked="checked" /><img src=$box_directory_url$label"><br'' cannot be parsed correct.
+HTML code '$'<select name=$this_args_option_group[$box_id]" id="$this_args_option_group[$box_id]"'' cannot be parsed correct.
+HTML code '$'<option value=$value"selected="selected">$label</option>'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript">jQuery("#$box_id").datepicker();</script'' cannot be parsed correct.
+HTML code '$'<p class="submit"><input type="submit" name="Submit" class="button-primary" value="Save Changes" /></p'' cannot be parsed correct.
+HTML code '$'<option value=$post"selected="selected">$post</option>'' cannot be parsed correct.
+HTML code '$'</select><br /> <span class="description">$box_desc</span>'' cannot be parsed correct.
+HTML code '$'<select name=$this_args_option_group[$box_id]" id="$this_args_option_group[$box_id]"'' cannot be parsed correct.
+HTML code '$'<option value=$category"selected="selected">$category</option>'' cannot be parsed correct.
+HTML code '$'</select><br /> <span class="description">$box_desc</span>'' cannot be parsed correct.
+HTML code '$'<input value=$post"$checked type="checkbox" name="$this_args_option_group[$box_id][]" id="$this_args_option_group[$box_id][]"> $post<br />'' cannot be parsed correct.
+HTML code '$'</select> <br /><span class="description">$box_desc</span>'' cannot be parsed correct.
+HTML code '$'<input value=$category"$checked type="checkbox" name="$this_args_option_group[$box_id][]" id="$this_args_option_group[$box_id][]"> $category<br />'' cannot be parsed correct.
+HTML code '$'</select><br /> <span class="description">$box_desc</span>'' cannot be parsed correct.
+HTML code '$'<div style="float:left"><input type="file" name="$this_args_option_group[$box_id]" id="$this_args_option_group[$box_id]" /> <span class="description">$box_desc</span>'' cannot be parsed correct.
+HTML code '$'<div style="width:30%" id="$box_id-slider" class="ui-slider"></div>'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript">jQuery("#$box_id-slider").slider('' cannot be parsed correct.
+HTML code '$'values: [implode(",", $data)],'' cannot be parsed correct.
+HTML code '$'step:$box_step,'' cannot be parsed correct.
+HTML code '$'max: $box_max,'' cannot be parsed correct.
+HTML code '$'min: $box_min,'' cannot be parsed correct.
+HTML code '$'slide: function(e,ui) { jQuery("$box_id-handle").text(ui.value); jQuery("#$box_id").val(ui.value); }'' cannot be parsed correct.
+HTML code '$'slide: function(e,ui) { jQuery("$box_id-handle").text(ui.values[0]+"-"+ui.values[1]); jQuery("#$box_id").val(ui.values[0]+"-"+ui.values[1]); },'' cannot be parsed correct.
+HTML code '$'json_encode($results)'' cannot be parsed correct.
+HTML code '$'json_encode(apply_filters("instant_search_res", []))'' cannot be parsed correct.
+HTML code '$'json_encode([])'' cannot be parsed correct.
+HTML code '$'<style>.editorcontainer { -webkit-border-radius:6px; border:1px solid #DEDEDE;}</style>'' cannot be parsed correct.
+HTML code '$'<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/base/jquery-ui.css" rel="stylesheet" />'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>'' cannot be parsed correct.
+HTML code '$'<table class="form-table">'' cannot be parsed correct.
+HTML code '$'<tr valign="top">'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<script>
+                  jQuery(function() {
+                    jQuery( "#tabs" ).tabs();
+                  });
+                </script>'' cannot be parsed correct.
+HTML code '$'<div id="tabs">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<form method="post" action="" enctype="multipart/form-data">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'Not Found'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'No Posts'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'Not Found'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<div style="-webkit-border-radius:6px; border:1px solid #DEDEDE; padding:10px; position:relative; background:#FFF;">'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="action" value="save" />'' cannot be parsed correct.
+HTML code '$'</form></div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div style="clear:both"></div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'range: true,'' cannot be parsed correct.
+HTML code '$'}); </script>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:11:46.246758.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.301568.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 11 do_action/apply_filters calls and 9 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:03.140533.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running SqlServerDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running VariableDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+admin/adminp.php:412
+  - RETRIEVAL call to get_option($this->args["option_group"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/adminp.php:435
+  - RETRIEVAL call to get_option($this->args["option_group"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/adminp.php:584
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+admin/adminp.php:627
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+admin/adminp.php:734
+  - RETRIEVAL call to get_option($this->args["option_group"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/adminp.php:755
+  - RETRIEVAL call to get_option($this->args["option_group"][$box["id"]]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+simple-instant-search.php:79
+  - RETRIEVAL call to get_option("baIS_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+simple-instant-search.php:118
+  - RETRIEVAL call to get_option("baIS_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+admin/adminp.php:416
+  - STORAGE call to update_option($this->args["option_group"], $saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/adminp.php:773
+  - STORAGE call to update_option($this->args["option_group"], $saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	WordPressRetrievalDetector.get_posts($args) - set()
+	WordPressRetrievalDetector.get_posts($args) - set()
+option
+	WordPressRetrievalDetector.get_option($this->args["option_group"]) - {'option'}
+	WordPressStorageDetector.update_option($this->args["option_group"], $saved) - {'option'}
+	WordPressRetrievalDetector.get_option($this->args["option_group"]) - {'option'}
+	WordPressRetrievalDetector.get_option($this->args["option_group"]) - {'option'}
+	WordPressRetrievalDetector.get_option($this->args["option_group"][$box["id"]]) - {'option'}
+	WordPressRetrievalDetector.get_option("baIS_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("baIS_settings") - {'option'}
+	WordPressStorageDetector.update_option($this->args["option_group"], $saved) - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:17.272998.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 12 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.280783.
+
+12 STORE_REACHES edges created
+12 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.014781.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:12:35.257817!
+RETRIEVAL call to get_option($this->args["option_group"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->args["option_group"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_option($this->args["option_group"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->args["option_group"][$box["id"]]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("baIS_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("baIS_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option($this->args["option_group"], $saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->args["option_group"], $saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

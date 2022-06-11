@@ -1,0 +1,797 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on weekly-planner
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.402682.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.902386.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.234270.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.472841.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1034 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.166519.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.797146.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.107436.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 270 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.670021.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 4132
+Added 2828 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4132
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.314364.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/weekly-planner/planner.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.226643.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4132 PHP_REACHES edges created
+4132 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1299 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.081979.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.609078.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 251 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:06.291702.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 226 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.224895.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.164202.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.928142.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.022770.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.043726.
+
+477 PHP_REACHES edges created
+477 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 251 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.151300.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+27 SQL operations to process.
+
+			INSERT INTO WP_LPLANNER_TABLE (
+			`lesson_ID` ,
+			`day` ,
+			`start_time` ,
+			`end_time` ,
+			`student_name` ,
+			`student_mail`
+			)
+			VALUES
+			( NULL, '$day', 'assemble_time($_POST["start_time_hour"], $_POST["start_time_minute"], $_POST["start_time_ampm"])', 'assemble_time($_POST["end_time_hour"], $_POST["end_time_minute"], $_POST["end_time_ampm"])', 'mysql_escape_string($student_name)', 'mysql_escape_string($student_mail)' 
+			)
+SQL command ( INSERT INTO WP_LPLANNER_TABLE ( `lesson_ID` , `day` , `start_time` , `end_time` , `student_name` , `student_mail` ) VALUES ( NULL, '$day', 'assemble_time($_POST["start_time_hour"], $_POST["start_time_minute"], $_POST["start_time_ampm"])', 'assemble_time($_POST["end_time_hour"], $_POST["end_time_minute"], $_POST["end_time_ampm"])', 'mysql_escape_string($student_name)', 'mysql_escape_string($student_mail)' )) cannot be parsed correct.
+SELECT * FROM WP_LPLANNER_TABLE
+SQL command (SELECT * FROM WP_LPLANNER_TABLE) cannot be parsed correct.
+UPDATE WP_LPLANNER_CONFIG_TABLE SET config_value= 'assemble_time($_POST["new_display_start_time_hour"], $_POST["new_display_start_time_minute"], $_POST["new_display_start_time_ampm"])' WHERE config_item='$item'
+SQL command (UPDATE WP_LPLANNER_CONFIG_TABLE SET config_value= 'assemble_time($_POST["new_display_start_time_hour"], $_POST["new_display_start_time_minute"], $_POST["new_display_start_time_ampm"])' WHERE config_item='$item') cannot be parsed correct.
+show tables;
+SQL command (show tables;) cannot be parsed correct.
+CREATE TABLE WP_LPLANNER_TABLE ( 
+		lesson_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+		day INT NOT NULL,
+		start_time TIME NOT NULL,
+		end_time TIME NOT NULL,
+		student_name VARCHAR(30) NOT NULL,
+		student_mail VARCHAR(60),
+		PRIMARY KEY (lesson_ID) )
+SQL command (CREATE TABLE WP_LPLANNER_TABLE ( lesson_ID INT UNSIGNED NOT NULL AUTO_INCREMENT, day INT NOT NULL, start_time TIME NOT NULL, end_time TIME NOT NULL, student_name VARCHAR(30) NOT NULL, student_mail VARCHAR(60), PRIMARY KEY (lesson_ID) )) cannot be parsed correct.
+CREATE TABLE WP_LPLANNER_CONFIG_TABLE ( 
+		config_item VARCHAR(30) NOT NULL, 
+		config_value TEXT NOT NULL,
+		config_desc TEXT NOT NULL,
+		PRIMARY KEY (config_item)
+		) 
+SQL command (CREATE TABLE WP_LPLANNER_CONFIG_TABLE ( config_item VARCHAR(30) NOT NULL, config_value TEXT NOT NULL, config_desc TEXT NOT NULL, PRIMARY KEY (config_item) ) ) cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='version', config_value='1.0',
+		config_desc='Version number'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='version', config_value='1.0', config_desc='Version number') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='show_student_names', config_value='0',
+		config_desc='Option to show student names, 0 for no, 1 for yes'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='show_student_names', config_value='0', config_desc='Option to show student names, 0 for no, 1 for yes') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='show_student_mail', config_value='0',
+		config_desc='Option to show student e-mails, 0 for no, 1 for yes'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='show_student_mail', config_value='0', config_desc='Option to show student e-mails, 0 for no, 1 for yes') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='display_start_time', config_value='auto',
+		config_desc='Schedule display start time'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='display_start_time', config_value='auto', config_desc='Schedule display start time') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='display_end_time', config_value='auto',
+		config_desc='Schedule display end time'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='display_end_time', config_value='auto', config_desc='Schedule display end time') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='colors', 
+		config_value='#F8C8D0,#F8F080,#99FFD8,#98F880,#C8E8C0',
+		config_desc='Colors to be used for the planner display'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='colors', config_value='#F8C8D0,#F8F080,#99FFD8,#98F880,#C8E8C0', config_desc='Colors to be used for the planner display') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='padding_cells', config_value='1',
+		config_desc='Number of padding cells before the first time'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='padding_cells', config_value='1', config_desc='Number of padding cells before the first time') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='cell_height', config_value='10',
+		config_desc='Height of each cell, in pixels'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='cell_height', config_value='10', config_desc='Height of each cell, in pixels') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='block_time', config_value='15',
+		config_desc='Value of each cell (ie 15 minutes)'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='block_time', config_value='15', config_desc='Value of each cell (ie 15 minutes)') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='time_display_increment', config_value='60',
+		config_desc='How often to display a time on the side, in minutes'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='time_display_increment', config_value='60', config_desc='How often to display a time on the side, in minutes') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='time_format', config_value='1',
+		config_desc='Time format, 0 for 24hour, 1 for ampm'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='time_format', config_value='1', config_desc='Time format, 0 for 24hour, 1 for ampm') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='unavailable_color', config_value='#DFDFDF',
+		config_desc='Color for unavailable times'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='unavailable_color', config_value='#DFDFDF', config_desc='Color for unavailable times') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='bh_bgcolor', config_value='#E4EBE3',
+		config_desc='Background color of the big planner header'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='bh_bgcolor', config_value='#E4EBE3', config_desc='Background color of the big planner header') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='bh_border', config_value='#D6DED5',
+		config_desc='Border color of the big planner header'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='bh_border', config_value='#D6DED5', config_desc='Border color of the big planner header') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='day_bgcolor', config_value='#EBF2EA',
+		config_desc='Background color of each day cell'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='day_bgcolor', config_value='#EBF2EA', config_desc='Background color of each day cell') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='day_border', config_value='#DFE6DE',
+		config_desc='Border color of the each day cell'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='day_border', config_value='#DFE6DE', config_desc='Border color of the each day cell') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='lesson', config_value='appointment',
+		config_desc='What to call lessons'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='lesson', config_value='appointment', config_desc='What to call lessons') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='student', config_value='appointment',
+		config_desc='What to call students'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='student', config_value='appointment', config_desc='What to call students') cannot be parsed correct.
+INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='css', config_value='@CHARSET "ISO-8859-1";
+
+.planner_table {
+border: none;
+border-collapse: collapse;
+margin-left: 1%;
+margin-right: 1%;
+width: 98%;
+padding: 0;
+}
+
+.planner_header_cell {
+	width: 91%;
+	padding: 0;
+}
+
+.planner_header {
+width: 100%;
+font-weight: bold;
+text-align: center;
+	}
+
+.planner_time_header {
+	width: 9%;
+}
+
+.planner_padder {
+	height: 10px;
+}
+
+.planner_time_cell {
+	border-bottom: 1px solid transparent;
+	text-align: right;
+	height: 10px;
+	padding: 0;
+	padding-right: 1px;
+	vertical-align: top;
+	overflow: visible;
+}
+.planner_time_text {
+	position: relative;
+	height: 100%;
+	top: -1em;
+	font-size: 0.75em;
+	float: right;
+}
+
+.planner_time_column {
+	text-align: right;
+	font-size: 0.8em;
+}
+
+.planner_day_header {
+   text-align: center;
+   width:13%;
+   height:25px;
+   font-size:0.8em;
+}
+
+.planner_outer {
+	width: auto;
+	border: 1px solid #000000;
+	padding: 0;
+	vertical-align: top;
+}
+.planner_time_outer {
+	width: auto;
+	margin-top: 1px;
+	padding: 0;
+}
+
+.planner_day_table {
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+.planner_empty_spot {
+	height: 10px;
+	font-size: 0.0em;
+	border-top: 1px solid #BBBBBB;
+	padding: 0;
+	margin: 0;
+}
+
+.planner_unavailable {
+	height: 10px;
+	padding: 0;
+}
+
+.planner_cell_top {
+	border-top: 1px solid #999999;
+}
+
+.planner_cell_mid {
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+}
+
+.planner_other_unavailable_cell {
+	border-top: 1px solid #999999;	
+}
+
+.planner_dayname {
+font-weight: bold;
+}',
+		config_desc='Stylesheet'
+SQL command (INSERT INTO WP_LPLANNER_CONFIG_TABLE SET config_item='css', config_value='@CHARSET "ISO-8859-1"; .planner_table { border: none; border-collapse: collapse; margin-left: 1%; margin-right: 1%; width: 98%; padding: 0; } .planner_header_cell { width: 91%; padding: 0; } .planner_header { width: 100%; font-weight: bold; text-align: center; } .planner_time_header { width: 9%; } .planner_padder { height: 10px; } .planner_time_cell { border-bottom: 1px solid transparent; text-align: right; height: 10px; padding: 0; padding-right: 1px; vertical-align: top; overflow: visible; } .planner_time_text { position: relative; height: 100%; top: -1em; font-size: 0.75em; float: right; } .planner_time_column { text-align: right; font-size: 0.8em; } .planner_day_header { text-align: center; width:13%; height:25px; font-size:0.8em; } .planner_outer { width: auto; border: 1px solid #000000; padding: 0; vertical-align: top; } .planner_time_outer { width: auto; margin-top: 1px; padding: 0; } .planner_day_table { width: 100%; padding-left: 0; padding-right: 0; } .planner_empty_spot { height: 10px; font-size: 0.0em; border-top: 1px solid #BBBBBB; padding: 0; margin: 0; } .planner_unavailable { height: 10px; padding: 0; } .planner_cell_top { border-top: 1px solid #999999; } .planner_cell_mid { border-top: 1px solid #999999; border-bottom: 1px solid #999999; } .planner_other_unavailable_cell { border-top: 1px solid #999999; } .planner_dayname { font-weight: bold; }', config_desc='Stylesheet') cannot be parsed correct.
+DELETE FROM WP_LPLANNER_TABLE WHERE lesson_ID = $_REQUEST_lesson_id LIMIT 1
+SQL command (DELETE FROM WP_LPLANNER_TABLE WHERE lesson_ID = $_REQUEST_lesson_id LIMIT 1) cannot be parsed correct.
+UPDATE WP_LPLANNER_TABLE SET day='$_REQUEST_day', start_time='assemble_time($_POST["start_time_hour"], $_POST["start_time_minute"], $_POST["start_time_ampm"])', end_time='assemble_time($_POST["end_time_hour"], $_POST["end_time_minute"], $_POST["end_time_ampm"])', student_name='PLANNER_UNAVAILABLE'
+SQL command (UPDATE WP_LPLANNER_TABLE SET day='$_REQUEST_day', start_time='assemble_time($_POST["start_time_hour"], $_POST["start_time_minute"], $_POST["start_time_ampm"])', end_time='assemble_time($_POST["end_time_hour"], $_POST["end_time_minute"], $_POST["end_time_ampm"])', student_name='PLANNER_UNAVAILABLE') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [290, 371, 730, 789, 954, 971, 988, 1005, 1022, 1039, 1056, 1073, 1090, 1107, 1124, 1141, 1158, 1175, 1192, 1209, 1226, 1243, 1260, 1277, 1298, 3175, 3398]
+Added 0 SQL nodes. 0 out of 27 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:07.507199.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_config("css")'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: green">Successfully added lesson() to database.</font>'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: red">Error: Conflicting lesson(): newLesson("PLANNER_UNAVAILABLE", "", $start_time, $end_time, $_REQUEST["day"])_student_name at newLesson("PLANNER_UNAVAILABLE", "", $start_time, $end_time, $_REQUEST["day"])_start_time</font>'' cannot be parsed correct.
+HTML code '$'$_SERVER_PHP_SELF'' cannot be parsed correct.
+HTML code '$'get_config("lesson")'' cannot be parsed correct.
+HTML code '$'get_config("student")'' cannot be parsed correct.
+HTML code '$'student()'' cannot be parsed correct.
+HTML code '$'student()'' cannot be parsed correct.
+HTML code '$'<option value={"1": ["15"], "2": ["30"], "3": ["60"]}_0'' cannot be parsed correct.
+HTML code '$'>{"1": ["15"], "2": ["30"], "3": ["60"]}_0</option>'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: green">Successfully removed lesson() from database.</font>'' cannot be parsed correct.
+HTML code '$'$_POST_lesson_id'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: red">Error: conflicting lesson(): check_conflicts($start_time, $end_time, $_POST["day"], $_POST["lesson_id"])_student_name at check_conflicts($start_time, $end_time, $_POST["day"], $_POST["lesson_id"])_start_time</font>'' cannot be parsed correct.
+HTML code '$'lesson(true)'' cannot be parsed correct.
+HTML code '$'planner()'' cannot be parsed correct.
+HTML code '$'lesson()'' cannot be parsed correct.
+HTML code '$'$_SERVER_PHP_SELF'' cannot be parsed correct.
+HTML code '$'$mode'' cannot be parsed correct.
+HTML code '$'$lesson_id'' cannot be parsed correct.
+HTML code '$'student(true)'' cannot be parsed correct.
+HTML code '$'student(true)'' cannot be parsed correct.
+HTML code '$'lesson(true)'' cannot be parsed correct.
+HTML code '$'time_form_display("start_time", "auto")'' cannot be parsed correct.
+HTML code '$'lesson(true)'' cannot be parsed correct.
+HTML code '$'time_form_display("end_time", "auto")'' cannot be parsed correct.
+HTML code '$'<option value={"1": ["5"], "2": ["10"], "3": ["15"], "4": ["30"], "5": ["60"]}_0'' cannot be parsed correct.
+HTML code '$'>{"1": ["5"], "2": ["10"], "3": ["15"], "4": ["30"], "5": ["60"]}_0</option>'' cannot be parsed correct.
+HTML code '$'get_config("padding_cells")'' cannot be parsed correct.
+HTML code '$'time_form_display("new_display_start_time", $current_display_start_time)'' cannot be parsed correct.
+HTML code '$'time_form_display("new_display_end_time", $current_display_end_time)'' cannot be parsed correct.
+HTML code '$'lesson()'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'substr($current_colorlist[$i], 1, 6)'' cannot be parsed correct.
+HTML code '$'explode(",", get_config("colors"))_0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'substr($current_unavailable_color, 1, 6)'' cannot be parsed correct.
+HTML code '$'get_config("unavailable_color")'' cannot be parsed correct.
+HTML code '$'substr($current_bh_bgcolor, 1, 6)'' cannot be parsed correct.
+HTML code '$'get_config("bh_bgcolor")'' cannot be parsed correct.
+HTML code '$'substr($current_bh_border, 1, 6)'' cannot be parsed correct.
+HTML code '$'get_config("bh_border")'' cannot be parsed correct.
+HTML code '$'substr($current_day_bgcolor, 1, 6)'' cannot be parsed correct.
+HTML code '$'get_config("day_bgcolor")'' cannot be parsed correct.
+HTML code '$'substr($current_day_border, 1, 6)'' cannot be parsed correct.
+HTML code '$'get_config("day_border")'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: red">Error: no lesson() selected for deletion</font>'' cannot be parsed correct.
+HTML code '$'<style type="text/css">
+<!--'' cannot be parsed correct.
+HTML code '$'//-->
+</style>'' cannot be parsed correct.
+HTML code '$'<font style="color: red; font-size=larger">Error: end time is before start time</font>'' cannot be parsed correct.
+HTML code '$'" />
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				What to call people involved with events<br>
+				<font style="font-size: 0.8em">e.g. "professor", "student", "employee"</font>
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+				<input type="text" name="new_jargon_student" value="'' cannot be parsed correct.
+HTML code '$'" />
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				Show '' cannot be parsed correct.
+HTML code '$' names publically<br>
+				<font style="font-size: 0.8em">Names will always display on admin pages</font>
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+				<select name="new_show_student_names">
+				<option value="0" '' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$' contact publically<br>
+				<font style="font-size: 0.8em">Contact info will always display on admin pages</font>
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+				<select name="new_show_student_mail">
+				<option value="0" '' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: red">Error: Invalid start time</font>'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: red">Error: Invalid end time</font>'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: red">Error: Chosen start time is after chosen end time</font>'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: red">Error: invalid day selected</font>'' cannot be parsed correct.
+HTML code '$'<font style="font-size: larger; color: red">Error: Chosen start time is after chosen end time</font>'' cannot be parsed correct.
+HTML code '$'Successfully modified lesson.'' cannot be parsed correct.
+HTML code '$'s Schedule</h2>
+	 
+	 <div style="width: 500px"> '' cannot be parsed correct.
+HTML code '$' or open time slot to begin editing.</div>
+	 
+	 '' cannot be parsed correct.
+HTML code '$'" />
+		<input type="hidden" name="lesson_id" id="lesson_id" value="'' cannot be parsed correct.
+HTML code '$'" />
+		<table style="border-collapse: collapse; border: 1px solid #000000; width: 500px">
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				'' cannot be parsed correct.
+HTML code '$' Name:<br />
+				<div style="font-size: 0.75em">OR Mark this block of time as unavailable:
+				<input type="checkbox" name="is_unavailable" id="is_unavailable" onClick="jsUnavailable()" /></div>
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+				<input type="text" name="student_name" id="student_name" maxlength="30" />
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				'' cannot be parsed correct.
+HTML code '$' Contact (optional):
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+				<input type="text" name="student_mail" id="student_mail" maxlength="60" />
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				Day:
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+				<select name="day" id="day">
+				<option value="0">Sunday</option>
+				<option value="1">Monday</option>
+				<option value="2">Tuesday</option>
+				<option value="3">Wednesday</option>
+				<option value="4">Thursday</option>
+				<option value="5">Friday</option>
+				<option value="6">Saturday</option>											
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				'' cannot be parsed correct.
+HTML code '$' Start Time (HH:MM):
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;"> 
+				'' cannot be parsed correct.
+HTML code '$'				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				'' cannot be parsed correct.
+HTML code '$' End Time (HH:MM): 
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+				'' cannot be parsed correct.
+HTML code '$'				</td>
+			</tr>
+			<tr>
+				<td style="text-align: center; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;" colspan="2">
+				<input type="submit" id="modifyappointment" value="Add Appointment" /><input type="submit" name="delete_lesson" value="Delete Appointment" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	
+	'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'" />
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				Starting time for schedule display
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+				<input type="checkbox" name="start_time_auto" '' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$' />Automatic<br/>
+				'' cannot be parsed correct.
+HTML code '$'				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				Ending time for schedule display
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+				<input type="checkbox" name="end_time_auto" '' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$' />Automatic<br/>
+				'' cannot be parsed correct.
+HTML code '$'				</td>
+			</tr>			
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				Colors used for '' cannot be parsed correct.
+HTML code '$'s
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+					<table style="border-collapse: collapse; border: 1px solid #666666; width=100%">
+						<tbody id="colortable">
+					'' cannot be parsed correct.
+HTML code '$'" id="color_value'' cannot be parsed correct.
+HTML code '$'"
+							onblur="change_color( '' cannot be parsed correct.
+HTML code '$' , this.value)"
+							value="'' cannot be parsed correct.
+HTML code '$'" />
+							</td>
+							<td style="padding: 3px; background-color: '' cannot be parsed correct.
+HTML code '$'; width: 50px"
+							id="color_cell'' cannot be parsed correct.
+HTML code '$'">
+							</td>
+						</tr>
+					'' cannot be parsed correct.
+HTML code '$'" />
+					<br>
+					<button type="button" onclick="add_color()">Add a new color</button><br/>
+					<font style="font-size: 0.8em">Blank values will be ignored</font>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				Color for an unavailable time slot
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+					<table style="border-collapse: collapse; border: 1px solid #666666; width=100%">
+						<tr>
+							<td style="padding: 1px 1px 1px 3px; width: auto">
+							Hex code: <input style="width: 6em" type="text" maxlength="6"
+							name="color_valueu" id="color_valueu"
+							onblur="change_color( \'u\' , this.value)"
+							value="'' cannot be parsed correct.
+HTML code '$'" />
+							</td>
+							<td style="padding: 3px; background-color: '' cannot be parsed correct.
+HTML code '$'; width: 50px"
+							id="color_cellu">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>		
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				Colors for the main planner header
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+					<table style="border-collapse: collapse; border: 1px solid #666666; width=100%">
+						<tr>
+							<td style="padding: 1px 1px 1px 3px; width: auto">
+							Background color hex code: <input style="width: 6em" type="text" maxlength="6"
+							name="color_valuebhbg" id="color_valuebhbg"
+							onblur="change_color( \'bhbg\' , this.value)"
+							value="'' cannot be parsed correct.
+HTML code '$'" />
+							</td>
+							<td style="padding: 3px; background-color: '' cannot be parsed correct.
+HTML code '$'; width: 50px"
+							id="color_cellbhbg">
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 1px 1px 1px 3px; width: auto">
+							Border color hex code: <input style="width: 6em" type="text" maxlength="6"
+							name="color_valuebhborder" id="color_valuebhborder"
+							onblur="change_color( \'bhborder\' , this.value)"
+							value="'' cannot be parsed correct.
+HTML code '$'" />
+							</td>
+							<td style="padding: 3px; background-color: '' cannot be parsed correct.
+HTML code '$'; width: 50px"
+							id="color_cellbhborder">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; border: 1px solid #000000; padding: 1em 2em 1em 1em;">
+				Colors for each day header
+				</td>
+				<td style="text-align: left; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;">
+					<table style="border-collapse: collapse; border: 1px solid #666666; width=100%">
+						<tr>
+							<td style="padding: 1px 1px 1px 3px; width: auto">
+							Background color hex code: <input style="width: 6em" type="text" maxlength="6"
+							name="color_valuedaybg" id="color_valuedaybg"
+							onblur="change_color( \'daybg\' , this.value)"
+							value="'' cannot be parsed correct.
+HTML code '$'" />
+							</td>
+							<td style="padding: 3px; background-color: '' cannot be parsed correct.
+HTML code '$'; width: 50px"
+							id="color_celldaybg">
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 1px 1px 1px 3px; width: auto">
+							Border color hex code: <input style="width: 6em" type="text" maxlength="6"
+							name="color_valuedayborder" id="color_valuedayborder"
+							onblur="change_color( \'dayborder\' , this.value)"
+							value="'' cannot be parsed correct.
+HTML code '$'" />
+							</td>
+							<td style="padding: 3px; background-color: '' cannot be parsed correct.
+HTML code '$'; width: 50px"
+							id="color_celldayborder">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: center; vertical-align: top; border: 1px solid #000000; padding: 1em 1em 1em 2em;" colspan="2">
+				<input type="submit" value="Save Changes" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:08.719203.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.073732.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.358861.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PhpVarDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressStorageDetector
+### Start running WP_UserDetector
+### Finish running WordPressRetrievalDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running maxdbDetector
+### Start running DeletionDetector
+### Finish running WP_UserDetector
+### Start running UninstallDetector
+### Finish running MySQLiDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+By data type:
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.148435.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.002272.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.008368.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:50.215032!
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

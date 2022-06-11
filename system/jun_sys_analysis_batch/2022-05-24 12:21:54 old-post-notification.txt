@@ -1,0 +1,721 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on old-post-notification
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.701120.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.873142.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 22 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.340396.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 4 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.676630.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1165 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.917122.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.561742.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.087066.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 96 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.777749.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3837
+Added 2550 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 5037
+Added 1200 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.257952.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/old-post-notification/plugin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/old-post-notification/lib/metabox/example-functions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/old-post-notification/lib/metabox/init.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.409107.
+
+22 PHP_REACHES edges created
+4 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3811 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1200 PHP_REACHES edges created
+5037 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 965 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.042812.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.152570.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.327918.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 1 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.162837.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.006811.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.036445.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009953.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.054053.
+
+2 PHP_REACHES edges created
+2 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.139165.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.122208.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'wp_create_nonce(basename())'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_name'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'date("m\\/d\\/Y", $meta)$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'date("m\\/d\\/Y", $meta)$field_std'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'date("h:i A", $meta)$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'<li>wp_get_attachment_link($attachment->ID, "thumbnail", 0, 0, "Download")'' cannot be parsed correct.
+HTML code '$'apply_filters("the_title", "&nbsp;" . $attachment->post_title)'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'<input class="cmb_upload_file" type="hidden" size="45" id="'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"] . "_id", true)'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'explode("/", $meta)_0'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"])$field_std'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$option_value'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'$option_name'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'$option_value'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'$option_name'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'$option_value'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'$option_name</label></li>'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_name'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'Select File'' cannot be parsed correct.
+HTML code '$'<option value=$term" selected$term</option>'' cannot be parsed correct.
+HTML code '$'<option value=$term  '' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"]) '' cannot be parsed correct.
+HTML code '$'  "$term</option>'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'" value="$term" checked$term</li>'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'" value="$term  '' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"]) '' cannot be parsed correct.
+HTML code '$'  "$term</li>'' cannot be parsed correct.
+HTML code '$'$field_desc'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'$term'' cannot be parsed correct.
+HTML code '$'$term'' cannot be parsed correct.
+HTML code '$'$field_id'' cannot be parsed correct.
+HTML code '$'<h2>Old Post Notification</h2>'' cannot be parsed correct.
+HTML code '$'<input name="Submit" type="submit" class="button-primary" value="Save Changes" /'' cannot be parsed correct.
+HTML code '$'wpautop(__("When a post is marked as old, this is what\\'s displayed at the top of the post. You can override this on a per-post basis.", "old-post-notification"))'' cannot be parsed correct.
+HTML code '$'wp_editor(apply_filters("old_post_notification_default_text", ""), "old_post_notification_default_text", ["textarea_name" => "old_post_notification_options[old_post_notification_default_text]"])'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="wp_meta_box_nonce" value="'' cannot be parsed correct.
+HTML code '$'" /'' cannot be parsed correct.
+HTML code '$'<table class="form-table cmb_metabox">'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td colspan="2">'' cannot be parsed correct.
+HTML code '$'<th style="width:18%"><label for="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</label></th>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<input type="text" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" /'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<input class="cmb_text_small" type="text" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" /><span class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'<input class="cmb_text_medium" type="text" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" /><span class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'<input class="cmb_text_small cmb_datepicker" type="text" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" /><span class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'<input class="cmb_text_small cmb_datepicker" type="text" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" /><span class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'<input class="cmb_text_small cmb_datepicker" type="text" name="'' cannot be parsed correct.
+HTML code '$'[date]" id="'' cannot be parsed correct.
+HTML code '$'_date" value="'' cannot be parsed correct.
+HTML code '$'" /'' cannot be parsed correct.
+HTML code '$'<input class="cmb_timepicker text_time" type="text" name="'' cannot be parsed correct.
+HTML code '$'[time]" id="'' cannot be parsed correct.
+HTML code '$'_time" value="'' cannot be parsed correct.
+HTML code '$'" /><span class="cmb_metabox_description" >'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'<input class="cmb_timepicker text_time" type="text" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" /><span class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'$ <input class="cmb_text_money" type="text" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" /><span class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'<input class="cmb_colorpicker cmb_text_small" type="text" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" /><span class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'<textarea name='' cannot be parsed correct.
+HTML code '$'" value="" />'' cannot be parsed correct.
+HTML code '$'<input class="cmb_upload_button button" type="button" value="Upload File" />'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<ul class="attach_list">'' cannot be parsed correct.
+HTML code '$'<span>'' cannot be parsed correct.
+HTML code '$'</span></li>'' cannot be parsed correct.
+HTML code '$'
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery("#post").attr("enctype", "multipart/form-data");
+			jQuery("#post").attr("encoding", "multipart/form-data");
+		});
+		</script>'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" cols="60" rows="10">'' cannot be parsed correct.
+HTML code '$'</textarea>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<textarea name='' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" cols="60" rows="4">'' cannot be parsed correct.
+HTML code '$'</textarea>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<textarea name='' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'" name="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" /'' cannot be parsed correct.
+HTML code '$'<input class="cmb_upload_button button" type="button" value="Upload File" />'' cannot be parsed correct.
+HTML code '$'<input class="cmb_upload_file_id" type="hidden" id="'' cannot be parsed correct.
+HTML code '$'_id" name="'' cannot be parsed correct.
+HTML code '$'_id" value="'' cannot be parsed correct.
+HTML code '$'" /'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<div id='' cannot be parsed correct.
+HTML code '$'_status" class="cmb_upload_status">'' cannot be parsed correct.
+HTML code '$'<div class="img_status">'' cannot be parsed correct.
+HTML code '$'<img src='' cannot be parsed correct.
+HTML code '$'" alt="" />'' cannot be parsed correct.
+HTML code '$'<a href="#" class="cmb_remove_file_button" rel="'' cannot be parsed correct.
+HTML code '$'">Remove Image</a'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'File: <strong>'' cannot be parsed correct.
+HTML code '$'</strong>&nbsp;&nbsp;&nbsp; (<a href='' cannot be parsed correct.
+HTML code '$'" target="_blank" rel="external">Download</a> / <a href="#" class="cmb_remove_file_button" rel="'' cannot be parsed correct.
+HTML code '$'">Remove</a>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" cols="60" rows="10" class="cmb_textarea_code">'' cannot be parsed correct.
+HTML code '$'</textarea>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<select name='' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'<option value='' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<div class="cmb_radio_inline">'' cannot be parsed correct.
+HTML code '$'<div class="cmb_radio_inline_option"><input type="radio" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$' /><label for='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</label></div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'<li><input type="radio" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$' /><label for='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$'<span class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'<li><input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[]" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$' /><label for='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</label></li>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<span class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'<h5 class="cmb_metabox_title">'' cannot be parsed correct.
+HTML code '$'</h5>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<select name='' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+			<script type="text/javascript">
+				function cmbGetParameterByNameInline(name) {
+					name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+					var regexS = "[\?&]" + name + "=([^&#]*)";
+					var regex = new RegExp(regexS);
+					var results = regex.exec(window.location.href);
+					if(results == null)
+						return "";
+					else
+						return decodeURIComponent(results[1].replace(/\+/g, " "));
+				}
+							
+				jQuery(function($) {
+					if (cmbGetParameterByNameInline("cmb_force_send")=="true") {
+						var cmb_send_label = cmbGetParameterByNameInline("cmb_send_label");
+						$("td.savesend input").val(cmb_send_label);
+					}
+				});
+			</script>
+		'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'<li><input type="radio" name="'' cannot be parsed correct.
+HTML code '$'<li><input type="radio" name="'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<p class="cmb_metabox_description">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'<li><input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[]" id="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$' checked="checked" '' cannot be parsed correct.
+HTML code '$' /><label>'' cannot be parsed correct.
+HTML code '$'</label></li>'' cannot be parsed correct.
+HTML code '$'<input class="cmb_upload_file" type="text" size="36" name="'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<div id="icon-options-general" class="icon32"><br></div>'' cannot be parsed correct.
+HTML code '$'<form action="options.php" method="post">'' cannot be parsed correct.
+HTML code '$'</form></div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:26.839031.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.048573.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 13 do_action/apply_filters calls and 19 add_action/add_filter calls. Now connecting do-add pairs.
+Added 9 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:02.097773.
+
+9 PHP_REACHES edges created
+9 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FileProDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ArrayElementDetector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PasswordHashingDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running MySQLiDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+lib/metabox/init.php:154
+  - RETRIEVAL call to get_post_meta($post_id, "_wp_page_template", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/metabox/init.php:184
+  - RETRIEVAL call to get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/metabox/init.php:341
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+lib/metabox/init.php:359
+  - RETRIEVAL call to get_post_meta($post->ID, $field["id"] . "_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/metabox/init.php:416
+  - RETRIEVAL call to get_post_meta($post_id, $name, !$field["multiple"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/metabox/init.php:463
+  - RETRIEVAL call to get_post_meta($post_id, $name, !$field["multiple"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+plugin.php:168
+  - RETRIEVAL call to get_option("old_post_notification_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin.php:185
+  - RETRIEVAL call to get_post_meta($post->ID, "old_post_notification_marked_old", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+plugin.php:189
+  - RETRIEVAL call to get_post_meta($post->ID, "old_post_notification_custom_message", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+plugin.php:214
+  - RETRIEVAL call to get_post_meta($post->ID, "old_post_notification_marked_old", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta 
+
+lib/metabox/init.php:449
+  - STORAGE call to delete_post_meta($post_id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+lib/metabox/init.php:452
+  - STORAGE call to add_post_meta($post_id, $name, $add_new, false) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+lib/metabox/init.php:456
+  - STORAGE call to update_post_meta($post_id, $name, $new) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+lib/metabox/init.php:458
+  - STORAGE call to delete_post_meta($post_id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+lib/metabox/init.php:471
+  - STORAGE call to update_post_meta($post_id, $name, $new) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+lib/metabox/init.php:473
+  - STORAGE call to delete_post_meta($post_id, $name, $old) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).
+  - Data types: post_meta 
+
+lib/metabox/init.php:449
+  - DELETION call to delete_post_meta($post_id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+lib/metabox/init.php:458
+  - DELETION call to delete_post_meta($post_id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+lib/metabox/init.php:473
+  - DELETION call to delete_post_meta($post_id, $name, $old) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).
+  - Data types: post_meta 
+
+By data type:
+none
+	WordPressRetrievalDetector.get_posts($args) - set()
+option
+	WordPressRetrievalDetector.get_option("old_post_notification_options") - {'option'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post_id, $name, !$field["multiple"]) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, $name, $new) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, $name, !$field["multiple"]) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, $name) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"]) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "old_post_notification_marked_old", true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, $name, $add_new, false) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_wp_page_template", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, $name, $old) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, $name) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $field["id"] . "_id", true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, $name) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, $name) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "old_post_notification_marked_old", true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, $name, $old) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "old_post_notification_custom_message", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, $name, $new) - {'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.760459.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 48 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.128754.
+
+48 STORE_REACHES edges created
+48 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005533.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:55.685155!
+DELETION call to delete_post_meta($post_id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, $name, $old) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_wp_page_template", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $field["id"], "multicheck" != $field["type"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $field["id"] . "_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, $name, !$field["multiple"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, $name, !$field["multiple"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("old_post_notification_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "old_post_notification_marked_old", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "old_post_notification_custom_message", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "old_post_notification_marked_old", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+STORAGE call to delete_post_meta($post_id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to add_post_meta($post_id, $name, $add_new, false) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to update_post_meta($post_id, $name, $new) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, $name, $new) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, $name, $old) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

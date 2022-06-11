@@ -1,0 +1,571 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on amazon-machine-tags
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.554165.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.023645.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 5 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.248300.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.546637.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 784 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.975223.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 21 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.861786.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.099747.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 313 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.272934.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3856
+Added 2733 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4145
+Added 289 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.199400.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/amazon-machine-tags/amtap-admin.inc.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/amazon-machine-tags/amtap.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/amazon-machine-tags/sha256.inc.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.308018.
+
+789 PHP_REACHES edges created
+21 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3046 PHP_REACHES edges created
+289 PHP_REACHES edges created
+4145 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1204 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.018957.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.172346.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 149 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:04.697595.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 104 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.152775.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.044963.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.335678.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.020871.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.033670.
+
+253 PHP_REACHES edges created
+253 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 202 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.150106.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.125204.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$aMessage_0'' cannot be parsed correct.
+HTML code '$'$aMessage_1'' cannot be parsed correct.
+HTML code '$'get_option("aws_access_key_id")'' cannot be parsed correct.
+HTML code '$'$sInputInvalid'' cannot be parsed correct.
+HTML code '$'get_option("aws_access_key_secret")'' cannot be parsed correct.
+HTML code '$'$sInputInvalid'' cannot be parsed correct.
+HTML code '$'get_option("amtap_headline")'' cannot be parsed correct.
+HTML code '$'$sResult'' cannot be parsed correct.
+HTML code '$'
+<!-- Debug XML: htmlspecialchars($sRequest) -->
+'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_locale'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_code'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_locale'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_code'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_code'' cannot be parsed correct.
+HTML code '$'get_option("amtap_associate_id_" . $sCode)'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_url'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_title_get_id'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_code'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_code'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_title_set_default'' cannot be parsed correct.
+HTML code '$'$aAmtapLocales_$key_code'' cannot be parsed correct.
+HTML code '$'get_option("amtap_default_tags")'' cannot be parsed correct.
+HTML code '$'get_option("amtap_xml_maxage")'' cannot be parsed correct.
+HTML code '$'get_option("amtap_item_response_group")'' cannot be parsed correct.
+HTML code '$'<style type="text/css">
+'' cannot be parsed correct.
+HTML code '$'</style>
+'' cannot be parsed correct.
+HTML code '$'<link rel="stylesheet" type="text/css" href="get_bloginfo("url")/wp-content/plugins/amazon-machine-tags/css/amtap-blog.css" /
+'' cannot be parsed correct.
+HTML code '$'			<!-- Subheadline -->
+			<h4>'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.031245.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047686.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.354458.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PasswordHashingDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running MySQLiDetector
+### Start running Sqlite3Detector
+### Finish running maxdbDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running PHPRetrievalDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressStorageDetector
+### Finish running PhpCurlDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+sha256.inc.php:212
+  - hash called with approved hash algorithm sha256. 
+
+amtap.php:217
+  - RETRIEVAL call to file_get_contents($sCachefile).
+  - Data types: file
+amtap.php:313
+  - RETRIEVAL call to file_get_contents($sCachefile).
+  - Data types: file
+amtap.php:337
+  - RETRIEVAL call to file_get_contents($sRequest).
+  - Data types: file 
+
+amtap.php:353
+  - STORAGE call to fwrite($oFileHandle, $oFresh).
+  - Data types: file 
+
+amtap-admin.inc.php:85
+  - RETRIEVAL call to get_option("aws_access_key_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:92
+  - RETRIEVAL call to get_option("aws_access_key_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:114
+  - RETRIEVAL call to get_option("amtap_headline") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:119
+  - RETRIEVAL call to get_option("amtap_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:121
+  - RETRIEVAL call to get_option("amtap_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:127
+  - RETRIEVAL call to get_option("amtap_rating") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:149
+  - RETRIEVAL call to get_option("amtap_associate_id_" . $sCode) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:153
+  - RETRIEVAL call to get_option("amtap_associate_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:162
+  - RETRIEVAL call to get_option("amtap_ip2country") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:177
+  - RETRIEVAL call to get_option("amtap_default_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:193
+  - RETRIEVAL call to get_option("amtap_xml_maxage") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:198
+  - RETRIEVAL call to get_option("amtap_item_response_group") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:212
+  - RETRIEVAL call to get_option("amtap_donation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap-admin.inc.php:224
+  - RETRIEVAL call to get_option("amtap_debug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:139
+  - RETRIEVAL call to get_option("amtap_default_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:150
+  - RETRIEVAL call to get_option("aws_access_key_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:151
+  - RETRIEVAL call to get_option("aws_access_key_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:153
+  - RETRIEVAL call to get_option("amtap_item_response_group") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:159
+  - RETRIEVAL call to get_option("amtap_ip2country") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:159
+  - RETRIEVAL call to get_option("amtap_associate_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:160
+  - RETRIEVAL call to get_option("amtap_associate_id_" . $sTld) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:162
+  - RETRIEVAL call to get_option("amtap_donation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:194
+  - RETRIEVAL call to get_option("amtap_debug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:220
+  - RETRIEVAL call to get_option("amtap_key_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:261
+  - RETRIEVAL call to get_option("amtap_headline") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:262
+  - RETRIEVAL call to get_option("amtap_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:264
+  - RETRIEVAL call to get_option("amtap_rating") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:306
+  - RETRIEVAL call to get_option("aws_access_key_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:306
+  - RETRIEVAL call to get_option("aws_access_key_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:315
+  - RETRIEVAL call to get_option("amtap_xml_maxage") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:396
+  - RETRIEVAL call to get_option("aws_access_key_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:397
+  - RETRIEVAL call to get_option("aws_access_key_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+amtap.php:582
+  - RETRIEVAL call to get_option("amtap_associate_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+amtap.php:44
+  - STORAGE call to add_option("amtap_xml_maxage", 60 * 60) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+amtap.php:45
+  - STORAGE call to add_option("amtap_associate_default", AMTAP->get_locale(true)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+amtap.php:46
+  - STORAGE call to add_option("amtap_headline", "Further Reading") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+amtap.php:47
+  - STORAGE call to add_option("amtap_target", "same") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+amtap.php:48
+  - STORAGE call to add_option("amtap_rating", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+amtap.php:49
+  - STORAGE call to add_option("amtap_ip2country", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+amtap.php:50
+  - STORAGE call to add_option("amtap_donation", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+amtap.php:51
+  - STORAGE call to add_option("amtap_item_response_group", "Images,Medium,Offers,Reviews") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+amtap.php:52
+  - STORAGE call to add_option("amtap_debug", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+amtap.php:110
+  - STORAGE call to update_option("amtap_key_status", $sKeyStatus) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+sha256.inc.php:212
+  - CRYPTOGRAPHY call to hash("sha256", $str, false).
+sha256.inc.php:385
+  - CRYPTOGRAPHY call to $obj->hash($str, $ig_func).
+sha256.inc.php:390
+  - CRYPTOGRAPHY call to $obj->hash($str, $ig_func). 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents($sRequest) - {'file'}
+	PHPRetrievalDetector.file_get_contents($sCachefile) - {'file'}
+	PHPStorageDetector.fwrite($oFileHandle, $oFresh) - {'file'}
+	PHPRetrievalDetector.file_get_contents($sCachefile) - {'file'}
+none
+	GenericEncryptionDetector.hash("sha256", $str, false) - set()
+	GenericEncryptionDetector.$obj->hash($str, $ig_func) - set()
+	GenericEncryptionDetector.$obj->hash($str, $ig_func) - set()
+	HashDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("amtap_rating") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_default_tags") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_headline") - {'option'}
+	WordPressStorageDetector.update_option("amtap_key_status", $sKeyStatus) - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_default_tags") - {'option'}
+	WordPressStorageDetector.add_option("amtap_target", "same") - {'option'}
+	WordPressRetrievalDetector.get_option("aws_access_key_id") - {'option'}
+	WordPressStorageDetector.add_option("amtap_rating", "true") - {'option'}
+	WordPressStorageDetector.add_option("amtap_xml_maxage", 60 * 60) - {'option'}
+	WordPressStorageDetector.add_option("amtap_debug", "false") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_xml_maxage") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_donation") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_key_status") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_xml_maxage") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_target") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_associate_id_" . $sCode) - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_target") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_ip2country") - {'option'}
+	WordPressStorageDetector.add_option("amtap_item_response_group", "Images,Medium,Offers,Reviews") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_item_response_group") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_item_response_group") - {'option'}
+	WordPressStorageDetector.add_option("amtap_ip2country", "true") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_associate_default") - {'option'}
+	WordPressRetrievalDetector.get_option("aws_access_key_secret") - {'option'}
+	WordPressRetrievalDetector.get_option("aws_access_key_secret") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_debug") - {'option'}
+	WordPressRetrievalDetector.get_option("aws_access_key_id") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_donation") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_ip2country") - {'option'}
+	WordPressRetrievalDetector.get_option("aws_access_key_secret") - {'option'}
+	WordPressRetrievalDetector.get_option("aws_access_key_id") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_headline") - {'option'}
+	WordPressStorageDetector.add_option("amtap_headline", "Further Reading") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_associate_default") - {'option'}
+	WordPressStorageDetector.add_option("amtap_donation", "false") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_target") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_associate_id_" . $sTld) - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_associate_default") - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_debug") - {'option'}
+	WordPressRetrievalDetector.get_option("aws_access_key_id") - {'option'}
+	WordPressStorageDetector.add_option("amtap_associate_default", AMTAP->get_locale(true)) - {'option'}
+	WordPressRetrievalDetector.get_option("amtap_rating") - {'option'}
+	WordPressRetrievalDetector.get_option("aws_access_key_secret") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.041155.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 333 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.290671.
+
+333 STORE_REACHES edges created
+333 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 7 nodes as ENCRYPTED
+In total, tainted 7 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.365263.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:40.025094!
+CRYPTOGRAPHY call to hash("sha256", $str, false).,None,None
+CRYPTOGRAPHY call to $obj->hash($str, $ig_func).,None,None
+CRYPTOGRAPHY call to $obj->hash($str, $ig_func).,None,None
+hash called with approved hash algorithm sha256.,sha256,None
+RETRIEVAL call to file_get_contents($sCachefile).,None,None
+RETRIEVAL call to file_get_contents($sCachefile).,None,None
+RETRIEVAL call to file_get_contents($sRequest).,None,None
+STORAGE call to fwrite($oFileHandle, $oFresh).,None,None
+RETRIEVAL call to get_option("amtap_headline") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_rating") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_associate_id_" . $sCode) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_associate_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_ip2country") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_default_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_xml_maxage") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_item_response_group") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_donation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_debug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aws_access_key_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aws_access_key_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_default_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aws_access_key_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aws_access_key_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_item_response_group") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_ip2country") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_associate_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_associate_id_" . $sTld) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_donation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_debug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_key_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_headline") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_target") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_rating") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aws_access_key_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aws_access_key_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_xml_maxage") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aws_access_key_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("aws_access_key_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("amtap_associate_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("amtap_key_status", $sKeyStatus) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("amtap_xml_maxage", 60 * 60) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("amtap_associate_default", AMTAP->get_locale(true)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("amtap_headline", "Further Reading") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("amtap_target", "same") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("amtap_rating", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("amtap_ip2country", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("amtap_donation", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("amtap_item_response_group", "Images,Medium,Offers,Reviews") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("amtap_debug", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

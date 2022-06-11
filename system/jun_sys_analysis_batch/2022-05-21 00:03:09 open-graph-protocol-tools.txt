@@ -1,0 +1,407 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on open-graph-protocol-tools
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.335512.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.986220.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.273065.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.703287.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 120 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.723086.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.692387.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.132206.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 116 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.271821.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1195
+Added 958 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1195
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.091875.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/open-graph-protocol-tools/open-graph-protocol-tools.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.177445.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1194 PHP_REACHES edges created
+1195 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 493 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.040253.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.133328.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 8 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.780788.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 28 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.161932.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.009355.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.151551.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.015671.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.041869.
+
+36 PHP_REACHES edges created
+36 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 8 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.164428.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.184435.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<input type="hidden" name="page_options" value="implode(",", array_keys($opengraphprotocoltools_keys))" /'' cannot be parsed correct.
+HTML code '$'wp_nonce_field("update-options")'' cannot be parsed correct.
+HTML code '$'array_pop(explode("-", $key))'' cannot be parsed correct.
+HTML code '$'$key'' cannot be parsed correct.
+HTML code '$'get_option($key)'' cannot be parsed correct.
+HTML code '$'$desc'' cannot be parsed correct.
+HTML code '$'htmlentities(file_get_contents(dirname() . "/sample_code.txt"))'' cannot be parsed correct.
+HTML code '$'get_opengraphprotocoltools_headers($meta_tags)'' cannot be parsed correct.
+HTML code '$'get_opengraphprotocoltools_like_code()'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<form method="post" action="options.php">'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="action" value="update" />'' cannot be parsed correct.
+HTML code '$'<p>To include the Facebook "like" code on your page, you must first include values for one of the below. Your Facebook User ID is a number. You may specify multiple user IDs if you like.</p>'' cannot be parsed correct.
+HTML code '$'<table class="form-table">'' cannot be parsed correct.
+HTML code '$'<tr valign="top">'' cannot be parsed correct.
+HTML code '$'<th scope="row">'' cannot be parsed correct.
+HTML code '$'</th>'' cannot be parsed correct.
+HTML code '$'<td><input type="text" name="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" size="30"/><br />'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<p class="submit">'' cannot be parsed correct.
+HTML code '$'<input type="submit" class="button-primary" value="Save Changes" />'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'<textarea rows="11" cols="80">'' cannot be parsed correct.
+HTML code '$'</textarea>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.918869.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.070607.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 3 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.444971.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running CubridDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running FileProDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running OpenSSLDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPIncludedDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running maxdbDetector
+### Start running SybaseDetector
+### Finish running MySQLiDetector
+### Start running TokyoTyrantDetector
+### Finish running PHPRetrievalDetector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running Sqlite3Detector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running SqlServerDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+open-graph-protocol-tools.php:259
+  - MD5 called with parameters [trim, user_email, post_author, data, get_the_author_meta, strtolower]. Ignore if [trim, user_email, post_author, data, get_the_author_meta, strtolower] does not contain personal information.
+open-graph-protocol-tools.php:260
+  - MD5 called with parameters [trim, user_email, post_author, data, get_the_author_meta, strtolower]. Ignore if [trim, user_email, post_author, data, get_the_author_meta, strtolower] does not contain personal information. 
+
+open-graph-protocol-tools.php:86
+  - RETRIEVAL call to file_get_contents(dirname() . "/sample_code.txt").
+  - Data types: file 
+
+open-graph-protocol-tools.php:74
+  - RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+open-graph-protocol-tools.php:98
+  - RETRIEVAL call to get_the_author_meta("twitter", $post->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+open-graph-protocol-tools.php:103
+  - RETRIEVAL call to get_option(OGPT_SETTINGS_KEY_FB_APP_ID) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+open-graph-protocol-tools.php:104
+  - RETRIEVAL call to get_option(OGPT_SETTINGS_KEY_FB_ADMINS) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+open-graph-protocol-tools.php:109
+  - RETRIEVAL call to get_option(OGPT_SETTINGS_KEY_TWITTER_SITE) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+open-graph-protocol-tools.php:201
+  - RETRIEVAL call to get_post($post_id) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post_meta, wp_post, post
+open-graph-protocol-tools.php:251
+  - RETRIEVAL call to get_the_author_meta("display_name", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+open-graph-protocol-tools.php:254
+  - RETRIEVAL call to get_the_author_meta("login", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+open-graph-protocol-tools.php:255
+  - RETRIEVAL call to get_the_author_meta("first_name", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+open-graph-protocol-tools.php:256
+  - RETRIEVAL call to get_the_author_meta("last_name", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+open-graph-protocol-tools.php:257
+  - RETRIEVAL call to get_the_author_meta("user_description", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+open-graph-protocol-tools.php:259
+  - RETRIEVAL call to get_the_author_meta("user_email", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+open-graph-protocol-tools.php:259
+  - RETRIEVAL call to get_option("avatar_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+open-graph-protocol-tools.php:260
+  - RETRIEVAL call to get_the_author_meta("user_email", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+open-graph-protocol-tools.php:260
+  - RETRIEVAL call to get_option("avatar_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents(dirname() . "/sample_code.txt") - {'file'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option($key) - {'option'}
+	WordPressRetrievalDetector.get_option(OGPT_SETTINGS_KEY_FB_APP_ID) - {'option'}
+	WordPressRetrievalDetector.get_option("avatar_default") - {'option'}
+	WordPressRetrievalDetector.get_option(OGPT_SETTINGS_KEY_TWITTER_SITE) - {'option'}
+	WordPressRetrievalDetector.get_option(OGPT_SETTINGS_KEY_FB_ADMINS) - {'option'}
+	WordPressRetrievalDetector.get_option("avatar_default") - {'option'}
+post
+	WordPressRetrievalDetector.get_post($post_id) - {'post_meta', 'wp_post', 'post'}
+post_meta
+	WordPressRetrievalDetector.get_post($post_id) - {'post_meta', 'wp_post', 'post'}
+user_meta
+	WordPressRetrievalDetector.get_the_author_meta("twitter", $post->post_author) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("login", $data->post_author) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("display_name", $data->post_author) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("first_name", $data->post_author) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("user_description", $data->post_author) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("user_email", $data->post_author) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("last_name", $data->post_author) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("user_email", $data->post_author) - {'user_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($post_id) - {'post_meta', 'wp_post', 'post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.500524.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.151301.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 36 nodes as PERSONAL
+In total, tainted 36 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 2 nodes as ENCRYPTED
+In total, tainted 2 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.875699.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:26.269584!
+MD5 called with parameters [trim, user_email, post_author, data, get_the_author_meta, strtolower]. Ignore if [trim, user_email, post_author, data, get_the_author_meta, strtolower] does not contain personal information.,md5,None
+MD5 called with parameters [trim, user_email, post_author, data, get_the_author_meta, strtolower]. Ignore if [trim, user_email, post_author, data, get_the_author_meta, strtolower] does not contain personal information.,md5,None
+RETRIEVAL call to file_get_contents(dirname() . "/sample_code.txt").,None,None
+RETRIEVAL call to get_option(OGPT_SETTINGS_KEY_FB_APP_ID) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(OGPT_SETTINGS_KEY_FB_ADMINS) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(OGPT_SETTINGS_KEY_TWITTER_SITE) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($post_id) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_the_author_meta("display_name", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta("login", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta("first_name", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta("last_name", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta("user_description", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta("user_email", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_option("avatar_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_the_author_meta("user_email", $data->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_option("avatar_default") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_the_author_meta("twitter", $post->post_author) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

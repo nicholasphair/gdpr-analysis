@@ -1,0 +1,370 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on simple-testimonials
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.452333.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.886099.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.541122.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.800247.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 159 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.157601.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.902152.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.122977.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 65 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.405025.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1317
+Added 1093 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1476
+Added 159 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.092559.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-testimonials/pixelovely_testimonial.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.195587.
+
+1000 PHP_REACHES edges created
+1317 PHP_REACHES edges created
+159 PHP_REACHES edges created
+1476 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 470 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.074194.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.965425.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 15 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.236865.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 14 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.162980.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.032118.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.268094.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010970.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.042394.
+
+29 PHP_REACHES edges created
+29 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 15 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.151126.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.103202.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'simple_testimonials_create_html($numberOfQuotes, $limit, $category)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("num_display")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("num_display")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("num_display")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("length")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("length")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("length")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="pix_simple_testimonial_pagemeta_noncename" id="pix_simple_testimonial_pagemeta_noncename" value="wp_create_nonce(plugin_basename())" /'' cannot be parsed correct.
+HTML code '$'<label for=\'$option_optionname\'>$option_name</label>'' cannot be parsed correct.
+HTML code '$'<p>$option_name</p>'' cannot be parsed correct.
+HTML code '$'<input type=\'text\' name=\'$option_optionname\' id=\'$option_optionname\' value=\'get_post_meta($post->ID, $option["optionname"], true)\'>'' cannot be parsed correct.
+HTML code '$'<textarea name=\'$option_optionname\' id=\'$option_optionname\' style=\'width: 95%; height: 150px;\'>get_post_meta($post->ID, $option["optionname"], true)</textarea>'' cannot be parsed correct.
+HTML code '$'<input type=\'checkbox\' name=\'$option_optionname\' id=\'$option_optionname\' value=\'1\''' cannot be parsed correct.
+HTML code '$'<p style=\'clear: both; font-size: .9em; font-style: italic; margin: 0px;\'>$option_description</p>'' cannot be parsed correct.
+HTML code '$'<span class=\'readmore\'><a href=\'$instance_readmore\'>Read more</a></span>'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("category")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("category")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("category")'' cannot be parsed correct.
+HTML code '$'<option value=\'$cat\''' cannot be parsed correct.
+HTML code '$'>$cat</option>'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("readmore")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("readmore")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("readmore")'' cannot be parsed correct.
+HTML code '$'$instance_readmore'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_titleapply_filters("widget_title", $instance["title"])$after_title'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'All'' cannot be parsed correct.
+HTML code '$'<table style=\'width: 100%;\'>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td style=\'width: 10%; vertical-align: top; font-weight: bold; text-align: right; padding-right: 10px;\'>'' cannot be parsed correct.
+HTML code '$'</td><td style=\'width: 90%\'>'' cannot be parsed correct.
+HTML code '$' checked'' cannot be parsed correct.
+HTML code '$'></p>'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'</td></tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:07.328029.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047927.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 2 do_action/apply_filters calls and 8 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.504092.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running PHPStorageDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running SqliteDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running SqlServerDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+pixelovely_testimonial.php:123
+  - RETRIEVAL call to get_post_meta($post->ID, $option["optionname"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+pixelovely_testimonial.php:219
+  - RETRIEVAL call to get_post_meta($post->ID, $key, FALSE) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+pixelovely_testimonial.php:250
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+pixelovely_testimonial.php:257
+  - RETRIEVAL call to get_post_meta($post->ID, "_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+pixelovely_testimonial.php:259
+  - RETRIEVAL call to get_post_meta($post->ID, "_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+pixelovely_testimonial.php:262
+  - RETRIEVAL call to get_post_meta($post->ID, "_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+pixelovely_testimonial.php:267
+  - RETRIEVAL call to get_post_meta($post->ID, "post_title", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta 
+
+pixelovely_testimonial.php:220
+  - STORAGE call to update_post_meta($post->ID, $key, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+pixelovely_testimonial.php:222
+  - STORAGE call to add_post_meta($post->ID, $key, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+pixelovely_testimonial.php:224
+  - STORAGE call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+pixelovely_testimonial.php:224
+  - DELETION call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+By data type:
+none
+	WordPressRetrievalDetector.get_posts($args) - set()
+post_meta
+	WordPressStorageDetector.delete_post_meta($post->ID, $key) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_quote", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_quote", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $key, FALSE) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "post_title", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $option["optionname"], true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, $key, $value) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_quote", true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post->ID, $key, $value) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post->ID, $key) - {'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.681498.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 18 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.114468.
+
+18 STORE_REACHES edges created
+18 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006127.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:32.119973!
+DELETION call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $option["optionname"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $key, FALSE) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "post_title", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+STORAGE call to update_post_meta($post->ID, $key, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to add_post_meta($post->ID, $key, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

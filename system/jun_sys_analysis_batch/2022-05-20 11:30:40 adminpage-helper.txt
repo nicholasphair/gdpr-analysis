@@ -1,0 +1,515 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on adminpage-helper
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.417289.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.178330.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 10 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.361228.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.668982.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 821 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.106994.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.680698.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.112098.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 258 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.845101.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 4171
+Added 3081 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4171
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.682260.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/adminpage-helper/admin_helper.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.201869.
+
+10 PHP_REACHES edges created
+1 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4160 PHP_REACHES edges created
+4171 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1458 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.091154.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.012480.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 68 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.442767.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 12 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.144305.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.046515.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.638253.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008844.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.033737.
+
+80 PHP_REACHES edges created
+80 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 74 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.109859.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.168188.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div class="wrap">
+    		<h2>$title</h2>
+    		<h5>$info</h5>
+    		<p>$description</p>
+			<p><form name=$name" action="$action" method="post" id="$name">
+			<fieldset>
+    			<div class="UserOption">
+   					<input type="hidden" name="page" value="$name" /'' cannot be parsed correct.
+HTML code '$'<div class="field_wrapper form-field">'' cannot be parsed correct.
+HTML code '$'	<th>$col</th>'' cannot be parsed correct.
+HTML code '$'	<td>$td</td>'' cannot be parsed correct.
+HTML code '$'	<th>$col</th>'' cannot be parsed correct.
+HTML code '$'
+    </fieldset>
+    submit_button()	
+    </form>
+    </p>
+</div>
+  '' cannot be parsed correct.
+HTML code '$'$which'' cannot be parsed correct.
+HTML code '$'<table class="wp-list-table widefat fixed users" cellspacing="0">
+		<thead>
+			<tr>'' cannot be parsed correct.
+HTML code '$'		</thead>
+		<tbody>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'			</tbody>
+				<tfoot>'' cannot be parsed correct.
+HTML code '$'</tfoot>
+	     </table>'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript">
+	function ChangeColor(id,color) {
+		jQuery(id).css("background-color","#"+color);
+	}
+	jQuery(document).ready(function(){
+                jQuery(".datepicker").datepicker({ dateFormat: "dd-mm-yy" });
+	});
+        tinyMCE.init({
+            mode : "textareas",
+            language : "en"
+        });
+	</script>'' cannot be parsed correct.
+HTML code '$' enctype="multipart/form-data"'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.121118.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.049339.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 4 do_action/apply_filters calls and 19 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.369779.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running FrontBaseDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running CubridDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MongoDbDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PhpVarDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+admin_helper.php:17
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin_helper.php:260
+  - RETRIEVAL call to get_option($name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin_helper.php:262
+  - RETRIEVAL call to get_option($name, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin_helper.php:272
+  - RETRIEVAL call to get_post_meta($id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin_helper.php:397
+  - RETRIEVAL call to get_option($name, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin_helper.php:407
+  - RETRIEVAL call to get_option($name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin_helper.php:413
+  - RETRIEVAL call to get_option($name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin_helper.php:431
+  - RETRIEVAL call to get_option("admin_debug", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin_helper.php:447
+  - RETRIEVAL call to get_post_meta($id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin_helper.php:456
+  - RETRIEVAL call to get_option($name, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin_helper.php:545
+  - RETRIEVAL call to get_option($name, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin_helper.php:562
+  - RETRIEVAL call to get_option($name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin_helper.php:641
+  - RETRIEVAL call to get_post_meta($post->ID, $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin_helper.php:648
+  - RETRIEVAL call to get_post_meta($post->ID, $name . "_option", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin_helper.php:703
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+admin_helper.php:745
+  - RETRIEVAL call to get_post_meta($post_id, $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin_helper.php:763
+  - RETRIEVAL call to get_post_meta($postarr["ID"], $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin_helper.php:777
+  - RETRIEVAL call to get_post_meta($post->ID, $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin_helper.php:879
+  - RETRIEVAL call to get_option("admin_debug", "-") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin_helper.php:1067
+  - RETRIEVAL call to get_post($item["ID"]) alters data types {'post_meta', 'post', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post_meta, post, wp_post
+admin_helper.php:1210
+  - RETRIEVAL call to get_posts($query_array). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]). 
+
+admin_helper.php:22
+  - STORAGE call to update_option("active_plugins", $active_plugins) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin_helper.php:263
+  - STORAGE call to update_option($name, $val) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin_helper.php:265
+  - STORAGE call to add_option($name, $val, "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin_helper.php:273
+  - STORAGE call to add_post_meta($id, $name, $value, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+admin_helper.php:275
+  - STORAGE call to update_post_meta($id, $name, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+admin_helper.php:280
+  - STORAGE call to add_post_meta($id, $name, $value, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+admin_helper.php:398
+  - STORAGE call to update_option($name, $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin_helper.php:400
+  - STORAGE call to add_option($name, $data, "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin_helper.php:433
+  - STORAGE call to update_option("admin_debug", $md) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin_helper.php:438
+  - STORAGE call to delete_option("admin_debug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+admin_helper.php:448
+  - STORAGE call to add_post_meta($id, $name, $value, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+admin_helper.php:450
+  - STORAGE call to update_post_meta($id, $name, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+admin_helper.php:459
+  - STORAGE call to update_option($name, $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin_helper.php:546
+  - STORAGE call to update_option($name, $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin_helper.php:548
+  - STORAGE call to add_option($name, $data, "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+admin_helper.php:438
+  - DELETION call to delete_option("admin_debug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+admin_helper.php:706
+  - DELETION call to wp_delete_attachment($atta->post_id) alters data types {'attachment', 'attachment_meta'}. Passed arguments: 0: $post_id (int). Returns (WP_Post|false|null).
+  - Data types: attachment, attachment_meta 
+
+By data type:
+attachment
+	DeletionDetector.wp_delete_attachment($atta->post_id) - {'attachment', 'attachment_meta'}
+attachment_meta
+	DeletionDetector.wp_delete_attachment($atta->post_id) - {'attachment', 'attachment_meta'}
+none
+	WordPressRetrievalDetector.get_posts($query_array) - set()
+	WordPressRetrievalDetector.get_posts($args) - set()
+option
+	WordPressRetrievalDetector.get_option($name) - {'option'}
+	WordPressRetrievalDetector.get_option($name) - {'option'}
+	DeletionDetector.delete_option("admin_debug") - {'option'}
+	WordPressStorageDetector.update_option($name, $data) - {'option'}
+	WordPressStorageDetector.update_option($name, $val) - {'option'}
+	WordPressRetrievalDetector.get_option($name, "") - {'option'}
+	WordPressRetrievalDetector.get_option($name, "") - {'option'}
+	WordPressStorageDetector.add_option($name, $val, "", true) - {'option'}
+	WordPressStorageDetector.delete_option("admin_debug") - {'option'}
+	WordPressStorageDetector.update_option($name, $data) - {'option'}
+	WordPressStorageDetector.update_option($name, $data) - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressRetrievalDetector.get_option("admin_debug", "-") - {'option'}
+	WordPressStorageDetector.add_option($name, $data, "", true) - {'option'}
+	WordPressStorageDetector.update_option("active_plugins", $active_plugins) - {'option'}
+	WordPressRetrievalDetector.get_option("admin_debug", []) - {'option'}
+	WordPressStorageDetector.update_option("admin_debug", $md) - {'option'}
+	WordPressStorageDetector.add_option($name, $data, "", true) - {'option'}
+	WordPressRetrievalDetector.get_option($name, "") - {'option'}
+	WordPressRetrievalDetector.get_option($name, "") - {'option'}
+	WordPressRetrievalDetector.get_option($name) - {'option'}
+	WordPressRetrievalDetector.get_option($name) - {'option'}
+post
+	WordPressRetrievalDetector.get_post($item["ID"]) - {'post_meta', 'post', 'wp_post'}
+post_meta
+	WordPressStorageDetector.update_post_meta($id, $name, $value) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($item["ID"]) - {'post_meta', 'post', 'wp_post'}
+	WordPressStorageDetector.add_post_meta($id, $name, $value, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id, $name) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $name, true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($id, $name, $value, true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($id, $name, $value, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, $name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id, $name) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $name, true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($id, $name, $value) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $name . "_option", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($postarr["ID"], $name, true) - {'post_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($item["ID"]) - {'post_meta', 'post', 'wp_post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.866934.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 150 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.219777.
+
+150 STORE_REACHES edges created
+150 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005183.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:38.319424!
+DELETION call to delete_option("admin_debug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to wp_delete_attachment($atta->post_id) alters data types {'attachment', 'attachment_meta'}. Passed arguments: 0: $post_id (int). Returns (WP_Post|false|null).,None,None
+RETRIEVAL call to get_post($item["ID"]) alters data types {'post_meta', 'post', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_posts($query_array). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($name, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($name, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option($name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("admin_debug", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($id, $name) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($name, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option($name, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option($name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $name . "_option", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($post_id, $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($postarr["ID"], $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("admin_debug", "-") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+STORAGE call to update_option("active_plugins", $active_plugins) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($name, $val) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option($name, $val, "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_post_meta($id, $name, $value, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to update_post_meta($id, $name, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to add_post_meta($id, $name, $value, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to update_option($name, $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option($name, $data, "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("admin_debug", $md) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("admin_debug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_post_meta($id, $name, $value, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to update_post_meta($id, $name, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_option($name, $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($name, $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option($name, $data, "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

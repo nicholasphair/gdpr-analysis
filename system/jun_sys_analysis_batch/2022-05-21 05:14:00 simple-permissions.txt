@@ -1,0 +1,578 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on simple-permissions
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.295979.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.950515.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 7 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.321497.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.462236.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 573 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.970482.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.545527.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.090856.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 175 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.738862.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3084
+Added 2329 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3084
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.172478.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-permissions/simple-permissions.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.171404.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3084 PHP_REACHES edges created
+3084 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1100 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.118496.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.418822.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 26 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.103642.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 31 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.157582.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.016866.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.273792.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.013932.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035572.
+
+57 PHP_REACHES edges created
+57 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 46 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.137405.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+DELETE FROM $wpdb WHERE meta_key IN ('simplePermissions_readGroupIDs', 'simplePermissions_writeGroupIDs')
+SQL command (DELETE FROM $wpdb WHERE meta_key IN ('simplePermissions_readGroupIDs', 'simplePermissions_writeGroupIDs')) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [271]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.536236.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<li><input type=\'checkbox\' name=\'simplePermissionsLimitCats[]\' value=\'$cat_term_id\' checked /><strong>'' cannot be parsed correct.
+HTML code '$'$cat_name</strong>'' cannot be parsed correct.
+HTML code '$'get_userdata($group["members"][$i])_user_login, '' cannot be parsed correct.
+HTML code '$' more'' cannot be parsed correct.
+HTML code '$'$member'' cannot be parsed correct.
+HTML code '$'</td><td style=\'padding: 3px;\'><a href=\'$_SERVER_REQUEST_URI&spEditGroup=$group_id\'>Edit</a></td><td style=\'padding: 3px;\'><a href=\'$_SERVER_REQUEST_URI&spDeleteGroup=$group_id\'>Delete</a></td></tr>
+'' cannot be parsed correct.
+HTML code '$'	<tr><td colspan=4 style=\'padding: 3px;\'><a href=\'$_SERVER_REQUEST_URI&spEditGroup=new\'>New Group</a></td></tr>
+'' cannot be parsed correct.
+HTML code '$'<input id=\'simplePermissionsRedirectPageID\' type=\'text\' name=\'simplePermissionsRedirectPageID\' value=\'$devOptions_redirectPageID\' style=\'width: 100px;\'>
+'' cannot be parsed correct.
+HTML code '$'	<option value=\'administrator\' selected>Administrators</option>
+'' cannot be parsed correct.
+HTML code '$'	<option value=\'editor\' selected>Editors</option>
+'' cannot be parsed correct.
+HTML code '$'	<option value=\'author\' selected>Authors</option>
+'' cannot be parsed correct.
+HTML code '$'	<option value=\'contributor\' selected>Contributors</option>
+'' cannot be parsed correct.
+HTML code '$'<input type=\'button\' onclick=\'location.href="htts://$_SERVER_SERVER_NAME$_SERVER_REQUEST_URI&spDeleteItAll=1"\' name=\'simplePermissionsDeleteItAll\' value=\'Delete It All\''' cannot be parsed correct.
+HTML code '$'<input type=\'text\' style=\'width: 250px;\' name=\'simplePermissionsNewGroupName\' value=\'$this->spGetAdminOptions()_groups_$_GET_spEditGroup_name\'>
+'' cannot be parsed correct.
+HTML code '$'<input type=\'hidden\' name=\'simplePermissionsOldGroupName\' value=\'$this->spGetAdminOptions()_groups_$_GET_spEditGroup_name\'>
+'' cannot be parsed correct.
+HTML code '$'<input type=\'hidden\' name=\'simplePermissionsGroupID\' value=\'$this->spGetNextGroupID()$_GET_spEditGroup\'>
+'' cannot be parsed correct.
+HTML code '$'$member
+'' cannot be parsed correct.
+HTML code '$'<p>Clicking the button below will delete the group named $this->spGetAdminOptions()_groups_$_GET_spDeleteGroup_name". Are you sure you want to delete this group?</p>'' cannot be parsed correct.
+HTML code '$'<input type=\'hidden\' name=\'spDeleteGroupConfirmed\' value=\'$_GET_spDeleteGroup\'>
+'' cannot be parsed correct.
+HTML code '$'<div class=\'updated\'><p><strong>Settings where deleted, but post permissions were NOT reset.</strong></p><p>You can try again or run this sql manually.</p><pre>DELETE FROM $wpdb WHERE meta_key IN (\'simplePermissions_readGroupIDs\', \'simplePermissions_writeGroupIDs\')</pre></div>
+'' cannot be parsed correct.
+HTML code '$'spDelArgFromURL($_SERVER["REQUEST_URI"], ["spDeleteGroup", "spEditGroup"])'' cannot be parsed correct.
+HTML code '$'	<tr><td colspan=4 style=\'padding: 3px;\'><a href=\'$_SERVER_REQUEST_URI&spEditGroup=new\'>New Group</a></td></tr>
+'' cannot be parsed correct.
+HTML code '$'	<tr><td style=\'padding: 3px;\'><strong>$group_name</strong></td><td style=\'padding: 3px;\'>'' cannot be parsed correct.
+HTML code '$'			<tr><td style=\'padding: 3px; max-width: 200px; word-break: break-all;\'>$group_name</td><td><input type=\'checkbox\' name=\'simplePermissions_grp_$group_id_read\' id=\'simplePermissions_grp_$group_id_read\' class=\'sp_readCheckbox\' onclick=\'sp_handleCheckboxClick(this);\' checked style=\'margin-left: 15px;\'></td>'' cannot be parsed correct.
+HTML code '$'<td><input type=\'checkbox\' name=\'simplePermissions_grp_$group_id_write\' id=\'simplePermissions_grp_$group_id_write\' class=\'sp_writeCheckbox\' onclick=\'sp_handleCheckboxClick(this);\'  checked style=\'margin-left: 15px;\'></td></tr>
+'' cannot be parsed correct.
+HTML code '$'			<tr><td style=\'padding: 3px; max-width: 200px; word-break: break-all;\'>$group_name</td><td><input type=\'checkbox\' name=\'simplePermissions_grp_$group_id_read\' id=\'simplePermissions_grp_$group_id_read\' class=\'sp_readCheckbox\' onclick=\'sp_handleCheckboxClick(this);\' checked style=\'margin-left: 15px;\'></td>'' cannot be parsed correct.
+HTML code '$'			<tr><td style=\'padding: 3px; max-width: 200px; word-break: break-all;\'>$group_name</td><td><input type=\'checkbox\' name=\'simplePermissions_grp_$group_id_read\' id=\'simplePermissions_grp_$group_id_read\' class=\'sp_readCheckbox\' onclick=\'sp_handleCheckboxClick(this);\' checked style=\'margin-left: 15px;\'></td>'' cannot be parsed correct.
+HTML code '$'blocknone'' cannot be parsed correct.
+HTML code '$'blocknone'' cannot be parsed correct.
+HTML code '$'blocknone'' cannot be parsed correct.
+HTML code '$'	'' cannot be parsed correct.
+HTML code '$'<ul>
+'' cannot be parsed correct.
+HTML code '$'	'' cannot be parsed correct.
+HTML code '$'-&nbsp;'' cannot be parsed correct.
+HTML code '$'	'' cannot be parsed correct.
+HTML code '$'</li>
+'' cannot be parsed correct.
+HTML code '$'	'' cannot be parsed correct.
+HTML code '$'</ul>
+'' cannot be parsed correct.
+HTML code '$'<div class=\'updated\'><p><strong>All settings and all post permissions deleted.</strong></p></div>
+'' cannot be parsed correct.
+HTML code '$', '' cannot be parsed correct.
+HTML code '$'</tbody>
+'' cannot be parsed correct.
+HTML code '$'</table>
+'' cannot be parsed correct.
+HTML code '$'<h2>Redirect page</h2>
+'' cannot be parsed correct.
+HTML code '$'<p>This is the page/post ID of the page/post users will be redirected to when they don\'t have permission to view a page.</p>
+'' cannot be parsed correct.
+HTML code '$'<br>
+'' cannot be parsed correct.
+HTML code '$'<h2>Limit permission changes</h2>
+'' cannot be parsed correct.
+HTML code '$'<p>By default, anyone who can edit a post can change the permissions. Choose another role here to limit changes to users who have that role or higher.</p>
+'' cannot be parsed correct.
+HTML code '$'<select id=\'simplePermissionsAllowedRole\' name=\'simplePermissionsAllowedRole\'>
+'' cannot be parsed correct.
+HTML code '$'</select>
+'' cannot be parsed correct.
+HTML code '$'<br><br>
+'' cannot be parsed correct.
+HTML code '$'<input type=\'submit\' value=\'Save\'>
+'' cannot be parsed correct.
+HTML code '$'<br><br>
+'' cannot be parsed correct.
+HTML code '$'<h2>Delete everything</h2>
+'' cannot be parsed correct.
+HTML code '$'<p>In some cases you may wish to delete all settings and saved permissions. The button below will do this.</p>
+'' cannot be parsed correct.
+HTML code '$'<p>Deactivating or removing this plugin does not remove settings and permissions from the database, so if you want to clean things up, this is the way to do it.</p>
+'' cannot be parsed correct.
+HTML code '$'<p>It should really be understood that this is a last resort button. You will need to reset ALL permissions afterwords!</p>
+'' cannot be parsed correct.
+HTML code '$'<h2>Group Name</h2>
+'' cannot be parsed correct.
+HTML code '$'<h2>Members</h2>
+'' cannot be parsed correct.
+HTML code '$'<p>One username per line.</p>
+'' cannot be parsed correct.
+HTML code '$'<textarea rows=10 cols=25 spellcheck=\'false\' name=\'simplePermissionsGroupMembers\'>
+'' cannot be parsed correct.
+HTML code '$'</textarea>
+'' cannot be parsed correct.
+HTML code '$'<br><br>
+'' cannot be parsed correct.
+HTML code '$'<h2>Prevent posting in these categories</h2>
+'' cannot be parsed correct.
+HTML code '$'<br><br>
+'' cannot be parsed correct.
+HTML code '$'<input type=\'submit\' value=\'Save\'>
+'' cannot be parsed correct.
+HTML code '$'<h2>Confirm Group Delete</h2>
+'' cannot be parsed correct.
+HTML code '$'<input type=\'submit\' value=\'Delete\'>
+'' cannot be parsed correct.
+HTML code '$'<div class=\'updated\'><p><strong>Settings Updated.</strong></p></div>
+'' cannot be parsed correct.
+HTML code '$'<div class=\'error\'><p><strong>Settings failed to update.</strong></p></div>
+'' cannot be parsed correct.
+HTML code '$'<h2>Groups<h2>
+'' cannot be parsed correct.
+HTML code '$'<table id=\'simplePermissionsGroupsTable\' border=1 style=\'border-collapse: collapse; border: 1px solid black;\'>
+'' cannot be parsed correct.
+HTML code '$'<thead style=\'background: lightgray;\'>
+'' cannot be parsed correct.
+HTML code '$'	<tr><th style=\'padding: 3px;\'>Name</th><th style=\'padding: 3px;\'>Members</th><th colspan=2 style=\'padding: 3px;\'>Options</th></tr>
+'' cannot be parsed correct.
+HTML code '$'</thead>
+'' cannot be parsed correct.
+HTML code '$'<tbody>
+'' cannot be parsed correct.
+HTML code '$'Everyone, logged in or not</td><td style=\'padding: 3px;\'></td><td style=\'padding: 3px;\'></td></tr>
+'' cannot be parsed correct.
+HTML code '$'All logged in users</td><td style=\'padding: 3px;\'></td><td style=\'padding: 3px;\'></td></tr>
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:08.809824.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.044242.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 2 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.527875.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PostgreSQLDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running maxdbDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running VariableDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+simple-permissions.php:48
+  - RETRIEVAL call to get_option($this->adminOptionsName) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+simple-permissions.php:132
+  - RETRIEVAL call to get_post_meta($post_id, "simplePermissions_readGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+simple-permissions.php:133
+  - RETRIEVAL call to get_post_meta($post_id, "simplePermissions_writeGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+simple-permissions.php:194
+  - RETRIEVAL call to get_post($args[2]) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+simple-permissions.php:266
+  - RETRIEVAL call to get_post($redirectID) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+simple-permissions.php:270
+  - RETRIEVAL call to get_post($devOptions["redirectPageID"]) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+simple-permissions.php:272
+  - RETRIEVAL call to get_post($postid) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+simple-permissions.php:302
+  - RETRIEVAL call to get_post($devOptions["redirectPageID"]) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+simple-permissions.php:316
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+simple-permissions.php:337
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+simple-permissions.php:349
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+simple-permissions.php:424
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+simple-permissions.php:484
+  - RETRIEVAL call to get_user_by("login", $member) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user, user_meta
+simple-permissions.php:581
+  - RETRIEVAL call to get_userdata($group["members"][$i]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+simple-permissions.php:593
+  - RETRIEVAL call to get_userdata($member) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+simple-permissions.php:644
+  - RETRIEVAL call to get_userdata($member) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+simple-permissions.php:746
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta 
+
+simple-permissions.php:54
+  - STORAGE call to update_option($this->adminOptionsName, $simplePermissionsAdminOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+simple-permissions.php:74
+  - STORAGE call to update_option($this->adminOptionsName, $simplePermissionsAdminOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+simple-permissions.php:116
+  - STORAGE call to delete_post_meta($post_id, "simplePermissions_readGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+simple-permissions.php:117
+  - STORAGE call to delete_post_meta($post_id, "simplePermissions_writeGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+simple-permissions.php:119
+  - STORAGE call to add_post_meta($post_id, "simplePermissions_readGroupIDs", $group) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+simple-permissions.php:122
+  - STORAGE call to add_post_meta($post_id, "simplePermissions_writeGroupIDs", $group) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+simple-permissions.php:518
+  - STORAGE call to update_option($this->adminOptionsName, $devOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+simple-permissions.php:116
+  - DELETION call to delete_post_meta($post_id, "simplePermissions_readGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+simple-permissions.php:117
+  - DELETION call to delete_post_meta($post_id, "simplePermissions_writeGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+By data type:
+option
+	WordPressStorageDetector.update_option($this->adminOptionsName, $devOptions) - {'option'}
+	WordPressStorageDetector.update_option($this->adminOptionsName, $simplePermissionsAdminOptions) - {'option'}
+	WordPressStorageDetector.update_option($this->adminOptionsName, $simplePermissionsAdminOptions) - {'option'}
+	WordPressRetrievalDetector.get_option($this->adminOptionsName) - {'option'}
+post
+	WordPressRetrievalDetector.get_post($devOptions["redirectPageID"]) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($devOptions["redirectPageID"]) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($redirectID) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($postid) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($args[2]) - {'post', 'post_meta', 'wp_post'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post_id, "simplePermissions_readGroupIDs") - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "simplePermissions_readGroupIDs", $group) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($devOptions["redirectPageID"]) - {'post', 'post_meta', 'wp_post'}
+	WordPressStorageDetector.add_post_meta($post_id, "simplePermissions_writeGroupIDs", $group) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($devOptions["redirectPageID"]) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "simplePermissions_writeGroupIDs") - {'post_meta'}
+	WordPressRetrievalDetector.get_post($redirectID) - {'post', 'post_meta', 'wp_post'}
+	DeletionDetector.delete_post_meta($post_id, "simplePermissions_writeGroupIDs") - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "simplePermissions_readGroupIDs") - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "simplePermissions_readGroupIDs") - {'post_meta'}
+	WordPressRetrievalDetector.get_post($postid) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($args[2]) - {'post', 'post_meta', 'wp_post'}
+	WordPressStorageDetector.delete_post_meta($post_id, "simplePermissions_writeGroupIDs") - {'post_meta'}
+user
+	WordPressRetrievalDetector.get_userdata($group["members"][$i]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($member) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("login", $member) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($member) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.get_userdata($group["members"][$i]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($member) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("login", $member) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($member) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($devOptions["redirectPageID"]) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($devOptions["redirectPageID"]) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($redirectID) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($postid) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($args[2]) - {'post', 'post_meta', 'wp_post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.821221.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 31 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.182034.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1450
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1553
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1610
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1995
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 3889
+31 STORE_REACHES edges created
+31 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 86 nodes as PERSONAL
+In total, tainted 86 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.453284.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:41.325907!
+DELETION call to delete_post_meta($post_id, "simplePermissions_readGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, "simplePermissions_writeGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+RETRIEVAL call to get_post_meta($post_id, "simplePermissions_readGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "simplePermissions_writeGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($args[2]) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post($redirectID) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post($devOptions["redirectPageID"]) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post($postid) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post($devOptions["redirectPageID"]) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option($this->adminOptionsName) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_by("login", $member) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_userdata($group["members"][$i]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_userdata($member) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_userdata($member) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+STORAGE call to delete_post_meta($post_id, "simplePermissions_readGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to delete_post_meta($post_id, "simplePermissions_writeGroupIDs") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to add_post_meta($post_id, "simplePermissions_readGroupIDs", $group) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to add_post_meta($post_id, "simplePermissions_writeGroupIDs", $group) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to update_option($this->adminOptionsName, $devOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->adminOptionsName, $simplePermissionsAdminOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->adminOptionsName, $simplePermissionsAdminOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

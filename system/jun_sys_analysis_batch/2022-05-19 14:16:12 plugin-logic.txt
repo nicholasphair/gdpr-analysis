@@ -1,0 +1,473 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on plugin-logic
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.381651.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.095283.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 8 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.395682.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.456662.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 840 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.094471.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 9 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.762150.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.100028.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 410 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:05.313246.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3886
+Added 2619 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3886
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.165499.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/plugin-logic/plugin-logic-fields.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/plugin-logic/plugin-logic.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.318057.
+
+848 PHP_REACHES edges created
+9 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3029 PHP_REACHES edges created
+3886 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1279 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.931620.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 4 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.137413.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 13 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.865009.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 20 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.150934.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.131516.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.138612.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009773.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.034274.
+
+4 CALLS edges created
+33 PHP_REACHES edges created
+37 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 29 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.121001.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+9 SQL operations to process.
+SELECT blog_id
+					FROM $wpdb
+					WHERE site_id = $wpdb
+					AND spam = '0'
+					AND deleted = '0'
+					AND archived = '0'
+SELECT blog_id
+					FROM $wpdb
+					WHERE site_id = $wpdb
+					AND spam = '0'
+					AND deleted = '0'
+					AND archived = '0'
+SQL command (SELECT blog_id FROM $wpdb WHERE site_id = $wpdb AND spam = '0' AND deleted = '0' AND archived = '0') cannot be parsed correct.
+SELECT * FROM PLULO_DBTABLE ORDER BY name ASC
+SQL command (SELECT * FROM PLULO_DBTABLE ORDER BY name ASC) cannot be parsed correct.
+SELECT * FROM PLULO_DBTABLE ORDER BY name ASC
+SQL command (SELECT * FROM PLULO_DBTABLE ORDER BY name ASC) cannot be parsed correct.
+SELECT * FROM PLULO_DBTABLE ORDER BY $order ASC
+SQL command (SELECT * FROM PLULO_DBTABLE ORDER BY $order ASC) cannot be parsed correct.
+SELECT * FROM PLULO_DBTABLE ORDER BY blog_id ASC
+SQL command (SELECT * FROM PLULO_DBTABLE ORDER BY blog_id ASC) cannot be parsed correct.
+SELECT * FROM PLULO_DBTABLE
+SQL command (SELECT * FROM PLULO_DBTABLE) cannot be parsed correct.
+SELECT * FROM PLULO_DBTABLE ORDER BY $order ASC
+SQL command (SELECT * FROM PLULO_DBTABLE ORDER BY $order ASC) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS PLULO_DBTABLE (
+					$blog_id_col
+					name VARCHAR(128) NOT NULL PRIMARY KEY,
+					on_dashboard tinyint(2) NOT NULL,
+					logic tinyint(2) NOT NULL,
+					urls longtext NOT NULL,
+					words longtext NOT NULL
+				) ;
+SQL command (CREATE TABLE IF NOT EXISTS PLULO_DBTABLE ( $blog_id_col name VARCHAR(128) NOT NULL PRIMARY KEY, on_dashboard tinyint(2) NOT NULL, logic tinyint(2) NOT NULL, urls longtext NOT NULL, words longtext NOT NULL ) ;) cannot be parsed correct.
+DROP TABLE IF EXISTS PLULO_DBTABLE
+SQL command (DROP TABLE IF EXISTS PLULO_DBTABLE) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1088, 345, 420, 2382, 3202, 3240, 5461, 5378, 5747]
+Added 0 SQL nodes. 0 out of 9 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.513764.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this_blog_range_0'' cannot be parsed correct.
+HTML code '$'$this_blog_range_1'' cannot be parsed correct.
+HTML code '$'$this_on_dash_columm'' cannot be parsed correct.
+HTML code '$'$this->write_rule_file($content)_0'' cannot be parsed correct.
+HTML code '$'</label>
+					<input name="plulo_start_blog" value="'' cannot be parsed correct.
+HTML code '$'" class="button-secondary"/>
+					<hr>
+					'' cannot be parsed correct.
+HTML code '$'					</p>
+				</form>
+			</div>
+			'' cannot be parsed correct.
+HTML code '$'" class="button-primary"/>
+					</div>
+				</form>
+			</div>
+			'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.034334.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.044950.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 10 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.541120.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running HashDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running OpenSSLDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running VariableDetector
+### Start running WordPressStorageDetector
+### Finish running PHPStorageDetector
+### Start running WP_UserDetector
+### Finish running UserInputDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running maxdbDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running MySQLiDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+plugin-logic.php:799
+  - STORAGE call to file_put_contents($rule_file, $rules).
+  - Data types: file
+plugin-logic.php:892
+  - STORAGE call to file_put_contents($tmp_rule_file, $write_error[1]).
+  - Data types: file 
+
+plugin-logic-fields.php:129
+  - RETRIEVAL call to get_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin-logic-fields.php:129
+  - RETRIEVAL call to get_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin-logic-fields.php:159
+  - RETRIEVAL call to get_option("active_plugins", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+plugin-logic-fields.php:217
+  - RETRIEVAL call to get_user_option("admin_color") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta
+plugin-logic-fields.php:316
+  - RETRIEVAL call to get_option("plulo_blog_range", [1, 10]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+plugin-logic.php:113
+  - RETRIEVAL call to get_option("plulo_on_dash_col", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+plugin-logic.php:115
+  - RETRIEVAL call to get_option("plulo_blog_range", [1, 10]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+plugin-logic.php:134
+  - RETRIEVAL call to get_option("plulo_blog_range") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin-logic.php:148
+  - RETRIEVAL call to get_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin-logic.php:191
+  - RETRIEVAL call to get_option("plulo_on_dash_col", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+plugin-logic.php:193
+  - RETRIEVAL call to get_option("plulo_blog_range", [1, 10]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+plugin-logic.php:220
+  - RETRIEVAL call to get_option("active_plugins", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option 
+
+plugin-logic.php:97
+  - STORAGE call to $screen->add_option("my_option", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+plugin-logic.php:135
+  - STORAGE call to update_option("plulo_blog_range", $this->blog_range) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+plugin-logic.php:137
+  - STORAGE call to add_option("plulo_blog_range", $this->blog_range, null, "") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+plugin-logic.php:149
+  - STORAGE call to update_option("plulo_on_dash_col", $this->on_dash_columm) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+plugin-logic.php:151
+  - STORAGE call to add_option("plulo_on_dash_col", $this->on_dash_columm, null, "") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+plugin-logic.php:932
+  - STORAGE call to delete_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+plugin-logic.php:933
+  - STORAGE call to delete_option("plulo_blog_range") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+plugin-logic-fields.php:176
+  - Data from table PLULO_DBTABLE deleted: "$wpdb->delete(PLULO_DBTABLE, ["name" => $db_pl->name])"
+plugin-logic.php:378
+  - Data from table PLULO_DBTABLE deleted: "$wpdb->delete(PLULO_DBTABLE, ["blog_id" => $selected_blog, "name" => $path])"
+plugin-logic.php:380
+  - Data from table PLULO_DBTABLE deleted: "$wpdb->delete(PLULO_DBTABLE, ["name" => $path])"
+plugin-logic.php:932
+  - DELETION call to delete_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+plugin-logic.php:933
+  - DELETION call to delete_option("plulo_blog_range") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.file_put_contents($rule_file, $rules) - {'file'}
+	PHPStorageDetector.file_put_contents($tmp_rule_file, $write_error[1]) - {'file'}
+none
+	DeletionDetector.$wpdb->delete(PLULO_DBTABLE, ["blog_id" => $selected_blog, "name" => $path]) - set()
+	DeletionDetector.$wpdb->delete(PLULO_DBTABLE, ["name" => $db_pl->name]) - set()
+	DeletionDetector.$wpdb->delete(PLULO_DBTABLE, ["name" => $path]) - set()
+option
+	WordPressStorageDetector.$screen->add_option("my_option", "") - {'option'}
+	DeletionDetector.delete_option("plulo_blog_range") - {'option'}
+	WordPressStorageDetector.update_option("plulo_on_dash_col", $this->on_dash_columm) - {'option'}
+	WordPressRetrievalDetector.get_option("plulo_blog_range", [1, 10]) - {'option'}
+	WordPressRetrievalDetector.get_option("plulo_on_dash_col") - {'option'}
+	WordPressRetrievalDetector.get_option("plulo_on_dash_col", "") - {'option'}
+	WordPressRetrievalDetector.get_option("plulo_on_dash_col") - {'option'}
+	WordPressRetrievalDetector.get_option("plulo_on_dash_col", "") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins", []) - {'option'}
+	WordPressRetrievalDetector.get_option("plulo_blog_range", [1, 10]) - {'option'}
+	WordPressStorageDetector.update_option("plulo_blog_range", $this->blog_range) - {'option'}
+	DeletionDetector.delete_option("plulo_on_dash_col") - {'option'}
+	WordPressRetrievalDetector.get_option("plulo_on_dash_col") - {'option'}
+	WordPressStorageDetector.delete_option("plulo_on_dash_col") - {'option'}
+	WordPressStorageDetector.add_option("plulo_blog_range", $this->blog_range, null, "") - {'option'}
+	WordPressStorageDetector.delete_option("plulo_blog_range") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins", []) - {'option'}
+	WordPressRetrievalDetector.get_option("plulo_blog_range", [1, 10]) - {'option'}
+	WordPressRetrievalDetector.get_option("plulo_blog_range") - {'option'}
+	WordPressStorageDetector.add_option("plulo_on_dash_col", $this->on_dash_columm, null, "") - {'option'}
+user_meta
+	WordPressRetrievalDetector.get_user_option("admin_color") - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.125764.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 77 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.140425.
+
+77 STORE_REACHES edges created
+77 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 1 nodes as PERSONAL
+In total, tainted 1 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.142871.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:36.853688!
+Data from table PLULO_DBTABLE deleted: "$wpdb->delete(PLULO_DBTABLE, ["name" => $db_pl->name])",None,None
+Data from table PLULO_DBTABLE deleted: "$wpdb->delete(PLULO_DBTABLE, ["blog_id" => $selected_blog, "name" => $path])",None,None
+Data from table PLULO_DBTABLE deleted: "$wpdb->delete(PLULO_DBTABLE, ["name" => $path])",None,None
+DELETION call to delete_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("plulo_blog_range") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to file_put_contents($rule_file, $rules).,None,None
+STORAGE call to file_put_contents($tmp_rule_file, $write_error[1]).,None,None
+RETRIEVAL call to get_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option("admin_color") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("plulo_blog_range", [1, 10]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("plulo_on_dash_col", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("plulo_blog_range", [1, 10]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("plulo_blog_range") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("plulo_on_dash_col", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("plulo_blog_range", [1, 10]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+STORAGE call to update_option("plulo_blog_range", $this->blog_range) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("plulo_blog_range", $this->blog_range, null, "") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("plulo_on_dash_col", $this->on_dash_columm) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("plulo_on_dash_col", $this->on_dash_columm, null, "") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("plulo_on_dash_col") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("plulo_blog_range") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to $screen->add_option("my_option", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

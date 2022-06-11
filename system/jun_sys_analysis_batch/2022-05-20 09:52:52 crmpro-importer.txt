@@ -1,0 +1,964 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on crmpro-importer
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.733208.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.071913.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 14 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.355005.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.604738.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 193 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.544478.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.450396.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.081052.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 92 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.765768.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1534
+Added 1234 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2413
+Added 879 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.997173.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/crmpro-importer/crm_importer.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/crmpro-importer/inc/page_import.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/crmpro-importer/inc/page_settings.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/crmpro-importer/inc/users_for_importing.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/crmpro-importer/inc/webservice_credentials_invalid.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/crmpro-importer/inc/webservice_credentials_not_set.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/crmpro-importer/inc/webservice_credentials_valid.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/crmpro-importer/lib/class.CPI_PLUGIN.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/crmpro-importer/lib/class.CPI_WEBSERVICE_REQUEST.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.952704.
+
+14 PHP_REACHES edges created
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1519 PHP_REACHES edges created
+879 PHP_REACHES edges created
+2413 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 590 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.190332.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:03.622834.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 18 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.450763.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 31 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.150781.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.395455.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.166955.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008615.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.032906.
+
+49 PHP_REACHES edges created
+49 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 46 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.137267.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.100723.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this->get_remaining_users_count()'' cannot be parsed correct.
+HTML code '$'$this->get_all_users_count()'' cannot be parsed correct.
+HTML code '$'sprintf("<li><label><input type=\\'checkbox\\' name=\\'cpi-user-roles[]\\' value=\\'%s\\' /><span> %s (<span>%s</span><span class=\\'cpi-import-all\\'>%s</span>)</span></label></li>", esc_attr($user_role), $user_role, $this->get_remaining_users_count($user_role), $this->get_all_users_count($user_role))'' cannot be parsed correct.
+HTML code '$'$this->get_remaining_users_count()'' cannot be parsed correct.
+HTML code '$'admin_url("tools.php?page=cpi-import")'' cannot be parsed correct.
+HTML code '$'json_encode($service_response)'' cannot be parsed correct.
+HTML code '$'json_encode($response)'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.616701.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047366.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.542446.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running FileProDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PasswordHashingDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPIncludedDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running maxdbDetector
+### Start running UserInputDetector
+### Finish running MySQLiDetector
+### Start running VariableDetector
+### Finish running PHPRetrievalDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running PropertyDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running VariableDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+lib/class.CPI_PLUGIN.php:241
+  - MD5 called with parameters [merged_data, cpi]. Ignore if [merged_data, cpi] does not contain personal information.
+lib/class.CPI_PLUGIN.php:442
+  - MD5 called with parameters [merged_data, cpi]. Ignore if [merged_data, cpi] does not contain personal information. 
+
+lib/class.CPI_WEBSERVICE_REQUEST.php:158
+  - RETRIEVAL call to file_get_contents($url).
+  - Data types: file 
+
+lib/class.CPI_PLUGIN.php:235
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:235
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:236
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:236
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:237
+  - object property '$userdata->user_email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.CPI_PLUGIN.php:355
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:355
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:356
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:356
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:357
+  - object property '$userdata->user_email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.CPI_PLUGIN.php:410
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:410
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:410
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:410
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:413
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:413
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:413
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:413
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:436
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:436
+  - object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.
+  - Data types: user, user_meta, first_name
+lib/class.CPI_PLUGIN.php:437
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:437
+  - object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.
+  - Data types: user, user_meta, last_name
+lib/class.CPI_PLUGIN.php:438
+  - object property '$userdata->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+lib/class.CPI_PLUGIN.php:411
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+lib/class.CPI_PLUGIN.php:413
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+lib/class.CPI_PLUGIN.php:418
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+lib/class.CPI_WEBSERVICE_REQUEST.php:69
+  - variable '$property_firstname' of personal types {'first_name'} is found.
+  - Data types: first_name
+lib/class.CPI_WEBSERVICE_REQUEST.php:70
+  - variable '$property_firstname' of personal types {'first_name'} is found.
+  - Data types: first_name
+lib/class.CPI_WEBSERVICE_REQUEST.php:71
+  - variable '$property_firstname' of personal types {'first_name'} is found.
+  - Data types: first_name
+lib/class.CPI_WEBSERVICE_REQUEST.php:72
+  - variable '$property_firstname' of personal types {'first_name'} is found.
+  - Data types: first_name
+lib/class.CPI_WEBSERVICE_REQUEST.php:76
+  - variable '$property_lastname' of personal types {'last_name'} is found.
+  - Data types: last_name
+lib/class.CPI_WEBSERVICE_REQUEST.php:77
+  - variable '$property_lastname' of personal types {'last_name'} is found.
+  - Data types: last_name
+lib/class.CPI_WEBSERVICE_REQUEST.php:78
+  - variable '$property_lastname' of personal types {'last_name'} is found.
+  - Data types: last_name
+lib/class.CPI_WEBSERVICE_REQUEST.php:79
+  - variable '$property_lastname' of personal types {'last_name'} is found.
+  - Data types: last_name
+lib/class.CPI_WEBSERVICE_REQUEST.php:83
+  - variable '$property_email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.CPI_WEBSERVICE_REQUEST.php:84
+  - variable '$property_email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.CPI_WEBSERVICE_REQUEST.php:85
+  - variable '$property_email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.CPI_WEBSERVICE_REQUEST.php:86
+  - variable '$property_email' of personal types {'email'} is found.
+  - Data types: email 
+
+inc/page_settings.php:12
+  - RETRIEVAL call to get_option("cpi_webservice_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+inc/page_settings.php:20
+  - RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:44
+  - RETRIEVAL call to get_option("cpi_webservice_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:45
+  - RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:127
+  - RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:129
+  - RETRIEVAL call to get_user_meta($user_id, "cpi_imported_" . $webservice_user_id, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:130
+  - RETRIEVAL call to get_user_meta($user_id, "cpi_updated", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:194
+  - RETRIEVAL call to get_option("cpi_webservice_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:195
+  - RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:219
+  - RETRIEVAL call to get_transient("cpi_webservice_access") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+lib/class.CPI_PLUGIN.php:219
+  - RETRIEVAL call to get_transient("cpi_webservice_access") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+lib/class.CPI_PLUGIN.php:226
+  - RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:230
+  - RETRIEVAL call to get_user_meta($user_id, "cpi_hash", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:231
+  - RETRIEVAL call to get_user_meta($user_id, "cpi_updated", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:232
+  - RETRIEVAL call to get_userdata($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+lib/class.CPI_PLUGIN.php:264
+  - RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:274
+  - RETRIEVAL call to get_users(["role" => $role, "meta_query" => [["key" => "cpi_imported_" . $webservice_user_id, "compare" => "NOT EXISTS"]]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).
+  - Data types: user, user_meta
+lib/class.CPI_PLUGIN.php:291
+  - RETRIEVAL call to get_users(["role" => $roles, "meta_query" => [["key" => "cpi_imported_" . $webservice_user_id, "compare" => "NOT EXISTS"]]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).
+  - Data types: user, user_meta
+lib/class.CPI_PLUGIN.php:323
+  - RETRIEVAL call to get_users(["role" => $role]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).
+  - Data types: user, user_meta
+lib/class.CPI_PLUGIN.php:334
+  - RETRIEVAL call to get_users(["role" => $roles]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).
+  - Data types: user, user_meta
+lib/class.CPI_PLUGIN.php:347
+  - RETRIEVAL call to get_option("cpi_webservice_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:348
+  - RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:352
+  - RETRIEVAL call to get_userdata($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+lib/class.CPI_PLUGIN.php:407
+  - RETRIEVAL call to get_userdata($user->ID) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+lib/class.CPI_PLUGIN.php:430
+  - RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:431
+  - RETRIEVAL call to get_user_meta($user_id, "cpi_hash", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:432
+  - RETRIEVAL call to get_user_meta($user_id, "cpi_updated", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:433
+  - RETRIEVAL call to get_userdata($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta 
+
+lib/class.CPI_PLUGIN.php:177
+  - STORAGE call to update_option("cpi_webservice_key", $webservice_key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:178
+  - STORAGE call to update_option("cpi_user_id", $webservice_user_id) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/class.CPI_PLUGIN.php:201
+  - STORAGE call to delete_transient("cpi_webservice_access") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+lib/class.CPI_PLUGIN.php:205
+  - STORAGE call to set_transient("cpi_webservice_access", "YES", 60 * 60 * 24) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+lib/class.CPI_PLUGIN.php:210
+  - STORAGE call to set_transient("cpi_webservice_access", "NO", 60 * 60 * 24) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+lib/class.CPI_PLUGIN.php:227
+  - STORAGE call to delete_user_meta($user_id, "cpi_updated ") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:228
+  - STORAGE call to add_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s"), true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:228
+  - STORAGE call to update_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s")) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:243
+  - STORAGE call to add_user_meta($user_id, "cpi_hash", $data_hash, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:243
+  - STORAGE call to update_user_meta($user_id, "cpi_hash", $data_hash) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:445
+  - STORAGE call to add_user_meta($user_id, "cpi_updated", 1, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:445
+  - STORAGE call to update_user_meta($user_id, "cpi_updated", 1) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:446
+  - STORAGE call to delete_user_meta($user_id, "cpi_imported_" . $webservice_user_id) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: user_meta 
+
+lib/class.CPI_PLUGIN.php:227
+  - DELETION call to delete_user_meta($user_id, "cpi_updated ") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: user_meta
+lib/class.CPI_PLUGIN.php:446
+  - DELETION call to delete_user_meta($user_id, "cpi_imported_" . $webservice_user_id) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: user_meta 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+file
+	PHPRetrievalDetector.file_get_contents($url) - {'file'}
+first_name
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+last_name
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressStorageDetector.update_option("cpi_user_id", $webservice_user_id) - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_user_id", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_user_id", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_webservice_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_user_id", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_webservice_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_webservice_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_user_id", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_user_id", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_webservice_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_user_id", "") - {'option'}
+	WordPressStorageDetector.update_option("cpi_webservice_key", $webservice_key) - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_user_id", "") - {'option'}
+	WordPressRetrievalDetector.get_option("cpi_user_id", "") - {'option'}
+site
+	WordPressStorageDetector.set_transient("cpi_webservice_access", "NO", 60 * 60 * 24) - {'site'}
+	WordPressStorageDetector.set_transient("cpi_webservice_access", "YES", 60 * 60 * 24) - {'site'}
+	WordPressStorageDetector.delete_transient("cpi_webservice_access") - {'site'}
+	WordPressRetrievalDetector.get_transient("cpi_webservice_access") - {'site'}
+	WordPressRetrievalDetector.get_transient("cpi_webservice_access") - {'site'}
+user
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	WordPressRetrievalDetector.get_users(["role" => $roles, "meta_query" => [["key" => "cpi_imported_" . $webservice_user_id, "compare" => "NOT EXISTS"]]]) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	WordPressRetrievalDetector.get_users(["role" => $role]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_users(["role" => $roles]) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	WordPressRetrievalDetector.get_users(["role" => $role, "meta_query" => [["key" => "cpi_imported_" . $webservice_user_id, "compare" => "NOT EXISTS"]]]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($user->ID) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+user_meta
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	DeletionDetector.delete_user_meta($user_id, "cpi_imported_" . $webservice_user_id) - {'user_meta'}
+	WordPressStorageDetector.delete_user_meta($user_id, "cpi_updated ") - {'user_meta'}
+	WordPressRetrievalDetector.get_user_meta($user_id, "cpi_updated", true) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	WordPressStorageDetector.add_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s"), true) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	WordPressRetrievalDetector.get_user_meta($user_id, "cpi_imported_" . $webservice_user_id, true) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	DeletionDetector.delete_user_meta($user_id, "cpi_updated ") - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	WordPressStorageDetector.delete_user_meta($user_id, "cpi_imported_" . $webservice_user_id) - {'user_meta'}
+	WordPressStorageDetector.update_user_meta($user_id, "cpi_updated", 1) - {'user_meta'}
+	WordPressRetrievalDetector.get_users(["role" => $roles, "meta_query" => [["key" => "cpi_imported_" . $webservice_user_id, "compare" => "NOT EXISTS"]]]) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	WordPressRetrievalDetector.get_users(["role" => $role]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_users(["role" => $roles]) - {'user', 'user_meta'}
+	WordPressStorageDetector.update_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s")) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	WordPressStorageDetector.add_user_meta($user_id, "cpi_updated", 1, true) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	WordPressRetrievalDetector.get_users(["role" => $role, "meta_query" => [["key" => "cpi_imported_" . $webservice_user_id, "compare" => "NOT EXISTS"]]]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_meta($user_id, "cpi_updated", true) - {'user_meta'}
+	WordPressRetrievalDetector.get_user_meta($user_id, "cpi_hash", true) - {'user_meta'}
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($user->ID) - {'user', 'user_meta'}
+	WordPressStorageDetector.update_user_meta($user_id, "cpi_hash", $data_hash) - {'user_meta'}
+	WordPressRetrievalDetector.get_user_meta($user_id, "cpi_hash", true) - {'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'last_name'}
+	WordPressStorageDetector.add_user_meta($user_id, "cpi_hash", $data_hash, true) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	WordPressRetrievalDetector.get_user_meta($user_id, "cpi_updated", true) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta', 'first_name'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.366389.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 142 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.391712.
+
+142 STORE_REACHES edges created
+142 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 187 nodes as PERSONAL
+In total, tainted 187 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 2 nodes as ENCRYPTED
+In total, tainted 2 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:05.235331.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:43.096935!
+DELETION call to delete_user_meta($user_id, "cpi_updated ") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_user_meta($user_id, "cpi_imported_" . $webservice_user_id) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).,None,None
+MD5 called with parameters [merged_data, cpi]. Ignore if [merged_data, cpi] does not contain personal information.,md5,None
+MD5 called with parameters [merged_data, cpi]. Ignore if [merged_data, cpi] does not contain personal information.,md5,None
+RETRIEVAL call to file_get_contents($url).,None,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_email' of personal types {'email'} is found.,,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_email' of personal types {'email'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_firstname' of personal types {'user', 'user_meta', 'first_name'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_lastname' of personal types {'user', 'user_meta', 'last_name'} is found.,,None
+object property '$userdata->user_email' of personal types {'email'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$property_firstname' of personal types {'first_name'} is found.,,None
+variable '$property_firstname' of personal types {'first_name'} is found.,,None
+variable '$property_firstname' of personal types {'first_name'} is found.,,None
+variable '$property_firstname' of personal types {'first_name'} is found.,,None
+variable '$property_lastname' of personal types {'last_name'} is found.,,None
+variable '$property_lastname' of personal types {'last_name'} is found.,,None
+variable '$property_lastname' of personal types {'last_name'} is found.,,None
+variable '$property_lastname' of personal types {'last_name'} is found.,,None
+variable '$property_email' of personal types {'email'} is found.,,None
+variable '$property_email' of personal types {'email'} is found.,,None
+variable '$property_email' of personal types {'email'} is found.,,None
+variable '$property_email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_option("cpi_webservice_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($user_id, "cpi_imported_" . $webservice_user_id, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($user_id, "cpi_updated", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cpi_webservice_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("cpi_webservice_access") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("cpi_webservice_access") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($user_id, "cpi_hash", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($user_id, "cpi_updated", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_userdata($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_users(["role" => $role, "meta_query" => [["key" => "cpi_imported_" . $webservice_user_id, "compare" => "NOT EXISTS"]]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).,None,None
+RETRIEVAL call to get_users(["role" => $roles, "meta_query" => [["key" => "cpi_imported_" . $webservice_user_id, "compare" => "NOT EXISTS"]]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).,None,None
+RETRIEVAL call to get_users(["role" => $role]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).,None,None
+RETRIEVAL call to get_users(["role" => $roles]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).,None,None
+RETRIEVAL call to get_option("cpi_webservice_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_userdata($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_userdata($user->ID) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($user_id, "cpi_hash", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($user_id, "cpi_updated", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_userdata($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("cpi_webservice_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cpi_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+STORAGE call to update_option("cpi_webservice_key", $webservice_key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("cpi_user_id", $webservice_user_id) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_transient("cpi_webservice_access") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to set_transient("cpi_webservice_access", "YES", 60 * 60 * 24) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to set_transient("cpi_webservice_access", "NO", 60 * 60 * 24) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to delete_user_meta($user_id, "cpi_updated ") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to add_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s"), true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to update_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s")) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_user_meta($user_id, "cpi_hash", $data_hash) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to add_user_meta($user_id, "cpi_hash", $data_hash, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to update_user_meta($user_id, "cpi_updated", 1) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to add_user_meta($user_id, "cpi_updated", 1, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to delete_user_meta($user_id, "cpi_imported_" . $webservice_user_id) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['user_meta']) stored through WordPress function "add_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s"), true)", found in file lib/class.CPI_PLUGIN.php at line 228. 
+
+[has_storage] PII of types (['user_meta']) stored through WordPress function "update_user_meta($user_id, "cpi_updated", 1)", found in file lib/class.CPI_PLUGIN.php at line 445. 
+
+[has_storage] PII of types (['user_meta']) stored through WordPress function "update_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s"))", found in file lib/class.CPI_PLUGIN.php at line 228. 
+
+[has_storage] PII of types (['user_meta']) stored through WordPress function "add_user_meta($user_id, "cpi_updated", 1, true)", found in file lib/class.CPI_PLUGIN.php at line 445. 
+
+[has_storage] PII of types (['last_name', 'user', 'user_meta', 'email', 'first_name']) stored through WordPress function "update_user_meta($user_id, "cpi_hash", $data_hash)", found in file lib/class.CPI_PLUGIN.php at line 243. 
+
+[has_storage] PII of types (['last_name', 'user', 'user_meta', 'email', 'first_name']) stored through WordPress function "add_user_meta($user_id, "cpi_hash", $data_hash, true)", found in file lib/class.CPI_PLUGIN.php at line 243. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through add_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s"), true) has deletion method delete_user_meta($user_id, "cpi_imported_" . $webservice_user_id). Storage method found in file lib/class.CPI_PLUGIN.php at line 228. Deletion method found in file lib/class.CPI_PLUGIN.php at line 446. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_user_meta($user_id, "cpi_updated", 1) does not have corresponding deletion method. Storage method found in file lib/class.CPI_PLUGIN.php at line 445. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_user_meta($user_id, "cpi_imported_" . $webservice_user_id, date("m/d/Y H:i:s")) has deletion method delete_user_meta($user_id, "cpi_imported_" . $webservice_user_id). Storage method found in file lib/class.CPI_PLUGIN.php at line 228. Deletion method found in file lib/class.CPI_PLUGIN.php at line 446. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through add_user_meta($user_id, "cpi_updated", 1, true) does not have corresponding deletion method. Storage method found in file lib/class.CPI_PLUGIN.php at line 445. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_user_meta($user_id, "cpi_hash", $data_hash) does not have corresponding deletion method. Storage method found in file lib/class.CPI_PLUGIN.php at line 243. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through add_user_meta($user_id, "cpi_hash", $data_hash, true) does not have corresponding deletion method. Storage method found in file lib/class.CPI_PLUGIN.php at line 243. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1128. Found in file lib/class.CPI_PLUGIN.php at line 228 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1983. Found in file lib/class.CPI_PLUGIN.php at line 445 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1146. Found in file lib/class.CPI_PLUGIN.php at line 228 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1972. Found in file lib/class.CPI_PLUGIN.php at line 445 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1260. Found in file lib/class.CPI_PLUGIN.php at line 243 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1248. Found in file lib/class.CPI_PLUGIN.php at line 243 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function crmpro-importer_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+    //TODO: Delete the user data that was stored using Wordpress functions
+
+    //Below is the sample code for deleting user meta and may need to be modified to suit the plugin.
+    $user_id = get_user_by('email', $email_address)
+    $key = 'email' //Sample user meta key
+    if ( $customer->user_id > 0 ) {
+        //Delete user meta data by $key
+        delete_user_meta( $user_id, $key );
+    }
+        
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'crmpro-importer' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function crmpro-importer_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'crmpro-importer' ),
+        'callback'             => 'crmpro-importer_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'crmpro-importer_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function crmpro-importer_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'crmpro-importer' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'crmpro-importer' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'crmpro-importer' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'crmpro-importer', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'crmpro-importer_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

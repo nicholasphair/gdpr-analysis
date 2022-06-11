@@ -1,0 +1,532 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on points
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.151793.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.110981.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 2 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.339744.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.489295.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 445 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.814001.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 34 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.945150.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.102827.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 287 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:05.877754.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3325
+Added 2557 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 13899
+Added 10574 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:02.000320.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/points/points.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/points/lib/core/class-points-admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/points/lib/core/class-points-database.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/points/lib/core/class-points.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/points/lib/core/class-points-shortcodes.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/points/lib/core/class-points-table.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/points/lib/core/class-points-widget-leaderboard.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/points/lib/core/constants.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/points/lib/ext/class-points-wordpress.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.951210.
+
+447 PHP_REACHES edges created
+34 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2844 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+10000 PHP_REACHES edges created
+10574 PHP_REACHES edges created
+13899 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1143 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.984948.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.867661.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 57 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.494411.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 34 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.170506.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.129626.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.501782.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012490.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.032313.
+
+91 PHP_REACHES edges created
+91 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 66 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.119715.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+7 SQL operations to process.
+SELECT * FROM  WHERE user_id = 'get_current_user_id()' ORDER BY $order_by $order LIMIT $offset ,$limit
+SQL command (SELECT * FROM WHERE user_id = 'get_current_user_id()' ORDER BY $order_by $order LIMIT $offset ,$limit) cannot be parsed correct.
+SELECT SUM(points) as total FROM  WHERE user_id = 'get_current_user_id()'  AND status = '$status'
+SQL command (SELECT SUM(points) as total FROM WHERE user_id = 'get_current_user_id()' AND status = '$status') cannot be parsed correct.
+SELECT SUM(points) as total, user_id FROM  GROUP BY user_id
+SQL command (SELECT SUM(points) as total, user_id FROM GROUP BY user_id) cannot be parsed correct.
+SELECT user_id FROM  GROUP BY user_id
+SQL command (SELECT user_id FROM GROUP BY user_id) cannot be parsed correct.
+SELECT * FROM  WHERE status != 'POINTS_STATUS_REMOVED' $order LIMIT 0 ,$limit
+SQL command (SELECT * FROM WHERE status != 'POINTS_STATUS_REMOVED' $order LIMIT 0 ,$limit) cannot be parsed correct.
+SELECT * FROM  WHERE point_id = 
+SQL command (SELECT * FROM WHERE point_id = ) cannot be parsed correct.
+$queries
+SQL command ($queries) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [3848, 3930, 4035, 4069, 4436, 4512, 5764]
+Added 0 SQL nodes. 0 out of 7 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.084298.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$notice'' cannot be parsed correct.
+HTML code '$'<div style="background-color: #ffffe0;border: 1px solid #993;padding: 1em;margin-right: 1em;"></div>'' cannot be parsed correct.
+HTML code '$'add_query_arg("action", "edit", $current_url)'' cannot be parsed correct.
+HTML code '$'Click to add a Points manually'' cannot be parsed correct.
+HTML code '$'Add Points'' cannot be parsed correct.
+HTML code '$'<div style="background-color: #ffffe0;border: 1px solid #993;padding: 1em;margin-right: 1em;">Saved</div>'' cannot be parsed correct.
+HTML code '$'Points Options'' cannot be parsed correct.
+HTML code '$'General'' cannot be parsed correct.
+HTML code '$'Points plural label'' cannot be parsed correct.
+HTML code '$'get_option("points-points_label", "points")'' cannot be parsed correct.
+HTML code '$'Points singular label'' cannot be parsed correct.
+HTML code '$'get_option("points-points_singular_label", "point")'' cannot be parsed correct.
+HTML code '$'Default points status'' cannot be parsed correct.
+HTML code '$'Comments'' cannot be parsed correct.
+HTML code '$' checked '' cannot be parsed correct.
+HTML code '$'get_option("points-comments", 1)'' cannot be parsed correct.
+HTML code '$'Others'' cannot be parsed correct.
+HTML code '$'Welcome points'' cannot be parsed correct.
+HTML code '$'get_option("points-welcome", "0")'' cannot be parsed correct.
+HTML code '$'remove_query_arg("point_id", remove_query_arg("action", $current_url))'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_title$title$after_title'' cannot be parsed correct.
+HTML code '$'get_avatar($pointsuser->user_id)'' cannot be parsed correct.
+HTML code '$'get_user_meta($pointsuser->user_id, "nickname", true)'' cannot be parsed correct.
+HTML code '$'$pointsuser '' cannot be parsed correct.
+HTML code '$'<p>No users</p>'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'$title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("limit")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("limit")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("limit")'' cannot be parsed correct.
+HTML code '$'$limit'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("limit")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("display_avatar")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("display_avatar")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("order")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("order")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("order")'' cannot be parsed correct.
+HTML code '$'$selectdesc'' cannot be parsed correct.
+HTML code '$'$selectasc'' cannot be parsed correct.
+HTML code '$'>
+						</div>
+					</div>
+					<div class="points-admin-line">
+						<div class="points-admin-label">
+							Comments points
+						</div>
+						<div class="points-admin-label">
+							'' cannot be parsed correct.
+HTML code '$'<div class="points-user">'' cannot be parsed correct.
+HTML code '$'<span class="points-user-avatar">'' cannot be parsed correct.
+HTML code '$' </span>'' cannot be parsed correct.
+HTML code '$'<span class="points-user-username">'' cannot be parsed correct.
+HTML code '$': </span>'' cannot be parsed correct.
+HTML code '$'<span class="points-user-points">'' cannot be parsed correct.
+HTML code '$'</span>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:06.159496.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.048968.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 10 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.612093.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running HashDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running MsqlDetector
+### Start running ParadoxDetector
+### Finish running ArrayElementDetector
+### Start running PasswordHashingDetector
+### Finish running Oci8Detector
+### Start running PhpCurlDetector
+### Finish running ParadoxDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PasswordHashingDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PHPRetrievalDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PhpVarDetector
+### Start running SqliteDetector
+### Finish running PostgreSQLDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running maxdbDetector
+### Finish running MySQLiDetector
+### Finished running detectors
+lib/core/class-points-admin.php:182
+  - RETRIEVAL call to get_option("points-points_label", "points") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/core/class-points-admin.php:192
+  - RETRIEVAL call to get_option("points-points_singular_label", "point") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/core/class-points-admin.php:206
+  - RETRIEVAL call to get_option("points-points_status", POINTS_STATUS_ACCEPTED) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/core/class-points-admin.php:231
+  - RETRIEVAL call to get_option("points-comments_enable", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/core/class-points-admin.php:242
+  - RETRIEVAL call to get_option("points-comments_enable", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/core/class-points-admin.php:244
+  - RETRIEVAL call to get_option("points-comments", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/core/class-points-admin.php:256
+  - RETRIEVAL call to get_option("points-welcome", "0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/core/class-points-shortcodes.php:53
+  - RETRIEVAL call to get_user_meta($pointsuser, "nickname", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+lib/core/class-points-widget-leaderboard.php:73
+  - RETRIEVAL call to get_user_meta($pointsuser->user_id, "nickname", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+lib/core/class-points.php:237
+  - RETRIEVAL call to get_option("points-points_label", "points") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/core/class-points.php:239
+  - RETRIEVAL call to get_option("points-points_singular_label", "point") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/ext/class-points-wordpress.php:28
+  - RETRIEVAL call to get_option("points-comments_enable", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/ext/class-points-wordpress.php:34
+  - RETRIEVAL call to get_option("points-welcome", "0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/ext/class-points-wordpress.php:43
+  - RETRIEVAL call to get_option("points-welcome", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/ext/class-points-wordpress.php:45
+  - RETRIEVAL call to get_option("points-points_status", POINTS_STATUS_ACCEPTED) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/ext/class-points-wordpress.php:54
+  - RETRIEVAL call to get_user_by("email", get_comment_author_email($comment_id)) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user_meta, user
+lib/ext/class-points-wordpress.php:54
+  - RETRIEVAL call to get_comment_author_email($comment_id) alters data types {'email'}. Passed arguments: 0: $comment_ID (int|WP_Comment). Returns (string).
+  - Data types: email
+lib/ext/class-points-wordpress.php:57
+  - RETRIEVAL call to get_option("points-comments", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/ext/class-points-wordpress.php:61
+  - RETRIEVAL call to get_option("points-points_status", POINTS_STATUS_ACCEPTED) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/ext/class-points-wordpress.php:76
+  - RETRIEVAL call to get_user_by("email", get_comment_author_email($comment_id)) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user_meta, user
+lib/ext/class-points-wordpress.php:76
+  - RETRIEVAL call to get_comment_author_email($comment_id) alters data types {'email'}. Passed arguments: 0: $comment_ID (int|WP_Comment). Returns (string).
+  - Data types: email
+lib/ext/class-points-wordpress.php:79
+  - RETRIEVAL call to get_option("points-comments", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/ext/class-points-wordpress.php:83
+  - RETRIEVAL call to get_option("points-points_status", POINTS_STATUS_ACCEPTED) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+points.php:149
+  - RETRIEVAL call to dbDelta($queries). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+lib/core/class-points-admin.php:149
+  - STORAGE call to update_option("points-comments_enable", $_POST["points_comments_enable"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/core/class-points-admin.php:151
+  - STORAGE call to update_option("points-comments", $_POST["points_comments"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/core/class-points-admin.php:153
+  - STORAGE call to update_option("points-welcome", $_POST["points_welcome"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/core/class-points-admin.php:156
+  - STORAGE call to update_option("points-points_label", $label) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/core/class-points-admin.php:158
+  - STORAGE call to update_option("points-points_singular_label", $singular_label) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/core/class-points-admin.php:160
+  - STORAGE call to update_option("points-points_status", $_POST["points_status"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	WordPressRetrievalDetector.get_comment_author_email($comment_id) - {'email'}
+	WordPressRetrievalDetector.get_comment_author_email($comment_id) - {'email'}
+none
+	WordPressRetrievalDetector.dbDelta($queries) - set()
+option
+	WordPressRetrievalDetector.get_option("points-welcome", 0) - {'option'}
+	WordPressRetrievalDetector.get_option("points-comments_enable", 1) - {'option'}
+	WordPressStorageDetector.update_option("points-points_status", $_POST["points_status"]) - {'option'}
+	WordPressStorageDetector.update_option("points-welcome", $_POST["points_welcome"]) - {'option'}
+	WordPressRetrievalDetector.get_option("points-welcome", "0") - {'option'}
+	WordPressRetrievalDetector.get_option("points-points_label", "points") - {'option'}
+	WordPressRetrievalDetector.get_option("points-points_status", POINTS_STATUS_ACCEPTED) - {'option'}
+	WordPressStorageDetector.update_option("points-points_label", $label) - {'option'}
+	WordPressRetrievalDetector.get_option("points-points_singular_label", "point") - {'option'}
+	WordPressRetrievalDetector.get_option("points-comments", 0) - {'option'}
+	WordPressRetrievalDetector.get_option("points-points_status", POINTS_STATUS_ACCEPTED) - {'option'}
+	WordPressRetrievalDetector.get_option("points-comments_enable", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("points-points_status", POINTS_STATUS_ACCEPTED) - {'option'}
+	WordPressRetrievalDetector.get_option("points-points_status", POINTS_STATUS_ACCEPTED) - {'option'}
+	WordPressRetrievalDetector.get_option("points-welcome", "0") - {'option'}
+	WordPressRetrievalDetector.get_option("points-points_label", "points") - {'option'}
+	WordPressRetrievalDetector.get_option("points-comments_enable", 1) - {'option'}
+	WordPressStorageDetector.update_option("points-points_singular_label", $singular_label) - {'option'}
+	WordPressRetrievalDetector.get_option("points-comments", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("points-points_singular_label", "point") - {'option'}
+	WordPressStorageDetector.update_option("points-comments_enable", $_POST["points_comments_enable"]) - {'option'}
+	WordPressStorageDetector.update_option("points-comments", $_POST["points_comments"]) - {'option'}
+	WordPressRetrievalDetector.get_option("points-comments", 1) - {'option'}
+user
+	WordPressRetrievalDetector.get_user_by("email", get_comment_author_email($comment_id)) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_user_by("email", get_comment_author_email($comment_id)) - {'user_meta', 'user'}
+user_meta
+	WordPressRetrievalDetector.get_user_by("email", get_comment_author_email($comment_id)) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_user_meta($pointsuser->user_id, "nickname", true) - {'user_meta'}
+	WordPressRetrievalDetector.get_user_by("email", get_comment_author_email($comment_id)) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_user_meta($pointsuser, "nickname", true) - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.967782.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 102 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.240252.
+
+102 STORE_REACHES edges created
+102 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 28 nodes as PERSONAL
+In total, tainted 28 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.157101.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:57.117633!
+RETRIEVAL call to get_option("points-points_label", "points") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-points_singular_label", "point") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-points_status", POINTS_STATUS_ACCEPTED) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-comments_enable", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-comments_enable", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-comments", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-welcome", "0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($pointsuser, "nickname", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($pointsuser->user_id, "nickname", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-points_label", "points") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-points_singular_label", "point") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-comments_enable", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-welcome", "0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-welcome", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-points_status", POINTS_STATUS_ACCEPTED) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_author_email($comment_id) alters data types {'email'}. Passed arguments: 0: $comment_ID (int|WP_Comment). Returns (string).,None,None
+RETRIEVAL call to get_user_by("email", get_comment_author_email($comment_id)) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("points-comments", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-points_status", POINTS_STATUS_ACCEPTED) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_author_email($comment_id) alters data types {'email'}. Passed arguments: 0: $comment_ID (int|WP_Comment). Returns (string).,None,None
+RETRIEVAL call to get_user_by("email", get_comment_author_email($comment_id)) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("points-comments", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("points-points_status", POINTS_STATUS_ACCEPTED) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($queries). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to update_option("points-comments_enable", $_POST["points_comments_enable"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("points-comments", $_POST["points_comments"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("points-welcome", $_POST["points_welcome"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("points-points_label", $label) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("points-points_singular_label", $singular_label) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("points-points_status", $_POST["points_status"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

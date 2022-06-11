@@ -1,0 +1,615 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on data-collection-form
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.870277.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.016687.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.193449.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.364489.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 2093 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.635472.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.534716.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.087103.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 1052 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:14.724640.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 9253
+Added 6108 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 10090
+Added 837 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.512672.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/data-collection-form/captcha.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/data-collection-form/data-collection-form-base.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/data-collection-form/data-collection-form.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.301784.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+9253 PHP_REACHES edges created
+837 PHP_REACHES edges created
+10090 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 3188 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.236162.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:06.963254.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 26 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.321166.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 27 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.188522.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.129138.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.423227.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.032436.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035412.
+
+53 PHP_REACHES edges created
+53 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 52 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.136392.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+58 SQL operations to process.
+select * from $wpdbugf_forms where id = '$_POST_ugfform_id'
+select * from $wpdbugf_forms where id = '$_POST_ugfform_id'
+SQL command (select * from $wpdbugf_forms where id = '$_POST_ugfform_id') cannot be parsed correct.
+select * from $wpdbugf_fields where form_id = '$wpdb->get_row($wpdb->prepare("select * from " . $wpdb->prefix . "ugf_forms where id = \'%d\'", $form_id))_id' order by ordering
+select * from $wpdbugf_fields where form_id = '$wpdb->get_row($wpdb->prepare("select * from " . $wpdb->prefix . "ugf_forms where id = \'%d\'", $form_id))_id' order by ordering
+SQL command (select * from $wpdbugf_fields where form_id = '$wpdb->get_row($wpdb->prepare("select * from " . $wpdb->prefix . "ugf_forms where id = \'%d\'", $form_id))_id' order by ordering) cannot be parsed correct.
+select * from $wpdbugf_fields_validations where field_id = '$wpdb->get_results($wpdb->prepare("select * from " . $wpdb->prefix . "ugf_fields where form_id = \'%d\' order by ordering", $form_id))_0_id'
+select * from $wpdbugf_fields_validations where field_id = '$wpdb->get_results($wpdb->prepare("select * from " . $wpdb->prefix . "ugf_fields where form_id = \'%d\' order by ordering", $form_id))_0_id'
+SQL command (select * from $wpdbugf_fields_validations where field_id = '$wpdb->get_results($wpdb->prepare("select * from " . $wpdb->prefix . "ugf_fields where form_id = \'%d\' order by ordering", $form_id))_0_id') cannot be parsed correct.
+select * from $wpdbugf_forms where id = '$_POST_form_id'
+select * from $wpdbugf_forms where id = '$_POST_form_id'
+SQL command (select * from $wpdbugf_forms where id = '$_POST_form_id') cannot be parsed correct.
+delete from $wpdbugf_fields_attributes where field_id = '$_POST_id'
+delete from $wpdbugf_fields_attributes where field_id = '$_POST_id'
+SQL command (delete from $wpdbugf_fields_attributes where field_id = '$_POST_id') cannot be parsed correct.
+delete from $wpdbugf_fields_validations where field_id = '$_POST_id'
+delete from $wpdbugf_fields_validations where field_id = '$_POST_id'
+SQL command (delete from $wpdbugf_fields_validations where field_id = '$_POST_id') cannot be parsed correct.
+delete from $wpdbugf_fields where id = '$_POST_id'
+delete from $wpdbugf_fields where id = '$_POST_id'
+SQL command (delete from $wpdbugf_fields where id = '$_POST_id') cannot be parsed correct.
+select * from $wpdbugf_fields where id = '$_POST_id'
+select * from $wpdbugf_fields where id = '$_POST_id'
+SQL command (select * from $wpdbugf_fields where id = '$_POST_id') cannot be parsed correct.
+select * from $wpdbugf_forms where id ='$_POST_form_id'
+select * from $wpdbugf_forms where id ='$_POST_form_id'
+SQL command (select * from $wpdbugf_forms where id ='$_POST_form_id') cannot be parsed correct.
+select * from $wpdbugf_fields where id ='$_POST_id'
+select * from $wpdbugf_fields where id ='$_POST_id'
+SQL command (select * from $wpdbugf_fields where id ='$_POST_id') cannot be parsed correct.
+select id from $wpdbugf_fields_attributes where type='validation' and attribute_name = 'notempty' and field_id = '$_POST_id'
+select id from $wpdbugf_fields_attributes where type='validation' and attribute_name = 'notempty' and field_id = '$_POST_id'
+SQL command (select id from $wpdbugf_fields_attributes where type='validation' and attribute_name = 'notempty' and field_id = '$_POST_id') cannot be parsed correct.
+select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'options' and field_id = '$_POST_id'
+select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'options' and field_id = '$_POST_id'
+SQL command (select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'options' and field_id = '$_POST_id') cannot be parsed correct.
+select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'resize' and field_id = '$_POST_form_id'
+select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'resize' and field_id = '$_POST_form_id'
+SQL command (select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'resize' and field_id = '$_POST_form_id') cannot be parsed correct.
+select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'width' and field_id = '$_POST_form_id'
+select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'width' and field_id = '$_POST_form_id'
+SQL command (select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'width' and field_id = '$_POST_form_id') cannot be parsed correct.
+select *  from $wpdbugf_fields_attributes where type='option' and attribute_name = 'height' and field_id = '$_POST_form_id'
+select *  from $wpdbugf_fields_attributes where type='option' and attribute_name = 'height' and field_id = '$_POST_form_id'
+SQL command (select * from $wpdbugf_fields_attributes where type='option' and attribute_name = 'height' and field_id = '$_POST_form_id') cannot be parsed correct.
+select validation_type from $wpdbugf_fields_validations where field_id = '$_POST_field_id' and validation_type = 'required'
+select validation_type from $wpdbugf_fields_validations where field_id = '$_POST_field_id' and validation_type = 'required'
+SQL command (select validation_type from $wpdbugf_fields_validations where field_id = '$_POST_field_id' and validation_type = 'required') cannot be parsed correct.
+update $wpdbugf_fields_attributes set implode(",", $data) where id = '$_POST_field_id'
+update $wpdbugf_fields_attributes set implode(",", $data) where id = '$_POST_field_id'
+SQL command (update $wpdbugf_fields_attributes set implode(",", $data) where id = '$_POST_field_id') cannot be parsed correct.
+insert into $wpdbugf_fields_attributes set implode(",", $data)
+SQL command (insert into $wpdbugf_fields_attributes set implode(",", $data)) cannot be parsed correct.
+update $wpdbugf_fields_attributes set implode(",", $data) where id = '%d'
+SQL command (update $wpdbugf_fields_attributes set implode(",", $data) where id = '%d') cannot be parsed correct.
+insert into $wpdbugf_fields_attributes set implode(",", $data)
+SQL command (insert into $wpdbugf_fields_attributes set implode(",", $data)) cannot be parsed correct.
+$wpdb->prefix("select * from " . $wpdb->prefix . "ugf_fields_attributes where field_id =\'%d\'", $field_id)
+SQL command ($wpdb->prefix("select * from " . $wpdb->prefix . "ugf_fields_attributes where field_id =\'%d\'", $field_id)) cannot be parsed correct.
+update $wpdbugf_fields_attributes set implode(",", $data) where id ='$_POST_attr_id'
+update $wpdbugf_fields_attributes set implode(",", $data) where id ='$_POST_attr_id'
+SQL command (update $wpdbugf_fields_attributes set implode(",", $data) where id ='$_POST_attr_id') cannot be parsed correct.
+insert into  $wpdbugf_fields_attributes set implode(",", $data)
+SQL command (insert into $wpdbugf_fields_attributes set implode(",", $data)) cannot be parsed correct.
+delete from  $wpdbugf_fields_attributes where id ='$_POST_attr_id'
+delete from  $wpdbugf_fields_attributes where id ='$_POST_attr_id'
+SQL command (delete from $wpdbugf_fields_attributes where id ='$_POST_attr_id') cannot be parsed correct.
+update $wpdbugf_fields set implode(",", $data) where id = 'trim($_POST["form_id"])'
+update $wpdbugf_fields set implode(",", $data) where id = 'trim($_POST["form_id"])'
+SQL command (update $wpdbugf_fields set implode(",", $data) where id = 'trim($_POST["form_id"])') cannot be parsed correct.
+insert into $wpdbugf_fields set implode(",", $data)
+SQL command (insert into $wpdbugf_fields set implode(",", $data)) cannot be parsed correct.
+delete from $wpdbugf_fields_attributes where field_id = 'trim($_POST["id"])'
+delete from $wpdbugf_fields_attributes where field_id = 'trim($_POST["id"])'
+SQL command (delete from $wpdbugf_fields_attributes where field_id = 'trim($_POST["id"])') cannot be parsed correct.
+delete from $wpdbugf_fields_validations where field_id = 'trim($_POST["id"])'
+delete from $wpdbugf_fields_validations where field_id = 'trim($_POST["id"])'
+SQL command (delete from $wpdbugf_fields_validations where field_id = 'trim($_POST["id"])') cannot be parsed correct.
+update $wpdbugf_forms set post_title = '$output_id' where id = '%d'
+update $wpdbugf_forms set post_title = '$output_id' where id = 'trim($_POST["form_id"])'
+update $wpdbugf_forms set post_title = '$output_id' where id = 'trim($_POST["form_id"])'
+SQL command (update $wpdbugf_forms set post_title = '$output_id' where id = 'trim($_POST["form_id"])') cannot be parsed correct.
+insert into $wpdbugf_fields_attributes set implode(",", $data)
+SQL command (insert into $wpdbugf_fields_attributes set implode(",", $data)) cannot be parsed correct.
+insert into $wpdbugf_fields_validations set implode(",", $data)
+SQL command (insert into $wpdbugf_fields_validations set implode(",", $data)) cannot be parsed correct.
+select * from $wpdbugf_fields where  form_id = '$_POST_form_id' order by ordering asc
+select * from $wpdbugf_fields where  form_id = '$_POST_form_id' order by ordering asc
+SQL command (select * from $wpdbugf_fields where form_id = '$_POST_form_id' order by ordering asc) cannot be parsed correct.
+update $wpdbugf_fields set ordering = '0' where id = '%d' and form_id='%d'
+update $wpdbugf_fields set ordering = '0' where id = 'explode(",", $order)_0' and form_id='%d'
+update $wpdbugf_fields set ordering = '0' where id = 'explode(",", $order)_0' and form_id='%$_POST_form_id
+update $wpdbugf_fields set ordering = '0' where id = 'explode(",", $order)_0' and form_id='%$_POST_form_id
+SQL command (update $wpdbugf_fields set ordering = '0' where id = 'explode(",", $order)_0' and form_id='%$_POST_form_id) cannot be parsed correct.
+select * from $wpdbugf_forms order by form_name
+SQL command (select * from $wpdbugf_forms order by form_name) cannot be parsed correct.
+select * from $wpdbugf_forms where id = '$_POST_form_id'
+SQL command (select * from $wpdbugf_forms where id = '$_POST_form_id') cannot be parsed correct.
+select * from $wpdbugf_forms order by form_name
+SQL command (select * from $wpdbugf_forms order by form_name) cannot be parsed correct.
+select post_type from $wpdbposts where post_type not in ('attachment','revision') group by post_type 
+SQL command (select post_type from $wpdbposts where post_type not in ('attachment','revision') group by post_type ) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$wpdbugf_fields` (
+              `id` int(11) NOT NULL AUTO_INCREMENT,
+              `form_id` int(11) DEFAULT NULL,
+              `field_type` varchar(25) DEFAULT NULL,
+              `field_label` varchar(250) DEFAULT 'Inline',
+              `lbl_placement` varchar(10) NOT NULL DEFAULT 'inline',
+              `field_class` varchar(100) NOT NULL DEFAULT 'ugf-form-control',
+              `lbl_wrapper_class` varchar(250) DEFAULT NULL,
+              `field_machine_name` varchar(250) DEFAULT NULL,
+              `field_wrapper_class` varchar(250) DEFAULT NULL,
+              `field_prefix_html` text,
+              `field_postfix_html` text,
+              `matched_post_fields` varchar(50) DEFAULT NULL,
+              `label_prefix` text,
+              `label_suffix` text,
+              `ordering` int(11) NOT NULL DEFAULT '0',
+              PRIMARY KEY (`id`)
+            ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+SQL command (CREATE TABLE IF NOT EXISTS `$wpdbugf_fields` ( `id` int(11) NOT NULL AUTO_INCREMENT, `form_id` int(11) DEFAULT NULL, `field_type` varchar(25) DEFAULT NULL, `field_label` varchar(250) DEFAULT 'Inline', `lbl_placement` varchar(10) NOT NULL DEFAULT 'inline', `field_class` varchar(100) NOT NULL DEFAULT 'ugf-form-control', `lbl_wrapper_class` varchar(250) DEFAULT NULL, `field_machine_name` varchar(250) DEFAULT NULL, `field_wrapper_class` varchar(250) DEFAULT NULL, `field_prefix_html` text, `field_postfix_html` text, `matched_post_fields` varchar(50) DEFAULT NULL, `label_prefix` text, `label_suffix` text, `ordering` int(11) NOT NULL DEFAULT '0', PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$wpdbugf_fields_attributes` (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+            `field_id` int(11) NOT NULL,
+            `attribute_name` varchar(50) NOT NULL,
+            `attribute_value` varchar(250) NOT NULL,
+            `type` varchar(15) CHARACTER SET utf8 NOT NULL DEFAULT 'input',
+            `form_id` int(11) NOT NULL,
+            PRIMARY KEY (`id`)
+          ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+SQL command (CREATE TABLE IF NOT EXISTS `$wpdbugf_fields_attributes` ( `id` int(11) NOT NULL AUTO_INCREMENT, `field_id` int(11) NOT NULL, `attribute_name` varchar(50) NOT NULL, `attribute_value` varchar(250) NOT NULL, `type` varchar(15) CHARACTER SET utf8 NOT NULL DEFAULT 'input', `form_id` int(11) NOT NULL, PRIMARY KEY (`id`) ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ;) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$wpdbugf_fields_validations` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `field_id` int(11) NOT NULL,
+                `validation_type` varchar(50) NOT NULL,
+                PRIMARY KEY (`id`)
+              ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+SQL command (CREATE TABLE IF NOT EXISTS `$wpdbugf_fields_validations` ( `id` int(11) NOT NULL AUTO_INCREMENT, `field_id` int(11) NOT NULL, `validation_type` varchar(50) NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;) cannot be parsed correct.
+ CREATE TABLE IF NOT EXISTS `$wpdbugf_forms` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `form_name` varchar(50) DEFAULT NULL,
+                `post_method` enum('POST','GET') DEFAULT NULL,
+                `post_type` varchar(25) DEFAULT NULL,
+                `form_short_code` varchar(250) DEFAULT NULL,
+                `email_template` text,
+                `form_prefix_html` text,
+                `form_postfix_html` text,
+                `form_classes` varchar(250) DEFAULT NULL,
+                `form_start_date` date DEFAULT NULL,
+                `form_end_date` date DEFAULT NULL,
+                `captcha` int(1) NOT NULL DEFAULT '0',
+                `captcha_msg` varchar(250) DEFAULT NULL,
+                `form_sucess_msg` text,
+                `enable_form` int(1) NOT NULL DEFAULT '1',
+                `post_title` varchar(100) DEFAULT NULL,
+                PRIMARY KEY (`id`)
+              ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+SQL command ( CREATE TABLE IF NOT EXISTS `$wpdbugf_forms` ( `id` int(11) NOT NULL AUTO_INCREMENT, `form_name` varchar(50) DEFAULT NULL, `post_method` enum('POST','GET') DEFAULT NULL, `post_type` varchar(25) DEFAULT NULL, `form_short_code` varchar(250) DEFAULT NULL, `email_template` text, `form_prefix_html` text, `form_postfix_html` text, `form_classes` varchar(250) DEFAULT NULL, `form_start_date` date DEFAULT NULL, `form_end_date` date DEFAULT NULL, `captcha` int(1) NOT NULL DEFAULT '0', `captcha_msg` varchar(250) DEFAULT NULL, `form_sucess_msg` text, `enable_form` int(1) NOT NULL DEFAULT '1', `post_title` varchar(100) DEFAULT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdbugf_forms
+SQL command (DROP TABLE IF EXISTS $wpdbugf_forms) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdbugf_fields
+SQL command (DROP TABLE IF EXISTS $wpdbugf_fields) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdbugf_fields_attributes
+SQL command (DROP TABLE IF EXISTS $wpdbugf_fields_attributes) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdbugf_fields_validations
+SQL command (DROP TABLE IF EXISTS $wpdbugf_fields_validations) cannot be parsed correct.
+delete from $wpdboptions where option_name like 'ugf_db_version'
+SQL command (delete from $wpdboptions where option_name like 'ugf_db_version') cannot be parsed correct.
+select * from $wpdbugf_forms where id = '$_POST_form_id'
+select * from $wpdbugf_forms where id = '$_POST_form_id'
+SQL command (select * from $wpdbugf_forms where id = '$_POST_form_id') cannot be parsed correct.
+select id from  $wpdbugf_fields where form_id = '$_POST_form_id'
+select id from  $wpdbugf_fields where form_id = '$_POST_form_id'
+SQL command (select id from $wpdbugf_fields where form_id = '$_POST_form_id') cannot be parsed correct.
+delete from $wpdbugf_fields_attributes where field_id = '$wpdb->get_results($psql)_0_id'
+delete from $wpdbugf_fields_attributes where field_id = '$wpdb->get_results($psql)_0_id'
+SQL command (delete from $wpdbugf_fields_attributes where field_id = '$wpdb->get_results($psql)_0_id') cannot be parsed correct.
+delete from $wpdbugf_fields_validations where field_id = '$wpdb->get_results($psql)_0_id'
+delete from $wpdbugf_fields_validations where field_id = '$wpdb->get_results($psql)_0_id'
+SQL command (delete from $wpdbugf_fields_validations where field_id = '$wpdb->get_results($psql)_0_id') cannot be parsed correct.
+delete from $wpdbugf_fields where form_id = '$_POST_form_id'
+delete from $wpdbugf_fields where form_id = '$_POST_form_id'
+SQL command (delete from $wpdbugf_fields where form_id = '$_POST_form_id') cannot be parsed correct.
+delete from $wpdbugf_forms where id = '$_POST_form_id'
+delete from $wpdbugf_forms where id = '$_POST_form_id'
+SQL command (delete from $wpdbugf_forms where id = '$_POST_form_id') cannot be parsed correct.
+update $wpdbugf_forms set implode(",", $data) where id = 'stripslashes_deep(trim($_POST["form_name"]))'
+update $wpdbugf_forms set implode(",", $data) where id = 'stripslashes_deep(trim($_POST["form_name"]))'
+SQL command (update $wpdbugf_forms set implode(",", $data) where id = 'stripslashes_deep(trim($_POST["form_name"]))') cannot be parsed correct.
+insert into $wpdbugf_forms set implode(",", $data)
+SQL command (insert into $wpdbugf_forms set implode(",", $data)) cannot be parsed correct.
+select * from $wpdbugf_forms where id = '$form_id'
+select * from $wpdbugf_forms where id = '$form_id'
+SQL command (select * from $wpdbugf_forms where id = '$form_id') cannot be parsed correct.
+select * from $wpdbugf_fields where form_id = '$form_id' order by ordering asc
+select * from $wpdbugf_fields where form_id = '$form_id' order by ordering asc
+SQL command (select * from $wpdbugf_fields where form_id = '$form_id' order by ordering asc) cannot be parsed correct.
+select * from $wpdbugf_fields_attributes where field_id = '$wpdb->get_results($psql)_0_id'
+select * from $wpdbugf_fields_attributes where field_id = '$wpdb->get_results($psql)_0_id'
+SQL command (select * from $wpdbugf_fields_attributes where field_id = '$wpdb->get_results($psql)_0_id') cannot be parsed correct.
+select * from $wpdbugf_fields_validations where field_id = '$wpdb->get_results($psql)_0_id'
+select * from $wpdbugf_fields_validations where field_id = '$wpdb->get_results($psql)_0_id'
+SQL command (select * from $wpdbugf_fields_validations where field_id = '$wpdb->get_results($psql)_0_id') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [178, 290, 397, 1037, 1114, 1144, 1174, 1208, 1794, 1817, 1945, 2082, 2226, 2314, 2412, 2576, 3940, 3998, 4070, 4111, 4137, 4398, 4440, 4499, 4963, 5033, 5072, 5102, 5157, 5231, 5303, 5368, 5717, 6015, 6795, 6940, 7116, 7205, 7228, 7251, 7274, 7322, 7350, 7378, 7406, 7428, 7484, 8096, 8157, 8187, 8217, 8247, 8632, 8698, 8870, 9067, 9304, 9380]
+Added 0 SQL nodes. 0 out of 58 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:17.792012.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'         '' cannot be parsed correct.
+HTML code '$'            
+        </div>
+        '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:00.349062.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047290.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 22 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.662836.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ArrayElementDetector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running PhpCurlDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running HashDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running OpenSSLDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running UserInputDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running MySQLiDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+data-collection-form-base.php:28
+  - object property '$form_row->email_template' of personal types {'email'} is found.
+  - Data types: email
+data-collection-form-base.php:29
+  - object property '$form_row->email_address' of personal types {'address', 'email'} is found.
+  - Data types: address, email
+data-collection-form-base.php:29
+  - object property '$form_row->email_address' of personal types {'address', 'email'} is found.
+  - Data types: address, email 
+
+data-collection-form-base.php:28
+  - variable '$email_template' of personal types {'email'} is found.
+  - Data types: email
+data-collection-form-base.php:29
+  - variable '$email_address' of personal types {'address', 'email'} is found.
+  - Data types: address, email
+data-collection-form-base.php:29
+  - variable '$email_address' of personal types {'address', 'email'} is found.
+  - Data types: address, email 
+
+data-collection-form.php:148
+  - RETRIEVAL call to get_option("ccpo_order_manager", "administrator") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+data-collection-form.php:194
+  - RETRIEVAL call to get_option("ccpo_order_manager", "administrator") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+data-collection-form.php:259
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+data-collection-form.php:272
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+data-collection-form.php:284
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+data-collection-form.php:307
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+data-collection-form.php:322
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+data-collection-form.php:330
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+data-collection-form.php:337
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+data-collection-form.php:344
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+data-collection-form.php:349
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+data-collection-form-base.php:85
+  - STORAGE call to wp_insert_post($my_post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+data-collection-form-base.php:103
+  - STORAGE call to update_post_meta($post_id, $field_machine_name, $field_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+data-collection-form.php:190
+  - STORAGE call to update_option("ccpo_order_manager", $role) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+data-collection-form.php:308
+  - STORAGE call to add_option("ugf_db_version", $ugf_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+data-collection-form.php:346
+  - STORAGE call to delete_option("ugf_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+data-collection-form.php:346
+  - DELETION call to delete_option("ugf_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+address
+	PropertyDetector.(unknown) - {'address', 'email'}
+	PropertyDetector.(unknown) - {'address', 'email'}
+	VariableDetector.(unknown) - {'address', 'email'}
+	VariableDetector.(unknown) - {'address', 'email'}
+email
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'address', 'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'address', 'email'}
+	VariableDetector.(unknown) - {'address', 'email'}
+	VariableDetector.(unknown) - {'address', 'email'}
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressStorageDetector.wp_insert_post($my_post) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressStorageDetector.update_option("ccpo_order_manager", $role) - {'option'}
+	WordPressRetrievalDetector.get_option("ccpo_order_manager", "administrator") - {'option'}
+	DeletionDetector.delete_option("ugf_db_version") - {'option'}
+	WordPressStorageDetector.add_option("ugf_db_version", $ugf_db_version) - {'option'}
+	WordPressStorageDetector.delete_option("ugf_db_version") - {'option'}
+	WordPressRetrievalDetector.get_option("ccpo_order_manager", "administrator") - {'option'}
+post_meta
+	WordPressStorageDetector.update_post_meta($post_id, $field_machine_name, $field_value) - {'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.887134.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 6 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.114318.
+
+6 STORE_REACHES edges created
+6 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 4 nodes as PERSONAL
+In total, tainted 4 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.336307.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:11.091673!
+DELETION call to delete_option("ugf_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+object property '$form_row->email_template' of personal types {'email'} is found.,,None
+object property '$form_row->email_address' of personal types {'address', 'email'} is found.,,None
+object property '$form_row->email_address' of personal types {'address', 'email'} is found.,,None
+variable '$email_template' of personal types {'email'} is found.,,None
+variable '$email_address' of personal types {'address', 'email'} is found.,,None
+variable '$email_address' of personal types {'address', 'email'} is found.,,None
+RETRIEVAL call to get_option("ccpo_order_manager", "administrator") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ccpo_order_manager", "administrator") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to update_post_meta($post_id, $field_machine_name, $field_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to wp_insert_post($my_post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to update_option("ccpo_order_manager", $role) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("ugf_db_version", $ugf_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("ugf_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

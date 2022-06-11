@@ -1,0 +1,574 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on commfort-webchat
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.731150.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.968966.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.205433.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.470681.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 478 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.854878.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.652907.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.119813.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 220 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.402398.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2798
+Added 2100 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3867
+Added 1069 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.173057.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/commfort-webchat/cf_webchat.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.140902.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2798 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1069 PHP_REACHES edges created
+3867 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 958 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.087960.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:03.183769.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 20 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.602971.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 18 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.200765.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.336544.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.243570.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008935.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.037269.
+
+38 PHP_REACHES edges created
+38 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 20 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.133945.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+6 SQL operations to process.
+SELECT n.id, n.nick, n.male, n.ip, n.state FROM $tables_users_online n ORDER BY n.nick ASC;
+SQL command (SELECT n.id, n.nick, n.male, n.ip, n.state FROM $tables_users_online n ORDER BY n.nick ASC;) cannot be parsed correct.
+SELECT name FROM $tables_channels ORDER BY id ASC;
+SQL command (SELECT name FROM $tables_channels ORDER BY id ASC;) cannot be parsed correct.
+SELECT n.variable, n.nick, n.male, n.datetime, n.type FROM $tables_actions n WHERE n.channel = $_POST_channel OR n.channel = '' ORDER BY n.datetime, n.id ASC LIMIT %d, 10
+SELECT n.variable, n.nick, n.male, n.datetime, n.type FROM $tables_actions n WHERE n.channel = $_POST_channel OR n.channel = '' ORDER BY n.datetime, n.id ASC LIMIT "placeholder_1", 10
+SELECT n.variable, n.nick, n.male, n.datetime, n.type FROM $tables_actions n WHERE n.channel = $_POST_channel OR n.channel = '' ORDER BY n.datetime, n.id ASC LIMIT "placeholder_1", 10
+SQL command (SELECT n.variable, n.nick, n.male, n.datetime, n.type FROM $tables_actions n WHERE n.channel = $_POST_channel OR n.channel = '' ORDER BY n.datetime, n.id ASC LIMIT "placeholder_1", 10) cannot be parsed correct.
+SELECT n.variable, n.nick, n.male, n.datetime, n.type FROM $tables_actions n WHERE n.datetime > $_POST_last_msg_time AND (n.channel = %s OR n.channel = '') ORDER BY n.datetime, n.id ASC
+SELECT n.variable, n.nick, n.male, n.datetime, n.type FROM $tables_actions n WHERE n.datetime > $_POST_last_msg_time AND (n.channel = $_POST_channel OR n.channel = '') ORDER BY n.datetime, n.id ASC
+SELECT n.variable, n.nick, n.male, n.datetime, n.type FROM $tables_actions n WHERE n.datetime > $_POST_last_msg_time AND (n.channel = $_POST_channel OR n.channel = '') ORDER BY n.datetime, n.id ASC
+SQL command (SELECT n.variable, n.nick, n.male, n.datetime, n.type FROM $tables_actions n WHERE n.datetime > $_POST_last_msg_time AND (n.channel = $_POST_channel OR n.channel = '') ORDER BY n.datetime, n.id ASC) cannot be parsed correct.
+SELECT auth, error FROM $tables_web_users WHERE nick = $user_login;
+SELECT auth, error FROM $tables_web_users WHERE nick = $user_login;
+SQL command (SELECT auth, error FROM $tables_web_users WHERE nick = $user_login;) cannot be parsed correct.
+SELECT n.nick, n.male, n.variable, n.datetime, n.type FROM $tables_actions n WHERE n.channel = $wpdb->get_var($wpdb->prepare("SELECT name FROM " . $tables["channels"] . " ORDER BY id ASC LIMIT 0, 1")) OR n.channel = '' ORDER BY n.datetime, n.id ASC LIMIT %d, 10
+SELECT n.nick, n.male, n.variable, n.datetime, n.type FROM $tables_actions n WHERE n.channel = $wpdb->get_var($wpdb->prepare("SELECT name FROM " . $tables["channels"] . " ORDER BY id ASC LIMIT 0, 1")) OR n.channel = '' ORDER BY n.datetime, n.id ASC LIMIT "placeholder_1", 10
+SELECT n.nick, n.male, n.variable, n.datetime, n.type FROM $tables_actions n WHERE n.channel = $wpdb->get_var($wpdb->prepare("SELECT name FROM " . $tables["channels"] . " ORDER BY id ASC LIMIT 0, 1")) OR n.channel = '' ORDER BY n.datetime, n.id ASC LIMIT "placeholder_1", 10
+SQL command (SELECT n.nick, n.male, n.variable, n.datetime, n.type FROM $tables_actions n WHERE n.channel = $wpdb->get_var($wpdb->prepare("SELECT name FROM " . $tables["channels"] . " ORDER BY id ASC LIMIT 0, 1")) OR n.channel = '' ORDER BY n.datetime, n.id ASC LIMIT "placeholder_1", 10) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1367, 1412, 3231, 3264, 3931, 4306]
+Added 0 SQL nodes. 0 out of 6 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.365651.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'cfw_rep_var($smilies_desc, ["!foldername" => "cf_webchat/smilies", "!filename" => "smilies_serv.txt"])'' cannot be parsed correct.
+HTML code '$'json_encode(["answer" => $answer])'' cannot be parsed correct.
+HTML code '$'json_encode($a_response)'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:00.656563.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045424.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.461030.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PropertyDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running maxdbDetector
+### Start running UserInputDetector
+### Finish running MySQLiDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressStorageDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running PHPStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running PHPRetrievalDetector
+### Finish running VariableDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+cf_webchat.php:388
+  - Request variable '$_POST["connection_state_v"]' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:428
+  - Request variable '$_POST["connection_state_v"]' of personal types {'state'} is found.
+  - Data types: state 
+
+cf_webchat.php:583
+  - MD5 called with parameters [password]. Ignore if [password] does not contain personal information. 
+
+cf_webchat.admin.inc:97
+  - RETRIEVAL call to file($sm_server, FILE_SKIP_EMPTY_LINES).
+  - Data types: file
+cf_webchat.php:211
+  - RETRIEVAL call to file($optim_folder . "sm_symbs.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).
+  - Data types: file
+cf_webchat.php:212
+  - RETRIEVAL call to file($optim_folder . "sm_paths.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).
+  - Data types: file
+cf_webchat.php:253
+  - RETRIEVAL call to file($optim_folder . "sm_symbs.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).
+  - Data types: file
+cf_webchat.php:254
+  - RETRIEVAL call to file($optim_folder . "sm_paths.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).
+  - Data types: file 
+
+cf_webchat.admin.inc:118
+  - STORAGE call to fwrite($sm_paths, $path).
+  - Data types: file
+cf_webchat.admin.inc:119
+  - STORAGE call to fwrite($sm_symbs, $smile).
+  - Data types: file
+cf_webchat.admin.inc:125
+  - STORAGE call to fwrite($sm_paths, $group).
+  - Data types: file
+cf_webchat.admin.inc:126
+  - STORAGE call to fwrite($sm_symbs, $group).
+  - Data types: file 
+
+cf_webchat.php:144
+  - variable '$auth_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:147
+  - variable '$auth_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:148
+  - variable '$auth_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:148
+  - variable '$auth_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:151
+  - variable '$auth_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:375
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:377
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:379
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:382
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:388
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:390
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:400
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:428
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:430
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:441
+  - variable '$new_connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:441
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:459
+  - variable '$new_connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:465
+  - variable '$new_connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:465
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:488
+  - variable '$new_connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:575
+  - variable '$user_pass' of personal types {'password'} is found.
+  - Data types: password
+cf_webchat.php:647
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:650
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:651
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state
+cf_webchat.php:655
+  - variable '$connection_state' of personal types {'state'} is found.
+  - Data types: state 
+
+cf_webchat.admin.inc:30
+  - RETRIEVAL call to get_option("cf_webchat_show_ips", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf_webchat.admin.inc:41
+  - RETRIEVAL call to get_option("cf_webchat_smilies_enabled") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+cf_webchat.admin.inc:52
+  - RETRIEVAL call to get_option("cf_webchat_def_sound_state", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf_webchat.admin.inc:63
+  - RETRIEVAL call to get_option("cf_webchat_ping_check", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf_webchat.php:120
+  - RETRIEVAL call to get_option("cf_webchat_show_ips", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf_webchat.php:136
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+cf_webchat.php:160
+  - RETRIEVAL call to get_option("cf_webchat_show_ips", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf_webchat.php:333
+  - RETRIEVAL call to get_option("cf_webchat_smilies_enabled", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf_webchat.php:397
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+cf_webchat.php:400
+  - RETRIEVAL call to get_option("cf_webchat_ping_check", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf_webchat.php:442
+  - RETRIEVAL call to get_option("cf_webchat_ping_check", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf_webchat.php:578
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+cf_webchat.php:643
+  - RETRIEVAL call to get_option("cf_webchat_def_sound_state", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf_webchat.php:649
+  - RETRIEVAL call to get_option("cfw_ping_check", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.fwrite($sm_paths, $group) - {'file'}
+	PHPStorageDetector.fwrite($sm_symbs, $smile) - {'file'}
+	PHPStorageDetector.fwrite($sm_paths, $path) - {'file'}
+	PHPRetrievalDetector.file($sm_server, FILE_SKIP_EMPTY_LINES) - {'file'}
+	PHPRetrievalDetector.file($optim_folder . "sm_paths.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES) - {'file'}
+	PHPStorageDetector.fwrite($sm_symbs, $group) - {'file'}
+	PHPRetrievalDetector.file($optim_folder . "sm_symbs.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES) - {'file'}
+	PHPRetrievalDetector.file($optim_folder . "sm_symbs.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES) - {'file'}
+	PHPRetrievalDetector.file($optim_folder . "sm_paths.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES) - {'file'}
+none
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("cf_webchat_ping_check", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("cf_webchat_show_ips", "1") - {'option'}
+	WordPressRetrievalDetector.get_option("cf_webchat_def_sound_state", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("cf_webchat_def_sound_state", "1") - {'option'}
+	WordPressRetrievalDetector.get_option("cf_webchat_ping_check", "1") - {'option'}
+	WordPressRetrievalDetector.get_option("cf_webchat_ping_check", true) - {'option'}
+	WordPressRetrievalDetector.get_option("cf_webchat_show_ips", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("cf_webchat_show_ips", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("cf_webchat_smilies_enabled") - {'option'}
+	WordPressRetrievalDetector.get_option("cfw_ping_check", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("cf_webchat_smilies_enabled", 0) - {'option'}
+password
+	VariableDetector.(unknown) - {'password'}
+state
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	ArrayElementDetector.(unknown) - {'state'}
+	ArrayElementDetector.(unknown) - {'state'}
+user
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+user_meta
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.848162.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 20 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.191363.
+
+20 STORE_REACHES edges created
+20 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 43 nodes as PERSONAL
+In total, tainted 43 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 1 nodes as ENCRYPTED
+In total, tainted 1 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.489885.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:37.229611!
+Request variable '$_POST["connection_state_v"]' of personal types {'state'} is found.,,None
+Request variable '$_POST["connection_state_v"]' of personal types {'state'} is found.,,None
+MD5 called with parameters [password]. Ignore if [password] does not contain personal information.,md5,None
+RETRIEVAL call to file($sm_server, FILE_SKIP_EMPTY_LINES).,None,None
+RETRIEVAL call to file($optim_folder . "sm_symbs.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).,None,None
+RETRIEVAL call to file($optim_folder . "sm_paths.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).,None,None
+RETRIEVAL call to file($optim_folder . "sm_symbs.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).,None,None
+RETRIEVAL call to file($optim_folder . "sm_paths.txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).,None,None
+STORAGE call to fwrite($sm_paths, $path).,None,None
+STORAGE call to fwrite($sm_symbs, $smile).,None,None
+STORAGE call to fwrite($sm_paths, $group).,None,None
+STORAGE call to fwrite($sm_symbs, $group).,None,None
+variable '$auth_state' of personal types {'state'} is found.,,None
+variable '$auth_state' of personal types {'state'} is found.,,None
+variable '$auth_state' of personal types {'state'} is found.,,None
+variable '$auth_state' of personal types {'state'} is found.,,None
+variable '$auth_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$new_connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$new_connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$new_connection_state' of personal types {'state'} is found.,,None
+variable '$new_connection_state' of personal types {'state'} is found.,,None
+variable '$user_pass' of personal types {'password'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+variable '$connection_state' of personal types {'state'} is found.,,None
+RETRIEVAL call to get_option("cf_webchat_show_ips", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cf_webchat_smilies_enabled") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cf_webchat_def_sound_state", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cf_webchat_ping_check", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cf_webchat_show_ips", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_option("cf_webchat_show_ips", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cf_webchat_smilies_enabled", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_option("cf_webchat_ping_check", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cf_webchat_ping_check", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_option("cf_webchat_def_sound_state", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cfw_ping_check", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,939 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on hemmy-core
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.503575.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.952493.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 129 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.783537.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.671714.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 853 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.138098.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 28 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.928463.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.097948.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 459 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:06.033277.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 6575
+Added 5104 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 6721
+Added 146 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.407661.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/hemmy-core.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/includes/class-hemmy-core-activator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/includes/class-hemmy-core-deactivator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/includes/class-hemmy-core-i18n.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/includes/class-hemmy-core-loader.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/includes/class-hemmy-core-metabox.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/includes/class-hemmy-core.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/includes/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/twitter/OAuth.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/twitter/twitteroauth.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/hemmy-core/widgets/class-hemmy-core-widgets.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.289791.
+
+129 PHP_REACHES edges created
+2 REACHES edges created
+853 PHP_REACHES edges created
+28 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+5563 PHP_REACHES edges created
+146 PHP_REACHES edges created
+6721 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 2516 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.050689.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 5 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:03.604614.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 181 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:05.721430.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 127 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.194484.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.287586.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.238427.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.024861.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035508.
+
+5 CALLS edges created
+308 PHP_REACHES edges created
+313 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 269 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.123127.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.188351.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'Feature Post'' cannot be parsed correct.
+HTML code '$'Related Post'' cannot be parsed correct.
+HTML code '$'Post Author Info'' cannot be parsed correct.
+HTML code '$'Post Page - Feature Image '' cannot be parsed correct.
+HTML code '$'Post Page - Sidebar'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_twitter_title")'' cannot be parsed correct.
+HTML code '$'$twitter_title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_id")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_id")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_twitter_id")'' cannot be parsed correct.
+HTML code '$'$twitter_id'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_consumer_key")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_consumer_key")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_twitter_consumer_key")'' cannot be parsed correct.
+HTML code '$'$twitter_consumer_key'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_consumer_secret")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_consumer_secret")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_twitter_consumer_secret")'' cannot be parsed correct.
+HTML code '$'$twitter_consumer_secret'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_access_token")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_access_token")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_twitter_access_token")'' cannot be parsed correct.
+HTML code '$'$twitter_access_token'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_access_secret")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_access_secret")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_twitter_access_secret")'' cannot be parsed correct.
+HTML code '$'$twitter_access_secret'' cannot be parsed correct.
+HTML code '$'wp_kses_post($args["before_widget"])'' cannot be parsed correct.
+HTML code '$'wp_kses_post($args["before_title"] . $widget_title . $args["after_title"])'' cannot be parsed correct.
+HTML code '$'$twitter_show_tweets'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_tweets")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_tweets")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_twitter_tweets")'' cannot be parsed correct.
+HTML code '$'$twitter_tweets'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_show_tweets")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_twitter_show_tweets")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_twitter_show_tweets")'' cannot be parsed correct.
+HTML code '$'$twitter_show_tweets'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("signup_text")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("signup_text")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_signup_text'' cannot be parsed correct.
+HTML code '$'Personal Information'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("collect_first")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("collect_first")'' cannot be parsed correct.
+HTML code '$'checked($instance["collect_first"], true, false)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("collect_first")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("collect_last")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("collect_last")'' cannot be parsed correct.
+HTML code '$'checked($instance["collect_last"], true, false)'' cannot be parsed correct.
+HTML code '$'Collect last name.'' cannot be parsed correct.
+HTML code '$'Notification'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("subtitle")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("subtitle")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("subtitle")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_subtitle'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("success_message")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("success_message")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("success_message")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_success_message'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("failure_message")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("failure_message")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("failure_message")'' cannot be parsed correct.
+HTML code '$'$tweet_user_screen_name'' cannot be parsed correct.
+HTML code '$'$tweet_id_str'' cannot be parsed correct.
+HTML code '$'$tweet_user_profile_image_url'' cannot be parsed correct.
+HTML code '$'$tweet_user_screen_name'' cannot be parsed correct.
+HTML code '$'$tweet_user_screen_name'' cannot be parsed correct.
+HTML code '$'$tweet_id_str'' cannot be parsed correct.
+HTML code '$'$tweet_user_screen_name'' cannot be parsed correct.
+HTML code '$'wp_kses_post($tweet_text)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($args["after_widget"])'' cannot be parsed correct.
+HTML code '$'General Settings'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy-mc-title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("current_mailing_list")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("current_mailing_list")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("current_mailing_list")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_failure_message'' cannot be parsed correct.
+HTML code '$'wp_kses_post($before_widget)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($before_title . $instance["title"] . $after_title)'' cannot be parsed correct.
+HTML code '$'stripslashes($instance["subtitle"])'' cannot be parsed correct.
+HTML code '$'stripslashes($instance["current_mailing_list"])'' cannot be parsed correct.
+HTML code '$'stripslashes($instance["signup_text"])'' cannot be parsed correct.
+HTML code '$'stripslashes($instance["signup_text"])'' cannot be parsed correct.
+HTML code '$'$success'' cannot be parsed correct.
+HTML code '$'$fail'' cannot be parsed correct.
+HTML code '$'wp_kses_post($after_widget)'' cannot be parsed correct.
+HTML code '$' selected="selected" '' cannot be parsed correct.
+HTML code '$'$list'' cannot be parsed correct.
+HTML code '$'$list'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("signup_text")'' cannot be parsed correct.
+HTML code '$'Sign Up Button Text :'' cannot be parsed correct.
+HTML code '$'$instagram_title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_username")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_username")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_instagram_username")'' cannot be parsed correct.
+HTML code '$'$instagram_username'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_post")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_post")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_instagram_post")'' cannot be parsed correct.
+HTML code '$'$instagram_post'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_post_size")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_post_size")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_instagram_post_size")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_post_target")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_post_target")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_instagram_post_target")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_link")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_link")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_instagram_link")'' cannot be parsed correct.
+HTML code '$'$instagram_link'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hemmy_instagram_title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hemmy_instagram_title")'' cannot be parsed correct.
+HTML code '$'$instagram_post_target'' cannot be parsed correct.
+HTML code '$'wp_kses_post($instagram_link)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($args["after_widget"])'' cannot be parsed correct.
+HTML code '$'wp_kses_post($args["before_widget"])'' cannot be parsed correct.
+HTML code '$'wp_kses_post($args["before_title"] . $widget_title . $args["after_title"])'' cannot be parsed correct.
+HTML code '$'wp_kses_post($media_array->get_error_message())'' cannot be parsed correct.
+HTML code '$'apply_filters("wpiw_list_class", "instagram-pics instagram-size-" . $instagram_post_size)'' cannot be parsed correct.
+HTML code '$'<li class=$liclass" ><a href="$item_link" target="$instagram_post_target"  class="apply_filters("wpiw_a_class", "")"><div class="insta-footer-img" style="background-image:url($item_$instagram_post_size);"></div></a></li'' cannot be parsed correct.
+HTML code '$'apply_filters("wpiw_link_class", "clear")'' cannot be parsed correct.
+HTML code '$'trim($instagram_username)'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</label>
+				<input type="number" id="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</label>
+				<input type="number" id="'' cannot be parsed correct.
+HTML code '$'hemmy-mc-form'' cannot be parsed correct.
+HTML code '$'zozo-mc-err'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</label>
+			<input type="number" id="'' cannot be parsed correct.
+HTML code '$'success'' cannot be parsed correct.
+HTML code '$'already'' cannot be parsed correct.
+HTML code '$'failure'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:16.457673.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.042368.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 12 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.669149.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PHPRetrievalDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running maxdbDetector
+### Start running TokyoTyrantDetector
+### Finish running MySQLiDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running SybaseDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running UserInputDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running WordPressRemoteDetector
+### Finish running WordPressRetrievalDetector
+### Finish running PhpCurlDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+widgets/class-hemmy-core-widgets.php:758
+  - Request variable '$_POST["hemmy_mc_first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name
+widgets/class-hemmy-core-widgets.php:758
+  - Request variable '$_POST["hemmy_mc_first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name
+widgets/class-hemmy-core-widgets.php:759
+  - Request variable '$_POST["hemmy_mc_last_name"]' of personal types {'last_name'} is found.
+  - Data types: last_name
+widgets/class-hemmy-core-widgets.php:759
+  - Request variable '$_POST["hemmy_mc_last_name"]' of personal types {'last_name'} is found.
+  - Data types: last_name
+widgets/class-hemmy-core-widgets.php:761
+  - Request variable '$_POST["hemmy_mc_email"]' of personal types {'email'} is found.
+  - Data types: email
+widgets/class-hemmy-core-widgets.php:761
+  - Request variable '$_POST["hemmy_mc_email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+twitter/OAuth.php:118
+  - hash_hmac called with unapproved hash algorithm sha1. Ignore if this is not encrypting personal information 
+
+twitter/OAuth.php:118
+  - SHA1 called with parameters []. Ignore if [] does not contain personal information.
+twitter/OAuth.php:477
+  - MD5 called with parameters [mt, rand]. Ignore if [mt, rand] does not contain personal information.
+widgets/class-hemmy-core-widgets.php:768
+  - MD5 called with parameters [email, strtolower]. Ignore if [email, strtolower] does not contain personal information. 
+
+twitter/OAuth.php:272
+  - RETRIEVAL call to file_get_contents(self"POST_INPUT").
+  - Data types: file 
+
+twitter/twitteroauth.php:128
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:83
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:83
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:85
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:87
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:92
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:97
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:160
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:619
+  - variable '$instagram_username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:632
+  - variable '$instagram_username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:694
+  - variable '$instagram_username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:709
+  - variable '$instagram_username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:710
+  - variable '$instagram_username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:743
+  - variable '$instagram_username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+widgets/class-hemmy-core-widgets.php:758
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+widgets/class-hemmy-core-widgets.php:759
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+widgets/class-hemmy-core-widgets.php:761
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+widgets/class-hemmy-core-widgets.php:764
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+widgets/class-hemmy-core-widgets.php:768
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+widgets/class-hemmy-core-widgets.php:775
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+widgets/class-hemmy-core-widgets.php:778
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+widgets/class-hemmy-core-widgets.php:779
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name 
+
+widgets/class-hemmy-core-widgets.php:99
+  - API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote
+widgets/class-hemmy-core-widgets.php:460
+  - API call to wp_remote_get("https://" . $dc . ".api.mailchimp.com/3.0/lists/?fields=lists", $args). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+widgets/class-hemmy-core-widgets.php:791
+  - API call to wp_remote_get("https://" . $dc . ".api.mailchimp.com/3.0/lists/" . esc_attr($list_id) . "/members/" . esc_attr($memberID), $args). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+includes/class-hemmy-core-metabox.php:83
+  - RETRIEVAL call to get_post_meta($post->ID, "hemmy_feature_post", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:84
+  - RETRIEVAL call to get_post_meta($post->ID, "hemmy_related_post", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:85
+  - RETRIEVAL call to get_post_meta($post->ID, "hemmy_post_author_info", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:86
+  - RETRIEVAL call to get_post_meta($post->ID, "hemmy_post_page_feature_img", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:87
+  - RETRIEVAL call to get_post_meta($post->ID, "hemmy_post_page_sidebar", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+widgets/class-hemmy-core-widgets.php:97
+  - RETRIEVAL call to get_transient("insta-a10-" . $transient_prefix . "-" . sanitize_title_with_dashes($username)) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+widgets/class-hemmy-core-widgets.php:197
+  - RETRIEVAL call to get_transient($transient_name) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site 
+
+includes/class-hemmy-core-metabox.php:151
+  - STORAGE call to update_post_meta($post_id, "hemmy_feature_post", sanitize_text_field(wp_unslash($_POST["hemmy_feature_post"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:155
+  - STORAGE call to delete_post_meta($post_id, "hemmy_feature_post") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:161
+  - STORAGE call to update_post_meta($post_id, "hemmy_related_post", sanitize_text_field(wp_unslash($_POST["hemmy_related_post"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:165
+  - STORAGE call to delete_post_meta($post_id, "hemmy_related_post") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:171
+  - STORAGE call to update_post_meta($post_id, "hemmy_post_author_info", sanitize_text_field(wp_unslash($_POST["hemmy_post_author_info"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:175
+  - STORAGE call to delete_post_meta($post_id, "hemmy_post_author_info") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:180
+  - STORAGE call to update_post_meta($post_id, "hemmy_post_page_feature_img", sanitize_text_field(wp_unslash($_POST["hemmy_post_page_feature_img"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:184
+  - STORAGE call to delete_post_meta($post_id, "hemmy_post_page_feature_img") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:189
+  - STORAGE call to update_post_meta($post_id, "hemmy_post_page_sidebar", sanitize_text_field(wp_unslash($_POST["hemmy_post_page_sidebar"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:193
+  - STORAGE call to delete_post_meta($post_id, "hemmy_post_page_sidebar") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+widgets/class-hemmy-core-widgets.php:160
+  - STORAGE call to set_transient("insta-a10-" . $transient_prefix . "-" . sanitize_title_with_dashes($username), $instagram, apply_filters("null_instagram_cache_time", HOUR_IN_SECONDS * 2)) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+widgets/class-hemmy-core-widgets.php:210
+  - STORAGE call to set_transient($transient_name, $tweets, HOUR_IN_SECONDS * 8) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site 
+
+twitter/OAuth.php:118
+  - CRYPTOGRAPHY call to hash_hmac("sha1", $base_string, $key, true). 
+
+includes/class-hemmy-core-metabox.php:155
+  - DELETION call to delete_post_meta($post_id, "hemmy_feature_post") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:165
+  - DELETION call to delete_post_meta($post_id, "hemmy_related_post") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:175
+  - DELETION call to delete_post_meta($post_id, "hemmy_post_author_info") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:184
+  - DELETION call to delete_post_meta($post_id, "hemmy_post_page_feature_img") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/class-hemmy-core-metabox.php:193
+  - DELETION call to delete_post_meta($post_id, "hemmy_post_page_sidebar") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+file
+	PHPRetrievalDetector.file_get_contents(self"POST_INPUT") - {'file'}
+first_name
+	VariableDetector.(unknown) - {'first_name'}
+	ArrayElementDetector.(unknown) - {'first_name'}
+	ArrayElementDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+last_name
+	ArrayElementDetector.(unknown) - {'last_name'}
+	ArrayElementDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	GenericEncryptionDetector.hash_hmac("sha1", $base_string, $key, true) - set()
+	PHPIncludedDetector.(unknown) - set()
+	HashDetector.(unknown) - set()
+post_meta
+	WordPressStorageDetector.update_post_meta($post_id, "hemmy_post_author_info", sanitize_text_field(wp_unslash($_POST["hemmy_post_author_info"]))) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "hemmy_post_page_sidebar", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "hemmy_post_page_sidebar", sanitize_text_field(wp_unslash($_POST["hemmy_post_page_sidebar"]))) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "hemmy_feature_post", sanitize_text_field(wp_unslash($_POST["hemmy_feature_post"]))) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "hemmy_feature_post") - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "hemmy_post_page_sidebar") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "hemmy_feature_post", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "hemmy_related_post") - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "hemmy_post_page_feature_img", sanitize_text_field(wp_unslash($_POST["hemmy_post_page_feature_img"]))) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "hemmy_related_post") - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "hemmy_feature_post") - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "hemmy_post_page_feature_img") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "hemmy_post_author_info", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "hemmy_post_page_feature_img", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "hemmy_related_post", sanitize_text_field(wp_unslash($_POST["hemmy_related_post"]))) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "hemmy_related_post", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "hemmy_post_page_feature_img") - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "hemmy_post_page_sidebar") - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "hemmy_post_author_info") - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "hemmy_post_author_info") - {'post_meta'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+site
+	WordPressStorageDetector.set_transient("insta-a10-" . $transient_prefix . "-" . sanitize_title_with_dashes($username), $instagram, apply_filters("null_instagram_cache_time", HOUR_IN_SECONDS * 2)) - {'site'}
+	WordPressRetrievalDetector.get_transient("insta-a10-" . $transient_prefix . "-" . sanitize_title_with_dashes($username)) - {'site'}
+	WordPressRetrievalDetector.get_transient($transient_name) - {'site'}
+	WordPressStorageDetector.set_transient($transient_name, $tweets, HOUR_IN_SECONDS * 8) - {'site'}
+user
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+user_meta
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.578996.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 54 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.184188.
+
+54 STORE_REACHES edges created
+54 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 176 nodes as PERSONAL
+In total, tainted 176 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 7 nodes as ENCRYPTED
+In total, tainted 7 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:04.411117.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:16.256866!
+Request variable '$_POST["hemmy_mc_first_name"]' of personal types {'first_name'} is found.,,None
+Request variable '$_POST["hemmy_mc_first_name"]' of personal types {'first_name'} is found.,,None
+Request variable '$_POST["hemmy_mc_last_name"]' of personal types {'last_name'} is found.,,None
+Request variable '$_POST["hemmy_mc_last_name"]' of personal types {'last_name'} is found.,,None
+Request variable '$_POST["hemmy_mc_email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["hemmy_mc_email"]' of personal types {'email'} is found.,,None
+DELETION call to delete_post_meta($post_id, "hemmy_feature_post") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, "hemmy_related_post") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, "hemmy_post_author_info") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, "hemmy_post_page_feature_img") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, "hemmy_post_page_sidebar") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+CRYPTOGRAPHY call to hash_hmac("sha1", $base_string, $key, true).,None,None
+hash_hmac called with unapproved hash algorithm sha1. Ignore if this is not encrypting personal information,sha1,None
+SHA1 called with parameters []. Ignore if [] does not contain personal information.,sha1,None
+MD5 called with parameters [mt, rand]. Ignore if [mt, rand] does not contain personal information.,md5,None
+MD5 called with parameters [email, strtolower]. Ignore if [email, strtolower] does not contain personal information.,md5,None
+RETRIEVAL call to file_get_contents(self"POST_INPUT").,None,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$instagram_username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$instagram_username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$instagram_username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$instagram_username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$instagram_username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$instagram_username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+API call to wp_remote_get("https://" . $dc . ".api.mailchimp.com/3.0/lists/?fields=lists", $args). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+API call to wp_remote_get("https://" . $dc . ".api.mailchimp.com/3.0/lists/" . esc_attr($list_id) . "/members/" . esc_attr($memberID), $args). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,['https://instagram.com/', 'https://instagram.com/explore/tags/']
+RETRIEVAL call to get_post_meta($post->ID, "hemmy_feature_post", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "hemmy_related_post", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "hemmy_post_author_info", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "hemmy_post_page_feature_img", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "hemmy_post_page_sidebar", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient($transient_name) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("insta-a10-" . $transient_prefix . "-" . sanitize_title_with_dashes($username)) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+STORAGE call to update_post_meta($post_id, "hemmy_feature_post", sanitize_text_field(wp_unslash($_POST["hemmy_feature_post"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, "hemmy_feature_post") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, "hemmy_related_post", sanitize_text_field(wp_unslash($_POST["hemmy_related_post"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, "hemmy_related_post") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, "hemmy_post_author_info", sanitize_text_field(wp_unslash($_POST["hemmy_post_author_info"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, "hemmy_post_author_info") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, "hemmy_post_page_feature_img", sanitize_text_field(wp_unslash($_POST["hemmy_post_page_feature_img"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, "hemmy_post_page_feature_img") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, "hemmy_post_page_sidebar", sanitize_text_field(wp_unslash($_POST["hemmy_post_page_sidebar"]))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, "hemmy_post_page_sidebar") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to set_transient("insta-a10-" . $transient_prefix . "-" . sanitize_title_with_dashes($username), $instagram, apply_filters("null_instagram_cache_time", HOUR_IN_SECONDS * 2)) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to set_transient($transient_name, $tweets, HOUR_IN_SECONDS * 8) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['user_meta', 'user']) stored through WordPress function "set_transient("insta-a10-" . $transient_prefix . "-" . sanitize_title_with_dashes($username), $instagram, apply_filters("null_instagram_cache_time", HOUR_IN_SECONDS * 2))", found in file widgets/class-hemmy-core-widgets.php at line 160. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through set_transient("insta-a10-" . $transient_prefix . "-" . sanitize_title_with_dashes($username), $instagram, apply_filters("null_instagram_cache_time", HOUR_IN_SECONDS * 2)) does not have corresponding deletion method. Storage method found in file widgets/class-hemmy-core-widgets.php at line 160. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 6766. Found in file widgets/class-hemmy-core-widgets.php at line 160 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party at "https://instagram.com/" used with data types ['user_meta', 'user'], found in file widgets/class-hemmy-core-widgets.php at line 99 . Personal data flows from sources with nodeID [6279, 6221, 10737, 6257, 6231, 10591]  
+
+[third_party] Third party at "https://instagram.com/explore/tags/" used with data types ['user_meta', 'user'], found in file widgets/class-hemmy-core-widgets.php at line 99 . Personal data flows from sources with nodeID [6279, 6221, 10737, 6257, 6231, 10591]  
+
+[third_party] Third party usage is CONFIRMED for data types ['user', 'user_meta'] 
+
+[encryption] API call that sends PII to unknown url uses unknown protocol. PII is insecurely encrypted with []. Found in file widgets/class-hemmy-core-widgets.php at line 791 
+
+[encryption] API call that sends PII to "https://instagram.com/" uses https. PII is insecurely encrypted with []. Found in file widgets/class-hemmy-core-widgets.php at line 99 
+
+[encryption] API call that sends PII to "https://instagram.com/explore/tags/" uses https. PII is insecurely encrypted with []. Found in file widgets/class-hemmy-core-widgets.php at line 99 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? True 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function hemmy-core_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+    //TODO: Delete the user data that was stored using Wordpress functions
+
+    //Below is the sample code for deleting user meta and may need to be modified to suit the plugin.
+    $user_id = get_user_by('email', $email_address)
+    $key = 'email' //Sample user meta key
+    if ( $customer->user_id > 0 ) {
+        //Delete user meta data by $key
+        delete_user_meta( $user_id, $key );
+    }
+        
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'hemmy-core' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function hemmy-core_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'hemmy-core' ),
+        'callback'             => 'hemmy-core_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'hemmy-core_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function hemmy-core_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'hemmy-core' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'hemmy-core' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'hemmy-core' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'hemmy-core', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'hemmy-core_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

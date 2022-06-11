@@ -1,0 +1,626 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on wp-notes-remover
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.533082.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.895402.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 67 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.687660.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.448194.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 379 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.652855.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 11 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.065170.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+Added 3 PHP_REACHES edges.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.086670.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 177 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.246904.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2210
+Added 1572 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2210
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.005203.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-notes-remover/config.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-notes-remover/menu.settings.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-notes-remover/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-notes-remover/wp-notes-remover.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-notes-remover/zzz_admin_sidebar.php' cannot be parsed correct.
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-notes-remover/zzz_newsletter_box.html
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-notes-remover/zzz_newsletter_box.html' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-notes-remover/lib/notes_remover.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-notes-remover/lib/notes_remover_util.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.872696.
+
+2 Nodes Created
+67 PHP_REACHES edges created
+1 REACHES edges created
+379 PHP_REACHES edges created
+2 CALLS edges created
+2 PHP_REACHES edges created
+1 CALLS edges created
+1 PHP_REACHES edges created
+5 CALLS edges created
+1000 PHP_REACHES edges created
+1752 PHP_REACHES edges created
+1 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2212 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 734 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.913223.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.152214.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 26 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.407846.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 30 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.158687.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.027045.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.205168.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008876.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.030471.
+
+56 PHP_REACHES edges created
+56 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 47 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.131964.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.093197.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'PHP_EOL<!-- $this_plugin_name -->
+				<style>.form-allowed-tags, .nocomments, .nocomments2 { display: none !important; } </style>
+			<!-- /$this_plugin_name -->PHP_EOL'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'$WebWeb_WP_NotesRemover_obj->msg("The plugin is active and running.
+                                        No additional action is required on your part.", 1)'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["PluginURI"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Name"])'' cannot be parsed correct.
+HTML code '$'urlencode($plugin_data["Description"])'' cannot be parsed correct.
+HTML code '$'str_replace(".php", "", basename($plugin_file))'' cannot be parsed correct.
+HTML code '$'str_replace(".php", "", basename($plugin_file))'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'get_plugin_data($plugin_file)_Name'' cannot be parsed correct.
+HTML code '$'get_plugin_data($plugin_file)_Description'' cannot be parsed correct.
+HTML code '$'get_plugin_data($plugin_file)_PluginURI'' cannot be parsed correct.
+HTML code '$'get_plugin_data($plugin_file)_PluginURI'' cannot be parsed correct.
+HTML code '$'str_replace(".php", "", basename($plugin_file))'' cannot be parsed correct.
+HTML code '$'str_replace(".php", "", basename($plugin_file))'' cannot be parsed correct.
+HTML code '$'str_replace(".php", "", basename($plugin_file))'' cannot be parsed correct.
+HTML code '$'str_replace(".php", "", basename($plugin_file))'' cannot be parsed correct.
+HTML code '$'http://localhost/projects/quick-contact/'' cannot be parsed correct.
+HTML code '$'<input type=\'hidden\' name=\'data[sys_info]\' value=\'http_build_query($hidden_data)\' />
+'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'$key: var_export($val, 1)
+'' cannot be parsed correct.
+HTML code '$'$WebWeb_WP_NotesRemover_obj->get("plugin_url")'' cannot be parsed correct.
+HTML code '$'$WebWeb_WP_NotesRemover_obj->generate_newsletter_box(["form_only" => 1, "src2" => "admin_sidebar"])'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_email" addthis:url="'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_myspace" addthis:url="'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_google" addthis:url="'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_digg" addthis:url="'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_delicious" addthis:url="'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_stumbleupon" addthis:url="'' cannot be parsed correct.
+HTML code '$'" />
+                                </div>-->
+                <!-- main content -->
+                <div id="post-body-content">
+
+                    <div class="meta-box-sortables ui-sortable">
+
+                        <div class="postbox">
+                            <div class="inside">
+                                WP Notes Remover plugin removes unnesessary technical information notes e.g. below the WordPress comments, comments are closed etc.
+
+                                <div class="message">
+                                    <p>'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_twitter" addthis:url="'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <!--<a class="addthis_button_google_plusone" g:plusone:count="false" addthis:url="'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_tumblr" addthis:url="'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_favorites" addthis:url="'' cannot be parsed correct.
+HTML code '$'" addthis:title="'' cannot be parsed correct.
+HTML code '$'" addthis:description="'' cannot be parsed correct.
+HTML code '$'"></a>
+                                        <a class="addthis_button_compact"></a>
+                                    </div>
+                                    <!-- The JS code is in the footer -->
+
+                                    <script type="text/javascript">
+                                    var addthis_config = {"data_track_clickback":true};
+                                    var addthis_share = {
+                                      templates: { twitter: \'Check out {{title}} at {{lurl}}\' }
+                                    }
+                                    </script>
+                                    <!-- AddThis Button START part2 -->
+                                    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+                                    <!-- AddThis Button END part2 -->
+                                </p>
+                            </div> <!-- .inside -->
+
+                        </div> <!-- .postbox -->
+
+                        <div class="postbox">
+                            <h3><span>Curious about our other products?</span></h3>
+                            <div class="inside">
+                                Visit <a href="http://orbisius.com/products/" target="_blank">http://orbisius.com/products/</a>
+                            </div> <!-- .inside -->
+                        </div> <!-- .postbox -->
+                    </div> <!-- .meta-box-sortables .ui-sortable -->
+
+                </div> <!-- post-body-content -->
+
+                <!-- sidebar -->
+                <div id="postbox-container-1" class="postbox-container">
+
+                    <div class="meta-box-sortables">
+						<!-- Hire Us -->
+                        <div class="postbox">
+                            <h3><span>Hire Us</span></h3>
+                            <div class="inside">
+                                Hire us to create a plugin/web/mobile app
+                                <br/><a href="http://orbisius.com/page/free-quote/?utm_source='' cannot be parsed correct.
+HTML code '$'"
+                                                    onclick="try { if (jQuery(\'#orbisius_woocommerce_ext_quick_order_msg\').val().trim() == \'\') { alert(\'Enter your message.\'); jQuery(\'#orbisius_woocommerce_ext_quick_order_msg\').focus(); return false; } } catch(e) {};" />
+                                        <br/>
+                                        What data will be sent
+                                        <a href=\'javascript:void(0);\'
+                                            onclick=\'jQuery(".orbisius_woocommerce_ext_quick_order_data_to_be_sent").toggle();\'>(show/hide)</a>
+                                        <div class="hide-if-js hide orbisius_woocommerce_ext_quick_order_data_to_be_sent">
+                                            <textarea class="widefat" rows="4" readonly="readonly" disabled="disabled">'' cannot be parsed correct.
+HTML code '$'Hi there!  I\'m just a plugin, not much I can do when called directly.'' cannot be parsed correct.
+HTML code '$'/zzz_media/star.png") no-repeat scroll 0 0 transparent;
+        padding: 0 0 3px 20px;
+    }
+
+    .zzz_app_admin_sidebar_like_box, .zzz_app_admin_sidebar_more_plugins {
+        clear: both;
+        padding-top: 10px;
+    }
+</style>
+<div class="zzz_app_admin_sidebar">
+        '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:08.895488.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046511.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 9 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.407279.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PHPStorageDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running SqlServerDetector
+### Start running UserInputDetector
+### Finish running PHPRetrievalDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running maxdbDetector
+### Start running WordPressStorageDetector
+### Finish running WordpressHashingFnDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+lib/notes_remover_util.php:98
+  - RETRIEVAL call to readfile($file).
+  - Data types: file
+lib/notes_remover_util.php:199
+  - RETRIEVAL call to fread($handle, filesize($file)).
+  - Data types: file 
+
+lib/notes_remover_util.php:174
+  - STORAGE call to fwrite($handle, $buffer).
+  - Data types: file 
+
+lib/notes_remover.php:214
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email
+lib/notes_remover.php:269
+  - object property '$this->plugin_business_email' of personal types {'email'} is found.
+  - Data types: email
+lib/notes_remover.php:282
+  - object property '$this->plugin_business_email_sandbox' of personal types {'email'} is found.
+  - Data types: email
+menu.settings.php:119
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email
+menu.settings.php:119
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email
+menu.settings.php:201
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email
+menu.settings.php:201
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email
+menu.settings.php:221
+  - object property '$current_user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.
+  - Data types: user, first_name, user_meta
+menu.settings.php:222
+  - object property '$current_user->last_name' of personal types {'user', 'last_name', 'user_meta'} is found.
+  - Data types: user, last_name, user_meta 
+
+lib/notes_remover.php:214
+  - variable '$user_email' of personal types {'email'} is found.
+  - Data types: email
+lib/notes_remover.php:218
+  - variable '$user_email' of personal types {'email'} is found.
+  - Data types: email
+menu.settings.php:119
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+menu.settings.php:132
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+menu.settings.php:201
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+menu.settings.php:233
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+lib/notes_remover.php:161
+  - RETRIEVAL call to get_option($this->plugin_settings_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/notes_remover.php:212
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+lib/notes_remover.php:296
+  - RETRIEVAL call to get_option("settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menu.settings.php:118
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+menu.settings.php:200
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta 
+
+lib/notes_remover.php:142
+  - STORAGE call to delete_option($this->plugin_settings_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+lib/notes_remover.php:180
+  - STORAGE call to update_option($this->plugin_settings_key, $opts) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+lib/notes_remover.php:142
+  - DELETION call to delete_option($this->plugin_settings_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+lib/notes_remover.php:142
+  - Uninstall deletion call: DELETION call to delete_option($this->plugin_settings_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+file
+	PHPRetrievalDetector.fread($handle, filesize($file)) - {'file'}
+	PHPRetrievalDetector.readfile($file) - {'file'}
+	PHPStorageDetector.fwrite($handle, $buffer) - {'file'}
+first_name
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+last_name
+	PropertyDetector.(unknown) - {'user', 'last_name', 'user_meta'}
+option
+	UninstallDetector.delete_option($this->plugin_settings_key) - {'option'}
+	WordPressRetrievalDetector.get_option($this->plugin_settings_key) - {'option'}
+	WordPressStorageDetector.update_option($this->plugin_settings_key, $opts) - {'option'}
+	WordPressRetrievalDetector.get_option("settings") - {'option'}
+	WordPressStorageDetector.delete_option($this->plugin_settings_key) - {'option'}
+	DeletionDetector.delete_option($this->plugin_settings_key) - {'option'}
+user
+	PropertyDetector.(unknown) - {'user', 'last_name', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+user_meta
+	PropertyDetector.(unknown) - {'user', 'last_name', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.131255.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 6 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.088840.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 3151
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 3329
+6 STORE_REACHES edges created
+6 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 52 nodes as PERSONAL
+In total, tainted 52 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.289800.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:44.841700!
+DELETION call to delete_option($this->plugin_settings_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to fread($handle, filesize($file)).,None,None
+RETRIEVAL call to readfile($file).,None,None
+STORAGE call to fwrite($handle, $buffer).,None,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+object property '$this->plugin_business_email' of personal types {'email'} is found.,,None
+object property '$this->plugin_business_email_sandbox' of personal types {'email'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+object property '$current_user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.,,None
+object property '$current_user->last_name' of personal types {'user', 'last_name', 'user_meta'} is found.,,None
+Uninstall deletion call: DELETION call to delete_option($this->plugin_settings_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+variable '$user_email' of personal types {'email'} is found.,,None
+variable '$user_email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_option($this->plugin_settings_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+STORAGE call to delete_option($this->plugin_settings_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option($this->plugin_settings_key, $opts) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

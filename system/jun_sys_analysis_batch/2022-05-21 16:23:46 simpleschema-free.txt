@@ -1,0 +1,348 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on simpleschema-free
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.715649.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.914870.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 12 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.324904.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 3 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.581797.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 460 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.041215.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.700667.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.138732.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 199 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.119008.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2821
+Added 2147 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3812
+Added 991 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.089056.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simpleschema-free/simpleschema-free.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.141596.
+
+12 PHP_REACHES edges created
+3 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2806 PHP_REACHES edges created
+991 PHP_REACHES edges created
+3812 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 923 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.064783.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.441606.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 6 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.686805.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 3 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.178409.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.042397.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.078313.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006100.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035740.
+
+9 PHP_REACHES edges created
+9 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 6 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.114870.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.138807.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$field_name'' cannot be parsed correct.
+HTML code '$'strtoupper(substr($field_name, 0, 1))substr($field_name, 1, strlen($field_name) - 1)'' cannot be parsed correct.
+HTML code '$'$field_inputType'' cannot be parsed correct.
+HTML code '$'Example: Mo,Tu,We,Th,Fr,Sa,Su 09:30-13:30 16:30-20:30'' cannot be parsed correct.
+HTML code '$'$this->get_field_id($field_name)'' cannot be parsed correct.
+HTML code '$'$this->get_field_name($field_name)'' cannot be parsed correct.
+HTML code '$'$this_$field_name'' cannot be parsed correct.
+HTML code '$'Example: Mo,Tu,We,Th,Fr,Sa,Su 09:30-13:30 16:30-20:30'' cannot be parsed correct.
+HTML code '$'$this->get_field_id($field_name)'' cannot be parsed correct.
+HTML code '$'$this->get_field_name($field_name)'' cannot be parsed correct.
+HTML code '$'$this_$field_name'' cannot be parsed correct.
+HTML code '$'$this_$field_name'' cannot be parsed correct.
+HTML code '$'$instance_block_class'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("block_css")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("block_css")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("block_css")'' cannot be parsed correct.
+HTML code '$'$instance_block_css'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'$instance_title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("serviceType")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("serviceType")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("serviceType")'' cannot be parsed correct.
+HTML code '$'$instance_serviceType'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("provider_name")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("provider_name")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("provider_name")'' cannot be parsed correct.
+HTML code '$'$instance_provider_name'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("services_data")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("services_data")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("services_data")'' cannot be parsed correct.
+HTML code '$'$instance_services_data'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("areas_data")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("areas_data")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("areas_data")'' cannot be parsed correct.
+HTML code '$'$instance_areas_data'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("areas_scope")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("areas_scope")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("areas_scope")'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("block_id")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("block_id")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("block_id")'' cannot be parsed correct.
+HTML code '$'$instance_block_id'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("block_class")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("block_class")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("block_class")'' cannot be parsed correct.
+HTML code '$'<br><br>'' cannot be parsed correct.
+HTML code '$'<p>Error</p>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:07.856282.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.053024.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 14 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.616854.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressStorageDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running maxdbDetector
+### Finish running MySQLiDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+simpleschema-free.php:383
+  - RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta
+simpleschema-free.php:475
+  - RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta
+simpleschema-free.php:568
+  - RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta 
+
+By data type:
+user_meta
+	WordPressRetrievalDetector.get_user_option("rich_editing") - {'user_meta'}
+	WordPressRetrievalDetector.get_user_option("rich_editing") - {'user_meta'}
+	WordPressRetrievalDetector.get_user_option("rich_editing") - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.214542.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.041181.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 3 nodes as PERSONAL
+In total, tainted 3 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.228322.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:35.282452!
+RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

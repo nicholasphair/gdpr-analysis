@@ -1,0 +1,654 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on mhr-banner
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.950263.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.977563.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.282739.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.494104.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 41 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.619557.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.721477.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.111671.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 34 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.907610.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 573
+Added 498 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2486
+Added 1913 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.203060.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mhr-banner/MHR-Banner.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.207144.
+
+573 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1913 PHP_REACHES edges created
+2486 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 193 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.996027.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.168147.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 7 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.798226.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 2 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.161918.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.030777.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.125453.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010057.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.041066.
+
+9 PHP_REACHES edges created
+9 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 7 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.127140.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.117863.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<script type="text/javascript" src="WP_PLUGIN_URL/str_replace(basename(), "", plugin_basename())anim.js"></script'' cannot be parsed correct.
+HTML code '$'<style type="text/css">
+#toppopin{
+position:absolute;
+background:$mhr_backg_color;
+width: 100%;
+height: $mhr_banner_heightpx;
+bottom: 0px;
+visibility: hidden;
+z-index: 100;
+}
+
+.bannerimg {
+background:url($mhr_banner_source) bottom center no-repeat;
+width:$mhr_banner_widthpx;
+margin:0 auto;
+height:get_option("mhr_banner_height")px;
+position:relative;
+}
+.myclickbtn {
+position:absolute;
+right:0;
+top:0;
+width:get_option("mhr_banner_width")px;
+height:get_option("mhr_banner_height")px;
+cursor:pointer;
+}
+#closebtn {
+position:absolute;
+top:8px;
+right:8px;
+}
+#closebtn a:hover {
+text-decoration:none;
+}
+#backlink {
+position:absolute;
+bottom:get_option("mhr_banner_height")px;
+right:20px;
+}
+</style> '' cannot be parsed correct.
+HTML code '$'<div id="closebtn"><a href="#" onClick="closebar(); return false"><img src="WP_PLUGIN_URL/str_replace(basename(), "", plugin_basename())close.png" border="0" width="15" height="15" /></a>
+</div>
+<div class="bannerimg" width="100%">
+<div class="myclickbtn" onClick=window.open("get_option("mhr_click_url")")></div>
+</div>
+</div>'' cannot be parsed correct.
+HTML code '$'get_option("mhr_banner_source")'' cannot be parsed correct.
+HTML code '$'get_option("mhr_click_url")'' cannot be parsed correct.
+HTML code '$'get_option("mhr_backg_color")'' cannot be parsed correct.
+HTML code '$'WP_PLUGIN_URL/str_replace(basename(), "", plugin_basename())'' cannot be parsed correct.
+HTML code '$'get_option("mhr_backg_color")'' cannot be parsed correct.
+HTML code '$'get_option("mhr_banner_height")'' cannot be parsed correct.
+HTML code '$'get_option("mhr_banner_width")'' cannot be parsed correct.
+HTML code '$'get_option("mhr_background_height")'' cannot be parsed correct.
+HTML code '$'get_option("mhr_background_bottom")'' cannot be parsed correct.
+HTML code '$'get_option("MHR_Show_banner_every")'' cannot be parsed correct.
+HTML code '$'get_option("MHR_stop_Show_banner_after")'' cannot be parsed correct.
+HTML code '$'WP_PLUGIN_URL/str_replace(basename(), "", plugin_basename())'' cannot be parsed correct.
+HTML code '$'
+<!-- MHR Banner (http://www.mahadirlab.com/en/mhr-banner/)-->
+'' cannot be parsed correct.
+HTML code '$'<div id="toppopin" style="visibility: visible; left: 0px; bottom: 0px;">'' cannot be parsed correct.
+HTML code '$'<div id="backlink"><a href="http://www.mahadirlab.com/en/mhr-banner/" title="MHR Banner" target="_blank">MHR Banner</a></div>'' cannot be parsed correct.
+HTML code '$'
+<!-- MHR Banner (http://www.mahadirlab.com/en/mhr-banner/)-->
+'' cannot be parsed correct.
+HTML code '$'<div class="updated" style="color:green;font-weight:bold;padding:4px;margin:2px 0;"><p>Settings saved</p></div>'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'ColorPicker2.js"></script>
+                <script language="JavaScript">
+                var cp = new ColorPicker(\'window\'); // Popup window
+                var cp2 = new ColorPicker(); // DIV style
+                </script>
+                <input name="mhr_backg_color" size="20" value="'' cannot be parsed correct.
+HTML code '$'checked="yes"'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.704729.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.067989.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 3 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.362649.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running HashDetector
+### Start running ParadoxDetector
+### Finish running Oci8Detector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running ArrayElementDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running maxdbDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+MHR-Banner.php:46
+  - RETRIEVAL call to get_option("mhr_banner_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:47
+  - RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:48
+  - RETRIEVAL call to get_option("MHR_Show_banner_every") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:49
+  - RETRIEVAL call to get_option("MHR_stop_Show_banner_after") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:50
+  - RETRIEVAL call to get_option("random") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:66
+  - RETRIEVAL call to get_option("cookie_reseted") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:80
+  - RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:81
+  - RETRIEVAL call to get_option("MHR_Show_banner_every") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:82
+  - RETRIEVAL call to get_option("MHR_stop_Show_banner_after") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:83
+  - RETRIEVAL call to get_option("random") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:144
+  - RETRIEVAL call to get_option("MHR_backlink") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:202
+  - RETRIEVAL call to get_option("mhr_banner_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:204
+  - RETRIEVAL call to get_option("mhr_banner_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:211
+  - RETRIEVAL call to get_option("mhr_banner_source") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:217
+  - RETRIEVAL call to get_option("mhr_click_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:228
+  - RETRIEVAL call to get_option("mhr_backg_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:237
+  - RETRIEVAL call to get_option("mhr_backg_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:249
+  - RETRIEVAL call to get_option("mhr_banner_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:253
+  - RETRIEVAL call to get_option("mhr_banner_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:257
+  - RETRIEVAL call to get_option("mhr_background_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:261
+  - RETRIEVAL call to get_option("mhr_background_bottom") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:265
+  - RETRIEVAL call to get_option("MHR_backlink") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:276
+  - RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:277
+  - RETRIEVAL call to get_option("MHR_Show_banner_every") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:280
+  - RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:281
+  - RETRIEVAL call to get_option("MHR_stop_Show_banner_after") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:284
+  - RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:370
+  - RETRIEVAL call to get_option("mhr_banner_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:373
+  - RETRIEVAL call to get_option("mhr_banner_source") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:374
+  - RETRIEVAL call to get_option("mhr_click_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:375
+  - RETRIEVAL call to get_option("mhr_backg_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:376
+  - RETRIEVAL call to get_option("mhr_banner_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:377
+  - RETRIEVAL call to get_option("mhr_banner_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:378
+  - RETRIEVAL call to get_option("mhr_background_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+MHR-Banner.php:379
+  - RETRIEVAL call to get_option("mhr_background_bottom") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+MHR-Banner.php:32
+  - STORAGE call to update_option("mhr_banner_status", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:33
+  - STORAGE call to update_option("mhr_banner_source", $current_url . "banner2.gif") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:34
+  - STORAGE call to update_option("mhr_click_url", "http://www.mahadirlab.com/en/mhr-banner/") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:35
+  - STORAGE call to update_option("mhr_backg_color", "#FFFFFF") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:36
+  - STORAGE call to update_option("mhr_banner_height", 78) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:37
+  - STORAGE call to update_option("mhr_banner_width", 800) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:38
+  - STORAGE call to update_option("mhr_background_height", 78) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:39
+  - STORAGE call to update_option("mhr_background_bottom", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:40
+  - STORAGE call to update_option("MHR_backlink", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:41
+  - STORAGE call to update_option("MHR_Show_banner_radio", 3) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:42
+  - STORAGE call to update_option("random", rand()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:67
+  - STORAGE call to update_option("cookie_reseted", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:170
+  - STORAGE call to update_option("random", rand()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:171
+  - STORAGE call to update_option("cookie_reseted", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:175
+  - STORAGE call to update_option("mhr_banner_status", $_POST["mhr_banner_status"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:176
+  - STORAGE call to update_option("mhr_banner_source", $_POST["mhr_banner_source"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:177
+  - STORAGE call to update_option("mhr_click_url", $_POST["mhr_click_url"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:178
+  - STORAGE call to update_option("mhr_backg_color", $_POST["mhr_backg_color"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:179
+  - STORAGE call to update_option("mhr_banner_height", $_POST["mhr_banner_height"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:180
+  - STORAGE call to update_option("mhr_banner_width", $_POST["mhr_banner_width"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:181
+  - STORAGE call to update_option("mhr_background_height", $_POST["mhr_background_height"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:182
+  - STORAGE call to update_option("mhr_background_bottom", $_POST["mhr_background_bottom"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:183
+  - STORAGE call to update_option("MHR_backlink", $_POST["MHR_backlink"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:184
+  - STORAGE call to update_option("MHR_Show_banner_radio", $_POST["MHR_Show_banner_radio"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:185
+  - STORAGE call to update_option("MHR_Show_banner_every", $_POST["MHR_Show_banner_every"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+MHR-Banner.php:186
+  - STORAGE call to update_option("MHR_stop_Show_banner_after", $_POST["MHR_stop_Show_banner_after"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressStorageDetector.update_option("cookie_reseted", 0) - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_height") - {'option'}
+	WordPressRetrievalDetector.get_option("random") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_background_height") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_background_bottom") - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_Show_banner_radio") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_click_url") - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_Show_banner_radio") - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_Show_banner_radio") - {'option'}
+	WordPressStorageDetector.update_option("random", rand()) - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_stop_Show_banner_after") - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_stop_Show_banner_after") - {'option'}
+	WordPressStorageDetector.update_option("mhr_banner_width", $_POST["mhr_banner_width"]) - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_Show_banner_every") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_width") - {'option'}
+	WordPressRetrievalDetector.get_option("random") - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_Show_banner_every") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_click_url") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_source") - {'option'}
+	WordPressStorageDetector.update_option("mhr_banner_status", 1) - {'option'}
+	WordPressStorageDetector.update_option("mhr_banner_status", $_POST["mhr_banner_status"]) - {'option'}
+	WordPressStorageDetector.update_option("MHR_Show_banner_every", $_POST["MHR_Show_banner_every"]) - {'option'}
+	WordPressStorageDetector.update_option("MHR_backlink", $_POST["MHR_backlink"]) - {'option'}
+	WordPressStorageDetector.update_option("mhr_click_url", $_POST["mhr_click_url"]) - {'option'}
+	WordPressStorageDetector.update_option("MHR_Show_banner_radio", 3) - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_width") - {'option'}
+	WordPressStorageDetector.update_option("mhr_backg_color", $_POST["mhr_backg_color"]) - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_backlink") - {'option'}
+	WordPressStorageDetector.update_option("mhr_click_url", "http://www.mahadirlab.com/en/mhr-banner/") - {'option'}
+	WordPressStorageDetector.update_option("random", rand()) - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_background_bottom") - {'option'}
+	WordPressStorageDetector.update_option("mhr_background_bottom", 0) - {'option'}
+	WordPressStorageDetector.update_option("MHR_backlink", 1) - {'option'}
+	WordPressStorageDetector.update_option("mhr_banner_source", $_POST["mhr_banner_source"]) - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_status") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_backg_color") - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_Show_banner_every") - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_Show_banner_radio") - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_Show_banner_radio") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_status") - {'option'}
+	WordPressStorageDetector.update_option("mhr_background_height", 78) - {'option'}
+	WordPressStorageDetector.update_option("mhr_banner_height", $_POST["mhr_banner_height"]) - {'option'}
+	WordPressStorageDetector.update_option("mhr_background_height", $_POST["mhr_background_height"]) - {'option'}
+	WordPressStorageDetector.update_option("MHR_stop_Show_banner_after", $_POST["MHR_stop_Show_banner_after"]) - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_stop_Show_banner_after") - {'option'}
+	WordPressStorageDetector.update_option("mhr_banner_width", 800) - {'option'}
+	WordPressStorageDetector.update_option("mhr_banner_height", 78) - {'option'}
+	WordPressStorageDetector.update_option("cookie_reseted", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("MHR_backlink") - {'option'}
+	WordPressRetrievalDetector.get_option("cookie_reseted") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_background_height") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_backg_color") - {'option'}
+	WordPressStorageDetector.update_option("MHR_Show_banner_radio", $_POST["MHR_Show_banner_radio"]) - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_source") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_backg_color") - {'option'}
+	WordPressStorageDetector.update_option("mhr_background_bottom", $_POST["mhr_background_bottom"]) - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_status") - {'option'}
+	WordPressStorageDetector.update_option("mhr_banner_source", $current_url . "banner2.gif") - {'option'}
+	WordPressStorageDetector.update_option("mhr_backg_color", "#FFFFFF") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_height") - {'option'}
+	WordPressRetrievalDetector.get_option("mhr_banner_status") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.156552.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 910 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.495825.
+
+910 STORE_REACHES edges created
+910 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.007279.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:29.223421!
+RETRIEVAL call to get_option("MHR_backlink") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_source") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_click_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_backg_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_backg_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_background_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_background_bottom") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_backlink") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_Show_banner_every") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_stop_Show_banner_after") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_source") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_click_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_backg_color") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_background_height") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_background_bottom") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mhr_banner_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_Show_banner_every") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_stop_Show_banner_after") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("random") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("cookie_reseted") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_Show_banner_radio") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_Show_banner_every") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MHR_stop_Show_banner_after") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("random") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("random", rand()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("cookie_reseted", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_banner_status", $_POST["mhr_banner_status"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_banner_source", $_POST["mhr_banner_source"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_click_url", $_POST["mhr_click_url"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_backg_color", $_POST["mhr_backg_color"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_banner_height", $_POST["mhr_banner_height"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_banner_width", $_POST["mhr_banner_width"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_background_height", $_POST["mhr_background_height"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_background_bottom", $_POST["mhr_background_bottom"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("MHR_backlink", $_POST["MHR_backlink"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("MHR_Show_banner_radio", $_POST["MHR_Show_banner_radio"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("MHR_Show_banner_every", $_POST["MHR_Show_banner_every"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("MHR_stop_Show_banner_after", $_POST["MHR_stop_Show_banner_after"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_banner_status", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_banner_source", $current_url . "banner2.gif") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_click_url", "http://www.mahadirlab.com/en/mhr-banner/") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_backg_color", "#FFFFFF") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_banner_height", 78) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_banner_width", 800) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_background_height", 78) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mhr_background_bottom", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("MHR_backlink", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("MHR_Show_banner_radio", 3) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("random", rand()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("cookie_reseted", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

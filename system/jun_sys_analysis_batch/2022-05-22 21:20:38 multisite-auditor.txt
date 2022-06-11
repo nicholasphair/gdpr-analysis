@@ -1,0 +1,624 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on multisite-auditor
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.498634.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.835837.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 5 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.323903.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.401819.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 601 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.911451.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 28 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.955655.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.100055.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 374 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:05.644340.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3538
+Added 2530 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3822
+Added 284 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.473861.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/database.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/functions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/multisite-auditor.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/pages.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/admin/empty.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/admin/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/admin/plugin_info.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/admin/plugins.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/admin/sites.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/admin/theme_info.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/admin/themes.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/admin/theme_swap.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/multisite-auditor/google-charts/class-googlecharts.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.282147.
+
+606 PHP_REACHES edges created
+28 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2904 PHP_REACHES edges created
+284 PHP_REACHES edges created
+3822 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1350 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.088806.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 1 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.217861.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 35 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.503534.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 26 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.166639.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.180324.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.313616.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008462.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.054619.
+
+1 CALLS edges created
+61 PHP_REACHES edges created
+62 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 49 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.109482.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+20 SQL operations to process.
+CREATE TABLE $wpdbMSA_themes (
+		blogID int NOT NULL,
+		themeName varchar(255),
+		blogURL varchar(255),
+		blogName varchar (255),
+		dateCreated datetime,
+		activateDate datetime,
+		PRIMARY KEY  (blogID)
+		);
+SQL command (CREATE TABLE $wpdbMSA_themes ( blogID int NOT NULL, themeName varchar(255), blogURL varchar(255), blogName varchar (255), dateCreated datetime, activateDate datetime, PRIMARY KEY (blogID) );) cannot be parsed correct.
+CREATE TABLE $wpdbMSA_plugins (
+		ID int NOT NULL AUTO_INCREMENT,
+		blogID int,
+		pluginName varchar(255),
+		blogURL varchar(255),
+		blogName varchar (255),
+		dateCreated datetime,		
+		PRIMARY KEY  (ID)
+		);
+SQL command (CREATE TABLE $wpdbMSA_plugins ( ID int NOT NULL AUTO_INCREMENT, blogID int, pluginName varchar(255), blogURL varchar(255), blogName varchar (255), dateCreated datetime, PRIMARY KEY (ID) );) cannot be parsed correct.
+DELETE FROM $wpdbMSA_plugins WHERE blogID=get_current_blog_id() AND pluginName = %s
+DELETE FROM $wpdbMSA_plugins WHERE blogID=get_current_blog_id() AND pluginName = explode("/", $pluginName)_0
+DELETE FROM $wpdbMSA_plugins WHERE blogID=get_current_blog_id() AND pluginName = explode("/", $pluginName)_0
+SQL command (DELETE FROM $wpdbMSA_plugins WHERE blogID=get_current_blog_id() AND pluginName = explode("/", $pluginName)_0) cannot be parsed correct.
+DELETE FROM $wpdbMSA_themes WHERE blogID = $blogID
+DELETE FROM $wpdbMSA_themes WHERE blogID = $blogID
+SQL command (DELETE FROM $wpdbMSA_themes WHERE blogID = $blogID) cannot be parsed correct.
+DELETE FROM $wpdbMSA_plugins WHERE blogID = $blogID
+DELETE FROM $wpdbMSA_plugins WHERE blogID = $blogID
+SQL command (DELETE FROM $wpdbMSA_plugins WHERE blogID = $blogID) cannot be parsed correct.
+DELETE FROM $wpdbMSA_themes WHERE blogID = $blogInfo_blogID
+DELETE FROM $wpdbMSA_themes WHERE blogID = $blogInfo_blogID
+SQL command (DELETE FROM $wpdbMSA_themes WHERE blogID = $blogInfo_blogID) cannot be parsed correct.
+INSERT into $wpdbMSA_themes (blogID, themeName, blogName, blogURL, dateCreated, activateDate) 
+SQL command (INSERT into $wpdbMSA_themes (blogID, themeName, blogName, blogURL, dateCreated, activateDate) ) cannot be parsed correct.
+INSERT into $wpdbMSA_plugins (blogID, pluginName, blogName, blogURL, dateCreated) 
+SQL command (INSERT into $wpdbMSA_plugins (blogID, pluginName, blogName, blogURL, dateCreated) ) cannot be parsed correct.
+UPDATE $wpdbMSA_themes SET themeName = '$_GET_newTheme' WHERE blogID = %d
+UPDATE $wpdbMSA_themes SET themeName = '$_GET_newTheme' WHERE blogID = $blogInfo_blogID
+UPDATE $wpdbMSA_themes SET themeName = '$_GET_newTheme' WHERE blogID = $blogInfo_blogID
+SQL command (UPDATE $wpdbMSA_themes SET themeName = '$_GET_newTheme' WHERE blogID = $blogInfo_blogID) cannot be parsed correct.
+SELECT blog_id FROM $wpdbblogs
+SQL command (SELECT blog_id FROM $wpdbblogs) cannot be parsed correct.
+Select * FROM $wpdbMSA_themes WHERE themeName=$_GET_themeName
+SQL command (Select * FROM $wpdbMSA_themes WHERE themeName=$_GET_themeName) cannot be parsed correct.
+Select * FROM $wpdbMSA_plugins WHERE pluginName=$pluginName
+SQL command (Select * FROM $wpdbMSA_plugins WHERE pluginName=$pluginName) cannot be parsed correct.
+Select * FROM $wpdbMSA_plugins
+SQL command (Select * FROM $wpdbMSA_plugins) cannot be parsed correct.
+DELETE FROM $wpdbMSA_themes
+SQL command (DELETE FROM $wpdbMSA_themes) cannot be parsed correct.
+DELETE FROM $wpdbMSA_plugins
+SQL command (DELETE FROM $wpdbMSA_plugins) cannot be parsed correct.
+INSERT into $wpdbMSA_themes (blogID, themeName, blogName, blogURL, dateCreated) 
+SQL command (INSERT into $wpdbMSA_themes (blogID, themeName, blogName, blogURL, dateCreated) ) cannot be parsed correct.
+INSERT into $wpdbMSA_plugins (blogID, pluginName, blogName, blogURL, dateCreated) 
+SQL command (INSERT into $wpdbMSA_plugins (blogID, pluginName, blogName, blogURL, dateCreated) ) cannot be parsed correct.
+SELECT themeName FROM $wpdbMSA_themes Group By themeName
+SQL command (SELECT themeName FROM $wpdbMSA_themes Group By themeName) cannot be parsed correct.
+SELECT * FROM $wpdbMSA_themes
+SQL command (SELECT * FROM $wpdbMSA_themes) cannot be parsed correct.
+jquery-ui-core
+SQL command (jquery-ui-core) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [2703, 2727, 2964, 3050, 3085, 3339, 3369, 3464, 3525, 3574, 3661, 3714, 3756, 3821, 3844, 4033, 4105, 4181, 4243, 5180]
+Added 0 SQL nodes. 0 out of 20 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:08.897673.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<tr class=active"'' cannot be parsed correct.
+HTML code '$'<td valign="top" width="200px" class="tdActive"'' cannot be parsed correct.
+HTML code '$'<span style="font-size:14px"><a href="admin.php?page=multisite-auditor-plugin-info&pluginName=$thisPlugin"$pluginObject_Name</a></span>'' cannot be parsed correct.
+HTML code '$'$pluginObject_Description'' cannot be parsed correct.
+HTML code '$'<br/><span style="font-size:9px">Version $pluginObject_Version</span>'' cannot be parsed correct.
+HTML code '$'count($blogList)'' cannot be parsed correct.
+HTML code '$'$siteObject_blogID'' cannot be parsed correct.
+HTML code '$'$siteObject_blogName'' cannot be parsed correct.
+HTML code '$'<a href=$siteObject_blogURL" target="blank">$siteObject_blogURL</a>'' cannot be parsed correct.
+HTML code '$'<td valign="top"></td>'' cannot be parsed correct.
+HTML code '$'<h2>count($mySites) sites | count($myThemes) themes | count($myPlugins) plugins</h2>'' cannot be parsed correct.
+HTML code '$'Last Audit Date : date("jS M Y, g:i a", $MSA_run_date)<br/>'' cannot be parsed correct.
+HTML code '$'Most popular theme : <b>$currentThemesCountArray</b><hr/>'' cannot be parsed correct.
+HTML code '$'Most popular plugin : <b>'' cannot be parsed correct.
+HTML code '$'Average plugins activated per site : <b>round($siteCount / $totalPluginCount)</b><hr/>'' cannot be parsed correct.
+HTML code '$'<h1>Plugin overview : get_plugin_data($pluginRef, true)_Name</h1>'' cannot be parsed correct.
+HTML code '$'count($blogList) blogs currently using this plugin.<br/><br/>'' cannot be parsed correct.
+HTML code '$'count($pluginArray) Plugins<br/>'' cannot be parsed correct.
+HTML code '$'</a>'' cannot be parsed correct.
+HTML code '$'<h1>Theme : $_GET</h1>'' cannot be parsed correct.
+HTML code '$'This will swap all blogs currently using <b>$_GET"</b> to the theme <b>"$_POST"</b><hr/'' cannot be parsed correct.
+HTML code '$'<a href="admin.php?page=multisite-auditor-theme-swap&oldTheme$_GET_themeName&newTheme=$_POST_targetTheme" class="button-primary">Yes, swap theme</a> '' cannot be parsed correct.
+HTML code '$'<a href="?page=multisite-auditor-theme-info&themeName$_GET_themeName" class="button">Cancel</a>'' cannot be parsed correct.
+HTML code '$'<form action="admin.php?page=multisite-auditor-theme-info&themeName$_GET_themeName&action=swapThemeCheck" method="post">'' cannot be parsed correct.
+HTML code '$'<option value=$_POST"'' cannot be parsed correct.
+HTML code '$'$themeObject'' cannot be parsed correct.
+HTML code '$'count($blogList) blogs currently using this theme.<br/><br/>'' cannot be parsed correct.
+HTML code '$'<h2>count($totalBlogsLeft) blogs left to swap</h2>'' cannot be parsed correct.
+HTML code '$'Swapping theme for Blog $blogInfo_blogName"<hr/'' cannot be parsed correct.
+HTML code '$'$_GET_oldTheme'' cannot be parsed correct.
+HTML code '$'$_GET_newTheme'' cannot be parsed correct.
+HTML code '$'<tr class=tableOK"'' cannot be parsed correct.
+HTML code '$'<span style="font-size:14px"><a href="admin.php?page=multisite-auditor-theme-info&themeName=$thisTheme"$themeObject</a></span>'' cannot be parsed correct.
+HTML code '$'<br/>$disabledThemeStr'' cannot be parsed correct.
+HTML code '$'<br/><span style="font-size:9px">This is a child theme of <b>$themeObject->get("Template")</b></span>'' cannot be parsed correct.
+HTML code '$'$themeObject->get("Description")'' cannot be parsed correct.
+HTML code '$'<br/><span style="font-size:9px">Version $themeObject->get("Version")</span>'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'Auditing blog ID :$allSites_$_GET_blogPage (get_blog_details($blogID)_blogname)<hr/>'' cannot be parsed correct.
+HTML code '$'$_GET_blogPage'' cannot be parsed correct.
+HTML code '$'$chartType'' cannot be parsed correct.
+HTML code '$'[ \'$keyName\', \'$valName\' ],'' cannot be parsed correct.
+HTML code '$'$elementID'' cannot be parsed correct.
+HTML code '$'$title'' cannot be parsed correct.
+HTML code '$'<div style=width: 600px; height: 300px;" id="$elementID"></div'' cannot be parsed correct.
+HTML code '$'<h3>Auditing <b>count($allSites)</b> blogs.</h3>'' cannot be parsed correct.
+HTML code '$'<span id="percent">round($minArrayVal / $blogCount * 100, 2)%</span>'' cannot be parsed correct.
+HTML code '$'
+			#progress {
+				width: 500px;   
+				border: 1px solid #aaa;
+				position: relative;
+				padding: 2px;
+			}
+			
+			#percent {
+				text-shadow: 1px 1px white;
+				font-size:18px;
+				position: absolute;   
+				left: 50%;
+				top: 25%;
+			}
+			
+			#bar {
+				height: 30px;
+				background: -webkit-linear-gradient(#2ac151, #073200); /* For Safari 5.1 to 6.0 */
+				background: -o-linear-gradient(#2ac151, #073200); /* For Opera 11.1 to 12.0 */
+				background: -moz-linear-gradient(#2ac151, #073200); /* For Firefox 3.6 to 15 */
+				background: linear-gradient(#2ac151, #073200); /* Standard syntax (must be last) */
+			
+			
+			
+			width: round($minArrayVal / $blogCount * 100, 2)%;
+			}			
+			'' cannot be parsed correct.
+HTML code '$'<h1>Data not yet available</h1>'' cannot be parsed correct.
+HTML code '$'Please run the <a href="?page=multisite-auditor-overview">network auditor</a> to view data on your themes and plugins'' cannot be parsed correct.
+HTML code '$'<h1>Audit Complete</h1>'' cannot be parsed correct.
+HTML code '$'<div class="updated">Audit Run succesfully!</div><hr/>'' cannot be parsed correct.
+HTML code '$'<h1>Welcome to the Wordpress Multisite Auditor</h1>'' cannot be parsed correct.
+HTML code '$'<h2>How to use this tool</h2>'' cannot be parsed correct.
+HTML code '$'Click the button below to audit your WP Multisite Network.<br/><br/>'' cannot be parsed correct.
+HTML code '$'<b>You\'ll only have to do this once,</b> but if you have thousands of sites, it may take a few minutes to complete.'' cannot be parsed correct.
+HTML code '$'<br/>Don\'t worry, it won\'t time out and you\'ll be able to see how far through the audit progress you are.'' cannot be parsed correct.
+HTML code '$'<hr/>'' cannot be parsed correct.
+HTML code '$'<b>Once your network has been audited this tool will automatically update data regarding plugins and themes when they are activated and deactivated.</b>'' cannot be parsed correct.
+HTML code '$'<hr/><a href="admin.php?page=multisite-auditor-overview&action=MSA_audit&blogPage=0" class="button-primary">'' cannot be parsed correct.
+HTML code '$'Click here to run the Multisite Auditor</a>'' cannot be parsed correct.
+HTML code '$'<h1>Overview</h1>'' cannot be parsed correct.
+HTML code '$'<br/>Network activated'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td valign="top" style="color:#808080;">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td width="100px" valign="top">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<h1>Sites</h1> '' cannot be parsed correct.
+HTML code '$'<table id="sitesTable">'' cannot be parsed correct.
+HTML code '$'<thead><tr><th>Blog ID</th><th>Blog Name</th><th>URL</th><th>Theme</th><th>Plugins</th></thead>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td valign="top" width="20px" valign="top">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td valign="top">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td valign="top">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<div style="float:left; width:500px">'' cannot be parsed correct.
+HTML code '$'<span class="smallText greyText">Your network audit is up to date.<br/>However, if you manually remove themes or plugins you may wish to re-audit.</span>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div id="rerunAuditBox">'' cannot be parsed correct.
+HTML code '$'<a href="admin.php?page=multisite-auditor-overview&action=MSA_audit&blogPage=0" class="button-primary">'' cannot be parsed correct.
+HTML code '$'Re-run Audit.</a>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div style="clear:both"></div>'' cannot be parsed correct.
+HTML code '$'<div class="infoDiv">'' cannot be parsed correct.
+HTML code '$'<h3>Themes</h3>'' cannot be parsed correct.
+HTML code '$'<div class="content">'' cannot be parsed correct.
+HTML code '$'<a href="?page=multisite-auditor-themes">View detailed theme breakdown</a>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div class="infoDiv">'' cannot be parsed correct.
+HTML code '$'<h3>Plugins</h3>'' cannot be parsed correct.
+HTML code '$'<div class="content">'' cannot be parsed correct.
+HTML code '$'<br/>'' cannot be parsed correct.
+HTML code '$'<a href="?page=multisite-auditor-plugins">View detailed plugin breakdown</a>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'No plugin found'' cannot be parsed correct.
+HTML code '$'<a href="admin.php?page=multisite-auditor-plugins">Back to plugin list</a><hr/>'' cannot be parsed correct.
+HTML code '$'<table id="pluginBlogsTable">'' cannot be parsed correct.
+HTML code '$'<thead><tr><th width="10">ID</th><th>Blog Name</th><th>URL</th><th>Date Created</th></thead>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<h1>Plugins</h1> '' cannot be parsed correct.
+HTML code '$'<table id="pluginsTable">'' cannot be parsed correct.
+HTML code '$'<thead><tr><th>Plugins</th><th>Description</th><th>Number</th></thead>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<a href="admin.php?page=multisite-auditor-themes">Back to theme list</a><hr/>'' cannot be parsed correct.
+HTML code '$'No theme found'' cannot be parsed correct.
+HTML code '$'<div class="error">'' cannot be parsed correct.
+HTML code '$'<span class="failText">Are you sure you want to do this?</span><br/><br/>'' cannot be parsed correct.
+HTML code '$'</div><br/>'' cannot be parsed correct.
+HTML code '$'Swap these sites to '' cannot be parsed correct.
+HTML code '$'<select name="targetTheme">'' cannot be parsed correct.
+HTML code '$'<option value="">-- Select --</option>'' cannot be parsed correct.
+HTML code '$'</option>'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'<input type="submit" value="Swap" class="button-primary">'' cannot be parsed correct.
+HTML code '$'</form><hr/>'' cannot be parsed correct.
+HTML code '$'<table id="themeBlogsTable">'' cannot be parsed correct.
+HTML code '$'<thead><tr><th width="10">ID</th><th>Blog Name</th><th>URL</th><th>Date Created</th></thead>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<h1>Theme Swap</h1> '' cannot be parsed correct.
+HTML code '$'&newTheme='' cannot be parsed correct.
+HTML code '$' ");
+</script'' cannot be parsed correct.
+HTML code '$'<h1>Themes</h1> '' cannot be parsed correct.
+HTML code '$'<div class="updated">Blog Themes Updates</div><br/><br/>'' cannot be parsed correct.
+HTML code '$'<table id="themesTable">'' cannot be parsed correct.
+HTML code '$'<thead><tr><th>Theme</th><th>Description</th><th>Number</th></thead>'' cannot be parsed correct.
+HTML code '$'<td valign="top" width="200px">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td valign="top" style="color:#808080;">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td width="100px" valign="top">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$' ");
+			</script>
+		'' cannot be parsed correct.
+HTML code '$'<div id="progress">'' cannot be parsed correct.
+HTML code '$'<div id="bar"></div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<style>'' cannot be parsed correct.
+HTML code '$'</style>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:12.512426.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.043585.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 13 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.919276.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running DbaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+admin/index.php:16
+  - RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/index.php:46
+  - RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/index.php:70
+  - RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+database.php:20
+  - RETRIEVAL call to get_option("MSA-db-version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+database.php:55
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+database.php:67
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+functions.php:369
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+pages.php:179
+  - RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+pages.php:195
+  - RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+pages.php:220
+  - RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+admin/index.php:18
+  - STORAGE call to add_option("MSA_run_date", date("Y-m-d h:i:s")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/index.php:22
+  - STORAGE call to update_option("MSA_run_date", date("Y-m-d h:i:s")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/theme_swap.php:36
+  - STORAGE call to update_option("template", $newTemplate) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/theme_swap.php:37
+  - STORAGE call to update_option("stylesheet", $newTheme) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/theme_swap.php:38
+  - STORAGE call to update_option("current_theme", $newTheme) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+database.php:26
+  - STORAGE call to add_option("MSA-db-version", $this_MSA_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+database.php:32
+  - STORAGE call to update_option("MSA-db-version", $this_MSA_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+functions.php:269
+  - STORAGE call to delete_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+functions.php:269
+  - DELETION call to delete_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressRetrievalDetector.get_option("MSA_run_date") - {'option'}
+	WordPressRetrievalDetector.get_option("MSA_run_date") - {'option'}
+	WordPressStorageDetector.update_option("MSA-db-version", $this_MSA_version) - {'option'}
+	WordPressStorageDetector.delete_option("MSA_run_date") - {'option'}
+	WordPressRetrievalDetector.get_option("MSA_run_date") - {'option'}
+	DeletionDetector.delete_option("MSA_run_date") - {'option'}
+	WordPressRetrievalDetector.get_option("MSA_run_date") - {'option'}
+	WordPressStorageDetector.update_option("stylesheet", $newTheme) - {'option'}
+	WordPressStorageDetector.update_option("current_theme", $newTheme) - {'option'}
+	WordPressStorageDetector.add_option("MSA-db-version", $this_MSA_version) - {'option'}
+	WordPressRetrievalDetector.get_option("MSA_run_date") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressStorageDetector.update_option("MSA_run_date", date("Y-m-d h:i:s")) - {'option'}
+	WordPressRetrievalDetector.get_option("MSA_run_date") - {'option'}
+	WordPressStorageDetector.update_option("template", $newTemplate) - {'option'}
+	WordPressStorageDetector.add_option("MSA_run_date", date("Y-m-d h:i:s")) - {'option'}
+	WordPressRetrievalDetector.get_option("MSA-db-version") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.712475.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 64 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.152770.
+
+64 STORE_REACHES edges created
+64 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005498.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:56.901724!
+DELETION call to delete_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MSA-db-version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("MSA_run_date", date("Y-m-d h:i:s")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("MSA_run_date", date("Y-m-d h:i:s")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("template", $newTemplate) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("stylesheet", $newTheme) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("current_theme", $newTheme) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("MSA-db-version", $this_MSA_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("MSA-db-version", $this_MSA_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("MSA_run_date") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

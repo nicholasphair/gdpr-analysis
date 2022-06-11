@@ -1,0 +1,712 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on tapcliq
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.092538.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.047004.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 69 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.491155.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.440585.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 868 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.061586.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 7 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.776741.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.080373.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 340 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:05.803077.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 5457
+Added 4173 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 11256
+Added 5799 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.748512.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tapcliq/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tapcliq/tapcliq.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tapcliq/datahelper/data-helper.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tapcliq/datahelper/DBHelper.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tapcliq/modal/campaign-list.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tapcliq/modal/class-wp-list-table-custom.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tapcliq/views/add-new-campaign.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.855641.
+
+937 PHP_REACHES edges created
+7 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4513 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+5799 PHP_REACHES edges created
+11256 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1901 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.137636.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 1 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.500173.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 57 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.682033.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 75 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.149134.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.216036.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.439820.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.016842.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.033983.
+
+1 CALLS edges created
+132 PHP_REACHES edges created
+133 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 118 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.124298.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+11 SQL operations to process.
+CREATE TABLE $wpdbtapcliq_campaigns(
+      `entity_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'Grid Record Id',
+      `title` varchar(255) NOT NULL COMMENT 'Title',
+      `appid` mediumtext NOT NULL COMMENT 'Appid',
+      `tags` mediumtext NOT NULL COMMENT 'Tags',
+      `height_width` mediumtext NOT NULL COMMENT 'Height_Width',
+      `unitid` mediumtext NOT NULL COMMENT 'Unitid',
+      `configuration` smallint(6) DEFAULT NULL COMMENT 'Configuration',
+      `page` mediumtext NOT NULL COMMENT 'Page',
+      `post` mediumtext NOT NULL COMMENT 'Post',
+      `location` mediumtext NOT NULL COMMENT 'Location',
+      `is_active` smallint(6) DEFAULT NULL COMMENT 'Active Status',
+      `on_moment` smallint(6) DEFAULT NULL COMMENT 'on Moment',
+      `moment_time` text COMMENT 'Moment Time',
+      `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Creation Time',
+      `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Modification Time'
+      )
+SQL command (CREATE TABLE $wpdbtapcliq_campaigns( `entity_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'Grid Record Id', `title` varchar(255) NOT NULL COMMENT 'Title', `appid` mediumtext NOT NULL COMMENT 'Appid', `tags` mediumtext NOT NULL COMMENT 'Tags', `height_width` mediumtext NOT NULL COMMENT 'Height_Width', `unitid` mediumtext NOT NULL COMMENT 'Unitid', `configuration` smallint(6) DEFAULT NULL COMMENT 'Configuration', `page` mediumtext NOT NULL COMMENT 'Page', `post` mediumtext NOT NULL COMMENT 'Post', `location` mediumtext NOT NULL COMMENT 'Location', `is_active` smallint(6) DEFAULT NULL COMMENT 'Active Status', `on_moment` smallint(6) DEFAULT NULL COMMENT 'on Moment', `moment_time` text COMMENT 'Moment Time', `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Creation Time', `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Modification Time' )) cannot be parsed correct.
+CREATE TABLE $wpdbtapcliq_campaigns(
+      `entity_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'Grid Record Id',
+      `title` varchar(255) NOT NULL COMMENT 'Title',
+      `appid` mediumtext NOT NULL COMMENT 'Appid',
+      `tags` mediumtext NOT NULL COMMENT 'Tags',
+      `height_width` mediumtext NOT NULL COMMENT 'Height_Width',
+      `unitid` mediumtext NOT NULL COMMENT 'Unitid',
+      `configuration` smallint(6) DEFAULT NULL COMMENT 'Configuration',
+      `page` mediumtext NOT NULL COMMENT 'Page',
+      `post` mediumtext NOT NULL COMMENT 'Post',
+      `location` mediumtext NOT NULL COMMENT 'Location',
+      `is_active` smallint(6) DEFAULT NULL COMMENT 'Active Status',
+      `on_moment` smallint(6) DEFAULT NULL COMMENT 'on Moment',
+      `moment_time` text COMMENT 'Moment Time',
+      `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Creation Time',
+      `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Modification Time'
+      )
+SQL command (CREATE TABLE $wpdbtapcliq_campaigns( `entity_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'Grid Record Id', `title` varchar(255) NOT NULL COMMENT 'Title', `appid` mediumtext NOT NULL COMMENT 'Appid', `tags` mediumtext NOT NULL COMMENT 'Tags', `height_width` mediumtext NOT NULL COMMENT 'Height_Width', `unitid` mediumtext NOT NULL COMMENT 'Unitid', `configuration` smallint(6) DEFAULT NULL COMMENT 'Configuration', `page` mediumtext NOT NULL COMMENT 'Page', `post` mediumtext NOT NULL COMMENT 'Post', `location` mediumtext NOT NULL COMMENT 'Location', `is_active` smallint(6) DEFAULT NULL COMMENT 'Active Status', `on_moment` smallint(6) DEFAULT NULL COMMENT 'on Moment', `moment_time` text COMMENT 'Moment Time', `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Creation Time', `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Modification Time' )) cannot be parsed correct.
+SELECT page, post FROM $wpdbtapcliq_campaigns
+                    WHERE is_active = 1 AND configuration = %d AND entity_id <> %d
+SELECT page, post FROM $wpdbtapcliq_campaigns
+                    WHERE is_active = 1 AND configuration = 1 AND entity_id <> %d
+SELECT page, post FROM $wp$campaignIdbtapcliq_campaigns
+                    WHERE is_active = 1 AND configuration = 1 AND entity_id <> %d
+SELECT page, post FROM $wp$campaignIdbtapcliq_campaigns
+                    WHERE is_active = 1 AND configuration = 1 AND entity_id <> %d
+SQL command (SELECT page, post FROM $wp$campaignIdbtapcliq_campaigns WHERE is_active = 1 AND configuration = 1 AND entity_id <> %d) cannot be parsed correct.
+SELECT * FROM $wpdbtapcliq_campaigns
+                    WHERE configuration = '1' AND (page like '%,%d,%' or post like '%,%d,%') AND is_active = '%d' 
+SELECT * FROM $wpdbtapcliq_campaigns
+                    WHERE configuration = '1' AND (page like 'get_queried_object_id()%d,%' or post like '%,%d,%') AND is_active = '%d' 
+SELECT * FROM $wpdbtapcliq_campaigns
+                    WHERE configuration = '1' AND (page like 'get_queried_object_id()%get_queried_object_id()%' or post like '%,%d,%') AND is_active = '%d' 
+SELECT * FROM $wpdbtapcliq_campaigns
+                    WHERE configuration = '1' AND (page like 'get1ueried_object_id()%get_queried_object_id()%' or post like '%,%d,%') AND is_active = '%d' 
+None
+SELECT * FROM $wpdbtapcliq_campaigns
+                    WHERE configuration = '0' AND is_active = '%d' 
+SELECT * FROM $wpdbtapcliq_campaigns
+                    WHERE configuration = '0' AND is_active = '1' 
+SELECT * FROM $wpdbtapcliq_campaigns
+                    WHERE configuration = '0' AND is_active = '1' 
+SQL command (SELECT * FROM $wpdbtapcliq_campaigns WHERE configuration = '0' AND is_active = '1' ) cannot be parsed correct.
+SELECT * FROM $wpdbtapcliq_campaigns
+                    WHERE entity_id = '$campaignId' 
+SELECT * FROM $wpdbtapcliq_campaigns
+                    WHERE entity_id = '$campaignId' 
+SQL command (SELECT * FROM $wpdbtapcliq_campaigns WHERE entity_id = '$campaignId' ) cannot be parsed correct.
+SELECT * FROM $wpdbtapcliq_campaigns
+SQL command (SELECT * FROM $wpdbtapcliq_campaigns) cannot be parsed correct.
+
+			SELECT DISTINCT YEAR( post_date ) AS year, MONTH( post_date ) AS month
+			FROM $wpdb
+			WHERE post_type = $post_type
+			AND post_status != 'auto-draft'
+			ORDER BY post_date DESC
+		
+
+			SELECT DISTINCT YEAR( post_date ) AS year, MONTH( post_date ) AS month
+			FROM $wpdb
+			WHERE post_type = $post_type
+			AND post_status != 'auto-draft'
+			ORDER BY post_date DESC
+		
+SQL command ( SELECT DISTINCT YEAR( post_date ) AS year, MONTH( post_date ) AS month FROM $wpdb WHERE post_type = $post_type AND post_status != 'auto-draft' ORDER BY post_date DESC ) cannot be parsed correct.
+INSERT INTO $wpdbtapcliq_campaigns (title, appid, tags, height_width, unitid, configuration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post_data_title','%s','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (title, appid, tags, height_width, unitid, configuration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post_data_title','$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (title, appid, tags, height_width, unitid, configuration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_title','$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (title, appid, tags, height_width, unitid, configuration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_titl$post_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (title, appid, tags, hei$post_data_unitIdt_width, unitid, configuration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_titl$post_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (title, appid, tags, hei$post_data_unitIdt_width, unitid, configuration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (title, appid, tags, hei$post_data_unitIdt_width, unitid, co0iguration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (0tle, appid, tags, hei$post_data_unitIdt_width, unitid, co0iguration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (0tle, appid, tags, hei$pos$post_data_onLocationdata_unitIdt_width, unitid, co0iguration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (0tle, appid, tags, hei$pos$post_data_onLocationdata_unitIdt_width, unitid, $post_data_status0iguration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbtapcliq_campaigns (0tle, appid, tags, hei$pos$post_data_onLocationdata_un$post_data_onMomentIdt_width, unitid, $post_data_status0iguration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdb$post_data_momentTimepcliq_campaigns (0tle, appid, tags, hei$pos$post_data_onLocationdata_un$post_data_onMomentIdt_width, unitid, $post_data_status0iguration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbdate("Y-m-d H:i:s")ost_data_momentTimepcliq_campaigns (0tle, appid, tags, hei$pos$post_data_onLocationdata_un$post_data_onMomentIdt_width, unitid, $post_data_status0iguration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+INSERT INTO $wpdbdate("Y-m-d H:i:s")ost_data_momentTimepcliq_campaigns (0tle, appid, tags, hei$pos$post_data_onLocationdata_un$post_data_onMomentIdt_width, unitid, $post_data_status0iguration, page, post, location, is_active,
+                on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')
+SQL command (INSERT INTO $wpdbdate("Y-m-d H:i:s")ost_data_momentTimepcliq_campaigns (0tle, appid, tags, hei$pos$post_data_onLocationdata_un$post_data_onMomentIdt_width, unitid, $post_data_status0iguration, page, post, location, is_active, on_moment, moment_time, created_at) VALUES ('$post$post_data_tagsata_tit$post_data_configurationpost_data_height_width,'$post_data_appId','%s','%d', '%d', '%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s')) cannot be parsed correct.
+UPDATE $wpdbtapcliq_campaigns SET title = '$post_data_title', appid = '%s', tags = '%s', height_width = '%d', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaigns SET title = '$post_data_title', appid = '$post_data_appId', tags = '%s', height_width = '%d', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaigns SET title = '$post_data_title', appid = '$post_data_ap$post_data_tagsd', tags = '%s', height_width = '%d', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaigns SET title = '$post_data_title', appid = '$post_data_ap$post_data_t$post_data_height_widthsd', tags = '%s', height_width = '%d', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title = '$post_data_title', appid = '$post_data_ap$post_data_t$post_data_height_widthsd', tags = '%s', height_width = '%d', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title = '$post_data_title', appid = '$post_data_ap$post_data_t$post_data_height_wi$post_data_configurationhsd', tags = '%s', height_width = '%d', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title = '$post_data_title', appid = '$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '%d', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title = '$post_data_title',$post,appid = '$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '%d', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title = '$post_data_title',$post,appid = '$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '$post_data_onLocation', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title =$post_data_status$post_data_title',$post,appid = '$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '$post_data_onLocation', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title =$post_data_status$post_data_title',$post,appid $post_data_onMoment'$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '$post_data_onLocation', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title =$post_data_status$post_data_title$post_data_momentTime$post,appid $post_data_onMoment'$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '$post_data_onLocation', unitid = '%d', 
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title =$post_data_status$post_data_title$post_data_momentTime$post,appid $post_data_onMoment'$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '$post_data_onLocation', unitid = '%d',date("Y-m-d H:i:s")
+                configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title =$post_data_status$post_data_title$post_data_momentTime$post,appid $post_data_onMoment'$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '$post_data_onLocation', unitid = '%d',date("Y-m-d H:i:s")
+$post_data_id              configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title =$post_data_status$post_data_title$post_data_momentTime$post,appid $post_data_onMoment'$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '$post_data_onLocation', unitid = '%d',date("Y-m-d H:i:s")
+$post_data_id              configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d'
+SQL command (UPDATE $wpdbtapcliq_campaign$post_data_unitIdSET title =$post_data_status$post_data_title$post_data_momentTime$post,appid $post_data_onMoment'$post_data_ap$post_data_t$post_data_height_0$post_data_configurationhsd', tags = '%s', height_width = '$post_data_onLocation', unitid = '%d',date("Y-m-d H:i:s") $post_data_id configuration = '%d', page = '%s', post = '%s', location = '%d', is_active = '%d', on_moment = '%d', moment_time = '%s', updated_at = '%s' WHERE entity_id = '%d') cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdbtapcliq_campaigns
+SQL command (DROP TABLE IF EXISTS $wpdbtapcliq_campaigns) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [92, 7897, 162, 311, 358, 405, 1923, 4390, 465, 570, 7941]
+Added 0 SQL nodes. 0 out of 11 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:06.157232.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<p><strong>1 Campaign permanently deleted</strong></p>'' cannot be parsed correct.
+HTML code '$'<p><strong>0 Campaign Campaigns  permanently deleted</strong></p>'' cannot be parsed correct.
+HTML code '$'<label for="bulk-action-selector$which" class="screen-reader-text">Select bulk action</label>'' cannot be parsed correct.
+HTML code '$'<select name="actio2" id="bulk-action-selector-$which">'' cannot be parsed correct.
+HTML code '$'<option value="-1">Bulk Actions</option>
+'' cannot be parsed correct.
+HTML code '$'	<option value=$name$class>$title</option>
+'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="orderby" value="$_REQUEST_orderby" /'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="order" value="$_REQUEST_order" /'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="post_mime_type" value="$_REQUEST_post_mime_type" /'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="detached" value="$_REQUEST_detached" /'' cannot be parsed correct.
+HTML code '$'$input_id-search-input'' cannot be parsed correct.
+HTML code '$'$text'' cannot be parsed correct.
+HTML code '$'$input_id-search-input'' cannot be parsed correct.
+HTML code '$'implode(" |</li>
+", $views)</li>
+'' cannot be parsed correct.
+HTML code '$'$current_mode'' cannot be parsed correct.
+HTML code '$'$this__pagination'' cannot be parsed correct.
+HTML code '$'<$tag $scope $id {"1": ["manage-column"], "2": ["column-"]}><a href=add_query_arg(compact("orderby", "order"), $current_url)"><span$column_display_name</span><span class="sorting-indicator"></span></a></$tag>'' cannot be parsed correct.
+HTML code '$'implode(" ", $this->get_table_classes())'' cannot be parsed correct.
+HTML code '$' data-wp-lists=\'list:$this__args_singular\''' cannot be parsed correct.
+HTML code '$'$which'' cannot be parsed correct.
+HTML code '$'<tr class="no-items"><td class="colspanchange" colspan="$this->get_column_count()"'' cannot be parsed correct.
+HTML code '$'<div class="wrap"><h2>Campaigns <a href=currentUrl(true)?page=add-new-campaign class="page-title-action">Add New</a></h2>'' cannot be parsed correct.
+HTML code '$'<form method = \'post\' name = \'frm_search_campaign\' action = \'$_SERVER_PHP_SELF?page=tapcliq\'>'' cannot be parsed correct.
+HTML code '$'$this->column_cb($item)'' cannot be parsed correct.
+HTML code '$'call_user_func([$this, "_column_" . $column_name], $item, $classes, $data, $primary)'' cannot be parsed correct.
+HTML code '$'<td class=\'$column_name column-$column_name\' data-colname=wp_strip_all_tags($column_display_name)>'' cannot be parsed correct.
+HTML code '$'call_user_func([$this, "column_" . $column_name], $item)'' cannot be parsed correct.
+HTML code '$'$this->handle_row_actions($item, $column_name, $primary)'' cannot be parsed correct.
+HTML code '$'<td class=\'$column_name column-$column_name\' data-colname=wp_strip_all_tags($column_display_name)>'' cannot be parsed correct.
+HTML code '$'$this->column_default($item, $column_name)'' cannot be parsed correct.
+HTML code '$'$this->handle_row_actions($item, $column_name, $primary)'' cannot be parsed correct.
+HTML code '$'Update CampaignAdd New Campaign'' cannot be parsed correct.
+HTML code '$'Update CampaignAdd New Campaign'' cannot be parsed correct.
+HTML code '$'$campaignId'' cannot be parsed correct.
+HTML code '$'reset($campaign_data)_title'' cannot be parsed correct.
+HTML code '$'reset($campaign_data)_appid'' cannot be parsed correct.
+HTML code '$'reset($campaign_data)_tags'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'reset($campaign_data)_unitid0'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checkedchecked'' cannot be parsed correct.
+HTML code '$'style=display:block;style=display:none;style=display:block;'' cannot be parsed correct.
+HTML code '$'$page'' cannot be parsed correct.
+HTML code '$'$page'' cannot be parsed correct.
+HTML code '$'add_new_tapcliq_campaign($_REQUEST)'' cannot be parsed correct.
+HTML code '$'$page'' cannot be parsed correct.
+HTML code '$'$page'' cannot be parsed correct.
+HTML code '$'style=display:block;style=display:none;style=display:block;'' cannot be parsed correct.
+HTML code '$'$post'' cannot be parsed correct.
+HTML code '$'$post'' cannot be parsed correct.
+HTML code '$'$post'' cannot be parsed correct.
+HTML code '$'$post'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'style=display:block;style=display:none;style=display:none;'' cannot be parsed correct.
+HTML code '$'reset($campaign_data)_moment_time6000'' cannot be parsed correct.
+HTML code '$'update_campaignadd_campaign'' cannot be parsed correct.
+HTML code '$'style=display:none;'' cannot be parsed correct.
+HTML code '$'<div id="deleteMessage" class="notice notice-success is-dismissible">'' cannot be parsed correct.
+HTML code '$'<button type="button" class="notice-dismiss">'' cannot be parsed correct.
+HTML code '$'<span class="screen-reader-text">Dismiss this notice.</span>'' cannot be parsed correct.
+HTML code '$'</button>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div id="deleteMessage" class="notice notice-success is-dismissible">'' cannot be parsed correct.
+HTML code '$'<p><strong>No campaigns selected for delete</strong></p>'' cannot be parsed correct.
+HTML code '$'<button type="button" class="notice-dismiss">'' cannot be parsed correct.
+HTML code '$'<span class="screen-reader-text">Dismiss this notice.</span>'' cannot be parsed correct.
+HTML code '$'</button>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div id="deleteMessage" class="notice notice-success is-dismissible">'' cannot be parsed correct.
+HTML code '$'<button type="button" class="notice-dismiss">'' cannot be parsed correct.
+HTML code '$'<span class="screen-reader-text">Dismiss this notice.</span>'' cannot be parsed correct.
+HTML code '$'</button>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</select>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<ul class=\'subsubsub\'>
+'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'</td></tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<div id="successMessage" class="notice notice-success is-dismissible" style="display: block">'' cannot be parsed correct.
+HTML code '$'<p><strong>Campaign added</strong></p>'' cannot be parsed correct.
+HTML code '$'<button type="button" class="notice-dismiss">'' cannot be parsed correct.
+HTML code '$'<span class="screen-reader-text">Dismiss this notice.</span>'' cannot be parsed correct.
+HTML code '$'</button>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div id="successMessage" class="notice notice-success is-dismissible" style="display: block">'' cannot be parsed correct.
+HTML code '$'<p><strong>Campaign updated</strong></p>'' cannot be parsed correct.
+HTML code '$'<button type="button" class="notice-dismiss">'' cannot be parsed correct.
+HTML code '$'<span class="screen-reader-text">Dismiss this notice.</span>'' cannot be parsed correct.
+HTML code '$'</button>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<th scope="row" class="check-column">'' cannot be parsed correct.
+HTML code '$'</th>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #addCampaign label.error{color:#ff0000}
+    </style>
+</head>
+<body>
+<div id = "errorMessage" class="notice notice-error" style="display: none;">
+    <p><strong>Error Message.</strong></p>
+</div>
+<div class="container form-container">
+    <h2>'' cannot be parsed correct.
+HTML code '$'</h2>
+    <form action="/tapcliq.php" id = "addCampaign">
+        <input type="hidden" id="id" name="id" value="'' cannot be parsed correct.
+HTML code '$'">
+        </div>
+        <div class="form-group">
+            <label for="appId">AppId:</label>
+            <input type="text" class="form-control inputtext" id="appId" name="appId" required maxlength="40" placeholder="Enter App Id"
+            value = "'' cannot be parsed correct.
+HTML code '$'">
+        </div>
+        <div class="form-group">
+            <label for="tags">Tags:</label>
+            <input type="text" class="form-control inputtext" id="tags" name="tags" required maxlength="1000"
+                   placeholder="Enter tags(comma separated)" value = "'' cannot be parsed correct.
+HTML code '$'">
+        </div>
+        <div class="form-group">
+            <label for="height_width">Height X Width:</label>
+            <select class="form-control dropdown" id="height_width" name="height_width">
+                <option value = "0" '' cannot be parsed correct.
+HTML code '$'>300 X 250</option>
+                <option value = "1" '' cannot be parsed correct.
+HTML code '$'>300 x 50</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="unitId">UnitId:</label>
+            '' cannot be parsed correct.
+HTML code '$'" >
+        </div>
+        <div class="form-group">
+            <fieldset class="form-group">
+               <!-- <legend>Configuration</legend>-->
+                <label for="Configuration">Configuration:</label>
+                <div class="form-check">
+                    <label class="form-check-label" style="font-weight: 500;">
+                        <input type="radio" class="form-check-input" name="configuration" id="configuration_all_page" value="0"
+                            '' cannot be parsed correct.
+HTML code '$'>
+                        All Page
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label" style="font-weight: 500;">
+                        <input type="radio" class="form-check-input" name="configuration" id="configuration_custom_page" value="1"
+                            '' cannot be parsed correct.
+HTML code '$'>
+                        Custom
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-group" id="pagesParent" '' cannot be parsed correct.
+HTML code '$'>
+            <label for="pages">Pages:</label>
+            <div class="form-group" id="pages" >
+                '' cannot be parsed correct.
+HTML code '$'>
+            <label for="posts">Posts:</label>
+            <div class="form-group" id="posts" >
+                '' cannot be parsed correct.
+HTML code '$'>Bottom Left</option>
+                <option value = "1" '' cannot be parsed correct.
+HTML code '$'>Bottom Right</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <select class="form-control" id="status" name="status">
+                <option value="1"  '' cannot be parsed correct.
+HTML code '$'>Enabled</option>
+                <option value="0"  '' cannot be parsed correct.
+HTML code '$'>Disabled</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="onMoment">Moment:</label>
+            <select class="form-control" id="onMoment" name="onMoment">
+                <option value="0" '' cannot be parsed correct.
+HTML code '$'>End of Page</option>
+                <option value="1" '' cannot be parsed correct.
+HTML code '$'>After Specific Time</option>
+                <option value="2" '' cannot be parsed correct.
+HTML code '$'>OnLoad</option>
+            </select>
+        </div>
+        <div class="form-group" id="momentTimeContainer"  '' cannot be parsed correct.
+HTML code '$'>
+            <label for="momentTime">Time(In Milli.):</label>
+            <input type="number" class="form-control" id="momentTime" name="momentTime" min="0" max="600000"
+                   value = "'' cannot be parsed correct.
+HTML code '$'">
+        </div>
+        <input type="hidden" id="action" name="action" value="'' cannot be parsed correct.
+HTML code '$'>Reset</button>
+       <a href="?page=tapcliq"><button type="button" class="btn btn-default" id="cancel">Cancel</button></a>
+    </form>
+</div>
+
+</body>
+</html>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:11.909474.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.108049.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 7 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.049988.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running FileProDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running SqlServerDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running PhpVarDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressStorageDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Start running DeletionDetector
+### Finish running MySQLiDetector
+### Start running UninstallDetector
+### Finish running maxdbDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+datahelper/DBHelper.php:41
+  - RETRIEVAL call to dbDelta($create_tapcliq_table). Passed arguments: 0: $queries (string[]|string). Returns (array).
+datahelper/DBHelper.php:87
+  - RETRIEVAL call to get_posts(["post_type" => "post", "post_status" => "publish"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+modal/campaign-list.php:261
+  - RETRIEVAL call to $screen->get_option("per_page", "option") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+modal/campaign-list.php:263
+  - RETRIEVAL call to get_user_meta($user, $option, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+modal/campaign-list.php:267
+  - RETRIEVAL call to $screen->get_option("per_page", "default") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+modal/class-wp-list-table-custom.php:686
+  - RETRIEVAL call to get_user_option($option) alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta
+tapcliq.php:233
+  - RETRIEVAL call to dbDelta($create_tapcliq_table). Passed arguments: 0: $queries (string[]|string). Returns (array).
+views/add-new-campaign.php:128
+  - RETRIEVAL call to get_posts(["post_type" => "post", "post_status" => "publish"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]). 
+
+modal/campaign-list.php:71
+  - Data from table $wpdbtapcliq_campaigns deleted: "$wpdb->delete($wpdb->prefix"tapcliq_campaigns", ["entity_id" => $id], ["%d"])" 
+
+By data type:
+none
+	DeletionDetector.$wpdb->delete($wpdb->prefix"tapcliq_campaigns", ["entity_id" => $id], ["%d"]) - set()
+	WordPressRetrievalDetector.dbDelta($create_tapcliq_table) - set()
+	WordPressRetrievalDetector.get_posts(["post_type" => "post", "post_status" => "publish"]) - set()
+	WordPressRetrievalDetector.dbDelta($create_tapcliq_table) - set()
+	WordPressRetrievalDetector.get_posts(["post_type" => "post", "post_status" => "publish"]) - set()
+option
+	WordPressRetrievalDetector.$screen->get_option("per_page", "option") - {'option'}
+	WordPressRetrievalDetector.$screen->get_option("per_page", "default") - {'option'}
+user_meta
+	WordPressRetrievalDetector.get_user_meta($user, $option, true) - {'user_meta'}
+	WordPressRetrievalDetector.get_user_option($option) - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.220260.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.074619.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 172 nodes as PERSONAL
+In total, tainted 172 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:03.107103.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:04.164383!
+Data from table $wpdbtapcliq_campaigns deleted: "$wpdb->delete($wpdb->prefix"tapcliq_campaigns", ["entity_id" => $id], ["%d"])",None,None
+RETRIEVAL call to dbDelta($create_tapcliq_table). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_posts(["post_type" => "post", "post_status" => "publish"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to $screen->get_option("per_page", "option") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($user, $option, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to $screen->get_option("per_page", "default") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option($option) alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($create_tapcliq_table). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_posts(["post_type" => "post", "post_status" => "publish"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

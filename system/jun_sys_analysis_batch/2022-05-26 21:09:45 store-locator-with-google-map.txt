@@ -1,0 +1,474 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on store-locator-with-google-map
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.489108.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.786943.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.287198.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.405972.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 50 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.668952.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.639993.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.094589.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 40 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.884263.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 523
+Added 433 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 619
+Added 96 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.915398.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/store-locator-with-google-map/store-locator-with-google-map.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.153898.
+
+523 PHP_REACHES edges created
+96 PHP_REACHES edges created
+619 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 180 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.267643.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.170532.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.713356.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 1 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.222888.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.018383.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.096433.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.014071.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.054615.
+
+2 PHP_REACHES edges created
+2 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.200326.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.151876.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div id="message" class="updated fade">
+		    <p>Thanks for installing <strong>Zotabox plugin!</strong>  
+		    <a href="/wp-admin/admin.php?page=zb_sl">
+		    <strong>Click to configure.</strong></a></p>
+	    </div>'' cannot be parsed correct.
+HTML code '$'
+	<script type="text/javascript">
+		var ZBT_WP_ADMIN_URL = "admin_url()";
+		var ZTB_BASE_URL = "https://zotabox.com";
+	</script>
+	<div class="ztb-wrapper">
+		<div class="ztb-logo">
+			<a href="https://zotabox.com/dashboard/?utm_source=wordpress.com&utm_medium=Store Locator&utm_campaign=ecommerce%20plugins&authuser=anonymous" title="Zotabox" target="zotabox">
+				<img title="Zotabox" alt="Zotabox" src="plugins_url("assets/images/logo-zotabox.png", )">
+			</a>
+		</div>
+		<div class="ztb-code-wrapper wrap">
+			<div class="ztb-title">
+				Zotabox includes 20+ Promotional Sales tools to grow your websiteâs traffic, boost your sales and get more subscribers.
+			</div>
+			<div class="account-input">
+				
+			</div>
+			<div class="ztb-button"></div>
+			<div style="clear:both"></div>
+		</div>
+	</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.464456.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.063932.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 7 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.629407.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running DbaseDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MongoDbDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PhpVarDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running maxdbDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running MySQLiDetector
+### Start running WordpressHashingFnDetector
+### Finish running Sqlite3Detector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running PropertyDetector
+### Start running WP_UserDetector
+### Finish running SqlServerDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+store-locator-with-google-map.php:51
+  - RETRIEVAL call to get_option("ztb_token_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:52
+  - RETRIEVAL call to get_option("access_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:53
+  - RETRIEVAL call to get_option("ztb_status_message", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:54
+  - RETRIEVAL call to get_option("ztb_status_disconnect", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:55
+  - RETRIEVAL call to get_option("ztb_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:90
+  - RETRIEVAL call to get_option("ztb_access_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:92
+  - RETRIEVAL call to get_option("access_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:94
+  - RETRIEVAL call to get_option("ztb_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:95
+  - RETRIEVAL call to get_option("ztb_domainid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:96
+  - RETRIEVAL call to get_option("ztb_email", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:97
+  - RETRIEVAL call to get_option("ztb_source", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:99
+  - RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:105
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+store-locator-with-google-map.php:107
+  - RETRIEVAL call to get_option("ztb_status_disconnect", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:166
+  - RETRIEVAL call to get_option("ztb_domainid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:167
+  - RETRIEVAL call to get_option("ztb_source", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+store-locator-with-google-map.php:168
+  - RETRIEVAL call to get_option("ztb_status_disconnect", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option 
+
+store-locator-with-google-map.php:25
+  - STORAGE call to add_option("ztb_source", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:26
+  - STORAGE call to add_option("ztb_id", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:27
+  - STORAGE call to add_option("ztb_domainid", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:28
+  - STORAGE call to add_option("ztb_email", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:29
+  - STORAGE call to add_option("access_key", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:30
+  - STORAGE call to add_option("ztb_access_key", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:31
+  - STORAGE call to add_option("ztb_status_message", 1, "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:32
+  - STORAGE call to add_option("ztb_status_disconnect", 2, "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:37
+  - STORAGE call to update_option("ztb_status_message", 2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:38
+  - STORAGE call to update_option("ztb_status_disconnect", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:43
+  - STORAGE call to update_option("ztb_status_message", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:68
+  - STORAGE call to update_option("ztb_status_message", 2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:192
+  - STORAGE call to update_option("ztb_domainid", $domain) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:193
+  - STORAGE call to update_option("ztb_access_key", $public_key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:194
+  - STORAGE call to update_option("ztb_id", $id) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+store-locator-with-google-map.php:195
+  - STORAGE call to update_option("ztb_status_disconnect", 2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressStorageDetector.add_option("ztb_access_key", "", "", "yes") - {'option'}
+	WordPressStorageDetector.add_option("ztb_id", "", "", "yes") - {'option'}
+	WordPressStorageDetector.add_option("ztb_email", "", "", "yes") - {'option'}
+	WordPressStorageDetector.update_option("ztb_status_disconnect", 2) - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_source", "") - {'option'}
+	WordPressRetrievalDetector.get_option("access_key", "") - {'option'}
+	WordPressStorageDetector.update_option("ztb_domainid", $domain) - {'option'}
+	WordPressStorageDetector.update_option("ztb_access_key", $public_key) - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_domainid", "") - {'option'}
+	WordPressStorageDetector.add_option("ztb_domainid", "", "", "yes") - {'option'}
+	WordPressStorageDetector.update_option("ztb_status_message", 2) - {'option'}
+	WordPressRetrievalDetector.get_option("admin_email") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_status_disconnect", "") - {'option'}
+	WordPressRetrievalDetector.get_option("access_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_id", "") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_token_key", "") - {'option'}
+	WordPressStorageDetector.add_option("ztb_source", "", "", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_status_disconnect", "") - {'option'}
+	WordPressStorageDetector.update_option("ztb_status_disconnect", 1) - {'option'}
+	WordPressStorageDetector.update_option("ztb_status_message", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_access_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_id", "") - {'option'}
+	WordPressStorageDetector.add_option("ztb_status_message", 1, "", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_status_message", "") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_domainid", "") - {'option'}
+	WordPressStorageDetector.add_option("ztb_status_disconnect", 2, "", "yes") - {'option'}
+	WordPressStorageDetector.update_option("ztb_status_message", 2) - {'option'}
+	WordPressStorageDetector.add_option("access_key", "", "", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_email", "") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_status_disconnect", "") - {'option'}
+	WordPressRetrievalDetector.get_option("ztb_source", "") - {'option'}
+	WordPressStorageDetector.update_option("ztb_id", $id) - {'option'}
+user
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.233475.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 256 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.288653.
+
+256 STORE_REACHES edges created
+256 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 1 nodes as PERSONAL
+In total, tainted 1 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.140320.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:24.774491!
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("ztb_status_disconnect", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_domainid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_source", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_status_disconnect", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_token_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("access_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_status_message", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_status_disconnect", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_access_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("access_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_domainid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_email", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ztb_source", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("ztb_domainid", $domain) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ztb_access_key", $public_key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ztb_id", $id) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ztb_status_disconnect", 2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("ztb_source", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("ztb_id", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("ztb_domainid", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("ztb_email", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("access_key", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("ztb_access_key", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("ztb_status_message", 1, "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("ztb_status_disconnect", 2, "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ztb_status_message", 2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ztb_status_disconnect", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ztb_status_message", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ztb_status_message", 2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

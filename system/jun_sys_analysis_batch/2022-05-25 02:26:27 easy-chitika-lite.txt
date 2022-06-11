@@ -1,0 +1,824 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on easy-chitika-lite
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.313689.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.120824.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 212 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.899377.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.462371.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1909 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.315424.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 64 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.300899.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.082376.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 714 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:20.455267.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 14198
+Added 11299 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 24363
+Added 10165 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:02.743205.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/chitika.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/defaults.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/easy-chitika.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/EzAdmin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/ezAPI.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/ezDenyLite.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/ezExtras.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/myPlugins.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/providers.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/easy-chitika-lite/validate.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.875917.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2121 PHP_REACHES edges created
+64 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+10000 PHP_REACHES edges created
+11000 PHP_REACHES edges created
+12000 PHP_REACHES edges created
+12013 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+10000 PHP_REACHES edges created
+10165 PHP_REACHES edges created
+24363 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 4777 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.280869.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 14 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:12.459484.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 14473
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 14376
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 12460
+Added 380 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:08.898327.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 209 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.187189.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.404367.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 14473
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 14376
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 12460
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:04.643305.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.049928.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035670.
+
+14 CALLS edges created
+589 PHP_REACHES edges created
+603 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 557 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.145067.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.202517.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<input type="hidden" id="kill_invites" name="kill_invites" value="" />
+<div class="updated" id="tnc">
+<p><h3>Want More Features? <a href="#" onmouseover="Tip(\'sprintf(__("Buy %s Pro for $%s. PayPal payment. Instant download.", "easy-common"), $plgLongName, $plgPrice)\', WIDTH, 200, CLICKCLOSE, true, TITLE, \'Get the Pro version now!\')" onmouseout="UnTip()" onclick = "buttonwhich(\'Yes\')">Go Pro!</a></h3>
+The Pro version of this plugin gives you more features and benefits. For instance,
+<ol>
+$this_benefits
+</ol>
+And much more. New features and bug fixes will first appear in the Pro version before being ported to this freely distributed Lite edition.<br /><br />
+<input onmouseover="Tip(sprintf(__("Buy %s Pro for $%s. PayPal payment. Instant download.", "easy-common"), $plgLongName, $plgPrice)\', WIDTH, 200, CLICKCLOSE, true, TITLE, \'Get the Pro version now!\')" onmouseout="UnTip()" type = "button" class="button-secondary" id = "ybutton" value = "Go Pro!" onclick = "buttonwhich(\'Yes\')" />
+<input onmouseover="Tip(\'Continue using the Lite version, and hide this message. After clicking this button, please remember to save your options to hide this box for good.\', WIDTH, 200, CLICKCLOSE, true, TITLE, \'Stay Lite\')" onmouseout="UnTip()" type = "button" class="button-secondary" id = "nbutton" value = "No thanks" onclick = "buttonwhich(\'No\')" />
+<small style=\'font-weight:normal;\'><a id=\'hideInvite\' href=\'#\' style=\'float:right; display:block; border:none;\'  onmouseover="Tip(\'Click the link to hide this box. After clicking this link, please remember to save your options to hide this box for good.\', WIDTH, 200, CLOSEBTN, true, CLICKCLOSE, true, FIX, [this, 5, 5], TITLE, \'Hide this Box\')" onclick = "buttonwhich(\'No\')">
+Do not show this anymore</a></small>
+<script type = "text/javascript">
+function hideInvite() {
+  document.getElementById("tnc").style.display = \'none\';
+}
+function buttonwhich(message) {
+  document.getElementById("ybutton").style.display = \'none\';
+  document.getElementById("nbutton").disabled = \'true\';
+  document.getElementById("kill_invites").value = \'true\' ;
+  setTimeout(\'hideInvite()\', 5000);
+  if (message == \'Yes\') popupwindow(\'http://buy.thulasidas.com/$this\', \'Go Pro!\', 1024, 768) ;
+  if (message == \'No\') {
+    document.getElementById("nbutton").value = \'sprintf(__("Thank you for using %s!", "easy-common"), $plgLongName) Please Save Options to hide this box forever\';
+    document.getElementById("hideInvite").innerHTML = \'Please Save Options to hide this box forever\';
+  }
+}
+</script>
+</p>
+</div>'' cannot be parsed correct.
+HTML code '$'<b>Get the Pro version now!</b>
+<a href=\'http://buy.thulasidas.com/$this\' title=\'sprintf(__("Buy the Pro version of %s for $%.2f", "easy-common"), $plg["value"], $price). Instant download link.\' class=\'popup\'><img src=\'$this_cdn/ezpaypal.png\' alt=\'ezPayPal\' class=\'alignright\'/></a>
+<br />
+sprintf(__("You are using the %s version of %s, which is available in two versions:", "easy-common"), $version, $value)
+<ul><li>
+&nbsp; <a href=\'http://buy.thulasidas.com/lite/$this.zip\' title=\'sprintf(__("Download the Lite version of %s", "easy-common"), $value)\'>Lite Version </a>&nbsp; <a href=\'http://buy.thulasidas.com/$this\' title=\'sprintf(__("Buy the Pro version of %s for $%.2f", "easy-common"), $plg["value"], $price). Instant download link.\' class=\'popup\'>Pro Version</a>
+</li>
+<li>addslashes($plg["pro"]) sprintf(__("And it costs only $%.2f!", "easy-common"), $price)</li>
+</ul>'' cannot be parsed correct.
+HTML code '$'<div style=\'background-color:#ffcccc;padding:5px;border:solid 1px #c99;height:115px;overflow-y:auto;margin:0;width:300px\'><div style=\'font-size:14px;color:#a48;font-variant: small-caps;text-decoration:underline;text-align:center;\'><b>Pro Version</b></div><div  onmouseover="TagToTip(\'pro\', WIDTH, 300, TITLE, Buy the Pro Version\',STICKY, 1, CLOSEBTN, true, CLICKCLOSE, true, FIX, [this, -15, -90])"'' cannot be parsed correct.
+HTML code '$'sprintf(__("You are enjoying "$value" with "Pro" features.", "easy-common"), $value) Consider buying it, if you haven\'t already paid for it. <a href=\'http://buy.thulasidas.com/$this\' title=\'sprintf(__("Buy the Pro version of %s for $%.2f", "easy-common"), $plg["value"], $price). Instant download link.\' class=\'popup\'>sprintf(__("It costs only $%.2f!", "easy-common"), $price)</a></div><br><div style=\'text-align:center;\'>[<strong onmouseover="Tip(\'Other Premium Plugins from the same author\')" onmouseout="UnTip()"><a href=\'http://www.thulasidas.com/plugins\' class=\'popup\' data-height=\'1024\' data-width=\'1200\' target=\'_blank\'>Other Plugins</a></strong>]</div>'' cannot be parsed correct.
+HTML code '$'sprintf(__("Thank you for using %s. The "Pro" version gives you more options.", "easy-common"), $value)  Consider buying it. <a href=\'http://buy.thulasidas.com/$this\' title=\'sprintf(__("Buy the Pro version of %s for $%.2f", "easy-common"), $plg["value"], $price). Instant download link.\' class=\'popup\'>sprintf(__("It costs only $%.2f!", "easy-common"), $price)</a></div><br><div style=\'text-align:center;\'>[<strong onmouseover="Tip(\'Read more about<em><strong>$this_value</strong></em><b><i> Pro</i></b> at Unreal Blog\')" onmouseout="UnTip()"><a href=\'http://www.thulasidas.com/plugins/$this\' title=\'More info about it at Unreal Blog\' class=\'popup\' data-height=\'1024\' data-width=\'1200\'>More Info</a></strong>]&emsp;[<strong onmouseover="Tip(\'Get<em><strong>$this_value</strong></em><b><i> Pro</i></b> for $$this_price\')" onmouseout="UnTip()"><a href=\'http://buy.thulasidas.com/$this\' title=\'Get it now for $$this_price\' class=\'popup\'>Buy Now!</a></strong>]&emsp;[<strong onmouseover="Tip(\'Download<em><strong>$this_value</strong></em><b><i> Pro</i></b>. If you have already purchased it, you can find your download link here.\', WIDTH, 200)" onmouseout="UnTip()"><a href=\'http://buy.thulasidas.com/update.php\' title=\'If you have already purchased the Pro version, you can find your download link here.\' class=\'popup\'>Download</a></strong>]</div>'' cannot be parsed correct.
+HTML code '$'<div id=\'premium-$slug\' style=\'display:none\'><a href=\'http://www.thulasidas.com/$slug\' target=\'_blank\' class=\'popup\' data-height=\'1024\'><img src=\'$this_cdn/plg-$slug.jpg\' style=\'border: solid 1px #888;vertical-align:bottom;max-width:100%\' alt=\'Another Premium Plugin the this Author\' /></a><br><br>'' cannot be parsed correct.
+HTML code '$'$this_myPlugins_$slug_blurb $this_myPlugins_$slug_desc
+<br>
+<br>
+<b style=\'color:red;font-size:1.1em\'>Get the Pro version now!</b>
+<a href=\'http://buy.thulasidas.com/$slug\' title=\'sprintf(__("Buy the Pro version of %s for $%.2f", "easy-common"), $plg["value"], $price). Instant download link.\' class=\'popup\'><img src=\'$this_cdn/ezpaypal.png\' alt=\'ezPayPal\' class=\'alignright\'/></a>
+sprintf(__("%s is available in two versions:", "easy-common"), $value)
+<ul><li>
+<a href=\'http://wordpress.org/extend/plugins/$this->getPlgKey($slug)/\' class=\'popup\' data-height=\'1024\'>Lite Version</a> and <b><a href=\'http://buy.thulasidas.com/$slug\' title=\'sprintf(__("Buy the Pro version of %s for $%.2f", "easy-common"), $plg["value"], $price). Instant download link.\' class=\'popup\'>Pro Version</a></b>
+</li>
+<li>addslashes($plg["pro"]) sprintf(__("And it costs only $%.2f!", "easy-common"), $price)</li>
+</ul></div>'' cannot be parsed correct.
+HTML code '$'<div style=\'padding:0px;border:none;text-align:center\' id=\'support\' ><a href=\'http://www.thulasidas.com/professional-php-services/\' target=\'_blank\' onmouseover="TagToTip(\'proservices\', WIDTH, 295, TITLE, \'Professional Services\', FIX, [this, -65, 110], CLICKCLOSE, true, CLOSEBTN, true)"><img src=\'$this_cdn/300x250-0rand(0, 4).jpg\' style=\'vertical-align:bottom;max-width:150px;border:0\' alt=\'Professional Services from the Plugin Author\' /></a></div>'' cannot be parsed correct.
+HTML code '$'<div style=\'padding:0px;border:none;text-align:center\' id=\'premium\'><a href=\'http://www.thulasidas.com/$key\' target=\'_blank\' class=\'popup\' data-height=\'1024\' onmouseover="TagToTip(\'premium$key\', WIDTH, 295, TITLE, \'$desc\', FIX, [this, -65, -30], CLICKCLOSE, true, CLOSEBTN, true)" ><img src=$this_cdn/plg-$key.jpg\' style=\'border: solid 1px #888;vertical-align:bottom;max-width:150px\' alt=\'$name - Another Premium Plugin the this Author\' /></a></div>'' cannot be parsed correct.
+HTML code '$'<div class=\'updated\' id=\'rating\'>
+<p>Thanks for using <i><b>$this_value</b></i>! You\'ve installed this plugin over a month ago. <br />
+If you are satisfied with how well it works, why not rate it and recommend it to others? <a href=\'http://wordpress.org/extend/plugins/$this->getPlgKey()/\' class=\'popup\' data-height=\'1024\'>Click here</a>
+<small style=\'font-weight:normal;\'><a id=\'hideRating\'  href=\'#\' style=\'float:right; display:block; border:none;\'  onmouseover="Tip(htmlspecialchars(__("Click the link to hide this box. After clicking this link, please remember to save your options to hide this box for good.", "easy-common"))\', WIDTH, 200, CLOSEBTN, true, CLICKCLOSE, true, FIX, [this, 5, 5], TITLE, \'Hide this Box\')" onclick = "hideme()">
+Do not show this anymore</a></small></p></div>
+<input type="hidden" id="kill_rating" name="kill_rating" value="" />
+<script type = "text/javascript">
+function hideRating() {
+  document.getElementById("rating").style.display = \'none\';
+}
+function hideme() {
+  document.getElementById("kill_rating").value = \'true\' ;
+  document.getElementById("hideRating").innerHTML = \'Please Save Options to hide this box forever\';
+  setTimeout(\'hideRating()\', 4000);
+}
+</script>'' cannot be parsed correct.
+HTML code '$'<li>&emsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id=$slug> <a href=\'http://buy.thulasidas.com/$slug\' title=\'Buy the Pro version of the $slug plugin\' class=\'popup\'><img src=\'$this_cdn/ezpaypal.png\' alt=\'ezPayPal -- Instant PayPal Shop.\' class=\'alignright\' /></a>
+<br />$plg_pro </span></li>
+'' cannot be parsed correct.
+HTML code '$'<span onmouseover="TagToTip(\'pro\', WIDTH, 350, TITLE, \'Buy the Pro Version\',STICKY, 1, CLOSEBTN, true, CLICKCLOSE, true, FIX, [this, 5, 5])"><b><a href=\'http://buy.thulasidas.com/$this\' class=\'popup\' target=\'_blank\'>Buy the Pro Version</a></b>&nbsp; More features, more power!</span>'' cannot be parsed correct.
+HTML code '$'<b>Get Pro Version!</b>
+<a href=\'http://buy.thulasidas.com/$this\' title=\'sprintf(__("Buy the Pro version of %s for $%.2f", "easy-common"), $value, $price)\' class=\'popup\'><img src=\'$this_cdn/ezpaypal.png\' alt=\'ezPayPal\' class=\'alignright\' /></a>
+<br />
+sprintf(__("You are using the Lite version of %s, which is available in two versions: <b>Lite</b> and <b>Pro</b>.", "easy-common"), $value)
+<ul><li>
+ &nbsp;  &nbsp; <a href=\'http://www.thulasidas.com/plugins/$this\' title=\'sprintf(__("More info about %s", "easy-common"), $value)\' target=_blank class=\'popup\' data-height=\'1024\'> More Info </a>&nbsp; <a href=\'http://buy.thulasidas.com/$this\' class=\'popup\' title=\'sprintf(__("Buy the Pro version of %s for $%.2f", "easy-common"), $value, $price)\'>Get Pro Version</a>
+<li>addslashes($plg["pro"])</li>
+</ul>'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_titleapply_filters("widget_title", $instance["title"])$after_title'' cannot be parsed correct.
+HTML code '$'Empty Widget Text from <code>$this</code>'' cannot be parsed correct.
+HTML code '$'$this->decorate($adText)'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'<li><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id=$slug-book> <a href=\'http://buy.thulasidas.com/$slug\' title=\'$slug\' class=\'popup\'><img src=\'$this_cdn/ezpaypal.png\' alt=\'ezPayPal -- Instant PayPal Shop.\' class=\'alignright\' /></a>
+<br />$plg_title$plg_desc <em><strong>$plg_value</strong></em> costs only $$plg_price -- direct from the author. </span></li>
+'' cannot be parsed correct.
+HTML code '$'\'><img src=\'$this_cdn/ezsupport.png\' class=\'alignright\' alt=\'ezSupport Portal\'/></a>'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this_style'' cannot be parsed correct.
+HTML code '$'$this_class'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'<li>'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'stripslashes(htmlspecialchars($this->value))'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this$unique'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this$unique'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'$k'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'$k'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$' class="color{hash:false,caps:true,pickerFaceColor:\'transparent\',pickerFace:3,pickerBorder:0,pickerInsetColor:\'black\'}'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this_errorMessage'' cannot be parsed correct.
+HTML code '$'</div><!-- End: $this --> 
+'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$_SERVER_REQUEST_URI'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'<div><ul class="tabs" id="$this_miniTabs"
+'' cannot be parsed correct.
+HTML code '$'<li><a href="#"  id="mtab$mTab_link"$mTab</a></li>
+'' cannot be parsed correct.
+HTML code '$'<div class="ta" id="mtab_'' cannot be parsed correct.
+HTML code '$'$mTab'' cannot be parsed correct.
+HTML code '$'</div><!-- End: $mTab --> 
+'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'<div style="background-color:#fdd;border: solid 1px #f00;padding:5px"><p><b><em>ezAPI</em></b>:$this: Dependency Injection Failure in <code>$fun</code>.</p></div>
+'' cannot be parsed correct.
+HTML code '$'sprintf(__("Fatal Error: %s in %s. Options don\\'t exist (not an array)!", "easy-ads"), "<code>get(\\'"$optionName"\\')</code>", $this->name)'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'</div><!-- End: $this --> 
+'' cannot be parsed correct.
+HTML code '$'<div style="width:280px;background-color:#dff;padding:5px;border: solid 1px" id="support"><b>Support this Plugin!</b><br />Buy <span style="text-decoration:underline" onmouseover="TagToTip(\'unreal\', WIDTH, 205, TITLE, \'Buy &lt;em&gt;The Unreal Universe&lt;/em&gt;\',STICKY, 1, CLOSEBTN, true, CLICKCLOSE, true, FIX, [this, 5, 2])"><b style="color:#a48;font-variant: small-caps;text-decoration:underline">The Unreal Universe</b></span> or <span style="text-decoration:underline" onmouseover="TagToTip(\'pqd\', WIDTH, 205, TITLE, \'&lt;em&gt;Principles of Quant. Devel.&lt;/em&gt;\',STICKY, 1, CLOSEBTN, true, CLICKCLOSE, true, FIX, [this, 5, 2])"><b style="color:#84a;font-variant: small-caps;text-decoration:underline">Principles of Quantitative Development</b></span>.</div><br />'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'</div><!-- End: This plugin --> 
+'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'<link rel=\'stylesheet\' type=\'text/css\' href=$this/ezTabs.css" /
+'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="$this/ezTabs.js"></script
+'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="$this/ezColor/jscolor.js"></script
+'' cannot be parsed correct.
+HTML code '$'<div class="error" id="migrate"><form id="genOptionMigrationForm" method="post" action=""><p>sprintf(__("Your saved options (%s) look out of date. Want to migrate the options to the current version (%s)?", "easy-ads"), $storedVersion, $pluginVersion)</p><p>Resetting all the options (and re-entering them) is recommended.</p><input type = "button" id = "migrateButton" value = "Migrate" onclick = "mButtonWhich(\'Migrate\')" /><input type = "button" id = "resetButton" value = "Reset" onclick = "mButtonWhich(\'Reset\')" /><input type="hidden" id="genOptionMigration" name="genOptionMigration" value="none" /><input type="hidden" id="genOptionReset" name="genOptionReset" value="none" /></form>'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="$this/wz_tooltip.js"></script
+'' cannot be parsed correct.
+HTML code '$'<div class="wrap" style="width:900px">
+'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this_submitMessage'' cannot be parsed correct.
+HTML code '$'$this_errorMessage'' cannot be parsed correct.
+HTML code '$'<div><ul class="tabs" id="tabs">
+'' cannot be parsed correct.
+HTML code '$'<li><a href="#"  style=\'color:green;font-weight:bold;\' id="ta_link"$p</a></li>
+'' cannot be parsed correct.
+HTML code '$'<div class="error"><p><b><em>ezAPI</em></b>: sprintf(__("%s: Unknown function (%s) requested in %s", "easy-ads"), $this->name, $fn, "<code>" .  . "</code>.")</p></div>
+'' cannot be parsed correct.
+HTML code '$'<h3>sprintf(__("Options for %s ", "easy-ads"), $name)</h3>
+'' cannot be parsed correct.
+HTML code '$'<h4>Instructions</h4><ul style="padding-left:10px;list-style-type:circle; list-style-position:inside;" ></ul><br />
+'' cannot be parsed correct.
+HTML code '$'<h4>Features</h4><ul style="padding-left:10px;list-style-type:circle; list-style-position:inside;" ></ul><br />
+'' cannot be parsed correct.
+HTML code '$'<h4>Future Plans</h4><ul style="padding-left:10px;list-style-type:circle; list-style-position:inside;" ></ul><br />
+'' cannot be parsed correct.
+HTML code '$'<tr><th colspan="2">The following providers are supported</th></tr>'' cannot be parsed correct.
+HTML code '$'$p'' cannot be parsed correct.
+HTML code '$'$p'' cannot be parsed correct.
+HTML code '$'<div class=\'$this $this-widget\' style=$this>$adText</div>
+'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_title$after_title'' cannot be parsed correct.
+HTML code '$'sprintf(__("Empty Widget Text from %s", "easy-ads"), "<code>" . $this->name . "</code>")'' cannot be parsed correct.
+HTML code '$'$this->decorate($adText)'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'<p><label for=$this->get_field_id("title")"Title:  <input class="widefat" id="$this->get_field_id("title")" name="$this->get_field_name("title")" type="text" value="$instance_title" /></label></p'' cannot be parsed correct.
+HTML code '$'<p>sprintf(__("Configure it at %s", "easy-ads"), "<br /><a href=\\'options-general.php?page="$this->slug".php\\'> " . __("Settings", "easy-ads") . " &rarr; "$this->plgName"</a></p>
+")'' cannot be parsed correct.
+HTML code '$'<table style="width:95%;padding:10px;border-spacing:10px;">
+'' cannot be parsed correct.
+HTML code '$'<tr><th colspan="2"><b>General Information</b></th></tr>
+'' cannot be parsed correct.
+HTML code '$'<h4>Ad Positions, Slots and Blocks</h4>sprintf(__("You can define ad blocks in three positions in your post - Top, Middle and Bottom. Each position can have multiple "slots". See the picture for details. By default, you have one slot per position, but you can change it below [Pro feature]. In addition, you have widgets that you can place anywhere on your sidebar as many times as you want, by %s.", "easy-ads"), "<a href="widgets.php">" . __("Appearance", "easy-ads") . " &rarr; " . __("Widgets", "easy-ads") . "</a>")'' cannot be parsed correct.
+HTML code '$'<span id=\'ad-slot\' style=\'text-decoration:underline\' onmouseover="Tip(htmlspecialchars(__("In the Pro version, you can see an illustration of the ad slots.", "easy-ads") . "<br /><a href="http://buy.thulasidas.com"$slug"" title="" . sprintf(__("Buy the Pro version of the %s plugin for $5.95", "easy-ads"), $plgName) . ""><b" . __("Get Pro Version!", "easy-ads") . "</b></a>")\', WIDTH, 200,  FIX, [this, -40, -140], TITLE, \'Click to close\', STICKY, 1, CLOSEBTN, true, CLICKCLOSE, true)" onmouseout="UnTip()">Hover on the picture to see details<br /><br /><img src=\'$this/ad-slots-small.gif\' style=\'border:0\' alt=\'[ad-slots-small]\' /></span>'' cannot be parsed correct.
+HTML code '$'<h4>Admin Control Panel</h4>This Admin tab gives you a control panel with tools and options that apply to the ad blocks from all the providers, en masse. You can <ul style="padding-left:10px;list-style-type:circle; list-style-position:inside;" ></ul><br />
+'' cannot be parsed correct.
+HTML code '$'<h4>Competition</h4>sprintf(__("The providers supported in %s may not all be compatible with each other, or, in particular, with AdSense. Be careful how you use them. But competition is probably a good thing. You may find your earnings go up because of it, which is the objective behind my many advertising plugins.", "easy-ads"), $plgName)'' cannot be parsed correct.
+HTML code '$'<tr><th colspan="2"><b>Global Options</b></th></tr>'' cannot be parsed correct.
+HTML code '$'<input type=\'hidden\' name=\'kill_rating\' value=\'true\' />'' cannot be parsed correct.
+HTML code '$'<input type=\'hidden\' name=\'kill_invites\' value=\'true\' />'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div id=\'pro\' style=\'display:none\'>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<span id="proservices" style=\'display:none;\'>
+The author of this plugin may be able to help you with your WordPress or plugin customization needs and other PHP related development. <a href=\'http://www.thulasidas.com/professional-php-services/\' target=\'_blank\'>Contact me</a> if you find a plugin that almost, but not quite, does what you are looking for, or if you need any other professional services. If you would like to see my credentials, take a look at <a href=\'http://www.thulasidas.com/col/Manoj-CV.pdf\' target=\'_blank\'>my CV</a>.
+</span>'' cannot be parsed correct.
+HTML code '$'</a>&nbsp;<small><em>['' cannot be parsed correct.
+HTML code '$']</em></small>'' cannot be parsed correct.
+HTML code '$'<small style=\'float:right\'><em>['' cannot be parsed correct.
+HTML code '$']</em></small>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div style="background-color:#dff;padding:5px;border: solid 1px #abb;margin:5px;padding-bottom:15px;">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div style="background-color:#fdf;padding:5px;border: solid 1px #caf;margin:5px;">
+'' cannot be parsed correct.
+HTML code '$'&nbsp;<a href=\'http://support.thulasidas.com\' class=\'popup\' title=\''' cannot be parsed correct.
+HTML code '$'<br style=\'line-height: 20px;\'/>'' cannot be parsed correct.
+HTML code '$'&nbsp;<a href=\'http://support.thulasidas.com\' class=\'popup\' title=\''' cannot be parsed correct.
+HTML code '$'\'>'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<label for='' cannot be parsed correct.
+HTML code '$'" title="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<input type='' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" name="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$' style='' cannot be parsed correct.
+HTML code '$' class='' cannot be parsed correct.
+HTML code '$' value='' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$'
+</label>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$' style='' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'<option value='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'</select></label>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<span id='' cannot be parsed correct.
+HTML code '$'" title="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'</span>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'</li>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<textarea cols='' cannot be parsed correct.
+HTML code '$'" rows="'' cannot be parsed correct.
+HTML code '$'" name="'' cannot be parsed correct.
+HTML code '$'" style="'' cannot be parsed correct.
+HTML code '$'" title="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</textarea>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<label for='' cannot be parsed correct.
+HTML code '$'" title="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<input type='' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" name="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$' style='' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<label for='' cannot be parsed correct.
+HTML code '$'" title="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<input type='' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" name="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$' style='' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$' /> '' cannot be parsed correct.
+HTML code '$'
+</label>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<label for='' cannot be parsed correct.
+HTML code '$'" title="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<input type='' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" name="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$' value='' cannot be parsed correct.
+HTML code '$'" />'' cannot be parsed correct.
+HTML code '$'
+</label>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$' value='' cannot be parsed correct.
+HTML code '$' />
+</label>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<label for='' cannot be parsed correct.
+HTML code '$'" title="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'&nbsp;<input type='' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'" name="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$' style='' cannot be parsed correct.
+HTML code '$' value='' cannot be parsed correct.
+HTML code '$' />
+</label>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<label for='' cannot be parsed correct.
+HTML code '$'" title="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'&nbsp;<select id='' cannot be parsed correct.
+HTML code '$'" name="'' cannot be parsed correct.
+HTML code '$'<div class="tab" id="tab'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'Sample content for '' cannot be parsed correct.
+HTML code '$'.
+'' cannot be parsed correct.
+HTML code '$'<form method="post" name="form_'' cannot be parsed correct.
+HTML code '$'" action="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<br /><hr />
+'' cannot be parsed correct.
+HTML code '$'<div class="submit">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'</div><!-- End: submit --> 
+'' cannot be parsed correct.
+HTML code '$'</form>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'</ul>
+</div><!-- of ul mTabs -->
+'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<div class="tab_current" id="tab'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<div class="tab" id="tab'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<table class="form-table" >'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<tr><th scope="row"><b>'' cannot be parsed correct.
+HTML code '$'</b></th></tr>
+<tr><td>
+'' cannot be parsed correct.
+HTML code '$'<ul style="padding-left:10px;list-style-type:circle; list-style-position:inside;" >'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'</ul>
+</td>
+</tr>
+<tr><th scope=\'row\'><b>Other Plugins and Apps</b></th></tr>
+<tr><td>'' cannot be parsed correct.
+HTML code '$'<ul style="padding-left:10px;list-style-type:circle; list-style-position:inside;" >'' cannot be parsed correct.
+HTML code '$'</ul>
+</td>
+</tr>
+</table>
+'' cannot be parsed correct.
+HTML code '$'<script type = "text/javascript">'' cannot be parsed correct.
+HTML code '$'function hideVersion() {'' cannot be parsed correct.
+HTML code '$'document.getElementById("migrate").style.display = \'none\';'' cannot be parsed correct.
+HTML code '$'}'' cannot be parsed correct.
+HTML code '$'function mButtonWhich(message) {'' cannot be parsed correct.
+HTML code '$'  document.getElementById("genOptionMigration").value = message;'' cannot be parsed correct.
+HTML code '$'  document.getElementById("migrateButton").style.display = \'none\';'' cannot be parsed correct.
+HTML code '$'  document.getElementById("resetButton").disabled = \'true\';'' cannot be parsed correct.
+HTML code '$'  document.getElementById("resetButton").value = \'Thank you!\';'' cannot be parsed correct.
+HTML code '$'  setTimeout(\'hideVersion()\', 6000);'' cannot be parsed correct.
+HTML code '$'  document.forms["genOptionMigrationForm"].submit();'' cannot be parsed correct.
+HTML code '$'}'' cannot be parsed correct.
+HTML code '$'</script>'' cannot be parsed correct.
+HTML code '$'</div><br />
+'' cannot be parsed correct.
+HTML code '$'<h2>'' cannot be parsed correct.
+HTML code '$' Setup</h2><br />'' cannot be parsed correct.
+HTML code '$'</ul>
+</div><!-- of ul tabs -->
+'' cannot be parsed correct.
+HTML code '$'
+</div><!-- of wrap -->
+'' cannot be parsed correct.
+HTML code '$'<table style="width:95%">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<tr style="text-align:center;vertical-align:middle">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<td style="width:46%">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<table style="width:100%">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<tr style="text-align:center;vertical-align:middle">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<td style="text-align:left">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'</td></tr></table>
+'' cannot be parsed correct.
+HTML code '$'</td>
+'' cannot be parsed correct.
+HTML code '$'<td style="width:54%">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<table style="width:100%">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<tr style="text-align:center;vertical-align:middle">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<td style="width:33%">'' cannot be parsed correct.
+HTML code '$'<br /><br /></td>
+'' cannot be parsed correct.
+HTML code '$'<td style=\'text-align:left\'>'' cannot be parsed correct.
+HTML code '$'</td>
+'' cannot be parsed correct.
+HTML code '$'</tr>
+'' cannot be parsed correct.
+HTML code '$'</table></td>
+'' cannot be parsed correct.
+HTML code '$'</tr></table>
+'' cannot be parsed correct.
+HTML code '$'<table style="width:80%;margin-left:auto;margin-right:auto;"><tr style="vertical-align:top">'' cannot be parsed correct.
+HTML code '$'</tr></table>'' cannot be parsed correct.
+HTML code '$'<tr style="text-align:center;vertical-align:middle">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'<td style="width:50%;text-align:left">'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'</td>
+'' cannot be parsed correct.
+HTML code '$'<td>
+'' cannot be parsed correct.
+HTML code '$'</td></tr>
+'' cannot be parsed correct.
+HTML code '$'<tr><td>'' cannot be parsed correct.
+HTML code '$'</td>
+'' cannot be parsed correct.
+HTML code '$'<td>
+'' cannot be parsed correct.
+HTML code '$'</td></tr>
+'' cannot be parsed correct.
+HTML code '$'
+'' cannot be parsed correct.
+HTML code '$'</table>
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:37.425509.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.050996.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 2 do_action/apply_filters calls and 9 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.535523.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running ArrayElementDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MsqlDetector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running Oci8Detector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running PhpCurlDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running HashDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PHPRetrievalDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector

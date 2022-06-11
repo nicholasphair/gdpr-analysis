@@ -1,0 +1,641 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on html-to-shortcode-generator
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.598281.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.895503.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 44 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.374265.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.631181.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 520 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.782590.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.503181.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.105108.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 230 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.476916.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3558
+Added 2762 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3894
+Added 336 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.244502.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/html-to-shortcode-generator/html-to-shortcode-generator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/html-to-shortcode-generator/class/plugin-enabler.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.271662.
+
+44 PHP_REACHES edges created
+2 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3512 PHP_REACHES edges created
+336 PHP_REACHES edges created
+3894 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1229 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.091693.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.867137.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 93 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.174061.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 34 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.151705.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.129879.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.604969.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012337.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.036865.
+
+127 PHP_REACHES edges created
+127 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 100 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.120682.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.126721.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'html_entity_decode($before, ENT_QUOTES)'' cannot be parsed correct.
+HTML code '$'html_entity_decode($body, ENT_QUOTES)'' cannot be parsed correct.
+HTML code '$'html_entity_decode($after, ENT_QUOTES)'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "wp_plugin_assets_attachment", true)_url'' cannot be parsed correct.
+HTML code '$'admin_url()admin-ajax.php?action=delete_asset&id=$post'' cannot be parsed correct.
+HTML code '$'$file_0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("no", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("head", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("foot", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("html", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name))'' cannot be parsed correct.
+HTML code '$'ucfirst(str_replace(["#--img--", "--#"], ["", ""], $img[0]))'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name))'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name))'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $input_name, true)'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name . "_" . $attr_name))'' cannot be parsed correct.
+HTML code '$'ucfirst(str_replace(["#--img--", "--#"], ["", ""], $img[0])) ucfirst(str_replace(["#--img", "--#"], ["", ""], $attr))'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name . "_" . $attr_name))'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name . "_" . $attr_name))'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $input_name, true)'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name))'' cannot be parsed correct.
+HTML code '$'ucfirst(str_replace(["#--txt--", "--#"], "", $field))'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name))'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name))'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $input_name, true)'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name))'' cannot be parsed correct.
+HTML code '$'ucfirst(str_replace(["#--txtarea--", "--#"], "", $field))'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name))'' cannot be parsed correct.
+HTML code '$'_wp_plugin_strtolower(str_replace(" ", "_", $field_name))'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, $input_name, true)'' cannot be parsed correct.
+HTML code '$'$file_0'' cannot be parsed correct.
+HTML code '$'$file_0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("no", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("head", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("foot", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("html", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'$file_0'' cannot be parsed correct.
+HTML code '$'$file_0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("no", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("html", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'$file_0'' cannot be parsed correct.
+HTML code '$'$file_0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("no", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'htsg_value("html", $file[1], "checked")'' cannot be parsed correct.
+HTML code '$'$file_0'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'html_entity_decode(esc_textarea($plugin_define_before))'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'html_entity_decode(esc_textarea($plugin_define_repeater))'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'html_entity_decode(esc_textarea($plugin_define_after))'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="plugin_info_meta_noncename" id="plugin_info_meta_noncename" value="wp_create_nonce(plugin_basename())" /'' cannot be parsed correct.
+HTML code '$'Plugin Name'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_wp_pluginname", true)'' cannot be parsed correct.
+HTML code '$'str_replace(" ", "_", strtolower($plugin_name))'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'">Download</a>&nbsp;<a href="'' cannot be parsed correct.
+HTML code '$' enctype="multipart/form-data"'' cannot be parsed correct.
+HTML code '$'Failed to open the archive!'' cannot be parsed correct.
+HTML code '$'"  /></div>
+    <h3>Implementation</h3>
+    <h4>Shortcode:</h4>
+    <p>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:10.666296.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045540.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 15 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.578842.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running PHPRetrievalDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+html-to-shortcode-generator.php:626
+  - RETRIEVAL call to file_get_contents($_FILES["wp_plugin_assets_attachment"]["tmp_name"]).
+  - Data types: file 
+
+class/plugin-enabler.php:38
+  - RETRIEVAL call to get_post_meta($plugin->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:89
+  - RETRIEVAL call to get_post_meta($this->plugin_id, "wp_plugin_assets_attachment", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:117
+  - RETRIEVAL call to get_post_meta($this->plugin_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:221
+  - RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_before", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:222
+  - RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_after", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:223
+  - RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_repeater", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:225
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+class/plugin-enabler.php:229
+  - RETRIEVAL call to get_post_meta($item->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:269
+  - RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_repeater", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:322
+  - RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_repeater", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:356
+  - RETRIEVAL call to get_post_meta($post->ID, $input_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:365
+  - RETRIEVAL call to get_post_meta($post->ID, $input_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:376
+  - RETRIEVAL call to get_post_meta($post->ID, $input_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class/plugin-enabler.php:385
+  - RETRIEVAL call to get_post_meta($post->ID, $input_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:35
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+html-to-shortcode-generator.php:104
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+html-to-shortcode-generator.php:124
+  - RETRIEVAL call to get_post_meta($post->ID, "_wp_pluginname", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:130
+  - RETRIEVAL call to get_post_meta($post->ID, "_wp_pluginenable", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:159
+  - RETRIEVAL call to get_post_meta($id, "wp_plugin_assets_attachment", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:176
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_attachment", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:206
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_scripts", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:209
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_scripts", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:210
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_styles", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:211
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_images", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:212
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_others", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:351
+  - RETRIEVAL call to get_post_meta($post->ID, "_wp_plugin_define_before", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:352
+  - RETRIEVAL call to get_post_meta($post->ID, "_wp_plugin_define_after", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:353
+  - RETRIEVAL call to get_post_meta($post->ID, "_wp_plugin_define_repeater", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:493
+  - RETRIEVAL call to get_post_meta($post->ID, "_wp_pluginname", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:524
+  - RETRIEVAL call to get_post() alters data types {'wp_post', 'post_meta', 'post'}. Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+html-to-shortcode-generator.php:586
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_scripts", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:587
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_styles", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:588
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_images", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+html-to-shortcode-generator.php:589
+  - RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_others", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta 
+
+class/plugin-enabler.php:438
+  - STORAGE call to update_post_meta($post->ID, $key, sanitize_text_field($_POST[$key])) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class/plugin-enabler.php:442
+  - STORAGE call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:38
+  - STORAGE call to wp_insert_post(["post_status" => "publish", "post_type" => "wp_plugin", "post_title" => "Untitled Plugin"]). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+html-to-shortcode-generator.php:164
+  - STORAGE call to delete_post_meta($id, "wp_plugin_assets_attachment") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:579
+  - STORAGE call to update_post_meta($post->ID, $key, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:581
+  - STORAGE call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:609
+  - STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_scripts", json_encode($scripts)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:610
+  - STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_styles", json_encode($styles)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:611
+  - STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_images", json_encode($images)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:612
+  - STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_others", json_encode($others)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:631
+  - STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_attachment", $upload) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:661
+  - STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_scripts", json_encode($scripts)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:662
+  - STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_styles", json_encode($styles)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:663
+  - STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_images", json_encode($images)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:664
+  - STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_others", json_encode($others)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+class/plugin-enabler.php:442
+  - DELETION call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:164
+  - DELETION call to delete_post_meta($id, "wp_plugin_assets_attachment") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+html-to-shortcode-generator.php:581
+  - DELETION call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents($_FILES["wp_plugin_assets_attachment"]["tmp_name"]) - {'file'}
+none
+	WordPressRetrievalDetector.get_posts($args) - set()
+	WordPressRetrievalDetector.get_posts($args) - set()
+	WordPressStorageDetector.wp_insert_post(["post_status" => "publish", "post_type" => "wp_plugin", "post_title" => "Untitled Plugin"]) - set()
+	WordPressRetrievalDetector.get_posts($args) - set()
+post
+	WordPressRetrievalDetector.get_post() - {'wp_post', 'post_meta', 'post'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($this->plugin_id, "_wp_plugin_define_repeater", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, "wp_plugin_assets_scripts", json_encode($scripts)) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_wp_pluginname", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_wp_pluginenable", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post() - {'wp_post', 'post_meta', 'post'}
+	WordPressStorageDetector.update_post_meta($post->ID, $key, sanitize_text_field($_POST[$key])) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_images", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, "wp_plugin_assets_scripts", json_encode($scripts)) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, "wp_plugin_assets_styles", json_encode($styles)) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_scripts", true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post->ID, $key) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($this->plugin_id, "_wp_plugin_define_before", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_images", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, "wp_plugin_assets_styles", json_encode($styles)) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_styles", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_others", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $input_name, true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, $key, $value) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_attachment", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_others", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, "wp_plugin_assets_images", json_encode($images)) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($plugin->ID) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $input_name, true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post->ID, $key) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($this->plugin_id, "wp_plugin_assets_attachment", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($id, "wp_plugin_assets_attachment") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($this->plugin_id) - {'post_meta'}
+	DeletionDetector.delete_post_meta($id, "wp_plugin_assets_attachment") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_scripts", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, "wp_plugin_assets_images", json_encode($images)) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($this->plugin_id, "_wp_plugin_define_after", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, "wp_plugin_assets_others", json_encode($others)) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, "wp_plugin_assets_others", json_encode($others)) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($item->ID) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post->ID, "wp_plugin_assets_attachment", $upload) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post->ID, $key) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_scripts", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($this->plugin_id, "_wp_plugin_define_repeater", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $input_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_wp_plugin_define_before", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $input_name, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_wp_plugin_define_after", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_wp_plugin_define_repeater", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post->ID, $key) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id, "wp_plugin_assets_attachment", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($this->plugin_id, "_wp_plugin_define_repeater", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_wp_pluginname", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "wp_plugin_assets_styles", true) - {'post_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post() - {'wp_post', 'post_meta', 'post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:13.042078.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 434 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.364423.
+
+434 STORE_REACHES edges created
+434 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006395.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:50.926200!
+DELETION call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($id, "wp_plugin_assets_attachment") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+RETRIEVAL call to file_get_contents($_FILES["wp_plugin_assets_attachment"]["tmp_name"]).,None,None
+RETRIEVAL call to get_post_meta($this->plugin_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_before", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_after", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_repeater", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($item->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_repeater", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($this->plugin_id, "_wp_plugin_define_repeater", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $input_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $input_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $input_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($plugin->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $input_name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($this->plugin_id, "wp_plugin_assets_attachment", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_wp_pluginname", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_wp_pluginenable", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($id, "wp_plugin_assets_attachment", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_attachment", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_scripts", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_scripts", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_styles", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_images", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_others", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_wp_plugin_define_before", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_wp_plugin_define_after", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_wp_plugin_define_repeater", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_wp_pluginname", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post() alters data types {'wp_post', 'post_meta', 'post'}. Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_scripts", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_styles", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_images", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "wp_plugin_assets_others", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+STORAGE call to update_post_meta($post->ID, $key, sanitize_text_field($_POST[$key])) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to delete_post_meta($id, "wp_plugin_assets_attachment") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to wp_insert_post(["post_status" => "publish", "post_type" => "wp_plugin", "post_title" => "Untitled Plugin"]). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to update_post_meta($post->ID, $key, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post->ID, $key) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_scripts", json_encode($scripts)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_styles", json_encode($styles)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_images", json_encode($images)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_others", json_encode($others)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_attachment", $upload) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_scripts", json_encode($scripts)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_styles", json_encode($styles)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_images", json_encode($images)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post->ID, "wp_plugin_assets_others", json_encode($others)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

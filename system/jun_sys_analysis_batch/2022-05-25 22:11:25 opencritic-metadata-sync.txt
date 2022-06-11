@@ -1,0 +1,785 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on opencritic-metadata-sync
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.412886.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.168822.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.154344.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.508015.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 239 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.706821.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.654101.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.104904.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 154 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.141085.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1837
+Added 1444 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 16683
+Added 14846 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:02.342162.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/opencritic-metadata-sync/opencritic-wordpress-plugin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/opencritic-metadata-sync/includes/class-wp-opencritic-scripts.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/opencritic-metadata-sync/includes/wp-opencritic-misc-function.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/opencritic-metadata-sync/includes/admin/class-wp-opencritic-admin.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.475081.
+
+1000 PHP_REACHES edges created
+1837 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+10000 PHP_REACHES edges created
+11000 PHP_REACHES edges created
+12000 PHP_REACHES edges created
+13000 PHP_REACHES edges created
+14000 PHP_REACHES edges created
+14846 PHP_REACHES edges created
+16683 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 715 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.863254.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 2 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.901519.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.332081.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 6 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.156310.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.148505.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.024428.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010926.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.033267.
+
+2 CALLS edges created
+7 PHP_REACHES edges created
+9 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 4 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.115194.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.122100.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'$oc_game_details_id'' cannot be parsed correct.
+HTML code '$'$oc_game_details_name'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "GameMissingTitle", true)'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "author", true)'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "review_quote", true)'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html__("Platform(s) Reviewed (%s selected)", "opencritic"), " <span id="selectedText">0</span>")'' cannot be parsed correct.
+HTML code '$'$platform'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'$platform'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'numeric'' cannot be parsed correct.
+HTML code '$'$Scrore_format'' cannot be parsed correct.
+HTML code '$'$Scrore_format'' cannot be parsed correct.
+HTML code '$'$Scrore_format_type'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "score_numeric", true)'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'json_encode($game_list)'' cannot be parsed correct.
+HTML code '$'json_encode($responce)'' cannot be parsed correct.
+HTML code '$'get_option("wp_opencritic_api_key")'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'$score_format'' cannot be parsed correct.
+HTML code '$'$score_format'' cannot be parsed correct.
+HTML code '$' name="enable_review_data_to_open_critic" id="enable_review_data_to_open_critic">
+        	<label for="enable_review_data_to_open_critic">'' cannot be parsed correct.
+HTML code '$'</label>
+        	<span class="description">'' cannot be parsed correct.
+HTML code '$'</span>
+        </p>
+        <div class="enable_if_review_data">
+            <p class="wp-opencritic-meta-group">
+            	<label for="game_reviewed">'' cannot be parsed correct.
+HTML code '$'</label>
+            	<select name="game_reviewed" id="game_reviewed">
+				'' cannot be parsed correct.
+HTML code '$'" selected="selected">'' cannot be parsed correct.
+HTML code '$'</option>	
+				'' cannot be parsed correct.
+HTML code '$'name="GameMissing" id="GameMissing">
+                <label for="GameMissing" >'' cannot be parsed correct.
+HTML code '$'</label>            
+            </p>
+            <p class="wp-opencritic-meta-group">
+                <label for="GameMissingTitle">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="text" name="GameMissingTitle" value="'' cannot be parsed correct.
+HTML code '$'" id="GameMissingTitle">
+            </p>
+            <p class="wp-opencritic-meta-group">
+                <label for="author">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="text" value="'' cannot be parsed correct.
+HTML code '$'</label>
+                <textarea name="review_quote" cols="25" id="review_quote">'' cannot be parsed correct.
+HTML code '$'</textarea>                
+            </p>
+             <p class="wp-opencritic-meta-group">
+                <label for="platforms_reviewed">'' cannot be parsed correct.
+HTML code '$'</label>
+               
+                <select name="platforms_reviewed[]" id="platforms_reviewed" multiple="multiple">
+                    '' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</label>               
+                <select name="score_format" id="score_format">
+                    '' cannot be parsed correct.
+HTML code '$' data-score-format-type='' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'" name="score_format_type" id="score_format_type" />
+             <p class="wp-opencritic-meta-group">
+                <label for="score_numeric">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="number" min="1" value="'' cannot be parsed correct.
+HTML code '$'" max="100" name="score_numeric"  id="score_numeric"></textarea>
+            </p>
+
+            <p class="wp-opencritic-meta-group">
+                <label for="score_verdict">'' cannot be parsed correct.
+HTML code '$'</label>                
+                <select name="score_verdict" id="score_verdict">
+                </select>
+            </p>
+            <p id="no_score_numeric">
+                No Verdict 
+
+            </p>
+            '' cannot be parsed correct.
+HTML code '$' id="recommended">
+                <label for="recommended">'' cannot be parsed correct.
+HTML code '$'</label> 
+                <span class="description">'' cannot be parsed correct.
+HTML code '$'</span> 
+            </p>
+        '' cannot be parsed correct.
+HTML code '$'" type="text" id="wp_opencritic_api_key" class="regular-text"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="blogname">Default Score Format</label></th>
+                            <td>
+                                <select name="wp_opencritic_default_score_format">
+                                '' cannot be parsed correct.
+HTML code '$'value='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</option>
+                                       '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:05.580293.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.051839.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 9 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.661956.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running HashDetector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running IBMDb2Detector
+### Start running MySQLiDetector
+### Finish running ArrayElementDetector
+### Start running Oci8Detector
+### Finish running MsqlDetector
+### Start running OpenSSLDetector
+### Finish running MySQLDetector
+### Start running ParadoxDetector
+### Finish running MongoDbDetector
+### Start running PasswordHashingDetector
+### Finish running OpenSSLDetector
+### Start running PhpCurlDetector
+### Finish running Oci8Detector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ParadoxDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PasswordHashingDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PhpVarDetector
+### Start running SqliteDetector
+### Finish running PostgreSQLDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running VariableDetector
+### Start running WordPressStorageDetector
+### Finish running UserInputDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running WordPressRemoteDetector
+### Start running UninstallDetector
+### Finish running maxdbDetector
+### Finish running MySQLiDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+includes/admin/class-wp-opencritic-admin.php:157
+  - API call to wp_remote_get("https://api.opencritic.com/api/game/search?criteria=" . urlEncode($_REQUEST["q"])). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote
+includes/admin/class-wp-opencritic-admin.php:252
+  - API call to wp_remote_post("https://portal.opencritic.com/api/review/staged", ["headers" => ["Content-Type" => "application/json"], "body" => json_encode($submission_body)]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+includes/admin/class-wp-opencritic-admin.php:410
+  - API call to wp_remote_get("https://portal.opencritic.com/api/outlet/external?key=" . $site_key). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote
+includes/admin/class-wp-opencritic-admin.php:489
+  - API call to wp_remote_post("https://portal.opencritic.com/api/review/staged", ["headers" => ["Content-Type" => "application/json"], "body" => json_encode($submission_body)]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+includes/wp-opencritic-misc-function.php:4
+  - API call to wp_remote_get("https://api.opencritic.com/api/platform"). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote
+includes/wp-opencritic-misc-function.php:11
+  - API call to wp_remote_get("https://api.opencritic.com/api/score-format"). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote
+includes/wp-opencritic-misc-function.php:17
+  - API call to wp_remote_get("https://api.opencritic.com/api/score-format"). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote 
+
+includes/admin/class-wp-opencritic-admin.php:20
+  - RETRIEVAL call to get_option("wp_opencritic_default_score_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/admin/class-wp-opencritic-admin.php:25
+  - RETRIEVAL call to get_post_meta($post_id, "enable_review_data_to_open_critic", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:26
+  - RETRIEVAL call to get_post_meta($post_id, "game_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:27
+  - RETRIEVAL call to get_post_meta($post_id, "author", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:28
+  - RETRIEVAL call to get_post_meta($post_id, "review_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:29
+  - RETRIEVAL call to get_post_meta($post_id, "GameMissingTitle", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:30
+  - RETRIEVAL call to get_post_meta($post_id, "GameMissing", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:31
+  - RETRIEVAL call to get_post_meta($post_id, "score_format", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:32
+  - RETRIEVAL call to get_post_meta($post_id, "score_numeric", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:33
+  - RETRIEVAL call to get_post_meta($post_id, "recommended", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:34
+  - RETRIEVAL call to get_post_meta($post_id, "platforms_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:34
+  - RETRIEVAL call to get_post_meta($post_id, "platforms_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:36
+  - RETRIEVAL call to get_post_meta($post_id, "oc_game_details", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:36
+  - RETRIEVAL call to get_post_meta($post_id, "oc_game_details", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:37
+  - RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/admin/class-wp-opencritic-admin.php:180
+  - RETRIEVAL call to get_post($post_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+includes/admin/class-wp-opencritic-admin.php:243
+  - RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/admin/class-wp-opencritic-admin.php:248
+  - RETRIEVAL call to get_post_meta($post_id, "SubmissionId", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:339
+  - RETRIEVAL call to get_option("wp_opencritic_default_score_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/admin/class-wp-opencritic-admin.php:340
+  - RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/admin/class-wp-opencritic-admin.php:407
+  - RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/admin/class-wp-opencritic-admin.php:428
+  - RETRIEVAL call to get_post($post_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, post_meta, wp_post
+includes/admin/class-wp-opencritic-admin.php:430
+  - RETRIEVAL call to get_post_meta($post_id, "SubmissionId", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:431
+  - RETRIEVAL call to get_post_meta($post_id, "original_post_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:432
+  - RETRIEVAL call to get_post_meta($post_id, "review_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:433
+  - RETRIEVAL call to get_post_meta($post_id, "platforms_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:434
+  - RETRIEVAL call to get_post_meta($post_id, "author", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:435
+  - RETRIEVAL call to get_post_meta($post_id, "game_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:436
+  - RETRIEVAL call to get_post_meta($post_id, "GameMissing", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:437
+  - RETRIEVAL call to get_post_meta($post_id, "GameMissingTitle", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:438
+  - RETRIEVAL call to get_post_meta($post_id, "score_format", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:439
+  - RETRIEVAL call to get_post_meta($post_id, "recommended", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:440
+  - RETRIEVAL call to get_post_meta($post_id, "score_format_type", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:446
+  - RETRIEVAL call to get_post_meta($post_id, "score_numeric", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:447
+  - RETRIEVAL call to get_post_meta($post_id, "score_numeric", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:450
+  - RETRIEVAL call to get_post_meta($post_id, "score_verdict", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:453
+  - RETRIEVAL call to get_post_meta($post_id, "enable_review_data_to_open_critic", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:483
+  - RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/admin/class-wp-opencritic-admin.php:485
+  - RETRIEVAL call to get_post_meta($post_id, "SubmissionId", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta 
+
+includes/admin/class-wp-opencritic-admin.php:267
+  - STORAGE call to update_post_meta($post_id, "SubmissionId", sanitize_text_field($PostResult->SubmissionId)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:276
+  - STORAGE call to update_post_meta($post_id, "oc_game_details", $game_data_to_save) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:281
+  - STORAGE call to update_post_meta($post_id, "oc_game_details", $game_data_to_save) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:283
+  - STORAGE call to delete_post_meta($post_id, "oc_game_details") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:285
+  - STORAGE call to update_post_meta($post_id, "original_post_status", $post->post_status) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:286
+  - STORAGE call to update_post_meta($post_id, "review_quote", $snippet) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:287
+  - STORAGE call to update_post_meta($post_id, "platforms_reviewed", $platforms_sanitized) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:288
+  - STORAGE call to update_post_meta($post_id, "author", $Author) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:289
+  - STORAGE call to update_post_meta($post_id, "game_reviewed", $game_reviewed) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:290
+  - STORAGE call to update_post_meta($post_id, "GameMissing", $GameMissing"on""") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:291
+  - STORAGE call to update_post_meta($post_id, "GameMissingTitle", $GameMissingTitle) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:292
+  - STORAGE call to update_post_meta($post_id, "score_format", $score_format) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:293
+  - STORAGE call to update_post_meta($post_id, "recommended", $recommended"on""") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:294
+  - STORAGE call to update_post_meta($post_id, "score_format_type", $score_format_type) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:295
+  - STORAGE call to update_post_meta($post_id, "enable_review_data_to_open_critic", $enable_review_data_to_open_critic) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:300
+  - STORAGE call to update_post_meta($post_id, "score_numeric", $score) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:301
+  - STORAGE call to delete_post_meta($post_id, "score_verdict") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:303
+  - STORAGE call to update_post_meta($post_id, "score_verdict", $score) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:304
+  - STORAGE call to delete_post_meta($post_id, "score_numeric") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:306
+  - STORAGE call to delete_post_meta($post_id, "score_verdict") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:307
+  - STORAGE call to delete_post_meta($post_id, "score_numeric") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:395
+  - STORAGE call to update_option("wp_opencritic_default_score_format", $wp_opencritic_default_score_format) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/admin/class-wp-opencritic-admin.php:396
+  - STORAGE call to update_option("wp_opencritic_api_key", $wp_opencritic_api_key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/admin/class-wp-opencritic-admin.php:506
+  - STORAGE call to update_post_meta($post_id, "SubmissionId", sanitize_text_field($PostResult->SubmissionId)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:507
+  - STORAGE call to update_post_meta($post_id, "original_post_status", $post->post_status) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+includes/admin/class-wp-opencritic-admin.php:283
+  - DELETION call to delete_post_meta($post_id, "oc_game_details") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:301
+  - DELETION call to delete_post_meta($post_id, "score_verdict") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:304
+  - DELETION call to delete_post_meta($post_id, "score_numeric") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:306
+  - DELETION call to delete_post_meta($post_id, "score_verdict") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+includes/admin/class-wp-opencritic-admin.php:307
+  - DELETION call to delete_post_meta($post_id, "score_numeric") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("wp_opencritic_api_key") - {'option'}
+	WordPressStorageDetector.update_option("wp_opencritic_default_score_format", $wp_opencritic_default_score_format) - {'option'}
+	WordPressRetrievalDetector.get_option("wp_opencritic_default_score_format") - {'option'}
+	WordPressRetrievalDetector.get_option("wp_opencritic_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("wp_opencritic_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("wp_opencritic_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("wp_opencritic_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("wp_opencritic_default_score_format") - {'option'}
+	WordPressStorageDetector.update_option("wp_opencritic_api_key", $wp_opencritic_api_key) - {'option'}
+post
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'post_meta', 'wp_post'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post_id, "review_quote", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "SubmissionId", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "SubmissionId", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "score_format_type", $score_format_type) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "SubmissionId", sanitize_text_field($PostResult->SubmissionId)) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "score_format", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "score_verdict", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "GameMissing", $GameMissing"on""") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "original_post_status", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "GameMissing", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "score_verdict") - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "review_quote", $snippet) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "score_numeric") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "author", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "SubmissionId", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "score_format_type", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "score_numeric", $score) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "recommended", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "author", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "recommended", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "platforms_reviewed", $platforms_sanitized) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "GameMissingTitle", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "score_verdict", $score) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "score_numeric") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "game_reviewed", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "platforms_reviewed", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "author", $Author) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "oc_game_details") - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "score_verdict") - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "GameMissingTitle", $GameMissingTitle) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "enable_review_data_to_open_critic", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "platforms_reviewed", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "GameMissingTitle", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "oc_game_details", $game_data_to_save) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "score_verdict") - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "original_post_status", $post->post_status) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "platforms_reviewed", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "oc_game_details", $game_data_to_save) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "score_numeric", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "original_post_status", $post->post_status) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "oc_game_details", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "score_numeric") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "score_format", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "game_reviewed", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "oc_game_details") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "score_numeric", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "GameMissing", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "oc_game_details", true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, "score_numeric") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "enable_review_data_to_open_critic", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "review_quote", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "score_numeric", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "game_reviewed", $game_reviewed) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "score_format", $score_format) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "recommended", $recommended"on""") - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, "score_verdict") - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "SubmissionId", sanitize_text_field($PostResult->SubmissionId)) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressStorageDetector.update_post_meta($post_id, "enable_review_data_to_open_critic", $enable_review_data_to_open_critic) - {'post_meta'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+wp_post
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'post_meta', 'wp_post'}
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'post_meta', 'wp_post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:16.691229.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 750 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.510130.
+
+750 STORE_REACHES edges created
+750 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006543.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:46.877311!
+DELETION call to delete_post_meta($post_id, "oc_game_details") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, "score_verdict") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, "score_numeric") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, "score_verdict") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, "score_numeric") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+API call to wp_remote_get("https://api.opencritic.com/api/game/search?criteria=" . urlEncode($_REQUEST["q"])). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,[]
+API call to wp_remote_post("https://portal.opencritic.com/api/review/staged", ["headers" => ["Content-Type" => "application/json"], "body" => json_encode($submission_body)]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://portal.opencritic.com/api/review/staged']
+API call to wp_remote_get("https://portal.opencritic.com/api/outlet/external?key=" . $site_key). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,[]
+API call to wp_remote_post("https://portal.opencritic.com/api/review/staged", ["headers" => ["Content-Type" => "application/json"], "body" => json_encode($submission_body)]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://portal.opencritic.com/api/review/staged']
+API call to wp_remote_get("https://api.opencritic.com/api/score-format"). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,['https://api.opencritic.com/api/score-format']
+API call to wp_remote_get("https://api.opencritic.com/api/score-format"). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,['https://api.opencritic.com/api/score-format']
+API call to wp_remote_get("https://api.opencritic.com/api/platform"). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,['https://api.opencritic.com/api/platform']
+RETRIEVAL call to get_post($post_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("wp_opencritic_default_score_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "SubmissionId", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "enable_review_data_to_open_critic", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "game_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "author", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "review_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "GameMissingTitle", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "GameMissing", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "score_format", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "score_numeric", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "recommended", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wp_opencritic_default_score_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "platforms_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "platforms_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "oc_game_details", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "oc_game_details", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($post_id) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($post_id, "SubmissionId", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "original_post_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "review_quote", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "platforms_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "author", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "game_reviewed", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "GameMissing", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "GameMissingTitle", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "score_format", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "recommended", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "score_format_type", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "score_numeric", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "score_numeric", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "score_verdict", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "enable_review_data_to_open_critic", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wp_opencritic_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "SubmissionId", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+STORAGE call to update_post_meta($post_id, "SubmissionId", sanitize_text_field($PostResult->SubmissionId)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "oc_game_details", $game_data_to_save) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "oc_game_details", $game_data_to_save) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, "oc_game_details") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, "original_post_status", $post->post_status) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "review_quote", $snippet) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "platforms_reviewed", $platforms_sanitized) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "author", $Author) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "game_reviewed", $game_reviewed) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "GameMissing", $GameMissing"on""") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "GameMissingTitle", $GameMissingTitle) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "score_format", $score_format) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "recommended", $recommended"on""") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "score_format_type", $score_format_type) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "enable_review_data_to_open_critic", $enable_review_data_to_open_critic) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "score_numeric", $score) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, "score_verdict") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, "score_verdict", $score) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, "score_numeric") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to delete_post_meta($post_id, "score_verdict") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to delete_post_meta($post_id, "score_numeric") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_option("wp_opencritic_default_score_format", $wp_opencritic_default_score_format) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wp_opencritic_api_key", $wp_opencritic_api_key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, "SubmissionId", sanitize_text_field($PostResult->SubmissionId)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "original_post_status", $post->post_status) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

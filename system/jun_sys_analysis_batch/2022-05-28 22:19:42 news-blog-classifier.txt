@@ -1,0 +1,327 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on news-blog-classifier
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.465494.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.852841.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.189284.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.767217.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 335 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.688763.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.579914.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.107662.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 162 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.795649.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1671
+Added 1174 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1878
+Added 207 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.990205.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/news-blog-classifier/news-blog-classifier.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/news-blog-classifier/includes/knn-tfidf-implementation.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/news-blog-classifier/includes/nbc-database-api.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.411298.
+
+1000 PHP_REACHES edges created
+1671 PHP_REACHES edges created
+207 PHP_REACHES edges created
+1878 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 702 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.149887.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.220160.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 38 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.967505.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 34 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.178180.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.147796.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.374139.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009858.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.041133.
+
+72 PHP_REACHES edges created
+72 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 38 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.132998.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+18 SQL operations to process.
+SELECT count(*) AS count FROM wp_nbc_word_lists WHERE word_id = (SELECT id FROM wp_nbc_root_words WHERE word=$word);
+SELECT count(*) AS count FROM wp_nbc_word_lists WHERE word_id = (SELECT id FROM wp_nbc_root_words WHERE word=$word);
+SQL command (SELECT count(*) AS count FROM wp_nbc_word_lists WHERE word_id = (SELECT id FROM wp_nbc_root_words WHERE word=$word);) cannot be parsed correct.
+SELECT id, word FROM wp_nbc_root_words;
+SQL command (SELECT id, word FROM wp_nbc_root_words;) cannot be parsed correct.
+SELECT id, name FROM wp_nbc_words;
+SQL command (SELECT id, name FROM wp_nbc_words;) cannot be parsed correct.
+
+			SELECT detail FROM wp_nbc_stopword_lists;
+		
+SQL command ( SELECT detail FROM wp_nbc_stopword_lists; ) cannot be parsed correct.
+SELECT w.name, r.word FROM wp_nbc_words w, wp_nbc_root_words r, wp_nbc_word_details wd WHERE wd.word_id = w.id && r.id =wd.root_id
+SQL command (SELECT w.name, r.word FROM wp_nbc_words w, wp_nbc_root_words r, wp_nbc_word_details wd WHERE wd.word_id = w.id && r.id =wd.root_id) cannot be parsed correct.
+INSERT INTO $tableName($tableFields) VALUES implode(",", $insertNewWords);
+SQL command (INSERT INTO $tableName($tableFields) VALUES implode(",", $insertNewWords);) cannot be parsed correct.
+SELECT count(*) AS count FROM wp_nbc_document_collections;
+SQL command (SELECT count(*) AS count FROM wp_nbc_document_collections;) cannot be parsed correct.
+SELECT wl.tf, r.word FROM wp_nbc_word_lists wl, wp_nbc_root_words r WHERE wl.document_id = 1 AND r.id = wl.word_id;
+SELECT wl.tf, r.word FROM wp_nbc_word_lists wl, wp_nbc_root_words r WHERE wl.document_id = 1 AND r.id = wl.word_id;
+SQL command (SELECT wl.tf, r.word FROM wp_nbc_word_lists wl, wp_nbc_root_words r WHERE wl.document_id = 1 AND r.id = wl.word_id;) cannot be parsed correct.
+SELECT c.name FROM wp_nbc_document_collections d, wp_nbc_categories c WHERE d.id = $doc AND d.category_id = c.id;
+SELECT c.name FROM wp_nbc_document_collections d, wp_nbc_categories c WHERE d.id = $doc AND d.category_id = c.id;
+SQL command (SELECT c.name FROM wp_nbc_document_collections d, wp_nbc_categories c WHERE d.id = $doc AND d.category_id = c.id;) cannot be parsed correct.
+
+DROP TABLE IF EXISTS wp_nbc_word_details
+SQL command (DROP TABLE IF EXISTS wp_nbc_word_details) cannot be parsed correct.
+DROP TABLE IF EXISTS wp_nbc_word_lists
+SQL command (DROP TABLE IF EXISTS wp_nbc_word_lists) cannot be parsed correct.
+DROP TABLE IF EXISTS wp_nbc_stopword_lists
+SQL command (DROP TABLE IF EXISTS wp_nbc_stopword_lists) cannot be parsed correct.
+DROP TABLE IF EXISTS wp_nbc_document_collections
+SQL command (DROP TABLE IF EXISTS wp_nbc_document_collections) cannot be parsed correct.
+DROP TABLE IF EXISTS wp_nbc_root_words
+SQL command (DROP TABLE IF EXISTS wp_nbc_root_words) cannot be parsed correct.
+DROP TABLE IF EXISTS wp_nbc_words
+SQL command (DROP TABLE IF EXISTS wp_nbc_words) cannot be parsed correct.
+DROP TABLE IF EXISTS wp_nbc_word_types
+SQL command (DROP TABLE IF EXISTS wp_nbc_word_types) cannot be parsed correct.
+DROP TABLE IF EXISTS wp_nbc_categories
+SQL command (DROP TABLE IF EXISTS wp_nbc_categories) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1710, 1757, 1822, 1887, 1940, 2029, 2074, 2134, 2206, 2352, 2914, 2920, 2926, 2932, 2938, 2944, 2950, 2956]
+Added 0 SQL nodes. 0 out of 18 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:04.326663.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'Current category: <b>wp_get_object_terms($post->ID, "category", ["fields" => "names"])_0</b>'' cannot be parsed correct.
+HTML code '$'json_encode($sentence)'' cannot be parsed correct.
+HTML code '$'insert stopwords failed'' cannot be parsed correct.
+HTML code '$'insert words failed </br></br>'' cannot be parsed correct.
+HTML code '$'insert root words failed'' cannot be parsed correct.
+HTML code '$'insert word details failed </br></br>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:00.692967.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047636.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.396617.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running HashDetector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WordPressStorageDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running PHPRetrievalDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+includes/knn-tfidf-implementation.php:52
+  - RETRIEVAL call to file_get_contents($link).
+  - Data types: file
+news-blog-classifier.php:48
+  - RETRIEVAL call to file($filename).
+  - Data types: file 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents($link) - {'file'}
+	PHPRetrievalDetector.file($filename) - {'file'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.513247.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.035728.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.008114.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:29.285086!
+RETRIEVAL call to file_get_contents($link).,None,None
+RETRIEVAL call to file($filename).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

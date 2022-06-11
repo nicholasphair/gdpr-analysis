@@ -1,0 +1,370 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on tdlc-birthdays
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.314335.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.221965.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 41 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.402292.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.413449.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 155 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.564187.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.716031.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.088159.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 51 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.976504.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1483
+Added 1236 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1483
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.037814.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tdlc-birthdays/core.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tdlc-birthdays/tdlc-birthdays.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.263048.
+
+1000 PHP_REACHES edges created
+1483 PHP_REACHES edges created
+1483 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 562 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.967020.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.707344.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 12 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.141863.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 20 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.154215.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.102115.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.203697.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009250.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.041522.
+
+32 PHP_REACHES edges created
+32 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 33 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.120176.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+5 SQL operations to process.
+SELECT ID FROM $wpdb WHERE ID=1 AND user_status != 1
+SQL command (SELECT ID FROM $wpdb WHERE ID=1 AND user_status != 1) cannot be parsed correct.
+SELECT user_id, value FROM $bp WHERE field_id = $this_bdfid
+SELECT user_id, value FROM $bp WHERE field_id = $this_bdfid
+SQL command (SELECT user_id, value FROM $bp WHERE field_id = $this_bdfid) cannot be parsed correct.
+SELECT ID, display_name FROM $wpdb WHERE spam != 1 ORDER BY ID
+SQL command (SELECT ID, display_name FROM $wpdb WHERE spam != 1 ORDER BY ID) cannot be parsed correct.
+SELECT ID, display_name FROM $wpdb ORDER BY ID
+SQL command (SELECT ID, display_name FROM $wpdb ORDER BY ID) cannot be parsed correct.
+SELECT ID, display_name FROM $wpdb WHERE spam != 1 ORDER BY ID
+SQL command (SELECT ID, display_name FROM $wpdb WHERE spam != 1 ORDER BY ID) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [687, 792, 2485, 2509, 2527]
+Added 0 SQL nodes. 0 out of 5 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:02.688791.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'You should make some friends to see their birthday here!'' cannot be parsed correct.
+HTML code '$'You must be logged in to see the birthday of your friends.'' cannot be parsed correct.
+HTML code '$'<br/><a class="tdlc-profilelink" href="$bp$bp/edit/"'' cannot be parsed correct.
+HTML code '$'Add your birthdate to your profile'' cannot be parsed correct.
+HTML code '$'$buddy'' cannot be parsed correct.
+HTML code '$'$buddy'' cannot be parsed correct.
+HTML code '$'Happy birthday to $buddy'' cannot be parsed correct.
+HTML code '$'!'' cannot be parsed correct.
+HTML code '$' who turned $buddy->getAge() today!'' cannot be parsed correct.
+HTML code '$'Upcoming birthdays:'' cannot be parsed correct.
+HTML code '$'$buddy'' cannot be parsed correct.
+HTML code '$'$buddy'' cannot be parsed correct.
+HTML code '$'$buddysprintf(esc_attr(__(" (%1$d/%2$d)", "tdlc-birthdays")), date("m", $buddy->birthdate), date("j", $buddy->birthdate))'' cannot be parsed correct.
+HTML code '$'$buddysprintf(esc_attr(__(" (%1$d/%2$d, %3$d years old)", "tdlc-birthdays")), date("m", $buddy->birthdate), date("j", $buddy->birthdate), $buddy->getAge())'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'Please configure mandatory settings in the control panel.'' cannot be parsed correct.
+HTML code '$'$before_title$title$after_title'' cannot be parsed correct.
+HTML code '$'You should follow people to see their birthday here!'' cannot be parsed correct.
+HTML code '$'Followers plugin should be enabled to see the birthday of followed people'' cannot be parsed correct.
+HTML code '$'You must be logged in to see the birthday of the people you follow.'' cannot be parsed correct.
+HTML code '$'No birthday today...'' cannot be parsed correct.
+HTML code '$'No birthdays today or tomorrow...'' cannot be parsed correct.
+HTML code '$' everyone '' cannot be parsed correct.
+HTML code '$'$this->get_field_name("show_all_bdays")'' cannot be parsed correct.
+HTML code '$' friends only '' cannot be parsed correct.
+HTML code '$'$this->get_field_name("show_all_bdays")'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'Widget Title: '' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $default)_title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("bdfid")'' cannot be parsed correct.
+HTML code '$'Birthday field ID or exact Name: '' cannot be parsed correct.
+HTML code '$'$this->get_field_id("bdfid")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("bdfid")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $default)_bdfid'' cannot be parsed correct.
+HTML code '$'Create a datebox in your BuddyPress Profile Fields to store the birthdays and add its ID or Name here.'' cannot be parsed correct.
+HTML code '$'Display birthdays of :'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("show_all_bdays")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("show_all_bdays")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("show_all_bdays")'' cannot be parsed correct.
+HTML code '$' followed people only '' cannot be parsed correct.
+HTML code '$'$this->get_field_name("show_all_bdays")'' cannot be parsed correct.
+HTML code '$' friends and followed people '' cannot be parsed correct.
+HTML code '$'Only display birthdays of the users friends'' cannot be parsed correct.
+HTML code '$'For Followed people - you must install Andy Peatling\'s Followers plugin'' cannot be parsed correct.
+HTML code '$'For \'followed people\', the user must be registered, connected and follow people!'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("offset")'' cannot be parsed correct.
+HTML code '$'Display birthdays happening in the next: '' cannot be parsed correct.
+HTML code '$'$this->get_field_id("offset")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("offset")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $default)_offset'' cannot be parsed correct.
+HTML code '$' days.'' cannot be parsed correct.
+HTML code '$'Set to 0 if you don\'t want to display upcoming birthdays.'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hide_age")'' cannot be parsed correct.
+HTML code '$'Hide ages'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("hide_age")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("hide_age")'' cannot be parsed correct.
+HTML code '$'Check this if you don\'t want the widget to tell how old people are!'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("show_link")'' cannot be parsed correct.
+HTML code '$'Show profile link'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("show_link")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("show_link")'' cannot be parsed correct.
+HTML code '$'Check this if you want the widget to display an "add your birdthdate" link if current user\'s birthdate is missing from their profile.'' cannot be parsed correct.
+HTML code '$'</a>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></div>
+					'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+					<div style="display:block;margin-left:40px;padding:7px 0 10px 0">
+					'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$' disabled="disabled"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$' disabled="disabled"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:08.016059.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.041623.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 2 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.274011.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running DbaseDetector
+### Start running IngresDetector
+### Finish running IngresDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running PHPRetrievalDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WordPressStorageDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running SqlServerDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+core.php:139
+  - RETRIEVAL call to get_option("gmt_offset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("gmt_offset") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:04.960998.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.025065.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.007790.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:33.031946!
+RETRIEVAL call to get_option("gmt_offset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

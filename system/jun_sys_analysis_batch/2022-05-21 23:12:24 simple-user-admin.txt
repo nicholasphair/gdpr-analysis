@@ -1,0 +1,576 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on simple-user-admin
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.323967.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.882302.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.268176.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.495613.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 105 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.946461.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.610125.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.119122.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 35 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.889993.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1775
+Added 1635 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1775
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.221217.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/simple-user-admin/simple_user_management.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.332746.
+
+1000 PHP_REACHES edges created
+1775 PHP_REACHES edges created
+1775 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 557 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.015768.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.895936.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 51 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.485015.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 23 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.147285.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.038840.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.925694.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011479.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035224.
+
+74 PHP_REACHES edges created
+74 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 51 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.146526.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+2 SQL operations to process.
+select blog_id, domain, path
+				from $wpdb
+				where blog_id = $query
+				or domain like '%%%s%%'
+				or path like '%%%s%%';
+select blog_id, domain, path
+				from $wpdb
+				where blog_id = $query
+				or domain like '$query%s%%'
+				or path like '%%%s%%';
+select blog_id, domain, path
+				from $wpdb
+				where blog_id = $$queryery
+				or domain like '$query%s%%'
+				or path like '%%%s%%';
+None
+select id, display_name, user_login, user_email
+				from $wpdb
+				where id = $query
+				or display_name like '%%%s%%'
+				or user_login like '%%%s%%'
+				or user_email like '%%%s%%';
+select id, display_name, user_login, user_email
+				from $wpdb
+				where id = $query
+				or display_name like '$query%s%%'
+				or user_login like '%%%s%%'
+				or user_email like '%%%s%%';
+select id, display_name, user_login, user_email
+				from $wpdb
+				where id = $$queryery
+				or display_name like '$query%s%%'
+				or user_login like '%%%s%%'
+				or user_email like '%%%s%%';
+select id, display_name, user_login, user_email
+				from $wpdb
+				where id = $$queryery
+				or display_name like$query$query%s%%'
+				or user_login like '%%%s%%'
+				or user_email like '%%%s%%';
+None
+The following function calls could not successfully be analyzed for SQL content: [2419, 2638]
+Added 0 SQL nodes. 0 out of 2 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:02.213197.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<h3>All Users</h3>'' cannot be parsed correct.
+HTML code '$'<h3>All Blogs</h3>'' cannot be parsed correct.
+HTML code '$'
+	<div id="message" class="$type fade">
+		<p><strong$message</strong></p>
+	</div>
+	'' cannot be parsed correct.
+HTML code '$'
+	<form action=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $_GET["user"])" method="post">
+	<fieldset>
+	<p><label for="blog">Choose blog:</label>
+	<select name="blog" id="blog">
+	'' cannot be parsed correct.
+HTML code '$'<div class="wrap">
+	<h2>Simple User Management</h2>'' cannot be parsed correct.
+HTML code '$'
+		<h3>Searching for: $_POST_userquery</h3>
+		'' cannot be parsed correct.
+HTML code '$'
+			<p>No results found. Please search again.</p>
+			'' cannot be parsed correct.
+HTML code '$'
+		<h3>Searching for: $_POST_blogquery</h3>
+		'' cannot be parsed correct.
+HTML code '$'
+			<p>No blogs found for your search. Please search again.</p>
+			'' cannot be parsed correct.
+HTML code '$'
+		<h3>Managing: simple_user_management_get_user($_GET["user"])_display_name</h3>
+		'' cannot be parsed correct.
+HTML code '$'
+		<option value=$blog"$blog$blog</option>
+		'' cannot be parsed correct.
+HTML code '$'
+	</select></p>
+	<p><label for="role">Add user as:</label>
+	<select name="role" id="role">
+	simple_user_management_get_roles()
+	</select>
+	</p>
+	<p><button type="submit" name="saveuserroles" class="button">Add user to blog</button>
+	wp_nonce_field("simple_user_management")</p>
+	</fieldset>
+	</form>
+	'' cannot be parsed correct.
+HTML code '$'
+	<form action=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;blog=" . $_GET["blog"])" method="post">
+	<fieldset>
+	<p><label for="user">Choose user:</label>
+	<select name="user" id="user">
+	'' cannot be parsed correct.
+HTML code '$'
+		<option value=$user"$user ($user, $user)</option>
+		'' cannot be parsed correct.
+HTML code '$'
+	</select></p>
+	<p><label for="role">Add user as:</label>
+	<select name="role" id="role">
+	simple_user_management_get_roles()
+	</select>
+	</p>
+	<p><button type="submit" name="saveuserroles" class="button">Add user to blog</button>
+	wp_nonce_field("simple_user_management")</p>
+	</fieldset>
+	</form>
+	'' cannot be parsed correct.
+HTML code '$'
+	<form action=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $_GET["user"])" method="post">
+	<table class="widefat" cellspacing="0">
+	<thead>
+		<tr>
+			<th>Blog ID</th>
+			<th>Blog name</th>
+			<th>Domain</th>
+			<th>Path</th>
+			<th>Role</th>
+		</tr>
+	</thead>
+	<tbody>
+	'' cannot be parsed correct.
+HTML code '$'
+		<tr>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;blog=" . $blog->userblog_id)"$blog</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;blog=" . $blog->userblog_id)"stripslashes($blog->blogname)</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;blog=" . $blog->userblog_id)"$blog</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;blog=" . $blog->userblog_id)"$blog</a></td>
+			<td>
+			<select name="role$blog"simple_user_management_get_user_role($user, $blog->userblog_id, $blog->userblog_id)</select>
+			</td>
+		</tr>
+		'' cannot be parsed correct.
+HTML code '$'
+	</tbody>
+	</table>
+	<p><button type="submit" name="saveuserroles" class="button">Save user roles</button>
+	<input type="hidden" name="blogids" value="trim($blogids, ",")" />
+wp_nonce_field("simple_user_management")</p>
+	</form>
+	'' cannot be parsed correct.
+HTML code '$'
+	<form action=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;blog=" . $_GET["blog"])" method="post">
+	<table class="widefat" cellspacing="0">
+	<thead>
+		<tr>
+			<th>User ID</th>
+			<th>Username</th>
+			<th>Display name</th>
+			<th>Email</th>
+			<th>Role</th>
+		</tr>
+	</thead>
+	<tbody>
+	'' cannot be parsed correct.
+HTML code '$'
+		<tr>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $user->ID)"$user</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $user->ID)"stripslashes($user->user_login)</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $user->ID)"stripslashes($user->display_name)</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $user->ID)"simple_user_management_get_user($user->ID)_user_email</a></td>
+			<td>
+			<select name="rolesimple_user_management_get_user($user->ID)_ID"simple_user_management_get_user_role($user, $_GET["blog"], $user->ID)</select>
+			</td>
+		</tr>
+		'' cannot be parsed correct.
+HTML code '$'<p>This user does not belong to any blogs. Add them to a blog below.</p>'' cannot be parsed correct.
+HTML code '$'
+				<h4 id="results">Choose the blog to add this user to, or search again below</h4>
+				'' cannot be parsed correct.
+HTML code '$'
+				<p>No blogs found for your search. Please search again.</p>
+				'' cannot be parsed correct.
+HTML code '$'
+		<h3>Search for a blog to add this user to</h3>
+		'' cannot be parsed correct.
+HTML code '$'
+		<h3>Managing: simple_user_management_get_blog($_GET["blog"])_blogname</h3>
+		'' cannot be parsed correct.
+HTML code '$'
+					<h4 id="results">Choose the user to add to this blog, or search again below</h4>
+					'' cannot be parsed correct.
+HTML code '$'
+					<p>No users found for your search. Please search again.</p>
+					'' cannot be parsed correct.
+HTML code '$'
+			<h3>Search for a user to add to this blog</h3>
+			'' cannot be parsed correct.
+HTML code '$'
+			<p>This blog does not have any users. Add a user to this blog below.</p>
+			'' cannot be parsed correct.
+HTML code '$'
+	</tbody>
+	</table>
+	<p><button type="submit" name="saveuserroles" class="button">Save user roles</button>
+	<input type="hidden" name="userids" value="trim($userids, ",")" />
+wp_nonce_field("simple_user_management")</p>
+	</form>
+	'' cannot be parsed correct.
+HTML code '$'
+	<table class="widefat" cellspacing="0">
+	<thead>
+		<tr>
+			<th>User ID</th>
+			<th>Display name</th>
+			<th>User login</th>
+			<th>Email</th>
+		</tr>
+	</thead>
+	<tbody>
+	'' cannot be parsed correct.
+HTML code '$'
+		<tr>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $user->id)"$user</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $user->id)"stripslashes($user->display_name)</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $user->id)"$user</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;user=" . $user->id)"$user</a></td>
+		</tr>
+		'' cannot be parsed correct.
+HTML code '$'
+	<table class="widefat" cellspacing="0">
+	<thead>
+		<tr>
+			<th>Blog ID</th>
+			<th>Domain</th>
+			<th>Path</th>
+			<th>Visit</th>
+		</tr>
+	<thead>
+	<tbody>
+	'' cannot be parsed correct.
+HTML code '$'
+		<tr>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;blog=" . $blog->blog_id)"$blog</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;blog=" . $blog->blog_id)"$blog</a></td>
+			<td><a href=wp_nonce_url(SIMPLE_USER_MANAGEMENT_PARENT_SLUG . "?page=simple_user_management&amp;blog=" . $blog->blog_id)"$blog</a></td>
+			<td><a href="http:/$blog$blog">http:/$blog$blog</a></td>
+		</tr>
+		'' cannot be parsed correct.
+HTML code '$'
+	<div style="float:left;width:45%;margin-right:1%;">
+		<h3>Search users</h3>
+		simple_user_management_get_search_users_form()
+	</div>
+	<div style="float:left;width:45%">
+		<h3>Search blogs</h3>
+		simple_user_management_get_search_blogs_form()
+	</div>
+	'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'
+	<style type="text/css">
+	fieldset {
+		background: #F1F1F1;
+		border: 1px solid #CCC;
+		padding: 1em;
+	}
+	</style>
+	'' cannot be parsed correct.
+HTML code '$'<br style="clear:both;" />'' cannot be parsed correct.
+HTML code '$'
+	</tbody>
+	</table>
+	'' cannot be parsed correct.
+HTML code '$'
+	</tbody>
+	</table>
+	'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:07.811569.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047769.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 3 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.335668.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running IngresDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MsqlDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running PropertyDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running WP_UserDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+simple_user_management.php:418
+  - object property '$user->user_email' of personal types {'email'} is found.
+  - Data types: email
+simple_user_management.php:506
+  - object property '$user->user_email' of personal types {'email'} is found.
+  - Data types: email
+simple_user_management.php:545
+  - object property '$user->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+simple_user_management.php:226
+  - RETRIEVAL call to get_users(["blog_id" => $_GET["blog"]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).
+  - Data types: user, user_meta
+simple_user_management.php:374
+  - RETRIEVAL call to get_userdata($id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta 
+
+By data type:
+email
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+user
+	WordPressRetrievalDetector.get_userdata($id) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_users(["blog_id" => $_GET["blog"]]) - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.get_userdata($id) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_users(["blog_id" => $_GET["blog"]]) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.774272.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.033713.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 76 nodes as PERSONAL
+In total, tainted 76 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.217586.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:35.702456!
+object property '$user->user_email' of personal types {'email'} is found.,,None
+object property '$user->user_email' of personal types {'email'} is found.,,None
+object property '$user->user_email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_users(["blog_id" => $_GET["blog"]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).,None,None
+RETRIEVAL call to get_userdata($id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,769 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on vkontakte-vkcom-community-widget-cache
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.321331.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.069070.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 31 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.378357.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.388012.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 201 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.640989.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.576461.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.089184.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 107 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.664403.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1780
+Added 1441 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1780
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.049240.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vkontakte-vkcom-community-widget-cache/vk-community-widget-cache.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.154681.
+
+1000 PHP_REACHES edges created
+1780 PHP_REACHES edges created
+1780 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 554 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.920781.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.785445.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 6 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.553186.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 1 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.188406.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.015609.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.067597.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005188.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.098242.
+
+7 PHP_REACHES edges created
+7 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 14 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.109160.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.094415.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div class="updated settings-error" id="setting-error-settings_updated"><p><strong>Cached VK.com Community Widget cleared.</strong></p></div>'' cannot be parsed correct.
+HTML code '$'get_option("vk_community_widget_id")'' cannot be parsed correct.
+HTML code '$'get_option("vk_community_widget_limit")'' cannot be parsed correct.
+HTML code '$'get_option("vk_community_widget_width")'' cannot be parsed correct.
+HTML code '$'get_option("vk_community_widget_expire")'' cannot be parsed correct.
+HTML code '$'mb_convert_encoding($html, "UTF-8", "windows-1251")'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_title$instance_title$after_title'' cannot be parsed correct.
+HTML code '$'nwd_vk_shortcode(["id" => $instance["commbox_id"], "limit" => $instance["commbox_limit"], "width" => $instance["commbox_width"], "expire" => $instance["commbox_expire"], "css" => $instance["commbox_css"]])'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'<label for=$this->get_field_id("title")">Title:</label><br /'' cannot be parsed correct.
+HTML code '$'name=$this->get_field_name("title")"'' cannot be parsed correct.
+HTML code '$'id=$this->get_field_id("title")"'' cannot be parsed correct.
+HTML code '$'value=$instance_title" /><br /'' cannot be parsed correct.
+HTML code '$'<label for=$this->get_field_id("commbox_id")">Page ID:</label><br /'' cannot be parsed correct.
+HTML code '$'name=$this->get_field_name("commbox_id")"'' cannot be parsed correct.
+HTML code '$'id=$this->get_field_id("commbox_id")"'' cannot be parsed correct.
+HTML code '$'value=$instance_commbox_id" /><br /'' cannot be parsed correct.
+HTML code '$'<label for=$this->get_field_id("commbox_limit")">Limit:</label><br /'' cannot be parsed correct.
+HTML code '$'name=$this->get_field_name("commbox_limit")"'' cannot be parsed correct.
+HTML code '$'id=$this->get_field_id("commbox_limit")"'' cannot be parsed correct.
+HTML code '$'value=$instance_commbox_limit" /><br /'' cannot be parsed correct.
+HTML code '$'<label for=$this->get_field_id("commbox_width")">Width:</label><br /'' cannot be parsed correct.
+HTML code '$'name=$this->get_field_name("commbox_width")"'' cannot be parsed correct.
+HTML code '$'id=$this->get_field_id("commbox_width")"'' cannot be parsed correct.
+HTML code '$'value=$instance_commbox_width" /><br /'' cannot be parsed correct.
+HTML code '$'<label for=$this->get_field_id("commbox_expire")">Expiration:</label><br /'' cannot be parsed correct.
+HTML code '$'name=$this->get_field_name("commbox_expire")"'' cannot be parsed correct.
+HTML code '$'id=$this->get_field_id("commbox_expire")"'' cannot be parsed correct.
+HTML code '$'value=$instance_commbox_expire" /><br /'' cannot be parsed correct.
+HTML code '$'<label for=$this->get_field_id("commbox_css")">CSS Style:</label><br /'' cannot be parsed correct.
+HTML code '$'name=$this->get_field_name("commbox_css")"'' cannot be parsed correct.
+HTML code '$'id=$this->get_field_id("commbox_css")">'' cannot be parsed correct.
+HTML code '$'<option value=$css"selected($instance["commbox_css"], $css, false)>$name</option>'' cannot be parsed correct.
+HTML code '$'" />
+    	</p>
+	</form>
+    <form method="post" action="">
+    	<table class="form-table">
+        	<tr valign="top">
+        		<th scope="row">Clear the cache?</th>
+        		<td><input type="checkbox" name="vk_community_widget_clear" /> * Checking this box and clicking "Clear the Cache" will delete all cached community widget files.</td>
+        	</tr>
+        </table>
+        <input type="hidden" name="update" value="true" />
+    	<p class="submit">
+    		<input type="submit" class="button-primary" value="'' cannot be parsed correct.
+HTML code '$'" />
+    	</p>
+	</form>
+	<div class="css_guide">
+	<h2>CSS Guide</h2>
+	<p>For those who would like to disable inline css, you can copy and paste this into your themes style.css guide to get the default look.</p>
+	<textarea style="width:500px;height:500px">
+.widget_vkcache .community_div {
+	margin:10px auto;
+	width:240px;
+}
+.widget_vkcache .community_div_head {
+	border-bottom:1px solid #D8DFEA;
+	padding-bottom:5px;
+}
+.widget_vkcache .connections .total {
+	font-size:12px;
+}
+.widget_vkcache .connections .grid a {
+	float:left;
+	text-align:center;
+	text-decoration:none;
+}
+.widget_vkcache .connections .grid a img {
+	margin:0;
+	padding:5px 5px 0 5px;
+}
+.widget_vkcache .connections .grid a span {
+	color:#808080;
+	font-size:10px;
+}
+
+.img_Link {
+	float:left;
+	padding-right:5px;
+}
+	</textarea>
+	</div>
+</div>
+'' cannot be parsed correct.
+HTML code '$'<div id="myFavoritesWidget-admin-panel">'' cannot be parsed correct.
+HTML code '$'<input type="text" class="widefat" '' cannot be parsed correct.
+HTML code '$'<input type="text" class="widefat" '' cannot be parsed correct.
+HTML code '$'<input type="text" class="widefat" '' cannot be parsed correct.
+HTML code '$'<input type="text" class="widefat" '' cannot be parsed correct.
+HTML code '$'<input type="text" class="widefat" '' cannot be parsed correct.
+HTML code '$'<select '' cannot be parsed correct.
+HTML code '$'</select><br />'' cannot be parsed correct.
+HTML code '$'<p>This widget will display a cached version of your VK Community Widget that refreshes based on your expiration setting.</p>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:06.729723.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046203.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.358625.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FileProDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running maxdbDetector
+### Start running PropertyDetector
+### Finish running MySQLiDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running PHPRetrievalDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running UserInputDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+vk-community-widget-cache.php:383
+  - MD5 called with parameters [fan]. Ignore if [fan] does not contain personal information.
+vk-community-widget-cache.php:430
+  - MD5 called with parameters [fan]. Ignore if [fan] does not contain personal information. 
+
+vk-community-widget-cache.php:261
+  - RETRIEVAL call to file_get_contents($this->cachefile).
+  - Data types: file
+vk-community-widget-cache.php:351
+  - RETRIEVAL call to file_get_contents($pageImage[1]).
+  - Data types: file
+vk-community-widget-cache.php:387
+  - RETRIEVAL call to file_get_contents($fan_image_url[1]).
+  - Data types: file
+vk-community-widget-cache.php:433
+  - RETRIEVAL call to file_get_contents($fan_image_url[1]).
+  - Data types: file 
+
+vk-community-widget-cache.php:290
+  - STORAGE call to file_put_contents($tmpfile, $this->_html).
+  - Data types: file
+vk-community-widget-cache.php:351
+  - STORAGE call to file_put_contents($imgfile, file_get_contents($pageImage[1])).
+  - Data types: file
+vk-community-widget-cache.php:387
+  - STORAGE call to file_put_contents($file, file_get_contents($fan_image_url[1])).
+  - Data types: file
+vk-community-widget-cache.php:433
+  - STORAGE call to file_put_contents($file, file_get_contents($fan_image_url[1])).
+  - Data types: file
+vk-community-widget-cache.php:459
+  - STORAGE call to file_put_contents($this->cachefile, $this->_output).
+  - Data types: file 
+
+vk-community-widget-cache.php:341
+  - object property '$this->_usernames' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+vk-community-widget-cache.php:378
+  - object property '$this->_usernames' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+vk-community-widget-cache.php:425
+  - object property '$this->_usernames' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta 
+
+vk-community-widget-cache.php:378
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+vk-community-widget-cache.php:395
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+vk-community-widget-cache.php:425
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+vk-community-widget-cache.php:439
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+vk-community-widget-cache.php:439
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+vk-community-widget-cache.php:442
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta 
+
+vk-community-widget-cache.php:45
+  - RETRIEVAL call to get_option("vk_community_widget_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:50
+  - RETRIEVAL call to get_option("vk_community_widget_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:55
+  - RETRIEVAL call to get_option("vk_community_widget_expire") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:67
+  - RETRIEVAL call to get_option("vk_community_widget_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:68
+  - RETRIEVAL call to get_option("vk_community_widget_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:69
+  - RETRIEVAL call to get_option("vk_community_widget_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:70
+  - RETRIEVAL call to get_option("vk_community_widget_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:71
+  - RETRIEVAL call to get_option("vk_community_widget_expire") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:74
+  - RETRIEVAL call to get_option("vk_community_widget_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:74
+  - RETRIEVAL call to get_option("vk_community_widget_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:111
+  - RETRIEVAL call to get_option("vk_community_widget_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:115
+  - RETRIEVAL call to get_option("vk_community_widget_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:119
+  - RETRIEVAL call to get_option("vk_community_widget_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:123
+  - RETRIEVAL call to get_option("vk_community_widget_expire") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:199
+  - RETRIEVAL call to get_option("vk_community_widget_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:200
+  - RETRIEVAL call to get_option("vk_community_widget_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:201
+  - RETRIEVAL call to get_option("vk_community_widget_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:202
+  - RETRIEVAL call to get_option("vk_community_widget_expire") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vk-community-widget-cache.php:203
+  - RETRIEVAL call to get_option("vk_community_widget_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+vk-community-widget-cache.php:47
+  - STORAGE call to update_option("vk_community_widget_css", "inline") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vk-community-widget-cache.php:52
+  - STORAGE call to update_option("vk_community_widget_width", "240px") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vk-community-widget-cache.php:57
+  - STORAGE call to update_option("vk_community_widget_expire", "3600") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.file_put_contents($imgfile, file_get_contents($pageImage[1])) - {'file'}
+	PHPRetrievalDetector.file_get_contents($fan_image_url[1]) - {'file'}
+	PHPRetrievalDetector.file_get_contents($fan_image_url[1]) - {'file'}
+	PHPRetrievalDetector.file_get_contents($pageImage[1]) - {'file'}
+	PHPStorageDetector.file_put_contents($file, file_get_contents($fan_image_url[1])) - {'file'}
+	PHPStorageDetector.file_put_contents($this->cachefile, $this->_output) - {'file'}
+	PHPStorageDetector.file_put_contents($file, file_get_contents($fan_image_url[1])) - {'file'}
+	PHPStorageDetector.file_put_contents($tmpfile, $this->_html) - {'file'}
+	PHPRetrievalDetector.file_get_contents($this->cachefile) - {'file'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("vk_community_widget_css") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_css") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_expire") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_id") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_id") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_id") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_limit") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_limit") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_expire") - {'option'}
+	WordPressStorageDetector.update_option("vk_community_widget_width", "240px") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_limit") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_width") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_limit") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_width") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_width") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_css") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_expire") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_id") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_expire") - {'option'}
+	WordPressStorageDetector.update_option("vk_community_widget_expire", "3600") - {'option'}
+	WordPressStorageDetector.update_option("vk_community_widget_css", "inline") - {'option'}
+	WordPressRetrievalDetector.get_option("vk_community_widget_width") - {'option'}
+user
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+user_meta
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.857024.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 77 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.221258.
+
+77 STORE_REACHES edges created
+77 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 50 nodes as PERSONAL
+In total, tainted 50 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 2 nodes as ENCRYPTED
+In total, tainted 2 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.015513.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:33.803087!
+MD5 called with parameters [fan]. Ignore if [fan] does not contain personal information.,md5,None
+MD5 called with parameters [fan]. Ignore if [fan] does not contain personal information.,md5,None
+RETRIEVAL call to file_get_contents($this->cachefile).,None,None
+RETRIEVAL call to file_get_contents($pageImage[1]).,None,None
+RETRIEVAL call to file_get_contents($fan_image_url[1]).,None,None
+RETRIEVAL call to file_get_contents($fan_image_url[1]).,None,None
+STORAGE call to file_put_contents($tmpfile, $this->_html).,None,None
+STORAGE call to file_put_contents($imgfile, file_get_contents($pageImage[1])).,None,None
+STORAGE call to file_put_contents($file, file_get_contents($fan_image_url[1])).,None,None
+STORAGE call to file_put_contents($file, file_get_contents($fan_image_url[1])).,None,None
+STORAGE call to file_put_contents($this->cachefile, $this->_output).,None,None
+object property '$this->_usernames' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->_usernames' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->_usernames' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+RETRIEVAL call to get_option("vk_community_widget_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_expire") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_expire") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_expire") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_expire") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vk_community_widget_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("vk_community_widget_css", "inline") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("vk_community_widget_width", "240px") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("vk_community_widget_expire", "3600") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+Data Deletion violation! The plugin has storage node that has no identifier and cannot be accessed!
+Data Deletion violation! The plugin has storage node that has no identifier and cannot be accessed!
+Data Deletion violation! The plugin has storage node that has no identifier and cannot be accessed!
+Data Deletion violation! The plugin has storage node that has no identifier and cannot be accessed!
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Unstructured data storage of PII types (['user', 'user_meta']) to files through function "file_put_contents", found in file vk-community-widget-cache.php at line 351. 
+
+[has_storage] Unstructured data storage of PII types (['user', 'user_meta']) to files through function "file_put_contents", found in file vk-community-widget-cache.php at line 433. 
+
+[has_storage] Unstructured data storage of PII types (['user', 'user_meta']) to files through function "file_put_contents", found in file vk-community-widget-cache.php at line 459. 
+
+[has_storage] Unstructured data storage of PII types (['user', 'user_meta']) to files through function "file_put_contents", found in file vk-community-widget-cache.php at line 387. 
+
+[has_storage] Storage check is CUSTOM_UNSTRUCTURED 
+
+[Art.17, Right to erasure] Complete data deletion is required for storage at node ID 1247 , but is impossible due to custom storage of PII without identifiers. Found in file vk-community-widget-cache.php at line 351 
+
+[Art.17, Right to erasure] Complete data deletion is required for storage at node ID 1893 , but is impossible due to custom storage of PII without identifiers. Found in file vk-community-widget-cache.php at line 433 
+
+[Art.17, Right to erasure] Complete data deletion is required for storage at node ID 2085 , but is impossible due to custom storage of PII without identifiers. Found in file vk-community-widget-cache.php at line 459 
+
+[Art.17, Right to erasure] Complete data deletion is required for storage at node ID 1533 , but is impossible due to custom storage of PII without identifiers. Found in file vk-community-widget-cache.php at line 387 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Complete data access is required for storage at node ID 1247 , but is impossible due to custom storage of PII without identifiers. Found in file vk-community-widget-cache.php at line 351 
+
+[Art.15, Right to access] Complete data access is required for storage at node ID 1893 , but is impossible due to custom storage of PII without identifiers. Found in file vk-community-widget-cache.php at line 433 
+
+[Art.15, Right to access] Complete data access is required for storage at node ID 2085 , but is impossible due to custom storage of PII without identifiers. Found in file vk-community-widget-cache.php at line 459 
+
+[Art.15, Right to access] Complete data access is required for storage at node ID 1533 , but is impossible due to custom storage of PII without identifiers. Found in file vk-community-widget-cache.php at line 387 
+
+[Art.15, Right to access] Data access is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? True 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function vkontakte-vkcom-community-widget-cache_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'vkontakte-vkcom-community-widget-cache' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function vkontakte-vkcom-community-widget-cache_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'vkontakte-vkcom-community-widget-cache' ),
+        'callback'             => 'vkontakte-vkcom-community-widget-cache_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'vkontakte-vkcom-community-widget-cache_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function vkontakte-vkcom-community-widget-cache_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'vkontakte-vkcom-community-widget-cache' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'vkontakte-vkcom-community-widget-cache' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'vkontakte-vkcom-community-widget-cache' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'vkontakte-vkcom-community-widget-cache', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'vkontakte-vkcom-community-widget-cache_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

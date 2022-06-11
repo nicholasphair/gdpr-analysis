@@ -1,0 +1,576 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on bizsugar-voting-button
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.493306.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.903568.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.319613.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.489831.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 75 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.573661.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.734993.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.142618.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 27 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.754107.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 477
+Added 375 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 477
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.945237.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bizsugar-voting-button/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bizsugar-voting-button/wp-bizsugar-vote.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.451182.
+
+477 PHP_REACHES edges created
+477 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 177 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.024629.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.206200.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 17 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.205795.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 8 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.193636.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.022773.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.349940.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007739.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.038507.
+
+25 PHP_REACHES edges created
+25 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 17 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.160627.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.147682.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'smbsugar_bizsugarhtml($align, $button_url, $id)'' cannot be parsed correct.
+HTML code '$'
+<!-- FINE TUNE BUTTON POSITION FOR METHOD C HERE -->
+    <span style="margin-top: 10px;
+				 margin-right: 10px;
+				 margin-bottom: 10px;
+				 margin-left: 10px; 
+				 
+				 float:$float;" class="bizsugar-button">
+
+	<script type="text/javascript">
+	submit_url = "get_permalink($post->ID)";
+	</script>
+    <script type="text/javascript" src="http://www.bizsugar.com/evb/button.php"></script>
+	</span>'' cannot be parsed correct.
+HTML code '$'$message'' cannot be parsed correct.
+HTML code '$'get_option("smbsugar_display_home")'' cannot be parsed correct.
+HTML code '$'get_option("smbsugar_display_page")'' cannot be parsed correct.
+HTML code '$'get_option("smbsugar_display_post")'' cannot be parsed correct.
+HTML code '$'get_option("smbsugar_display_cat")'' cannot be parsed correct.
+HTML code '$'get_option("smbsugar_display_archive")'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.812763.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.069372.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 3 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.401341.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running CubridDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FrontBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running FileProDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PasswordHashingDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running ArrayElementDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running MySQLiDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running SqlServerDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finished running detectors
+wp-bizsugar-vote.php:71
+  - RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:72
+  - RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:73
+  - RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:74
+  - RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:75
+  - RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:82
+  - RETRIEVAL call to get_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:83
+  - RETRIEVAL call to get_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:84
+  - RETRIEVAL call to get_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:85
+  - RETRIEVAL call to get_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:86
+  - RETRIEVAL call to get_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:93
+  - RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:94
+  - RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:95
+  - RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:96
+  - RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:186
+  - RETRIEVAL call to get_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:188
+  - RETRIEVAL call to get_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:190
+  - RETRIEVAL call to get_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:192
+  - RETRIEVAL call to get_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:194
+  - RETRIEVAL call to get_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:197
+  - RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:199
+  - RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:201
+  - RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-bizsugar-vote.php:209
+  - RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+uninstall.php:5
+  - STORAGE call to delete_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:6
+  - STORAGE call to delete_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:7
+  - STORAGE call to delete_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:8
+  - STORAGE call to delete_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:9
+  - STORAGE call to delete_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:10
+  - STORAGE call to delete_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:11
+  - STORAGE call to delete_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:25
+  - STORAGE call to update_option("smbsugar_box_align", $smbsugar_align_v) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:27
+  - STORAGE call to update_option("smbsugar_display_home", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:28
+  - STORAGE call to update_option("smbsugar_display_home", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:30
+  - STORAGE call to update_option("smbsugar_display_page", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:31
+  - STORAGE call to update_option("smbsugar_display_page", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:33
+  - STORAGE call to update_option("smbsugar_display_post", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:34
+  - STORAGE call to update_option("smbsugar_display_post", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:36
+  - STORAGE call to update_option("smbsugar_display_cat", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:37
+  - STORAGE call to update_option("smbsugar_display_cat", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:39
+  - STORAGE call to update_option("smbsugar_display_archive", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:40
+  - STORAGE call to update_option("smbsugar_display_archive", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wp-bizsugar-vote.php:42
+  - STORAGE call to update_option("smbsugar_button", $_POST["smbsugar_button"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+uninstall.php:5
+  - DELETION call to delete_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:6
+  - DELETION call to delete_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:7
+  - DELETION call to delete_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:8
+  - DELETION call to delete_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:9
+  - DELETION call to delete_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:10
+  - DELETION call to delete_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:11
+  - DELETION call to delete_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+uninstall.php:5
+  - Uninstall deletion call: DELETION call to delete_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:6
+  - Uninstall deletion call: DELETION call to delete_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:7
+  - Uninstall deletion call: DELETION call to delete_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:8
+  - Uninstall deletion call: DELETION call to delete_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:9
+  - Uninstall deletion call: DELETION call to delete_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:10
+  - Uninstall deletion call: DELETION call to delete_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:11
+  - Uninstall deletion call: DELETION call to delete_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	UninstallDetector.delete_option("smbsugar_button") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_box_align") - {'option'}
+	DeletionDetector.delete_option("smbsugar_display_post") - {'option'}
+	UninstallDetector.delete_option("smbsugar_display_page") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_box_align", $smbsugar_align_v) - {'option'}
+	WordPressStorageDetector.delete_option("smbsugar_display_post") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_archive", "checked=on") - {'option'}
+	DeletionDetector.delete_option("smbsugar_display_home") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_archive", "") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_page", "checked=on") - {'option'}
+	UninstallDetector.delete_option("smbsugar_display_cat") - {'option'}
+	DeletionDetector.delete_option("smbsugar_box_align") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_box_align") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_button") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_box_align") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_cat") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_cat") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_box_align") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_home", "checked=on") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_post", "") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_button", $_POST["smbsugar_button"]) - {'option'}
+	UninstallDetector.delete_option("smbsugar_box_align") - {'option'}
+	DeletionDetector.delete_option("smbsugar_display_archive") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_box_align") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_archive") - {'option'}
+	UninstallDetector.delete_option("smbsugar_display_archive") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_post") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_button") - {'option'}
+	DeletionDetector.delete_option("smbsugar_display_page") - {'option'}
+	UninstallDetector.delete_option("smbsugar_display_post") - {'option'}
+	UninstallDetector.delete_option("smbsugar_display_home") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_post") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_button") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_page") - {'option'}
+	WordPressStorageDetector.delete_option("smbsugar_display_home") - {'option'}
+	WordPressStorageDetector.delete_option("smbsugar_display_archive") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_archive") - {'option'}
+	WordPressStorageDetector.delete_option("smbsugar_button") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_post", "checked=on") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_button") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_button") - {'option'}
+	WordPressStorageDetector.delete_option("smbsugar_display_cat") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_home") - {'option'}
+	WordPressStorageDetector.delete_option("smbsugar_display_page") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_page") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_box_align") - {'option'}
+	WordPressStorageDetector.delete_option("smbsugar_box_align") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_cat", "checked=on") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_home", "") - {'option'}
+	DeletionDetector.delete_option("smbsugar_button") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_page", "") - {'option'}
+	DeletionDetector.delete_option("smbsugar_display_cat") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_display_home") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_button") - {'option'}
+	WordPressRetrievalDetector.get_option("smbsugar_button") - {'option'}
+	WordPressStorageDetector.update_option("smbsugar_display_cat", "") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.363143.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 437 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.333000.
+
+437 STORE_REACHES edges created
+437 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006944.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:25.633838!
+DELETION call to delete_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to delete_option("smbsugar_display_archive") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("smbsugar_button") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("smbsugar_box_align") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("smbsugar_display_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("smbsugar_display_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("smbsugar_display_post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("smbsugar_display_cat") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_box_align", $smbsugar_align_v) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_home", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_home", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_page", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_page", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_post", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_post", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_cat", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_cat", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_archive", "checked=on") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_display_archive", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smbsugar_button", $_POST["smbsugar_button"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,1041 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on trashed-by
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.524477.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.917134.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 9 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.423730.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.581107.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 300 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.642807.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 70 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.984682.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.106583.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 162 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.300091.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3133
+Added 2591 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3133
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.184538.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/trashed-by/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/trashed-by/trashed-by.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/trashed-by/tests/phpunit/bootstrap.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/trashed-by/tests/phpunit/tests/trashed-by.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.532551.
+
+9 PHP_REACHES edges created
+1 REACHES edges created
+300 PHP_REACHES edges created
+70 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2753 PHP_REACHES edges created
+3133 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1275 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.110274.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:04.108286.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 158 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.293112.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 105 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.165143.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.137763.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.269694.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.025675.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.032897.
+
+263 PHP_REACHES edges created
+263 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 210 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.150613.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.116878.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'Could not find getenv("WP_TESTS_DIR")/includes/functions.php
+'' cannot be parsed correct.
+HTML code '$'<style>.fixed .column-, .fixed .column- { width: 10%; }</style>
+'' cannot be parsed correct.
+HTML code '$'<span>you</span>'' cannot be parsed correct.
+HTML code '$'<abbr title=mysql2date(__("Y/m/d g:i:s A", "trashed-by"), $trashed_date, false)"apply_filters("post_date_column_time", $h_time, $post, "trashed_on", "list")</abbr>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.016910.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.043645.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 2 do_action/apply_filters calls and 9 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.469604.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running HashDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running maxdbDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+tests/phpunit/tests/trashed-by.php:67
+  - RETRIEVAL call to wp_set_current_user($user_id) alters data types {'user_meta'}. Passed arguments: 0: $id (int). Returns (WP_User).
+  - Data types: user_meta
+tests/phpunit/tests/trashed-by.php:166
+  - RETRIEVAL call to get_post($post_id) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+tests/phpunit/tests/trashed-by.php:169
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:170
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:178
+  - RETRIEVAL call to get_post($post_id) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+tests/phpunit/tests/trashed-by.php:182
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:183
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:195
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:196
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:209
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:210
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:218
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:219
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:220
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:231
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:232
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:242
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:243
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:257
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:258
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:272
+  - RETRIEVAL call to get_post($post_id) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+tests/phpunit/tests/trashed-by.php:612
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:616
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:629
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:633
+  - RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+trashed-by.php:277
+  - RETRIEVAL call to get_userdata($trasher_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+trashed-by.php:291
+  - RETRIEVAL call to get_post($post_id) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+trashed-by.php:354
+  - RETRIEVAL call to get_post($post) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+trashed-by.php:358
+  - RETRIEVAL call to get_post_meta($post->ID, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+trashed-by.php:396
+  - RETRIEVAL call to get_post($post) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+trashed-by.php:400
+  - RETRIEVAL call to get_post_meta($post->ID, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta 
+
+tests/phpunit/tests/trashed-by.php:80
+  - STORAGE call to update_post_meta($post_id, self"meta_key_user", $user_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:84
+  - STORAGE call to update_post_meta($post_id, self"meta_key_date", $date) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:162
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:164
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:167
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+tests/phpunit/tests/trashed-by.php:174
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:176
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:180
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+tests/phpunit/tests/trashed-by.php:187
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:189
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:200
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:202
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:212
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:224
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:227
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:236
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:238
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:247
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:249
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:262
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:264
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:271
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:274
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+tests/phpunit/tests/trashed-by.php:348
+  - STORAGE call to $this->create_user(["role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:360
+  - STORAGE call to $this->create_user(["role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:372
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:390
+  - STORAGE call to $this->create_user(true, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:404
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:424
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:454
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:465
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:477
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:495
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:515
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:541
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:552
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:564
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:582
+  - STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:606
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:623
+  - STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:696
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:697
+  - STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).
+  - Data types: user, user_meta
+tests/phpunit/tests/trashed-by.php:702
+  - STORAGE call to add_post_meta($post_id, self"meta_key_user", $trasher_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+tests/phpunit/tests/trashed-by.php:703
+  - STORAGE call to add_post_meta($post_id, self"meta_key_date", $trashed_on) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+trashed-by.php:319
+  - STORAGE call to update_post_meta($post_id, self"meta_key_user", $current_user_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+trashed-by.php:321
+  - STORAGE call to update_post_meta($post_id, self"meta_key_date", current_time("mysql")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+trashed-by.php:333
+  - STORAGE call to delete_post_meta($post_id, self"meta_key_user") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+trashed-by.php:334
+  - STORAGE call to delete_post_meta($post_id, self"meta_key_date") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+trashed-by.php:333
+  - DELETION call to delete_post_meta($post_id, self"meta_key_user") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+trashed-by.php:334
+  - DELETION call to delete_post_meta($post_id, self"meta_key_date") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+By data type:
+none
+	WordPressStorageDetector.wp_update_post($post) - set()
+	WordPressStorageDetector.wp_update_post($post) - set()
+	WordPressStorageDetector.wp_update_post($post) - set()
+post
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, self"meta_key_date", $date) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressStorageDetector.add_post_meta($post_id, self"meta_key_user", $trasher_id) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($post) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, self"meta_key_date") - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, self"meta_key_user", $current_user_id) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressStorageDetector.update_post_meta($post_id, self"meta_key_user", $user_id) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, self"meta_key_user") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, self"meta_key_date") - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, self"meta_key_date", current_time("mysql")) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, self"meta_key_date", true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, self"meta_key_user") - {'post_meta'}
+	WordPressRetrievalDetector.get_post($post) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_user", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, self"meta_key_date", $trashed_on) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, self"meta_key_date", true) - {'post_meta'}
+user
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(true, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(["role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($trasher_id) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(["role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+user_meta
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(true, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(["role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($trasher_id) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(["role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_set_current_user($user_id) - {'user_meta'}
+	WordPressStorageDetector.$this->create_user(false) - {'user', 'user_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($post_id) - {'wp_post', 'post_meta', 'post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:16.235982.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 306 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.551495.
+
+306 STORE_REACHES edges created
+306 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 461 nodes as PERSONAL
+In total, tainted 461 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:08.085327.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:57.964400!
+DELETION call to delete_post_meta($post_id, self"meta_key_user") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($post_id, self"meta_key_date") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+RETRIEVAL call to get_post($post_id) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($post_id) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($post_id) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_set_current_user($user_id) alters data types {'user_meta'}. Passed arguments: 0: $id (int). Returns (WP_User).,None,None
+RETRIEVAL call to get_userdata($trasher_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_post($post_id) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post($post) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($post->ID, self"meta_key_user", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($post) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($post->ID, self"meta_key_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to $this->create_user(["role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(["role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(true, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to $this->create_user() alters data types {'user', 'user_meta'}. Returns (int).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to $this->create_user(false) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string), 2: $email (string). Returns (int).,None,None
+STORAGE call to add_post_meta($post_id, self"meta_key_user", $trasher_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to add_post_meta($post_id, self"meta_key_date", $trashed_on) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to update_post_meta($post_id, self"meta_key_user", $user_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, self"meta_key_date", $date) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, self"meta_key_user", $current_user_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, self"meta_key_date", current_time("mysql")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, self"meta_key_user") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to delete_post_meta($post_id, self"meta_key_date") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 189. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 477. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 372. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 262. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "update_post_meta($post_id, self"meta_key_date", $date)", found in file tests/phpunit/tests/trashed-by.php at line 84. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "wp_update_post($post)", found in file tests/phpunit/tests/trashed-by.php at line 167. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 264. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "wp_update_post($post)", found in file tests/phpunit/tests/trashed-by.php at line 274. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "add_post_meta($post_id, self"meta_key_user", $trasher_id)", found in file tests/phpunit/tests/trashed-by.php at line 702. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 564. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 271. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(true, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 390. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(["role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 360. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 424. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 454. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "update_post_meta($post_id, self"meta_key_user", $user_id)", found in file tests/phpunit/tests/trashed-by.php at line 80. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 515. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 176. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 552. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 404. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 606. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 202. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 227. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 236. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 623. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 238. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 162. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 465. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 541. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 249. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 212. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 247. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 582. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 187. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(["role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 348. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "add_post_meta($post_id, self"meta_key_date", $trashed_on)", found in file tests/phpunit/tests/trashed-by.php at line 703. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"])", found in file tests/phpunit/tests/trashed-by.php at line 495. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 174. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user()", found in file tests/phpunit/tests/trashed-by.php at line 164. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 697. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 200. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 224. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "$this->create_user(false)", found in file tests/phpunit/tests/trashed-by.php at line 696. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 189. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 477. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 372. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 262. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_post_meta($post_id, self"meta_key_date", $date) has deletion method delete_post_meta($post_id, self"meta_key_date"). Storage method found in file tests/phpunit/tests/trashed-by.php at line 84. Deletion method found in file trashed-by.php at line 334. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through wp_update_post($post) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 167. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 264. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through wp_update_post($post) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 274. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through add_post_meta($post_id, self"meta_key_user", $trasher_id) has deletion method delete_post_meta($post_id, self"meta_key_user"). Storage method found in file tests/phpunit/tests/trashed-by.php at line 702. Deletion method found in file trashed-by.php at line 333. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 564. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 271. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(true, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 390. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(["role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 360. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 424. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 454. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_post_meta($post_id, self"meta_key_user", $user_id) has deletion method delete_post_meta($post_id, self"meta_key_user"). Storage method found in file tests/phpunit/tests/trashed-by.php at line 80. Deletion method found in file trashed-by.php at line 333. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 515. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 176. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 552. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 404. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 606. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 202. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 227. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 236. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 623. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 238. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 162. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 465. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 541. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 249. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 212. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 247. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 582. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 187. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(["role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 348. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through add_post_meta($post_id, self"meta_key_date", $trashed_on) has deletion method delete_post_meta($post_id, self"meta_key_date"). Storage method found in file tests/phpunit/tests/trashed-by.php at line 703. Deletion method found in file trashed-by.php at line 334. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false, ["display_name" => "Matt Smith", "role" => "author"]) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 495. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 174. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user() does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 164. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 697. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 200. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 224. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through $this->create_user(false) does not have corresponding deletion method. Storage method found in file tests/phpunit/tests/trashed-by.php at line 696. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 981. Found in file tests/phpunit/tests/trashed-by.php at line 189 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2780. Found in file tests/phpunit/tests/trashed-by.php at line 477 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2179. Found in file tests/phpunit/tests/trashed-by.php at line 372 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1634. Found in file tests/phpunit/tests/trashed-by.php at line 262 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 485. Found in file tests/phpunit/tests/trashed-by.php at line 84 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 798. Found in file tests/phpunit/tests/trashed-by.php at line 167 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1662. Found in file tests/phpunit/tests/trashed-by.php at line 264 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1725. Found in file tests/phpunit/tests/trashed-by.php at line 274 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 4034. Found in file tests/phpunit/tests/trashed-by.php at line 702 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3234. Found in file tests/phpunit/tests/trashed-by.php at line 564 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1700. Found in file tests/phpunit/tests/trashed-by.php at line 271 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2284. Found in file tests/phpunit/tests/trashed-by.php at line 390 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2109. Found in file tests/phpunit/tests/trashed-by.php at line 360 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2446. Found in file tests/phpunit/tests/trashed-by.php at line 424 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2635. Found in file tests/phpunit/tests/trashed-by.php at line 454 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 459. Found in file tests/phpunit/tests/trashed-by.php at line 80 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2956. Found in file tests/phpunit/tests/trashed-by.php at line 515 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 881. Found in file tests/phpunit/tests/trashed-by.php at line 176 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3159. Found in file tests/phpunit/tests/trashed-by.php at line 552 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2373. Found in file tests/phpunit/tests/trashed-by.php at line 404 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3475. Found in file tests/phpunit/tests/trashed-by.php at line 606 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1094. Found in file tests/phpunit/tests/trashed-by.php at line 202 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1328. Found in file tests/phpunit/tests/trashed-by.php at line 227 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1403. Found in file tests/phpunit/tests/trashed-by.php at line 236 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3596. Found in file tests/phpunit/tests/trashed-by.php at line 623 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1434. Found in file tests/phpunit/tests/trashed-by.php at line 238 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 753. Found in file tests/phpunit/tests/trashed-by.php at line 162 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2705. Found in file tests/phpunit/tests/trashed-by.php at line 465 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3089. Found in file tests/phpunit/tests/trashed-by.php at line 541 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1540. Found in file tests/phpunit/tests/trashed-by.php at line 249 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1184. Found in file tests/phpunit/tests/trashed-by.php at line 212 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1509. Found in file tests/phpunit/tests/trashed-by.php at line 247 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3342. Found in file tests/phpunit/tests/trashed-by.php at line 582 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 953. Found in file tests/phpunit/tests/trashed-by.php at line 187 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2039. Found in file tests/phpunit/tests/trashed-by.php at line 348 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 4046. Found in file tests/phpunit/tests/trashed-by.php at line 703 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2888. Found in file tests/phpunit/tests/trashed-by.php at line 495 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 850. Found in file tests/phpunit/tests/trashed-by.php at line 174 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 784. Found in file tests/phpunit/tests/trashed-by.php at line 164 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3999. Found in file tests/phpunit/tests/trashed-by.php at line 697 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1066. Found in file tests/phpunit/tests/trashed-by.php at line 200 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1291. Found in file tests/phpunit/tests/trashed-by.php at line 224 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3988. Found in file tests/phpunit/tests/trashed-by.php at line 696 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        

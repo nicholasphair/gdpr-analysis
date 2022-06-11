@@ -1,0 +1,1127 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on mandoo
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.718067.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.976422.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 215 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.629791.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.694235.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1610 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.317850.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 5 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.925302.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.144658.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 810 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:12.209515.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 8667
+Added 6026 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 9212
+Added 545 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.491309.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/mandoo.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/lib/class.DoApi.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/lib/mandoo_plugin.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/lib/mandoo_widget.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/lib/page_form_list_table.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/lib/admin/api.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/lib/admin/help.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/lib/admin/newsletter.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/lib/admin/page-form.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mandoo/lib/admin/user-subscribe.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.064716.
+
+215 PHP_REACHES edges created
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1610 PHP_REACHES edges created
+5 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+6836 PHP_REACHES edges created
+545 PHP_REACHES edges created
+9212 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 2952 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.212336.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.897352.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 173 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:04.516217.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 645 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.274701.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.154478.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.316577.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.064304.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.037198.
+
+818 PHP_REACHES edges created
+818 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 364 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.167362.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.147853.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<input type="button" name="confirm-send-mail" id="confirm-send-mail" class="button-primary" value="Send Mail" />'' cannot be parsed correct.
+HTML code '$'<input type="button" name="newsletter-preview" id="newsletter-preview" class="button-primary" value="Preview Mail" /'' cannot be parsed correct.
+HTML code '$'<a href="javascript:void(null);" id="newsletter-preview-close" class="media-modal-close" title="Close"><span class="media-modal-icon"></span></a>'' cannot be parsed correct.
+HTML code '$'Page Form Settings'' cannot be parsed correct.
+HTML code '$'What you\'re trying to do looks a little shady.'' cannot be parsed correct.
+HTML code '$'User Subscribe Settings'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'Select a group: '' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'What you\'re trying to do looks a little shady.'' cannot be parsed correct.
+HTML code '$'API Keys Settings'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'$this_api-client-id'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'$this_api-client-secret'' cannot be parsed correct.
+HTML code '$'Save Changes'' cannot be parsed correct.
+HTML code '$'Help'' cannot be parsed correct.
+HTML code '$'Api Keys'' cannot be parsed correct.
+HTML code '$'In this section you can insert and modify keys to connect with Mandoo. If you have any problem or you do not know your keys go to Mandoo Account and see "API".'' cannot be parsed correct.
+HTML code '$'Page Form'' cannot be parsed correct.
+HTML code '$'User Subscribe'' cannot be parsed correct.
+HTML code '$'Widget'' cannot be parsed correct.
+HTML code '$'If you have any questions, please contact us via help@mandoocms.com or fill in our contact form on our site'' cannot be parsed correct.
+HTML code '$'Newsletter'' cannot be parsed correct.
+HTML code '$'<h3>Header</h3>'' cannot be parsed correct.
+HTML code '$'<h3>Background color</h3>'' cannot be parsed correct.
+HTML code '$'<input type="text" id="bg-color" name="newsletter_options[bg-color]" value="$this_bg-color" data-default-color="#effeff" />'' cannot be parsed correct.
+HTML code '$'<h3>E-mail Background color</h3>'' cannot be parsed correct.
+HTML code '$'<input type="text" id="mail-bg-color" name="newsletter_options[mail-bg-color]" value="$this_mail-bg-color" data-default-color="#effeff" />'' cannot be parsed correct.
+HTML code '$'<h3>Footer</h3>'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'Select'' cannot be parsed correct.
+HTML code '$'Save Changes'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'Group name: '' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'$_GET_page'' cannot be parsed correct.
+HTML code '$'Create group'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="Submit" class="button-primary" value="Save Changes" />'' cannot be parsed correct.
+HTML code '$'<input type="button" name="newsletter-preview" id="newsletter-preview" class="button-primary" value="Preview Mail" /'' cannot be parsed correct.
+HTML code '$'<h3>General options</h3>'' cannot be parsed correct.
+HTML code '$'Subject'' cannot be parsed correct.
+HTML code '$'Select Mandoo doMail campaign'' cannot be parsed correct.
+HTML code '$'Select'' cannot be parsed correct.
+HTML code '$'<option value=$node"selected="selected">$node</option>'' cannot be parsed correct.
+HTML code '$'Publish on RSS'' cannot be parsed correct.
+HTML code '$'<h3>Select a <a href="http://www.mandoocms.com/es_ES/features/1247/" target="_blank" title="Mandooâ¢ doMails">Mandooâ¢ doMails</a> group to send the newsletter.</h3>'' cannot be parsed correct.
+HTML code '$'<li><input type="checkbox" value="$node" name="group[]" class="group" /> No name <b>($node)</b></li>'' cannot be parsed correct.
+HTML code '$'<h3>Select your newsletter content.</h3>'' cannot be parsed correct.
+HTML code '$'<li><input type="checkbox" name="post[]" value="$post" class="post"/> $post</li>'' cannot be parsed correct.
+HTML code '$'<div class="error fade">$this->get_admin_notices(0)</div>'' cannot be parsed correct.
+HTML code '$'<div class="error fade">$this->get_admin_notices(1)</div>'' cannot be parsed correct.
+HTML code '$'<div class="error fade">$this->get_admin_notices(2)</div>'' cannot be parsed correct.
+HTML code '$'<div class="updated fade">$this->get_admin_notices(3)</div>'' cannot be parsed correct.
+HTML code '$'<div class="error fade">$this->get_admin_notices(4)</div>'' cannot be parsed correct.
+HTML code '$'$output'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'<a class=\'nav-tab$class\' href=\'?page=newsletter&tab=$tab\'>$name</a>'' cannot be parsed correct.
+HTML code '$'sprintf(__("Are you sure you want to send the newsletters to %s subscribers?", "mandoo"), "<b>" . $num_subscribers . "</b>")'' cannot be parsed correct.
+HTML code '$'<input type="button" name="send" id="send-mail" class="button-primary" value="Send Mail" />'' cannot be parsed correct.
+HTML code '$'<input type="button" name="cancel-send" id="cancel-send" class="button-primary" value="Cancel" /'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("form_id")'' cannot be parsed correct.
+HTML code '$'Select a form :'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("form_id")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("form_id")'' cannot be parsed correct.
+HTML code '$'$selected'' cannot be parsed correct.
+HTML code '$'$node'' cannot be parsed correct.
+HTML code '$'$node'' cannot be parsed correct.
+HTML code '$'$before_widget$before_title'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="https://api.mandoocms.com/forms/$this->get_form_id($this->number).js"></script'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<p class="submit">'' cannot be parsed correct.
+HTML code '$'<span class="spinner"></span>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="preview-type" id="preview-type" value="1" />'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'" />
+				</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">
+					<label for="'' cannot be parsed correct.
+HTML code '$'" />
+				</td>
+			</tr>
+		</table>
+		<p class="submit">
+			<input type="submit" name="Submit" class="button-primary" value="'' cannot be parsed correct.
+HTML code '$'<table class="form-table">'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'</option> 
+										'' cannot be parsed correct.
+HTML code '$'<p class="submit">'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="preview-type" id="preview-type" value="0" />'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<table class="form-table">'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<table>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<input type="text" name="subject" id="subject" class="regular-text" />'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" value="1" name="publishOnRss" id="publishOnRss" />'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<ul class="list-group">'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<h2 class="nav-tab-wrapper">'' cannot be parsed correct.
+HTML code '$'</h2>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<span class="spinner"></span>'' cannot be parsed correct.
+HTML code '$'<!-- BEGIN Mando Wordpress Widget http://www.mandoocms.com -->'' cannot be parsed correct.
+HTML code '$'<!-- END Mandoo Wordpress Widget -->'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:14.861386.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.050304.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 20 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.791925.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running maxdbDetector
+### Start running SybaseDetector
+### Finish running MySQLiDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running PhpCurlDetector
+### Finished running detectors
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote
+lib/class.DoApi.php:3012
+  - External request to URL http://api.mandoocms.com.
+  - Data types: remote 
+
+lib/class.DoApi.php:3002
+  - SHA1 called with parameters [sign]. Ignore if [sign] does not contain personal information. 
+
+lib/mandoo_plugin.class.php:373
+  - RETRIEVAL call to file_get_contents(plugins_url("mandoo/lib/mail_template.htm")).
+  - Data types: file 
+
+lib/admin/newsletter.php:82
+  - object property '$node->users_username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lib/mandoo_plugin.class.php:311
+  - object property '$user->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+lib/class.DoApi.php:420
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:420
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:420
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:421
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:435
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:435
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:435
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:436
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:450
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:450
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:450
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:451
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:469
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:469
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:469
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:470
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:499
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:499
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:499
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:500
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:830
+  - variable '$emails' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:1230
+  - variable '$emails' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:1301
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+lib/class.DoApi.php:1351
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+lib/class.DoApi.php:1816
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lib/class.DoApi.php:1817
+  - variable '$firstname' of personal types {'first_name'} is found.
+  - Data types: first_name
+lib/class.DoApi.php:1818
+  - variable '$lastname' of personal types {'last_name'} is found.
+  - Data types: last_name
+lib/class.DoApi.php:1819
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:1822
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+lib/class.DoApi.php:1850
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lib/class.DoApi.php:1851
+  - variable '$firstname' of personal types {'first_name'} is found.
+  - Data types: first_name
+lib/class.DoApi.php:1852
+  - variable '$lastname' of personal types {'last_name'} is found.
+  - Data types: last_name
+lib/class.DoApi.php:1853
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/class.DoApi.php:1856
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+lib/mandoo_plugin.class.php:311
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+lib/mandoo_plugin.class.php:313
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+lib/admin/newsletter.php:161
+  - RETRIEVAL call to get_posts(). Returns (WP_Post[]|int[]).
+lib/mandoo_plugin.class.php:30
+  - RETRIEVAL call to get_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/mandoo_plugin.class.php:136
+  - RETRIEVAL call to get_option($_GET["page"] . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/mandoo_plugin.class.php:251
+  - RETRIEVAL call to get_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/mandoo_plugin.class.php:260
+  - RETRIEVAL call to get_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/mandoo_plugin.class.php:269
+  - RETRIEVAL call to get_option($_GET["page"] . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/mandoo_plugin.class.php:308
+  - RETRIEVAL call to get_option("user_subscribe_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/mandoo_plugin.class.php:310
+  - RETRIEVAL call to get_userdata($user_id) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user_meta, user
+lib/mandoo_plugin.class.php:324
+  - RETRIEVAL call to get_the_author_meta("subscribe", $user->ID) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+lib/mandoo_plugin.class.php:371
+  - RETRIEVAL call to get_option("newsletter_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/mandoo_plugin.class.php:384
+  - RETRIEVAL call to get_post($posts[0]) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post, post_meta
+lib/mandoo_plugin.class.php:391
+  - RETRIEVAL call to get_post($posts[$i]) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post, post_meta
+lib/mandoo_plugin.class.php:427
+  - RETRIEVAL call to get_option("newsletter_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/mandoo_widget.class.php:102
+  - RETRIEVAL call to get_option($this->option_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+lib/mandoo_plugin.class.php:153
+  - STORAGE call to delete_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+lib/mandoo_plugin.class.php:154
+  - STORAGE call to delete_option("user_subscribe_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+lib/mandoo_plugin.class.php:155
+  - STORAGE call to delete_option("newsletter_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+lib/mandoo_plugin.class.php:247
+  - STORAGE call to add_option($_GET["page"] . "_options", "", "", self"public_option") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/mandoo_plugin.class.php:271
+  - STORAGE call to update_option($_GET["page"] . "_options", $new_options_values) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/mandoo_plugin.class.php:306
+  - STORAGE call to update_user_meta($user_id, "subscribe", $_POST["subscribe"]) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: user_meta
+lib/mandoo_plugin.class.php:343
+  - STORAGE call to update_user_meta($user_id, "subscribe", $_POST["subscribe"]) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: user_meta
+lib/mandoo_plugin.class.php:429
+  - STORAGE call to update_option("newsletter_options", $new_options_values) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+lib/mandoo_plugin.class.php:153
+  - DELETION call to delete_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+lib/mandoo_plugin.class.php:154
+  - DELETION call to delete_option("user_subscribe_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+lib/mandoo_plugin.class.php:155
+  - DELETION call to delete_option("newsletter_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+address
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+file
+	PHPRetrievalDetector.file_get_contents(plugins_url("mandoo/lib/mail_template.htm")) - {'file'}
+first_name
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+last_name
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+none
+	WordPressRetrievalDetector.get_posts() - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option($_GET["page"] . "_options") - {'option'}
+	WordPressRetrievalDetector.get_option("newsletter_options") - {'option'}
+	WordPressRetrievalDetector.get_option("api_keys_options") - {'option'}
+	WordPressStorageDetector.add_option($_GET["page"] . "_options", "", "", self"public_option") - {'option'}
+	WordPressRetrievalDetector.get_option("api_keys_options") - {'option'}
+	WordPressRetrievalDetector.get_option("newsletter_options") - {'option'}
+	WordPressRetrievalDetector.get_option("api_keys_options") - {'option'}
+	WordPressRetrievalDetector.get_option("user_subscribe_options") - {'option'}
+	WordPressRetrievalDetector.get_option($_GET["page"] . "_options") - {'option'}
+	WordPressRetrievalDetector.get_option($this->option_name) - {'option'}
+	WordPressStorageDetector.update_option($_GET["page"] . "_options", $new_options_values) - {'option'}
+	WordPressStorageDetector.delete_option("api_keys_options") - {'option'}
+	DeletionDetector.delete_option("user_subscribe_options") - {'option'}
+	DeletionDetector.delete_option("newsletter_options") - {'option'}
+	DeletionDetector.delete_option("api_keys_options") - {'option'}
+	WordPressStorageDetector.update_option("newsletter_options", $new_options_values) - {'option'}
+	WordPressStorageDetector.delete_option("newsletter_options") - {'option'}
+	WordPressStorageDetector.delete_option("user_subscribe_options") - {'option'}
+post
+	WordPressRetrievalDetector.get_post($posts[$i]) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($posts[0]) - {'wp_post', 'post', 'post_meta'}
+post_meta
+	WordPressRetrievalDetector.get_post($posts[$i]) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($posts[0]) - {'wp_post', 'post', 'post_meta'}
+remote
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+	PhpCurlDetector.(unknown) - {'remote'}
+user
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'user'}
+user_meta
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	WordPressStorageDetector.update_user_meta($user_id, "subscribe", $_POST["subscribe"]) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("subscribe", $user->ID) - {'user_meta'}
+	WordPressRetrievalDetector.get_userdata($user_id) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	WordPressStorageDetector.update_user_meta($user_id, "subscribe", $_POST["subscribe"]) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user_meta', 'user'}
+wp_post
+	WordPressRetrievalDetector.get_post($posts[$i]) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($posts[0]) - {'wp_post', 'post', 'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:15.301423.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 58 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.183676.
+
+58 STORE_REACHES edges created
+58 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 589 nodes as PERSONAL
+In total, tainted 589 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 1 nodes as ENCRYPTED
+In total, tainted 1 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:15.260369.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:51.236863!
+DELETION call to delete_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("user_subscribe_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("newsletter_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+SHA1 called with parameters [sign]. Ignore if [sign] does not contain personal information.,sha1,None
+RETRIEVAL call to file_get_contents(plugins_url("mandoo/lib/mail_template.htm")).,None,None
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+External request to URL http://api.mandoocms.com.,https,['http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com', 'http://api.mandoocms.com']
+object property '$node->users_username' of personal types {'user_meta', 'user'} is found.,,None
+object property '$user->user_email' of personal types {'email'} is found.,,None
+variable '$emails' of personal types {'email'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$firstname' of personal types {'first_name'} is found.,,None
+variable '$lastname' of personal types {'last_name'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$firstname' of personal types {'first_name'} is found.,,None
+variable '$lastname' of personal types {'last_name'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$emails' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_posts(). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_option($_GET["page"] . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($_GET["page"] . "_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("user_subscribe_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_userdata($user_id) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_the_author_meta("subscribe", $user->ID) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_option("newsletter_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($posts[0]) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post($posts[$i]) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("newsletter_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->option_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to delete_option("api_keys_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("user_subscribe_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("newsletter_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_option($_GET["page"] . "_options", "", "", self"public_option") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($_GET["page"] . "_options", $new_options_values) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_user_meta($user_id, "subscribe", $_POST["subscribe"]) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_user_meta($user_id, "subscribe", $_POST["subscribe"]) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_option("newsletter_options", $new_options_values) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['email', 'user_meta', 'user']) stored through WordPress function "update_user_meta($user_id, "subscribe", $_POST["subscribe"])", found in file lib/mandoo_plugin.class.php at line 306. 
+
+[has_storage] PII of types (['user_meta']) stored through WordPress function "update_user_meta($user_id, "subscribe", $_POST["subscribe"])", found in file lib/mandoo_plugin.class.php at line 343. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_user_meta($user_id, "subscribe", $_POST["subscribe"]) does not have corresponding deletion method. Storage method found in file lib/mandoo_plugin.class.php at line 306. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_user_meta($user_id, "subscribe", $_POST["subscribe"]) does not have corresponding deletion method. Storage method found in file lib/mandoo_plugin.class.php at line 343. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 13193. Found in file lib/mandoo_plugin.class.php at line 306 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 13421. Found in file lib/mandoo_plugin.class.php at line 343 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party at "http://api.mandoocms.com" used with data types ['last_name', 'user', 'email', 'user_meta', 'address', 'first_name'], found in file lib/class.DoApi.php at line 3012 . Personal data flows from sources with nodeID [7683, 2696, 13193, 7441, 7444, 7448, 7451, 7455, 7462, 4138, 2609, 13234, 13236, 7483, 13243, 5309, 13245, 2501, 13257, 7641, 2522, 7644, 7648, 7651, 7655, 7658, 13421, 7662, 2800, 2555, 11134, 7679]  
+
+[third_party] Third party usage is CONFIRMED for data types ['address', 'email', 'first_name', 'last_name', 'user', 'user_meta'] 
+
+[encryption] API call that sends PII to "http://api.mandoocms.com" uses http. PII is insecurely encrypted with []. Found in file lib/class.DoApi.php at line 3012 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? True 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function mandoo_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+    //TODO: Delete the user data that was stored using Wordpress functions
+
+    //Below is the sample code for deleting user meta and may need to be modified to suit the plugin.
+    $user_id = get_user_by('email', $email_address)
+    $key = 'email' //Sample user meta key
+    if ( $customer->user_id > 0 ) {
+        //Delete user meta data by $key
+        delete_user_meta( $user_id, $key );
+    }
+        
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'mandoo' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function mandoo_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'mandoo' ),
+        'callback'             => 'mandoo_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'mandoo_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function mandoo_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'mandoo' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'mandoo' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'mandoo' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'mandoo', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'mandoo_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

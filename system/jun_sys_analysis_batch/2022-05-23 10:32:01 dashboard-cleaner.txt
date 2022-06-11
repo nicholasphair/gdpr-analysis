@@ -1,0 +1,835 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on dashboard-cleaner
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.745194.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.946704.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.379218.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.776939.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 280 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.644941.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.511667.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.092687.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 120 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.714190.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2680
+Added 2279 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4882
+Added 2202 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.321014.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/dashboard-cleaner/dashboard-cleaner.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/dashboard-cleaner/help.php' cannot be parsed correct.
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/dashboard-cleaner/index.html
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/dashboard-cleaner/index.html' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/dashboard-cleaner/thickbox.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/dashboard-cleaner/uninstall.php' cannot be parsed correct.
+Added new directory node for: static
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/dashboard-cleaner/static/index.html
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/dashboard-cleaner/static/index.html' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.753875.
+
+5 Nodes Created
+1 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2679 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2202 PHP_REACHES edges created
+1 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+4887 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 877 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.950515.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.534443.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 4 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.476684.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 19 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.166701.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.119975.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.104246.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010978.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.036153.
+
+23 PHP_REACHES edges created
+23 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 4 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.146627.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.118962.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div class="error notice is-dismissible"><p>Error: \'wp_upload_dir\' did not return WordPress upload directory. Aborting.</p></div>'' cannot be parsed correct.
+HTML code '$'<div class="error notice is-dismissible"><p>sprintf(__("Error: unable to create %s directory. Aborting.", "dashboard-cleaner"), "<code>" . htmlspecialchars($dir) . "</code>")</p></div>'' cannot be parsed correct.
+HTML code '$'addslashes($dhcl_form_result)'' cannot be parsed correct.
+HTML code '$'esc_js($dhcl_options["border-color"])'' cannot be parsed correct.
+HTML code '$'esc_js(__("Running (ESC to cancel)", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'esc_js(__("Please don\\'t try to delete elements from Dashboard Cleaner\\'s own page or menu, otherwise you might not be able to undo your modification!", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'esc_js(__("Sorry, but this is a core element of WordPress and it shouldn\\'t be deleted!", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'esc_js(__("No attribute found!", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'esc_js(__("View selected HTML source", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'esc_js(__("Close selected HTML source", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'esc_js(__("This action will delete the last saved filter. Continue?", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'esc_js(__("You must select a valid attribute name and value pair.", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'esc_js(__("You must enter a valid HTML element.", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'esc_js(__("You must select at least one filter to delete.", "dashboard-cleaner"))'' cannot be parsed correct.
+HTML code '$'<div class="updated notice is-dismissible"><p>Your changes have been saved.</p></div>'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($dhcl_options["border-color"])'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($dhcl_options["border-width"])'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($dhcl_options["border-color-hash"])'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($dhcl_options["border-width"])'' cannot be parsed correct.
+HTML code '$' nav-tab-active'' cannot be parsed correct.
+HTML code '$' nav-tab-active'' cannot be parsed correct.
+HTML code '$'<div class="error notice is-dismissible"><p>dhcl_delete_selected_filters()</p></div>'' cannot be parsed correct.
+HTML code '$'<div class="updated notice is-dismissible"><p>Your changes have been saved.</p></div>'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($id)'' cannot be parsed correct.
+HTML code '$'htmlspecialchars(date_i18n("M d, Y H:i", $date))'' cannot be parsed correct.
+HTML code '$'htmlspecialchars(strtoupper($tag))'' cannot be parsed correct.
+HTML code '$'<b>htmlspecialchars($name)</b>=htmlspecialchars($value)'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($notes)'' cannot be parsed correct.
+HTML code '$'<div class="notice-info notice is-dismissible"><p>You do not have any filter yet.</p></div>'' cannot be parsed correct.
+HTML code '$'DHCL_VERSION'' cannot be parsed correct.
+HTML code '$'date("Y")'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($gpl3)'' cannot be parsed correct.
+HTML code '$'var its_me = 1;
+'' cannot be parsed correct.
+HTML code '$'var its_me = 0;
+'' cannot be parsed correct.
+HTML code '$'\';
+		if ( dhcl_form_result != \'\' ) {
+			document.write( dhcl_form_result );
+		}
+		var dhcl_borderColor = \''' cannot be parsed correct.
+HTML code '$'\';
+		var dhcl_label = '' cannot be parsed correct.
+HTML code '$';
+		var dhcl_borderWidth = '' cannot be parsed correct.
+HTML code '$';
+		var dhcl_crosshair = '' cannot be parsed correct.
+HTML code '$';
+		var dhcl_transition = '' cannot be parsed correct.
+HTML code '$';
+		var i18n_running = \'<span id="dhcl-span" style="background-color:orange;padding:4px;border-radius:2px;color:white;box-shadow: 1px 1px 2px #7F0000 inset;">'' cannot be parsed correct.
+HTML code '$'</span>\';
+		var i18n_itsme = '' cannot be parsed correct.
+HTML code '$'";
+		var i18n_disallowed = "'' cannot be parsed correct.
+HTML code '$'";
+		var i18n_main = "DHCL";
+		var i18n_noattr = "'' cannot be parsed correct.
+HTML code '$'";
+		var i18n_viewHTML = "'' cannot be parsed correct.
+HTML code '$'";
+		var i18n_closeHTML = "'' cannot be parsed correct.
+HTML code '$'";
+		var i18n_undo = "'' cannot be parsed correct.
+HTML code '$'";
+		var i18n_select_attr = "'' cannot be parsed correct.
+HTML code '$'";
+		var i18n_select_tag = "'' cannot be parsed correct.
+HTML code '$'";
+		var i18n_checkbox = "'' cannot be parsed correct.
+HTML code '$'";
+	</script>
+'' cannot be parsed correct.
+HTML code '$'
+	<form name="dhfc-settings-table" method="post" action="?page=dashboard-cleaner&tab=settings">
+
+		'' cannot be parsed correct.
+HTML code '$'</h3>
+			</div>
+			<div style="display:inline-block;">
+				<span class="description">'' cannot be parsed correct.
+HTML code '$'</span>
+			</div>
+		</div>
+		<table class="form-table">
+			<tr>
+				<th scope="row">'' cannot be parsed correct.
+HTML code '$'</th>
+				<td>
+					<input type="text" id="border-color" name="border-color" value="'' cannot be parsed correct.
+HTML code '$'" style="border: '' cannot be parsed correct.
+HTML code '$'px solid '' cannot be parsed correct.
+HTML code '$'" oninput="dhcl_change_color(this.value)" onpaste="dhcl_change_color(this.value);" />
+					<p><span class="description">'' cannot be parsed correct.
+HTML code '$'</span></p>
+				</td>
+			</tr>
+
+			<tr>
+				<th scope="row">'' cannot be parsed correct.
+HTML code '$'</th>
+				<td>
+					<input type="number" class="small-text" name="border-width" step="1" min="1" max="10" value="'' cannot be parsed correct.
+HTML code '$'" onchange="dhcl_change_border(this.value);" /> px
+					<p><span class="description">'' cannot be parsed correct.
+HTML code '$'</span></p>
+				</td>
+			</tr>
+
+			<tr>
+				<th scope="row">'' cannot be parsed correct.
+HTML code '$'</th>
+				<td>
+					<label><input type="radio" name="show-label" value="1"'' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$'</label>
+					&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" name="show-label" value="0"'' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$'</label>
+					<p><span class="description">'' cannot be parsed correct.
+HTML code '$'</span></p>
+				</td>
+			</tr>
+
+			<tr>
+				<th scope="row">'' cannot be parsed correct.
+HTML code '$'</th>
+				<td>
+					<label><input type="radio" name="transition-effect" value="1"'' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$'</label>
+					&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" name="transition-effect" value="0"'' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$'</label>
+				</td>
+			</tr>
+
+			<tr>
+				<th scope="row">'' cannot be parsed correct.
+HTML code '$'</th>
+				<td>
+					<label><input type="radio" name="crosshair-cursor" value="1"'' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$'</label>
+					&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" name="crosshair-cursor" value="0"'' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$'</label>
+				</td>
+			</tr>
+		</table>
+
+		<br />
+
+		<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+		<table class="form-table">
+			<tr>
+				<th scope="row">'' cannot be parsed correct.
+HTML code '$'</th>
+				<td>
+					<p>
+						<label><input type="radio" name="apply-to" value="1"'' cannot be parsed correct.
+HTML code '$'>&nbsp;'' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$'.</label>
+					</p>
+					<p>
+						<label><input type="radio" name="apply-to" value="2"'' cannot be parsed correct.
+HTML code '$'>&nbsp;'' cannot be parsed correct.
+HTML code '$'.</label>
+					</p>
+				</td>
+			</tr>
+		</table>
+
+		<br />
+		<br />
+
+		<input type="submit" class="button-primary" name="dhcl_settings" value="'' cannot be parsed correct.
+HTML code '$'" />
+
+	</form>
+
+</div>
+'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+		<a href="?page=dashboard-cleaner&dhcltab=filters" class="nav-tab'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+		<a href="?page=dashboard-cleaner&dhcltab=about" class="nav-tab'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+		<a href="?page=dashboard-cleaner&dhcltab=donate" class="nav-tab'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+	</h2>
+	'' cannot be parsed correct.
+HTML code '$'	<form method="post" onSubmit="return dhcl_ischecked();">
+		<br />
+		<table class="widefat fixed">
+			<tr>
+				<td style="width:10px">
+					<input type="checkbox" onClick="dhcl_checkboxes(this);" />
+				</td>
+				<td style="font-size:14px;">
+					<strong>'' cannot be parsed correct.
+HTML code '$'</strong>
+				</td>
+				<td style="font-size:14px;">
+					<strong>'' cannot be parsed correct.
+HTML code '$'</strong>
+				</td>
+				<td style="font-size:14px;">
+					<strong>'' cannot be parsed correct.
+HTML code '$'</strong>
+				</td>
+				<td style="font-size:14px;">
+					<strong>'' cannot be parsed correct.
+HTML code '$'</strong>
+				</td>
+			</tr>
+		'' cannot be parsed correct.
+HTML code '$'<tr style="background-color:#F9F9F9;">'' cannot be parsed correct.
+HTML code '$'<tr style="background-color:#FFFFFF;">'' cannot be parsed correct.
+HTML code '$'" />
+				</td>
+				<td>
+				'' cannot be parsed correct.
+HTML code '$'				</td>
+				<td>
+					'' cannot be parsed correct.
+HTML code '$'				</td>
+				<td>
+					'' cannot be parsed correct.
+HTML code '$'				</td>
+				<td>
+					'' cannot be parsed correct.
+HTML code '$'</a>
+				</td>
+			</tr>
+			'' cannot be parsed correct.
+HTML code '$'</p>
+		'' cannot be parsed correct.
+HTML code '$'" />
+	'' cannot be parsed correct.
+HTML code '$'</h1>
+
+	'' cannot be parsed correct.
+HTML code '$'
+	<div class="card">
+		<p>'' cannot be parsed correct.
+HTML code '$'</p>
+		<hr />
+		<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+		<br />
+		<a href="bitcoin:13GH1yAU22ukKQ4AxhtBnb8eiNRtzbqsUC?message=Dashboard%20Cleaner%20donation"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAACGCAIAAACXG2XGAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QYCCjMiGBn+rgAAAzJJREFUeNrtncFyg0AMQ6HD//9yeu10GsZG0jaGpzMhBMUSttfL/nq9NvBJOLZt2/fdft6fTL87/7tjKp9VrseF0H374l/5aYASKAEVL3Fpbldb3/lHwg8qXvXu/JVjjPeNKEG4AJSM95KuNygaWtH0yvkVD0vkGeJ9I0oQLgAlt/KSBLrP9a58ons9ifoVUYJwASjBSzz+kfCGbg3q5/Hp+hVRgnABKHm6l7g0tOsB3XzC1dtXfM5434gShAtAyXgvSdd2Ep5R8bD0mjHjfSNKEC4AJeOwLy7gdDU30c9Q/IwoQbgAlIC/vaRSI+rqeKI+1l3TtXJOxfW9zJcgXABKJuLYav0DxTOUfkbCwxRPcuVYJ+cnShAuACUjvUR5Hk9ovct7up+tXL8y21j0HqIE4QJQMtJLXNrdrWsptbVurpCeI1HWEfz6XUQJwgWgZHxe0p3PcPWxuzPwykzJyhyFKEG4AJQ8xUu6sxquPsfKWcVEbuG6BvolCBeAkuk4WxP8X/uIpHvvrvXESr5C7x3hAlDyRC9R+t5KfpDwBlddrtubIUoQLgAlT/SStF53j1F8qNsXcc2mXMhjiBKEC0DJSC9J5xldfxJn/ZblT6EcjihBuACUjM9LXPWldH9eyQkS8yuuHI4oQbgAlEzEcUFPXTpbWRuWyBVca39DfRqiBOECUDLeSxJ75VY0VJn1S7wfZfF+jkQJwgWgZLyXJJ67FY1O5A2u7+2+P5goQbgAlDzFS5TZurTmrswhVta7iBKEC0DJ3bxE0fGKx6TzDNd+J4l9Yi7U1ogShAtAyThceX9J91k+nXO45ldWvvvk5HqIEoQLQMlIL4l/h6nvvSAnaHmPklednJMoQbgAlIzDsWX23VL2gnT5h5IbuTzywnUSJQgXgJKRXpLQVkVzK9fTff9jYg8V1z6PRAnCBaDkbl6i5ASuPEZ571ZX95Uevuv3EiUIF4CSO3uJC0r/I72vopJPhOp1RAnCBaAEL7mo0a7eu6L1rvMofRSiBOECUHI3L1k5A+iaZ0zkOq4eD/0ShAtAyV1xNl+iIL1HZCIfUnzCtf6YGhfCBaBkqpdwFz4K3/F65gVuLsNPAAAAAElFTkSuQmCC"><br />13GH1yAU22ukKQ4AxhtBnb8eiNRtzbqsUC</a>
+		<br />&nbsp;
+		<hr />
+		<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+		<a href="https://wordpress.org/support/view/plugin-reviews/dashboard-cleaner?rate=5#postform"><img title="'' cannot be parsed correct.
+HTML code '$'" border="0" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAcCAIAAAA/XwxHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3woMCgQevC7e8gAAActJREFUaN7tmb9LAmEYx9/XM1OLNDMCB8MLQRCHoKGprbW1pcWh/yKabHVsjIj+gKgGh1q1oMEIIoIup8Ph0lOvO7F7720QuZI6fd9q6X2+2/G+H57j88D7gxdTShHkb+IDBSAX5EJ+LJfS5p7RbHGVE4tll0sV82G383BIODZCwVgfcxsbBaPtoHah02gB+6tyqWI+HjoIIaRZj4zNFI1llNtv4+CLrZmisaxy3Tb2w9JM0ViEEEL42xsa1W3ttGc82ZZCTMW2FGLVv5iLp30h2R+SpbAshWT/9NpkPOdDgrGYVS7qEXVTuztxGFoVC+ZuookUFo5lXhYCUuI4ll7F41YKBNIXg0qisTxr7tRE6mw2uTROKX/yfDa1jMVlOTY0HJ/MXEYX5kZsiwtHscz68NIjGstzWsCLoexB0GOitBHJbkkYWL6jGKkTj3WeqI7HsGgsq1xqXRGv8ec3qwssn1ziGLeenXp5MxrA8sntEr3mApH8zMr9/EoxHIm6v6M/U2C/uj+PilN7LSO1hOqVvKHVHHfAtLWiXomqJaSW920H2OGMIde+ble3P5f5GNPWinp1p2cDOxwMr79/F3hDA7kgFwJyQe6/yDsZhxXHUCuqgQAAAABJRU5ErkJggg==" width="116" height="28"><br />'' cannot be parsed correct.
+HTML code '$'</a>
+		<br />&nbsp;
+		<hr />
+		<p>'' cannot be parsed correct.
+HTML code '$'</p>
+	</div>
+</div>
+'' cannot be parsed correct.
+HTML code '$'
+	<div class="card">
+		<h1>Dashboard Cleaner v'' cannot be parsed correct.
+HTML code '$'</h1>
+		<h3>&copy; '' cannot be parsed correct.
+HTML code '$' Jerome Bruandet</h3>
+		<strong>'' cannot be parsed correct.
+HTML code '$'</strong>
+		<ul>
+			<li><a href="https://wordpress.org/plugins/ninjafirewall/">NinjaFirewall (WP Edition)</a>: '' cannot be parsed correct.
+HTML code '$'</li>
+			<li><a href="https://wordpress.org/plugins/ninjascanner/">NinjaScanner</a>: '' cannot be parsed correct.
+HTML code '$'</li>
+			<li><a href="https://wordpress.org/plugins/wpterm/">WPTerm</a>: '' cannot be parsed correct.
+HTML code '$'</li>
+		</ul>
+		<br />
+		<br />
+		<textarea id="dhcl-license" class="small-text code" style="display:none; width:100%" rows="8" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">'' cannot be parsed correct.
+HTML code '$'</textarea>
+		<input id="dhcl-license-button" type="button" class="button-secondary" value="'' cannot be parsed correct.
+HTML code '$'" onClick="dhcl_show_license();" />
+		<br />&nbsp;
+	</div>
+</div>
+'' cannot be parsed correct.
+HTML code '$'</h3>
+
+		<table class="form-table" style="background-color:#F9F9F9;">
+			<tr>
+				<th scope="row" style="padding:5px 3px 5px 3px;text-align:center">'' cannot be parsed correct.
+HTML code '$'</th>
+				<th scope="row" style="padding:5px 3px 5px 3px;text-align:center">'' cannot be parsed correct.
+HTML code '$'</th>
+			</tr>
+			<tr>
+				<th scope="row" style="padding:5px 3px 5px 3px"><label><input type="radio" name="dhcl_choice" value="dhclid" /><code>id</code></label></th>
+				<td align="left" style="padding:5px 3px 5px 3px">
+					<input type="text" class="large-text" id="dhcl-choice-id" name="dhclid" value="" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row" style="padding:5px 3px 5px 3px"><label><input type="radio" name="dhcl_choice" value="dhclclass" /><code>class</code></label></th>
+				<td align="left" style="padding:5px 3px 5px 3px">
+					<input type="text" class="large-text" id="dhcl-choice-class" name="dhclclass" value="" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row" style="padding:5px 3px 5px 3px"><label><input type="radio" name="dhcl_choice" value="dhclsrc" /><code>src</code></label></th>
+				<td align="left" style="padding:5px 3px 5px 3px">
+					<input type="text" class="large-text" id="dhcl-choice-src" name="dhclsrc" value="" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row" style="padding:5px 3px 5px 3px"><label><input type="radio" name="dhcl_choice" value="dhclhref" /><code>href</code></label></th>
+				<td align="left" style="padding:5px 3px 5px 3px">
+					<input type="text" class="large-text" id="dhcl-choice-href" name="dhclhref" value="" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row" style="padding:5px 3px 5px 3px"><label><input type="radio" name="dhcl_choice" value="dhclname" /><code>name</code></label></th>
+				<td align="left" style="padding:5px 3px 5px 3px">
+					<input type="text" class="large-text" id="dhcl-choice-name" name="dhclname" value="" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row" style="padding:5px 3px 5px 3px"><label><input type="radio" name="dhcl_choice" value="dhclstyle" /><code>style</code></label></th>
+				<td align="left" style="padding:5px 3px 5px 3px">
+					<input type="text" class="large-text" id="dhcl-choice-style" name="dhclstyle" value="" />
+				</td>
+			</tr>
+			<tr style="background-color:#fff">
+				<th scope="row" style="padding:5px 3px 5px 3px;vertical-align:middle">'' cannot be parsed correct.
+HTML code '$'</th>
+				<td align="left" style="padding:5px 3px 5px 3px">
+					<input type="text" class="large-text" name="dhcl-notes" value="" maxlength="255" />
+				</td>
+			</tr>
+			<tr style="background-color:#fff">
+				<th scope="row" style="padding:5px 3px 5px 3px;vertical-align:middle">'' cannot be parsed correct.
+HTML code '$'</th>
+				<td align="left" style="padding:5px 3px 5px 3px">
+					<select name="hidding_method">
+						<option value="1" selected>'' cannot be parsed correct.
+HTML code '$'</option>
+						<option value="0">'' cannot be parsed correct.
+HTML code '$'</option>
+						<option value="2">'' cannot be parsed correct.
+HTML code '$'</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<p>
+			<input type="button" id="dhcl-html-source-btn" class="button-secondary" value="'' cannot be parsed correct.
+HTML code '$'" onClick="dhcl_toggle_source();" />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" class="button-secondary" value="'' cannot be parsed correct.
+HTML code '$'" onClick="tb_remove();" />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="submit" class="button-primary" id="dhcl-html-submit" name="dhcl_html_submit" value="'' cannot be parsed correct.
+HTML code '$' &#187;" />
+		</p>
+	</form>
+
+	<div id="dhcl-html-source" style="display:none">
+		<table class="form-table">
+			<tr>
+				<td>
+					<textarea id="html-src-textarea" class="large-text code" style="background-color: #fff;" rows="10" readonly="readonly"></textarea>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<span class="description">'' cannot be parsed correct.
+HTML code '$'</span>
+</div>
+
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:09.686375.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047559.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 9 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.629924.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running DbaseDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PropertyDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running SqlServerDetector
+### Start running VariableDetector
+### Finish running PHPRetrievalDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running maxdbDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running PHPStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+dashboard-cleaner.php:718
+  - RETRIEVAL call to file($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).
+  - Data types: file
+dashboard-cleaner.php:804
+  - RETRIEVAL call to file_get_contents(plugin_dir_path() . "LICENSE.TXT").
+  - Data types: file 
+
+dashboard-cleaner.php:98
+  - STORAGE call to touch($ud["basedir"]"/dashboard-cleaner/index.html").
+  - Data types: file
+dashboard-cleaner.php:99
+  - STORAGE call to file_put_contents($ud["basedir"]"/dashboard-cleaner/.htaccess", "deny from all
+").
+  - Data types: file
+dashboard-cleaner.php:759
+  - STORAGE call to file_put_contents($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", $outfilters).
+  - Data types: file
+dashboard-cleaner.php:973
+  - STORAGE call to file_put_contents($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", uniqid("filter_", true) . "~~" . time() . "~~" . strtolower(trim($dhcl_html_tag)) . "~~" . strtolower(trim($dhcl_attr_name)) . "~~" . trim($dhcl_attr_value) . "~~" . $hidding_method . "~~" . trim($dhclnotes) . "
+", FILE_APPEND).
+  - Data types: file
+dashboard-cleaner.php:1022
+  - STORAGE call to file_put_contents($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", $data).
+  - Data types: file 
+
+dashboard-cleaner.php:72
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:305
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:327
+  - RETRIEVAL call to get_transient("dhcl_activate") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+dashboard-cleaner.php:515
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:577
+  - RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:708
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:752
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:841
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:966
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:1011
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:1101
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dashboard-cleaner.php:1124
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+uninstall.php:29
+  - RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+dashboard-cleaner.php:59
+  - STORAGE call to set_transient("dhcl_activate", 1, 15) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+dashboard-cleaner.php:112
+  - STORAGE call to update_option("dhcl_options", $dhcl_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+dashboard-cleaner.php:328
+  - STORAGE call to delete_transient("dhcl_activate") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+dashboard-cleaner.php:567
+  - STORAGE call to update_option("dhcl_options", $dhcl_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+uninstall.php:47
+  - STORAGE call to delete_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+uninstall.php:47
+  - DELETION call to delete_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+uninstall.php:45
+  - Uninstall deletion call: DELETION call to delete_site_option("dhcl_options"). Passed arguments: 0: $option (string). Returns (bool).
+uninstall.php:47
+  - Uninstall deletion call: DELETION call to delete_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.file_put_contents($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", $outfilters) - {'file'}
+	PHPStorageDetector.file_put_contents($ud["basedir"]"/dashboard-cleaner/.htaccess", "deny from all
+") - {'file'}
+	PHPStorageDetector.file_put_contents($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", $data) - {'file'}
+	PHPRetrievalDetector.file($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES) - {'file'}
+	PHPRetrievalDetector.file_get_contents(plugin_dir_path() . "LICENSE.TXT") - {'file'}
+	PHPStorageDetector.touch($ud["basedir"]"/dashboard-cleaner/index.html") - {'file'}
+	PHPStorageDetector.file_put_contents($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", uniqid("filter_", true) . "~~" . time() . "~~" . strtolower(trim($dhcl_html_tag)) . "~~" . strtolower(trim($dhcl_attr_name)) . "~~" . trim($dhcl_attr_value) . "~~" . $hidding_method . "~~" . trim($dhclnotes) . "
+", FILE_APPEND) - {'file'}
+none
+	UninstallDetector.delete_site_option("dhcl_options") - set()
+option
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	WordPressStorageDetector.delete_option("dhcl_options") - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	UninstallDetector.delete_option("dhcl_options") - {'option'}
+	WordPressStorageDetector.update_option("dhcl_options", $dhcl_options) - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	DeletionDetector.delete_option("dhcl_options") - {'option'}
+	WordPressRetrievalDetector.get_option("timezone_string") - {'option'}
+	WordPressRetrievalDetector.get_option("dhcl_options") - {'option'}
+	WordPressStorageDetector.update_option("dhcl_options", $dhcl_options) - {'option'}
+site
+	WordPressStorageDetector.delete_transient("dhcl_activate") - {'site'}
+	WordPressRetrievalDetector.get_transient("dhcl_activate") - {'site'}
+	WordPressStorageDetector.set_transient("dhcl_activate", 1, 15) - {'site'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.728601.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 48 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.223744.
+
+48 STORE_REACHES edges created
+48 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005774.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:38.419280!
+DELETION call to delete_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to file($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).,None,None
+RETRIEVAL call to file_get_contents(plugin_dir_path() . "LICENSE.TXT").,None,None
+STORAGE call to file_put_contents($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", $data).,None,None
+STORAGE call to file_put_contents($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", $outfilters).,None,None
+STORAGE call to file_put_contents($ud["basedir"]"/dashboard-cleaner/"$dhcl_options["user_filters"]".filter", uniqid("filter_", true) . "~~" . time() . "~~" . strtolower(trim($dhcl_html_tag)) . "~~" . strtolower(trim($dhcl_attr_name)) . "~~" . trim($dhcl_attr_value) . "~~" . $hidding_method . "~~" . trim($dhclnotes) . "
+", FILE_APPEND).,None,None
+STORAGE call to touch($ud["basedir"]"/dashboard-cleaner/index.html").,None,None
+STORAGE call to file_put_contents($ud["basedir"]"/dashboard-cleaner/.htaccess", "deny from all
+").,None,None
+Uninstall deletion call: DELETION call to delete_site_option("dhcl_options"). Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("dhcl_activate") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("dhcl_options", $dhcl_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_transient("dhcl_activate") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to update_option("dhcl_options", $dhcl_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to set_transient("dhcl_activate", 1, 15) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to delete_option("dhcl_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

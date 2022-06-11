@@ -1,0 +1,945 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on selective-importers
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.516949.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.186862.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 180 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.729615.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 3 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.647999.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1853 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.630612.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 1 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.663884.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.099862.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 717 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:12.331302.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 11595
+Added 8841 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 11595
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:02.154144.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/selective-importers/blogger-importer.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/selective-importers/class-wp-importer-cron.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/selective-importers/selective-importers.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/selective-importers/tumblr-importer.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/selective-importers/wordpress-importer.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.467341.
+
+180 PHP_REACHES edges created
+3 REACHES edges created
+1000 PHP_REACHES edges created
+1853 PHP_REACHES edges created
+1 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+9558 PHP_REACHES edges created
+11595 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 4512 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.412005.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 12 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.869745.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 119 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:04.388401.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 160 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.173342.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.256474.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.240728.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.051819.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.036168.
+
+12 CALLS edges created
+279 PHP_REACHES edges created
+291 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 252 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.186615.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+8 SQL operations to process.
+SELECT DISTINCT meta_value FROM $wpdb WHERE meta_key = 'blogger_author' AND post_id IN (join(",", $post_ids))
+SQL command (SELECT DISTINCT meta_value FROM $wpdb WHERE meta_key = 'blogger_author' AND post_id IN (join(",", $post_ids))) cannot be parsed correct.
+SELECT post_id FROM $wpdb WHERE meta_key = 'blogger_blog' AND meta_value = $this_$importing_blog_host
+SELECT post_id FROM $wpdb WHERE meta_key = 'blogger_blog' AND meta_value = $this_$importing_blog_host
+SQL command (SELECT post_id FROM $wpdb WHERE meta_key = 'blogger_blog' AND meta_value = $this_$importing_blog_host) cannot be parsed correct.
+SELECT post_id FROM $wpdb WHERE meta_key = 'blogger_blog' AND meta_value = $this_$importing_blog_host
+SQL command (SELECT post_id FROM $wpdb WHERE meta_key = 'blogger_blog' AND meta_value = $this_$importing_blog_host) cannot be parsed correct.
+select post_id, meta_value from $wpdb as postmeta, $wpdb as posts where postmeta.post_id = posts.ID AND posts.post_status IN ("publish", "draft", "pending", "future") AND posts.post_type = "import" AND postmeta.meta_key = "_import_expiration" AND postmeta.meta_value <= "strtotime("-1 week")
+SQL command (select post_id, meta_value from $wpdb as postmeta, $wpdb as posts where postmeta.post_id = posts.ID AND posts.post_status IN ("publish", "draft", "pending", "future") AND posts.post_type = "import" AND postmeta.meta_key = "_import_expiration" AND postmeta.meta_value <= "strtotime("-1 week")) cannot be parsed correct.
+DELETE FROM $wpdb WHERE meta_key = 'blogger_author'
+SQL command (DELETE FROM $wpdb WHERE meta_key = 'blogger_author') cannot be parsed correct.
+UPDATE $wpdb SET post_author = $user_id WHERE id IN (join(",", $post_ids))
+UPDATE $wpdb SET post_author = $user_id WHERE id IN (join(",", $post_ids))
+SQL command (UPDATE $wpdb SET post_author = $user_id WHERE id IN (join(",", $post_ids))) cannot be parsed correct.
+UPDATE $wpdb SET post_content = REPLACE(post_content, $from_url, %s)
+UPDATE $wpdb SET post_content = REPLACE(post_content, $from_url, $to_url)
+UPDATE $wpdb SET post_content = REPLACE(post_content, $from_url, $to_url)
+SQL command (UPDATE $wpdb SET post_content = REPLACE(post_content, $from_url, $to_url)) cannot be parsed correct.
+UPDATE $wpdb SET meta_value = REPLACE(meta_value, $from_url, %s) WHERE meta_key='enclosure'
+UPDATE $wpdb SET meta_value = REPLACE(meta_value, $from_url, $to_url) WHERE meta_key='enclosure'
+UPDATE $wpdb SET meta_value = REPLACE(meta_value, $from_url, $to_url) WHERE meta_key='enclosure'
+SQL command (UPDATE $wpdb SET meta_value = REPLACE(meta_value, $from_url, $to_url) WHERE meta_key='enclosure') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [3549, 3853, 3886, 7433, 4313, 3988, 17009, 17033]
+Added 0 SQL nodes. 0 out of 8 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.974807.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div class=\'wrap\'><h2>Blogger Blogs</h2><noscript>This feature requires Javascript but it seems to be disabled. Please enable Javascript and then reload this page. Don&#8217;t worry, you can turn it back off when you&#8217;re done.</noscript><table cellpadding=\'5px\'><thead><tr><td>Blog Name</td><td>Blog URL</td><td>Posts</td><td>Comments</td><td>The Magic Button</td></tr></thead>
+<div class=\'ind\' id=\'pind$i\'>&nbsp;</div><div id=\'pstat$i\' class=\'stat\'>$pdone/$blog_total_posts</div></table></div>'' cannot be parsed correct.
+HTML code '$'
+		<script type=\'text/javascript\'>
+		/* <![CDATA[ */
+			var strings = {cont:\'esc_js(__("Continue", "blogger-importer"))\',stop:\'esc_js(__("Importing...", "blogger-importer"))\',stopping:\'\',authors:\'esc_js(__("Set Authors", "blogger-importer"))\',nothing:\'esc_js(__("Nothing was imported. Had you already imported this blog?", "blogger-importer"))\'};
+			var blogs = {};
+			function blog(i, title, mode, status){
+				this.blog   = i;
+				this.mode   = mode;
+				this.title  = title;
+				this.status = status;
+				this.button = document.getElementById(\'submit\'+this.blog);
+			};
+			blog.prototype = {
+				start: function() {
+					this.cont = true;
+					this.kick();
+					this.check();
+				},
+				kick: function() {
+					++this.kicks;
+					var i = this.blog;
+					jQuery.post(\'admin.php?import=selective-blogger&noheader=true\',{blog:this.blog},function(text,result){blogs[i].kickd(text,result)});
+				},
+				check: function() {
+					++this.checks;
+					var i = this.blog;
+					jQuery.post(\'admin.php?import=selective-blogger&noheader=true&status=true\',{blog:this.blog},function(text,result){blogs[i].checkd(text,result)});
+				},
+				kickd: function(text, result) {
+					if ( result == \'error\' ) {
+						// TODO: exception handling
+						if ( this.cont )
+							setTimeout(\'blogs[\'+this.blog+\'].kick()\', 1000);
+					} else {
+						if ( text == \'done\' ) {
+							this.stop();
+							this.done();
+						} else if ( text == \'nothing\' ) {
+							this.stop();
+							this.nothing();
+						} else if ( text == \'continue\' ) {
+							this.kick();
+						} else if ( this.mode = \'stopped\' )
+							jQuery(this.button).attr(\'value\', strings.cont);
+					}
+					--this.kicks;
+				},
+				checkd: function(text, result) {
+					if ( result == \'error\' ) {
+						// TODO: exception handling
+					} else {
+						eval(\'this.status=\'+text);
+						jQuery(\'#pstat\'+this.blog).empty().append(this.status.p1+\'/\'+this.status.p2);
+						jQuery(\'#cstat\'+this.blog).empty().append(this.status.c1+\'/\'+this.status.c2);
+						this.update();
+						if ( this.cont || this.kicks > 0 )
+							setTimeout(\'blogs[\'+this.blog+\'].check()\', $interval);
+					}
+					--this.checks;
+				},
+				update: function() {
+					jQuery(\'#pind\'+this.blog).width(((this.status.p1>0&&this.status.p2>0)?(this.status.p1/this.status.p2*jQuery(\'#pind\'+this.blog).parent().width()):1)+\'px\');
+					jQuery(\'#cind\'+this.blog).width(((this.status.c1>0&&this.status.c2>0)?(this.status.c1/this.status.c2*jQuery(\'#cind\'+this.blog).parent().width()):1)+\'px\');
+				},
+				stop: function() {
+					this.cont = false;
+				},
+				done: function() {
+					this.mode = \'authors\';
+					jQuery(this.button).attr(\'value\', strings.authors);
+				},
+				nothing: function() {
+					this.mode = \'nothing\';
+					jQuery(this.button).remove();
+					alert(strings.nothing);
+				},
+				getauthors: function() {
+					if ( jQuery(\'div.wrap\').length > 1 )
+						jQuery(\'div.wrap\').gt(0).remove();
+					jQuery(\'div.wrap\').empty().append(\'<h2>esc_js(__("Final Step: Author Mapping", "blogger-importer"))</h2><h3>\' + this.title + \'</h3>\');
+					jQuery(\'div.wrap\').append(\'<p id="auth">esc_js(__("Preparing author mapping form...", "blogger-importer"))</p>\');
+					jQuery(\'p#auth\').load(\'index.php?import=selective-blogger&noheader=true&authors=1\',{blog:this.blog});
+				},
+				init: function() {
+					this.update();
+					var i = this.blog;
+					jQuery(this.button).bind(\'click\', function(){return blogs[i].click();});
+					this.kicks = 0;
+					this.checks = 0;
+				},
+				click: function() {
+					if ( this.mode == \'init\' || this.mode == \'stopped\' || this.mode == \'posts\' || this.mode == \'comments\' ) {
+						this.mode = \'started\';
+						this.start();
+						jQuery(this.button).attr(\'value\', strings.stop);
+					} else if ( this.mode == \'started\' ) {
+						return false; // let it run...
+						this.mode = \'stopped\';
+						this.stop();
+						if ( this.checks > 0 || this.kicks > 0 ) {
+							this.mode = \'stopping\';
+							jQuery(this.button).attr(\'value\', strings.stopping);
+						} else {
+							jQuery(this.button).attr(\'value\', strings.cont);
+						}
+					} else if ( this.mode == \'authors\' ) {
+						document.location = \'index.php?import=selective-blogger&authors=1&blog=\'+this.blog;
+						//this.mode = \'authors2\';
+						//this.getauthors();
+					}
+					return false;
+				}
+			};
+			esc_js($blog["title"])
+			jQuery.each(blogs, function(i, me){me.init();});
+		/* ]]> */
+		</script>
+'' cannot be parsed correct.
+HTML code '$'
+		<div class=\'wrap\'>
+		screen_icon()
+		<h2>Import Blogger</h2>
+		<p>Howdy! This importer allows you to import posts and comments from your Blogger account into your WordPress site.</p><p>To use this importer, you must have a Google account and an upgraded (New, was Beta) blog hosted on blogspot.com or a custom domain (not FTP).</p><p>The first thing you need to do is tell Blogger to let WordPress access your account. You will be sent back here after providing authorization.</p>
+			<form action=\'https://www.google.com/accounts/AuthSubRequest\' method=\'get\'>
+				<p class=\'submit\' style=\'text-align:left;\'>
+					<input type=\'submit\' class=\'button\' value=\'esc_attr__("Authorize", "blogger-importer")\' />
+					<input type=\'hidden\' name=\'scope\' value=\'http://www.blogger.com/feeds/\' />
+					<input type=\'hidden\' name=\'session\' value=\'1\' />
+					<input type=\'hidden\' name=\'secure\' value=\'0\' />
+					<input type=\'hidden\' name=\'next\' value=\'get_option("siteurl")/wp-admin/index.php?import=selective-blogger&amp;noheader=true\' />
+				</p>
+			</form>
+		</div>
+'' cannot be parsed correct.
+HTML code '$'<h2>$this_array_keys($_REQUEST["blog"])</h2><p>$message</p><pre>$this->_txrx($sock, $request)</pre></div>'' cannot be parsed correct.
+HTML code '$'<h1>Congratulations!</h1>'' cannot be parsed correct.
+HTML code '$'<p><a href=admin_url("edit.php?post_type=import")"Choose posts to import...</a></p>'' cannot be parsed correct.
+HTML code '$'<p>For security, click the link below to reset this importer.</p>'' cannot be parsed correct.
+HTML code '$'$result->get_error_message()'' cannot be parsed correct.
+HTML code '$'<div class=\'wrap\'><h2>Restart</h2><p>We have saved some information about your Blogger account in your WordPress database. Clearing this information will allow you to start over. Restarting will not affect any posts you have already imported. If you attempt to re-import a blog, duplicate posts and comments will be skipped.</p><form method=\'post\' action=\'?import=selective-blogger&amp;noheader=true\'><p class=\'submit\' style=\'text-align:left;\'><input type=\'submit\' class=\'button\' value=\'esc_attr__("Clear account information", "blogger-importer")\' name=\'restart\' /></p></form></div>'' cannot be parsed correct.
+HTML code '$'<input type="radio" name="post[$post][import_post_type]" value="$column" />'' cannot be parsed correct.
+HTML code '$'<input type="submit" class="button-secondary action" name="single_import[$post]" value="Import" /'' cannot be parsed correct.
+HTML code '$'<div class=\'error\'>$error</div>'' cannot be parsed correct.
+HTML code '$'screen_icon()'' cannot be parsed correct.
+HTML code '$'$blog_url'' cannot be parsed correct.
+HTML code '$'$blog_title'' cannot be parsed correct.
+HTML code '$'$blog_url'' cannot be parsed correct.
+HTML code '$'$this_$blog_url_posts_complete'' cannot be parsed correct.
+HTML code '$'$this_$blog_url_drafts_complete'' cannot be parsed correct.
+HTML code '$'$this_$blog_url_queued_complete'' cannot be parsed correct.
+HTML code '$'$this_$blog_url_pages_complete'' cannot be parsed correct.
+HTML code '$'<input type=\'submit\' value=\'Import this blog\' />'' cannot be parsed correct.
+HTML code '$'implode(", ", $columns){ width: 8em; }'' cannot be parsed correct.
+HTML code '$'<div class=\'error\'>$error</div>'' cannot be parsed correct.
+HTML code '$'screen_icon()'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'<p><strong>Sorry, there has been an error.</strong><br />'' cannot be parsed correct.
+HTML code '$'The file does not exist, please try again.</p>'' cannot be parsed correct.
+HTML code '$'<p><strong>Sorry, there has been an error.</strong><br />'' cannot be parsed correct.
+HTML code '$'$import_data->get_error_message()</p>'' cannot be parsed correct.
+HTML code '$'<p>All done! <a href=admin_url("edit.php?post_type=import")"Choose posts to import...</a></p>'' cannot be parsed correct.
+HTML code '$'<p><strong>Sorry, there has been an error.</strong><br />'' cannot be parsed correct.
+HTML code '$'wp_import_handle_upload()_error</p>'' cannot be parsed correct.
+HTML code '$'<p><strong>Sorry, there has been an error.</strong><br />'' cannot be parsed correct.
+HTML code '$'<p><strong>Sorry, there has been an error.</strong><br />'' cannot be parsed correct.
+HTML code '$'$import_data->get_error_message()</p>'' cannot be parsed correct.
+HTML code '$'admin_url("admin.php?import=selective_wp&amp;step=2")'' cannot be parsed correct.
+HTML code '$'$this_id'' cannot be parsed correct.
+HTML code '$' <strong>$author_author_display_name'' cannot be parsed correct.
+HTML code '$' ($author_author_login)'' cannot be parsed correct.
+HTML code '$' <input type="text" name="user_new[0]" value="" /><br /'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="imported_authors[0]" value="$author_author_login" /'' cannot be parsed correct.
+HTML code '$' $user_id->get_error_message()'' cannot be parsed correct.
+HTML code '$': $id->get_error_message()'' cannot be parsed correct.
+HTML code '$': $post_id->get_error_message()'' cannot be parsed correct.
+HTML code '$': $id->get_error_message()'' cannot be parsed correct.
+HTML code '$': $id->get_error_message()'' cannot be parsed correct.
+HTML code '$': $t->get_error_message()'' cannot be parsed correct.
+HTML code '$'<h2>Import WordPress</h2>'' cannot be parsed correct.
+HTML code '$'<p>Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site.</p>'' cannot be parsed correct.
+HTML code '$'<p>Choose a WXR (.xml) file to upload, then click Upload file and import.</p>'' cannot be parsed correct.
+HTML code '$'<div class=\'wrap\'>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="action_single" value="import_wp_selective_single" />'' cannot be parsed correct.
+HTML code '$'<style type="text/css">'' cannot be parsed correct.
+HTML code '$'</style>'' cannot be parsed correct.
+HTML code '$'			<table class="form-table">
+				<tr>
+					<th scope="row"><label for=\'email\'>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<div class="error"><p><strong>'' cannot be parsed correct.
+HTML code '$'</strong></p></div>'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'</strong><br />'' cannot be parsed correct.
+HTML code '$'<div style="margin-left:18px">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<div class="error"><p><strong>'' cannot be parsed correct.
+HTML code '$'</strong></p></div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div class="narrow">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:10.300327.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.057317.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 12 do_action/apply_filters calls and 21 add_action/add_filter calls. Now connecting do-add pairs.
+Added 1 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.572367.
+
+1 PHP_REACHES edges created
+1 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running HashDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running OpenSSLDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running PropertyDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running WordpressHashingFnDetector
+### Start running WP_UserDetector
+### Finish running UserInputDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running VariableDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+tumblr-importer.php:55
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:121
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:124
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+blogger-importer.php:770
+  - RETRIEVAL call to fread($sock, 8192).
+  - Data types: file 
+
+blogger-importer.php:768
+  - STORAGE call to fwrite($sock, $request).
+  - Data types: file 
+
+tumblr-importer.php:103
+  - object property '$this->email' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:103
+  - object property '$this->email' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:121
+  - object property '$this->email' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:129
+  - object property '$this->email' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:286
+  - object property '$this->email' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:365
+  - object property '$this->email' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:412
+  - object property '$this->email' of personal types {'email'} is found.
+  - Data types: email 
+
+tumblr-importer.php:565
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:618
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:619
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+tumblr-importer.php:759
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+wordpress-importer.php:349
+  - CRYPTOGRAPHY call to wp_create_user($_POST["user_new"][$i], wp_generate_password()) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string). Returns (int|WP_Error).
+  - Data types: user, user_meta 
+
+tumblr-importer.php:453
+  - API call to wp_remote_request($source, ["method" => "HEAD"]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+tumblr-importer.php:571
+  - API call to wp_remote_post($url, $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+tumblr-importer.php:628
+  - API call to wp_remote_post($url, $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+tumblr-importer.php:765
+  - API call to wp_remote_post($tumblrurl, $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+blogger-importer.php:62
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+blogger-importer.php:461
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+blogger-importer.php:519
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+blogger-importer.php:540
+  - RETRIEVAL call to get_option("gmt_offset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+blogger-importer.php:573
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+blogger-importer.php:631
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+blogger-importer.php:648
+  - RETRIEVAL call to wp_insert_comment($comment). Passed arguments: 0: $commentdata (array). Returns (int|false).
+blogger-importer.php:700
+  - RETRIEVAL call to get_users_of_blog(). Returns (array).
+blogger-importer.php:788
+  - RETRIEVAL call to get_option("blogger_importer") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+blogger-importer.php:835
+  - RETRIEVAL call to get_option("blogger_importer") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-wp-importer-cron.php:36
+  - RETRIEVAL call to get_option(get_class($this)) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+tumblr-importer.php:478
+  - RETRIEVAL call to get_post($id, ARRAY_A) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $output (string), 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post_meta, wp_post, post
+wordpress-importer.php:262
+  - RETRIEVAL call to get_option("default_role") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wordpress-importer.php:341
+  - RETRIEVAL call to get_userdata(intval($_POST["user_map"][$i])) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+wordpress-importer.php:670
+  - RETRIEVAL call to wp_insert_comment($comment). Passed arguments: 0: $commentdata (array). Returns (int|false). 
+
+blogger-importer.php:591
+  - STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+blogger-importer.php:599
+  - STORAGE call to add_post_meta($post_id, "blogger_blog", $this->blogs[$importing_blog]["host"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+blogger-importer.php:600
+  - STORAGE call to add_post_meta($post_id, "blogger_author", $author, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+blogger-importer.php:601
+  - STORAGE call to add_post_meta($post_id, "blogger_permalink", $entry->old_permalink, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+blogger-importer.php:604
+  - STORAGE call to add_post_meta($post_id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+blogger-importer.php:793
+  - STORAGE call to delete_option("blogger_importer") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+blogger-importer.php:866
+  - STORAGE call to update_option("blogger_importer", $vars) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+class-wp-importer-cron.php:84
+  - STORAGE call to update_option(get_class($this), $vars) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+selective-importers.php:90
+  - STORAGE call to wp_update_post(["ID" => $id, "post_type" => $postvals["import_post_type"]]). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+selective-importers.php:99
+  - STORAGE call to wp_update_post(["ID" => $id, "post_type" => $post[$id]["import_post_type"]]). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+tumblr-importer.php:228
+  - STORAGE call to delete_option(get_class($this)) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+tumblr-importer.php:320
+  - STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+tumblr-importer.php:327
+  - STORAGE call to add_post_meta($id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+tumblr-importer.php:330
+  - STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_permalink", $post["tumblr_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+tumblr-importer.php:331
+  - STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_id", $post["tumblr_id"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+tumblr-importer.php:337
+  - STORAGE call to wp_delete_post($id, true) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: post_meta, wp_post, post
+tumblr-importer.php:386
+  - STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+tumblr-importer.php:392
+  - STORAGE call to add_post_meta($post_id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+tumblr-importer.php:394
+  - STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_permalink", $post["tumblr_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+tumblr-importer.php:395
+  - STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_id", $post["tumblr_id"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+tumblr-importer.php:432
+  - STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+tumblr-importer.php:436
+  - STORAGE call to add_post_meta($post_id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+tumblr-importer.php:438
+  - STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_permalink", $post["tumblr_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+tumblr-importer.php:483
+  - STORAGE call to wp_update_post($attachment). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+tumblr-importer.php:506
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+tumblr-importer.php:520
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+tumblr-importer.php:532
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+tumblr-importer.php:545
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+wordpress-importer.php:164
+  - STORAGE call to delete_option($tax"_children") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+wordpress-importer.php:349
+  - STORAGE call to wp_create_user($_POST["user_new"][$i], wp_generate_password()) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string). Returns (int|WP_Error).
+  - Data types: user, user_meta
+wordpress-importer.php:359
+  - STORAGE call to wp_insert_user($user_data) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).
+  - Data types: user, user_meta
+wordpress-importer.php:593
+  - STORAGE call to wp_insert_post($postdata, true). Passed arguments: 0: $postarr (array), 1: $wp_error (bool). Returns (int|WP_Error).
+wordpress-importer.php:674
+  - STORAGE call to add_comment_meta($inserted_comments[$key], $meta["key"], $value) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: comment_meta
+wordpress-importer.php:701
+  - STORAGE call to add_post_meta($post_id, $key, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+wordpress-importer.php:711
+  - STORAGE call to add_post_meta($post_id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+wordpress-importer.php:945
+  - STORAGE call to update_post_meta($local_child_id, "_menu_item_menu_item_parent", $local_parent_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+wordpress-importer.php:975
+  - STORAGE call to update_post_meta($post_id, "_thumbnail_id", $new_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+blogger-importer.php:793
+  - DELETION call to delete_option("blogger_importer") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+tumblr-importer.php:228
+  - DELETION call to delete_option(get_class($this)) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+tumblr-importer.php:337
+  - DELETION call to wp_delete_post($id, true) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: post_meta, wp_post, post
+wordpress-importer.php:164
+  - DELETION call to delete_option($tax"_children") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+comment_meta
+	WordPressStorageDetector.add_comment_meta($inserted_comments[$key], $meta["key"], $value) - {'comment_meta'}
+email
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+file
+	PHPStorageDetector.fwrite($sock, $request) - {'file'}
+	PHPRetrievalDetector.fread($sock, 8192) - {'file'}
+none
+	WordPressStorageDetector.wp_insert_post($post) - set()
+	WordPressStorageDetector.wp_update_post(["ID" => $id, "post_type" => $postvals["import_post_type"]]) - set()
+	WordPressStorageDetector.wp_insert_post($post) - set()
+	WordPressStorageDetector.wp_insert_post($postdata, true) - set()
+	WordPressStorageDetector.wp_insert_post($post) - set()
+	WordPressStorageDetector.wp_update_post($post) - set()
+	WordPressStorageDetector.wp_update_post($post) - set()
+	WordPressStorageDetector.wp_update_post($attachment) - set()
+	WordPressStorageDetector.wp_insert_post($post) - set()
+	WordPressRetrievalDetector.wp_insert_comment($comment) - set()
+	WordPressStorageDetector.wp_update_post($post) - set()
+	WordPressRetrievalDetector.wp_insert_comment($comment) - set()
+	WordPressStorageDetector.wp_update_post(["ID" => $id, "post_type" => $post[$id]["import_post_type"]]) - set()
+	WordPressStorageDetector.wp_update_post($post) - set()
+	WordPressRetrievalDetector.get_users_of_blog() - set()
+option
+	WordPressStorageDetector.delete_option(get_class($this)) - {'option'}
+	WordPressStorageDetector.update_option(get_class($this), $vars) - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressRetrievalDetector.get_option("gmt_offset") - {'option'}
+	DeletionDetector.delete_option("blogger_importer") - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressStorageDetector.update_option("blogger_importer", $vars) - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressRetrievalDetector.get_option(get_class($this)) - {'option'}
+	WordPressStorageDetector.delete_option("blogger_importer") - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressRetrievalDetector.get_option("default_role") - {'option'}
+	DeletionDetector.delete_option(get_class($this)) - {'option'}
+	DeletionDetector.delete_option($tax"_children") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressStorageDetector.delete_option($tax"_children") - {'option'}
+	WordPressRetrievalDetector.get_option("blogger_importer") - {'option'}
+	WordPressRetrievalDetector.get_option("blogger_importer") - {'option'}
+post
+	DeletionDetector.wp_delete_post($id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressStorageDetector.wp_delete_post($id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressRetrievalDetector.get_post($id, ARRAY_A) - {'post_meta', 'wp_post', 'post'}
+post_meta
+	WordPressStorageDetector.add_post_meta($id, "_import_expiration", time(), true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "_import_expiration", time(), true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_id", $post["tumblr_id"]) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_permalink", $post["tumblr_url"]) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_permalink", $post["tumblr_url"]) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "_import_expiration", time(), true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "blogger_permalink", $entry->old_permalink, true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "_thumbnail_id", $new_id) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "_import_expiration", time(), true) - {'post_meta'}
+	DeletionDetector.wp_delete_post($id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressStorageDetector.add_post_meta($post_id, $key, $value) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($local_child_id, "_menu_item_menu_item_parent", $local_parent_id) - {'post_meta'}
+	WordPressStorageDetector.wp_delete_post($id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressStorageDetector.add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_id", $post["tumblr_id"]) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "_import_expiration", time(), true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($id, ARRAY_A) - {'post_meta', 'wp_post', 'post'}
+	WordPressStorageDetector.add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_permalink", $post["tumblr_url"]) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "blogger_blog", $this->blogs[$importing_blog]["host"], true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "blogger_author", $author, true) - {'post_meta'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+user
+	WordPressStorageDetector.wp_create_user($_POST["user_new"][$i], wp_generate_password()) - {'user', 'user_meta'}
+	WordPressStorageDetector.wp_insert_user($user_data) - {'user', 'user_meta'}
+	WordpressHashingFnDetector.wp_create_user($_POST["user_new"][$i], wp_generate_password()) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata(intval($_POST["user_map"][$i])) - {'user', 'user_meta'}
+user_meta
+	WordPressStorageDetector.wp_create_user($_POST["user_new"][$i], wp_generate_password()) - {'user', 'user_meta'}
+	WordPressStorageDetector.wp_insert_user($user_data) - {'user', 'user_meta'}
+	WordpressHashingFnDetector.wp_create_user($_POST["user_new"][$i], wp_generate_password()) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata(intval($_POST["user_map"][$i])) - {'user', 'user_meta'}
+wp_post
+	DeletionDetector.wp_delete_post($id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressStorageDetector.wp_delete_post($id, true) - {'post_meta', 'wp_post', 'post'}
+	WordPressRetrievalDetector.get_post($id, ARRAY_A) - {'post_meta', 'wp_post', 'post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:17.372567.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 70 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.412071.
+
+70 STORE_REACHES edges created
+70 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 104 nodes as PERSONAL
+In total, tainted 104 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 22 nodes as ENCRYPTED
+In total, tainted 22 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:03.014106.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:28.446776!
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+DELETION call to delete_option("blogger_importer") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option(get_class($this)) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to wp_delete_post($id, true) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+DELETION call to delete_option($tax"_children") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to fread($sock, 8192).,None,None
+STORAGE call to fwrite($sock, $request).,None,None
+object property '$this->email' of personal types {'email'} is found.,,None
+object property '$this->email' of personal types {'email'} is found.,,None
+object property '$this->email' of personal types {'email'} is found.,,None
+object property '$this->email' of personal types {'email'} is found.,,None
+object property '$this->email' of personal types {'email'} is found.,,None
+object property '$this->email' of personal types {'email'} is found.,,None
+object property '$this->email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+API call to wp_remote_request($source, ["method" => "HEAD"]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+API call to wp_remote_post($url, $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,,['http://www.tumblr.com/api/authenticate']
+API call to wp_remote_post($url, $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+API call to wp_remote_post($tumblrurl, $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("gmt_offset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_insert_comment($comment). Passed arguments: 0: $commentdata (array). Returns (int|false).,None,None
+RETRIEVAL call to get_users_of_blog(). Returns (array).,None,None
+RETRIEVAL call to get_option("blogger_importer") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blogger_importer") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(get_class($this)) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($id, ARRAY_A) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $output (string), 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("default_role") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_userdata(intval($_POST["user_map"][$i])) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to wp_insert_comment($comment). Passed arguments: 0: $commentdata (array). Returns (int|false).,None,None
+STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to add_post_meta($post_id, "blogger_blog", $this->blogs[$importing_blog]["host"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to add_post_meta($post_id, "blogger_author", $author, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to add_post_meta($post_id, "blogger_permalink", $entry->old_permalink, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to add_post_meta($post_id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to delete_option("blogger_importer") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("blogger_importer", $vars) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option(get_class($this), $vars) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_update_post(["ID" => $id, "post_type" => $postvals["import_post_type"]]). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post(["ID" => $id, "post_type" => $post[$id]["import_post_type"]]). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to delete_option(get_class($this)) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to add_post_meta($id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_permalink", $post["tumblr_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_id", $post["tumblr_id"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to wp_delete_post($id, true) alters data types {'post_meta', 'wp_post', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to add_post_meta($post_id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_permalink", $post["tumblr_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_id", $post["tumblr_id"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to add_post_meta($post_id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to add_post_meta($id, "tumblr_" . $this->blog[$url]["name"] . "_permalink", $post["tumblr_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to wp_update_post($attachment). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to delete_option($tax"_children") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to wp_create_user($_POST["user_new"][$i], wp_generate_password()) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string). Returns (int|WP_Error).,None,None
+STORAGE call to wp_insert_user($user_data) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).,None,None
+STORAGE call to wp_insert_post($postdata, true). Passed arguments: 0: $postarr (array), 1: $wp_error (bool). Returns (int|WP_Error).,None,None
+STORAGE call to add_comment_meta($inserted_comments[$key], $meta["key"], $value) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to add_post_meta($post_id, $key, $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to add_post_meta($post_id, "_import_expiration", time(), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to update_post_meta($local_child_id, "_menu_item_menu_item_parent", $local_parent_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "_thumbnail_id", $new_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+CRYPTOGRAPHY call to wp_create_user($_POST["user_new"][$i], wp_generate_password()) alters data types {'user', 'user_meta'}. Passed arguments: 0: $username (string), 1: $password (string). Returns (int|WP_Error).,hash,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] WP User info of types (['user', 'user_meta']) stored through WordPress function "wp_create_user($_POST["user_new"][$i], wp_generate_password())", found in file wordpress-importer.php at line 349. 
+
+[has_storage] WP User info of types (['user', 'user_meta']) stored through WordPress function "wp_insert_user($user_data)", found in file wordpress-importer.php at line 359. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party at "http://www.tumblr.com/api/authenticate" used with data types ['email'], found in file tumblr-importer.php at line 571 . Personal data flows from sources with nodeID [10562, 8003]  
+
+[third_party] Third party usage is CONFIRMED for data types ['email'] 
+
+[encryption] API call that sends PII to "http://www.tumblr.com/api/authenticate" uses http. PII is insecurely encrypted with []. Found in file tumblr-importer.php at line 571 
+
+[encryption] API call that sends PII to unknown url uses unknown protocol. PII is insecurely encrypted with []. Found in file tumblr-importer.php at line 765 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? True 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+No findings

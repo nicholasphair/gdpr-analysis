@@ -1,0 +1,914 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on pbp-newsticker
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:02.046201.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.954553.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 105 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.645090.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.464341.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 709 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.901882.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 26 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.136478.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.093366.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 433 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:09.717291.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 6715
+Added 5442 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 27898
+Added 21183 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:03.104882.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/data_source.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/pbpnewsticker.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/pbp-newsticker.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/data_sources/facebook.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/data_sources/free_form.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/data_sources/recent_comments.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/data_sources/recent_custom_post_types.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/data_sources/recent_posts.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/data_sources/rss.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pbp-newsticker/data_sources/twitter.class.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.032160.
+
+814 PHP_REACHES edges created
+26 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+5875 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+10000 PHP_REACHES edges created
+11000 PHP_REACHES edges created
+12000 PHP_REACHES edges created
+13000 PHP_REACHES edges created
+14000 PHP_REACHES edges created
+15000 PHP_REACHES edges created
+16000 PHP_REACHES edges created
+17000 PHP_REACHES edges created
+18000 PHP_REACHES edges created
+19000 PHP_REACHES edges created
+20000 PHP_REACHES edges created
+21000 PHP_REACHES edges created
+21183 PHP_REACHES edges created
+27898 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 2321 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.084005.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 6 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:05.093802.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 139 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:05.507830.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 230 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.202082.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.377957.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.143827.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.042950.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.040340.
+
+6 CALLS edges created
+369 PHP_REACHES edges created
+375 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 259 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.138055.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.153396.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this_instance_count'' cannot be parsed correct.
+HTML code '$'$this->get_source_title()'' cannot be parsed correct.
+HTML code '$'$this->display_setting($setting, $pbpNewsticker)'' cannot be parsed correct.
+HTML code '$'$this->display_custom_formatting($pbpNewsticker)'' cannot be parsed correct.
+HTML code '$'get_class($item)'' cannot be parsed correct.
+HTML code '$'$newsticker->display_form()'' cannot be parsed correct.
+HTML code '$'$newsticker->display_form()'' cannot be parsed correct.
+HTML code '$'errorupdated'' cannot be parsed correct.
+HTML code '$'admin_url("options-general.php?page=pbpNewsticker&action=create")'' cannot be parsed correct.
+HTML code '$'$newsticker_id'' cannot be parsed correct.
+HTML code '$'$newsticker_internalTitlesprintf("<em>%s</em>", __("None set", "pbpNews"))'' cannot be parsed correct.
+HTML code '$'$newsticker_style'' cannot be parsed correct.
+HTML code '$'$source->get_source_title()'' cannot be parsed correct.
+HTML code '$'admin_url("options-general.php?page=pbpNewsticker&action=edit&ticker_id=" . $newsticker_id)'' cannot be parsed correct.
+HTML code '$'$data_source->display_form($newsticker, $_POST["instance_id"])'' cannot be parsed correct.
+HTML code '$'errorupdated'' cannot be parsed correct.
+HTML code '$'admin_url("options-general.php?page=pbpNewsticker")'' cannot be parsed correct.
+HTML code '$'admin_url("options-general.php?page=pbpNewsticker")'' cannot be parsed correct.
+HTML code '$'$this_ticker_id'' cannot be parsed correct.
+HTML code '$'$this->get_value("internalTitle")'' cannot be parsed correct.
+HTML code '$'$this->get_value("tickerTitle")'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'admin_url("options-general.php?page=pbpNewsticker&action=delete")'' cannot be parsed correct.
+HTML code '$'$newsticker_id'' cannot be parsed correct.
+HTML code '$'admin_url("options-general.php?page=pbpNewsticker&action=create")'' cannot be parsed correct.
+HTML code '$'admin_url("options-general.php?page=pbpNewsticker&action=skin_updated")'' cannot be parsed correct.
+HTML code '$'$src'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'$this->get_value("timeAgoFormat")'' cannot be parsed correct.
+HTML code '$'$this->get_value("dateFormat")'' cannot be parsed correct.
+HTML code '$'$this->get_value("fadeFadeOutSpeed")'' cannot be parsed correct.
+HTML code '$'$this->get_value("fadeFadeInSpeed")'' cannot be parsed correct.
+HTML code '$'$this->get_value("fadeTransitionSpeed")'' cannot be parsed correct.
+HTML code '$'$this->get_value("revealLetterRevealSpeed")'' cannot be parsed correct.
+HTML code '$'$this->get_value("revealTransitionSpeed")'' cannot be parsed correct.
+HTML code '$'$this->get_value("scrollScrollSpeed")'' cannot be parsed correct.
+HTML code '$'$this->get_value("scrollSlideSpeed")'' cannot be parsed correct.
+HTML code '$'$this->get_value("scrollSlideEasing")'' cannot be parsed correct.
+HTML code '$'$source->get_source_id()'' cannot be parsed correct.
+HTML code '$'$source->get_source_title()'' cannot be parsed correct.
+HTML code '$'$source->get_source_id()'' cannot be parsed correct.
+HTML code '$'$source->get_source_name()'' cannot be parsed correct.
+HTML code '$'$source->get_source_assist()'' cannot be parsed correct.
+HTML code '$'newsticker_'' cannot be parsed correct.
+HTML code '$'$setting_0'' cannot be parsed correct.
+HTML code '$'$setting_1'' cannot be parsed correct.
+HTML code '$'newsticker_'' cannot be parsed correct.
+HTML code '$'$output'' cannot be parsed correct.
+HTML code '$'ob_get_contents()'' cannot be parsed correct.
+HTML code '$'$class_name'' cannot be parsed correct.
+HTML code '$'$this_ticker_id'' cannot be parsed correct.
+HTML code '$'$source->get_extra_instance_text()'' cannot be parsed correct.
+HTML code '$'$this_ticker_id'' cannot be parsed correct.
+HTML code '$'htmlspecialchars(sprintf("<?php pbpNewsticker_display( %d ) ?>", $this->ticker_id))'' cannot be parsed correct.
+HTML code '$'hidden'' cannot be parsed correct.
+HTML code '$' pbpNews_data_source_settings" data-instance="'' cannot be parsed correct.
+HTML code '$'"> 
+            <div class="title_wrap">
+                <h4>'' cannot be parsed correct.
+HTML code '$'</h4>
+                '' cannot be parsed correct.
+HTML code '$'</a>
+                '' cannot be parsed correct.
+HTML code '$'            </div>    
+            '' cannot be parsed correct.
+HTML code '$'                </div>
+            '' cannot be parsed correct.
+HTML code '$'            
+        '' cannot be parsed correct.
+HTML code '$'            </div>                
+        '' cannot be parsed correct.
+HTML code '$'        </div>
+
+        '' cannot be parsed correct.
+HTML code '$'</h2>        
+            
+            '' cannot be parsed correct.
+HTML code '$'
+            '' cannot be parsed correct.
+HTML code '$'                '' cannot be parsed correct.
+HTML code '$'            
+            '' cannot be parsed correct.
+HTML code '$'                '' cannot be parsed correct.
+HTML code '$'                                
+            '' cannot be parsed correct.
+HTML code '$'">
+                        <p>                            
+                       '' cannot be parsed correct.
+HTML code '$'                        </p>
+                    </div>
+                '' cannot be parsed correct.
+HTML code '$'
+                '' cannot be parsed correct.
+HTML code '$'    
+
+                '' cannot be parsed correct.
+HTML code '$'</th>
+                                <th class="manage-column">'' cannot be parsed correct.
+HTML code '$'</th>
+                                <th class="manage-column">'' cannot be parsed correct.
+HTML code '$'</th>
+                                <th class="manage-column">'' cannot be parsed correct.
+HTML code '$'</th>
+                                <th colspan=2></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    <a href="'' cannot be parsed correct.
+HTML code '$'" class="button-primary">'' cannot be parsed correct.
+HTML code '$'</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                        '' cannot be parsed correct.
+HTML code '$'</td>
+                                <td>'' cannot be parsed correct.
+HTML code '$'</td>
+                                <td>'' cannot be parsed correct.
+HTML code '$'</td>
+                                <td>
+                                    '' cannot be parsed correct.
+HTML code '$'                                            <li>'' cannot be parsed correct.
+HTML code '$'</li>                                    
+                                        '' cannot be parsed correct.
+HTML code '$'                                    '' cannot be parsed correct.
+HTML code '$'                                    </ul>
+                                    '' cannot be parsed correct.
+HTML code '$'                                
+                                </td>
+                                <td>
+                                    <a href='' cannot be parsed correct.
+HTML code '$'">
+                <p>                            
+               '' cannot be parsed correct.
+HTML code '$'                </p>
+            </div>
+        '' cannot be parsed correct.
+HTML code '$'
+        <p><a href='' cannot be parsed correct.
+HTML code '$'" class="button-secondary">'' cannot be parsed correct.
+HTML code '$'</a></p>
+
+        '' cannot be parsed correct.
+HTML code '$'</h3>
+                </div>
+                '' cannot be parsed correct.
+HTML code '$'                
+            </div>            
+
+        '' cannot be parsed correct.
+HTML code '$'
+        <div class="title_wrap">
+            <h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+        </div>
+
+        <form method="post" action="'' cannot be parsed correct.
+HTML code '$'" class="newsticker_form">
+            '' cannot be parsed correct.
+HTML code '$'            '' cannot be parsed correct.
+HTML code '$'" />
+           '' cannot be parsed correct.
+HTML code '$'            
+            <h4>'' cannot be parsed correct.
+HTML code '$'</h4>
+            <div>
+                <label for="pbpNews_internal_title">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="text" id="pbpNews_internal_title" name="internalTitle" value="'' cannot be parsed correct.
+HTML code '$'" />
+                <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>              
+            </div>               
+            <div>
+                <label for="pbpNews_ticker_title">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="text" id="pbpNews_ticker_title" name="tickerTitle" value="'' cannot be parsed correct.
+HTML code '$'" />
+                <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>              
+            </div>          
+            <div>
+                '' cannot be parsed correct.
+HTML code '$'                <label for="pbpNews_style">'' cannot be parsed correct.
+HTML code '$'</label>
+                <select id="pbpNews_style" name="style">
+                    <option value="fade" '' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>
+                    <option value="scroll" '' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>
+                    <option value="reveal" '' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>
+                </select>
+                <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+            </div>
+            <div>
+                <label for="pbpNews_show_controls">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="checkbox" name="showControls" id="pbpNews_show_controls" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$' />
+                <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+            </div>
+            <div>
+                <label for="pbpNews_autostart">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="checkbox" name="autoStart" id="pbpNews_autostart" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$' />
+                <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+            </div>
+            <div>
+                '' cannot be parsed correct.
+HTML code '$'                <label for="pbpNews_sort_by">'' cannot be parsed correct.
+HTML code '$'</label>
+                <select id="pbpNews_sort_by" name="sortBy">
+                    <option value="timestamp" '' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>
+                    <option value="timestamp_reverse" '' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'" class="button">'' cannot be parsed correct.
+HTML code '$'</a>
+                                </td>
+                                <td>
+                                    <form method="post" action="'' cannot be parsed correct.
+HTML code '$'">
+                                       '' cannot be parsed correct.
+HTML code '$'                                        <input type="hidden" name="ticker_id" value="'' cannot be parsed correct.
+HTML code '$'"  />    
+                                        <button class="button" name="delete_pbpNewsticker">'' cannot be parsed correct.
+HTML code '$'</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        '' cannot be parsed correct.
+HTML code '$'                        </tbody>
+                    </table>
+
+                '' cannot be parsed correct.
+HTML code '$'</p>
+                <p><a href='' cannot be parsed correct.
+HTML code '$'" class="button-primary">'' cannot be parsed correct.
+HTML code '$'</a></p>
+
+                '' cannot be parsed correct.
+HTML code '$'
+				'' cannot be parsed correct.
+HTML code '$'                '' cannot be parsed correct.
+HTML code '$'            	'' cannot be parsed correct.
+HTML code '$'								
+                <section class="general-options">
+
+                    <h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+					<h4>Please select Skin for showing attractive design of front-end. </h4>
+                    <form method="post" action="'' cannot be parsed correct.
+HTML code '$'">                        
+                       '' cannot be parsed correct.
+HTML code '$'                        <label for="pbpNewsticker_skin">'' cannot be parsed correct.
+HTML code '$'</label>
+                        <select id="pbpNewsticker_skin" name="skin">
+                            '' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>
+                            '' cannot be parsed correct.
+HTML code '$'                        </select>
+
+                        <footer class="button-container">
+                            <button class="button" name="save_pbpNewsticker_skin">'' cannot be parsed correct.
+HTML code '$'</button>
+                        </footer>
+                    </form>
+					
+                </section>
+
+            '' cannot be parsed correct.
+HTML code '$'			
+			<span style="color:red; font-size:15px;"><br/> </br>We will publish "PBP Newsticker PRO" with some exclusive feature recently. Please wait for us. Thank you.</span>
+        </div>            
+        '' cannot be parsed correct.
+HTML code '$'</option>
+                    <option value="random" '' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>
+                </select>
+                <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+            </div>
+            <div>
+                <label for="pbpNews_pause_on_hover">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="checkbox" id="pbpNews_pause_on_hover" name="pauseOnHover" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'</span>
+            </div>
+<!--
+            <h4>'' cannot be parsed correct.
+HTML code '$'</h4>
+            <div>
+                <label for="pbpNews_time_ago_format">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="text" name="timeAgoFormat" id="pbpNews_time_ago_format" value="'' cannot be parsed correct.
+HTML code '$'"  />
+                <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+            </div>
+            <div>
+                <label for="pbpNews_date_format">'' cannot be parsed correct.
+HTML code '$'</label>
+                <input type="text" name="dateFormat" id="pbpNews_date_format" value="'' cannot be parsed correct.
+HTML code '$'" />
+                <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+            </div>
+-->
+
+            <div class="hidden pbpNews_fade_settings pbpNews_animation_settings">                
+                <h4>'' cannot be parsed correct.
+HTML code '$'</h4>                
+                <div>
+                    <label for="pbpNews_fade_fade_out_speed">'' cannot be parsed correct.
+HTML code '$'</label>
+                    <input type="number" id="pbpNews_fade_fade_out_speed" name="fadeFadeOutSpeed" value="'' cannot be parsed correct.
+HTML code '$'" />
+                    <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+                </div>
+                
+                <div>
+                    <label for="pbpNews_fade_fade_in_speed">'' cannot be parsed correct.
+HTML code '$'</label>
+                    <input type="number" id="pbpNews_fade_fade_in_speed" name="fadeFadeInSpeed" value="'' cannot be parsed correct.
+HTML code '$'" />
+                    <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+                </div>
+                
+                <div>
+                    <label for="pbpNews_fade_transition_speed">'' cannot be parsed correct.
+HTML code '$'</label>
+                    <input type="number" id="pbpNews_fade_transition_speed" name="fadeTransitionSpeed" value="'' cannot be parsed correct.
+HTML code '$'" />
+                    <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+                </div>                
+            </div>
+
+            <div class="hidden pbpNews_reveal_settings pbpNews_animation_settings">
+                <h4>'' cannot be parsed correct.
+HTML code '$'</h4>
+
+                <div>
+                    <label for="pbpNews_reveal_letter_reveal_speed">'' cannot be parsed correct.
+HTML code '$'</label>
+                    <input type="number" id="pbpNews_reveal_letter_reveal_speed" name="revealLetterRevealSpeed" value="'' cannot be parsed correct.
+HTML code '$'" />
+                    <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>                    
+                </div>
+                
+                <div>
+                    <label for="pbpNews_reveal_transition_speed">'' cannot be parsed correct.
+HTML code '$'</label>
+                    <input type="number" id="pbpNews_reveal_transition_speed" name="revealTransitionSpeed" value="'' cannot be parsed correct.
+HTML code '$'" />
+                    <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>                    
+                </div>                
+            </div>
+
+            <div class="hidden pbpNews_scroll_settings pbpNews_animation_settings">
+                <h4>'' cannot be parsed correct.
+HTML code '$'</h4>
+                
+                <div>
+                    <label for="pbpNews_scroll_scroll_speed">'' cannot be parsed correct.
+HTML code '$'</label>
+                    <input type="text" id="pbpNews_scroll_scroll_speed" name="scrollScrollSpeed" value="'' cannot be parsed correct.
+HTML code '$'" />
+                    <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>                        
+                </div>
+                <div>
+                    <label for="pbpNews_scroll_slide_speed">'' cannot be parsed correct.
+HTML code '$'</label>
+                    <input type="text" id="pbpNews_scroll_slide_speed" name="scrollSlideSpeed" value="'' cannot be parsed correct.
+HTML code '$'" />
+                    <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+                </div>
+                <div>
+                    <label for="pbpNews_scroll_slide_easing">'' cannot be parsed correct.
+HTML code '$'</label>
+                    <input type="text" id="pbpNews_scroll_slide_easing" name="scrollSlideEasing" value="'' cannot be parsed correct.
+HTML code '$'" />
+                    <span class="pbpNews_assist">'' cannot be parsed correct.
+HTML code '$'</span>
+                </div>                
+            </div>
+           
+            <h4>'' cannot be parsed correct.
+HTML code '$'</h4>
+            
+            '' cannot be parsed correct.
+HTML code '$'            
+                <div class="pbpNews_data_source">
+                    <label for="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</label>                    
+                    <input type="checkbox" id="'' cannot be parsed correct.
+HTML code '$'" class="enable" name="data_sources['' cannot be parsed correct.
+HTML code '$'][enable]"'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$' />
+                    '' cannot be parsed correct.
+HTML code '$'</span>
+                    '' cannot be parsed correct.
+HTML code '$'
+                    '' cannot be parsed correct.
+HTML code '$' 
+                        '' cannot be parsed correct.
+HTML code '$'                    '' cannot be parsed correct.
+HTML code '$'                    '' cannot be parsed correct.
+HTML code '$'
+                    '' cannot be parsed correct.
+HTML code '$'\').newsticker({
+            '' cannot be parsed correct.
+HTML code '$'\' : '' cannot be parsed correct.
+HTML code '$','' cannot be parsed correct.
+HTML code '$'            '' cannot be parsed correct.
+HTML code '$'            
+        });
+    });    
+})( jQuery );
+</script>
+<ul class="newsticker" id="'' cannot be parsed correct.
+HTML code '$'">
+   '' cannot be parsed correct.
+HTML code '$'        <li>'' cannot be parsed correct.
+HTML code '$'</li>
+    '' cannot be parsed correct.
+HTML code '$'</ul>
+        '' cannot be parsed correct.
+HTML code '$'" data-ticker_id="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+                    '' cannot be parsed correct.
+HTML code '$'                        
+                </div>
+
+            '' cannot be parsed correct.
+HTML code '$'            
+            <div class="button-container">
+                <input type="submit" value="'' cannot be parsed correct.
+HTML code '$'" class="button-primary" name="save_pbpNewsticker" />
+            </div>
+
+        </form>
+
+        '' cannot be parsed correct.
+HTML code '$'</h3>
+            </div>
+            <h4>'' cannot be parsed correct.
+HTML code '$'</h4>
+            <code>[newsticker id='' cannot be parsed correct.
+HTML code '$']</code>
+            <h4>'' cannot be parsed correct.
+HTML code '$'</h4>
+            <code>'' cannot be parsed correct.
+HTML code '$'</code>
+
+        '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:18.217206.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.053902.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 19 do_action/apply_filters calls and 17 add_action/add_filter calls. Now connecting do-add pairs.
+Added 19 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:02.162910.
+
+19 PHP_REACHES edges created
+19 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IBMDb2Detector
+### Start running MongoDetector
+### Finish running IngresDetector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running HashDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running ArrayElementDetector
+### Start running OpenSSLDetector
+### Finish running MsqlDetector
+### Start running ParadoxDetector
+### Finish running MongoDbDetector
+### Start running PasswordHashingDetector
+### Finish running Oci8Detector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ParadoxDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PasswordHashingDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PhpVarDetector
+### Start running SqliteDetector
+### Finish running Sqlite3Detector
+### Start running SqlServerDetector
+### Finish running PostgreSQLDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SybaseDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running UserInputDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running maxdbDetector
+### Finish running MySQLiDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+data_sources/facebook.class.php:189
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta 
+
+data_sources/facebook.class.php:189
+  - API call to wp_remote_get("https://graph.facebook.com/"$username). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote
+data_sources/twitter.class.php:123
+  - API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote 
+
+data_sources/facebook.class.php:113
+  - RETRIEVAL call to get_transient($transient_key) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+data_sources/rss.class.php:73
+  - RETRIEVAL call to get_transient($transient_key) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+data_sources/twitter.class.php:117
+  - RETRIEVAL call to get_transient($transient_key) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+pbp-newsticker.php:63
+  - RETRIEVAL call to get_option("pbpNewsticker") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+pbp-newsticker.php:131
+  - RETRIEVAL call to get_option("pbpNewsticker") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+data_source.class.php:123
+  - STORAGE call to delete_transient($transient_key . "_" . $instance) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+data_sources/facebook.class.php:133
+  - STORAGE call to set_transient($transient_key, $items, 60 * $cache_time) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+data_sources/rss.class.php:93
+  - STORAGE call to set_transient($transient_key, $items, 60 * $cache_time) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+data_sources/twitter.class.php:138
+  - STORAGE call to set_transient($transient_key, $tweets, 60 * $cache_time) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+pbp-newsticker.php:110
+  - STORAGE call to delete_option("pbpNewsticker") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+pbp-newsticker.php:243
+  - STORAGE call to update_option("pbpNewsticker", $settings) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+pbpnewsticker.class.php:91
+  - STORAGE call to update_option("pbpNewsticker", $settings) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+pbpnewsticker.class.php:109
+  - STORAGE call to update_option("pbpNewsticker", $this->settings) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+data_sources/recent_custom_post_types.class.php:110
+  - WP_User object is created.
+  - Data types: user, user_meta
+data_sources/recent_posts.class.php:163
+  - WP_User object is created.
+  - Data types: user, user_meta 
+
+pbp-newsticker.php:110
+  - DELETION call to delete_option("pbpNewsticker") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("pbpNewsticker") - {'option'}
+	DeletionDetector.delete_option("pbpNewsticker") - {'option'}
+	WordPressStorageDetector.update_option("pbpNewsticker", $settings) - {'option'}
+	WordPressStorageDetector.delete_option("pbpNewsticker") - {'option'}
+	WordPressStorageDetector.update_option("pbpNewsticker", $settings) - {'option'}
+	WordPressStorageDetector.update_option("pbpNewsticker", $this->settings) - {'option'}
+	WordPressRetrievalDetector.get_option("pbpNewsticker") - {'option'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+site
+	WordPressStorageDetector.set_transient($transient_key, $items, 60 * $cache_time) - {'site'}
+	WordPressRetrievalDetector.get_transient($transient_key) - {'site'}
+	WordPressStorageDetector.set_transient($transient_key, $tweets, 60 * $cache_time) - {'site'}
+	WordPressRetrievalDetector.get_transient($transient_key) - {'site'}
+	WordPressStorageDetector.delete_transient($transient_key . "_" . $instance) - {'site'}
+	WordPressRetrievalDetector.get_transient($transient_key) - {'site'}
+	WordPressStorageDetector.set_transient($transient_key, $items, 60 * $cache_time) - {'site'}
+user
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	WP_UserDetector.WP_User($post->post_author) - {'user', 'user_meta'}
+	WP_UserDetector.WP_User($post->post_author) - {'user', 'user_meta'}
+user_meta
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	WP_UserDetector.WP_User($post->post_author) - {'user', 'user_meta'}
+	WP_UserDetector.WP_User($post->post_author) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.790652.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 20 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.123432.
+
+20 STORE_REACHES edges created
+20 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 26 nodes as PERSONAL
+In total, tainted 26 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.634917.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:25.343385!
+DELETION call to delete_option("pbpNewsticker") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+WP_User object is created.,,None
+WP_User object is created.,,None
+API call to wp_remote_get("https://graph.facebook.com/"$username). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,[]
+API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).,,['http://api.twitter.com/1/statuses/user_timeline.json?']
+RETRIEVAL call to get_transient($transient_key) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient($transient_key) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient($transient_key) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pbpNewsticker") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pbpNewsticker") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to delete_transient($transient_key . "_" . $instance) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to set_transient($transient_key, $items, 60 * $cache_time) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to set_transient($transient_key, $items, 60 * $cache_time) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to set_transient($transient_key, $tweets, 60 * $cache_time) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to delete_option("pbpNewsticker") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("pbpNewsticker", $settings) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pbpNewsticker", $this->settings) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pbpNewsticker", $settings) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[encryption] API call that sends PII to unknown url uses unknown protocol. PII is insecurely encrypted with []. Found in file data_sources/facebook.class.php at line 189 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+No findings

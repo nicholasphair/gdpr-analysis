@@ -1,0 +1,910 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on bbp-move-topics
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.312896.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.885212.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.193069.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.548749.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 285 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.936530.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.626664.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.091900.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 128 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.397795.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2333
+Added 1920 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2333
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.123096.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bbp-move-topics/bbp-move-topics.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bbp-move-topics/includes/posttotopic.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.361173.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2333 PHP_REACHES edges created
+2333 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 808 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.090860.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.714599.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 10 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.639577.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 8 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.186546.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.176749.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.114204.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006850.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035590.
+
+18 PHP_REACHES edges created
+18 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 10 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.136373.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+6 SQL operations to process.
+SELECT distinct ID FROM $wpdb as posts, $wpdb WHERE post_parent = $_POST_sourceforum AND post_status = 0 AND post_type = '%s' AND ID = post_id AND NOT EXISTS ( select * FROM $wpdb where meta_key = '_bbpmt_zapped' and post_id=posts.ID) ORDER BY ID DESC LIMIT %d
+SELECT distinct ID FROM $wpdb as posts, $wpdb WHERE post_parent = $_POST_sourceforum AND post_status = 0 AND post_type = 'topic' AND ID = post_id AND NOT EXISTS ( select * FROM $wpdb where meta_key = '_bbpmt_zapped' and post_id=posts.ID) ORDER BY ID DESC LIMIT %d
+SELECT distinct ID FROM $wpdb as posts, $wpdb WHERE post_parent = $_POST_sourceforum AND post_status = 0 AND post_type = 'topic' AND ID = post_id AND NOT EXISTS ( select * FROM $wpdb where meta_key = '_bbpmt_zapped' and post_id=posts.ID) ORDER B15ID DESC LIMIT %d
+SELECT distinct ID FROM $wpdb as posts, $wpdb WHERE post_parent = $_POST_sourceforum AND post_status = 0 AND post_type = 'topic' AND ID = post_id AND NOT EXISTS ( select * FROM $wpdb where meta_key = '_bbpmt_zapped' and post_id=posts.ID) ORDER B15ID DESC LIMIT %d
+SQL command (SELECT distinct ID FROM $wpdb as posts, $wpdb WHERE post_parent = $_POST_sourceforum AND post_status = 0 AND post_type = 'topic' AND ID = post_id AND NOT EXISTS ( select * FROM $wpdb where meta_key = '_bbpmt_zapped' and post_id=posts.ID) ORDER B15ID DESC LIMIT %d) cannot be parsed correct.
+SELECT post_title, post_content, post_date FROM $wpdb WHERE id = $topic_id
+SELECT post_title, post_content, post_date FROM $wpdb WHERE id = $topic_id
+SQL command (SELECT post_title, post_content, post_date FROM $wpdb WHERE id = $topic_id) cannot be parsed correct.
+SELECT ID, post_title, post_content, meta_value, post_date FROM $wpdb, $wpdb WHERE post_status = 0 AND ID = post_id AND meta_key = '_bbpmt_zapped' ORDER BY post_date DESC LIMIT 5
+SELECT ID, post_title, post_content, meta_value, post_date FROM $wpdb, $wpdb WHERE post_status = 0 AND ID = post_id AND meta_key = '_bbpmt_zapped' ORDER BY post_date DESC LIMIT 5
+SQL command (SELECT ID, post_title, post_content, meta_value, post_date FROM $wpdb, $wpdb WHERE post_status = 0 AND ID = post_id AND meta_key = '_bbpmt_zapped' ORDER BY post_date DESC LIMIT 5) cannot be parsed correct.
+SELECT ID, post_title, post_content, meta_value, post_date FROM $wpdb, $wpdb WHERE post_status = 0 AND ID = post_id AND meta_key = '_bbpmt_zapped' ORDER BY meta_value DESC LIMIT 5
+SELECT ID, post_title, post_content, meta_value, post_date FROM $wpdb, $wpdb WHERE post_status = 0 AND ID = post_id AND meta_key = '_bbpmt_zapped' ORDER BY meta_value DESC LIMIT 5
+SQL command (SELECT ID, post_title, post_content, meta_value, post_date FROM $wpdb, $wpdb WHERE post_status = 0 AND ID = post_id AND meta_key = '_bbpmt_zapped' ORDER BY meta_value DESC LIMIT 5) cannot be parsed correct.
+SELECT ID FROM $wpdb WHERE post_parent = $moveit AND post_type = 'reply'
+SELECT ID FROM $wpdb WHERE post_parent = $moveit AND post_type = 'reply'
+SQL command (SELECT ID FROM $wpdb WHERE post_parent = $moveit AND post_type = 'reply') cannot be parsed correct.
+UPDATE $wpdb SET post_parent=$_POST_destinationforum WHERE ID=%d
+UPDATE $wpdb SET post_parent=$_POST_destinationforum WHERE ID=$moveit
+UPDATE $wpdb SET post_parent=$_POST_destinationforum WHERE ID=$moveit
+SQL command (UPDATE $wpdb SET post_parent=$_POST_destinationforum WHERE ID=$moveit) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [385, 444, 1226, 1256, 775, 694]
+Added 0 SQL nodes. 0 out of 6 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.553804.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<h2>bbp_get_forum_title($sourceforum)</h2>'' cannot be parsed correct.
+HTML code '$'<td><input type="checkbox" class="bbpmtcbgroup" id="bbpmtcb_$topic_id" name="bbpmtcb[]" value="$topic_id"></td'' cannot be parsed correct.
+HTML code '$'<td><b>$acontent_0_post_title ($topic_id)</b> - $wpdb->get_results($wpdb->prepare("SELECT post_title, post_content, post_date FROM "$wpdb->posts" WHERE id = %d", $topic_id))_0_post_date<br>removehtml_and_cutwords($acontent[0]->post_content, $limitwords)</td>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="sourceforum" value="$_POST_sourceforum" /'' cannot be parsed correct.
+HTML code '$'Forum : bbp_get_forum_title($_POST["sourceforum"])<br><br>'' cannot be parsed correct.
+HTML code '$'bbp_get_topic_title($zapit) HIDDEN.<br>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="sourceforum" value="$_POST_sourceforum" /'' cannot be parsed correct.
+HTML code '$'Forum : bbp_get_forum_title($_POST["sourceforum"])<br><br>'' cannot be parsed correct.
+HTML code '$'bbp_get_topic_title($zapit) UNHIDDEN.<br>'' cannot be parsed correct.
+HTML code '$'<h2>Hidden topics ordered by hidden date</h2>'' cannot be parsed correct.
+HTML code '$'<td><input type="checkbox" class="bbpmtcbgroup" id="bbpmtcb_$topic_details" name="bbpmtcb[]" value="$topic_details"></td'' cannot be parsed correct.
+HTML code '$'<td><b>$topic_details ($topic_details)</b><br>removehtml_and_cutwords($topic_details->post_content, $limitwords)</td>'' cannot be parsed correct.
+HTML code '$'<td nowrap>$topic_details</td>'' cannot be parsed correct.
+HTML code '$'<td nowrap>$topic_details</td>'' cannot be parsed correct.
+HTML code '$'<option value=$forumarray_0"$forumarray_1</option>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="sourceforum" value="$_POST_sourceforum" /'' cannot be parsed correct.
+HTML code '$'Source Forum : bbp_get_forum_title($sourceforum)<br>'' cannot be parsed correct.
+HTML code '$'Destination Forum : bbp_get_forum_title($destinationforum)<br><br>'' cannot be parsed correct.
+HTML code '$'<p>DB update error for topic #$moveit !</p>'' cannot be parsed correct.
+HTML code '$'bbp_get_topic_title($moveit) (#$moveit) - MOVED.<br>'' cannot be parsed correct.
+HTML code '$'<input type="text" name="bbpmt-ptot-finalcomment-text" id="bbpmt-ptot-finalcomment-text" value="get_option("bbpmt-ptot-finalcomment-text", false)" size="80" />'' cannot be parsed correct.
+HTML code '$'<input type="text" name="bbpmt-ptot-cuttopic-nbr" id="bbpmt-ptot-cutwords-nbr" value="get_option("bbpmt-ptot-cuttopic-nbr", false)" size="3" />'' cannot be parsed correct.
+HTML code '$'<option value=$forum_info_0"$forum_info_1</option>'' cannot be parsed correct.
+HTML code '$'<div class="updated"><p>sprintf(_n("Post converted.", "%s posts converted.", $_REQUEST["converted"]), number_format_i18n($_REQUEST["converted"]))</p></div>'' cannot be parsed correct.
+HTML code '$'<input type="text" name="bbpmt-ptot-cutcomment-nbr" id="bbpmt-ptot-cutwords-nbr" value="get_option("bbpmt-ptot-cutcomment-nbr", false)" size="3" />'' cannot be parsed correct.
+HTML code '$'<input type="text" name="bbpmt-ptot-anon-author" id="bbpmt-ptot-anon-author" value="get_option("bbpmt-ptot-anon-author", false)" size="20" />'' cannot be parsed correct.
+HTML code '$'<p style="color:red;text-indent:-20px;margin-left:80px;">&nbsp;WARNING: login <strong>get_option("bbpmt-ptot-anon-author", false)</strong> not found! Please choose a correct one and save again.</p>'' cannot be parsed correct.
+HTML code '$'<br><a href=get_site_url()/wp-admin/edit.php"'' cannot be parsed correct.
+HTML code '$'<a href=get_site_url()/wp-admin/edit.php?post_type=page"'' cannot be parsed correct.
+HTML code '$'<option value=get_site_url()/wp-admin/edit.php?post_type=$post_type"$post_type</option>'' cannot be parsed correct.
+HTML code '$'<option value=bbp_get_forum_id()"bbp_get_forum_title($forum_id)</option>'' cannot be parsed correct.
+HTML code '$'<option value=$sub1forum"&nbsp;&nbsp;bbp_get_forum_title($sub1_forum_id)</option>'' cannot be parsed correct.
+HTML code '$'$error'' cannot be parsed correct.
+HTML code '$'<h1>Move topics Forum to Forum</h1>'' cannot be parsed correct.
+HTML code '$'No forum selected'' cannot be parsed correct.
+HTML code '$'<form action="" method="post" id="bbpmttopicform">'' cannot be parsed correct.
+HTML code '$'<table id="bbpmt-forum-topics">'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'_______<br><br>'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" id="bbpmtcbgroup_master" onchange="bbpmttoggleall(this,\'bbpmtcbgroup\')" /> Select All/None<br><br>'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="zapselected" value="HIDE selected" /><br>MOVE selected to:'' cannot be parsed correct.
+HTML code '$'<select name="destinationforum" id="destinationforum">'' cannot be parsed correct.
+HTML code '$'<option value="">-- Choose forum --</option>'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'No topics selected for hiding'' cannot be parsed correct.
+HTML code '$'<br><form action="" method="post">'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="goforum" value="Back to topics" />'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'No topics selected for unhiding'' cannot be parsed correct.
+HTML code '$'<br><form action="" method="post">'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="gohome" value="Back to homepage" />'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'<form action="" method="post" id="bbpmttopicform">'' cannot be parsed correct.
+HTML code '$'<table id="bbpmt-forum-topics">'' cannot be parsed correct.
+HTML code '$'<tr><th></th><th>Topic</th><th>Topic date</th><th>Zap date</th></tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'_______<br><br>'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" id="bbpmtcbgroup_master" onchange="bbpmttoggleall(this,\'bbpmtcbgroup\')" /> Select All/None<br><br>'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="unzapselected" value="UnZAP selected" />&nbsp;'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="gohome" value="Back to homepage" />'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="moveforum" value="Start Move" />'' cannot be parsed correct.
+HTML code '$'<br><input type="submit" name="gohome" value="Back to homepage" />'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'No topics found that need your attention.'' cannot be parsed correct.
+HTML code '$'No topics selected for moving'' cannot be parsed correct.
+HTML code '$'No destination forum selected for moving'' cannot be parsed correct.
+HTML code '$'<br><form action="" method="post">'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="goforum" value="Back to topics" />'' cannot be parsed correct.
+HTML code '$'<label>&nbsp;'' cannot be parsed correct.
+HTML code '$' </label>'' cannot be parsed correct.
+HTML code '$'<label>&nbsp;'' cannot be parsed correct.
+HTML code '$'</label></p>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:140px;"><input type="checkbox" name="bbpmt-ptot-finalcomment-link" id="bbpmt-ptot-finalcomment-link" value="bbpmt-ptot-finalcomment-link" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'><label for="bbpmt-ptot-finalcomment-link">&nbsp;'' cannot be parsed correct.
+HTML code '$'</label></p>'' cannot be parsed correct.
+HTML code '$'<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'' cannot be parsed correct.
+HTML code '$'</h3>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><input type="checkbox" name="bbpmt-ptot-cuttopic-cb" id="bbpmt-ptot-cuttopic-cb" value="bbpmt-ptot-cuttopic-cb" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'<label>&nbsp;'' cannot be parsed correct.
+HTML code '$' </label>'' cannot be parsed correct.
+HTML code '$'<label>&nbsp;'' cannot be parsed correct.
+HTML code '$'<form action="" method="post">'' cannot be parsed correct.
+HTML code '$'Move topics from source forum '' cannot be parsed correct.
+HTML code '$'<select name="sourceforum" id="sourceforum">'' cannot be parsed correct.
+HTML code '$'<option value="">-- Choose forum --</option>'' cannot be parsed correct.
+HTML code '$'</select><input type="submit" name="goforum" value="'' cannot be parsed correct.
+HTML code '$'" /'' cannot be parsed correct.
+HTML code '$'<p></p><form action="" method="post">'' cannot be parsed correct.
+HTML code '$' <select name="zaporder" id="zaporder">'' cannot be parsed correct.
+HTML code '$'<option value="zap">'' cannot be parsed correct.
+HTML code '$'</option>'' cannot be parsed correct.
+HTML code '$'<option value="post">'' cannot be parsed correct.
+HTML code '$'</option>'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="gozapped" value="'' cannot be parsed correct.
+HTML code '$'" />'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<p>&nbsp;</p><h1>'' cannot be parsed correct.
+HTML code '$'</h1>'' cannot be parsed correct.
+HTML code '$'<h2>&nbsp;&nbsp;'' cannot be parsed correct.
+HTML code '$'</h2>'' cannot be parsed correct.
+HTML code '$'<h3 style="text-indent:-20px;margin-left:50px;">'' cannot be parsed correct.
+HTML code '$'</h3>'' cannot be parsed correct.
+HTML code '$'<form action="" method="post">'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><input type="checkbox" name="bbpmt-ptot-close-for-comment" id="bbpmt-ptot-close-for-comment" value="bbpmt-ptot-close-for-comment" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'><label for="bbpmt-ptot-close-for-comment">&nbsp;'' cannot be parsed correct.
+HTML code '$'</label></p>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><input type="checkbox" name="bbpmt-ptot-del-comments" id="bbpmt-ptot-del-comments" value="bbpmt-ptot-del-comments" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'><label for="bbpmt-ptot-del-comments">&nbsp;'' cannot be parsed correct.
+HTML code '$'</label></p>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><input type="checkbox" name="bbpmt-ptot-finalcomment-cb" id="bbpmt-ptot-finalcomment-cb" value="bbpmt-ptot-finalcomment-cb" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</label></p>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><input type="checkbox" name="bbpmt-ptot-add-post-link" id="bbpmt-ptot-add-post-link" value="bbpmt-ptot-add-post-link" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'><label for="bbpmt-ptot-add-post-link">&nbsp;'' cannot be parsed correct.
+HTML code '$'</label></p>'' cannot be parsed correct.
+HTML code '$'<h3 style="text-indent:-20px;margin-left:50px;">'' cannot be parsed correct.
+HTML code '$'</h3>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><input type="checkbox" name="bbpmt-ptot-cutcomment-cb" id="bbpmt-ptot-cutcomment-cb" value="bbpmt-ptot-cutcomment-cb" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'<label>&nbsp;'' cannot be parsed correct.
+HTML code '$' </label>'' cannot be parsed correct.
+HTML code '$'<label>&nbsp;'' cannot be parsed correct.
+HTML code '$'</label></p>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><input type="checkbox" name="bbpmt-ptot-add-author" id="bbpmt-ptot-add-author" value="bbpmt-ptot-add-author" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'><label for="bbpmt-ptot-add-author">&nbsp;'' cannot be parsed correct.
+HTML code '$'</label></p>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><label>'' cannot be parsed correct.
+HTML code '$' </label>'' cannot be parsed correct.
+HTML code '$'<label>&nbsp;'' cannot be parsed correct.
+HTML code '$'</label></p>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:50px;"><input type="submit" name="optssave" value="'' cannot be parsed correct.
+HTML code '$'" /></p'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'<h2>&nbsp;&nbsp;'' cannot be parsed correct.
+HTML code '$'</h2>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><label>'' cannot be parsed correct.
+HTML code '$'</a>&nbsp;'' cannot be parsed correct.
+HTML code '$'</a>&nbsp;</label>'' cannot be parsed correct.
+HTML code '$'<p style="text-indent:-20px;margin-left:80px;"><label>'' cannot be parsed correct.
+HTML code '$'<br><select name="CPTmenu1" id="CPTmenu1">'' cannot be parsed correct.
+HTML code '$'<option value="">'' cannot be parsed correct.
+HTML code '$'</option>'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'No forums found'' cannot be parsed correct.
+HTML code '$'<script type=\'text/javascript\'>'' cannot be parsed correct.
+HTML code '$'function bbpmttoggleall(master,group) {'' cannot be parsed correct.
+HTML code '$'	var cbarray = document.getElementsByClassName(group);'' cannot be parsed correct.
+HTML code '$'	for(var i = 0; i < cbarray.length; i++){'' cannot be parsed correct.
+HTML code '$'		var cb = document.getElementById(cbarray[i].id);'' cannot be parsed correct.
+HTML code '$'		cb.checked = master.checked;'' cannot be parsed correct.
+HTML code '$'	}'' cannot be parsed correct.
+HTML code '$'}'' cannot be parsed correct.
+HTML code '$'</script>'' cannot be parsed correct.
+HTML code '$'</label>
+		<select name="bbpmt-bulklist" id="bbpmt-bulklist" style="display:inline-block; float:none;">
+			<option value=\'\'>'' cannot be parsed correct.
+HTML code '$'</option>
+			'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:13.940271.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045966.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 6 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.411083.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running FrontBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PhpVarDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running Sqlite3Detector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+bbp-move-topics.php:191
+  - RETRIEVAL call to get_post_meta($sourceforum, "_bbp_last_active_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+bbp-move-topics.php:193
+  - RETRIEVAL call to get_post_meta($lastactiveid, "_bbp_last_active_time", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+bbp-move-topics.php:199
+  - RETRIEVAL call to get_post_meta($destinationforum, "_bbp_last_active_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+bbp-move-topics.php:201
+  - RETRIEVAL call to get_post_meta($lastactiveid, "_bbp_last_active_time", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+bbp-move-topics.php:382
+  - RETRIEVAL call to get_option("bbpmt-ptot-close-for-comment", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:383
+  - RETRIEVAL call to get_option("bbpmt-ptot-del-comments", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:384
+  - RETRIEVAL call to get_option("bbpmt-ptot-add-author", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:385
+  - RETRIEVAL call to get_option("bbpmt-ptot-anon-author", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:386
+  - RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:387
+  - RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-text", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:388
+  - RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-link", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:389
+  - RETRIEVAL call to get_option("bbpmt-ptot-cuttopic-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:390
+  - RETRIEVAL call to get_option("bbpmt-ptot-cuttopic-nbr", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:391
+  - RETRIEVAL call to get_option("bbpmt-ptot-cutcomment-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:392
+  - RETRIEVAL call to get_option("bbpmt-ptot-cutcomment-nbr", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:393
+  - RETRIEVAL call to get_option("bbpmt-ptot-add-post-link", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+bbp-move-topics.php:450
+  - RETRIEVAL call to get_user_by("login", $bbpmt_ptot_anon_author) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user, user_meta
+includes/posttotopic.php:107
+  - RETRIEVAL call to get_option("bbpmt-ptot-close-for-comment", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:108
+  - RETRIEVAL call to get_option("bbpmt-ptot-del-comments", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:109
+  - RETRIEVAL call to get_option("bbpmt-ptot-add-author", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:110
+  - RETRIEVAL call to get_option("bbpmt-ptot-anon-author", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:114
+  - RETRIEVAL call to get_user_by("login", $bbpmt_ptot_anon_author) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user, user_meta
+includes/posttotopic.php:121
+  - RETRIEVAL call to get_post($post_id) alters data types {'post', 'wp_post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, wp_post, post_meta
+includes/posttotopic.php:142
+  - RETRIEVAL call to get_option("bbpmt-ptot-cuttopic-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:144
+  - RETRIEVAL call to get_option("bbpmt-ptot-cuttopic-nbr", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:151
+  - RETRIEVAL call to get_option("bbpmt-ptot-add-post-link", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:188
+  - RETRIEVAL call to get_comment_meta(intval($comment->comment_parent), "bbpmt_convtoreply_id", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: comment_meta
+includes/posttotopic.php:203
+  - RETRIEVAL call to get_option("bbpmt-ptot-cutcomment-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:205
+  - RETRIEVAL call to get_option("bbpmt-ptot-cutcomment-nbr", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:267
+  - RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:270
+  - RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-text", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:271
+  - RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-link", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/posttotopic.php:286
+  - RETRIEVAL call to wp_new_comment($new_comment). Passed arguments: 0: $commentdata (array). Returns (int|false|WP_Error). 
+
+bbp-move-topics.php:78
+  - STORAGE call to delete_option("bbpmt-ptot-donot-close") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:166
+  - STORAGE call to update_post_meta($moveit, "_bbpmt_movedon", date("Y-m-d H:i:s", current_time("timestamp", 1))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+bbp-move-topics.php:167
+  - STORAGE call to update_post_meta($moveit, "_bbpmt_movedfrom", $sourceforum) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+bbp-move-topics.php:168
+  - STORAGE call to update_post_meta($moveit, "_bbp_forum_id", $destinationforum) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+bbp-move-topics.php:176
+  - STORAGE call to update_post_meta($cid, "_bbpmt_movedon", date("Y-m-d H:i:s", current_time("timestamp", 1))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+bbp-move-topics.php:177
+  - STORAGE call to update_post_meta($cid, "_bbpmt_movedfrom", $sourceforum) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+bbp-move-topics.php:178
+  - STORAGE call to update_post_meta($cid, "_bbp_forum_id", $destinationforum) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+bbp-move-topics.php:194
+  - STORAGE call to update_post_meta($sourceforum, "_bbp_last_active_time", $lastactivetime) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+bbp-move-topics.php:202
+  - STORAGE call to update_post_meta($destinationforum, "_bbp_last_active_time", $lastactivetime) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+bbp-move-topics.php:226
+  - STORAGE call to add_post_meta($zapit, "_bbpmt_zapped", date("Y-m-d H:i:s", current_time("timestamp", 1)), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+bbp-move-topics.php:244
+  - STORAGE call to delete_post_meta($zapit, "_bbpmt_zapped") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+bbp-move-topics.php:297
+  - STORAGE call to add_option("bbpmt-ptot-donot-close", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:299
+  - STORAGE call to delete_option("bbpmt-ptot-donot-close") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:302
+  - STORAGE call to add_option("bbpmt-ptot-del-comments", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:304
+  - STORAGE call to delete_option("bbpmt-ptot-del-comments") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:307
+  - STORAGE call to add_option("bbpmt-ptot-add-author", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:309
+  - STORAGE call to delete_option("bbpmt-ptot-add-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:312
+  - STORAGE call to delete_option("bbpmt-ptot-anon-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:314
+  - STORAGE call to update_option("bbpmt-ptot-anon-author", $_POST["bbpmt-ptot-anon-author"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:317
+  - STORAGE call to add_option("bbpmt-ptot-finalcomment-cb", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:319
+  - STORAGE call to delete_option("bbpmt-ptot-finalcomment-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:322
+  - STORAGE call to add_option("bbpmt-ptot-finalcomment-link", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:324
+  - STORAGE call to delete_option("bbpmt-ptot-finalcomment-link") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:327
+  - STORAGE call to update_option("bbpmt-ptot-finalcomment-text", $_POST["bbpmt-ptot-finalcomment-text"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:329
+  - STORAGE call to update_option("bbpmt-ptot-finalcomment-text", "The comments have been transferred to your forum. For further replies please visit:") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:332
+  - STORAGE call to add_option("bbpmt-ptot-cuttopic-cb", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:334
+  - STORAGE call to delete_option("bbpmt-ptot-cuttopic-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:337
+  - STORAGE call to update_option("bbpmt-ptot-cuttopic-nbr", $_POST["bbpmt-ptot-cuttopic-nbr"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:339
+  - STORAGE call to delete_option("bbpmt-ptot-cuttopic-nbr") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:342
+  - STORAGE call to add_option("bbpmt-ptot-cutcomment-cb", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:344
+  - STORAGE call to delete_option("bbpmt-ptot-cutcomment-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:347
+  - STORAGE call to update_option("bbpmt-ptot-cutcomment-nbr", $_POST["bbpmt-ptot-cutcomment-nbr"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:349
+  - STORAGE call to delete_option("bbpmt-ptot-cutcomment-nbr") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:352
+  - STORAGE call to update_option("bbpmt-ptot-add-post-link", $_POST["bbpmt-ptot-add-post-link"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:354
+  - STORAGE call to delete_option("bbpmt-ptot-add-post-link") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+includes/posttotopic.php:130
+  - STORAGE call to wp_update_post($closepost, true). Passed arguments: 1: $wp_error (bool), 0: $postarr (array|object). Returns (int|WP_Error).
+includes/posttotopic.php:290
+  - STORAGE call to update_post_meta($to_forum, "_bbp_last_active_time", current_time("Y-m-d H:i:s", 0)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+bbp-move-topics.php:78
+  - DELETION call to delete_option("bbpmt-ptot-donot-close") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:244
+  - DELETION call to delete_post_meta($zapit, "_bbpmt_zapped") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+bbp-move-topics.php:299
+  - DELETION call to delete_option("bbpmt-ptot-donot-close") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:304
+  - DELETION call to delete_option("bbpmt-ptot-del-comments") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:309
+  - DELETION call to delete_option("bbpmt-ptot-add-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:312
+  - DELETION call to delete_option("bbpmt-ptot-anon-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:319
+  - DELETION call to delete_option("bbpmt-ptot-finalcomment-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:324
+  - DELETION call to delete_option("bbpmt-ptot-finalcomment-link") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:334
+  - DELETION call to delete_option("bbpmt-ptot-cuttopic-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:339
+  - DELETION call to delete_option("bbpmt-ptot-cuttopic-nbr") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:344
+  - DELETION call to delete_option("bbpmt-ptot-cutcomment-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:349
+  - DELETION call to delete_option("bbpmt-ptot-cutcomment-nbr") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbp-move-topics.php:354
+  - DELETION call to delete_option("bbpmt-ptot-add-post-link") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+includes/posttotopic.php:262
+  - DELETION call to wp_delete_comment($to_delete_id) alters data types {'comment', 'comment_meta'}. Passed arguments: 0: $comment_id (int|WP_Comment). Returns (bool).
+  - Data types: comment, comment_meta 
+
+By data type:
+comment
+	DeletionDetector.wp_delete_comment($to_delete_id) - {'comment', 'comment_meta'}
+comment_meta
+	WordPressRetrievalDetector.get_comment_meta(intval($comment->comment_parent), "bbpmt_convtoreply_id", true) - {'comment_meta'}
+	DeletionDetector.wp_delete_comment($to_delete_id) - {'comment', 'comment_meta'}
+none
+	WordPressRetrievalDetector.wp_new_comment($new_comment) - set()
+	WordPressStorageDetector.wp_update_post($closepost, true) - set()
+option
+	DeletionDetector.delete_option("bbpmt-ptot-donot-close") - {'option'}
+	WordPressStorageDetector.update_option("bbpmt-ptot-cutcomment-nbr", $_POST["bbpmt-ptot-cutcomment-nbr"]) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-add-author", false) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-anon-author", false) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-add-author", false) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-cutcomment-cb", false) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-del-comments", false) - {'option'}
+	WordPressStorageDetector.update_option("bbpmt-ptot-add-post-link", $_POST["bbpmt-ptot-add-post-link"]) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-anon-author", false) - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-donot-close") - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-donot-close") - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-anon-author") - {'option'}
+	WordPressStorageDetector.add_option("bbpmt-ptot-add-author", "yes") - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-finalcomment-cb") - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-anon-author") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-del-comments", false) - {'option'}
+	WordPressStorageDetector.add_option("bbpmt-ptot-finalcomment-link", "yes") - {'option'}
+	WordPressStorageDetector.add_option("bbpmt-ptot-donot-close", "yes") - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-cuttopic-nbr") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-finalcomment-text", false) - {'option'}
+	WordPressStorageDetector.add_option("bbpmt-ptot-del-comments", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-finalcomment-link", false) - {'option'}
+	WordPressStorageDetector.add_option("bbpmt-ptot-cuttopic-cb", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-cuttopic-cb", false) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-cuttopic-cb", false) - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-finalcomment-link") - {'option'}
+	WordPressStorageDetector.update_option("bbpmt-ptot-cuttopic-nbr", $_POST["bbpmt-ptot-cuttopic-nbr"]) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-finalcomment-cb", false) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-finalcomment-link", false) - {'option'}
+	WordPressStorageDetector.add_option("bbpmt-ptot-cutcomment-cb", "yes") - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-add-author") - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-finalcomment-cb") - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-cutcomment-nbr") - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-cutcomment-nbr") - {'option'}
+	WordPressStorageDetector.update_option("bbpmt-ptot-finalcomment-text", $_POST["bbpmt-ptot-finalcomment-text"]) - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-add-post-link") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-cuttopic-nbr", false) - {'option'}
+	WordPressStorageDetector.update_option("bbpmt-ptot-finalcomment-text", "The comments have been transferred to your forum. For further replies please visit:") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-add-post-link", false) - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-add-author") - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-del-comments") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-finalcomment-cb", false) - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-cuttopic-cb") - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-cuttopic-cb") - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-cutcomment-cb") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-cutcomment-nbr", false) - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-finalcomment-link") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-close-for-comment", false) - {'option'}
+	WordPressStorageDetector.update_option("bbpmt-ptot-anon-author", $_POST["bbpmt-ptot-anon-author"]) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-close-for-comment", false) - {'option'}
+	DeletionDetector.delete_option("bbpmt-ptot-cuttopic-nbr") - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-del-comments") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-cuttopic-nbr", false) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-cutcomment-nbr", false) - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-add-post-link") - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-donot-close") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-add-post-link", false) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-finalcomment-text", false) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpmt-ptot-cutcomment-cb", false) - {'option'}
+	WordPressStorageDetector.add_option("bbpmt-ptot-finalcomment-cb", "yes") - {'option'}
+	WordPressStorageDetector.delete_option("bbpmt-ptot-cutcomment-cb") - {'option'}
+post
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'wp_post', 'post_meta'}
+post_meta
+	WordPressStorageDetector.update_post_meta($destinationforum, "_bbp_last_active_time", $lastactivetime) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($zapit, "_bbpmt_zapped", date("Y-m-d H:i:s", current_time("timestamp", 1)), true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'wp_post', 'post_meta'}
+	DeletionDetector.delete_post_meta($zapit, "_bbpmt_zapped") - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($zapit, "_bbpmt_zapped") - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($moveit, "_bbp_forum_id", $destinationforum) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($sourceforum, "_bbp_last_active_time", $lastactivetime) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($cid, "_bbpmt_movedon", date("Y-m-d H:i:s", current_time("timestamp", 1))) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($moveit, "_bbpmt_movedon", date("Y-m-d H:i:s", current_time("timestamp", 1))) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($lastactiveid, "_bbp_last_active_time", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($destinationforum, "_bbp_last_active_id", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($moveit, "_bbpmt_movedfrom", $sourceforum) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($lastactiveid, "_bbp_last_active_time", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($sourceforum, "_bbp_last_active_id", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($cid, "_bbp_forum_id", $destinationforum) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($cid, "_bbpmt_movedfrom", $sourceforum) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($to_forum, "_bbp_last_active_time", current_time("Y-m-d H:i:s", 0)) - {'post_meta'}
+user
+	WordPressRetrievalDetector.get_user_by("login", $bbpmt_ptot_anon_author) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("login", $bbpmt_ptot_anon_author) - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.get_user_by("login", $bbpmt_ptot_anon_author) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("login", $bbpmt_ptot_anon_author) - {'user', 'user_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($post_id) - {'post', 'wp_post', 'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:12.796900.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 655 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.646877.
+
+655 STORE_REACHES edges created
+655 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 20 nodes as PERSONAL
+In total, tainted 20 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.472356.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:47.924494!
+DELETION call to delete_post_meta($zapit, "_bbpmt_zapped") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-donot-close") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-del-comments") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-add-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-anon-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-finalcomment-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-finalcomment-link") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-cuttopic-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-cuttopic-nbr") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-cutcomment-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-cutcomment-nbr") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-add-post-link") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpmt-ptot-donot-close") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to wp_delete_comment($to_delete_id) alters data types {'comment', 'comment_meta'}. Passed arguments: 0: $comment_id (int|WP_Comment). Returns (bool).,None,None
+RETRIEVAL call to get_post_meta($sourceforum, "_bbp_last_active_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($lastactiveid, "_bbp_last_active_time", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($destinationforum, "_bbp_last_active_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($lastactiveid, "_bbp_last_active_time", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-close-for-comment", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-del-comments", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-add-author", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-anon-author", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-text", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-link", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-cuttopic-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-cuttopic-nbr", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-cutcomment-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-cutcomment-nbr", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-add-post-link", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_by("login", $bbpmt_ptot_anon_author) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-close-for-comment", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-del-comments", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-add-author", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-anon-author", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_by("login", $bbpmt_ptot_anon_author) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_post($post_id) alters data types {'post', 'wp_post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-cuttopic-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-cuttopic-nbr", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-add-post-link", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_meta(intval($comment->comment_parent), "bbpmt_convtoreply_id", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-cutcomment-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-cutcomment-nbr", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-cb", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-text", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpmt-ptot-finalcomment-link", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to wp_new_comment($new_comment). Passed arguments: 0: $commentdata (array). Returns (int|false|WP_Error).,None,None
+STORAGE call to update_post_meta($moveit, "_bbpmt_movedon", date("Y-m-d H:i:s", current_time("timestamp", 1))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($moveit, "_bbpmt_movedfrom", $sourceforum) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($moveit, "_bbp_forum_id", $destinationforum) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($cid, "_bbpmt_movedon", date("Y-m-d H:i:s", current_time("timestamp", 1))) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($cid, "_bbpmt_movedfrom", $sourceforum) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($cid, "_bbp_forum_id", $destinationforum) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($sourceforum, "_bbp_last_active_time", $lastactivetime) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($destinationforum, "_bbp_last_active_time", $lastactivetime) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to add_post_meta($zapit, "_bbpmt_zapped", date("Y-m-d H:i:s", current_time("timestamp", 1)), true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to delete_post_meta($zapit, "_bbpmt_zapped") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to add_option("bbpmt-ptot-donot-close", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-donot-close") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_option("bbpmt-ptot-del-comments", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-del-comments") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_option("bbpmt-ptot-add-author", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-add-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-anon-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("bbpmt-ptot-anon-author", $_POST["bbpmt-ptot-anon-author"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("bbpmt-ptot-finalcomment-cb", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-finalcomment-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_option("bbpmt-ptot-finalcomment-link", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-finalcomment-link") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("bbpmt-ptot-finalcomment-text", $_POST["bbpmt-ptot-finalcomment-text"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("bbpmt-ptot-finalcomment-text", "The comments have been transferred to your forum. For further replies please visit:") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("bbpmt-ptot-cuttopic-cb", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-cuttopic-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("bbpmt-ptot-cuttopic-nbr", $_POST["bbpmt-ptot-cuttopic-nbr"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-cuttopic-nbr") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_option("bbpmt-ptot-cutcomment-cb", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-cutcomment-cb") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("bbpmt-ptot-cutcomment-nbr", $_POST["bbpmt-ptot-cutcomment-nbr"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-cutcomment-nbr") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("bbpmt-ptot-add-post-link", $_POST["bbpmt-ptot-add-post-link"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-add-post-link") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("bbpmt-ptot-donot-close") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to wp_update_post($closepost, true). Passed arguments: 1: $wp_error (bool), 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to update_post_meta($to_forum, "_bbp_last_active_time", current_time("Y-m-d H:i:s", 0)) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

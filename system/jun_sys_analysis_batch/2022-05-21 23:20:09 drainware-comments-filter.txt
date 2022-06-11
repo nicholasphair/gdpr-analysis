@@ -1,0 +1,834 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on drainware-comments-filter
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.440412.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.036592.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.221623.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.684790.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1017 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.237191.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.580833.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.111776.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 353 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:06.151797.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 5522
+Added 4151 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 5580
+Added 58 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.499748.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/drainware-comments-filter/admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/drainware-comments-filter/drainware.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/drainware-comments-filter/legacy.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.363285.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+5521 PHP_REACHES edges created
+58 PHP_REACHES edges created
+5580 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 2044 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.011577.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.402515.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 93 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.012953.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 98 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.216514.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.157378.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.675821.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018646.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.041318.
+
+191 PHP_REACHES edges created
+191 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 93 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.155858.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+16 SQL operations to process.
+SELECT * FROM $wpdb WHERE comment_ID = '$comment_id'
+SQL command (SELECT * FROM $wpdb WHERE comment_ID = '$comment_id') cannot be parsed correct.
+SELECT * FROM $wpdb WHERE comment_ID = '$comment_id'
+SQL command (SELECT * FROM $wpdb WHERE comment_ID = '$comment_id') cannot be parsed correct.
+SELECT * FROM $wpdb WHERE comment_approved = '0'
+SQL command (SELECT * FROM $wpdb WHERE comment_approved = '0') cannot be parsed correct.
+SELECT comment_id FROM $wpdb WHERE DATE_SUB('current_time("mysql", 1)', INTERVAL 15 DAY) > comment_date_gmt AND comment_approved = 'spam'
+SQL command (SELECT comment_id FROM $wpdb WHERE DATE_SUB('current_time("mysql", 1)', INTERVAL 15 DAY) > comment_date_gmt AND comment_approved = 'spam') cannot be parsed correct.
+DELETE FROM $wpdb WHERE comment_id IN ( implode(", ", array_map("intval", $comment_ids)) )
+SQL command (DELETE FROM $wpdb WHERE comment_id IN ( implode(", ", array_map("intval", $comment_ids)) )) cannot be parsed correct.
+DELETE FROM $wpdb WHERE comment_id IN ( implode(", ", array_map("intval", $comment_ids)) )
+SQL command (DELETE FROM $wpdb WHERE comment_id IN ( implode(", ", array_map("intval", $comment_ids)) )) cannot be parsed correct.
+OPTIMIZE TABLE $wpdb
+SQL command (OPTIMIZE TABLE $wpdb) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE comment_ID = '$id'
+SQL command (SELECT * FROM $wpdb WHERE comment_ID = '$id') cannot be parsed correct.
+
+		SELECT comment_id
+		FROM $wpdbcommentmeta
+		WHERE meta_key = 'drainware_error'
+		LIMIT 100
+	
+SQL command ( SELECT comment_id FROM $wpdbcommentmeta WHERE meta_key = 'drainware_error' LIMIT 100 ) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE comment_approved = 'spam' AND comment_type='' ORDER BY comment_date DESC LIMIT 1, 50
+SQL command (SELECT * FROM $wpdb WHERE comment_approved = 'spam' AND comment_type='' ORDER BY comment_date DESC LIMIT 1, 50) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE comment_approved = 'spam' ORDER BY comment_date DESC LIMIT 1, 50
+SQL command (SELECT * FROM $wpdb WHERE comment_approved = 'spam' ORDER BY comment_date DESC LIMIT 1, 50) cannot be parsed correct.
+SELECT comment_type, COUNT(*) AS cc FROM $wpdb WHERE comment_approved = 'spam' GROUP BY comment_type
+SQL command (SELECT comment_type, COUNT(*) AS cc FROM $wpdb WHERE comment_approved = 'spam' GROUP BY comment_type) cannot be parsed correct.
+UPDATE $wpdb SET comment_approved = '1' WHERE comment_ID = '$comment'
+SQL command (UPDATE $wpdb SET comment_approved = '1' WHERE comment_ID = '$comment') cannot be parsed correct.
+SELECT comment_id FROM $wpdb WHERE comment_approved = 'spam' AND '$wpdb->escape($_POST["display_time"])' > comment_date_gmt
+SQL command (SELECT comment_id FROM $wpdb WHERE comment_approved = 'spam' AND '$wpdb->escape($_POST["display_time"])' > comment_date_gmt) cannot be parsed correct.
+DELETE FROM $wpdb WHERE comment_id IN ( implode(", ", $comment_ids) )
+SQL command (DELETE FROM $wpdb WHERE comment_id IN ( implode(", ", $comment_ids) )) cannot be parsed correct.
+SELECT * FROM $wpdb  WHERE
+		(comment_author LIKE '%$wpdb->escape($_POST["s"])%' OR
+		comment_author_email LIKE '%$wpdb->escape($_POST["s"])%' OR
+		comment_author_url LIKE ('%$wpdb->escape($_POST["s"])%') OR
+		comment_author_IP LIKE ('%$wpdb->escape($_POST["s"])%') OR
+		comment_content LIKE ('%$wpdb->escape($_POST["s"])%') ) AND
+		comment_approved = 'spam'
+		ORDER BY comment_date DESC
+SQL command (SELECT * FROM $wpdb WHERE (comment_author LIKE '%$wpdb->escape($_POST["s"])%' OR comment_author_email LIKE '%$wpdb->escape($_POST["s"])%' OR comment_author_url LIKE ('%$wpdb->escape($_POST["s"])%') OR comment_author_IP LIKE ('%$wpdb->escape($_POST["s"])%') OR comment_content LIKE ('%$wpdb->escape($_POST["s"])%') ) AND comment_approved = 'spam' ORDER BY comment_date DESC) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [2578, 2906, 3608, 6226, 6270, 6285, 6326, 6376, 6561, 7034, 7055, 7085, 7316, 7412, 7441, 7770]
+Added 0 SQL nodes. 0 out of 16 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:05.579963.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'
+            <div id=\'drainware-warning\' class=\'updated fade\'><p><strong>sprintf(__("drainware %s requires WordPress 3.0 or higher."), drainware_VERSION)</strong> sprintf(__("Please <a href="%s">upgrade WordPress</a> to a current version, or <a href="%s">downgrade to version 2.4 of the drainware plugin</a>."), "http://codex.wordpress.org/Upgrading_WordPress", "http://wordpress.org/extend/plugins/drainware/download/")</p></div>
+            '' cannot be parsed correct.
+HTML code '$'sprintf(__("A network problem or firewall is blocking all connections from your web server to drainware.com.  <strong>drainware cannot work correctly until this is fixed.</strong>  Please contact your web host or firewall administrator and give them <a href="%s" target="_blank">this information about drainware and firewalls</a>."), "http://blog.drainware.com/drainware-hosting-faq/")'' cannot be parsed correct.
+HTML code '$'sprintf(__("A DNS problem or firewall is preventing all access from your web server to api.drainware.com.  <strong>drainware cannot work correctly until this is fixed.</strong>  Please contact your web host or firewall administrator and give them <a href="%s" target="_blank">this information about drainware and firewalls</a>."), "http://blog.drainware.com/drainware-hosting-faq/")'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($ip)'' cannot be parsed correct.
+HTML code '$'$color'' cannot be parsed correct.
+HTML code '$'AccessibleRe-trying'' cannot be parsed correct.
+HTML code '$'sprintf(__("Last checked %s ago."), human_time_diff(get_option("drainware_connectivity_time")))'' cannot be parsed correct.
+HTML code '$'https://'' cannot be parsed correct.
+HTML code '$'<h3>_x("Spam", "comments")</h3>'' cannot be parsed correct.
+HTML code '$'<p>sprintf(_n("<a href="%1$s">drainware</a> has protected your site from <a href="%2$s">%3$s spam comments</a>.", "<a href="%1$s">drainware</a> has protected your site from <a href="%2$s">%3$s spam comments</a>.", $count), "http://drainware.com/", clean_url($link"?page=drainware-admin"), number_format_i18n($count))</p>'' cannot be parsed correct.
+HTML code '$'
+			<div id=\'drainware-warning\' class=\'updated fade\'><p><strong>drainware is almost ready.</strong> sprintf(__("You must <a href="%1$s">enter your drainware API key</a> for it to work."), "plugins.php?page=drainware-key-config")</p></div>
+			'' cannot be parsed correct.
+HTML code '$'
+			<div id=\'drainware-warning\' class=\'updated fade\'><p><strong>drainware has detected a problem.</strong> sprintf(_n("A server or network problem prevented drainware from checking %d comment. It has been temporarily held for moderation and will be automatically re-checked in %s.", "A server or network problem prevented drainware from checking %d comments. They have been temporarily held for moderation and will be automatically re-checked in %s.", $waiting), number_format_i18n($waiting), $next_check)</p></div>
+			'' cannot be parsed correct.
+HTML code '$'<span class="drainware-status" commentid=""><a href="comment.php?action=editcomment&amp;c=#drainware-status" title="esc_attr__("View comment history")"htmlspecialchars($desc)</a></span>'' cannot be parsed correct.
+HTML code '$'<span class="drainware-user-comment-count" commentid="" style="display:none;"><br><span class="drainware-user-comment-counts">sprintf(_n("%s approved", "%s approved", $comment_count), number_format_i18n($comment_count))</span></span>'' cannot be parsed correct.
+HTML code '$'<div style="margin-bottom: 13px;"><span style="color: #999;" alt="date("D d M Y @ h:i:m a", $row["time"]) GMT" title="date("D d M Y @ h:i:m a", $row["time"]) GMT"sprintf(__("%s ago"), human_time_diff($row["time"]))</span> - '' cannot be parsed correct.
+HTML code '$'htmlspecialchars($row["message"])</div>'' cannot be parsed correct.
+HTML code '$'sprintf(__("Your web host or server administrator has disabled PHP\\'s <code>fsockopen</code> or <code>gethostbynamel</code> functions.  <strong>drainware cannot work correctly until this is fixed.</strong>  Please contact your web host or firewall administrator and give them <a href="%s" target="_blank">this information about drainware\\'s system requirements</a>."), "http://blog.drainware.com/drainware-hosting-faq/")'' cannot be parsed correct.
+HTML code '$'sprintf(__("A network problem or firewall is blocking some connections from your web server to drainware.com.  drainware is working but this may cause problems during times of network congestion.  Please contact your web host or firewall administrator and give them <a href="%s" target="_blank">this information about drainware and firewalls</a>."), "http://blog.drainware.com/drainware-hosting-faq/")'' cannot be parsed correct.
+HTML code '$'<dt>sprintf(__("%s ago"), human_time_diff($row["time"]))</dt>'' cannot be parsed correct.
+HTML code '$'<dd>htmlspecialchars($row["message"])</dd>'' cannot be parsed correct.
+HTML code '$'<p class=\'drainware-right-now\'>sprintf(_n("<a href="%1$s">drainware</a> has protected your site from %2$s spam comment already. ", "<a href="%1$s">drainware</a> has protected your site from %2$s spam comments already. ", $count), "http://drainware.com/", number_format_i18n($count))<br />sprintf(__("There\\'s nothing in your <a href=\\'%1$s\\'>spam queue</a> at the moment."), $esc_url($link))</p>
+'' cannot be parsed correct.
+HTML code '$'</div><div class=\'alignleft\'><a class=\'button-secondary checkforspam\' href=\'admin.php?action=drainware_recheck_queue\'>Check for undesirable comments</a>'' cannot be parsed correct.
+HTML code '$'drainware_http_post($query_string, $drainware_api_host, "/index.py/link", $drainware_api_port)_1'' cannot be parsed correct.
+HTML code '$'<div class="updated"><p>sprintf(__("%1$s comments recovered."), $i)</p></div>'' cannot be parsed correct.
+HTML code '$'<div class="updated"><p>All spam deleted.</p></div>'' cannot be parsed correct.
+HTML code '$'<p>You have no spam currently in the queue. Must be your lucky day. :)</p>'' cannot be parsed correct.
+HTML code '$'<p>You can delete all of the spam from your database with a single click. This operation cannot be undone, so you may wish to check to ensure that no legitimate comments got through first. Spam is automatically deleted after 15 days, so don&#8217;t sweat it.</p>'' cannot be parsed correct.
+HTML code '$'attribute_escape(add_query_arg("noheader", "true"))'' cannot be parsed correct.
+HTML code '$'current_time("mysql", 1)'' cannot be parsed correct.
+HTML code '$'<p>These are the latest comments identified as spam by drainware. If you see any mistakes, simply mark the comment as "not spam" and drainware will learn from the submission. If you wish to recover a comment from spam, simply select the comment, and click Not Spam. After 15 days we clean out the junk for you.</p>'' cannot be parsed correct.
+HTML code '$'attribute_escape($_POST["s"])'' cannot be parsed correct.
+HTML code '$'attribute_escape(__("Search Spam &raquo;"))'' cannot be parsed correct.
+HTML code '$'<p></p>'' cannot be parsed correct.
+HTML code '$'attribute_escape(add_query_arg("noheader", "true"))'' cannot be parsed correct.
+HTML code '$'<li false><a href=\'edit-comments.php?page=drainware-admin&amp;ctype=comments\'>ucwords($type) (number_format_i18n($type_count))</a></li>'' cannot be parsed correct.
+HTML code '$'attribute_escape($link"?page=drainware-admin")'' cannot be parsed correct.
+HTML code '$'
+	<li id=\'comment-$comment_comment_ID\' class="alternate">'' cannot be parsed correct.
+HTML code '$'$comment_comment_ID'' cannot be parsed correct.
+HTML code '$'$comment_comment_ID'' cannot be parsed correct.
+HTML code '$'$comment_comment_ID'' cannot be parsed correct.
+HTML code '$'get_permalink($comment->comment_post_ID)'' cannot be parsed correct.
+HTML code '$'wp_specialchars($post->post_title, "double")'' cannot be parsed correct.
+HTML code '$'<p></p>'' cannot be parsed correct.
+HTML code '$'attribute_escape(__("De-spam marked comments &raquo;"))'' cannot be parsed correct.
+HTML code '$'attribute_escape(add_query_arg("noheader", "true"))'' cannot be parsed correct.
+HTML code '$'attribute_escape(__("Delete all"))'' cannot be parsed correct.
+HTML code '$'current_time("mysql", 1)'' cannot be parsed correct.
+HTML code '$'<div class="drainware-history" style="margin: 13px;">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</strong></p></div>
+'' cannot be parsed correct.
+HTML code '$'<dl class="drainware-history">'' cannot be parsed correct.
+HTML code '$'</dl>'' cannot be parsed correct.
+HTML code '$'Hi there!  I\'m just a plugin, not much I can do when called directly.'' cannot be parsed correct.
+HTML code '$'</h2>
+'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="action" value="delete" />
+'' cannot be parsed correct.
+HTML code '$'<p style="display: none;">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'"  />  </p>
+</form>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="action" value="recover" />
+<ul id="spam-list" class="commentlist" style="list-style: none; margin: 0; padding: 0;">
+'' cannot be parsed correct.
+HTML code '$' class="active"'' cannot be parsed correct.
+HTML code '$'</strong> '' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$' <a href="http://ws.arin.net/cgi-bin/whois.pl?queryinput'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></p>
+
+'' cannot be parsed correct.
+HTML code '$'
+<p><label for="spam'' cannot be parsed correct.
+HTML code '$'</label> &#8212; '' cannot be parsed correct.
+HTML code '$'</a> ] </p>
+
+
+'' cannot be parsed correct.
+HTML code '$'<p><input type="hidden" name="action" value="delete" />
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:07.309488.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045079.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 12 do_action/apply_filters calls and 27 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.108500.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PhpCurlDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running Sqlite3Detector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running PHPStorageDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running maxdbDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running PropertyDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressRemoteDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+drainware.php:193
+  - RETRIEVAL call to fgets($fs, 1160).
+  - Data types: file 
+
+drainware.php:190
+  - STORAGE call to fwrite($fs, $http_request).
+  - Data types: file 
+
+admin.php:338
+  - object property '$comment->comment_author_email' of personal types {'email'} is found.
+  - Data types: email
+drainware.php:288
+  - object property '$comment->comment_author_email' of personal types {'email'} is found.
+  - Data types: email
+drainware.php:299
+  - object property '$comment->comment_author_email' of personal types {'email'} is found.
+  - Data types: email
+drainware.php:508
+  - object property '$comment->comment_author_email' of personal types {'email'} is found.
+  - Data types: email
+legacy.php:282
+  - object property '$comment->comment_author_email' of personal types {'email'} is found.
+  - Data types: email 
+
+drainware.php:224
+  - variable '$comment_author_email' of personal types {'email'} is found.
+  - Data types: email
+drainware.php:225
+  - variable '$comment_author_email' of personal types {'email'} is found.
+  - Data types: email 
+
+drainware.php:172
+  - API call to wp_remote_post($drainware_url, $http_args). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+admin.php:99
+  - RETRIEVAL call to get_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:206
+  - RETRIEVAL call to get_option("drainware_connectivity_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:206
+  - RETRIEVAL call to get_option("drainware_connectivity_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:258
+  - RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:273
+  - RETRIEVAL call to get_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:304
+  - RETRIEVAL call to get_comment_meta($comment->comment_ID, "drainware_result", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: comment_meta
+admin.php:305
+  - RETRIEVAL call to get_comment_meta($comment->comment_ID, "drainware_user_result", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: comment_meta
+admin.php:315
+  - RETRIEVAL call to get_comment_meta($comment->comment_ID, "drainware_user", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: comment_meta
+admin.php:337
+  - RETRIEVAL call to get_option("drainware_show_user_comments_approved") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:429
+  - RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:477
+  - RETRIEVAL call to get_comment_meta($comment_id, "drainware_as_submitted", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: comment_meta
+admin.php:484
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:526
+  - RETRIEVAL call to get_comment_meta($comment_id, "drainware_as_submitted", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: comment_meta
+admin.php:533
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:600
+  - RETRIEVAL call to get_comment_meta($comment->comment_ID, "drainware_rechecking") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $key (string). Returns (mixed).
+  - Data types: comment_meta
+admin.php:646
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:717
+  - RETRIEVAL call to get_option("drainware_available_servers") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:718
+  - RETRIEVAL call to get_option("drainware_connectivity_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:83
+  - RETRIEVAL call to get_option("drainware_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:88
+  - RETRIEVAL call to get_option("home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:182
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:205
+  - RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:265
+  - RETRIEVAL call to get_comment_meta($comment_id, "drainware_history", false) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: comment_meta
+drainware.php:327
+  - RETRIEVAL call to get_option("home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:329
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:334
+  - RETRIEVAL call to get_option("drainware_comment_nonce") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:379
+  - RETRIEVAL call to get_post($comment["comment_post_ID"]) alters data types {'post_meta', 'post', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post_meta, post, wp_post
+drainware.php:384
+  - RETRIEVAL call to get_option("drainware_discard_month") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:387
+  - RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:447
+  - RETRIEVAL call to get_option("home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:449
+  - RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+drainware.php:478
+  - RETRIEVAL call to get_comment($comment_id). Passed arguments: 0: $comment (WP_Comment|string|int). Returns (WP_Comment|array|null).
+drainware.php:501
+  - RETRIEVAL call to get_comment($comment_id). Passed arguments: 0: $comment (WP_Comment|string|int). Returns (WP_Comment|array|null).
+drainware.php:532
+  - RETRIEVAL call to get_option("drainware_comment_nonce") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+legacy.php:150
+  - RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+legacy.php:274
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+legacy.php:274
+  - RETRIEVAL call to get_option("time_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+legacy.php:275
+  - RETRIEVAL call to get_post($comment->comment_post_ID) alters data types {'post_meta', 'post', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post_meta, post, wp_post
+legacy.php:282
+  - RETRIEVAL call to comment_author() alters data types {'user', 'user_meta'}.
+  - Data types: user, user_meta
+legacy.php:282
+  - RETRIEVAL call to comment_author_email_link() alters data types {'email'}.
+  - Data types: email
+legacy.php:282
+  - RETRIEVAL call to comment_author_IP() alters data types {'ip'}.
+  - Data types: ip
+legacy.php:282
+  - RETRIEVAL call to comment_author_IP() alters data types {'ip'}.
+  - Data types: ip
+legacy.php:290
+  - RETRIEVAL call to get_post($comment->comment_post_ID) alters data types {'post_meta', 'post', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post_meta, post, wp_post 
+
+admin.php:67
+  - STORAGE call to delete_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+admin.php:76
+  - STORAGE call to update_option("wordpress_api_key", $key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:85
+  - STORAGE call to update_option("drainware_discard_month", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:87
+  - STORAGE call to update_option("drainware_discard_month", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:90
+  - STORAGE call to update_option("drainware_show_user_comments_approved", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:92
+  - STORAGE call to update_option("drainware_show_user_comments_approved", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:114
+  - STORAGE call to delete_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+admin.php:722
+  - STORAGE call to update_option("drainware_available_servers", $servers) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:723
+  - STORAGE call to update_option("drainware_connectivity_time", time()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+drainware.php:205
+  - STORAGE call to update_option("drainware_spam_count", get_option("drainware_spam_count") + $incr) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+drainware.php:255
+  - STORAGE call to add_comment_meta($comment_id, "drainware_history", $event, false) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|bool).
+  - Data types: comment_meta
+drainware.php:387
+  - STORAGE call to update_option("drainware_spam_count", get_option("drainware_spam_count") + $incr) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+drainware.php:467
+  - STORAGE call to delete_option("drainware_available_servers") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+drainware.php:479
+  - STORAGE call to delete_comment_meta($comment_id, "drainware_error") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: comment_meta
+drainware.php:483
+  - STORAGE call to add_comment_meta($comment_id, "drainware_rechecking", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: comment_meta
+drainware.php:497
+  - STORAGE call to delete_comment_meta($comment_id, "drainware_error") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: comment_meta
+drainware.php:513
+  - STORAGE call to delete_comment_meta($comment_id, "drainware_rechecking") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: comment_meta 
+
+drainware.php:112
+  - WP_User object is created.
+  - Data types: user, user_meta 
+
+admin.php:67
+  - DELETION call to delete_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+admin.php:114
+  - DELETION call to delete_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+drainware.php:467
+  - DELETION call to delete_option("drainware_available_servers") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+drainware.php:479
+  - DELETION call to delete_comment_meta($comment_id, "drainware_error") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: comment_meta
+drainware.php:497
+  - DELETION call to delete_comment_meta($comment_id, "drainware_error") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: comment_meta
+drainware.php:513
+  - DELETION call to delete_comment_meta($comment_id, "drainware_rechecking") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: comment_meta 
+
+By data type:
+comment_meta
+	WordPressRetrievalDetector.get_comment_meta($comment->comment_ID, "drainware_rechecking") - {'comment_meta'}
+	WordPressRetrievalDetector.get_comment_meta($comment->comment_ID, "drainware_result", true) - {'comment_meta'}
+	WordPressRetrievalDetector.get_comment_meta($comment->comment_ID, "drainware_user_result", true) - {'comment_meta'}
+	WordPressRetrievalDetector.get_comment_meta($comment_id, "drainware_as_submitted", true) - {'comment_meta'}
+	WordPressRetrievalDetector.get_comment_meta($comment->comment_ID, "drainware_user", true) - {'comment_meta'}
+	WordPressRetrievalDetector.get_comment_meta($comment_id, "drainware_as_submitted", true) - {'comment_meta'}
+	DeletionDetector.delete_comment_meta($comment_id, "drainware_error") - {'comment_meta'}
+	WordPressStorageDetector.delete_comment_meta($comment_id, "drainware_error") - {'comment_meta'}
+	DeletionDetector.delete_comment_meta($comment_id, "drainware_rechecking") - {'comment_meta'}
+	WordPressStorageDetector.add_comment_meta($comment_id, "drainware_rechecking", true) - {'comment_meta'}
+	WordPressStorageDetector.delete_comment_meta($comment_id, "drainware_rechecking") - {'comment_meta'}
+	DeletionDetector.delete_comment_meta($comment_id, "drainware_error") - {'comment_meta'}
+	WordPressRetrievalDetector.get_comment_meta($comment_id, "drainware_history", false) - {'comment_meta'}
+	WordPressStorageDetector.add_comment_meta($comment_id, "drainware_history", $event, false) - {'comment_meta'}
+	WordPressStorageDetector.delete_comment_meta($comment_id, "drainware_error") - {'comment_meta'}
+email
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	WordPressRetrievalDetector.comment_author_email_link() - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+file
+	PHPStorageDetector.fwrite($fs, $http_request) - {'file'}
+	PHPRetrievalDetector.fgets($fs, 1160) - {'file'}
+ip
+	WordPressRetrievalDetector.comment_author_IP() - {'ip'}
+	WordPressRetrievalDetector.comment_author_IP() - {'ip'}
+none
+	WordPressRetrievalDetector.get_comment($comment_id) - set()
+	WordPressRetrievalDetector.get_comment($comment_id) - set()
+option
+	DeletionDetector.delete_option("drainware_available_servers") - {'option'}
+	WordPressStorageDetector.update_option("wordpress_api_key", $key) - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_discard_month") - {'option'}
+	WordPressStorageDetector.update_option("drainware_discard_month", "false") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_show_user_comments_approved") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_spam_count") - {'option'}
+	WordPressStorageDetector.delete_option("wordpress_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_spam_count") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_comment_nonce") - {'option'}
+	WordPressStorageDetector.delete_option("drainware_available_servers") - {'option'}
+	WordPressStorageDetector.update_option("drainware_spam_count", get_option("drainware_spam_count") + $incr) - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_connectivity_time") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_connectivity_time") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_comment_nonce") - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	DeletionDetector.delete_option("wordpress_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("home") - {'option'}
+	DeletionDetector.delete_option("wordpress_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("home") - {'option'}
+	WordPressStorageDetector.update_option("drainware_discard_month", "true") - {'option'}
+	WordPressRetrievalDetector.get_option("time_format") - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressStorageDetector.update_option("drainware_connectivity_time", time()) - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_spam_count") - {'option'}
+	WordPressStorageDetector.update_option("drainware_spam_count", get_option("drainware_spam_count") + $incr) - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_connectivity_time") - {'option'}
+	WordPressRetrievalDetector.get_option("home") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_spam_count") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_available_servers") - {'option'}
+	WordPressStorageDetector.update_option("drainware_show_user_comments_approved", "true") - {'option'}
+	WordPressRetrievalDetector.get_option("drainware_spam_count") - {'option'}
+	WordPressRetrievalDetector.get_option("blog_charset") - {'option'}
+	WordPressStorageDetector.update_option("drainware_show_user_comments_approved", "false") - {'option'}
+	WordPressRetrievalDetector.get_option("wordpress_api_key") - {'option'}
+	WordPressStorageDetector.update_option("drainware_available_servers", $servers) - {'option'}
+	WordPressRetrievalDetector.get_option("wordpress_api_key") - {'option'}
+	WordPressStorageDetector.delete_option("wordpress_api_key") - {'option'}
+post
+	WordPressRetrievalDetector.get_post($comment->comment_post_ID) - {'post_meta', 'post', 'wp_post'}
+	WordPressRetrievalDetector.get_post($comment->comment_post_ID) - {'post_meta', 'post', 'wp_post'}
+	WordPressRetrievalDetector.get_post($comment["comment_post_ID"]) - {'post_meta', 'post', 'wp_post'}
+post_meta
+	WordPressRetrievalDetector.get_post($comment->comment_post_ID) - {'post_meta', 'post', 'wp_post'}
+	WordPressRetrievalDetector.get_post($comment->comment_post_ID) - {'post_meta', 'post', 'wp_post'}
+	WordPressRetrievalDetector.get_post($comment["comment_post_ID"]) - {'post_meta', 'post', 'wp_post'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+user
+	WordPressRetrievalDetector.comment_author() - {'user', 'user_meta'}
+	WP_UserDetector.WP_User($user_id) - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.comment_author() - {'user', 'user_meta'}
+	WP_UserDetector.WP_User($user_id) - {'user', 'user_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($comment->comment_post_ID) - {'post_meta', 'post', 'wp_post'}
+	WordPressRetrievalDetector.get_post($comment->comment_post_ID) - {'post_meta', 'post', 'wp_post'}
+	WordPressRetrievalDetector.get_post($comment["comment_post_ID"]) - {'post_meta', 'post', 'wp_post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:12.135392.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 360 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.449276.
+
+360 STORE_REACHES edges created
+360 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 49 nodes as PERSONAL
+In total, tainted 49 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.211784.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:56.015135!
+DELETION call to delete_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("drainware_available_servers") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_comment_meta($comment_id, "drainware_error") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_comment_meta($comment_id, "drainware_error") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_comment_meta($comment_id, "drainware_rechecking") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).,None,None
+RETRIEVAL call to fgets($fs, 1160).,None,None
+STORAGE call to fwrite($fs, $http_request).,None,None
+object property '$comment->comment_author_email' of personal types {'email'} is found.,,None
+object property '$comment->comment_author_email' of personal types {'email'} is found.,,None
+object property '$comment->comment_author_email' of personal types {'email'} is found.,,None
+object property '$comment->comment_author_email' of personal types {'email'} is found.,,None
+object property '$comment->comment_author_email' of personal types {'email'} is found.,,None
+variable '$comment_author_email' of personal types {'email'} is found.,,None
+variable '$comment_author_email' of personal types {'email'} is found.,,None
+WP_User object is created.,,None
+API call to wp_remote_post($drainware_url, $http_args). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+RETRIEVAL call to get_option("drainware_connectivity_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_connectivity_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_meta($comment->comment_ID, "drainware_result", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_meta($comment->comment_ID, "drainware_user_result", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_meta($comment->comment_ID, "drainware_user", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_show_user_comments_approved") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_meta($comment_id, "drainware_as_submitted", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_meta($comment_id, "drainware_as_submitted", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_meta($comment->comment_ID, "drainware_rechecking") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_available_servers") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_connectivity_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_comment_meta($comment_id, "drainware_history", false) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_comment_nonce") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($comment["comment_post_ID"]) alters data types {'post_meta', 'post', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("drainware_discard_month") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blog_charset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_comment($comment_id). Passed arguments: 0: $comment (WP_Comment|string|int). Returns (WP_Comment|array|null).,None,None
+RETRIEVAL call to get_comment($comment_id). Passed arguments: 0: $comment (WP_Comment|string|int). Returns (WP_Comment|array|null).,None,None
+RETRIEVAL call to get_option("drainware_comment_nonce") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("drainware_spam_count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("time_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($comment->comment_post_ID) alters data types {'post_meta', 'post', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to comment_author_IP() alters data types {'ip'}.,None,None
+RETRIEVAL call to comment_author() alters data types {'user', 'user_meta'}.,None,None
+RETRIEVAL call to comment_author_email_link() alters data types {'email'}.,None,None
+RETRIEVAL call to comment_author_IP() alters data types {'ip'}.,None,None
+RETRIEVAL call to get_post($comment->comment_post_ID) alters data types {'post_meta', 'post', 'wp_post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+STORAGE call to delete_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("wordpress_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("drainware_available_servers", $servers) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("drainware_connectivity_time", time()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wordpress_api_key", $key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("drainware_discard_month", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("drainware_discard_month", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("drainware_show_user_comments_approved", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("drainware_show_user_comments_approved", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("drainware_spam_count", get_option("drainware_spam_count") + $incr) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_comment_meta($comment_id, "drainware_history", $event, false) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|bool).,None,None
+STORAGE call to update_option("drainware_spam_count", get_option("drainware_spam_count") + $incr) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("drainware_available_servers") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_comment_meta($comment_id, "drainware_error") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to add_comment_meta($comment_id, "drainware_rechecking", true) alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_comment_meta($comment_id, "drainware_error") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to delete_comment_meta($comment_id, "drainware_rechecking") alters data types {'comment_meta'}. Passed arguments: 0: $comment_id (int), 1: $meta_key (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

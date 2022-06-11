@@ -1,0 +1,378 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on buddypress-activity-tags
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.406667.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.925367.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.287614.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.618521.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 281 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.906021.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.720730.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.151347.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 91 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.782491.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1794
+Added 1421 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1794
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.195364.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/buddypress-activity-tags/bp-activity-tags.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.182257.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1793 PHP_REACHES edges created
+1794 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 627 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.206051.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.985688.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 29 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.392190.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 6 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.171626.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.188465.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.289420.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.013046.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.039401.
+
+35 PHP_REACHES edges created
+35 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 30 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.149801.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+4 SQL operations to process.
+SELECT item_id, secondary_item_id FROM $bp WHERE component='blogs' AND type='new_blog_post'
+SQL command (SELECT item_id, secondary_item_id FROM $bp WHERE component='blogs' AND type='new_blog_post') cannot be parsed correct.
+SELECT terms.term_id, name FROM $wpdb->get_blog_prefix($a->item_id)term_relationships LEFT JOIN ($wpdb->get_blog_prefix($a->item_id)terms as terms, $wpdb->get_blog_prefix($a->item_id)term_taxonomy as tax) ON (terms.term_id=tax.term_id and $wpdb->get_blog_prefix($a->item_id)term_relationships.term_taxonomy_id=tax.term_taxonomy_id) WHERE tax.taxonomy='post_tag' and object_id=$a
+SQL command (SELECT terms.term_id, name FROM $wpdb->get_blog_prefix($a->item_id)term_relationships LEFT JOIN ($wpdb->get_blog_prefix($a->item_id)terms as terms, $wpdb->get_blog_prefix($a->item_id)term_taxonomy as tax) ON (terms.term_id=tax.term_id and $wpdb->get_blog_prefix($a->item_id)term_relationships.term_taxonomy_id=tax.term_taxonomy_id) WHERE tax.taxonomy='post_tag' and object_id=$a) cannot be parsed correct.
+SELECT * FROM $bp WHERE component='blogs' AND type='new_blog_post'
+SQL command (SELECT * FROM $bp WHERE component='blogs' AND type='new_blog_post') cannot be parsed correct.
+SELECT * FROM $wpdb->get_blog_prefix($activity->item_id)terms as terms LEFT JOIN ($wpdb->get_blog_prefix($activity->item_id)term_relationships as rel, $wpdb->get_blog_prefix($activity->item_id)term_taxonomy as tax) ON (rel.term_taxonomy_id=tax.term_taxonomy_id and tax.taxonomy='post_tag' and terms.term_id=tax.term_id) WHERE rel.object_id=$activity AND terms.name='apply_filters("get_search_query", get_query_var("bptags"))'
+SQL command (SELECT * FROM $wpdb->get_blog_prefix($activity->item_id)terms as terms LEFT JOIN ($wpdb->get_blog_prefix($activity->item_id)term_relationships as rel, $wpdb->get_blog_prefix($activity->item_id)term_taxonomy as tax) ON (rel.term_taxonomy_id=tax.term_taxonomy_id and tax.taxonomy='post_tag' and terms.term_id=tax.term_id) WHERE rel.object_id=$activity AND terms.name='apply_filters("get_search_query", get_query_var("bptags"))') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1290, 1319, 2676, 2750]
+Added 0 SQL nodes. 0 out of 4 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.836456.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_titleapply_filters("widget_title", $instance["title"])$after_title'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("page")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("page")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("page")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_page'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("max")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("max")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("max")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_max'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("orderby")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("orderby")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("orderby")'' cannot be parsed correct.
+HTML code '$'font-size:$this->round($scale_result - $scale_min * $sizemax - $sizemin / $scale_max - $scale_min + $sizemin, 2)$instance_unit;color:$this->getColorByScale($this->round($scale_result - $scale_min * 100 / $scale_max - $scale_min, 2), $colormin, $colormax);'' cannot be parsed correct.
+HTML code '$'$count posts'' cannot be parsed correct.
+HTML code '$'BLOG_ID_CURRENT_SITE/$instance_page/?bptags=urlencode($name)'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("order")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("order")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("order")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("sizemin")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("sizemin")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("sizemin")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_sizemin'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("sizemax")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("sizemax")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("sizemax")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_sizemax'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("unit")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("unit")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("unit")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("colormin")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("colormin")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("colormin")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_colormin'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("colormax")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("colormax")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("colormax")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_colormax'' cannot be parsed correct.
+HTML code '$'There aren\'t new activity with tag apply_filters("get_search_query", get_query_var("bptags"))'' cannot be parsed correct.
+HTML code '$'Recent activity posts with tag'' cannot be parsed correct.
+HTML code '$'apply_filters("get_search_query", get_query_var("bptags"))'' cannot be parsed correct.
+HTML code '$'$activity'' cannot be parsed correct.
+HTML code '$'my_activity_user_link($activity)'' cannot be parsed correct.
+HTML code '$'my_activity_avatar($activity, "type=full&width=100&height=100")'' cannot be parsed correct.
+HTML code '$'$activity'' cannot be parsed correct.
+HTML code '$'$activity'' cannot be parsed correct.
+HTML code '$'<div id="message" class="error fade"><p>'' cannot be parsed correct.
+HTML code '$'</p></div>'' cannot be parsed correct.
+HTML code '$'<div id="message" class="error fade"><p>'' cannot be parsed correct.
+HTML code '$'</p></div>'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'<div class="bp-activity-tags_div">'' cannot be parsed correct.
+HTML code '$'" title="'' cannot be parsed correct.
+HTML code '$'" href="'' cannot be parsed correct.
+HTML code '$'</a>
+				'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$' <span class=\'bp-activity-tags_term\'>'' cannot be parsed correct.
+HTML code '$'</p>
+			</div>
+	    '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:07.993931.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.077419.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 5 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.649158.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running maxdbDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WordPressRetrievalDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running MySQLiDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running VariableDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+bp-activity-tags.php:431
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+bp-activity-tags.php:432
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+bp-activity-tags.php:434
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.940869.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.002960.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 9 nodes as PERSONAL
+In total, tainted 9 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.373577.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:37.657452!
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

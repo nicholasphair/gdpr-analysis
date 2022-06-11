@@ -1,0 +1,458 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on wp-ban-user
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.722446.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.007723.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.203027.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.507266.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 91 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.631480.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.654205.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.090383.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 37 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.986109.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 695
+Added 567 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2010
+Added 1315 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.058968.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-ban-user/wp-ban-user.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.151979.
+
+695 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1315 PHP_REACHES edges created
+2010 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 251 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.934849.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.746304.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 4 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.508464.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 9 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.180168.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.151945.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.061793.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.020191.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.074214.
+
+13 PHP_REACHES edges created
+13 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 4 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.107058.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+9 SQL operations to process.
+CREATE TABLE $wpdbusers_banned (
+                    id bigint(20) unsigned not null auto_increment,
+                    user_type varchar(10) not null default 'public',
+                    user_name varchar(60) not null,
+                    admin_name varchar(60) not null,
+	                admin_notes text null,
+                    PRIMARY KEY (id),
+	                UNIQUE (user_name, user_type)
+	           );
+SQL command (CREATE TABLE $wpdbusers_banned ( id bigint(20) unsigned not null auto_increment, user_type varchar(10) not null default 'public', user_name varchar(60) not null, admin_name varchar(60) not null, admin_notes text null, PRIMARY KEY (id), UNIQUE (user_name, user_type) );) cannot be parsed correct.
+select banned.id as id, banned.user_type as user_type, banned.user_name as user_name, 
+            banned.admin_name as admin_name, banned.admin_notes as admin_notes, users.id as alien_entry 
+            from $wpdbusers_banned as banned left join $wpdbusers as users 
+            on banned.user_name=users.user_login where banned.user_type='private';
+SQL command (select banned.id as id, banned.user_type as user_type, banned.user_name as user_name, banned.admin_name as admin_name, banned.admin_notes as admin_notes, users.id as alien_entry from $wpdbusers_banned as banned left join $wpdbusers as users on banned.user_name=users.user_login where banned.user_type='private';) cannot be parsed correct.
+select banned.id as id, banned.user_type as user_type, banned.user_name as user_name, 
+            banned.admin_name as admin_name, banned.admin_notes as admin_notes, users.id as alien_entry 
+            from $wpdbusers_banned as banned left join $wpdbusers as users 
+            on banned.user_name=users.user_login where banned.user_type='public';
+SQL command (select banned.id as id, banned.user_type as user_type, banned.user_name as user_name, banned.admin_name as admin_name, banned.admin_notes as admin_notes, users.id as alien_entry from $wpdbusers_banned as banned left join $wpdbusers as users on banned.user_name=users.user_login where banned.user_type='public';) cannot be parsed correct.
+select comment_author_IP from $wpdbcomments where comment_author='$comment_author' and user_id!=0;
+SQL command (select comment_author_IP from $wpdbcomments where comment_author='$comment_author' and user_id!=0;) cannot be parsed correct.
+select user_login from $wpdbusers where user_login='$wpdb->escape($_POST["user_name"])';
+SQL command (select user_login from $wpdbusers where user_login='$wpdb->escape($_POST["user_name"])';) cannot be parsed correct.
+INSERT INTO $banned_table (user_type, user_name, admin_name, admin_notes) VALUES ('$wpdb->escape($_POST["user_type"])', '$wpdb->escape($_POST["user_name"])', '$current_user', '$wpdb->escape($_POST["admin_notes"])');
+SQL command (INSERT INTO $banned_table (user_type, user_name, admin_name, admin_notes) VALUES ('$wpdb->escape($_POST["user_type"])', '$wpdb->escape($_POST["user_name"])', '$current_user', '$wpdb->escape($_POST["admin_notes"])');) cannot be parsed correct.
+DELETE FROM $wpdbusers_banned where id=$wpdb->escape($_POST["id"]);
+SQL command (DELETE FROM $wpdbusers_banned where id=$wpdb->escape($_POST["id"]);) cannot be parsed correct.
+select * from $wpdbusers_banned where user_name = '$wpdb->escape($user_name)';
+SQL command (select * from $wpdbusers_banned where user_name = '$wpdb->escape($user_name)';) cannot be parsed correct.
+select * from $wpdbusers_banned where user_name = '$wpdb->escape($author)' and user_type = 'private';
+SQL command (select * from $wpdbusers_banned where user_name = '$wpdb->escape($author)' and user_type = 'private';) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [61, 259, 283, 595, 800, 858, 919, 971, 1100]
+Added 0 SQL nodes. 0 out of 9 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:05.757045.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_bloginfo("wpurl")/wp-content/plugins/wp-ban-user/js/'' cannot be parsed correct.
+HTML code '$'$registered_user'' cannot be parsed correct.
+HTML code '$'wpbu_get_user_ips($registered_user->user_name, "private")'' cannot be parsed correct.
+HTML code '$'$registered_user'' cannot be parsed correct.
+HTML code '$'$registered_user'' cannot be parsed correct.
+HTML code '$'$_SERVER_PHP_SELF'' cannot be parsed correct.
+HTML code '$'plugin_basename()'' cannot be parsed correct.
+HTML code '$'$registered_user'' cannot be parsed correct.
+HTML code '$'$general_user'' cannot be parsed correct.
+HTML code '$'wpbu_get_user_ips($general_user->user_name, "public")'' cannot be parsed correct.
+HTML code '$'$general_user'' cannot be parsed correct.
+HTML code '$'$general_user'' cannot be parsed correct.
+HTML code '$'$_SERVER_PHP_SELF'' cannot be parsed correct.
+HTML code '$'plugin_basename()'' cannot be parsed correct.
+HTML code '$'$general_user'' cannot be parsed correct.
+HTML code '$'$_SERVER_PHP_SELF'' cannot be parsed correct.
+HTML code '$'plugin_basename()'' cannot be parsed correct.
+HTML code '$'";
+-->
+</script>'' cannot be parsed correct.
+HTML code '$'">
+                                        <input type="hidden" name="mode" value="unban" />                        
+                                        <input type="hidden" name="id" value="'' cannot be parsed correct.
+HTML code '$'">
+                                        <input type="hidden" name="mode" value="unban" />                        
+                                        <input type="hidden" name="id" value="'' cannot be parsed correct.
+HTML code '$'">
+        <fieldset class="wpbu">        
+            <table class="form-table wpbu-ft">
+            <tbody>
+                <tr>
+                    <th><label for="user_type">User Type</label></th>
+                    <td class="user-type">    
+                        <select name="user_type">
+                            <option value="public" selected>General User</option>
+                            <option value="private">Registered User</option>
+                        </select>
+                    </td>
+                </tr>                
+                <tr>
+                    <th><label for="user_name">User Name</label></th>
+                    <td><input name="user_name" type="text" />&nbsp;</td>
+                </tr>
+                <tr>
+                    <th><label for="admin_notes">Admin Notes</label></th>
+                    <td><textarea name="admin_notes" rows="2" cols="40" ></textarea></td>
+                </tr>
+                <tr>
+                    <th><input type="submit" name="submit" value="Ban User!" /></th><td></td>
+                </tr>
+            </tbody>
+            </table>
+            
+            <input type="hidden" name="mode" value="ban" />      
+        </fieldset>    
+        </form>
+    
+    </div>
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.832655.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.043751.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.475341.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running HashDetector
+### Start running MsqlDetector
+### Finish running MsqlDetector
+### Start running MySQLDetector
+### Finish running MongoDetector
+### Start running MySQLiDetector
+### Finish running IBMDb2Detector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running MongoDbDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running ArrayElementDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running SqlServerDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running Sqlite3Detector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running PropertyDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressStorageDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running maxdbDetector
+### Start running DeletionDetector
+### Finish running MySQLiDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+wp-ban-user.php:318
+  - Request variable '$_POST["user_name"]' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-ban-user.php:318
+  - Request variable '$_POST["user_name"]' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-ban-user.php:329
+  - Request variable '$_POST["user_name"]' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta 
+
+wp-ban-user.php:193
+  - object property '$registered_user->user_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-ban-user.php:194
+  - object property '$registered_user->user_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-ban-user.php:223
+  - object property '$general_user->user_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-ban-user.php:224
+  - object property '$general_user->user_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta 
+
+wp-ban-user.php:329
+  - variable '$user_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-ban-user.php:336
+  - variable '$user_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-ban-user.php:345
+  - variable '$user_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-ban-user.php:372
+  - variable '$user_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta 
+
+wp-ban-user.php:35
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-ban-user.php:326
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).
+  - Data types: user, user_meta
+wp-ban-user.php:389
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).
+  - Data types: user, user_meta 
+
+By data type:
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+user
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	ArrayElementDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	ArrayElementDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	ArrayElementDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+user_meta
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	ArrayElementDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	ArrayElementDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	ArrayElementDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.803265.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.046171.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 63 nodes as PERSONAL
+In total, tainted 63 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.363741.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:31.173856!
+Request variable '$_POST["user_name"]' of personal types {'user', 'user_meta'} is found.,,None
+Request variable '$_POST["user_name"]' of personal types {'user', 'user_meta'} is found.,,None
+Request variable '$_POST["user_name"]' of personal types {'user', 'user_meta'} is found.,,None
+object property '$registered_user->user_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$registered_user->user_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$general_user->user_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$general_user->user_name' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_name' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_name' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_name' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_name' of personal types {'user', 'user_meta'} is found.,,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

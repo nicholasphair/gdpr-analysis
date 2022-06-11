@@ -1,0 +1,785 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on community-gradebook
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.340212.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.908616.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.178634.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.657803.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 618 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.115841.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.727637.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.107900.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 225 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.961093.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3623
+Added 2778 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3623
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.284801.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/community-gradebook/Community gradebook.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/community-gradebook/files/functions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/community-gradebook/files/Gradebook_instructions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/community-gradebook/files/install.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/community-gradebook/files/ldap.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/community-gradebook/files/Obtain_URL.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/community-gradebook/files/Secure_page.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.854387.
+
+2 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3621 PHP_REACHES edges created
+3623 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1264 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.036875.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:05.291655.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 21 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.141027.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 13 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.174802.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.434805.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.224664.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010383.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035346.
+
+34 PHP_REACHES edges created
+34 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 21 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.132487.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+36 SQL operations to process.
+SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user'
+SQL command (SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user') cannot be parsed correct.
+SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user'
+SQL command (SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user') cannot be parsed correct.
+SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user'
+SQL command (SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user') cannot be parsed correct.
+SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table WHERE Instructor_login = '$current_user' ORDER BY RIGHT(Term,4) DESC
+SQL command (SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table WHERE Instructor_login = '$current_user' ORDER BY RIGHT(Term,4) DESC) cannot be parsed correct.
+SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table ORDER BY RIGHT(Term,4) DESC
+SQL command (SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table ORDER BY RIGHT(Term,4) DESC) cannot be parsed correct.
+SELECT * FROM gradebook WHERE Course_No = '$course_det_1' and Section = 'explode(" - ", $post_sel_course)_2' and Term = 'explode(" - ", $post_sel_course)_0'
+SQL command (SELECT * FROM gradebook WHERE Course_No = '$course_det_1' and Section = 'explode(" - ", $post_sel_course)_2' and Term = 'explode(" - ", $post_sel_course)_0') cannot be parsed correct.
+SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user'
+SQL command (SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user') cannot be parsed correct.
+SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table WHERE Instructor_login = '$current_user' ORDER BY RIGHT(Term,4) DESC
+SQL command (SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table WHERE Instructor_login = '$current_user' ORDER BY RIGHT(Term,4) DESC) cannot be parsed correct.
+SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table ORDER BY RIGHT(Term,4) DESC
+SQL command (SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table ORDER BY RIGHT(Term,4) DESC) cannot be parsed correct.
+SELECT * FROM gradebook WHERE Course_No = '$course_det_1' and Section = 'explode(" - ", $post_sel_course)_2' and Term = 'explode(" - ", $post_sel_course)_0'
+SQL command (SELECT * FROM gradebook WHERE Course_No = '$course_det_1' and Section = 'explode(" - ", $post_sel_course)_2' and Term = 'explode(" - ", $post_sel_course)_0') cannot be parsed correct.
+SELECT * FROM gradebook WHERE Email='$current_user' ORDER BY RIGHT(TERM,4) DESC
+SQL command (SELECT * FROM gradebook WHERE Email='$current_user' ORDER BY RIGHT(TERM,4) DESC) cannot be parsed correct.
+SELECT * FROM gradebook WHERE Course_No = '$course_det_1' and Section = '$course_det_2' and Term = 'explode(" - ", $post_sel_course_std)_0' and Email = '$current_user'
+SQL command (SELECT * FROM gradebook WHERE Course_No = '$course_det_1' and Section = '$course_det_2' and Term = 'explode(" - ", $post_sel_course_std)_0' and Email = '$current_user') cannot be parsed correct.
+SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user'
+SQL command (SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user') cannot be parsed correct.
+SELECT * FROM general_info WHERE Title='Current Term'
+SQL command (SELECT * FROM general_info WHERE Title='Current Term') cannot be parsed correct.
+SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table WHERE Instructor_login = '$current_user' and Term = '$wpdb->get_row($wpdb->prepare("SELECT * FROM general_info WHERE Title=\'Current Term\'"))_Value'
+SQL command (SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table WHERE Instructor_login = '$current_user' and Term = '$wpdb->get_row($wpdb->prepare("SELECT * FROM general_info WHERE Title=\'Current Term\'"))_Value') cannot be parsed correct.
+SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table WHERE Term = '$wpdb->get_row($wpdb->prepare("SELECT * FROM general_info WHERE Title=\'Current Term\'"))_Value'
+SQL command (SELECT Course_No, Course_Title, Section, Instructor_login, Term FROM course_table WHERE Term = '$wpdb->get_row($wpdb->prepare("SELECT * FROM general_info WHERE Title=\'Current Term\'"))_Value') cannot be parsed correct.
+Delete FROM gradebook WHERE Course_No = '$cur_Course_detail_0' and Section = 'explode(" - ", $post_sel_course)_1' and Term = '$_SESSION_Cur_term'
+SQL command (Delete FROM gradebook WHERE Course_No = '$cur_Course_detail_0' and Section = 'explode(" - ", $post_sel_course)_1' and Term = '$_SESSION_Cur_term') cannot be parsed correct.
+INSERT INTO gradebook (Course_No, Section, Email, Term, Data_Title, Data_Value) VALUES ('$cur_Course_det_0', '$cur_Course_det_1', '$email_add', '$_SESSION_Cur_term', '$student_row', '')
+SQL command (INSERT INTO gradebook (Course_No, Section, Email, Term, Data_Title, Data_Value) VALUES ('$cur_Course_det_0', '$cur_Course_det_1', '$email_add', '$_SESSION_Cur_term', '$student_row', '')) cannot be parsed correct.
+SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user'
+SQL command (SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user') cannot be parsed correct.
+SELECT User_login FROM gb_user_table
+SQL command (SELECT User_login FROM gb_user_table) cannot be parsed correct.
+SELECT * FROM general_info WHERE Title='Term List'
+SQL command (SELECT * FROM general_info WHERE Title='Term List') cannot be parsed correct.
+INSERT INTO course_table (CRN, Course_No, Course_Title, Section, Instructor_login, Term) VALUES ('$post_crn', '$post_course_no', '$post_course_title', '$post_course_section', '$_POST_Ins_login', '$_POST_Course_Term')
+SQL command (INSERT INTO course_table (CRN, Course_No, Course_Title, Section, Instructor_login, Term) VALUES ('$post_crn', '$post_course_no', '$post_course_title', '$post_course_section', '$_POST_Ins_login', '$_POST_Course_Term')) cannot be parsed correct.
+SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user'
+SQL command (SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user') cannot be parsed correct.
+INSERT INTO gb_user_table (User_login, User_email, User_role, User_name) VALUES ('$post_login', '$data_0_mail_0', '$_POST_role', '$data_0_cn_0')
+SQL command (INSERT INTO gb_user_table (User_login, User_email, User_role, User_name) VALUES ('$post_login', '$data_0_mail_0', '$_POST_role', '$data_0_cn_0')) cannot be parsed correct.
+SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user'
+SQL command (SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user') cannot be parsed correct.
+SELECT User_login FROM gb_user_table
+SQL command (SELECT User_login FROM gb_user_table) cannot be parsed correct.
+DELETE FROM gb_user_table WHERE User_login ='$_POST_ID'
+SQL command (DELETE FROM gb_user_table WHERE User_login ='$_POST_ID') cannot be parsed correct.
+SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user'
+SQL command (SELECT User_login, User_role FROM gb_user_table WHERE User_login='$current_user') cannot be parsed correct.
+SELECT * FROM general_info
+SQL command (SELECT * FROM general_info) cannot be parsed correct.
+UPDATE general_info SET Value='$_POST_$sel_upd_data' WHERE Title ='$sel_upd_data'
+SQL command (UPDATE general_info SET Value='$_POST_$sel_upd_data' WHERE Title ='$sel_upd_data') cannot be parsed correct.
+SELECT * FROM general_info
+SQL command (SELECT * FROM general_info) cannot be parsed correct.
+INSERT INTO gb_user_table (User_login, User_email, User_role, User_name) VALUES ('$post_login', '$data_0_mail_0', '$_POST_role', '$data_0_cn_0')
+SQL command (INSERT INTO gb_user_table (User_login, User_email, User_role, User_name) VALUES ('$post_login', '$data_0_mail_0', '$_POST_role', '$data_0_cn_0')) cannot be parsed correct.
+INSERT INTO gb_user_table (User_login, User_email, User_role, User_name) VALUES ('$post_login', '$data_0_mail_0', '$_POST_role', '$data_0_cn_0')
+SQL command (INSERT INTO gb_user_table (User_login, User_email, User_role, User_name) VALUES ('$post_login', '$data_0_mail_0', '$_POST_role', '$data_0_cn_0')) cannot be parsed correct.
+DROP TABLE IF EXISTS $table_1
+SQL command (DROP TABLE IF EXISTS $table_1) cannot be parsed correct.
+$sql_1
+SQL command ($sql_1) cannot be parsed correct.
+$insert_sql_2
+SQL command ($insert_sql_2) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [65, 210, 482, 528, 549, 723, 989, 1035, 1056, 1325, 1785, 1900, 2063, 2109, 2123, 2151, 2581, 2704, 2862, 2894, 2908, 3139, 3212, 3355, 3434, 3466, 3543, 3586, 3618, 3655, 3689, 4026, 4084, 4349, 4515, 4574]
+Added 0 SQL nodes. 0 out of 36 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:10.881794.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$Cur_course - $Cur_course - $Cur_course - $Cur_course'' cannot be parsed correct.
+HTML code '$'$Cur_course - $Cur_course - $Cur_course - $Cur_course'' cannot be parsed correct.
+HTML code '$'<script langauge="javascript">alert("explode("]", $obt_name1[1])");</script'' cannot be parsed correct.
+HTML code '$'<link type="text/css" rel="stylesheet" href="get_bloginfo("wpurl")/wp-content/plugins/Simple Gradebook/files/table.css" /
+'' cannot be parsed correct.
+HTML code '$'$Cur_course - $Cur_course - $Cur_course - $Cur_course'' cannot be parsed correct.
+HTML code '$'$Cur_course - $Cur_course - $Cur_course - $Cur_course'' cannot be parsed correct.
+HTML code '$'<link type="text/css" rel="stylesheet" href="get_bloginfo("wpurl")/wp-content/plugins/Simple Gradebook/files/table.css" /
+'' cannot be parsed correct.
+HTML code '$'<td><b>explode(",", $Grades->Data_Title)_0</b></td>'' cannot be parsed correct.
+HTML code '$'<td><right>explode(",", $Grades->Data_Value)_0</td>'' cannot be parsed correct.
+HTML code '$'<link type="text/css" rel="stylesheet" href="get_bloginfo("wpurl")/wp-content/plugins/Simple Gradebook/files/table.css" /
+'' cannot be parsed correct.
+HTML code '$'$User_course - $User_course - $User_course'' cannot be parsed correct.
+HTML code '$'<br></br><b><i><u>Grades for $_POST_Sel_Course_Std"</u></i></b><br></br><br></br'' cannot be parsed correct.
+HTML code '$'$Cur_course - $Cur_course - $Cur_course'' cannot be parsed correct.
+HTML code '$'$Cur_course - $Cur_course - $Cur_course'' cannot be parsed correct.
+HTML code '$'$data'' cannot be parsed correct.
+HTML code '$'$ins_log_data'' cannot be parsed correct.
+HTML code '$'explode("/", $Term_list->Value)_0'' cannot be parsed correct.
+HTML code '$'$sel_data'' cannot be parsed correct.
+HTML code '$'$sel_data'' cannot be parsed correct.
+HTML code '$'$sel_data'' cannot be parsed correct.
+HTML code '$'# Dump of $table 
+'' cannot be parsed correct.
+HTML code '$'<br></br>Error dropping <b>$table_1</b>'' cannot be parsed correct.
+HTML code '$'<br></br><b>$table_1</b> has been dropped'' cannot be parsed correct.
+HTML code '$'<br></br><b>$table_1</b> does not exist in the Database'' cannot be parsed correct.
+HTML code '$'<br></br><b>$table_1 </b>already exists in the Database'' cannot be parsed correct.
+HTML code '$'<br></br><b>$table_1 </b>has been Successfully created'' cannot be parsed correct.
+HTML code '$'<br></br>Error creating <b>$table_1</b>'' cannot be parsed correct.
+HTML code '$'<b>Send Email Notification</b><br></br>'' cannot be parsed correct.
+HTML code '$'You have to be logged in to view this page'' cannot be parsed correct.
+HTML code '$'You have to be logged in to view this page'' cannot be parsed correct.
+HTML code '$'<br></br><b>View Student Grades</b><br></br>'' cannot be parsed correct.
+HTML code '$'Please select a course'' cannot be parsed correct.
+HTML code '$'No grades have been recorded for this class'' cannot be parsed correct.
+HTML code '$'<tr style="font-family: Arial; font-size: 12pt;">'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table></div>'' cannot be parsed correct.
+HTML code '$'No grades have been recorded for this class'' cannot be parsed correct.
+HTML code '$'<br><br></br></br><b>You have no recorded Grades</b><br></br>'' cannot be parsed correct.
+HTML code '$'<br></br><b>View Grade</b><br></br>'' cannot be parsed correct.
+HTML code '$'Please select a course'' cannot be parsed correct.
+HTML code '$'<div style="width:auto;height:auto;overflow:auto;">'' cannot be parsed correct.
+HTML code '$'<table class="gb_class" style="width:auto;height:auto;">'' cannot be parsed correct.
+HTML code '$'<br></br><b>&nbsp;Upload Grades</b><br></br>'' cannot be parsed correct.
+HTML code '$'All fields are required'' cannot be parsed correct.
+HTML code '$'There is already course with this same CRN no'' cannot be parsed correct.
+HTML code '$'<br></br><b>Add User/Role</b><br></br>'' cannot be parsed correct.
+HTML code '$'<form action="" method="post" name="user_table" enctype="multipart/form-data"><table>
+				<tr><td>User ID:</td>
+					<td><input type="text" name="login"></td></tr>
+				<tr><td>User Role</td>
+					<td> <SELECT name="role" style="width:220px"><OPTION>Select</OPTION>
+					     <OPTION>Administrator</OPTION>
+						 <OPTION>Faculty</OPTION>
+						 <OPTION>Teacher Assistant</OPTION></SELECT></td></tr>
+				<tr><td></td>
+					<td><input type="submit" name="submit" value="Add"></td></tr>
+				</table></form>'' cannot be parsed correct.
+HTML code '$'AccessNet ID field cannot be blank and User Role cannot be Select'' cannot be parsed correct.
+HTML code '$'Invalid Access.NET ID'' cannot be parsed correct.
+HTML code '$'User has been already added'' cannot be parsed correct.
+HTML code '$'<br></br><b>Delete User</b><br></br>'' cannot be parsed correct.
+HTML code '$'Please Select a user to delete'' cannot be parsed correct.
+HTML code '$'<br></br><b>Edit General Information</b><br></br>'' cannot be parsed correct.
+HTML code '$'<br></br><b>Add Courses</b><br></br>'' cannot be parsed correct.
+HTML code '$'Invalid User ID'' cannot be parsed correct.
+HTML code '$'User has been already added'' cannot be parsed correct.
+HTML code '$'<div class="wrap"><form action="" method="post">'' cannot be parsed correct.
+HTML code '$'<h1> <center>Gradebook Database Management</center></h1>'' cannot be parsed correct.
+HTML code '$'<br><br><h2>Note</h2>'' cannot be parsed correct.
+HTML code '$'<ul><li><b>Only the main administrators of the site will be able to view this page.</b></li>'' cannot be parsed correct.
+HTML code '$'<li><b>These options are visible only on the dashboard of the main site.</b></li>'' cannot be parsed correct.
+HTML code '$'<li><b>This plugin is compatible with wordpress multi-site as well as regular site.</b></li>'' cannot be parsed correct.
+HTML code '$'<li><b>The gradebook plugin database has to be installed only once whether multi-site or regular, but it needs to installed before the first use.</b></li>'' cannot be parsed correct.
+HTML code '$'<li><b>See below for instructions on how to install the database.</b></li>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<br><br><h2>Instructions</h2>'' cannot be parsed correct.
+HTML code '$'<ul><li><b>Installation is pretty simple, just hit the install button on this screen and it will be installed (needs to be done only once whether multi-site or not).</b></li>'' cannot be parsed correct.
+HTML code '$'<li><b>When uninstalling this plugin, before you deactivate make sure to uninstall the database by clicking the uninstall button on this screen (this action is not reversible and you will lose all the gradebook data so make sure you want uninstall and make a backup of the database as well).</b></li>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<br><br></br></br>'' cannot be parsed correct.
+HTML code '$'<br><br><h3>Install</h3>'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="Install" id="Install" value="Install" tabindex="32"  />'' cannot be parsed correct.
+HTML code '$' Click Here to install the Database'' cannot be parsed correct.
+HTML code '$'<br><br></br>'' cannot be parsed correct.
+HTML code '$'<br><br><h3>Uninstall</h3>'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="Uninstall" id="Uninstall" value="Uninstall" tabindex="32"  />'' cannot be parsed correct.
+HTML code '$' Click Here to Uninstall the Database<br></br>'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="Uninstall_with_backup" id="Uninstall_with_backup" value="Backup and Uninstall" tabindex="32"  />'' cannot be parsed correct.
+HTML code '$' Click Here to Backup the Gradebook Database and then Uninstall <b>(Recommended)</b>'' cannot be parsed correct.
+HTML code '$'</form></div>'' cannot be parsed correct.
+HTML code '$'<br></br><b>Add User/Role</b><br></br>'' cannot be parsed correct.
+HTML code '$'<form action="" method="post" name="user_table" enctype="multipart/form-data"><table>
+			<tr><td>User ID:</td>
+				<td><input type="text" name="login"></td></tr>
+			<tr><td>User Role</td>
+				<td> <SELECT name="role" style="width:220px"><OPTION>Select</OPTION>
+				     <OPTION>Administrator</OPTION>
+					 <OPTION>Faculty</OPTION>
+					 <OPTION>Teacher Assistant</OPTION></SELECT></td></tr>
+			<tr><td></td>
+				<td><input type="submit" name="submit" value="Add"></td></tr>
+		</table></form>'' cannot be parsed correct.
+HTML code '$'AccessNet ID field cannot be blank and User Role cannot be Select'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:01:10.681320.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.069452.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 1 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.366145.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running CubridDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PHPIncludedDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PropertyDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PHPRetrievalDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running WordPressStorageDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running MySQLiDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+Error in GenericDatabaseUsageDetector:
+### Finish running WordPressRetrievalDetector
+### Finish running VariableDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+files/functions.php:169
+  - Request variable '$_POST["email_subj"]' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:170
+  - Request variable '$_POST["email_message"]' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:171
+  - Request variable '$_POST["email_col"]' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:394
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+files/functions.php:431
+  - RETRIEVAL call to fgetcsv($handle, 0, ",").
+  - Data types: file 
+
+files/functions.php:286
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:314
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+files/functions.php:169
+  - variable '$post_email_subj' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:170
+  - variable '$post_email_msg' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:171
+  - variable '$post_email_col' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:175
+  - variable '$post_email_col' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:181
+  - variable '$post_email_subj' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:183
+  - variable '$post_email_msg' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:186
+  - variable '$email_subject' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:186
+  - variable '$post_email_subj' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:187
+  - variable '$email_message' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:187
+  - variable '$post_email_msg' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:192
+  - variable '$email_address_val' of personal types {'email', 'address'} is found.
+  - Data types: email, address
+files/functions.php:192
+  - variable '$email_address_val' of personal types {'email', 'address'} is found.
+  - Data types: email, address
+files/functions.php:207
+  - variable '$post_email_col' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:228
+  - variable '$post_email_col' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:237
+  - variable '$email_subject' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:241
+  - variable '$email_subject' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:241
+  - variable '$post_email_subj' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:245
+  - variable '$email_message' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:249
+  - variable '$email_message' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:249
+  - variable '$post_email_msg' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:254
+  - variable '$email_subject' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:254
+  - variable '$post_email_subj' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:255
+  - variable '$email_message' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:255
+  - variable '$post_email_msg' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:257
+  - variable '$email_subject' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:257
+  - variable '$email_message' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:394
+  - variable '$post_email' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:400
+  - variable '$post_email' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:420
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:440
+  - variable '$post_email' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:442
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:443
+  - variable '$email_id' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:447
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:455
+  - variable '$email_add' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:455
+  - variable '$email_id' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:463
+  - variable '$email_add' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:466
+  - variable '$email_add' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:470
+  - variable '$email_add' of personal types {'email'} is found.
+  - Data types: email
+files/functions.php:476
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+files/ldap.php:15
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+files/ldap.php:32
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user 
+
+Community gradebook.php:24
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/Gradebook_instructions.php:6
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/functions.php:21
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/functions.php:120
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/functions.php:280
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/functions.php:352
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/functions.php:498
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/functions.php:575
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/functions.php:635
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/functions.php:681
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user
+files/install.php:36
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).
+  - Data types: user_meta, user 
+
+By data type:
+address
+	VariableDetector.(unknown) - {'email', 'address'}
+	VariableDetector.(unknown) - {'email', 'address'}
+email
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email', 'address'}
+	ArrayElementDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email', 'address'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+file
+	PHPRetrievalDetector.fgetcsv($handle, 0, ",") - {'file'}
+user
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+user_meta
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.299334.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.148784.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 183 nodes as PERSONAL
+In total, tainted 183 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:04.614584.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:02:00.981727!
+Request variable '$_POST["email_subj"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["email_message"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["email_col"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+RETRIEVAL call to fgetcsv($handle, 0, ",").,None,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+variable '$post_email_subj' of personal types {'email'} is found.,,None
+variable '$post_email_msg' of personal types {'email'} is found.,,None
+variable '$post_email_col' of personal types {'email'} is found.,,None
+variable '$post_email_col' of personal types {'email'} is found.,,None
+variable '$post_email_subj' of personal types {'email'} is found.,,None
+variable '$post_email_msg' of personal types {'email'} is found.,,None
+variable '$email_subject' of personal types {'email'} is found.,,None
+variable '$post_email_subj' of personal types {'email'} is found.,,None
+variable '$email_message' of personal types {'email'} is found.,,None
+variable '$post_email_msg' of personal types {'email'} is found.,,None
+variable '$email_address_val' of personal types {'email', 'address'} is found.,,None
+variable '$email_address_val' of personal types {'email', 'address'} is found.,,None
+variable '$post_email_col' of personal types {'email'} is found.,,None
+variable '$post_email_col' of personal types {'email'} is found.,,None
+variable '$email_subject' of personal types {'email'} is found.,,None
+variable '$post_email_subj' of personal types {'email'} is found.,,None
+variable '$email_subject' of personal types {'email'} is found.,,None
+variable '$email_message' of personal types {'email'} is found.,,None
+variable '$email_message' of personal types {'email'} is found.,,None
+variable '$post_email_msg' of personal types {'email'} is found.,,None
+variable '$email_subject' of personal types {'email'} is found.,,None
+variable '$post_email_subj' of personal types {'email'} is found.,,None
+variable '$email_message' of personal types {'email'} is found.,,None
+variable '$post_email_msg' of personal types {'email'} is found.,,None
+variable '$email_message' of personal types {'email'} is found.,,None
+variable '$email_subject' of personal types {'email'} is found.,,None
+variable '$post_email' of personal types {'email'} is found.,,None
+variable '$post_email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$post_email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email_id' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email_id' of personal types {'email'} is found.,,None
+variable '$email_add' of personal types {'email'} is found.,,None
+variable '$email_add' of personal types {'email'} is found.,,None
+variable '$email_add' of personal types {'email'} is found.,,None
+variable '$email_add' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user_meta', 'user'}. Returns (bool|WP_User).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,794 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on smart-id
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.550171.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.073105.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.183968.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.643381.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 258 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.720727.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 20 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.909568.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.085999.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 106 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.565944.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2242
+Added 1857 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2443
+Added 201 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.253153.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/api_manual_setup.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/eideasyOptions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/eideasyTemplate.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/iframe_break_free_errorhandler.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/logincommon.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/securelogin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/smart-id.php' cannot be parsed correct.
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/terms.html
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/terms.html' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/functions/eideasyLog.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/templates/checkbox-template.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/smart-id/templates/login-button-template.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.301534.
+
+2 Nodes Created
+1 REACHES edges created
+258 PHP_REACHES edges created
+20 CALLS edges created
+1000 PHP_REACHES edges created
+1963 PHP_REACHES edges created
+201 PHP_REACHES edges created
+1 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2445 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 733 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.286426.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.620409.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 41 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.878961.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 62 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.156360.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.187130.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.553929.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018559.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.057664.
+
+103 PHP_REACHES edges created
+103 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 41 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.109703.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+8 SQL operations to process.
+CREATE TABLE $prefixidcard_users (
+                id mediumint(9) NOT NULL AUTO_INCREMENT,                
+                firstname tinytext NOT NULL,
+                lastname tinytext NOT NULL,
+                identitycode VARCHAR(21) NOT NULL,
+                userid bigint(20) unsigned NOT NULL,
+                created_at datetime NOT NULL,
+		        access_token VARCHAR(32),
+                UNIQUE KEY id (id),
+                UNIQUE KEY identitycode (identitycode)
+                  );
+SQL command (CREATE TABLE $prefixidcard_users ( id mediumint(9) NOT NULL AUTO_INCREMENT, firstname tinytext NOT NULL, lastname tinytext NOT NULL, identitycode VARCHAR(21) NOT NULL, userid bigint(20) unsigned NOT NULL, created_at datetime NOT NULL, access_token VARCHAR(32), UNIQUE KEY id (id), UNIQUE KEY identitycode (identitycode) );) cannot be parsed correct.
+select * from $prefixidcard_users WHERE identitycode=$country_$result_idcode
+select * from $prefixidcard_users WHERE identitycode=$country_$result_idcode
+SQL command (select * from $prefixidcard_users WHERE identitycode=$country_$result_idcode) cannot be parsed correct.
+select * from $prefixidcard_users WHERE identitycode=$result_idcode
+select * from $prefixidcard_users WHERE identitycode=$result_idcode
+SQL command (select * from $prefixidcard_users WHERE identitycode=$result_idcode) cannot be parsed correct.
+select * from $prefixidcard_users WHERE userid=wp_get_current_user()
+select * from $prefixidcard_users WHERE userid=wp_get_current_user()
+SQL command (select * from $prefixidcard_users WHERE userid=wp_get_current_user()) cannot be parsed correct.
+select * from $prefixidcard_users WHERE userid=wp_get_current_user()
+select * from $prefixidcard_users WHERE userid=wp_get_current_user()
+SQL command (select * from $prefixidcard_users WHERE userid=wp_get_current_user()) cannot be parsed correct.
+select * from $prefixidcard_users WHERE identitycode=sanitize_text_field($_POST["smartid_user_idcode"])
+select * from $prefixidcard_users WHERE identitycode=sanitize_text_field($_POST["smartid_user_idcode"])
+SQL command (select * from $prefixidcard_users WHERE identitycode=sanitize_text_field($_POST["smartid_user_idcode"])) cannot be parsed correct.
+select * from $prefixidcard_users WHERE userid=$userId
+select * from $prefixidcard_users WHERE userid=$userId
+SQL command (select * from $prefixidcard_users WHERE userid=$userId) cannot be parsed correct.
+select * from $prefixidcard_users WHERE userid=wp_get_current_user()
+select * from $prefixidcard_users WHERE userid=wp_get_current_user()
+SQL command (select * from $prefixidcard_users WHERE userid=wp_get_current_user()) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [3730, 1530, 1562, 1760, 2068, 2281, 2492, 2657]
+Added 0 SQL nodes. 0 out of 8 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.849059.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'httpshttp://$_SERVER_HTTP_HOST$_SERVER_REQUEST_URI'' cannot be parsed correct.
+HTML code '$'eideasyTemplate(eideasyTemplateFiles()["checkbox-template"], ["label" => "Disable automatic registration. In this case admin must add idcode to each user manually to allow ID card login.", "name" => "smartid_registration_disabled", "id" => "smartid_registration_disabled", "checked" => get_option("smartid_registration_disabled")])'' cannot be parsed correct.
+HTML code '$'eideasyTemplate(eideasyTemplateFiles()["checkbox-template"], ["label" => "No accounts are created nor any users are logged in.", "name" => "eideasy_only_identify", "id" => "eideasy_only_identify", "checked" => get_option("eideasy_only_identify")])'' cannot be parsed correct.
+HTML code '$'eideasyTemplate(eideasyTemplateFiles()["checkbox-template"], ["label" => $method["label"], "name" => $method["inputName"], "id" => $method["label"], "checked" => get_option($method["optionName"])])'' cannot be parsed correct.
+HTML code '$'eideasyTemplate(eideasyTemplateFiles()["checkbox-template"], ["label" => "Enable debug mode. Sends login progress to server if there are login issues.", "name" => "smartid_debug_mode", "id" => "smartid_debug_mode", "checked" => get_option("smartid_debug_mode")])'' cannot be parsed correct.
+HTML code '$'home_url()'' cannot be parsed correct.
+HTML code '$'httpshttp://$_SERVER_HTTP_HOST$_SERVER_REQUEST_URI'' cannot be parsed correct.
+HTML code '$'get_option("smartid_client_id")'' cannot be parsed correct.
+HTML code '$'get_option("smartid_secret")'' cannot be parsed correct.
+HTML code '$'get_option("smartid_redirect_uri", home_url())'' cannot be parsed correct.
+HTML code '$'get_admin_url(null, "admin.php?page=eid-easy-settings")'' cannot be parsed correct.
+HTML code '$'<div style="margin:auto" align="center"></div>'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'apply_filters($filterName, "<img class="login-middle-w" src="" . esc_url($imageSrc) . """)'' cannot be parsed correct.
+HTML code '$'<h1> eID Easy </h1>'' cannot be parsed correct.
+HTML code '$'"> eID
+                            Easy Settings </a> to activate.
+                    </p>
+                </div>
+               '' cannot be parsed correct.
+HTML code '$'"
+    id="'' cannot be parsed correct.
+HTML code '$'"
+    class="column-cb"
+    value="yes"
+    '' cannot be parsed correct.
+HTML code '$'>
+<label for='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</label>
+'' cannot be parsed correct.
+HTML code '$'"
+    class="login-button"
+>
+    '' cannot be parsed correct.
+HTML code '$'</div>
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.760383.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.066720.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 8 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.639361.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PropertyDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running PHPStorageDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running MySQLiDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running UserInputDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+logincommon.php:9
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+logincommon.php:13
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+logincommon.php:18
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+logincommon.php:18
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+logincommon.php:25
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+logincommon.php:26
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+logincommon.php:59
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+logincommon.php:72
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+logincommon.php:74
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+logincommon.php:83
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+logincommon.php:95
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+logincommon.php:97
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+logincommon.php:111
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+securelogin.php:50
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+securelogin.php:52
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+securelogin.php:53
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+securelogin.php:55
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+securelogin.php:58
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+securelogin.php:58
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+securelogin.php:59
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+securelogin.php:59
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+securelogin.php:61
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+securelogin.php:61
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country 
+
+functions/eideasyLog.php:8
+  - API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote
+smart-id.php:392
+  - API call to wp_remote_post($url, ["headers" => $headers, "body" => $bodyParams]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+smart-id.php:397
+  - API call to wp_remote_get($url, ["headers" => $headers]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+admin.php:28
+  - RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:81
+  - RETRIEVAL call to get_option("smartid_registration_disabled") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:91
+  - RETRIEVAL call to get_option("eideasy_only_identify") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:108
+  - RETRIEVAL call to get_option($method["optionName"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:127
+  - RETRIEVAL call to get_option("smartid_debug_mode") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+api_manual_setup.php:29
+  - RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+api_manual_setup.php:37
+  - RETRIEVAL call to get_option("smartid_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+api_manual_setup.php:45
+  - RETRIEVAL call to get_option("smartid_redirect_uri", home_url()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+functions/eideasyLog.php:4
+  - RETRIEVAL call to get_option("smartid_debug_mode") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+logincommon.php:15
+  - RETRIEVAL call to get_option("smartid_registration_disabled") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+logincommon.php:29
+  - RETRIEVAL call to get_option("default_role") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+logincommon.php:60
+  - RETRIEVAL call to get_option("default_role") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+securelogin.php:9
+  - RETRIEVAL call to get_option("eideasy_only_identify") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+securelogin.php:15
+  - RETRIEVAL call to get_option("eideasy_only_identify") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+securelogin.php:22
+  - RETRIEVAL call to get_option("smartid_debug_mode") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+securelogin.php:23
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+securelogin.php:41
+  - RETRIEVAL call to get_option("smartid_registration_disabled") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+securelogin.php:69
+  - RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+securelogin.php:70
+  - RETRIEVAL call to get_option("smartid_redirect_uri") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+securelogin.php:71
+  - RETRIEVAL call to get_option("smartid_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+securelogin.php:92
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+securelogin.php:100
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+securelogin.php:103
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+smart-id.php:159
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+smart-id.php:180
+  - RETRIEVAL call to get_option("smartid_redirect_uri") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:182
+  - RETRIEVAL call to get_option("eideasy_only_identify") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:198
+  - RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:232
+  - RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:239
+  - RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:264
+  - RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:270
+  - RETRIEVAL call to get_option($method) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:278
+  - RETRIEVAL call to get_option("smartid_redirect_uri") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:279
+  - RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:310
+  - RETRIEVAL call to get_option($method["optionName"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:367
+  - RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:409
+  - RETRIEVAL call to get_option($value) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+smart-id.php:441
+  - RETRIEVAL call to dbDelta($sqlCreate). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+admin.php:32
+  - STORAGE call to update_option($method["optionName"], true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:34
+  - STORAGE call to update_option($method["optionName"], false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:39
+  - STORAGE call to update_option("smartid_debug_mode", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:41
+  - STORAGE call to update_option("smartid_debug_mode", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:46
+  - STORAGE call to update_option("smartid_registration_disabled", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:48
+  - STORAGE call to update_option("smartid_registration_disabled", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:53
+  - STORAGE call to update_option("eideasy_only_identify", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:55
+  - STORAGE call to update_option("eideasy_only_identify", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+api_manual_setup.php:12
+  - STORAGE call to update_option("smartid_client_id", sanitize_text_field($_POST["client_id"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+api_manual_setup.php:13
+  - STORAGE call to update_option("smartid_secret", sanitize_text_field($_POST["client_secret"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+api_manual_setup.php:14
+  - STORAGE call to update_option("smartid_redirect_uri", sanitize_text_field($_POST["redirect_uri"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+logincommon.php:68
+  - STORAGE call to wp_insert_user($user_data) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).
+  - Data types: user, user_meta
+smart-id.php:418
+  - STORAGE call to add_option($value, true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+smart-id.php:72
+  - Data from table $prefixidcard_users deleted: "$wpdb->delete($table_name, ["identitycode" => $idcode])"
+smart-id.php:76
+  - Data from table $prefixidcard_users deleted: "$wpdb->delete($table_name, ["userid" => $user_id])"
+smart-id.php:153
+  - Data from table $prefixidcard_users deleted: "$wpdb->delete($prefix . "idcard_users", ["userid" => $user_id])" 
+
+By data type:
+country
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+none
+	WordPressRetrievalDetector.dbDelta($sqlCreate) - set()
+	DeletionDetector.$wpdb->delete($prefix . "idcard_users", ["userid" => $user_id]) - set()
+	DeletionDetector.$wpdb->delete($table_name, ["identitycode" => $idcode]) - set()
+	DeletionDetector.$wpdb->delete($table_name, ["userid" => $user_id]) - set()
+option
+	WordPressRetrievalDetector.get_option("eideasy_only_identify") - {'option'}
+	WordPressStorageDetector.add_option($value, true) - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_redirect_uri", home_url()) - {'option'}
+	WordPressRetrievalDetector.get_option($value) - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_debug_mode") - {'option'}
+	WordPressStorageDetector.update_option("smartid_client_id", sanitize_text_field($_POST["client_id"])) - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_client_id") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_secret") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_redirect_uri") - {'option'}
+	WordPressStorageDetector.update_option("eideasy_only_identify", true) - {'option'}
+	WordPressRetrievalDetector.get_option("eideasy_only_identify") - {'option'}
+	WordPressStorageDetector.update_option("eideasy_only_identify", false) - {'option'}
+	WordPressStorageDetector.update_option("smartid_debug_mode", true) - {'option'}
+	WordPressStorageDetector.update_option("smartid_registration_disabled", false) - {'option'}
+	WordPressStorageDetector.update_option("smartid_secret", sanitize_text_field($_POST["client_secret"])) - {'option'}
+	WordPressStorageDetector.update_option("smartid_redirect_uri", sanitize_text_field($_POST["redirect_uri"])) - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_client_id") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_client_id") - {'option'}
+	WordPressStorageDetector.update_option("smartid_debug_mode", false) - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_redirect_uri") - {'option'}
+	WordPressStorageDetector.update_option("smartid_registration_disabled", true) - {'option'}
+	WordPressRetrievalDetector.get_option($method["optionName"]) - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_client_id") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_client_id") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_client_id") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_client_id") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_debug_mode") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_client_id") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_registration_disabled") - {'option'}
+	WordPressRetrievalDetector.get_option($method["optionName"]) - {'option'}
+	WordPressRetrievalDetector.get_option("default_role") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_redirect_uri") - {'option'}
+	WordPressRetrievalDetector.get_option("eideasy_only_identify") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_debug_mode") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_secret") - {'option'}
+	WordPressRetrievalDetector.get_option($method) - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_registration_disabled") - {'option'}
+	WordPressStorageDetector.update_option($method["optionName"], false) - {'option'}
+	WordPressRetrievalDetector.get_option("eideasy_only_identify") - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_client_id") - {'option'}
+	WordPressStorageDetector.update_option($method["optionName"], true) - {'option'}
+	WordPressRetrievalDetector.get_option("smartid_registration_disabled") - {'option'}
+	WordPressRetrievalDetector.get_option("default_role") - {'option'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+user
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.wp_insert_user($user_data) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressStorageDetector.wp_insert_user($user_data) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.980688.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 377 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.398834.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1683
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 2065
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 2627
+377 STORE_REACHES edges created
+377 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 156 nodes as PERSONAL
+In total, tainted 156 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:04.947512.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:46.938052!
+Data from table $prefixidcard_users deleted: "$wpdb->delete($prefix . "idcard_users", ["userid" => $user_id])",None,None
+Data from table $prefixidcard_users deleted: "$wpdb->delete($table_name, ["identitycode" => $idcode])",None,None
+Data from table $prefixidcard_users deleted: "$wpdb->delete($table_name, ["userid" => $user_id])",None,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,['https://id.eideasy.com/confirm_progress?message=', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/', 'https://id.eideasy.com/']
+API call to wp_remote_post($url, ["headers" => $headers, "body" => $bodyParams]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://id.eideasy.com/']
+API call to wp_remote_get($url, ["headers" => $headers]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://id.eideasy.com/']
+RETRIEVAL call to get_option($method["optionName"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_debug_mode") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_registration_disabled") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("eideasy_only_identify") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_redirect_uri", home_url()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_debug_mode") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_registration_disabled") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("default_role") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("default_role") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("eideasy_only_identify") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_debug_mode") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("smartid_registration_disabled") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_redirect_uri") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("eideasy_only_identify") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("smartid_redirect_uri") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("eideasy_only_identify") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($method) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_redirect_uri") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($method["optionName"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("smartid_client_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($value) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sqlCreate). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to update_option($method["optionName"], true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($method["optionName"], false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smartid_debug_mode", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smartid_debug_mode", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smartid_registration_disabled", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smartid_registration_disabled", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("eideasy_only_identify", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("eideasy_only_identify", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smartid_client_id", sanitize_text_field($_POST["client_id"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smartid_secret", sanitize_text_field($_POST["client_secret"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("smartid_redirect_uri", sanitize_text_field($_POST["redirect_uri"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_insert_user($user_data) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).,None,None
+STORAGE call to add_option($value, true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] WP User info of types (['user', 'email', 'country', 'user_meta']) stored through WordPress function "wp_insert_user($user_data)", found in file logincommon.php at line 68. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party at "https://id.eideasy.com/confirm_progress?message=" used with data types ['email', 'user', 'country', 'user_meta'], found in file functions/eideasyLog.php at line 8 . Personal data flows from sources with nodeID [1889, 1892, 1028, 1337, 1865, 1899, 1147, 1297, 1842, 1105, 1875, 1686, 1368, 1913, 1882, 1915]  
+
+[third_party] Third party at "https://id.eideasy.com/" used with data types ['email', 'user', 'country', 'user_meta'], found in file functions/eideasyLog.php at line 8 . Personal data flows from sources with nodeID [1889, 1892, 1028, 1337, 1865, 1899, 1147, 1297, 1842, 1105, 1875, 1686, 1368, 1913, 1882, 1915]  
+
+[third_party] Third party usage is CONFIRMED for data types ['country', 'email', 'user', 'user_meta'] 
+
+[encryption] API call that sends PII to "https://id.eideasy.com/confirm_progress?message=" uses https. PII is insecurely encrypted with []. Found in file functions/eideasyLog.php at line 8 
+
+[encryption] API call that sends PII to "https://id.eideasy.com/" uses https. PII is insecurely encrypted with []. Found in file functions/eideasyLog.php at line 8 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? True 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+No findings

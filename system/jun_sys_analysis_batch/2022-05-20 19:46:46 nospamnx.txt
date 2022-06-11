@@ -1,0 +1,528 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on nospamnx
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.404659.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.000470.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 86 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.441705.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.387380.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 386 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.709597.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.622514.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.097182.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 167 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.090968.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2239
+Added 1600 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2239
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.071967.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/nospamnx/nospamnx.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.222147.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2239 PHP_REACHES edges created
+2239 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 824 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.024432.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.175388.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 18 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.055551.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 21 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.232738.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.030060.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.164841.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007815.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.039932.
+
+39 PHP_REACHES edges created
+39 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 60 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.122494.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.127468.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<input type="text" name="nxts" value="time()" /'' cannot be parsed correct.
+HTML code '$'<input type="text" name="nxts_signed" value="sha1($time . $this->nospamnx_salt)" /'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_nospamnx_names_nospamnx-1" value="" />'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_nospamnx_names_nospamnx-2" value="$this_nospamnx_names_nospamnx-2-value" /'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_nospamnx_names_nospamnx-2" value="$this_nospamnx_names_nospamnx-2-value" /'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_nospamnx_names_nospamnx-1" value="" />'' cannot be parsed correct.
+HTML code '$'<div id=\'message\' class=\'updated\'><p>$message</p></div>'' cannot be parsed correct.
+HTML code '$'<div id=\'message\' class=\'error\'><p>$message</p></div>'' cannot be parsed correct.
+HTML code '$'NoSpamNX Settings'' cannot be parsed correct.
+HTML code '$'Statistic'' cannot be parsed correct.
+HTML code '$'wp_create_nonce("nospamnx-nonce")'' cannot be parsed correct.
+HTML code '$'Are you sure you want to reset the counter?'' cannot be parsed correct.
+HTML code '$'Reset'' cannot be parsed correct.
+HTML code '$'Operating mode'' cannot be parsed correct.
+HTML code '$'By default all Spambots are marked as Spam, but the recommended Mode is "block". If you are uncertain what will be blocked, select "Mark as Spam" at first and switch to "block" later on.'' cannot be parsed correct.
+HTML code '$'wp_create_nonce("nospamnx-nonce")'' cannot be parsed correct.
+HTML code '$'Mode'' cannot be parsed correct.
+HTML code '$'Block (recommended)'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'Mark as Spam'' cannot be parsed correct.
+HTML code '$'Save'' cannot be parsed correct.
+HTML code '$'Blacklist'' cannot be parsed correct.
+HTML code '$'By default the Entries in the Blacklist will match Substrings (e.g. \'foobar\' will match, if you have \'foo\' in your Blacklist). Uncheck the following Option to only match exact words.'' cannot be parsed correct.
+HTML code '$'wp_create_nonce("nospamnx-nonce")'' cannot be parsed correct.
+HTML code '$'Match Substrings'' cannot be parsed correct.
+HTML code '$'Local Blacklist'' cannot be parsed correct.
+HTML code '$'Global Blacklist'' cannot be parsed correct.
+HTML code '$'The local Blacklist is comparable to the WordPress Blacklist. However, the local Blacklist enables you to block comments containing certain values, instead of putting them in moderation queue. Thus, the local blacklist only makes sense when using NoSpamNX in blocking mode. The local Blacklist checks the given values against the ip address, the author, the E-Mail Address, the comment and the URL field of a comment. If a pattern matches, the comment will be blocked. Please use one value per line. The local Blacklist is case-insensitive.'' cannot be parsed correct.
+HTML code '$'The global Blacklist gives you the possibility to use one Blacklist for multiple WordPress Blogs. You need to setup a place where you store your Blacklist (e.g. Webspace, Dropbox, etc. - but HTTP only) and put it into the Field "Update URL". How you Built up your Blacklist (e.g. PHP-Script with Database, simple Textfile, etc.) is up to, but you need to make sure, your Update URL returns one value per line seperated by "\n". Put the Update URL in all your Blogs where you want your Blacklist, and setup the update rotation according to your needs. The global Blacklist will be activated by adding an Update URL. The global Blacklist is case-insensitive.'' cannot be parsed correct.
+HTML code '$'$this_nospamnx_blacklist'' cannot be parsed correct.
+HTML code '$'$this_nospamnx_blacklist_global'' cannot be parsed correct.
+HTML code '$'Last update: -'' cannot be parsed correct.
+HTML code '$'Last update: date_i18n("M j, Y @ G:i", $this->nospamnx_blacklist_global_lu, true)'' cannot be parsed correct.
+HTML code '$'Update URL (e.g. http://www.mydomain.com/myblacklist.txt)'' cannot be parsed correct.
+HTML code '$'$this_nospamnx_blacklist_global_url'' cannot be parsed correct.
+HTML code '$'Update every'' cannot be parsed correct.
+HTML code '$'$this_nospamnx_blacklist_global_update'' cannot be parsed correct.
+HTML code '$'minutes.'' cannot be parsed correct.
+HTML code '$'Save'' cannot be parsed correct.
+HTML code '$'NoSpamNX has stopped no birdbrained Spambots yet.'' cannot be parsed correct.
+HTML code '$'<p style="display:none;">'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'" method="post" onclick="return confirm(\''' cannot be parsed correct.
+HTML code '$'" method="post">
+							<table class="form-table">
+									<tr>
+										<th scope="row" valign="top"><b>'' cannot be parsed correct.
+HTML code '$'" method="post">
+							<table class="form-table">
+								<tr>
+									<td colspan="2"><b>'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:05.562253.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046522.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.573162.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPRetrievalDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PhpVarDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running MySQLiDetector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running WordPressRetrievalDetector
+### Finish running PhpCurlDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+nospamnx.php:114
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:114
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:120
+  - Request variable '$_POST["bbp_anonymous_email"]' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:120
+  - Request variable '$_POST["bbp_anonymous_email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+nospamnx.php:88
+  - SHA1 called with parameters [this, time, nospamnx_salt]. Ignore if [this, time, nospamnx_salt] does not contain personal information.
+nospamnx.php:140
+  - SHA1 called with parameters [this, _POST, nxts, nospamnx_salt]. Ignore if [this, _POST, nxts, nospamnx_salt] does not contain personal information.
+nospamnx.php:258
+  - SHA1 called with parameters [uniqid, true, rand]. Ignore if [uniqid, true, rand] does not contain personal information. 
+
+nospamnx.php:114
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:120
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:120
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:126
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:186
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:186
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:190
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:190
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:211
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+nospamnx.php:218
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+nospamnx.php:448
+  - RETRIEVAL call to get_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+nospamnx.php:463
+  - RETRIEVAL call to get_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+nospamnx.php:490
+  - RETRIEVAL call to get_option("nospamnx-blacklist-global") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+nospamnx.php:491
+  - RETRIEVAL call to get_option("nospamnx-blacklist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+nospamnx.php:501
+  - RETRIEVAL call to get_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+nospamnx.php:512
+  - RETRIEVAL call to get_option("nospamnx-blacklist-global") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+nospamnx.php:513
+  - RETRIEVAL call to get_option("nospamnx-blacklist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+nospamnx.php:586
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+nospamnx.php:461
+  - STORAGE call to add_option("nospamnx", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+nospamnx.php:488
+  - STORAGE call to update_option("nospamnx", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+nospamnx.php:490
+  - STORAGE call to add_option("nospamnx-blacklist-global", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+nospamnx.php:491
+  - STORAGE call to add_option("nospamnx-blacklist", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+nospamnx.php:495
+  - STORAGE call to delete_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+nospamnx.php:496
+  - STORAGE call to delete_option("nospamnx-blacklist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+nospamnx.php:497
+  - STORAGE call to delete_option("nospamnx-blacklist-global") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+nospamnx.php:530
+  - STORAGE call to update_option("nospamnx-blacklist", $this->nospamnx_blacklist) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+nospamnx.php:531
+  - STORAGE call to update_option("nospamnx", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+nospamnx.php:563
+  - STORAGE call to update_option("nospamnx-blacklist-global", $this->sortBlacklist($buffer)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+nospamnx.php:495
+  - DELETION call to delete_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+nospamnx.php:496
+  - DELETION call to delete_option("nospamnx-blacklist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+nospamnx.php:497
+  - DELETION call to delete_option("nospamnx-blacklist-global") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressStorageDetector.update_option("nospamnx", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+	WordPressStorageDetector.update_option("nospamnx-blacklist", $this->nospamnx_blacklist) - {'option'}
+	WordPressStorageDetector.update_option("nospamnx-blacklist-global", $this->sortBlacklist($buffer)) - {'option'}
+	WordPressRetrievalDetector.get_option("nospamnx") - {'option'}
+	WordPressRetrievalDetector.get_option("nospamnx") - {'option'}
+	WordPressRetrievalDetector.get_option("nospamnx-blacklist-global") - {'option'}
+	WordPressStorageDetector.delete_option("nospamnx-blacklist-global") - {'option'}
+	WordPressStorageDetector.add_option("nospamnx", $options) - {'option'}
+	DeletionDetector.delete_option("nospamnx") - {'option'}
+	WordPressStorageDetector.add_option("nospamnx-blacklist", "") - {'option'}
+	WordPressStorageDetector.add_option("nospamnx-blacklist-global", "") - {'option'}
+	WordPressRetrievalDetector.get_option("nospamnx-blacklist-global") - {'option'}
+	WordPressRetrievalDetector.get_option("nospamnx") - {'option'}
+	WordPressStorageDetector.delete_option("nospamnx") - {'option'}
+	DeletionDetector.delete_option("nospamnx-blacklist") - {'option'}
+	WordPressStorageDetector.update_option("nospamnx", $options) - {'option'}
+	WordPressStorageDetector.delete_option("nospamnx-blacklist") - {'option'}
+	WordPressRetrievalDetector.get_option("nospamnx-blacklist") - {'option'}
+	WordPressRetrievalDetector.get_option("nospamnx-blacklist") - {'option'}
+	DeletionDetector.delete_option("nospamnx-blacklist-global") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.338097.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 80 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.146323.
+
+80 STORE_REACHES edges created
+80 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 18 nodes as PERSONAL
+In total, tainted 18 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 3 nodes as ENCRYPTED
+In total, tainted 3 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.879481.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:42.095404!
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["bbp_anonymous_email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["bbp_anonymous_email"]' of personal types {'email'} is found.,,None
+DELETION call to delete_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("nospamnx-blacklist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("nospamnx-blacklist-global") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+SHA1 called with parameters [this, _POST, nxts, nospamnx_salt]. Ignore if [this, _POST, nxts, nospamnx_salt] does not contain personal information.,sha1,None
+SHA1 called with parameters [uniqid, true, rand]. Ignore if [uniqid, true, rand] does not contain personal information.,sha1,None
+SHA1 called with parameters [this, time, nospamnx_salt]. Ignore if [this, time, nospamnx_salt] does not contain personal information.,sha1,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("nospamnx-blacklist-global") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("nospamnx-blacklist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("nospamnx-blacklist-global") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("nospamnx-blacklist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("nospamnx", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("nospamnx", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("nospamnx-blacklist-global", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("nospamnx-blacklist", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("nospamnx") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("nospamnx-blacklist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("nospamnx-blacklist-global") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("nospamnx-blacklist", $this->nospamnx_blacklist) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("nospamnx", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("nospamnx-blacklist-global", $this->sortBlacklist($buffer)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,697 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on google-importer
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.397684.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.997272.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.229523.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.442919.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 173 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.711602.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.579265.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.109346.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 58 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.262538.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1168
+Added 937 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1168
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.052207.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/google-importer/google-importer.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.172191.
+
+1000 PHP_REACHES edges created
+1168 PHP_REACHES edges created
+1168 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 394 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.962377.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.805338.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 10 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.147505.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 5 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.206302.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.077948.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.175175.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008568.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035706.
+
+15 PHP_REACHES edges created
+15 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 10 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.141877.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.186420.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<p class="error">$response->get_error_message()</p>'' cannot be parsed correct.
+HTML code '$'getLatestPlusPosts(get_option("google_plus_importer_user_id"), "20")_error_message'' cannot be parsed correct.
+HTML code '$'sprintf("%02.2d:%02.2d", floor($seconds / 60), $seconds60)'' cannot be parsed correct.
+HTML code '$'<p><span style="color:red">Warning!</span> There was an error reaching the Google+ API:</p><p><code>getLatestPlusPosts(get_option("google_plus_importer_user_id"), 1)_error_message</code></p><p>Make sure you\'ve entered the correct API key, have the Google+ API <a href="https://code.google.com/apis/console/">turned on</a>, and the correct numeric user ID.</p>'' cannot be parsed correct.
+HTML code '$'get_option("google_plus_importer_api_key")'' cannot be parsed correct.
+HTML code '$'get_option("google_plus_importer_user_id")'' cannot be parsed correct.
+HTML code '$'get_option("google_plus_importer_tags")'' cannot be parsed correct.
+HTML code '$'get_option("google_plus_importer_title_characters")'' cannot be parsed correct.
+HTML code '$'get_option("google_plus_importer_via_text")'' cannot be parsed correct.
+HTML code '$'<option value=$pt selected="selected">$pt</option>
+'' cannot be parsed correct.
+HTML code '$'get_option("google_plus_importer_selective_tag")'' cannot be parsed correct.
+HTML code '$'sprintf("%02.2d:%02.2d", floor($seconds / 60), $seconds60)'' cannot be parsed correct.
+HTML code '$'<p>Something went wrong using <code>wp_remote_get()</code></p>'' cannot be parsed correct.
+HTML code '$'Visit the Google+ WordPress settings page and enter your API key'' cannot be parsed correct.
+HTML code '$'<p><span style="color:red">Warning!</span> Google+ importer will not function properly until an API key and user ID are set.</p>'' cannot be parsed correct.
+HTML code '$'checked=\'checked\''' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'" />
+	</p>
+	
+	</form>
+	
+	<h3>Next Import</h3>
+	
+	<div id="google-activity-check">
+		<p>The importer will check again in <strong>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.513514.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047982.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 6 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.529839.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FileProDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running VariableDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressRemoteDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+google-importer.php:176
+  - object property '$item->address' of personal types {'address'} is found.
+  - Data types: address
+google-importer.php:176
+  - object property '$item->address' of personal types {'address'} is found.
+  - Data types: address 
+
+google-importer.php:91
+  - API call to wp_remote_get($request, ["sslverify" => false]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+google-importer.php:89
+  - RETRIEVAL call to get_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:103
+  - RETRIEVAL call to get_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:104
+  - RETRIEVAL call to get_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:105
+  - RETRIEVAL call to get_option("google_plus_importer_author_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:106
+  - RETRIEVAL call to get_option("google_plus_importer_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:107
+  - RETRIEVAL call to get_option("google_plus_importer_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:124
+  - RETRIEVAL call to get_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:126
+  - RETRIEVAL call to get_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:135
+  - RETRIEVAL call to get_option("google_plus_importer_selective_tag") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:185
+  - RETRIEVAL call to get_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:202
+  - RETRIEVAL call to get_option("google_plus_importer_title_characters") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:210
+  - RETRIEVAL call to get_option("google_plus_importer_hashtags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:234
+  - RETRIEVAL call to get_post_meta($post->ID, "google_plus_activity_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+google-importer.php:245
+  - RETRIEVAL call to get_option("google_plus_importer_via_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:247
+  - RETRIEVAL call to get_post_meta($GLOBALS["post"]->ID, "google_plus_activity_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+google-importer.php:347
+  - RETRIEVAL call to get_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:347
+  - RETRIEVAL call to get_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:350
+  - RETRIEVAL call to get_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:360
+  - RETRIEVAL call to get_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:366
+  - RETRIEVAL call to get_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:379
+  - RETRIEVAL call to get_option("google_plus_importer_author_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:388
+  - RETRIEVAL call to get_option("google_plus_importer_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:398
+  - RETRIEVAL call to get_option("google_plus_importer_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:404
+  - RETRIEVAL call to get_option("google_plus_importer_hashtags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:410
+  - RETRIEVAL call to get_option("google_plus_importer_title_characters") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:416
+  - RETRIEVAL call to get_option("google_plus_importer_via_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:423
+  - RETRIEVAL call to get_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:424
+  - RETRIEVAL call to get_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:435
+  - RETRIEVAL call to get_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+google-importer.php:445
+  - RETRIEVAL call to get_option("google_plus_importer_selective_tag") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+google-importer.php:35
+  - STORAGE call to add_option("google_plus_importer_api_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:36
+  - STORAGE call to add_option("google_plus_importer_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:37
+  - STORAGE call to add_option("google_plus_importer_author_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:38
+  - STORAGE call to add_option("google_plus_importer_post_status", "publish") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:39
+  - STORAGE call to add_option("google_plus_importer_post_type", "post") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:40
+  - STORAGE call to add_option("google_plus_importer_category_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:41
+  - STORAGE call to add_option("google_plus_importer_tags", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:42
+  - STORAGE call to add_option("google_plus_importer_title_characters", "40") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:43
+  - STORAGE call to add_option("google_plus_importer_via_text", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:44
+  - STORAGE call to add_option("google_plus_importer_selective_tag", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:45
+  - STORAGE call to add_option("google_plus_importer_hashtags", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+google-importer.php:54
+  - STORAGE call to delete_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:55
+  - STORAGE call to delete_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:56
+  - STORAGE call to delete_option("google_plus_importer_author_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:57
+  - STORAGE call to delete_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:58
+  - STORAGE call to delete_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:59
+  - STORAGE call to delete_option("google_plus_importer_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:60
+  - STORAGE call to delete_option("google_plus_importer_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:61
+  - STORAGE call to delete_option("google_plus_importer_title_characters") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:62
+  - STORAGE call to delete_option("google_plus_importer_via_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:63
+  - STORAGE call to delete_option("google_plus_importer_selective_tag") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:64
+  - STORAGE call to delete_option("google_plus_importer_hashtags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:119
+  - STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+google-importer.php:120
+  - STORAGE call to add_post_meta($new_post_id, "google_plus_activity_id", $activity_id, TRUE) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta 
+
+google-importer.php:54
+  - DELETION call to delete_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:55
+  - DELETION call to delete_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:56
+  - DELETION call to delete_option("google_plus_importer_author_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:57
+  - DELETION call to delete_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:58
+  - DELETION call to delete_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:59
+  - DELETION call to delete_option("google_plus_importer_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:60
+  - DELETION call to delete_option("google_plus_importer_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:61
+  - DELETION call to delete_option("google_plus_importer_title_characters") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:62
+  - DELETION call to delete_option("google_plus_importer_via_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:63
+  - DELETION call to delete_option("google_plus_importer_selective_tag") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+google-importer.php:64
+  - DELETION call to delete_option("google_plus_importer_hashtags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+address
+	PropertyDetector.(unknown) - {'address'}
+	PropertyDetector.(unknown) - {'address'}
+none
+	WordPressStorageDetector.wp_insert_post($post) - set()
+option
+	WordPressRetrievalDetector.get_option("google_plus_importer_user_id") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_tags") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_user_id") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_author_id") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_post_type") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_category_id") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_author_id") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_tags") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_post_type") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_selective_tag", "") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_title_characters") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_user_id", "") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_api_key") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_user_id") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_category_id", "") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_title_characters") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_post_status", "publish") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_via_text") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_hashtags") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_post_type") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_selective_tag") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_via_text") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_author_id") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_author_id") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_post_status") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_via_text") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_selective_tag") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_api_key") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_title_characters") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_user_id") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_hashtags") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_user_id") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_hashtags", "") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_api_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_tags") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_post_type", "post") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_category_id") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_category_id") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_post_status") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_post_type") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_user_id") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_title_characters", "40") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_post_status") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_via_text") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_category_id") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_hashtags") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_post_status") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_via_text", "") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_selective_tag") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_tags") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_post_type") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_title_characters") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_post_status") - {'option'}
+	WordPressStorageDetector.delete_option("google_plus_importer_selective_tag") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_tags", "") - {'option'}
+	WordPressRetrievalDetector.get_option("google_plus_importer_hashtags") - {'option'}
+	DeletionDetector.delete_option("google_plus_importer_api_key") - {'option'}
+	WordPressStorageDetector.add_option("google_plus_importer_author_id", "") - {'option'}
+post_meta
+	WordPressStorageDetector.add_post_meta($new_post_id, "google_plus_activity_id", $activity_id, TRUE) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($GLOBALS["post"]->ID, "google_plus_activity_id", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "google_plus_activity_id", true) - {'post_meta'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.316081.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 618 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.419137.
+
+618 STORE_REACHES edges created
+618 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 17 nodes as PERSONAL
+In total, tainted 17 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.355384.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:29.967177!
+DELETION call to delete_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_author_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_title_characters") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_via_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_selective_tag") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("google_plus_importer_hashtags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+object property '$item->address' of personal types {'address'} is found.,,None
+object property '$item->address' of personal types {'address'} is found.,,None
+API call to wp_remote_get($request, ["sslverify" => false]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://www.googleapis.com/plus/v1/people/']
+RETRIEVAL call to get_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_author_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_selective_tag") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_title_characters") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_hashtags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "google_plus_activity_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_via_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($GLOBALS["post"]->ID, "google_plus_activity_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_author_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_hashtags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_title_characters") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_via_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_selective_tag") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to add_post_meta($new_post_id, "google_plus_activity_id", $activity_id, TRUE) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to add_option("google_plus_importer_api_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_user_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_author_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_post_status", "publish") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_post_type", "post") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_category_id", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_tags", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_title_characters", "40") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_via_text", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_selective_tag", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("google_plus_importer_hashtags", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_user_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_author_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_post_status") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_post_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_tags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_title_characters") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_via_text") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_selective_tag") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("google_plus_importer_hashtags") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['address']) stored through WordPress function "add_post_meta($new_post_id, "google_plus_activity_id", $activity_id, TRUE)", found in file google-importer.php at line 120. 
+
+[has_storage] PII of types (['address']) stored through WordPress function "wp_insert_post($post)", found in file google-importer.php at line 119. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through add_post_meta($new_post_id, "google_plus_activity_id", $activity_id, TRUE) does not have corresponding deletion method. Storage method found in file google-importer.php at line 120. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through wp_insert_post($post) does not have corresponding deletion method. Storage method found in file google-importer.php at line 119. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 463. Found in file google-importer.php at line 120 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 457. Found in file google-importer.php at line 119 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        

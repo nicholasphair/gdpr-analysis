@@ -1,0 +1,659 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on pressnative
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.419269.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.073743.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 59 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.499305.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.612059.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 410 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.769642.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 2 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.566528.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.103478.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 170 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.736437.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3237
+Added 2595 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3247
+Added 10 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.163005.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/pressnative.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/admin/class-pressnative-admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/admin/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/admin/partials/pressnative-admin-display.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/includes/class-pressnative-activator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/includes/class-pressnative-deactivator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/includes/class-pressnative-i18n.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/includes/class-pressnative-loader.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/includes/class-pressnative.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/includes/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/public/class-pressnative-public.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/public/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pressnative/public/partials/pressnative-public-display.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.803484.
+
+59 PHP_REACHES edges created
+1 REACHES edges created
+410 PHP_REACHES edges created
+2 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2765 PHP_REACHES edges created
+10 PHP_REACHES edges created
+3247 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1196 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.119637.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 2 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:04.003004.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 93 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.638405.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 29 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.140706.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.524462.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.673834.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009142.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.038770.
+
+2 CALLS edges created
+122 PHP_REACHES edges created
+124 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 144 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.120332.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+5 SQL operations to process.
+$request_title_path
+SQL command ($request_title_path) cannot be parsed correct.
+$request_text_path
+SQL command ($request_text_path) cannot be parsed correct.
+$request_path
+SQL command ($request_path) cannot be parsed correct.
+$request_spath
+SQL command ($request_spath) cannot be parsed correct.
+$request_npath
+SQL command ($request_npath) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [3314, 3340, 3583, 3602, 3643]
+Added 0 SQL nodes. 0 out of 5 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.920842.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'admin_url("options.php")'' cannot be parsed correct.
+HTML code '$'get_option("pressnative_appid")'' cannot be parsed correct.
+HTML code '$'get_option("pressnative_secret")'' cannot be parsed correct.
+HTML code '$'get_option("pressnative_ios_app")'' cannot be parsed correct.
+HTML code '$'get_option("pressnative_android_app")'' cannot be parsed correct.
+HTML code '$'get_option("pressnative_ios_app")'' cannot be parsed correct.
+HTML code '$'" />
+				<link rel="manifest" href="/wp-json/pressnative/v1/manifest">
+				'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:00.783226.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.044781.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 7 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.403217.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PostgreSQLDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running maxdbDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running MySQLiDetector
+### Start running WordPressStorageDetector
+### Finish running UserInputDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running WordPressRemoteDetector
+### Finish running PhpCurlDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+admin/class-pressnative-admin.php:236
+  - API call to wp_remote_post("https://api.pushbots.com/3/push/campaign", ["method" => "POST", "blocking" => true, "timeout" => 20, "httpversion" => "1.0", "redirection" => 5, "headers" => ["x-pushbots-appid" => $appID, "x-pushbots-secret" => $appSecret, "Content-Type" => "application/json"], "body" => json_encode($msg_data)]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+admin/class-pressnative-admin.php:152
+  - RETRIEVAL call to get_option("pressnative_push_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-pressnative-admin.php:153
+  - RETRIEVAL call to get_option("pressnative_push_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-pressnative-admin.php:185
+  - RETRIEVAL call to get_option("pressnative_push_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-pressnative-admin.php:186
+  - RETRIEVAL call to get_option("pressnative_push_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-pressnative-admin.php:198
+  - RETRIEVAL call to get_transient("pressnative_send_push_after_publish_delay") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+admin/partials/pressnative-admin-display.php:29
+  - RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/partials/pressnative-admin-display.php:34
+  - RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/partials/pressnative-admin-display.php:39
+  - RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/partials/pressnative-admin-display.php:44
+  - RETRIEVAL call to get_option("pressnative_android_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:286
+  - RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:287
+  - RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:346
+  - RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:347
+  - RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:551
+  - RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:552
+  - RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:556
+  - RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:560
+  - RETRIEVAL call to get_option("pressnative_android_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:561
+  - RETRIEVAL call to get_option("pressnative_android_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:565
+  - RETRIEVAL call to get_option("pressnative_android_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:609
+  - RETRIEVAL call to get_option("pressnative_cats_top", $this->get_cats(8)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:610
+  - RETRIEVAL call to get_option("pressnative_cats_push", $this->get_cats(3)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:611
+  - RETRIEVAL call to get_option("pressnative_cats_sidebar", $this->get_cats(10)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:612
+  - RETRIEVAL call to get_option("pressnative_settings", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:613
+  - RETRIEVAL call to get_option("pressnative_socialmedia", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:618
+  - RETRIEVAL call to get_option("pressnative_title", get_bloginfo("name")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:619
+  - RETRIEVAL call to get_option("pressnative_privacy", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:620
+  - RETRIEVAL call to get_option("pressnative_terms", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:630
+  - RETRIEVAL call to get_option("pressnative_top_article", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:631
+  - RETRIEVAL call to get_option("pressnative_show_author", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:632
+  - RETRIEVAL call to get_option("pressnative_show_reading_time", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:633
+  - RETRIEVAL call to get_option("pressnative_show_likes", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:634
+  - RETRIEVAL call to get_option("pressnative_premium", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:635
+  - RETRIEVAL call to get_option("pressnative_show_audio", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:636
+  - RETRIEVAL call to get_option("pressnative_show_onboarding", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:637
+  - RETRIEVAL call to get_option("pressnative_premium_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:665
+  - RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:666
+  - RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:805
+  - RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:806
+  - RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:901
+  - RETRIEVAL call to get_post_meta($post_id, "pressnative_post_likes_counter", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+public/class-pressnative-public.php:973
+  - RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:974
+  - RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-pressnative-public.php:976
+  - RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+admin/class-pressnative-admin.php:200
+  - STORAGE call to set_transient("pressnative_send_push_after_publish_delay", true, 20) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+public/class-pressnative-public.php:702
+  - STORAGE call to update_option("pressnative_top_article", boolval($parameters["top_article"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:706
+  - STORAGE call to update_option("pressnative_show_reading_time", boolval($parameters["show_reading_time"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:711
+  - STORAGE call to update_option("pressnative_show_author", boolval($parameters["show_author"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:715
+  - STORAGE call to update_option("pressnative_show_likes", boolval($parameters["show_likes"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:719
+  - STORAGE call to update_option("pressnative_premium", boolval($parameters["premium"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:723
+  - STORAGE call to update_option("pressnative_show_audio", boolval($parameters["show_audio"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:727
+  - STORAGE call to update_option("pressnative_show_onboarding", boolval($parameters["show_onboarding"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:731
+  - STORAGE call to update_option("pressnative_title", sanitize_text_field($parameters["title"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:735
+  - STORAGE call to update_option("pressnative_privacy", esc_url_raw($parameters["privacy"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:739
+  - STORAGE call to update_option("pressnative_ios_app", sanitize_text_field($parameters["ios_app"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:743
+  - STORAGE call to update_option("pressnative_android_app", sanitize_text_field($parameters["android_app"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:747
+  - STORAGE call to update_option("pressnative_terms", esc_url_raw($parameters["terms"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:751
+  - STORAGE call to update_option("pressnative_premium_category_id", intval($parameters["premium_category_id"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:755
+  - STORAGE call to update_option("pressnative_settings", $this->recursive_sanitize_text_field($parameters["settings"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:759
+  - STORAGE call to update_option("pressnative_socialmedia", $this->recursive_sanitize_text_field($parameters["socialmedia"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:763
+  - STORAGE call to update_option("pressnative_cats_push", $this->recursive_sanitize_text_field($parameters["cats_push"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:767
+  - STORAGE call to update_option("pressnative_cats_sidebar", $this->recursive_sanitize_text_field($parameters["cats_sidebar"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:771
+  - STORAGE call to update_option("pressnative_cats_top", $this->recursive_sanitize_text_field($parameters["cats_top"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:775
+  - STORAGE call to update_option("pressnative_push_appid", sanitize_text_field($parameters["push_notifications_appid"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:779
+  - STORAGE call to update_option("pressnative_push_secret", sanitize_text_field($parameters["push_notifications_secret"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+public/class-pressnative-public.php:906
+  - STORAGE call to add_post_meta($post_id, "pressnative_post_likes_counter", "1") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+public/class-pressnative-public.php:911
+  - STORAGE call to update_post_meta($post_id, "pressnative_post_likes_counter", $post_like_posts) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+public/class-pressnative-public.php:915
+  - STORAGE call to add_post_meta($post_id, "pressnative_post_likes_counter", "0") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+public/class-pressnative-public.php:920
+  - STORAGE call to update_post_meta($post_id, "pressnative_post_likes_counter", $post_like_posts) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("pressnative_secret") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_cats_sidebar", $this->recursive_sanitize_text_field($parameters["cats_sidebar"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_android_app") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_show_reading_time", "true") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_appid") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_appid") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_title", get_bloginfo("name")) - {'option'}
+	WordPressStorageDetector.update_option("pressnative_push_secret", sanitize_text_field($parameters["push_notifications_secret"])) - {'option'}
+	WordPressStorageDetector.update_option("pressnative_ios_app", sanitize_text_field($parameters["ios_app"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_show_onboarding", "true") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_show_likes", "true") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_top_article", boolval($parameters["top_article"])"true""false") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_secret") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_title", sanitize_text_field($parameters["title"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_ios_app") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_ios_app") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_terms", "") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_top_article", "true") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_show_onboarding", boolval($parameters["show_onboarding"])"true""false") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_secret") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_android_app") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_premium_category_id", intval($parameters["premium_category_id"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_cats_top", $this->get_cats(8)) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_premium_category_id") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_ios_app") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_push_appid", sanitize_text_field($parameters["push_notifications_appid"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_push_appid") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_android_app", sanitize_text_field($parameters["android_app"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_privacy", "") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_show_likes", boolval($parameters["show_likes"])"true""false") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_terms", esc_url_raw($parameters["terms"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_appid") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_show_author", "true") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_ios_app") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_premium", "false") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_android_app") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_socialmedia", $this->recursive_sanitize_text_field($parameters["socialmedia"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_appid") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_android_app") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_ios_app") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_privacy", esc_url_raw($parameters["privacy"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_show_audio", "false") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_push_secret") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_show_reading_time", boolval($parameters["show_reading_time"])"true""false") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_secret") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_appid") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_cats_push", $this->get_cats(3)) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_socialmedia", []) - {'option'}
+	WordPressStorageDetector.update_option("pressnative_premium", boolval($parameters["premium"])"true""false") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_push_secret") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_show_audio", boolval($parameters["show_audio"])"true""false") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_settings", $this->recursive_sanitize_text_field($parameters["settings"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_ios_app") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_settings", []) - {'option'}
+	WordPressStorageDetector.update_option("pressnative_cats_push", $this->recursive_sanitize_text_field($parameters["cats_push"])) - {'option'}
+	WordPressStorageDetector.update_option("pressnative_cats_top", $this->recursive_sanitize_text_field($parameters["cats_top"])) - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_push_appid") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_ios_app") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_secret") - {'option'}
+	WordPressStorageDetector.update_option("pressnative_show_author", boolval($parameters["show_author"])"true""false") - {'option'}
+	WordPressRetrievalDetector.get_option("pressnative_cats_sidebar", $this->get_cats(10)) - {'option'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post_id, "pressnative_post_likes_counter", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "pressnative_post_likes_counter", $post_like_posts) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "pressnative_post_likes_counter", "0") - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "pressnative_post_likes_counter", $post_like_posts) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "pressnative_post_likes_counter", "1") - {'post_meta'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+site
+	WordPressRetrievalDetector.get_transient("pressnative_send_push_after_publish_delay") - {'site'}
+	WordPressStorageDetector.set_transient("pressnative_send_push_after_publish_delay", true, 20) - {'site'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:13.240338.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 825 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.547162.
+
+825 STORE_REACHES edges created
+825 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006459.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:44.480185!
+API call to wp_remote_post("https://api.pushbots.com/3/push/campaign", ["method" => "POST", "blocking" => true, "timeout" => 20, "httpversion" => "1.0", "redirection" => 5, "headers" => ["x-pushbots-appid" => $appID, "x-pushbots-secret" => $appSecret, "Content-Type" => "application/json"], "body" => json_encode($msg_data)]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://api.pushbots.com/3/push/campaign']
+RETRIEVAL call to get_option("pressnative_push_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_push_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_push_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_push_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("pressnative_send_push_after_publish_delay") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_android_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_android_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_android_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_android_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_cats_top", $this->get_cats(8)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_cats_push", $this->get_cats(3)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_cats_sidebar", $this->get_cats(10)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_settings", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_socialmedia", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_title", get_bloginfo("name")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_privacy", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_terms", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_top_article", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_show_author", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_show_reading_time", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_show_likes", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_premium", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_show_audio", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_show_onboarding", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_premium_category_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_appid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "pressnative_post_likes_counter", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pressnative_ios_app") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to set_transient("pressnative_send_push_after_publish_delay", true, 20) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_top_article", boolval($parameters["top_article"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_show_reading_time", boolval($parameters["show_reading_time"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_show_author", boolval($parameters["show_author"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_show_likes", boolval($parameters["show_likes"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_premium", boolval($parameters["premium"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_show_audio", boolval($parameters["show_audio"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_show_onboarding", boolval($parameters["show_onboarding"])"true""false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_title", sanitize_text_field($parameters["title"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_privacy", esc_url_raw($parameters["privacy"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_ios_app", sanitize_text_field($parameters["ios_app"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_android_app", sanitize_text_field($parameters["android_app"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_terms", esc_url_raw($parameters["terms"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_premium_category_id", intval($parameters["premium_category_id"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_settings", $this->recursive_sanitize_text_field($parameters["settings"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_socialmedia", $this->recursive_sanitize_text_field($parameters["socialmedia"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_cats_push", $this->recursive_sanitize_text_field($parameters["cats_push"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_cats_sidebar", $this->recursive_sanitize_text_field($parameters["cats_sidebar"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_cats_top", $this->recursive_sanitize_text_field($parameters["cats_top"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_push_appid", sanitize_text_field($parameters["push_notifications_appid"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("pressnative_push_secret", sanitize_text_field($parameters["push_notifications_secret"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_post_meta($post_id, "pressnative_post_likes_counter", "1") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to update_post_meta($post_id, "pressnative_post_likes_counter", $post_like_posts) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to add_post_meta($post_id, "pressnative_post_likes_counter", "0") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to update_post_meta($post_id, "pressnative_post_likes_counter", $post_like_posts) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

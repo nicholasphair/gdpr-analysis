@@ -1,0 +1,406 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on pingchecker
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.409344.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.827275.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.246479.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.449769.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 198 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.777303.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.667381.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.114020.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 106 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.973985.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1185
+Added 881 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1185
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.116557.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/pingchecker/pingchecker.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.153040.
+
+1000 PHP_REACHES edges created
+1185 PHP_REACHES edges created
+1185 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 463 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.092862.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.877948.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 8 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.834632.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 14 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.177220.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.018651.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.144186.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011065.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.045223.
+
+22 PHP_REACHES edges created
+22 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 8 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.144068.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+pingback.ping
+SQL command (pingback.ping) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [916]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.972486.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'parent.document.getElementById(\'pingcheckerserver\').value = \'str_split($newchunks, $position)_0\';'' cannot be parsed correct.
+HTML code '$'<script language=\'javascript\' type=\'text/javascript\'>
+					alert(\'Pingback to $_REQUEST_pingcheckerlink has been successfully sent!\');
+  			    </script>'' cannot be parsed correct.
+HTML code '$'<script language="javascript" type="text/javascript">
+					var alerterror = "Pingback Error: pingcheckernewpingback($pingbackurl, $pingbackserver, $post_id)\n(for URL:$_REQUEST_pingcheckerlink )\n";
+					alert(alerterror);
+				  </script>'' cannot be parsed correct.
+HTML code '$'<font color=#0000ee><b>Pingback to $vapingback has been approved.</b></font>'' cannot be parsed correct.
+HTML code '$'Pingback to $vapingback does not appear to be approved.<br>'' cannot be parsed correct.
+HTML code '$'<center><form method="post" name="pingcheckerform" target="pingcheckerframebox">
+		<table><tr height=10><td> </td></tr><tr><td><font style="font-size:9pt;">Link: <input type="text" size="30" name="pingcheckerlink" id="pingcheckerlink" onkeyup="pingcheckershowcheckbutton();" style="font-size:8pt;" value=""></td><td width=7></td>
+		<input type="hidden" name="pingcheckerserver" id="pingcheckerserver" value=""><td style="vertical-align:top;" align="center">
+		<div id="pingcheckerbutton"><input type="button" style="font-size:7pt;" value="Check Pingability" onclick="pingcheckercheckpingback();"></div>
+		<div style="display:none;" id="pingcheckerresult"><input id="pingcheckerpingable" type="text" size="6" style="font-face:helvetica;font-size:7pt;" value="" readonly></div>
+		<input type="hidden" name="pingchecker" id="pingchecker" value="yes"><input type="hidden" name="checkping" id="checkping" value=""><input type="hidden" name="pingcheckerpostid" id="pingcheckerpostid" value="$post"><input type="hidden" name="pingcheckerping" id="pingcheckerping" value=""><input type="hidden" name="pingcheckerapprovals" id="pingcheckerapprovals" value="">
+		</td><td width=7></td><td style="vertical-align:top;" align="center"><input type="button" style="font-size:9pt;" value="Ping Now" onclick="pingcheckerpingthis();"></td></tr><tr height=10><td> </td></tr></table></form></center>'' cannot be parsed correct.
+HTML code '$'<center><table cellspacing=5 style="background-color:#eeeeee;"><tr><td><font style="font-size:9pt;line-height:1.4em;"><a href="pingchecker_get_link()_0" target=_blank style="text-decoration:none;">pingchecker_get_link()_1</a></font></td></tr></table></center>'' cannot be parsed correct.
+HTML code '$'$contentalinkfix'' cannot be parsed correct.
+HTML code '$'implode("", $chunks)'' cannot be parsed correct.
+HTML code '$'<script language=\'javascript\' type=\'text/javascript\'>'' cannot be parsed correct.
+HTML code '$'parent.document.getElementById(\'pingcheckerpingable\').value = \'Pingable\';'' cannot be parsed correct.
+HTML code '$'parent.document.getElementById(\'pingcheckerpingable\').size = \'8\';'' cannot be parsed correct.
+HTML code '$'parent.document.getElementById(\'pingcheckerbutton\').style.display = \'none\';'' cannot be parsed correct.
+HTML code '$'parent.document.getElementById(\'pingcheckerresult\').style.display = \'\';'' cannot be parsed correct.
+HTML code '$'alert(\'Cool, this link appears to be pingable!\');'' cannot be parsed correct.
+HTML code '$'parent.document.getElementById(\'pingcheckerpingable\').value = \'Not pingable\';'' cannot be parsed correct.
+HTML code '$'parent.document.getElementById(\'pingcheckerpingable\').size = \'13\';'' cannot be parsed correct.
+HTML code '$'parent.document.getElementById(\'pingcheckerbutton\').style.display = \'none\';'' cannot be parsed correct.
+HTML code '$'parent.document.getElementById(\'pingcheckerresult\').style.display = \'\';'' cannot be parsed correct.
+HTML code '$'alert(\'Sorry, this link does not appear to be pingable!\');'' cannot be parsed correct.
+HTML code '$'</script>'' cannot be parsed correct.
+HTML code '$'<script language=\'javascript\' type=\'text/javascript\'>alert(\'Pingback for that URL has already been sent.\');</script>'' cannot be parsed correct.
+HTML code '$'<font face=helvetica style=\'font-size:8pt;\'>'' cannot be parsed correct.
+HTML code '$' <b>(Self-Ping)</b>'' cannot be parsed correct.
+HTML code '$'<br>'' cannot be parsed correct.
+HTML code '$'<div class="postbox"><div class="handlediv" title="Click to toggle"><br /></div>
+	<h3 class="hndle"><span>Pingchecker</span></h3><div class="inside">'' cannot be parsed correct.
+HTML code '$'<div id="contentscan" style="text-align:center;"><center>
+	<table><tr><td><input type="button" style="font-size:9pt;" value="Scan Post Content for Links" onclick="pingcheckerscancontent();"></td>
+	<td width=7></td><td><input type="button" style="font-size:9pt;" value="Check for Approvals" onclick="pingcheckerapprovals();"></td>
+	<td width=7></td><td align="center"><font style="font-size:8pt;">Reminder: Publish before pinging!</td></tr></table></div>
+	<div id="pingcheckerscanresults" style="display:none;"></div></center>'' cannot be parsed correct.
+HTML code '$'<div id=\'pingcheckerframeboxdiv\' style=\'display:none;\'><div align=\'right\'><a href=\'javascript:void(0);\' onclick=\'hideapprovalresults();\' style=\'text-decoration:none;\'><font style=\'font-size:8pt;\'>Hide</font></a></div>'' cannot be parsed correct.
+HTML code '$'<center><iframe src=\'javascript:void(0);\' name=\'pingcheckerframebox\' id=\'pingcheckerframebox\' width=450 height=200></iframe></center></div>'' cannot be parsed correct.
+HTML code '$'<script language="javascript" type="text/javascript">
+
+		function pingcheckershowcheckbutton() {
+			document.getElementById("pingcheckerbutton").style.display = "";
+			document.getElementById("pingcheckerresult").style.display = "none";
+		}
+
+		function pingcheckerscancontent() {
+			var inputcontent = document.getElementById("content").value;
+
+			var matches = [];
+
+		inputcontent.replace(/[^<]*(<a href="([^"]+)">([^<]+)<\/a>)/g, function () {
+		    matches.push(Array.prototype.slice.call(arguments, 1, 4));
+		});
+
+			if (matches.length > 0) {
+				var scanresults = "<br><center><font style=\"font-size:10pt;\"><b>Embedded Links found in Post Content:</b></font><font color=#ffffff>.......</font><font style=\"font-size:8pt;\"><a href=\"javascript:void(0);\" onclick=\"pingcheckerhidescanresults();\" style=\"text-decoration:none;\">Hide</a></font><br><table>";
+				for (i=0;i<matches.length;i++)
+				{
+					var thislinkhtml = matches[i][0];
+					var thislink = matches[i][1];
+					var thisanchor = matches[i][2];
+					var scanresults = scanresults + "<tr><td>"+thislinkhtml+"<td width=7></td><td>("+thislink+")</td><td width=7></td><td><input style=\"font-size:8pt\" type=\"button\" value=\"Copy to Ping Checker\" onclick=\"pingcheckertochecker(\'"+thislink+"\',\'"+thisanchor+"\');\"></tr>";
+				}
+				var scanresults = scanresults + "</tr></table></center>";
+				document.getElementById("pingcheckerscanresults").innerHTML = scanresults;
+				document.getElementById("pingcheckerscanresults").style.display = "";
+			}
+			else {
+				var scanresults = "<br><center><font style=\"font-size:10pt;\"><b>No Embedded Links found in Post Content.</b></font><font color=#ffffff>.......</font><font style=\"font-size:8pt;\"><a href=\"javascript:void(0);\" onclick=\"pingcheckerhidescanresults();\" style=\"text-decoration:none;\">Hide</a></font></center><br>";
+				document.getElementById("pingcheckerscanresults").innerHTML = scanresults;
+				document.getElementById("pingcheckerscanresults").style.display = "";
+			}
+		}
+
+		function pingcheckertochecker(thislink,thistitle) {
+			document.getElementById("pingcheckerlink").value = thislink;
+			pingcheckershowcheckbutton();
+		}
+
+		function pingcheckershowcheckbutton() {
+			document.getElementById("pingcheckerbutton").style.display = "";
+			document.getElementById("pingcheckerresult").style.display = "none";
+		}
+
+		function pingcheckerhidescanresults() {
+			document.getElementById("pingcheckerscanresults").style.display = "none";
+		}
+
+		function pingcheckercheckpingback() {
+			var checkurl = document.getElementById("pingcheckerlink").value;
+			if (checkurl != "") {
+				document.getElementById("checkping").value = checkurl;
+				document.pingcheckerform.submit();
+				document.getElementById("checkping").value = "";
+			}
+		}
+
+		function pingcheckerpingthis() {
+			document.getElementById("pingcheckerping").value = "yes";
+			document.pingcheckerform.submit();
+			document.getElementById("pingcheckerping").value = "";
+		}
+
+		function pingcheckerapprovals() {
+			document.getElementById("pingcheckerframeboxdiv").style.display = "";
+			document.getElementById("pingcheckerapprovals").value = "yes";
+			document.pingcheckerform.submit();
+			document.getElementById("pingcheckerapprovals").value = "";
+		}
+
+		function hideapprovalresults() {document.getElementById("pingcheckerfameboxdiv").style.display = "none";}
+		</script></div></div><br>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.636535.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.049004.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 8 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.537399.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running HashDetector
+### Start running ParadoxDetector
+### Finish running MongoDbDetector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PHPRetrievalDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running MySQLiDetector
+### Start running WordpressHashingFnDetector
+### Finish running maxdbDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running PhpCurlDetector
+### Finished running detectors
+pingchecker.php:351
+  - RETRIEVAL call to get_option("pbpref") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+pingchecker.php:352
+  - RETRIEVAL call to get_option("pbpref") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+pingchecker.php:411
+  - STORAGE call to add_option("pbpref", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressStorageDetector.add_option("pbpref", "") - {'option'}
+	WordPressRetrievalDetector.get_option("pbpref") - {'option'}
+	WordPressRetrievalDetector.get_option("pbpref") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.110374.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 2 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.061327.
+
+2 STORE_REACHES edges created
+2 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005073.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:27.800920!
+RETRIEVAL call to get_option("pbpref") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("pbpref") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("pbpref", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

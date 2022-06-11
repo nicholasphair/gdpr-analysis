@@ -1,0 +1,625 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on leductoan-toucan-sms
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.449484.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.168287.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 54 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.443163.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.372823.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 428 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.718812.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.521712.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.081332.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 219 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.645798.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2917
+Added 2216 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3071
+Added 154 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.033484.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/leductoan-toucan-sms/toucan-sms.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.148696.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2917 PHP_REACHES edges created
+154 PHP_REACHES edges created
+3071 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1126 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.068805.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.124421.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 59 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.111552.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 32 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.157510.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.193372.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.364317.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007379.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.030094.
+
+91 PHP_REACHES edges created
+91 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 89 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.126397.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.149428.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$toucansms_settings_admin_phone'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$content'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$content_send_admin'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'<option value=$k"selected($k, $formID, false)>$v</option>'' cannot be parsed correct.
+HTML code '$'<option value=$k"selected($k, $formID, false)>$v</option>'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$sdtField'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'<option value=$k"$v</option>'' cannot be parsed correct.
+HTML code '$'<option value=$k"$v</option>'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'sanitize_textarea_field($toucansms_settings["account_creat_mess"])'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'sanitize_textarea_field($toucansms_settings["order_creat_mess"])'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'sanitize_textarea_field($toucansms_settings["woo_status_complete_mess"])'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'sanitize_textarea_field($toucansms_settings["woo_status_processing_mess"])'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'sanitize_textarea_field($toucansms_settings["woo_status_cancelled_mess"])'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'sanitize_textarea_field($toucansms_settings["order_creat_admin_mess"])'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'active'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$toucansms_settings_email_toucan'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$toucansms_settings_password_toucan'' cannot be parsed correct.
+HTML code '$'active'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$toucansms_settings_apikey'' cannot be parsed correct.
+HTML code '$'$this__optionName'' cannot be parsed correct.
+HTML code '$'$toucansms_settings_secretkey'' cannot be parsed correct.
+HTML code '$'</label>
+                                    </th>
+                                    <td>
+                                        <input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[kichhoat]" id="kichhoat" value="1" '' cannot be parsed correct.
+HTML code '$'</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" name="'' cannot be parsed correct.
+HTML code '$'[admin_phone]" id="admin_phone" value="'' cannot be parsed correct.
+HTML code '$'</label></th>
+                                        <td>
+                                            <input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[check_version]" id="check_version" value="1" '' cannot be parsed correct.
+HTML code '$'<br><small>'' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_'' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_'' cannot be parsed correct.
+HTML code '$'> Gá»­i tin nháº¯n cho admin</label>
+                                                                    </p>
+                                                                    <p>
+                                                                        <textarea name='' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_'' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_'' cannot be parsed correct.
+HTML code '$'<optgroup label="NinjaForms">'' cannot be parsed correct.
+HTML code '$'</optgroup>'' cannot be parsed correct.
+HTML code '$'<optgroup label="Contact Form 7">'' cannot be parsed correct.
+HTML code '$'</optgroup>'' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_'' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_{{data.stt}}][content]"></textarea>
+                                            <p>
+                                                <label><input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_{{data.stt}}][send_admin]" value="1"> Gá»­i tin nháº¯n cho admin</label>
+                                            </p>
+                                            <p>
+                                                <textarea name="'' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_{{data.stt}}][content_send_admin]" placeholder="Ná»i dung tin nháº¯n cho admin"></textarea>
+                                            </p>
+                                        </td>
+                                        <td><select name="'' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_{{data.stt}}][formID]">
+                                            <option value="">'' cannot be parsed correct.
+HTML code '$'<optgroup label="NinjaForms">'' cannot be parsed correct.
+HTML code '$'</optgroup>'' cannot be parsed correct.
+HTML code '$'<optgroup label="Contact Form 7">'' cannot be parsed correct.
+HTML code '$'</optgroup>'' cannot be parsed correct.
+HTML code '$'[mess_content_list][id_{{data.stt}}][field_sdt_id]" type="number"/></td>
+                                    <td><input type="button" class="button devvn_button devvn_delete_esms" value="'' cannot be parsed correct.
+HTML code '$'</label>
+                                        </th>
+                                        <td>
+                                            <input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[enable_woo]" id="enable_woo" value="1" '' cannot be parsed correct.
+HTML code '$'</th>
+                                        <td>
+                                            <table class="woo_setting_mess">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <label><input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[account_creat]" id="account_creat" value="1" '' cannot be parsed correct.
+HTML code '$'[account_creat_mess]"'' cannot be parsed correct.
+HTML code '$'</textarea>
+                                                            <small>Hiá»n thá» TÃN báº±ng <span style="color: red;">%%name%%</span><br>
+                                                            Khi checkout - báº¯t buá»c pháº£i cÃ³ sá» Äiá»n thoáº¡i - billing_phone</small>
+                                                        </td>
+                                                        <td>
+                                                            <label><input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[order_creat]" id="order_creat" value="1" '' cannot be parsed correct.
+HTML code '$'[order_creat_mess]"'' cannot be parsed correct.
+HTML code '$'</textarea>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label><input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[woo_status_complete]" id="woo_status_complete" value="1" '' cannot be parsed correct.
+HTML code '$'[woo_status_complete_mess]"'' cannot be parsed correct.
+HTML code '$'</textarea>
+                                                        </td>
+                                                        <td>
+                                                            <label><input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[woo_status_processing]" id="woo_status_processing" value="1" '' cannot be parsed correct.
+HTML code '$'[woo_status_processing_mess]"'' cannot be parsed correct.
+HTML code '$'</textarea>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label><input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[woo_status_cancelled]" id="woo_status_cancelled" value="1" '' cannot be parsed correct.
+HTML code '$'[woo_status_cancelled_mess]"'' cannot be parsed correct.
+HTML code '$'</textarea>
+                                                        </td>
+                                                        <td>
+                                                            <label><input type="checkbox" name="'' cannot be parsed correct.
+HTML code '$'[order_creat_admin]" id="order_creat_admin" value="1" '' cannot be parsed correct.
+HTML code '$'[order_creat_admin_mess]"'' cannot be parsed correct.
+HTML code '$'</textarea>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="desc_woo_devvn">
+                                                Hiá»n thá» MÃ ÄÆ N HÃNG báº±ng <span style="color: red;">%%orderid%%</span><br>
+                                                Hiá»n thá» firstName báº±ng <span style="color: red;">%%firstName%%</span><br>
+                                                Hiá»n thá» lastName báº±ng <span style="color: red;">%%lastName%%</span><br>
+                                                Hiá»n thá» tá»ng tiá»n báº±ng <span style="color: red;">%%total%%</span><br>
+                                                Hiá»n thá» sá» Äiá»n thoáº¡i khÃ¡ch hÃ ng báº±ng <span style="color: red;">%%phone%%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        '' cannot be parsed correct.
+HTML code '$'[type_api]" type="radio" value="user_pass" '' cannot be parsed correct.
+HTML code '$'[type_api]" type="radio" value="api_key" '' cannot be parsed correct.
+HTML code '$'</label>
+                                        </th>
+                                        <td>
+                                            <input type="text" name="'' cannot be parsed correct.
+HTML code '$'[email_toucan]" id="email_toucan" value="'' cannot be parsed correct.
+HTML code '$'</label>
+                                        </th>
+                                        <td>
+                                            <input type="text" name="'' cannot be parsed correct.
+HTML code '$'[password_toucan]" id="user_pass" value="'' cannot be parsed correct.
+HTML code '$'</label>
+                                        </th>
+                                        <td>
+                                            <input type="text" name="'' cannot be parsed correct.
+HTML code '$'[apikey]" id="apikey" value="'' cannot be parsed correct.
+HTML code '$'</label>
+                                        </th>
+                                        <td>
+                                            <input type="text" name="'' cannot be parsed correct.
+HTML code '$'[secretkey]" id="secretkey" value="'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:10.623626.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.049766.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 6 do_action/apply_filters calls and 12 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.802732.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running PasswordHashingDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running OpenSSLDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running MySQLiDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running VariableDetector
+### Finish running WordPressRemoteDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+toucan-sms.php:699
+  - Request variable '$_POST["billing_first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name
+toucan-sms.php:699
+  - Request variable '$_POST["billing_first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name
+toucan-sms.php:702
+  - Request variable '$_POST["billing_last_name"]' of personal types {'last_name'} is found.
+  - Data types: last_name
+toucan-sms.php:702
+  - Request variable '$_POST["billing_last_name"]' of personal types {'last_name'} is found.
+  - Data types: last_name 
+
+toucan-sms.php:698
+  - object property '$order->billing_first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+toucan-sms.php:701
+  - object property '$order->billing_last_name' of personal types {'last_name'} is found.
+  - Data types: last_name 
+
+toucan-sms.php:610
+  - variable '$your_email' of personal types {'email'} is found.
+  - Data types: email
+toucan-sms.php:698
+  - variable '$billing_first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+toucan-sms.php:699
+  - variable '$billing_first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+toucan-sms.php:699
+  - variable '$billing_first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+toucan-sms.php:701
+  - variable '$billing_last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+toucan-sms.php:702
+  - variable '$billing_last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+toucan-sms.php:702
+  - variable '$billing_last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+toucan-sms.php:710
+  - variable '$billing_first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+toucan-sms.php:711
+  - variable '$billing_last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+toucan-sms.php:821
+  - variable '$email_toucan' of personal types {'email'} is found.
+  - Data types: email
+toucan-sms.php:824
+  - variable '$email_toucan' of personal types {'email'} is found.
+  - Data types: email
+toucan-sms.php:830
+  - variable '$email_toucan' of personal types {'email'} is found.
+  - Data types: email 
+
+toucan-sms.php:55
+  - API call to wp_remote_post($url, ["method" => "POST", "sslverify" => false, "body" => $postData]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+toucan-sms.php:34
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+toucan-sms.php:36
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+toucan-sms.php:38
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+toucan-sms.php:206
+  - RETRIEVAL call to get_option($this->_optionName) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+toucan-sms.php:258
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+toucan-sms.php:289
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+toucan-sms.php:291
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+toucan-sms.php:421
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+toucan-sms.php:684
+  - RETRIEVAL call to get_user_meta($customer_id, "billing_phone", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+first_name
+	VariableDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	ArrayElementDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	ArrayElementDetector.(unknown) - {'first_name'}
+last_name
+	VariableDetector.(unknown) - {'last_name'}
+	ArrayElementDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	ArrayElementDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+none
+	WordPressRetrievalDetector.get_posts($args) - set()
+option
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressRetrievalDetector.get_option($this->_optionName) - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+user_meta
+	WordPressRetrievalDetector.get_user_meta($customer_id, "billing_phone", true) - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.594443.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.085464.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 60 nodes as PERSONAL
+In total, tainted 60 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.351227.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:45.260793!
+Request variable '$_POST["billing_first_name"]' of personal types {'first_name'} is found.,,None
+Request variable '$_POST["billing_first_name"]' of personal types {'first_name'} is found.,,None
+Request variable '$_POST["billing_last_name"]' of personal types {'last_name'} is found.,,None
+Request variable '$_POST["billing_last_name"]' of personal types {'last_name'} is found.,,None
+object property '$order->billing_first_name' of personal types {'first_name'} is found.,,None
+object property '$order->billing_last_name' of personal types {'last_name'} is found.,,None
+variable '$your_email' of personal types {'email'} is found.,,None
+variable '$billing_first_name' of personal types {'first_name'} is found.,,None
+variable '$billing_first_name' of personal types {'first_name'} is found.,,None
+variable '$billing_first_name' of personal types {'first_name'} is found.,,None
+variable '$billing_last_name' of personal types {'last_name'} is found.,,None
+variable '$billing_last_name' of personal types {'last_name'} is found.,,None
+variable '$billing_last_name' of personal types {'last_name'} is found.,,None
+variable '$billing_first_name' of personal types {'first_name'} is found.,,None
+variable '$billing_last_name' of personal types {'last_name'} is found.,,None
+variable '$email_toucan' of personal types {'email'} is found.,,None
+variable '$email_toucan' of personal types {'email'} is found.,,None
+variable '$email_toucan' of personal types {'email'} is found.,,None
+API call to wp_remote_post($url, ["method" => "POST", "sslverify" => false, "body" => $postData]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://sms.toucan.vn']
+RETRIEVAL call to get_option($this->_optionName) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($customer_id, "billing_phone", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party at "https://sms.toucan.vn" used with data types ['email'], found in file toucan-sms.php at line 55 . Personal data flows from sources with nodeID [4571, 4507]  
+
+[third_party] Third party usage is CONFIRMED for data types ['email'] 
+
+[encryption] API call that sends PII to "https://sms.toucan.vn" uses https. PII is insecurely encrypted with []. Found in file toucan-sms.php at line 55 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? True 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+No findings

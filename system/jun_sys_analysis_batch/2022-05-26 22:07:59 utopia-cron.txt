@@ -1,0 +1,401 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on utopia-cron
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.444441.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.901261.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.255772.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.934442.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 269 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.915199.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.595885.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.100075.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 111 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.881006.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1030
+Added 649 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1030
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.012328.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/utopia-cron/utopia38.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.190924.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1029 PHP_REACHES edges created
+1030 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 341 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.074174.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.470827.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 16 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.949575.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 12 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.198604.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.015142.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.257556.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008178.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.036895.
+
+28 PHP_REACHES edges created
+28 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 16 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.114998.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.136431.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div class="wrap"><h2>U-Cron (Utopia Cron) Easy Timed Jobs</h2>
+<h3>URL Loading/Checks</h3>
+Entry added
+<style>
+<!--
+.u38tbl th {background:#83B4D8;}
+-->
+</style>
+<form method=\'post\'>
+<table cellpadding="5" cellspacing="0" border="0" align="center" class="u38tbl"><tbody>
+<tr><td colspan="7"><h3>Add New Check</h3></td></tr>
+<tr>
+<th>&nbsp;</th><th align="center">Start Time (hh:mm)</th>
+<th align="center">How Often (m/h)</th>
+<th align="center">Full URL (WITH http://)</th>
+<th align="center">Add</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+<tr>
+<td bgcolor="#E5F3FF">&nbsp;</td>
+<td align="center" bgcolor="#E5F3FF"><input type="text" value="" name="time" size="6" /></td>
+<td align="center" bgcolor="#E5F3FF"><input type="text" value="" name="freq" size="6" /></td>
+<td align="center" bgcolor="#E5F3FF"><input type="text" value="" name="url" size="45" /></td>
+<td align="center" bgcolor="#E5F3FF"><input type="submit" value="Add" name="add" /></td>
+<td bgcolor="#E5F3FF">&nbsp;</td>
+<td bgcolor="#E5F3FF">&nbsp;</td>
+</tr>'' cannot be parsed correct.
+HTML code '$'<tr>
+<td align="center" bgcolor="#E5F3FF"><input type="submit" value="Delete" name="del0" onclick="return confirm(\'Are you sure you want to delete?\')" /></td>
+<td align="center" bgcolor="#E5F3FF"><input type="text" value="htmlentities($time, ENT_QUOTES, "UTF-8")" name="time0" size="6" /></td>
+<td align="center" bgcolor="#E5F3FF"><input type="text" value="htmlentities($freq, ENT_QUOTES, "UTF-8")" name="freq0" size="6" /></td>
+<td align="center" bgcolor="#E5F3FF"><input type="text" value="htmlentities($url, ENT_QUOTES, "UTF-8")" name="url0" size="45" /></td>
+<td align="center" bgcolor="#E5F3FF"><input type="submit" value="Update" name="edit0" /></td>
+<td align="center" bgcolor="#E5F3FF"><input type="submit" value="Test" name="test0" /></td>
+<td align="center" bgcolor="#E5F3FF"><a href=htmlentities($url, ENT_QUOTES, "UTF-8")" target="_blank">View Page</a></td>
+</tr>'' cannot be parsed correct.
+HTML code '$'</tbody></table>
+</form>
+<br /><br />
+<h3>How to Use</h3>
+This is a simple plugin to approximately time tasks. As visitors load your blog 
+pages, this
+plugin checks if any pages need loading and does so. By loading these web pages,
+you can do useful tasks like checking your email. What you do is:
+<ol>
+<li><b>Enter the URL of the web page to check.</b><br />
+This is the web page to \'load\', or trigger. For example, if you wanted to run
+your e-mail post checker (as set in <b>Options/Writing/Post</b> via e-mail), you could
+try this entry:
+<pre>
+get_bloginfo("home")/wp-mail.php
+</pre>
+</li>
+<li><b>Enter a starting time for the check.</b><br />
+For example you might want to check at <b>2:35 pm</b>, which is entered <b>14:35</b>
+(Military time, where the hour goes from 0 to 24). Note for repeated checks just
+pick a start time (for example if you want 10 minutes after the hour, just pick
+<b>00:10</b> or <b>01:10</b>, etc).
+</li>
+<li><b>Enter a repeat time for the check.</b><br />
+This is how often you want to check - for instance every 10 minutes, 15 minutes,
+or even 24 hours to do it just once a day. Make sure you add <b>m</b> or <b>h</b>
+after the number to set hours or minutes (for example <b>15m</b> or <b>12h</b> -
+if you leave it off, hours are assumed).
+</li>
+<li><b>Save, then test.</b><br />
+Save the entry, then use the <b>Test</b> and <b>View</b> buttons to verify. 
+<b>Test</b> will load the page just as U-Cron would, and displays the result 
+(<b>AOK</b> or an error message). The <b>View</b> link opens the URL in a 
+seperate page, so you can confirm that the page you\'re loading is the right one.
+</li>
+</ol>
+<h3>Notes</h3>
+<ul>
+<li>
+Your theme MUST have the function <b>wp_footer</b> included in it, like this:
+<pre>
+&lt;?php wp_footer(); ?&gt;
+&lt;/body&gt;
+</pre>
+(most newer themes already have this in <b>footer.php</b> or possibly 
+<b>index.php</b>).
+</li>
+<li>
+This plugin uses blog page views to do the timing - for this reason, times are 
+<u>approximate</u> not exact, and if your blog gets few visits, then timing 
+will be affected. If you need precise timing, it is best to use a systems 
+timer like <b>cron</b>. 
+</li>
+<li>
+Checking URLs frequently (or many URLs) can affect blog performance. This plugin 
+prevents you checking a URL more often than once every 5 minutes.
+</li>
+</ul>
+<br /><hr />
+Easy cron plugin for WordPress (utopia38/U-Cron) v1.00 &copy; David Pankhurst/
+<a href="http://ActiveBlogging.com">ActiveBlogging.com</a>. Licensed Under 
+<a href="http://www.gnu.org/philosophy/license-list.html#GPLCompatibleLicenses" 
+target="_blank">Artistic License 2.0</a> 
+</div>'' cannot be parsed correct.
+HTML code '$'<tr><td colspan="7"><h3>Current Checks</h3></td></tr>
+<tr>
+<th align="center">Delete</th>
+<th align="center">Start Time (hh:mm)</th>
+<th align="center">How Often (m/h)</th>
+<th align="center">Full URL (WITH http://)</th>
+<th align="center">Update</th>
+<th align="center">Test</th>
+<th align="center">View</th>
+</tr>'' cannot be parsed correct.
+HTML code '$'<div class="wrap"><br>This section is only available to the administrator.<br><br></div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.223416.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.050013.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 2 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.290465.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MongoDbDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PasswordHashingDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+utopia38.php:17
+  - RETRIEVAL call to get_option("utopia38_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+utopia38.php:113
+  - RETRIEVAL call to get_option("utopia38_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+utopia38.php:37
+  - STORAGE call to update_option("utopia38_data", $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+utopia38.php:194
+  - STORAGE call to update_option("utopia38_data", $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("utopia38_data") - {'option'}
+	WordPressRetrievalDetector.get_option("utopia38_data") - {'option'}
+	WordPressStorageDetector.update_option("utopia38_data", $data) - {'option'}
+	WordPressStorageDetector.update_option("utopia38_data", $data) - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.386012.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 4 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.058722.
+
+4 STORE_REACHES edges created
+4 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.007535.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:22.420944!
+RETRIEVAL call to get_option("utopia38_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("utopia38_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("utopia38_data", $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("utopia38_data", $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

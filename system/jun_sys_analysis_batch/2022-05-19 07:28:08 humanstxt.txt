@@ -1,0 +1,712 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on humanstxt
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.693132.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.961237.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.248812.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.691412.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 587 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.941605.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.595201.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.104571.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 217 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.076702.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3983
+Added 3178 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4627
+Added 644 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.255822.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/humanstxt/callbacks.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/humanstxt/humanstxt.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/humanstxt/legacy.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/humanstxt/options.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.437296.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3982 PHP_REACHES edges created
+644 PHP_REACHES edges created
+4627 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1315 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.107228.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.426381.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 28 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.979959.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 52 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.161753.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.290530.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.446368.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.014481.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.032180.
+
+80 PHP_REACHES edges created
+80 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 28 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.128023.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+SELECT ID, display_name, user_email, user_url FROM $wpdb INNER JOIN _get_meta_table("user") ON ID = user_id WHERE meta_key = $wpdb->get_blog_prefix()user_level" AND CAST(meta_value AS CHAR) != 0 ORDER BY display_name AS
+SQL command (SELECT ID, display_name, user_email, user_url FROM $wpdb INNER JOIN _get_meta_table("user") ON ID = user_id WHERE meta_key = $wpdb->get_blog_prefix()user_level" AND CAST(meta_value AS CHAR) != 0 ORDER BY display_name AS) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [810]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.842343.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_humanstxt()'' cannot be parsed correct.
+HTML code '$'get_humanstxt_authortag()'' cannot be parsed correct.
+HTML code '$'get_humanstxt()'' cannot be parsed correct.
+HTML code '$'<tr class="plugin-update-tr"><td colspan="3" class="plugin-update colspanchange"><div class="update-message">sprintf(__("Humans TXT includes the functionality of %1$s. Please deactivate %1$s to avoid plugin conflicts.", "humanstxt"), "<em>" . $plugin_data["Name"] . "</em>")</div></td></tr>'' cannot be parsed correct.
+HTML code '$'<pre>apply_filters("humans_txt", $_GET["content"])</pre>'' cannot be parsed correct.
+HTML code '$'An error has occurred. Please reload the page and try again.'' cannot be parsed correct.
+HTML code '$'sprintf("<a href="%s">%s</a>", "http://wordpress.org/extend/plugins/humanstxt/faq/", __("Please read the FAQ...", "humanstxt"))'' cannot be parsed correct.
+HTML code '$'sprintf("<a href="%s">%s</a>", "http://wordpress.org/extend/plugins/humanstxt/faq/", __("Please read the FAQ...", "humanstxt"))'' cannot be parsed correct.
+HTML code '$'sprintf("<a href="%s">%s</a>", "http://wordpress.org/extend/plugins/humanstxt/faq/", __("Please read the FAQ...", "humanstxt"))'' cannot be parsed correct.
+HTML code '$'<div id="humanstxt-warning" class="updated fade"><p><strong>sprintf(__("Humans TXT %1$s requires WordPress %2$s or higher.", "humanstxt"), HUMANSTXT_VERSION, HUMANSTXT_VERSION_REQUIRED)</strong> <a href=admin_url("update-core.php")"sprintf(__("Please update your WordPress installation.", "humanstxt"))</a></p></div>'' cannot be parsed correct.
+HTML code '$'sprintf("<a href="%s">%s</a>", "http://wordpress.org/extend/plugins/humanstxt/faq/", __("Please read the FAQ...", "humanstxt"))'' cannot be parsed correct.
+HTML code '$'HUMANSTXT_OPTIONS_URL'' cannot be parsed correct.
+HTML code '$'humanstxt_rating()_rating'' cannot be parsed correct.
+HTML code '$'humanstxt_rating()_rating'' cannot be parsed correct.
+HTML code '$'$starimg'' cannot be parsed correct.
+HTML code '$'$starimg'' cannot be parsed correct.
+HTML code '$'$starimg'' cannot be parsed correct.
+HTML code '$'$starimg'' cannot be parsed correct.
+HTML code '$'$starimg'' cannot be parsed correct.
+HTML code '$'$role'' cannot be parsed correct.
+HTML code '$'$role'' cannot be parsed correct.
+HTML code '$'$role'' cannot be parsed correct.
+HTML code '$'humanstxt_option("roles")'' cannot be parsed correct.
+HTML code '$'$disabled'' cannot be parsed correct.
+HTML code '$'translate_user_role($details["name"])'' cannot be parsed correct.
+HTML code '$'home_url("humans.txt")'' cannot be parsed correct.
+HTML code '$'humanstxt_content()'' cannot be parsed correct.
+HTML code '$' class="displayed-revision"'' cannot be parsed correct.
+HTML code '$'$key'' cannot be parsed correct.
+HTML code '$'$key'' cannot be parsed correct.
+HTML code '$'get_the_author_meta("display_name", $revision["user"])'' cannot be parsed correct.
+HTML code '$'admin_url("admin-ajax.php?action=humanstxt-preview")'' cannot be parsed correct.
+HTML code '$'HUMANSTXT_REVISIONS_URL'' cannot be parsed correct.
+HTML code '$'{"wordpress": "WordPress", "server": "Server", "addons": "Themes & Plugins", "misc": "Miscellaneous"}_$group'' cannot be parsed correct.
+HTML code '$'sprintf(__("Preview: %s", "humanstxt"), $preview)'' cannot be parsed correct.
+HTML code '$'$variable_2'' cannot be parsed correct.
+HTML code '$'$variable_4'' cannot be parsed correct.
+HTML code '$'humanstxt_revisions()_humanstxt_revisions()_content'' cannot be parsed correct.
+HTML code '$'wp_nonce_url(add_query_arg(["revision" => $show_revision, "action" => "restore"], HUMANSTXT_OPTIONS_URL), "restore-humanstxt_" . $show_revision)'' cannot be parsed correct.
+HTML code '$'wp_text_diff($revisions[$_GET["left"]]["content"], $revisions[$_GET["right"]]["content"])'' cannot be parsed correct.
+HTML code '$'admin_url("options-general.php")'' cannot be parsed correct.
+HTML code '$'wp_nonce_url(add_query_arg(["revision" => $key, "action" => "restore"], HUMANSTXT_OPTIONS_URL), "restore-humanstxt_" . $key)'' cannot be parsed correct.
+HTML code '$'</h1>
+
+	'' cannot be parsed correct.
+HTML code '$'
+	'' cannot be parsed correct.
+HTML code '$'</strong></p></div>
+	'' cannot be parsed correct.
+HTML code '$'</strong></p></div>
+	'' cannot be parsed correct.
+HTML code '$'</strong></p></div>
+	'' cannot be parsed correct.
+HTML code '$'</strong> '' cannot be parsed correct.
+HTML code '$'</p></div>
+	'' cannot be parsed correct.
+HTML code '$'</strong> '' cannot be parsed correct.
+HTML code '$'</p></div>
+	'' cannot be parsed correct.
+HTML code '$'</strong>
+				'' cannot be parsed correct.
+HTML code '$'				'' cannot be parsed correct.
+HTML code '$'</strong> '' cannot be parsed correct.
+HTML code '$'</p></div>
+	'' cannot be parsed correct.
+HTML code '$'">
+
+	'' cannot be parsed correct.
+HTML code '$'
+		'' cannot be parsed correct.
+HTML code '$'</p>
+					<div class="star-holder">
+						'' cannot be parsed correct.
+HTML code '$'px"></div>
+					'' cannot be parsed correct.
+HTML code '$'							<div class="star star-rating" style="width: '' cannot be parsed correct.
+HTML code '$'px"></div>
+							<div class="star star5"><img src="'' cannot be parsed correct.
+HTML code '$'" alt="'' cannot be parsed correct.
+HTML code '$'" /></div>
+							<div class="star star4"><img src="'' cannot be parsed correct.
+HTML code '$'" alt="'' cannot be parsed correct.
+HTML code '$'" /></div>
+							<div class="star star3"><img src="'' cannot be parsed correct.
+HTML code '$'" alt="'' cannot be parsed correct.
+HTML code '$'" /></div>
+							<div class="star star2"><img src="'' cannot be parsed correct.
+HTML code '$'" alt="'' cannot be parsed correct.
+HTML code '$'" /></div>
+							<div class="star star1"><img src="'' cannot be parsed correct.
+HTML code '$'" alt="'' cannot be parsed correct.
+HTML code '$'" /></div>
+					'' cannot be parsed correct.
+HTML code '$'</small>
+				</div>
+			'' cannot be parsed correct.
+HTML code '$'</h3>
+			<table class="form-table">
+				<tr valign="top">
+					<th scope="row">'' cannot be parsed correct.
+HTML code '$'</th>
+					<td>
+						<fieldset>
+							<legend class="screen-reader-text"><span>'' cannot be parsed correct.
+HTML code '$'</span></legend>
+							<label for="humanstxt_enable">
+								<input name="humanstxt_enable" type="checkbox" id="humanstxt_enable" value="1" '' cannot be parsed correct.
+HTML code '$' />
+								'' cannot be parsed correct.
+HTML code '$'							</label>
+							<br />
+							<label for="humanstxt_authortag" title="'' cannot be parsed correct.
+HTML code '$'">
+								<input name="humanstxt_authortag" type="checkbox" id="humanstxt_authortag" value="1" '' cannot be parsed correct.
+HTML code '$' />
+								'' cannot be parsed correct.
+HTML code '$'							</label>
+						</fieldset>
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">'' cannot be parsed correct.
+HTML code '$'</th>
+					<td>
+						<fieldset>
+							<legend class="screen-reader-text"><span>'' cannot be parsed correct.
+HTML code '$'</span></legend>
+							<p>'' cannot be parsed correct.
+HTML code '$':</p>
+							'' cannot be parsed correct.
+HTML code '$'">
+									<input name="humanstxt_roles['' cannot be parsed correct.
+HTML code '$']" type="checkbox" id="humanstxt_role_'' cannot be parsed correct.
+HTML code '$'" value="1" '' cannot be parsed correct.
+HTML code '$'/>
+									'' cannot be parsed correct.
+HTML code '$'" />
+			'' cannot be parsed correct.
+HTML code '$'" rel="external" class="button">'' cannot be parsed correct.
+HTML code '$'</a>
+				'' cannot be parsed correct.
+HTML code '$'</h3>
+
+		<div id="humanstxt-editor-wrap">
+			<table class="form-table">
+				<tr valign="top">
+					<td>
+						<fieldset>
+							<legend class="screen-reader-text"><span>'' cannot be parsed correct.
+HTML code '$'</span></legend>
+							<span class="description"><label for="humanstxt_content">'' cannot be parsed correct.
+HTML code '$'</label></span>
+							<textarea name="humanstxt_content" rows="25" cols="80" id="humanstxt_content" class="large-text code">'' cannot be parsed correct.
+HTML code '$'" method="get">
+
+		<div class="tablenav">
+			<div class="alignleft">
+				<input type="submit" class="button-secondary" value="'' cannot be parsed correct.
+HTML code '$'" />
+				<input type="hidden" name="page" value="humanstxt" />
+				<input type="hidden" name="subpage" value="revisions" />
+				<input type="hidden" name="action" value="compare" />
+			</div>
+		</div>
+
+		<br class="clear" />
+
+		<table class="widefat" cellspacing="0" id="humanstxt-revisions">
+			<col />
+			<col />
+			<col style="width: 33%" />
+			<col style="width: 33%" />
+			<col style="width: 33%" />
+			<thead>
+				<tr>
+					<th scope="col">'' cannot be parsed correct.
+HTML code '$'</th>
+					<th scope="col">'' cannot be parsed correct.
+HTML code '$'</th>
+					<th scope="col" class="action-links">'' cannot be parsed correct.
+HTML code '$'</th>
+				</tr>
+			</thead>
+			<tbody>
+				'' cannot be parsed correct.
+HTML code '$'>
+						<th scope="row"><input type="radio" name="left" value="'' cannot be parsed correct.
+HTML code '$' /></th>
+						<th scope="row"><input type="radio" name="right" value="'' cannot be parsed correct.
+HTML code '$' /></th>
+						<td>
+							'' cannot be parsed correct.
+HTML code '$'							'' cannot be parsed correct.
+HTML code '$'						</td>
+						<td>
+							'' cannot be parsed correct.
+HTML code '$'</textarea>
+						</fieldset>
+					</td>
+				</tr>
+			</table>
+			<p class="submit">
+				<input type="submit" name="submit" class="button button-primary" value="'' cannot be parsed correct.
+HTML code '$'" />
+				<a href="'' cannot be parsed correct.
+HTML code '$'" class="button button-preview hide-if-no-js" title="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+				'' cannot be parsed correct.
+HTML code '$'				'' cannot be parsed correct.
+HTML code '$'" class="button">'' cannot be parsed correct.
+HTML code '$'</a>
+				'' cannot be parsed correct.
+HTML code '$'</h4>
+				<ul>
+					'' cannot be parsed correct.
+HTML code '$'</h5>
+							<ul class="hidden">
+								'' cannot be parsed correct.
+HTML code '$'									<li title='' cannot be parsed correct.
+HTML code '$'">
+										<code>'' cannot be parsed correct.
+HTML code '$'$</code>
+										'' cannot be parsed correct.
+HTML code '$'										'' cannot be parsed correct.
+HTML code '$'</h3>
+		<p>'' cannot be parsed correct.
+HTML code '$'</p>
+
+	</form>
+</div>
+'' cannot be parsed correct.
+HTML code '$'  '' cannot be parsed correct.
+HTML code '$': '' cannot be parsed correct.
+HTML code '$'</h1>
+
+	'' cannot be parsed correct.
+HTML code '$'</h3>
+		<pre id="revision-preview" class="postbox">'' cannot be parsed correct.
+HTML code '$'</pre>
+		<p class="submit"><a href="'' cannot be parsed correct.
+HTML code '$'" class="button-primary">'' cannot be parsed correct.
+HTML code '$'</a></p>
+
+	'' cannot be parsed correct.
+HTML code '$'</p></div>
+		'' cannot be parsed correct.
+HTML code '$'</p></div>
+		'' cannot be parsed correct.
+HTML code '$'</span>
+						<span class="alignright">'' cannot be parsed correct.
+HTML code '$'</span>
+					</th>
+				</tr>
+				<tr>
+					<td><div class="pre">'' cannot be parsed correct.
+HTML code '$'</h3>
+
+	<form action='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+							'' cannot be parsed correct.
+HTML code '$'</p>
+
+</div>
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:09.294791.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.099818.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 28 do_action/apply_filters calls and 18 add_action/add_filter calls. Now connecting do-add pairs.
+Added 3 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.700946.
+
+3 PHP_REACHES edges created
+3 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running CubridDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PostgreSQLDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running VariableDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+callbacks.php:301
+  - object property '$user->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+humanstxt.php:294
+  - variable '$emails' of personal types {'email'} is found.
+  - Data types: email
+humanstxt.php:294
+  - variable '$emails' of personal types {'email'} is found.
+  - Data types: email 
+
+callbacks.php:162
+  - RETRIEVAL call to get_option("gmt_offset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+callbacks.php:164
+  - RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+callbacks.php:320
+  - RETRIEVAL call to get_option("active_plugins", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+humanstxt.php:158
+  - RETRIEVAL call to get_option("rewrite_rules") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+humanstxt.php:367
+  - RETRIEVAL call to get_option("humanstxt_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+humanstxt.php:403
+  - RETRIEVAL call to get_option("humanstxt_content") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+humanstxt.php:446
+  - RETRIEVAL call to get_option("humanstxt_revisions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+humanstxt.php:472
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+options.php:375
+  - RETRIEVAL call to get_transient("humanstxt_plugin_information") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+options.php:462
+  - RETRIEVAL call to get_option("permalink_structure") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+options.php:715
+  - RETRIEVAL call to get_the_author_meta("display_name", $revision["user"]) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta 
+
+humanstxt.php:408
+  - STORAGE call to add_option("humanstxt_content", $content, "", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+humanstxt.php:455
+  - STORAGE call to add_option("humanstxt_revisions", $revisions, "", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+humanstxt.php:483
+  - STORAGE call to update_option("humanstxt_revisions", $_revisions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+options.php:103
+  - STORAGE call to delete_option("humanstxt_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+options.php:104
+  - STORAGE call to delete_option("humanstxt_content") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+options.php:105
+  - STORAGE call to delete_option("humanstxt_revisions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+options.php:229
+  - STORAGE call to update_option("humanstxt_content", $content) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+options.php:252
+  - STORAGE call to update_option("humanstxt_options", $humanstxt_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+options.php:383
+  - STORAGE call to set_transient("humanstxt_plugin_information", $api, 60 * 10) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site 
+
+options.php:103
+  - DELETION call to delete_option("humanstxt_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+options.php:104
+  - DELETION call to delete_option("humanstxt_content") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+options.php:105
+  - DELETION call to delete_option("humanstxt_revisions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+options.php:103
+  - Uninstall deletion call: DELETION call to delete_option("humanstxt_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+options.php:104
+  - Uninstall deletion call: DELETION call to delete_option("humanstxt_content") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+options.php:105
+  - Uninstall deletion call: DELETION call to delete_option("humanstxt_revisions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+option
+	WordPressRetrievalDetector.get_option("humanstxt_content") - {'option'}
+	WordPressRetrievalDetector.get_option("permalink_structure") - {'option'}
+	WordPressRetrievalDetector.get_option("humanstxt_options") - {'option'}
+	WordPressStorageDetector.delete_option("humanstxt_revisions") - {'option'}
+	WordPressRetrievalDetector.get_option("rewrite_rules") - {'option'}
+	WordPressStorageDetector.add_option("humanstxt_content", $content, "", "no") - {'option'}
+	WordPressStorageDetector.update_option("humanstxt_options", $humanstxt_options) - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins", []) - {'option'}
+	UninstallDetector.delete_option("humanstxt_revisions") - {'option'}
+	DeletionDetector.delete_option("humanstxt_revisions") - {'option'}
+	WordPressRetrievalDetector.get_option("timezone_string") - {'option'}
+	WordPressStorageDetector.delete_option("humanstxt_content") - {'option'}
+	WordPressStorageDetector.update_option("humanstxt_content", $content) - {'option'}
+	UninstallDetector.delete_option("humanstxt_content") - {'option'}
+	WordPressRetrievalDetector.get_option("humanstxt_revisions") - {'option'}
+	WordPressStorageDetector.add_option("humanstxt_revisions", $revisions, "", "no") - {'option'}
+	WordPressStorageDetector.delete_option("humanstxt_options") - {'option'}
+	DeletionDetector.delete_option("humanstxt_options") - {'option'}
+	DeletionDetector.delete_option("humanstxt_content") - {'option'}
+	WordPressStorageDetector.update_option("humanstxt_revisions", $_revisions) - {'option'}
+	WordPressRetrievalDetector.get_option("gmt_offset") - {'option'}
+	UninstallDetector.delete_option("humanstxt_options") - {'option'}
+site
+	WordPressRetrievalDetector.get_transient("humanstxt_plugin_information") - {'site'}
+	WordPressStorageDetector.set_transient("humanstxt_plugin_information", $api, 60 * 10) - {'site'}
+user
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("display_name", $revision["user"]) - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.955427.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 65 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.168009.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 2645
+65 STORE_REACHES edges created
+65 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 19 nodes as PERSONAL
+In total, tainted 19 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.547101.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:44.242189!
+DELETION call to delete_option("humanstxt_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("humanstxt_content") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("humanstxt_revisions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+object property '$user->user_email' of personal types {'email'} is found.,,None
+Uninstall deletion call: DELETION call to delete_option("humanstxt_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("humanstxt_content") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("humanstxt_revisions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+variable '$emails' of personal types {'email'} is found.,,None
+variable '$emails' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_option("gmt_offset") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rewrite_rules") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("humanstxt_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("humanstxt_content") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("humanstxt_revisions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_transient("humanstxt_plugin_information") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("permalink_structure") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_the_author_meta("display_name", $revision["user"]) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+STORAGE call to add_option("humanstxt_content", $content, "", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("humanstxt_revisions", $revisions, "", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("humanstxt_revisions", $_revisions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("humanstxt_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("humanstxt_content") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("humanstxt_revisions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("humanstxt_content", $content) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("humanstxt_options", $humanstxt_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to set_transient("humanstxt_plugin_information", $api, 60 * 10) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,1338 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on events-or-seminars
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.370800.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.924946.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 17 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.376748.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 3 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.521195.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 685 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.928360.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 1 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.710489.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.084421.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 342 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.960290.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 5340
+Added 4292 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 5340
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.285221.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-content-template.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-custom-meta-box.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-custom-post-type.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-help-page.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-listing-shortcode.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-people-page.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-setting-page.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-singlepost-email-notification.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-sort-by-date.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/class-widget-area.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/csv.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/single-event.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/sm-action-filter.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/sm-main.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/events-or-seminars/taxonomy-event_cate.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.247631.
+
+17 PHP_REACHES edges created
+3 REACHES edges created
+685 PHP_REACHES edges created
+1 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4634 PHP_REACHES edges created
+5340 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1848 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.990795.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.215226.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 8 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.711268.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 14 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.155495.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.251313.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.083744.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006675.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.034526.
+
+22 PHP_REACHES edges created
+22 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 23 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.111856.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+14 SQL operations to process.
+SELECT first_name, last_name,email, SUM(no_seat) AS no_seat FROM $wpdbsm_people_info WHERE post_id='' GROUP BY email
+SQL command (SELECT first_name, last_name,email, SUM(no_seat) AS no_seat FROM $wpdbsm_people_info WHERE post_id='' GROUP BY email) cannot be parsed correct.
+DELETE FROM $wpdbsm_people_info WHERE ID IN(implode(",", $person_id))
+SQL command (DELETE FROM $wpdbsm_people_info WHERE ID IN(implode(",", $person_id))) cannot be parsed correct.
+SELECT  MIN(id) AS id,first_name,last_name,email FROM $wpdbsm_people_info GROUP BY email
+SQL command (SELECT MIN(id) AS id,first_name,last_name,email FROM $wpdbsm_people_info GROUP BY email) cannot be parsed correct.
+SELECT $wpdb.post_title,$wpdb.ID,$wpdbsm_people_info.* FROM $wpdb, $wpdbsm_people_info WHERE $wpdb.ID = $wpdbsm_people_info.post_id AND $wpdbsm_people_info.email='$_GET_pid'
+SQL command (SELECT $wpdb.post_title,$wpdb.ID,$wpdbsm_people_info.* FROM $wpdb, $wpdbsm_people_info WHERE $wpdb.ID = $wpdbsm_people_info.post_id AND $wpdbsm_people_info.email='$_GET_pid') cannot be parsed correct.
+SELECT $wpdb.post_title,$wpdb.ID,$wpdbsm_people_info.* FROM $wpdb, $wpdbsm_people_info WHERE $wpdb.ID = $wpdbsm_people_info.post_id AND $wpdb.ID='$_GET_post_id'
+SQL command (SELECT $wpdb.post_title,$wpdb.ID,$wpdbsm_people_info.* FROM $wpdb, $wpdbsm_people_info WHERE $wpdb.ID = $wpdbsm_people_info.post_id AND $wpdb.ID='$_GET_post_id') cannot be parsed correct.
+SELECT * FROM $wpdbrg_form_meta
+SQL command (SELECT * FROM $wpdbrg_form_meta) cannot be parsed correct.
+SELECT $wpdbsm_people_info.id,$wpdbsm_people_info.first_name,$wpdbsm_people_info.last_name,$wpdbsm_people_info.email,$wpdbsm_people_info.booking_date,$wpdbsm_people_info.no_seat FROM $wpdb, $wpdbsm_people_info WHERE $wpdb.ID = $wpdbsm_people_info.post_id AND $wpdb.ID='$_GET_csv_id'
+SQL command (SELECT $wpdbsm_people_info.id,$wpdbsm_people_info.first_name,$wpdbsm_people_info.last_name,$wpdbsm_people_info.email,$wpdbsm_people_info.booking_date,$wpdbsm_people_info.no_seat FROM $wpdb, $wpdbsm_people_info WHERE $wpdb.ID = $wpdbsm_people_info.post_id AND $wpdb.ID='$_GET_csv_id') cannot be parsed correct.
+SELECT * FROM $wpdboptions WHERE option_name ='active_plugins'
+SQL command (SELECT * FROM $wpdboptions WHERE option_name ='active_plugins') cannot be parsed correct.
+SELECT * FROM $wpdbsm_people_info WHERE email=rgar($entry, $sm_email_id)" AND post_id="
+SQL command (SELECT * FROM $wpdbsm_people_info WHERE email=rgar($entry, $sm_email_id)" AND post_id=") cannot be parsed correct.
+CREATE TABLE $wpdbsm_people_info (`id` INT NOT NULL AUTO_INCREMENT ,
+	`form_id` VARCHAR(222) DEFAULT NULL , 
+	`post_id` VARCHAR(222) DEFAULT NULL ,
+	`no_seat` VARCHAR(222) DEFAULT NULL ,
+	`total_seat` VARCHAR(222) DEFAULT NULL ,
+	`first_name` VARCHAR(222) DEFAULT NULL ,
+	`last_name` VARCHAR(222) DEFAULT NULL , 
+	`email` VARCHAR(222) DEFAULT NULL ,
+	`phone` varchar(222) DEFAULT NULL,
+	`city` varchar(255) DEFAULT NULL,
+	`state` varchar(255) DEFAULT NULL,
+	`zip` varchar(255) DEFAULT NULL,
+	`booking_date` varchar(222) DEFAULT NULL,
+	PRIMARY KEY (`id`)
+	) $wpdb->get_charset_collate();
+SQL command (CREATE TABLE $wpdbsm_people_info (`id` INT NOT NULL AUTO_INCREMENT , `form_id` VARCHAR(222) DEFAULT NULL , `post_id` VARCHAR(222) DEFAULT NULL , `no_seat` VARCHAR(222) DEFAULT NULL , `total_seat` VARCHAR(222) DEFAULT NULL , `first_name` VARCHAR(222) DEFAULT NULL , `last_name` VARCHAR(222) DEFAULT NULL , `email` VARCHAR(222) DEFAULT NULL , `phone` varchar(222) DEFAULT NULL, `city` varchar(255) DEFAULT NULL, `state` varchar(255) DEFAULT NULL, `zip` varchar(255) DEFAULT NULL, `booking_date` varchar(222) DEFAULT NULL, PRIMARY KEY (`id`) ) $wpdb->get_charset_collate();) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdbsm_people_info
+SQL command (DROP TABLE IF EXISTS $wpdbsm_people_info) cannot be parsed correct.
+SELECT  SUM(no_seat) AS no_seat,post_id FROM $wpdbsm_people_info WHERE post_id=$post GROUP BY post_id
+SQL command (SELECT SUM(no_seat) AS no_seat,post_id FROM $wpdbsm_people_info WHERE post_id=$post GROUP BY post_id) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1119, 3254, 3289, 3490, 4097, 4797, 6848, 7984, 8416, 8563, 8673, 8702, 8708, 8829]
+Added 0 SQL nodes. 0 out of 14 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:06.030360.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'Enable registration for this event'' cannot be parsed correct.
+HTML code '$'Spaces'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "spaces_field", true)'' cannot be parsed correct.
+HTML code '$'Max number of spaces to book'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "max_space_field", true)'' cannot be parsed correct.
+HTML code '$'Min number of spaces to book'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "min_space_field", true)'' cannot be parsed correct.
+HTML code '$'Respondents'' cannot be parsed correct.
+HTML code '$'Seats'' cannot be parsed correct.
+HTML code '$'$data_first_name $data_last_name'' cannot be parsed correct.
+HTML code '$'$data_no_seat'' cannot be parsed correct.
+HTML code '$'Booked Seats'' cannot be parsed correct.
+HTML code '$'Total Seats'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "spaces_field", true)'' cannot be parsed correct.
+HTML code '$'Available Seats'' cannot be parsed correct.
+HTML code '$'Start Date'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "start_date_field", true)'' cannot be parsed correct.
+HTML code '$'End Date'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "end_date_field", true)'' cannot be parsed correct.
+HTML code '$'Start Time'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "start_time_field", true)'' cannot be parsed correct.
+HTML code '$'End Time'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "end_time_field", true)'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "external_link", true)'' cannot be parsed correct.
+HTML code '$'Status'' cannot be parsed correct.
+HTML code '$'Check this option if you want to show event.'' cannot be parsed correct.
+HTML code '$'Location Name'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "loaction_name_field", true)'' cannot be parsed correct.
+HTML code '$'The name of the location where the event takes place. You can use the name of a venue, a square, etc 
+											If you leave this empty, the map will NOT be shown for this event'' cannot be parsed correct.
+HTML code '$'Address:'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "address_field", true)'' cannot be parsed correct.
+HTML code '$'The address of the location where the event takes place. Example: 21, Dominick Street'' cannot be parsed correct.
+HTML code '$'Town or Area:'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "town_name_field", true)'' cannot be parsed correct.
+HTML code '$'The town where the location is located. If you\'re using the Google Map integration and want to avoid geotagging ambiguities include the country in the town field. Example: Verona, Italy.'' cannot be parsed correct.
+HTML code '$'Latitude:'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "map_latitude", true)'' cannot be parsed correct.
+HTML code '$'Longitude:'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "map_longitude", true)'' cannot be parsed correct.
+HTML code '$'get_option("sm_google_map")'' cannot be parsed correct.
+HTML code '$'do_shortcode("[gravityform id=" . $gf_form . "" title="true" description="true" ajax="true"]")'' cannot be parsed correct.
+HTML code '$'$wpdb->get_results($person_detail_date, OBJECT)_0_post_title'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'<p>$value_short_description</p>'' cannot be parsed correct.
+HTML code '$'<th scope="row">$value_description</th>'' cannot be parsed correct.
+HTML code '$'<input class="widefat" type="text" name="$value_id" value="get_option($value["id"])"'' cannot be parsed correct.
+HTML code '$'<p>$value_short_description</p>'' cannot be parsed correct.
+HTML code '$'<th scope="row">$value_description</th>'' cannot be parsed correct.
+HTML code '$'<select class="widefat" name="$value_id"'' cannot be parsed correct.
+HTML code '$'<option value=$key" selecteducfirst($option)</option>'' cannot be parsed correct.
+HTML code '$'<option value=$key"ucfirst($option)</option>'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="person_delete_nonce" value="wp_create_nonce("person_delete_nonce")" /'' cannot be parsed correct.
+HTML code '$'<p>$value_short_description</p>'' cannot be parsed correct.
+HTML code '$'<th scope="row">$value_description</th>'' cannot be parsed correct.
+HTML code '$'<input class="widefat" type="number" min="1" name="$value_id" value="get_option($value["id"])"'' cannot be parsed correct.
+HTML code '$'<p>$value_short_description</p>'' cannot be parsed correct.
+HTML code '$'<th scope="row">$value_description</th>'' cannot be parsed correct.
+HTML code '$'<input class="widefat" type="checkbox" name="$value_id" value="$value_id" checked'' cannot be parsed correct.
+HTML code '$'<input class="widefat" type="checkbox" name="$value_id" value="$value_value"'' cannot be parsed correct.
+HTML code '$'<p>$value_short_description</p>'' cannot be parsed correct.
+HTML code '$'<th scope="row">$value_description</th>'' cannot be parsed correct.
+HTML code '$'$args_before_title$instance_title$args_after_title'' cannot be parsed correct.
+HTML code '$'do_shortcode(str_replace(["#_LINKEDNAME", "#_EVENTNAME", "#_TOWN", "#_ADDRESS", "#_EVENTPAGEURL", "#_LOCATIONNAME", "#_NOTES", "#_12HSTARTTIME", "#_12HENDTIME", "#l", "#F", "#j", "#Y", "#_MAP"], [$event_name, $event_name, $town_name_field, $address_field, get_permalink(), $loaction_name_field, $post_notes, $start_time_field, $end_time_field, $start_date_day, $start_date_year_name, $start_date_day_no, $start_date_year, "<div id="event_map" style="height: 253px; width: 100%; position: relative; overflow: hidden;"></div>"], get_option("sm_single_list_format")))'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "map_latitude", true)'' cannot be parsed correct.
+HTML code '$'$ContentTemplate->content_area($format_data, $post_id)'' cannot be parsed correct.
+HTML code '$'do_shortcode("[gravityform id=" . $gf_form . "" title="true" description="true" ajax="true"]")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'$instance_title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("total_post_widget")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("total_post_widget")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("total_post_widget")'' cannot be parsed correct.
+HTML code '$'$instance_total_post_widget'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("sm_list_widget")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("sm_list_widget")'' cannot be parsed correct.
+HTML code '$'<div class="seminars-summary">
+<ul>
+ 	<li>#_LINKEDNAME</li>
+ 	<li><strong>Area: </strong>#_TOWN</li>
+ 	<li><strong>Date: </strong>#l, #F #j, #Y</li>
+ 	<li><strong>Time: </strong>#_12HSTARTTIME - #_12HENDTIME</li>
+ 	<li><strong>Location: </strong>#_LOCATIONNAME</li>
+ 	<li><a class="reg_link button" href="#_EVENTPAGEURL">DETAILS &amp; REGISTRATION</a></li>
+</ul>
+</div>'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "map_longitude", true)'' cannot be parsed correct.
+HTML code '$'<strong>get_post_meta($post->ID, "loaction_name_field", true)</strong></br>get_post_meta($post->ID, "address_field", true)'' cannot be parsed correct.
+HTML code '$'get_option("sm_google_map")'' cannot be parsed correct.
+HTML code '$'do_shortcode("[gravityform id=" . $gf_form . "" title="true" description="true" ajax="true"]")'' cannot be parsed correct.
+HTML code '$'date("l, F d Y", strtotime($start_date_field)) to date("l, F d Y", strtotime($end_date_field))'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_ID, "start_time_field", true) to get_post_meta($post_ID, "end_time_field", true)'' cannot be parsed correct.
+HTML code '$'do_shortcode("[show_list_event]")'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$' >
+					<label class="sm-col-2">'' cannot be parsed correct.
+HTML code '$'<p>Sory no content is match your criteria!!</p>'' cannot be parsed correct.
+HTML code '$'<p>Sory no content is match your criteria!!</p>'' cannot be parsed correct.
+HTML code '$'No Record Founds'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr valign="top">'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr valign="top">'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<option value="">Select Option</option>'' cannot be parsed correct.
+HTML code '$'<form id="wpse-list-table-form" method="post">'' cannot be parsed correct.
+HTML code '$'<div class="wrap"><h2>People List</h2>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'<option>No option available</option>'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr valign="top">'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr valign="top">'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'No Fields exist!'' cannot be parsed correct.
+HTML code '$'<tr valign="top">'' cannot be parsed correct.
+HTML code '$'<td>'' cannot be parsed correct.
+HTML code '$'<p>Sory no content is match your criteria!!</p>'' cannot be parsed correct.
+HTML code '$'<span style=\'color:#4073bb;font-weight:700;\'>Future Event </br> <span class=\'dashicons dashicons-yes\'></span><span style=\'color:#4CAF50;font-weight:700;\'> Active</span></span>'' cannot be parsed correct.
+HTML code '$'<span style=\'color:#4073bb;font-weight:700;\'>Future Event </br> <span style=\'color:#da190b;font-weight:700;\'> Not Active</span></span>'' cannot be parsed correct.
+HTML code '$'<span style=\'color:#e68a00;font-weight:700;\'>Tody is Last Date </br> <span class=\'dashicons dashicons-yes\'></span><span style=\'color:#4CAF50;font-weight:700;\'> Active</span></span>'' cannot be parsed correct.
+HTML code '$'<span style=\'color:#e68a00;font-weight:700;\'>Tody is Last Date </br> <span style=\'color:#da190b;font-weight:700;\'> Not Active</span></span>'' cannot be parsed correct.
+HTML code '$'<span style=\'color:#dc3232;font-weight:700;text-decoration: line-through;\'>Expired </br> <span style=\'color:#da190b;font-weight:700;\'> Please Inactive this Event</span></span>'' cannot be parsed correct.
+HTML code '$'<span style=\'color:#dc3232;font-weight:700;text-decoration: line-through;\'>Expired </br> <span style=\'color:#da190b;font-weight:700;\'> Not Active</span></span>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:12.933990.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.058075.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 25 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.958131.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running HashDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running maxdbDetector
+### Start running UserInputDetector
+### Finish running MySQLiDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running PHPStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+class-custom-meta-box.php:421
+  - Request variable '$_POST["address_field"]' of personal types {'address'} is found.
+  - Data types: address 
+
+csv.php:18
+  - STORAGE call to fputcsv($fp, $header).
+  - Data types: file
+csv.php:27
+  - STORAGE call to fputcsv($fp, $value).
+  - Data types: file 
+
+class-people-page.php:118
+  - object property '$value->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+class-people-page.php:119
+  - object property '$value->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+class-people-page.php:120
+  - object property '$value->email' of personal types {'email'} is found.
+  - Data types: email
+class-people-page.php:259
+  - object property '$value->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+class-people-page.php:260
+  - object property '$value->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+class-people-page.php:261
+  - object property '$value->email' of personal types {'email'} is found.
+  - Data types: email 
+
+class-content-template.php:43
+  - variable '$address_field' of personal types {'address'} is found.
+  - Data types: address
+class-content-template.php:223
+  - variable '$address_field' of personal types {'address'} is found.
+  - Data types: address
+class-custom-meta-box.php:421
+  - variable '$address_field' of personal types {'address'} is found.
+  - Data types: address
+class-custom-meta-box.php:436
+  - variable '$address_field' of personal types {'address'} is found.
+  - Data types: address
+class-custom-meta-box.php:1129
+  - variable '$address_field' of personal types {'address'} is found.
+  - Data types: address
+class-custom-meta-box.php:1189
+  - variable '$address_field' of personal types {'address'} is found.
+  - Data types: address
+single-event.php:33
+  - variable '$address_field' of personal types {'address'} is found.
+  - Data types: address
+single-event.php:67
+  - variable '$address_field' of personal types {'address'} is found.
+  - Data types: address
+single-event.php:73
+  - variable '$address_field' of personal types {'address'} is found.
+  - Data types: address
+sm-main.php:57
+  - variable '$sm_first_name_id' of personal types {'first_name'} is found.
+  - Data types: first_name
+sm-main.php:58
+  - variable '$sm_last_name_id' of personal types {'last_name'} is found.
+  - Data types: last_name
+sm-main.php:59
+  - variable '$sm_email_id' of personal types {'email'} is found.
+  - Data types: email
+sm-main.php:62
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+sm-main.php:62
+  - variable '$sm_first_name_id' of personal types {'first_name'} is found.
+  - Data types: first_name
+sm-main.php:63
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+sm-main.php:63
+  - variable '$sm_last_name_id' of personal types {'last_name'} is found.
+  - Data types: last_name
+sm-main.php:65
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+sm-main.php:65
+  - variable '$sm_email_id' of personal types {'email'} is found.
+  - Data types: email
+sm-main.php:73
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+sm-main.php:83
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+sm-main.php:84
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+sm-main.php:85
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+class-content-template.php:28
+  - RETRIEVAL call to get_post_meta($post_id, "external_link", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-content-template.php:37
+  - RETRIEVAL call to get_post_meta($post_id, "town_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-content-template.php:43
+  - RETRIEVAL call to get_post_meta($post_id, "address_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-content-template.php:49
+  - RETRIEVAL call to get_post_meta($post_id, "loaction_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-content-template.php:55
+  - RETRIEVAL call to get_post_meta($post_id, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-content-template.php:61
+  - RETRIEVAL call to get_post_meta($post_id, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-content-template.php:67
+  - RETRIEVAL call to get_post_meta($post_id, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:556
+  - RETRIEVAL call to get_post_meta($post->ID, "spaces_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:559
+  - RETRIEVAL call to get_post_meta($post->ID, "max_space_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:562
+  - RETRIEVAL call to get_post_meta($post->ID, "min_space_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:565
+  - RETRIEVAL call to get_post_meta($post->ID, "enable_registration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:829
+  - RETRIEVAL call to get_post_meta($post->ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:832
+  - RETRIEVAL call to get_post_meta($post->ID, "end_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:835
+  - RETRIEVAL call to get_post_meta($post->ID, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:838
+  - RETRIEVAL call to get_post_meta($post->ID, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:955
+  - RETRIEVAL call to get_post_meta($post->ID, "external_link", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:1021
+  - RETRIEVAL call to get_post_meta($post->ID, "activation_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:1126
+  - RETRIEVAL call to get_post_meta($post->ID, "loaction_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:1129
+  - RETRIEVAL call to get_post_meta($post->ID, "address_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:1132
+  - RETRIEVAL call to get_post_meta($post->ID, "town_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:1135
+  - RETRIEVAL call to get_post_meta($post->ID, "map_latitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:1138
+  - RETRIEVAL call to get_post_meta($post->ID, "map_longitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-custom-meta-box.php:1267
+  - RETRIEVAL call to get_option("sm_google_map") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-custom-post-type.php:67
+  - RETRIEVAL call to get_option("sm_post_type_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-custom-post-type.php:69
+  - RETRIEVAL call to get_option("sm_post_type_slug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-listing-shortcode.php:127
+  - RETRIEVAL call to get_option("sm_asc_desc") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-listing-shortcode.php:136
+  - RETRIEVAL call to get_option("sm_pagination") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-listing-shortcode.php:211
+  - RETRIEVAL call to get_option("sm_post_before_evnts_start") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-listing-shortcode.php:229
+  - RETRIEVAL call to get_option("sm_list_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-listing-shortcode.php:293
+  - RETRIEVAL call to get_option("sm_post_end_evnts_start") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-listing-shortcode.php:326
+  - RETRIEVAL call to get_option("sm_gf_no_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-people-page.php:251
+  - RETRIEVAL call to get_post_meta($post_id, "spaces_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-setting-page.php:399
+  - RETRIEVAL call to get_option($value["name"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-setting-page.php:421
+  - RETRIEVAL call to get_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-setting-page.php:437
+  - RETRIEVAL call to get_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-setting-page.php:501
+  - RETRIEVAL call to get_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-setting-page.php:519
+  - RETRIEVAL call to get_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-singlepost-email-notification.php:16
+  - RETRIEVAL call to get_post_meta($post->ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-singlepost-email-notification.php:58
+  - RETRIEVAL call to get_post_meta($post->ID, "town_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-singlepost-email-notification.php:70
+  - RETRIEVAL call to get_post_meta($post->ID, "address_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-singlepost-email-notification.php:82
+  - RETRIEVAL call to get_post_meta($post->ID, "loaction_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-singlepost-email-notification.php:94
+  - RETRIEVAL call to get_post_meta($post->ID, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-singlepost-email-notification.php:106
+  - RETRIEVAL call to get_post_meta($post->ID, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-sort-by-date.php:34
+  - RETRIEVAL call to get_posts($arg). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+class-sort-by-date.php:49
+  - RETRIEVAL call to get_post_meta($single_date->ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+class-widget-area.php:101
+  - RETRIEVAL call to get_option("sm_asc_desc") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+class-widget-area.php:217
+  - RETRIEVAL call to get_option("sm_gf_no_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+single-event.php:31
+  - RETRIEVAL call to get_post_meta($post->ID, "town_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+single-event.php:33
+  - RETRIEVAL call to get_post_meta($post->ID, "address_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+single-event.php:35
+  - RETRIEVAL call to get_post_meta($post->ID, "map_latitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+single-event.php:37
+  - RETRIEVAL call to get_post_meta($post->ID, "map_longitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+single-event.php:41
+  - RETRIEVAL call to get_post_meta($post->ID, "loaction_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string), 2: $single (bool). Returns (mixed).
+  - Data types: post_meta
+single-event.php:43
+  - RETRIEVAL call to get_post_meta($post->ID, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+single-event.php:45
+  - RETRIEVAL call to get_post_meta($post->ID, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+single-event.php:47
+  - RETRIEVAL call to get_post_meta($post->ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+single-event.php:61
+  - RETRIEVAL call to get_option("sm_google_map") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+single-event.php:69
+  - RETRIEVAL call to get_option("sm_single_list_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+single-event.php:133
+  - RETRIEVAL call to get_post_meta($post->ID, "enable_registration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+single-event.php:135
+  - RETRIEVAL call to get_option("sm_gf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+single-event.php:137
+  - RETRIEVAL call to get_option("sm_gf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+sm-action-filter.php:93
+  - RETRIEVAL call to get_post_meta($post_ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+sm-action-filter.php:97
+  - RETRIEVAL call to get_post_meta($post_ID, "end_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+sm-action-filter.php:135
+  - RETRIEVAL call to get_post_meta($post_ID, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+sm-action-filter.php:137
+  - RETRIEVAL call to get_post_meta($post_ID, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+sm-action-filter.php:169
+  - RETRIEVAL call to get_post_meta($post_ID, "end_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+sm-action-filter.php:171
+  - RETRIEVAL call to get_post_meta($post_ID, "activation_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+sm-main.php:57
+  - RETRIEVAL call to get_option("sm_first_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+sm-main.php:58
+  - RETRIEVAL call to get_option("sm_last_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+sm-main.php:59
+  - RETRIEVAL call to get_option("sm_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+sm-main.php:60
+  - RETRIEVAL call to get_option("sm_phone") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+sm-main.php:61
+  - RETRIEVAL call to get_option("sm_seats") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+sm-main.php:70
+  - RETRIEVAL call to get_post($entry["post_id"]) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+sm-main.php:135
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+sm-main.php:212
+  - RETRIEVAL call to get_post_meta($post->ID, "spaces_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+sm-main.php:213
+  - RETRIEVAL call to get_post_meta($post->ID, "max_space_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+sm-main.php:219
+  - RETRIEVAL call to get_option("sm_seats") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+class-custom-meta-box.php:433
+  - STORAGE call to update_post_meta($post_id, "loaction_name_field", $loaction_name_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:436
+  - STORAGE call to update_post_meta($post_id, "address_field", $address_field) alters data types {'address', 'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: address, post_meta
+class-custom-meta-box.php:439
+  - STORAGE call to update_post_meta($post_id, "town_name_field", $town_name_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:442
+  - STORAGE call to update_post_meta($post_id, "map_latitude", $map_latitude) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:445
+  - STORAGE call to update_post_meta($post_id, "map_longitude", $map_longitude) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:469
+  - STORAGE call to update_post_meta($post_id, "start_date_field", $start_date_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:472
+  - STORAGE call to update_post_meta($post_id, "end_date_field", $end_date_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:475
+  - STORAGE call to update_post_meta($post_id, "start_time_field", $start_time_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:478
+  - STORAGE call to update_post_meta($post_id, "end_time_field", $end_time_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:502
+  - STORAGE call to update_post_meta($post_id, "spaces_field", $spaces_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:505
+  - STORAGE call to update_post_meta($post_id, "max_space_field", $max_space_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:508
+  - STORAGE call to update_post_meta($post_id, "min_space_field", $min_space_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:511
+  - STORAGE call to update_post_meta($post_id, "enable_registration", $enable_registration) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:526
+  - STORAGE call to update_post_meta($post_id, "activation_name_field", $activation_name_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-custom-meta-box.php:538
+  - STORAGE call to update_post_meta($post_id, "external_link", $activation_name_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+class-setting-page.php:605
+  - STORAGE call to update_option($val["id"], stripslashes($_POST[$val["id"]])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+sm-main.php:46
+  - STORAGE call to update_option("post_id", $postid) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+sm-main.php:137
+  - STORAGE call to add_option("sm_db_version", $sm_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+sm-main.php:164
+  - STORAGE call to update_option("sm_list_format", $sm_list_format) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+sm-main.php:165
+  - STORAGE call to update_option("sm_single_list_format", $sm_single_list_format) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+sm-main.php:178
+  - STORAGE call to delete_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+sm-main.php:200
+  - STORAGE call to delete_post_meta($id, $key_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+sm-main.php:203
+  - STORAGE call to wp_delete_post($id, true) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: wp_post, post_meta, post 
+
+sm-main.php:178
+  - DELETION call to delete_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+sm-main.php:200
+  - DELETION call to delete_post_meta($id, $key_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+sm-main.php:203
+  - DELETION call to wp_delete_post($id, true) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: wp_post, post_meta, post 
+
+sm-main.php:178
+  - Uninstall deletion call: DELETION call to delete_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+sm-main.php:200
+  - Uninstall deletion call: DELETION call to delete_post_meta($id, $key_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+sm-main.php:203
+  - Uninstall deletion call: DELETION call to wp_delete_post($id, true) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: wp_post, post_meta, post 
+
+By data type:
+address
+	WordPressStorageDetector.update_post_meta($post_id, "address_field", $address_field) - {'address', 'post_meta'}
+	VariableDetector.(unknown) - {'address'}
+	ArrayElementDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+file
+	PHPStorageDetector.fputcsv($fp, $value) - {'file'}
+	PHPStorageDetector.fputcsv($fp, $header) - {'file'}
+first_name
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+last_name
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+none
+	WordPressRetrievalDetector.get_posts($arg) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressRetrievalDetector.get_option("sm_asc_desc") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_email") - {'option'}
+	WordPressStorageDetector.update_option($val["id"], stripslashes($_POST[$val["id"]])) - {'option'}
+	WordPressRetrievalDetector.get_option("sm_gf") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_post_end_evnts_start") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_pagination") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_gf_no_event") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_phone") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_single_list_format") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_google_map") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_post_type_slug") - {'option'}
+	WordPressRetrievalDetector.get_option($value["id"]) - {'option'}
+	WordPressStorageDetector.add_option("sm_db_version", $sm_db_version) - {'option'}
+	WordPressStorageDetector.update_option("post_id", $postid) - {'option'}
+	WordPressRetrievalDetector.get_option("sm_google_map") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_gf") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_gf_no_event") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_asc_desc") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_post_before_evnts_start") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_first_name") - {'option'}
+	WordPressRetrievalDetector.get_option($value["id"]) - {'option'}
+	WordPressRetrievalDetector.get_option("sm_last_name") - {'option'}
+	WordPressRetrievalDetector.get_option($value["id"]) - {'option'}
+	WordPressStorageDetector.update_option("sm_single_list_format", $sm_single_list_format) - {'option'}
+	WordPressRetrievalDetector.get_option($value["id"]) - {'option'}
+	WordPressRetrievalDetector.get_option($value["name"]) - {'option'}
+	WordPressRetrievalDetector.get_option("sm_list_format") - {'option'}
+	WordPressStorageDetector.delete_option($value["id"]) - {'option'}
+	UninstallDetector.delete_option($value["id"]) - {'option'}
+	DeletionDetector.delete_option($value["id"]) - {'option'}
+	WordPressRetrievalDetector.get_option("sm_seats") - {'option'}
+	WordPressStorageDetector.update_option("sm_list_format", $sm_list_format) - {'option'}
+	WordPressRetrievalDetector.get_option("sm_post_type_name") - {'option'}
+	WordPressRetrievalDetector.get_option("sm_seats") - {'option'}
+post
+	DeletionDetector.wp_delete_post($id, true) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($entry["post_id"]) - {'wp_post', 'post_meta', 'post'}
+	UninstallDetector.wp_delete_post($id, true) - {'wp_post', 'post_meta', 'post'}
+	WordPressStorageDetector.wp_delete_post($id, true) - {'wp_post', 'post_meta', 'post'}
+post_meta
+	WordPressStorageDetector.update_post_meta($post_id, "activation_name_field", $activation_name_field) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "start_date_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "start_time_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "start_time_field", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "end_date_field", $end_date_field) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "end_time_field", $end_time_field) - {'post_meta'}
+	DeletionDetector.wp_delete_post($id, true) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "loaction_name_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "enable_registration", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "map_latitude", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "external_link", $activation_name_field) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "town_name_field", $town_name_field) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "end_time_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "town_name_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "map_longitude", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "min_space_field", $min_space_field) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "start_date_field", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "enable_registration", $enable_registration) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "address_field", $address_field) - {'address', 'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "start_date_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "start_date_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "loaction_name_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "activation_name_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "address_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "address_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "loaction_name_field", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "start_time_field", $start_time_field) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "external_link", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "spaces_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($single_date->ID, "start_date_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "external_link", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "max_space_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "address_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "start_time_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "spaces_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "loaction_name_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "end_date_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "end_time_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "town_name_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "town_name_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "max_space_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "end_date_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($entry["post_id"]) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "address_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "end_date_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "start_time_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "map_longitude", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "map_latitude", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($id, $key_value) - {'post_meta'}
+	UninstallDetector.delete_post_meta($id, $key_value) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "end_time_field", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "max_space_field", $max_space_field) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "min_space_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "end_time_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "start_time_field", true) - {'post_meta'}
+	UninstallDetector.wp_delete_post($id, true) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "start_date_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "town_name_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "activation_name_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "end_time_field", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "spaces_field", true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($id, $key_value) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "loaction_name_field", $loaction_name_field) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "start_date_field", $start_date_field) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "map_latitude", $map_latitude) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "enable_registration", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "spaces_field", $spaces_field) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "map_longitude", $map_longitude) - {'post_meta'}
+	WordPressStorageDetector.wp_delete_post($id, true) - {'wp_post', 'post_meta', 'post'}
+wp_post
+	DeletionDetector.wp_delete_post($id, true) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($entry["post_id"]) - {'wp_post', 'post_meta', 'post'}
+	UninstallDetector.wp_delete_post($id, true) - {'wp_post', 'post_meta', 'post'}
+	WordPressStorageDetector.wp_delete_post($id, true) - {'wp_post', 'post_meta', 'post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:18.545967.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 972 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.604855.
+
+972 STORE_REACHES edges created
+972 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 371 nodes as PERSONAL
+In total, tainted 371 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:05.987243.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:12.746261!
+Request variable '$_POST["address_field"]' of personal types {'address'} is found.,,None
+DELETION call to delete_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_post_meta($id, $key_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to wp_delete_post($id, true) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+STORAGE call to fputcsv($fp, $header).,None,None
+STORAGE call to fputcsv($fp, $value).,None,None
+object property '$value->first_name' of personal types {'first_name'} is found.,,None
+object property '$value->last_name' of personal types {'last_name'} is found.,,None
+object property '$value->email' of personal types {'email'} is found.,,None
+object property '$value->first_name' of personal types {'first_name'} is found.,,None
+object property '$value->last_name' of personal types {'last_name'} is found.,,None
+object property '$value->email' of personal types {'email'} is found.,,None
+Uninstall deletion call: DELETION call to delete_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_post_meta($id, $key_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to wp_delete_post($id, true) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+variable '$address_field' of personal types {'address'} is found.,,None
+variable '$address_field' of personal types {'address'} is found.,,None
+variable '$address_field' of personal types {'address'} is found.,,None
+variable '$address_field' of personal types {'address'} is found.,,None
+variable '$address_field' of personal types {'address'} is found.,,None
+variable '$address_field' of personal types {'address'} is found.,,None
+variable '$address_field' of personal types {'address'} is found.,,None
+variable '$address_field' of personal types {'address'} is found.,,None
+variable '$address_field' of personal types {'address'} is found.,,None
+variable '$sm_first_name_id' of personal types {'first_name'} is found.,,None
+variable '$sm_last_name_id' of personal types {'last_name'} is found.,,None
+variable '$sm_email_id' of personal types {'email'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$sm_first_name_id' of personal types {'first_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$sm_last_name_id' of personal types {'last_name'} is found.,,None
+variable '$sm_email_id' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_post_meta($post_id, "external_link", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "town_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "address_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "loaction_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "activation_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "loaction_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "address_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "town_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "map_latitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "map_longitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_google_map") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "spaces_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "max_space_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "min_space_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "enable_registration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "end_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "external_link", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_post_type_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_post_type_slug") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_asc_desc") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_pagination") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_post_before_evnts_start") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_list_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_post_end_evnts_start") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_gf_no_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "spaces_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($value["name"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "town_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "address_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "loaction_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($arg). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($single_date->ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_asc_desc") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_gf_no_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "enable_registration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_gf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_gf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "town_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "address_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "map_latitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "map_longitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "loaction_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string), 2: $single (bool). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_google_map") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_single_list_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "start_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "end_time_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "end_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "activation_name_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "start_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "end_date_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "spaces_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "max_space_field", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_seats") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_first_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_last_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_phone") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sm_seats") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($entry["post_id"]) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+STORAGE call to update_post_meta($post_id, "loaction_name_field", $loaction_name_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "address_field", $address_field) alters data types {'address', 'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "town_name_field", $town_name_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "map_latitude", $map_latitude) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "map_longitude", $map_longitude) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "start_date_field", $start_date_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "end_date_field", $end_date_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "start_time_field", $start_time_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "end_time_field", $end_time_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "spaces_field", $spaces_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "max_space_field", $max_space_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "min_space_field", $min_space_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "enable_registration", $enable_registration) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "activation_name_field", $activation_name_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "external_link", $activation_name_field) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_option($val["id"], stripslashes($_POST[$val["id"]])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("sm_db_version", $sm_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("sm_list_format", $sm_list_format) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("sm_single_list_format", $sm_single_list_format) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option($value["id"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_post_meta($id, $key_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to wp_delete_post($id, true) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+STORAGE call to update_option("post_id", $postid) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['address']) stored through WordPress function "update_post_meta($post_id, "address_field", $address_field)", found in file class-custom-meta-box.php at line 436. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_post_meta($post_id, "address_field", $address_field) does not have corresponding deletion method. Storage method found in file class-custom-meta-box.php at line 436. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 791. Found in file class-custom-meta-box.php at line 436 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function events-or-seminars_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+    //TODO: Delete the user data that was stored using Wordpress functions
+
+    //Below is the sample code for deleting user meta and may need to be modified to suit the plugin.
+    $user_id = get_user_by('email', $email_address)
+    $key = 'email' //Sample user meta key
+    if ( $customer->user_id > 0 ) {
+        //Delete user meta data by $key
+        delete_user_meta( $user_id, $key );
+    }
+        
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'events-or-seminars' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function events-or-seminars_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'events-or-seminars' ),
+        'callback'             => 'events-or-seminars_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'events-or-seminars_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function events-or-seminars_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'events-or-seminars' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'events-or-seminars' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'events-or-seminars' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'events-or-seminars', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'events-or-seminars_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

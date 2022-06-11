@@ -1,0 +1,690 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on vr-frases
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.507101.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.058336.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.305619.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 7 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.890052.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 577 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.924393.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.611583.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.099664.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 256 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.696678.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 4914
+Added 4074 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 5026
+Added 112 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.445009.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vr-frases/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vr-frases/vr-frases.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vr-frases/includes/vr-frases-admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vr-frases/includes/vr-frases-functions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vr-frases/includes/vr-frases-options.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vr-frases/includes/vr-frases-shortcodes.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vr-frases/includes/vr-frases-template.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vr-frases/includes/vr-frases-widgets.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.889761.
+
+7 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4907 PHP_REACHES edges created
+112 PHP_REACHES edges created
+5026 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1633 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.266725.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:04.238003.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 4444
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 4444
+Added 31 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.479885.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 20 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.158921.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.333258.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 4444
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 4444
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.303075.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008344.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035119.
+
+51 PHP_REACHES edges created
+51 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 36 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.114068.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+49 SQL operations to process.
+SELECT * FROM $wpdb NATURAL JOIN ($wpdb, $wpdb)vr_frases_search_query()vr_frases_define_titles($_GET)_groupby LIMIT 0,get_option("vr_frases_options")_num_inputs
+SQL command (SELECT * FROM $wpdb NATURAL JOIN ($wpdb, $wpdb)vr_frases_search_query()vr_frases_define_titles($_GET)_groupby LIMIT 0,get_option("vr_frases_options")_num_inputs) cannot be parsed correct.
+SELECT * FROM $wpdb NATURAL JOIN ($wpdb, $wpdb) WHERE frase = '$_POST_frase' AND autor =  '$_POST_autor'
+SQL command (SELECT * FROM $wpdb NATURAL JOIN ($wpdb, $wpdb) WHERE frase = '$_POST_frase' AND autor = '$_POST_autor') cannot be parsed correct.
+INSERT INTO $wpdb ( autor , frase , idclase , idtema ) VALUES ( '$_POST_autor', '$_POST_frase', '$_POST_idclase', '$_POST_idtema' ) 
+SQL command (INSERT INTO $wpdb ( autor , frase , idclase , idtema ) VALUES ( '$_POST_autor', '$_POST_frase', '$_POST_idclase', '$_POST_idtema' ) ) cannot be parsed correct.
+SELECT * FROM $wpdb ORDER by clase ASC
+SQL command (SELECT * FROM $wpdb ORDER by clase ASC) cannot be parsed correct.
+SELECT * FROM $wpdb ORDER by tema ASC
+SQL command (SELECT * FROM $wpdb ORDER by tema ASC) cannot be parsed correct.
+SELECT * from $wpdb ORDER by clase ASC LIMIT 0,get_option("vr_frases_options")_num_inputs
+SQL command (SELECT * from $wpdb ORDER by clase ASC LIMIT 0,get_option("vr_frases_options")_num_inputs) cannot be parsed correct.
+SELECT count(frase) as frases FROM $wpdb NATURAL JOIN $wpdb WHERE idclase = $clase
+SQL command (SELECT count(frase) as frases FROM $wpdb NATURAL JOIN $wpdb WHERE idclase = $clase) cannot be parsed correct.
+SELECT * from $wpdb ORDER by tema ASC LIMIT 0,get_option("vr_frases_options")_num_inputs
+SQL command (SELECT * from $wpdb ORDER by tema ASC LIMIT 0,get_option("vr_frases_options")_num_inputs) cannot be parsed correct.
+SELECT count(frase) as frases FROM $wpdb NATURAL JOIN $wpdb WHERE idtema = $tema
+SQL command (SELECT count(frase) as frases FROM $wpdb NATURAL JOIN $wpdb WHERE idtema = $tema) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE clase = '$_POST_clase' 
+SQL command (SELECT * FROM $wpdb WHERE clase = '$_POST_clase' ) cannot be parsed correct.
+INSERT INTO $wpdb ( clase ) VALUES ( '$_POST_clase' )
+SQL command (INSERT INTO $wpdb ( clase ) VALUES ( '$_POST_clase' )) cannot be parsed correct.
+ SELECT * FROM $wpdb WHERE tema = '$_POST_tema' 
+SQL command ( SELECT * FROM $wpdb WHERE tema = '$_POST_tema' ) cannot be parsed correct.
+INSERT INTO $wpdb ( tema ) VALUES ( '$_POST_tema' )
+SQL command (INSERT INTO $wpdb ( tema ) VALUES ( '$_POST_tema' )) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE idfrase=$id
+SQL command (SELECT * FROM $wpdb WHERE idfrase=$id) cannot be parsed correct.
+SELECT * FROM $wpdb ORDER by clase ASC
+SQL command (SELECT * FROM $wpdb ORDER by clase ASC) cannot be parsed correct.
+SELECT * FROM $wpdb ORDER by tema ASC
+SQL command (SELECT * FROM $wpdb ORDER by tema ASC) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE idclase=$id
+SQL command (SELECT * FROM $wpdb WHERE idclase=$id) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE idtema=$id
+SQL command (SELECT * FROM $wpdb WHERE idtema=$id) cannot be parsed correct.
+UPDATE $wpdb SET autor = '$_POST_autor' , frase = '$_POST_frase' , idclase = '$_POST_idclase' , idtema = '$_POST_idtema' WHERE idfrase = $_POST_idfrase
+SQL command (UPDATE $wpdb SET autor = '$_POST_autor' , frase = '$_POST_frase' , idclase = '$_POST_idclase' , idtema = '$_POST_idtema' WHERE idfrase = $_POST_idfrase) cannot be parsed correct.
+UPDATE $wpdb SET clase = '$_POST_clase' WHERE idclase = $_POST_idclase
+SQL command (UPDATE $wpdb SET clase = '$_POST_clase' WHERE idclase = $_POST_idclase) cannot be parsed correct.
+UPDATE $wpdb SET tema = '$_POST_tema' WHERE idtema = $_POST_idtema
+SQL command (UPDATE $wpdb SET tema = '$_POST_tema' WHERE idtema = $_POST_idtema) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE idfrase=$id
+SQL command (SELECT * FROM $wpdb WHERE idfrase=$id) cannot be parsed correct.
+DELETE FROM $wpdb WHERE idfrase=$id
+SQL command (DELETE FROM $wpdb WHERE idfrase=$id) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE idclase=$id
+SQL command (SELECT * FROM $wpdb WHERE idclase=$id) cannot be parsed correct.
+DELETE FROM $wpdb WHERE idclase=$id
+SQL command (DELETE FROM $wpdb WHERE idclase=$id) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE idtema=$id
+SQL command (SELECT * FROM $wpdb WHERE idtema=$id) cannot be parsed correct.
+DELETE FROM $wpdb WHERE idtema=$id
+SQL command (DELETE FROM $wpdb WHERE idtema=$id) cannot be parsed correct.
+DELETE FROM $wpdb WHERE idclase = $key
+SQL command (DELETE FROM $wpdb WHERE idclase = $key) cannot be parsed correct.
+OPTIMIZE TABLE $wpdb
+SQL command (OPTIMIZE TABLE $wpdb) cannot be parsed correct.
+SELECT * from $wpdb ORDER BY tema ASC
+SQL command (SELECT * from $wpdb ORDER BY tema ASC) cannot be parsed correct.
+SELECT * from $wpdb ORDER BY clase ASC
+SQL command (SELECT * from $wpdb ORDER BY clase ASC) cannot be parsed correct.
+select frase, autor from $wpdb ORDER BY rand()
+SQL command (select frase, autor from $wpdb ORDER BY rand()) cannot be parsed correct.
+SELECT COUNT(autor) AS count FROM $wpdb GROUP BY autor
+SQL command (SELECT COUNT(autor) AS count FROM $wpdb GROUP BY autor) cannot be parsed correct.
+SELECT COUNT(tema) AS count FROM $wpdb GROUP BY tema
+SQL command (SELECT COUNT(tema) AS count FROM $wpdb GROUP BY tema) cannot be parsed correct.
+SELECT COUNT(clase) AS count FROM $wpdb GROUP BY clase
+SQL command (SELECT COUNT(clase) AS count FROM $wpdb GROUP BY clase) cannot be parsed correct.
+SELECT * FROM $wpdb WERE idfrase = $idfrase
+SQL command (SELECT * FROM $wpdb WERE idfrase = $idfrase) cannot be parsed correct.
+SELECT * FROM $wpdb NATURAL JOIN ($wpdb, $wpdb) vr_frases_search_query()vr_frases_define_titles($_GET)_groupby LIMIT 0,get_option("vr_frases_options")_num_inputs
+SQL command (SELECT * FROM $wpdb NATURAL JOIN ($wpdb, $wpdb) vr_frases_search_query()vr_frases_define_titles($_GET)_groupby LIMIT 0,get_option("vr_frases_options")_num_inputs) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdb_frases
+SQL command (DROP TABLE IF EXISTS $wpdb_frases) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdb_clases
+SQL command (DROP TABLE IF EXISTS $wpdb_clases) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdb_temas
+SQL command (DROP TABLE IF EXISTS $wpdb_temas) cannot be parsed correct.
+CREATE TABLE $wpdb (
+							idfrase int(11) NOT NULL auto_increment,
+							autor text NOT NULL default '',
+							frase text NOT NULL default '',
+							idclase int(11) NOT NULL default '1',
+							idtema int(11) NOT NULL default '1',
+							PRIMARY KEY (idfrase)
+							);
+SQL command (CREATE TABLE $wpdb ( idfrase int(11) NOT NULL auto_increment, autor text NOT NULL default '', frase text NOT NULL default '', idclase int(11) NOT NULL default '1', idtema int(11) NOT NULL default '1', PRIMARY KEY (idfrase) );) cannot be parsed correct.
+select * from $wpdb
+SQL command (select * from $wpdb) cannot be parsed correct.
+INSERT INTO $wpdb ( autor , frase , idclase , idtema ) VALUES ( 'autor - Author' , 'Primera frase - First Quote' , '1' , '1' )
+SQL command (INSERT INTO $wpdb ( autor , frase , idclase , idtema ) VALUES ( 'autor - Author' , 'Primera frase - First Quote' , '1' , '1' )) cannot be parsed correct.
+CREATE TABLE $wpdb (
+							idclase int(11) NOT NULL auto_increment,
+							clase tinytext NOT NULL default '',
+							PRIMARY KEY (idclase)
+							);
+SQL command (CREATE TABLE $wpdb ( idclase int(11) NOT NULL auto_increment, clase tinytext NOT NULL default '', PRIMARY KEY (idclase) );) cannot be parsed correct.
+select * from $wpdb
+SQL command (select * from $wpdb) cannot be parsed correct.
+INSERT INTO $wpdb ( clase ) VALUES ( '-n/a-' )
+SQL command (INSERT INTO $wpdb ( clase ) VALUES ( '-n/a-' )) cannot be parsed correct.
+CREATE TABLE $wpdb (
+							idtema int(11) NOT NULL auto_increment,
+							tema tinytext NOT NULL default '',
+							PRIMARY KEY (idtema)
+							);
+SQL command (CREATE TABLE $wpdb ( idtema int(11) NOT NULL auto_increment, tema tinytext NOT NULL default '', PRIMARY KEY (idtema) );) cannot be parsed correct.
+select * from $wpdb
+SQL command (select * from $wpdb) cannot be parsed correct.
+INSERT INTO $wpdb ( tema ) VALUES ( '-n/a-' )
+SQL command (INSERT INTO $wpdb ( tema ) VALUES ( '-n/a-' )) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [381, 928, 1005, 1190, 1281, 1491, 1610, 2037, 2156, 2483, 2537, 2662, 2716, 2827, 2931, 3022, 3118, 3208, 3326, 3480, 3610, 3738, 3791, 3837, 3881, 3927, 3971, 4160, 4269, 5208, 5261, 5322, 5524, 5565, 5606, 5659, 6550, 7309, 7320, 7331, 7565, 7590, 7607, 7642, 7655, 7672, 7698, 7711, 7728]
+Added 0 SQL nodes. 0 out of 49 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:12.804959.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$_POST_frase'' cannot be parsed correct.
+HTML code '$'$_POST_autor'' cannot be parsed correct.
+HTML code '$'<option selected="selected" value="$clase"$clase</option>'' cannot be parsed correct.
+HTML code '$'<option value=$clase"$clase</option>'' cannot be parsed correct.
+HTML code '$'<option selected="selected" value="$tema"$tema</option>'' cannot be parsed correct.
+HTML code '$'<option value=$tema"$tema</option>'' cannot be parsed correct.
+HTML code '$'vr_frases_define_titles($_GET)_msg'' cannot be parsed correct.
+HTML code '$'number_format_i18n($registros)'' cannot be parsed correct.
+HTML code '$'vr_frases_search_form()'' cannot be parsed correct.
+HTML code '$'$class'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'$class'' cannot be parsed correct.
+HTML code '$'$clase'' cannot be parsed correct.
+HTML code '$'$clase'' cannot be parsed correct.
+HTML code '$'$clase'' cannot be parsed correct.
+HTML code '$'$clase'' cannot be parsed correct.
+HTML code '$'$count'' cannot be parsed correct.
+HTML code '$'$clase'' cannot be parsed correct.
+HTML code '$'$clase'' cannot be parsed correct.
+HTML code '$'<option selected="selected" value="$tema"$tema</option>'' cannot be parsed correct.
+HTML code '$'<option value=$tema"$tema</option>'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'<a title=View more quotes from this Author..." href="?page=vrfr_managefrases&amp;aut=$frase"$frase</a>'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'$frase'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM " . $wpdb->clases . " WHERE idclase=" . $id)_clase'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM " . $wpdb->temas . " WHERE idtema=" . $id)_tema'' cannot be parsed correct.
+HTML code '$'$class'' cannot be parsed correct.
+HTML code '$'$tema'' cannot be parsed correct.
+HTML code '$'$tema'' cannot be parsed correct.
+HTML code '$'$tema'' cannot be parsed correct.
+HTML code '$'$tema'' cannot be parsed correct.
+HTML code '$'$count'' cannot be parsed correct.
+HTML code '$'$tema'' cannot be parsed correct.
+HTML code '$'$tema'' cannot be parsed correct.
+HTML code '$'$_POST_idfrase'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM " . $wpdb->frases . " WHERE idfrase=" . $id)_frase'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM " . $wpdb->frases . " WHERE idfrase=" . $id)_autor'' cannot be parsed correct.
+HTML code '$'<option selected="selected" value="$clase"$clase</option>'' cannot be parsed correct.
+HTML code '$'<option value=$clase"$clase</option>'' cannot be parsed correct.
+HTML code '$'<a title=View more quotes from this Author..." href="get_settings("siteurl")/get_option("vr_frases_options")_page_slug/?autor=$wpdb->get_row("SELECT * FROM "$wpdb->frases" WERE idfrase = "$idfrase)_autor&amp;caso=filtro"><b$wpdb->get_row("SELECT * FROM "$wpdb->frases" WERE idfrase = "$idfrase)_autor</b></a>: $wpdb->get_row("SELECT * FROM "$wpdb->frases" WERE idfrase = "$idfrase)_frase'' cannot be parsed correct.
+HTML code '$'$pos'' cannot be parsed correct.
+HTML code '$'<option value=\'1\'>1</option>'' cannot be parsed correct.
+HTML code '$'<option selected=\'selected\' value=\'\'>$_POST_pagina</option>'' cannot be parsed correct.
+HTML code '$'ceil($registros / $numInputs)'' cannot be parsed correct.
+HTML code '$'<p><b>Registered data totals:</u></b>'' cannot be parsed correct.
+HTML code '$'<ul><li>At this momment your database contents <a href="admin.php?page=vrfr_managefrases">vr_frases_total_frases()&nbsp;Quotes</a> from vr_frases_total_autores()&nbsp;Authors.</li></ul>'' cannot be parsed correct.
+HTML code '$'<ul><li>Your classification handlers: <a href="admin.php?page=vrfr_manageclases">$clases&nbsp;Classes</a> and <a href="admin.php?page=vrfr_managetemas">vr_frases_total_temas()&nbsp;Themes</a>.</li></ul>'' cannot be parsed correct.
+HTML code '$'<legend style="padding: 5px;"><em>Sample of output style for [randomfrase] and sidebar widgets:</em></legend>'' cannot be parsed correct.
+HTML code '$'<ul><li>vr_frases_random_frase()</li></ul>'' cannot be parsed correct.
+HTML code '$'<p>You are using <b>VR-frases</b> version: <b>get_option("vr_frases_version")</b></p>'' cannot be parsed correct.
+HTML code '$'get_option("vr_frases_options")_num_inputs'' cannot be parsed correct.
+HTML code '$'get_option("vr_frases_options")_page_slug'' cannot be parsed correct.
+HTML code '$'get_option("vr_frases_version")'' cannot be parsed correct.
+HTML code '$'vr_frases_random_frase()'' cannot be parsed correct.
+HTML code '$'vr_frases_define_titles($_GET)_msg'' cannot be parsed correct.
+HTML code '$'number_format_i18n($registros)'' cannot be parsed correct.
+HTML code '$'<div class="frases-display-main">
+		<h5>vr_frases_define_titles($_GET)_titulo</h5><ul>'' cannot be parsed correct.
+HTML code '$'<li>$frase</li>'' cannot be parsed correct.
+HTML code '$'<li><a title=View more quotes from this Author..." href="?aut=$frase"$frase</a></li>'' cannot be parsed correct.
+HTML code '$'<li><b><a title=View more quotes from this Author..." href="?aut=$frase"$frase</a></b><br />$frase</li>'' cannot be parsed correct.
+HTML code '$'<div class="frases-display-main">
+		<h4>Search results</h4><p>No items found to match your search criteria.<br />Please, try another words.</p></div>'' cannot be parsed correct.
+HTML code '$'vr_frases_search_form()'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_titleapply_filters("widget_title", $instance["title"])$after_title'' cannot be parsed correct.
+HTML code '$'vr_frases_random_frase()'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'$instance_title'' cannot be parsed correct.
+HTML code '$'" type="checkbox" name="chkid" value="" onclick="SetAllCheckBoxes( \'listform\', \'chkid\', this.checked);" />
+										<label></label>
+									</th>
+									<th scope="col" style="width: 5%;">'' cannot be parsed correct.
+HTML code '$'" type="checkbox" name="chkid" value="" onclick="SetAllCheckBoxes( \'listform\', \'chkid\', this.checked );" />
+								<label></label>
+							</th>
+							<th scope="col" style="width: 5%;">'' cannot be parsed correct.
+HTML code '$'</th>
+							<th scope="col" style="width: 45%;">'' cannot be parsed correct.
+HTML code '$'</th>
+									<th scope="col" style="width: 65%;">'' cannot be parsed correct.
+HTML code '$'" type="checkbox" name="chkid" value="" onclick="SetAllCheckBoxes( \'listform\', \'chkid\', this.checked);" />
+										<label></label>
+									</th>
+									<th scope="col">'' cannot be parsed correct.
+HTML code '$'</th>
+									<th scope="col">'' cannot be parsed correct.
+HTML code '$'" type="checkbox" name="chkid" value="" onclick="SetAllCheckBoxes( \'listform\', \'chkid\', this.checked );" />
+								<label></label>
+							</th>
+							<th scope="col">'' cannot be parsed correct.
+HTML code '$'</th>
+							<th scope="col">'' cannot be parsed correct.
+HTML code '$'" type="checkbox" name="chkid" value="" onclick="SetAllCheckBoxes( \'listform\', \'chkid\', this.checked);" />
+										<label></label>
+									</th>
+									<th scope="col" style="width: 5%;">'' cannot be parsed correct.
+HTML code '$'</th>
+									<th scope="col" style="width: 65%;">'' cannot be parsed correct.
+HTML code '$'" type="checkbox" name="chkid" value="" onclick="SetAllCheckBoxes( \'listform\', \'chkid\', this.checked);" />
+										<label></label>
+									</th>
+									<th scope="col">'' cannot be parsed correct.
+HTML code '$'</th>
+									<th scope="col">'' cannot be parsed correct.
+HTML code '$'<fieldset id="box" style="height: auto; border: solid 1px; padding: 10px;">'' cannot be parsed correct.
+HTML code '$'</fieldset>'' cannot be parsed correct.
+HTML code '$'" />
+					<span class="description">'' cannot be parsed correct.
+HTML code '$'" />
+					<span class="description">'' cannot be parsed correct.
+HTML code '$'" />
+					<span class="description">'' cannot be parsed correct.
+HTML code '$'" />
+					<span class="description">'' cannot be parsed correct.
+HTML code '$'</ul></div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:12.228809.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.042097.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 8 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.450958.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PasswordHashingDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PostgreSQLDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running maxdbDetector
+### Start running WordPressRetrievalDetector
+### Finish running MySQLiDetector
+### Start running WordPressStorageDetector
+### Finish running WordpressHashingFnDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+Error in GenericDatabaseUsageDetector:
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+includes/vr-frases-admin.php:81
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/vr-frases-admin.php:278
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/vr-frases-admin.php:389
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/vr-frases-functions.php:200
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/vr-frases-functions.php:265
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/vr-frases-options.php:17
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/vr-frases-options.php:56
+  - RETRIEVAL call to get_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/vr-frases-options.php:70
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/vr-frases-template.php:13
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/vr-frases-widgets.php:127
+  - RETRIEVAL call to get_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+uninstall.php:17
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vr-frases.php:55
+  - RETRIEVAL call to get_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vr-frases.php:56
+  - RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vr-frases.php:101
+  - RETRIEVAL call to dbDelta($create_frases). Passed arguments: 0: $queries (string[]|string). Returns (array).
+vr-frases.php:116
+  - RETRIEVAL call to dbDelta($create_clases). Passed arguments: 0: $queries (string[]|string). Returns (array).
+vr-frases.php:128
+  - RETRIEVAL call to dbDelta($create_temas). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+uninstall.php:19
+  - STORAGE call to delete_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:20
+  - STORAGE call to delete_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:21
+  - STORAGE call to delete_option("widget_vr_frases_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+vr-frases.php:61
+  - STORAGE call to update_option("vr_frases_version", "3.0.0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vr-frases.php:83
+  - STORAGE call to update_option("vr_frases_version", "3.0.0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vr-frases.php:144
+  - STORAGE call to add_option("vr_frases_options", $new_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+vr-frases.php:145
+  - STORAGE call to update_option("vr_frases_version", "3.0.0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+uninstall.php:19
+  - DELETION call to delete_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:20
+  - DELETION call to delete_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:21
+  - DELETION call to delete_option("widget_vr_frases_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+uninstall.php:19
+  - Uninstall deletion call: DELETION call to delete_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:19
+  - Uninstall deletion call: DELETION call to delete_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:20
+  - Uninstall deletion call: DELETION call to delete_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:20
+  - Uninstall deletion call: DELETION call to delete_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:21
+  - Uninstall deletion call: DELETION call to delete_option("widget_vr_frases_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:21
+  - Uninstall deletion call: DELETION call to delete_option("widget_vr_frases_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	WordPressRetrievalDetector.dbDelta($create_temas) - set()
+	WordPressRetrievalDetector.dbDelta($create_clases) - set()
+	WordPressRetrievalDetector.dbDelta($create_frases) - set()
+option
+	DeletionDetector.delete_option("vr_frases_options") - {'option'}
+	WordPressStorageDetector.update_option("vr_frases_version", "3.0.0") - {'option'}
+	DeletionDetector.delete_option("widget_vr_frases_widget") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	WordPressStorageDetector.update_option("vr_frases_version", "3.0.0") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	UninstallDetector.delete_option("vr_frases_version") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	WordPressStorageDetector.add_option("vr_frases_options", $new_options) - {'option'}
+	UninstallDetector.delete_option("vr_frases_version") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_version") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	UninstallDetector.delete_option("vr_frases_options") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_version") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	UninstallDetector.delete_option("vr_frases_options") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_options") - {'option'}
+	WordPressStorageDetector.delete_option("widget_vr_frases_widget") - {'option'}
+	UninstallDetector.delete_option("widget_vr_frases_widget") - {'option'}
+	WordPressRetrievalDetector.get_option("vr_frases_version") - {'option'}
+	WordPressStorageDetector.delete_option("vr_frases_version") - {'option'}
+	WordPressStorageDetector.update_option("vr_frases_version", "3.0.0") - {'option'}
+	WordPressStorageDetector.delete_option("vr_frases_options") - {'option'}
+	DeletionDetector.delete_option("vr_frases_version") - {'option'}
+	UninstallDetector.delete_option("widget_vr_frases_widget") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.852330.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 91 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.177064.
+
+91 STORE_REACHES edges created
+91 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006189.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:58.209828!
+DELETION call to delete_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("widget_vr_frases_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("widget_vr_frases_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("widget_vr_frases_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($create_frases). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($create_clases). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($create_temas). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to delete_option("vr_frases_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("vr_frases_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("widget_vr_frases_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_option("vr_frases_options", $new_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("vr_frases_version", "3.0.0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("vr_frases_version", "3.0.0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("vr_frases_version", "3.0.0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

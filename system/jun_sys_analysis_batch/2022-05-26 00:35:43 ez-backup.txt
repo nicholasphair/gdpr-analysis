@@ -1,0 +1,687 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on ez-backup
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.359359.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.062698.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.198721.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.473063.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 931 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.299964.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.793578.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.092267.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 194 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.362455.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 5007
+Added 3882 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 5007
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.613129.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ez-backup/index.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.181421.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+5007 PHP_REACHES edges created
+5007 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1665 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.138954.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.412612.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 114 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.991061.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 34 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.168103.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.100685.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.767712.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018083.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.047815.
+
+148 PHP_REACHES edges created
+148 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 114 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.154542.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+5 SQL operations to process.
+show full tables where Table_Type = 'BASE TABLE'
+SQL command (show full tables where Table_Type = 'BASE TABLE') cannot be parsed correct.
+$SQ
+SQL command ($SQ) cannot be parsed correct.
+SHOW VARIABLES LIKE 'basedir'
+SQL command (SHOW VARIABLES LIKE 'basedir') cannot be parsed correct.
+SHOW VARIABLES LIKE 'basedir'
+SQL command (SHOW VARIABLES LIKE 'basedir') cannot be parsed correct.
+$SQ
+SQL command ($SQ) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [4935, 2461, 1210, 5423, 2527]
+Added 0 SQL nodes. 0 out of 5 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.789315.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div class="update-nag">You have configured My SQL Reports plugin to perform automatic backup jobs. This feature will be phased out soon in lieu of My EZ Backup plugin running the same jobs.<br />ezbackup_link("Import the SQL Reports backup jobs into the EZ Backup Setting now and dismiss this message", "&ez-backup-settings[backup_db][daily]=" . isset($import_settings_array["daily_backup"])$import_settings_array["daily_backup"]"0" . "&ez-backup-settings[backup_db][hourly]=" . isset($import_settings_array["hourly_backup"])$import_settings_array["hourly_backup"]"0")</div>'' cannot be parsed correct.
+HTML code '$'<div class="update-nag">You have not yet configured any automatic backup jobs.<br />ezbackup_link("Go to EZ Backup Setting now and dismiss this message", "&ez-backup-settings[backup_db][daily]=0&ez-backup-settings[backup_db][hourly]=0")</div>'' cannot be parsed correct.
+HTML code '$'<style>
+	#ez-backup-right-sidebar {float: right; margin-right: 0px;}
+	#admin-model-popup {position: absolute; top: 0; right: 0; width: 150%; height: 100%; background-color: rgba(0, 0, 0, 0.7);}
+	#makerestore {position: fixed; top: 50px; right: 50px; margin: 0 auto; background: #FFF; padding: 10px; border-radius: 10px;}
+	.metabox-holder h3 {padding: 8px 12px;}
+	.postbox {margin-right: 10px;}
+	.dashicons {text-decoration: none; vertical-align: middle; width: 20px; height: 20px;}
+	.dashicons-dismiss {color: #C00;}
+	.dashicons-dismiss:hover {color: #F00;}
+	.restore-steps li {font-size: 20px;}
+	.ez-backup-field-label {float: left; margin: 6px; text-align: right; width: 110px;}
+	.ez-backup-field-label input {width: 120px;}
+	.ez-backup-db-files li a {display: none;}
+	.ez-backup-db-files li:hover a {display: block;}
+	.hndle {cursor: pointer; overflow: hidden; white-space: nowrap;}
+</style>
+	<h1 id="top_title"><span class="dashicons dashicons-backup" style="vertical-align: middle; width: 30px; height: 30px; font-size: 30px;"></span> $pTitle</h1>
+	<div id="admin-page-container">
+		<div id="ez-backup-right-sidebar" style="width: 250px;" class="metabox-holder">ezbackup_box(__("Plugin Information", "ezbackup"), "<ul><li style="float: right; margin: 0;">WordPress: <span class="ez-backup-date">" . $wp_version . "</span></li>
+<li>Plugin: <span class="ez-backup-date">" . $GLOBALS["ez-backup"]["ver"] . "</span></li>
+</ul>" . $Update_Link, "stuffbox", "admin-plugins")ezbackup_box(__("Quick Actions", "ezbackup"), "<ul class="ez-backup-sidebar-links">" . ezbackup_link("Backup Database Now", "&ez-backup[db_date]=Y-m-d-H-i-s", "backup", "li") . ezbackup_link("Repair All Tables in DB", "&ez-backup[db_date]=REPAIR%20All%20Tables", "hammer", "li") . ezbackup_link("Restore a Database Backup", "#restoreForm", "migrate", "li", " onclick="showhide(\\'admin-model-popup\\', true);"") . "</ul>", "stuffbox", "star-filled")ezbackup_box(__("Resources & Links", "ezbackup"), "<ul style="float: right; margin: 0;" class="ez-backup-sidebar-links">" . ezbackup_link("Plugin FAQs", "https://wordpress.org/plugins/ez-backup/faq/", "editor-help", "li") . ezbackup_link("Forum Posts", "https://wordpress.org/support/plugin/ez-backup", "format-chat", "li") . ezbackup_link("Plugin Reviews", "https://wordpress.org/support/view/plugin-reviews/ez-backup", "format-quote", "li") . "</ul>
+<ul class="ez-backup-sidebar-links">" . ezbackup_link("Eli\\'s Plugins", "https://profiles.wordpress.org/scheeeli#content-plugins", "admin-plugins", "li") . ezbackup_link("Eli\\'s Blog", "http://wordpress.ieonly.com/category/my-plugins/ez-backup/", "admin-site", "li") . ezbackup_link("Email Eli", "mailto:wordpress@ieonly.com", "email-alt", "li") . "</ul>" . ezbackup_link("<img height=16 width=16 src=\\'https://spideroak.com/favicon.ico\\' style=\\'height: 16px; width: 16px; border: none; vertical-align: middle;\\'>Backup 3GB Free at spideroak.com", "https://spideroak.com/download/referral/fd0d1e6e4596b59373a194e7b95878e7", "", "center"), "stuffbox", "admin-links")'' cannot be parsed correct.
+HTML code '$'
+<script type="text/javascript">
+function showhide(id) {
+	divx = document.getElementById(id);
+	if (divx) {
+		if (divx.style.display == "none" || arguments[1]) {
+			divx.style.display = "block";
+			divx.parentNode.className = (divx.parentNode.className+"close").replace(/close/gi,"");
+			return true;
+		} else {
+			divx.style.display = "none";
+			return false;
+		}
+	}
+}
+function stuffbox_showhide(id) {
+	divx = document.getElementById(id);
+	if (divx) {
+		if (divx.style.display == "none" || arguments[1]) {
+			if (divx = document.getElementById("ez-backup-right-sidebar"))
+				divx.style.width = "250px";
+			if (divx = document.getElementById("ez-backup-main-section"))
+				divx.style.marginRight = "250px";
+			return true;
+		} else {
+			if (divx = document.getElementById("ez-backup-right-sidebar"))
+				divx.style.width = "38px";
+			if (divx = document.getElementById("ez-backup-main-section"))
+				divx.style.marginRight = "38px";
+			return false;
+		}
+	}
+}
+function getWindowWidth(min) {
+	if (typeof window.innerWidth != "undefined" && window.innerWidth > min)
+		min = window.innerWidth;
+	else if (typeof document.documentElement != "undefined" && typeof document.documentElement.clientWidth != "undefined" && document.documentElement.clientWidth > min)
+		min = document.documentElement.clientWidth;
+	else if (typeof document.getElementsByTagName("body")[0].clientWidth != "undefined" && document.getElementsByTagName("body")[0].clientWidth > min)
+		min = document.getElementsByTagName("body")[0].clientWidth;
+	return min;
+}
+if (getWindowWidth(750) == 750) 
+	setTimeout("stuffbox_showhide(\'inside_$md5\')", 200);
+</script>
+		</div>
+		<div id="ez-backup-main-section" style="margin-right: 250px;">
+			<div class="metabox-holder" style="width: 100%;" id="ez-backup-metabox-container">'' cannot be parsed correct.
+HTML code '$'<div class=\'error\'>$GLOBALS_ez-backup_query_times_ezbackup_query($MySQLexec)_errors</div>'' cannot be parsed correct.
+HTML code '$'preg_replace("/^(.+?) FROM (.+?) .*/", "<div class="updated">\\1 " . $GLOBALS["ez-backup"]["query_times"][$SQLkey]["rows"] . " Records from \\2 Succeeded!</div", $MySQLexec)'' cannot be parsed correct.
+HTML code '$'<div class=\'updated\'>$MySQLexec Succeeded!</div>'' cannot be parsed correct.
+HTML code '$'ezbackup_db2file("Y-m-d-H-i-s", "pre-restore", $_POST["DB_NAME"], $_POST["DB_HOST"], $_POST["DB_USER"], $_POST["DB_PASSWORD"])'' cannot be parsed correct.
+HTML code '$'<div class=\'errorupdated\'>Restore process executed Gzip extraction with $errors errors!</div>'' cannot be parsed correct.
+HTML code '$'<div class="error">Error Reading File:trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"])substr($_REQUEST["ez-backup"]["db_date"], 0, -4)</div>'' cannot be parsed correct.
+HTML code '$'<div class=\'errorupdated\'>Restore process executed Zip extraction with $errors errors!</div>'' cannot be parsed correct.
+HTML code '$'<div class=\'errorupdated\'>Restore process executed MySQL with $errors errors!</div>'' cannot be parsed correct.
+HTML code '$'ezbackup_db2file($_REQUEST["ez-backup"]["db_date"])'' cannot be parsed correct.
+HTML code '$'<div class=\'errorupdated\'><li>Restore Process executed 0 queries with count($errors) errors!</li><br>implode("
+", $errors)</div>'' cannot be parsed correct.
+HTML code '$'ezbackup_box("Database Backup Options", $db_opts . "<input type="submit" value="Save Settings" class="button-primary" style="float: right;"><br /></form>", "postbox", "admin-settings")ezbackup_box("Current Database Backups", $files, "postbox", "menu")</div></div></div><div id=\'admin-model-popup\' style=\'display: none;\'><form method="POST" id="restoreForm" name="restoreForm" action="$GLOBALS_ez-backup_url"><div id="makerestore">ezbackup_link("X", "#restoreForm", "dismiss", "", " onclick="showhide(\\'admin-model-popup\\');" style="float: right; color: #F00; overflow: hidden; width: 20px; height: 20px;"")<ol class="restore-steps"><li><span></span>Select a Database Backup File to Restore:</li><select id="ezbackup_dbdate" name="ez-backup[db_date]"><li><span></span>Enter the Credentials for the Database to be Restored:</li></div>'' cannot be parsed correct.
+HTML code '$'<div class="error">ERROR: Failed to extract Zip Archive!</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.543747.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047354.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 7 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.461732.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running ArrayElementDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running maxdbDetector
+### Start running PhpVarDetector
+### Finish running MySQLiDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PropertyDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running MySQLDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running PhpVarDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+Error in GenericDatabaseUsageDetector:
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running PHPStorageDetector
+### Finished running detectors
+index.php:120
+  - mysql_connect called without SSL flag. MySQL extension is deprecated as of PHP 5.5.0 and removed in PHP 7.0.0.
+  - Data types: database 
+
+index.php:137
+  - MD5 called with parameters [time]. Ignore if [time] does not contain personal information.
+index.php:239
+  - MD5 called with parameters [SQL]. Ignore if [SQL] does not contain personal information.
+index.php:342
+  - MD5 called with parameters [bTitle]. Ignore if [bTitle] does not contain personal information. 
+
+index.php:38
+  - RETRIEVAL call to file_get_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . ".htaccess").
+  - Data types: file
+index.php:220
+  - RETRIEVAL call to fread($handle, $file_size).
+  - Data types: file
+index.php:562
+  - RETRIEVAL call to file_get_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . $file_sql).
+  - Data types: file 
+
+index.php:38
+  - STORAGE call to file_put_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . ".htaccess", "Options -Indexes
+" . $contents).
+  - Data types: file
+index.php:39
+  - STORAGE call to file_put_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . ".htaccess", "Options -Indexes").
+  - Data types: file
+index.php:45
+  - STORAGE call to file_put_contents(trailingslashit($upload["basedir"]) . "index.php", "<?php
+// Silence is golden.").
+  - Data types: file
+index.php:48
+  - STORAGE call to file_put_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . "index.php", "<?php
+// Silence is golden.").
+  - Data types: file
+index.php:52
+  - STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "
+
+--
+-- Table structure for " . strtolower($type) . " `"$table"`
+--
+
+").
+  - Data types: file
+index.php:56
+  - STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "DROP " . strtoupper($type) . " IF EXISTS `"$table"`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+" . preg_replace("/CREATE .+? VIEW/", "CREATE VIEW", $row["Create "$type]) . ";
+/*!40101 SET character_set_client = @saved_cs_client */;").
+  - Data types: file
+index.php:70
+  - STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "
+
+--
+-- Dumping data for table `"$table"`
+--
+
+LOCK TABLES `"$table"` WRITE;
+/*!40000 ALTER TABLE `"$table"` DISABLE KEYS */;
+").
+  - Data types: file
+index.php:87
+  - STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], $statementSql . ";
+").
+  - Data types: file
+index.php:110
+  - STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], $statementSql . ";
+/*!40000 ALTER TABLE `"$table"` ENABLE KEYS */;
+UNLOCK TABLES;").
+  - Data types: file
+index.php:159
+  - STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "-- EZ Backup SQL dump " . $GLOBALS["ez-backup"]["ver"] . ", for "$server" ("$domain")
+--
+-- Host: "$db_host"    Database: "$db_name"
+-- ------------------------------------------------------
+-- WordPress version "$wp_version"
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE=\'+00:00\' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=\'NO_AUTO_VALUE_ON_ZERO\' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;").
+  - Data types: file
+index.php:179
+  - STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on "$db_date).
+  - Data types: file 
+
+index.php:120
+  - variable '$db_password' of personal types {'password'} is found.
+  - Data types: password
+index.php:145
+  - variable '$db_password' of personal types {'password'} is found.
+  - Data types: password 
+
+index.php:10
+  - RETRIEVAL call to get_option("ez-backup-settings", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+index.php:156
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+index.php:182
+  - RETRIEVAL call to get_option("blogname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+index.php:214
+  - RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+index.php:268
+  - RETRIEVAL call to get_option("ELISQLREPORTS_settings_array", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+index.php:293
+  - RETRIEVAL call to get_option("ez-backup-settings", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+index.php:456
+  - RETRIEVAL call to get_option("ELISQLREPORTS_settings_array", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+index.php:500
+  - RETRIEVAL call to get_option("ELISQLREPORTS_BACKUP_DB", ["DB_NAME" => DB_NAME, "DB_HOST" => DB_HOST, "DB_USER" => DB_USER, "DB_PASSWORD" => DB_PASSWORD]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option 
+
+index.php:482
+  - STORAGE call to update_option("ELISQLREPORTS_settings_array", $import_settings_array) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+index.php:514
+  - STORAGE call to update_option("ez-backup-settings", $GLOBALS["ez-backup"]["settings"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+database
+	MySQLDetector.(unknown) - {'database'}
+file
+	PHPStorageDetector.fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], $statementSql . ";
+/*!40000 ALTER TABLE `"$table"` ENABLE KEYS */;
+UNLOCK TABLES;") - {'file'}
+	PHPStorageDetector.file_put_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . ".htaccess", "Options -Indexes
+" . $contents) - {'file'}
+	PHPRetrievalDetector.fread($handle, $file_size) - {'file'}
+	PHPStorageDetector.fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on "$db_date) - {'file'}
+	PHPStorageDetector.file_put_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . "index.php", "<?php
+// Silence is golden.") - {'file'}
+	PHPStorageDetector.fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "DROP " . strtoupper($type) . " IF EXISTS `"$table"`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+" . preg_replace("/CREATE .+? VIEW/", "CREATE VIEW", $row["Create "$type]) . ";
+/*!40101 SET character_set_client = @saved_cs_client */;") - {'file'}
+	PHPStorageDetector.fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], $statementSql . ";
+") - {'file'}
+	PHPStorageDetector.fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "-- EZ Backup SQL dump " . $GLOBALS["ez-backup"]["ver"] . ", for "$server" ("$domain")
+--
+-- Host: "$db_host"    Database: "$db_name"
+-- ------------------------------------------------------
+-- WordPress version "$wp_version"
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE=\'+00:00\' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=\'NO_AUTO_VALUE_ON_ZERO\' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;") - {'file'}
+	PHPRetrievalDetector.file_get_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . $file_sql) - {'file'}
+	PHPRetrievalDetector.file_get_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . ".htaccess") - {'file'}
+	PHPStorageDetector.file_put_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . ".htaccess", "Options -Indexes") - {'file'}
+	PHPStorageDetector.fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "
+
+--
+-- Table structure for " . strtolower($type) . " `"$table"`
+--
+
+") - {'file'}
+	PHPStorageDetector.fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "
+
+--
+-- Dumping data for table `"$table"`
+--
+
+LOCK TABLES `"$table"` WRITE;
+/*!40000 ALTER TABLE `"$table"` DISABLE KEYS */;
+") - {'file'}
+	PHPStorageDetector.file_put_contents(trailingslashit($upload["basedir"]) . "index.php", "<?php
+// Silence is golden.") - {'file'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("ez-backup-settings", []) - {'option'}
+	WordPressStorageDetector.update_option("ez-backup-settings", $GLOBALS["ez-backup"]["settings"]) - {'option'}
+	WordPressRetrievalDetector.get_option("ELISQLREPORTS_BACKUP_DB", ["DB_NAME" => DB_NAME, "DB_HOST" => DB_HOST, "DB_USER" => DB_USER, "DB_PASSWORD" => DB_PASSWORD]) - {'option'}
+	WordPressRetrievalDetector.get_option("blogname") - {'option'}
+	WordPressRetrievalDetector.get_option("admin_email") - {'option'}
+	WordPressRetrievalDetector.get_option("ELISQLREPORTS_settings_array", []) - {'option'}
+	WordPressRetrievalDetector.get_option("ez-backup-settings", []) - {'option'}
+	WordPressStorageDetector.update_option("ELISQLREPORTS_settings_array", $import_settings_array) - {'option'}
+	WordPressRetrievalDetector.get_option("ELISQLREPORTS_settings_array", []) - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+password
+	VariableDetector.(unknown) - {'password'}
+	VariableDetector.(unknown) - {'password'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:16.068854.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 49 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.173947.
+
+49 STORE_REACHES edges created
+49 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 16 nodes as PERSONAL
+In total, tainted 16 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 3 nodes as ENCRYPTED
+In total, tainted 3 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.597120.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:44.178438!
+mysql_connect called without SSL flag. MySQL extension is deprecated as of PHP 5.5.0 and removed in PHP 7.0.0.,None,None
+MD5 called with parameters [time]. Ignore if [time] does not contain personal information.,md5,None
+MD5 called with parameters [SQL]. Ignore if [SQL] does not contain personal information.,md5,None
+MD5 called with parameters [bTitle]. Ignore if [bTitle] does not contain personal information.,md5,None
+RETRIEVAL call to fread($handle, $file_size).,None,None
+RETRIEVAL call to file_get_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . ".htaccess").,None,None
+RETRIEVAL call to file_get_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . $file_sql).,None,None
+STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], $statementSql . ";
+/*!40000 ALTER TABLE `"$table"` ENABLE KEYS */;
+UNLOCK TABLES;").,None,None
+STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "-- EZ Backup SQL dump " . $GLOBALS["ez-backup"]["ver"] . ", for "$server" ("$domain")
+--
+-- Host: "$db_host"    Database: "$db_name"
+-- ------------------------------------------------------
+-- WordPress version "$wp_version"
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE=\'+00:00\' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=\'NO_AUTO_VALUE_ON_ZERO\' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;").,None,None
+STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on "$db_date).,None,None
+STORAGE call to file_put_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . ".htaccess", "Options -Indexes
+" . $contents).,None,None
+STORAGE call to file_put_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . ".htaccess", "Options -Indexes").,None,None
+STORAGE call to file_put_contents(trailingslashit($upload["basedir"]) . "index.php", "<?php
+// Silence is golden.").,None,None
+STORAGE call to file_put_contents(trailingslashit($GLOBALS["ez-backup"]["settings"]["backup_dir"]) . "index.php", "<?php
+// Silence is golden.").,None,None
+STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "
+
+--
+-- Table structure for " . strtolower($type) . " `"$table"`
+--
+
+").,None,None
+STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "DROP " . strtoupper($type) . " IF EXISTS `"$table"`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+" . preg_replace("/CREATE .+? VIEW/", "CREATE VIEW", $row["Create "$type]) . ";
+/*!40101 SET character_set_client = @saved_cs_client */;").,None,None
+STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], "
+
+--
+-- Dumping data for table `"$table"`
+--
+
+LOCK TABLES `"$table"` WRITE;
+/*!40000 ALTER TABLE `"$table"` DISABLE KEYS */;
+").,None,None
+STORAGE call to fwrite($GLOBALS["ez-backup"]["tmp"]["backup_file"], $statementSql . ";
+").,None,None
+variable '$db_password' of personal types {'password'} is found.,,None
+variable '$db_password' of personal types {'password'} is found.,,None
+RETRIEVAL call to get_option("ez-backup-settings", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blogname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ELISQLREPORTS_settings_array", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ez-backup-settings", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ELISQLREPORTS_settings_array", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ELISQLREPORTS_BACKUP_DB", ["DB_NAME" => DB_NAME, "DB_HOST" => DB_HOST, "DB_USER" => DB_USER, "DB_PASSWORD" => DB_PASSWORD]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+STORAGE call to update_option("ELISQLREPORTS_settings_array", $import_settings_array) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ez-backup-settings", $GLOBALS["ez-backup"]["settings"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

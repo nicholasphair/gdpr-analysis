@@ -1,0 +1,665 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on authors
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.364979.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.928513.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.299905.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.690214.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 595 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.362224.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.651167.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.109485.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 221 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.824594.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2841
+Added 2024 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2841
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.389167.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/authors/authors.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.165125.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2840 PHP_REACHES edges created
+2841 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 952 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.146009.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.582912.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 16 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.193354.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 9 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.158734.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.064240.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.243110.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009383.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.045523.
+
+25 PHP_REACHES edges created
+25 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 16 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.138981.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+The following function calls could not successfully be analyzed for SQL content: [4044]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.210551.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<select onchange="window.location=this.options[this.selectedIndex].value">
+'' cannot be parsed correct.
+HTML code '$'seo_tag_cloud_generate($authors, $args)'' cannot be parsed correct.
+HTML code '$'<ul><li>implode("<li>", $arr)</ul>'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_titlewp_parse_args($args, $options)$after_title'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'attribute_escape($options[$number]["avatar_size"])'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($exclude)'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($include)'' cannot be parsed correct.
+HTML code '$'str_replace("http://", "//", WP_PLUGIN_URL)/dirname(plugin_basename())/donate.gif'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'htmlspecialchars(translate("Display "Powered by Authors widget" link", "authors"))'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'attribute_escape($options[$number]["title"])'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$' />&nbsp;'' cannot be parsed correct.
+HTML code '$'</label>
+			<label for="authors-order'' cannot be parsed correct.
+HTML code '$' />&nbsp;'' cannot be parsed correct.
+HTML code '$'</label>
+			<label for="authors-order'' cannot be parsed correct.
+HTML code '$' />&nbsp;'' cannot be parsed correct.
+HTML code '$'</label>
+			<label for="authors-order'' cannot be parsed correct.
+HTML code '$' />&nbsp;'' cannot be parsed correct.
+HTML code '$'</label>
+			<label for="authors-order'' cannot be parsed correct.
+HTML code '$' />&nbsp;'' cannot be parsed correct.
+HTML code '$'</label>
+			<label for="authors-order'' cannot be parsed correct.
+HTML code '$' />&nbsp;'' cannot be parsed correct.
+HTML code '$'</label>
+		</p>
+		<p><label for="authors-limit'' cannot be parsed correct.
+HTML code '$': <input type="text" class="widefat" style="width: 25px; text-align: center;" id="authors-limit-'' cannot be parsed correct.
+HTML code '$'" /></label></p>
+		<p><label for="authors-show-fullname-'' cannot be parsed correct.
+HTML code '$': <input type="text" class="widefat" style="width: 25px; text-align: center;" id="authors-avatar-size-'' cannot be parsed correct.
+HTML code '$'" /></label></p>
+		<p><label for="authors-feedlink-'' cannot be parsed correct.
+HTML code '$'<br />
+			<ul>
+				<li>Very much - <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=10234211" target="_blank"><img src="'' cannot be parsed correct.
+HTML code '$':<br />
+			<label for="authors-format'' cannot be parsed correct.
+HTML code '$' /> '' cannot be parsed correct.
+HTML code '$'</label>
+		'' cannot be parsed correct.
+HTML code '$' /> '' cannot be parsed correct.
+HTML code '$'</label>
+			<label for="authors-format'' cannot be parsed correct.
+HTML code '$' /> '' cannot be parsed correct.
+HTML code '$'</label>
+		'' cannot be parsed correct.
+HTML code '$' /> '' cannot be parsed correct.
+HTML code '$'</label>
+		</p>
+		<p>
+			'' cannot be parsed correct.
+HTML code '$':<br />
+			<label for="authors-order'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:01:18.455623.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.090561.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 2 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.479935.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running CubridDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FileProDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running UserInputDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running PropertyDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+authors.php:21
+  - object property '$author->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:21
+  - object property '$author_data->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:22
+  - object property '$author->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:22
+  - object property '$author_data->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:30
+  - object property '$a->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:30
+  - object property '$b->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:31
+  - object property '$a->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:31
+  - object property '$b->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:35
+  - object property '$a->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:35
+  - object property '$b->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:36
+  - object property '$a->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:36
+  - object property '$b->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:122
+  - object property '$author->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:122
+  - object property '$author->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:123
+  - object property '$author->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:123
+  - object property '$author->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:130
+  - object property '$author->user_nicename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+authors.php:227
+  - object property '$author->user_email' of personal types {'email'} is found.
+  - Data types: email
+authors.php:230
+  - object property '$author->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:230
+  - object property '$author->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:231
+  - object property '$author->first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:231
+  - object property '$author->last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:255
+  - object property '$author->user_nicename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta 
+
+authors.php:30
+  - variable '$cmp_first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:31
+  - variable '$cmp_first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:31
+  - variable '$cmp_first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+authors.php:35
+  - variable '$cmp_last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:36
+  - variable '$cmp_last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:36
+  - variable '$cmp_last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+authors.php:227
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+authors.php:228
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+authors.php:20
+  - RETRIEVAL call to get_userdata($author->ID) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user_meta, user
+authors.php:118
+  - RETRIEVAL call to get_userdata($author->ID) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user_meta, user
+authors.php:222
+  - RETRIEVAL call to get_userdata($author->ID) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user_meta, user
+authors.php:308
+  - RETRIEVAL call to get_option("widget_authors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+authors.php:377
+  - RETRIEVAL call to get_option("widget_authors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+authors.php:497
+  - RETRIEVAL call to get_option("widget_authors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+authors.php:506
+  - RETRIEVAL call to get_option("sidebars_widgets") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+authors.php:528
+  - RETRIEVAL call to get_user_by("login", $val) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user_meta, user
+authors.php:530
+  - RETRIEVAL call to get_user_by("slug", $val) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user_meta, user
+authors.php:543
+  - RETRIEVAL call to get_user_by("login", $val) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user_meta, user
+authors.php:545
+  - RETRIEVAL call to get_user_by("slug", $val) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user_meta, user
+authors.php:574
+  - RETRIEVAL call to get_option("widget_authors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+authors.php:419
+  - STORAGE call to update_option("widget_authors", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+authors.php:504
+  - STORAGE call to update_option("widget_authors", $newoptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+authors.php:517
+  - STORAGE call to update_option("sidebars_widgets", $new_widgets) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+first_name
+	PropertyDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'first_name'}
+last_name
+	PropertyDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'last_name'}
+option
+	WordPressRetrievalDetector.get_option("widget_authors") - {'option'}
+	WordPressRetrievalDetector.get_option("widget_authors") - {'option'}
+	WordPressStorageDetector.update_option("widget_authors", $options) - {'option'}
+	WordPressStorageDetector.update_option("sidebars_widgets", $new_widgets) - {'option'}
+	WordPressRetrievalDetector.get_option("sidebars_widgets") - {'option'}
+	WordPressStorageDetector.update_option("widget_authors", $newoptions) - {'option'}
+	WordPressRetrievalDetector.get_option("widget_authors") - {'option'}
+	WordPressRetrievalDetector.get_option("widget_authors") - {'option'}
+user
+	WordPressRetrievalDetector.get_userdata($author->ID) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("login", $val) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_user_by("slug", $val) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("slug", $val) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_userdata($author->ID) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_userdata($author->ID) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_user_by("login", $val) - {'user_meta', 'user'}
+user_meta
+	WordPressRetrievalDetector.get_userdata($author->ID) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("login", $val) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_user_by("slug", $val) - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("slug", $val) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_userdata($author->ID) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_userdata($author->ID) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_user_by("login", $val) - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.029222.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 15 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.243222.
+
+15 STORE_REACHES edges created
+15 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 209 nodes as PERSONAL
+In total, tainted 209 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:06.558302.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:54.650138!
+object property '$author->last_name' of personal types {'last_name'} is found.,,None
+object property '$author->first_name' of personal types {'first_name'} is found.,,None
+object property '$author->first_name' of personal types {'first_name'} is found.,,None
+object property '$author->last_name' of personal types {'last_name'} is found.,,None
+object property '$author->user_nicename' of personal types {'user', 'user_meta'} is found.,,None
+object property '$author->first_name' of personal types {'first_name'} is found.,,None
+object property '$author_data->first_name' of personal types {'first_name'} is found.,,None
+object property '$author_data->last_name' of personal types {'last_name'} is found.,,None
+object property '$author->last_name' of personal types {'last_name'} is found.,,None
+object property '$author->user_email' of personal types {'email'} is found.,,None
+object property '$author->last_name' of personal types {'last_name'} is found.,,None
+object property '$author->first_name' of personal types {'first_name'} is found.,,None
+object property '$author->first_name' of personal types {'first_name'} is found.,,None
+object property '$author->last_name' of personal types {'last_name'} is found.,,None
+object property '$author->user_nicename' of personal types {'user', 'user_meta'} is found.,,None
+object property '$a->first_name' of personal types {'first_name'} is found.,,None
+object property '$b->first_name' of personal types {'first_name'} is found.,,None
+object property '$a->last_name' of personal types {'last_name'} is found.,,None
+object property '$b->last_name' of personal types {'last_name'} is found.,,None
+object property '$a->last_name' of personal types {'last_name'} is found.,,None
+object property '$b->last_name' of personal types {'last_name'} is found.,,None
+object property '$a->first_name' of personal types {'first_name'} is found.,,None
+object property '$b->first_name' of personal types {'first_name'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$cmp_first_name' of personal types {'first_name'} is found.,,None
+variable '$cmp_first_name' of personal types {'first_name'} is found.,,None
+variable '$cmp_first_name' of personal types {'first_name'} is found.,,None
+variable '$cmp_last_name' of personal types {'last_name'} is found.,,None
+variable '$cmp_last_name' of personal types {'last_name'} is found.,,None
+variable '$cmp_last_name' of personal types {'last_name'} is found.,,None
+RETRIEVAL call to get_userdata($author->ID) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_userdata($author->ID) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_userdata($author->ID) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("widget_authors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("widget_authors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("widget_authors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("sidebars_widgets") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_by("login", $val) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_user_by("slug", $val) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_user_by("login", $val) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_user_by("slug", $val) alters data types {'user_meta', 'user'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("widget_authors") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("widget_authors", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("widget_authors", $newoptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("sidebars_widgets", $new_widgets) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

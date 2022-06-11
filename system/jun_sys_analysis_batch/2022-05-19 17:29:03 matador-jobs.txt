@@ -1,0 +1,2039 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on matador-jobs
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.111011.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.869684.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 371 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:01.081537.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 33 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:01.244895.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 9480 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:03.370293.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 1073 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:05.466362.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+Added 6 PHP_REACHES edges.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.063891.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+The following nodes are without assigners: [111850, 112543, 112546, 112549, 112645, 112648, 112651, 112709, 112712, 112715, 112955, 112958, 112961, 113089, 113092, 113095, 113200, 113203, 113206, 113209]
+Added 2992 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:01:48.018553.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 59417
+Added 45462 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 71601
+Added 12184 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:05.628332.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/class-matador.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/matador-jobs.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/assets/css/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/assets/files/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/assets/images/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/assets/scripts/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/assets/scripts/vendor/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-activate.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-application-handler.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-application.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-application-sync.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-deactivate.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-email.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-endpoints.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-exception.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-helper.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-honeypot.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-job-listing.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-job-taxonomies.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-json-schema-job-posting.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-logger.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-scheduled-events.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-scripts.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-shortcodes.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-template-support.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/class-variables.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/deprecated.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/template-functions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/trait-base64.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/trait-json.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/trait-jwt.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-admin-notices.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-admin-tasks.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-bullhorn-connection-assistant.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-event-log.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-options.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-settings-actions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-settings-fields.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-settings.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-settings-sanitizers.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-settings-validators.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/class-upgrade.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant-authorize.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant-callback.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant-complete.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant-credentials.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant-datacenter.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant-prepare-forgot.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant-prepare-get.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant-prepare.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/bullhorn-connection-assistant-progress.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/settings.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/upgrade.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/field-bullhorn-api-connect.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/field-bullhorn-client.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/field-button.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/field-get-pro.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/field-hidden.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/field-license-key.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/field-page.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/field-password.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/field-toggle.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/admin/templates/form-fields/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/bullhorn/class-bullhorn-api-debug.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/bullhorn/class-bullhorn-candidate.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/bullhorn/class-bullhorn-connection.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/bullhorn/class-bullhorn-contact.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/bullhorn/class-bullhorn-corporation.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/bullhorn/class-bullhorn-import.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/bullhorn/class-bullhorn-lead.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/bullhorn/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/AdminNoticeDisconnectedMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/AdminNoticeGeneralMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/ApplicationApplicantMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/ApplicationMessagesTrait.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/ApplicationRecruiterMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/EmailInterface.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/Email.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/MessageAbstract.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/MessageInterface.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/includes/Email/Rfc2822Trait.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Core/Deactivate.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Core/Monitor.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/AdminNoticeConsentObjectPermissionMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/AdminNoticeCronErrorMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/AdminNoticeDisconnectedMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/AdminNoticeGeneralMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/ApplicationApplicantMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/ApplicationMessagesTrait.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/ApplicationRecruiterMessage.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/EmailInterface.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/Email.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/MessageAbstract.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/MessageInterface.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Email/Rfc2822Trait.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Extension/ExtensionAbstract.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Extension/ExtensionInterface.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Extension/ExtensionTrait.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Extension/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Utilities/Base64.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Utilities/Json.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Utilities/Jwt.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/src/Utilities/Rfc2822.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/application.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/job-aside-empty.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/job-aside.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/jobs-empty.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/job-single-application.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/job-single-confirmation.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/job-single.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/jobs-listing.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/jobs-list.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/jobs-pagination.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/jobs-search.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/jobs-select.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/jobs-table.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/jobs-taxonomies-list.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/jobs-taxonomies-select.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/job-terms-list.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/template-actions-filters.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/emails/administrator-notice-consent-object-permission.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/emails/administrator-notice-cron.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/emails/administrator-notice-general.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/emails/admin-notification-bullhorn-disconnected.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/emails/application-confirmation-for-candidate.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/emails/application-confirmation-for-recruiter.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/emails/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-checkbox.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-file.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-files.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-hidden.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-password.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-radio.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-select-jobs.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-select-multi.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-select.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-textarea.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/field-text.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/form-fields/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-archive-job.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-listing-job.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-list-job.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-search-field-id.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-search-field-keyword.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-search-field-reset.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-search-field-submit.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-search-field-taxonomy.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-table-job.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-taxonomies-list-all.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-taxonomies-list-term.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-taxonomies-select-all.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/jobs-taxonomies-select-term.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/the-job-confirmation.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/the-job-field.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/the-job-info.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/the-job-navigation.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/templates/parts/the-job-title-link.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_classmap.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_classmap.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_namespaces.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_namespaces.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_psr4.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_psr4.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_real.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_real.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_static.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/autoload_static.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/ClassLoader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/ClassLoader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: composer
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_classmap.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_classmap.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: composer
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_namespaces.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_namespaces.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: composer
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_psr4.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_psr4.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: composer
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_real.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_real.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: composer
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_static.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/autoload_static.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: composer
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/ClassLoader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/ClassLoader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: composer
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/installed.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/installed.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: composer
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/InstalledVersions.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/InstalledVersions.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: composer
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/platform_check.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/composer/platform_check.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: bin
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/bin/build_bootstrap.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/bin/build_bootstrap.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Autoloader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Autoloader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Cache.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Cache.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Compiler.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Compiler.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Context.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Context.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Engine.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Engine.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/HelperCollection.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/HelperCollection.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/LambdaHelper.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/LambdaHelper.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Logger.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Logger.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Parser.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Parser.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Source.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Source.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Template.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Template.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Tokenizer.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Tokenizer.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Cache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Cache/AbstractCache.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Cache/AbstractCache.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Cache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Cache/FilesystemCache.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Cache/FilesystemCache.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Cache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Cache/NoopCache.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Cache/NoopCache.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/InvalidArgumentException.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/InvalidArgumentException.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/LogicException.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/LogicException.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/RuntimeException.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/RuntimeException.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/SyntaxException.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/SyntaxException.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/UnknownFilterException.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/UnknownFilterException.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/UnknownHelperException.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/UnknownHelperException.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/UnknownTemplateException.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Exception/UnknownTemplateException.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/ArrayLoader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/ArrayLoader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/CascadingLoader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/CascadingLoader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/FilesystemLoader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/FilesystemLoader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/InlineLoader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/InlineLoader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/MutableLoader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/MutableLoader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/ProductionFilesystemLoader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/ProductionFilesystemLoader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/StringLoader.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Loader/StringLoader.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Logger
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Logger/AbstractLogger.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Logger/AbstractLogger.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Logger
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Logger/StreamLogger.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Logger/StreamLogger.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: src
+Added new directory node for: Mustache
+Added new directory node for: Source
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Source/FilesystemSource.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/src/Mustache/Source/FilesystemSource.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/bootstrap.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/bootstrap.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: autoloader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/autoloader/NonMustacheClass.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/autoloader/NonMustacheClass.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: autoloader
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/autoloader/Mustache/Bar.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/autoloader/Mustache/Bar.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: autoloader
+Added new directory node for: Mustache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/autoloader/Mustache/Foo.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/autoloader/Mustache/Foo.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: anchored_dot_notation
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/anchored_dot_notation/AnchoredDotNotation.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/anchored_dot_notation/AnchoredDotNotation.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: blocks
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/blocks/Blocks.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/blocks/Blocks.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: child_context
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/child_context/ChildContext.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/child_context/ChildContext.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: comments
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/comments/Comments.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/comments/Comments.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: complex
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/complex/complex.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/complex/complex.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: delimiters
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/delimiters/Delimiters.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/delimiters/Delimiters.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: dot_notation
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/dot_notation/DotNotation.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/dot_notation/DotNotation.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: double_section
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/double_section/DoubleSection.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/double_section/DoubleSection.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: escaped
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/escaped/Escaped.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/escaped/Escaped.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: filters
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/filters/Filters.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/filters/Filters.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: grand_parent_context
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/grand_parent_context/GrandParentContext.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/grand_parent_context/GrandParentContext.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: i18n
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/i18n/I18n.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/i18n/I18n.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: implicit_iterator
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/implicit_iterator/ImplicitIterator.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/implicit_iterator/ImplicitIterator.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: inverted_double_section
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/inverted_double_section/InvertedDoubleSection.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/inverted_double_section/InvertedDoubleSection.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: inverted_section
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/inverted_section/InvertedSection.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/inverted_section/InvertedSection.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: nested_partials
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/nested_partials/NestedPartials.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/nested_partials/NestedPartials.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: partials
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/partials/Partials.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/partials/Partials.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: recursive_partials
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/recursive_partials/RecursivePartials.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/recursive_partials/RecursivePartials.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: section_iterator_objects
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/section_iterator_objects/SectionIteratorObjects.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/section_iterator_objects/SectionIteratorObjects.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: section_magic_objects
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/section_magic_objects/SectionMagicObjects.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/section_magic_objects/SectionMagicObjects.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: section_objects
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/section_objects/SectionObjects.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/section_objects/SectionObjects.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: sections
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/sections/Sections.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/sections/Sections.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: sections_nested
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/sections_nested/SectionsNested.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/sections_nested/SectionsNested.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: simple
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/simple/Simple.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/simple/Simple.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: unescaped
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/unescaped/Unescaped.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/unescaped/Unescaped.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: utf8
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/utf8/UTF8.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/utf8/UTF8.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: utf8_unescaped
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/utf8_unescaped/UTF8Unescaped.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/utf8_unescaped/UTF8Unescaped.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: fixtures
+Added new directory node for: examples
+Added new directory node for: whitespace
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/whitespace/Whitespace.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/fixtures/examples/whitespace/Whitespace.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/AutoloaderTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/AutoloaderTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/CompilerTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/CompilerTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/ContextTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/ContextTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/EngineTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/EngineTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FunctionalTestCase.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FunctionalTestCase.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/HelperCollectionTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/HelperCollectionTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/ParserTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/ParserTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/SpecTestCase.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/SpecTestCase.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/TemplateTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/TemplateTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/TokenizerTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/TokenizerTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Cache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Cache/AbstractCacheTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Cache/AbstractCacheTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Cache
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Cache/FilesystemCacheTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Cache/FilesystemCacheTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Exception/SyntaxExceptionTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Exception/SyntaxExceptionTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Exception/UnknownFilterExceptionTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Exception/UnknownFilterExceptionTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Exception/UnknownHelperExceptionTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Exception/UnknownHelperExceptionTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Exception
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Exception/UnknownTemplateExceptionTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Exception/UnknownTemplateExceptionTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: FiveThree
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/ClosureQuirksTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/ClosureQuirksTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: FiveThree
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/EngineTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/EngineTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: FiveThree
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/FiltersTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/FiltersTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: FiveThree
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/HigherOrderSectionsTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/HigherOrderSectionsTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: FiveThree
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/LambdaHelperTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/LambdaHelperTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: FiveThree
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/MustacheSpecTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/MustacheSpecTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: FiveThree
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/PartialLambdaIndentTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/PartialLambdaIndentTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: FiveThree
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/StrictCallablesTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/StrictCallablesTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/CallTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/CallTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/ExamplesTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/ExamplesTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/HigherOrderSectionsTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/HigherOrderSectionsTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/InheritanceTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/InheritanceTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/MustacheInjectionTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/MustacheInjectionTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/MustacheSpecTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/MustacheSpecTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/NestedPartialIndentTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/NestedPartialIndentTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Functional
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/ObjectSectionTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Functional/ObjectSectionTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/ArrayLoaderTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/ArrayLoaderTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/CascadingLoaderTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/CascadingLoaderTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/FilesystemLoaderTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/FilesystemLoaderTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/InlineLoaderTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/InlineLoaderTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/ProductionFilesystemLoaderTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/ProductionFilesystemLoaderTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Loader
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/StringLoaderTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Loader/StringLoaderTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Logger
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Logger/AbstractLoggerTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Logger/AbstractLoggerTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Logger
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Logger/StreamLoggerTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Logger/StreamLoggerTest.php' cannot be parsed correct.
+Added new directory node for: vendor
+Added new directory node for: mustache
+Added new directory node for: mustache
+Added new directory node for: test
+Added new directory node for: Mustache
+Added new directory node for: Test
+Added new directory node for: Source
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Source/FilesystemSourceTest.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matador-jobs/vendor/mustache/mustache/test/Mustache/Test/Source/FilesystemSourceTest.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:26.082445.
+
+972 Nodes Created
+371 PHP_REACHES edges created
+33 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+9480 PHP_REACHES edges created
+261 CALLS edges created
+11 PHP_REACHES edges created
+1 CALLS edges created
+1 PHP_REACHES edges created
+799 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+10000 PHP_REACHES edges created
+11000 PHP_REACHES edges created
+12000 PHP_REACHES edges created
+13000 PHP_REACHES edges created
+14000 PHP_REACHES edges created
+15000 PHP_REACHES edges created
+16000 PHP_REACHES edges created
+17000 PHP_REACHES edges created
+18000 PHP_REACHES edges created
+19000 PHP_REACHES edges created
+20000 PHP_REACHES edges created
+21000 PHP_REACHES edges created
+22000 PHP_REACHES edges created
+23000 PHP_REACHES edges created
+24000 PHP_REACHES edges created
+25000 PHP_REACHES edges created
+26000 PHP_REACHES edges created
+27000 PHP_REACHES edges created
+28000 PHP_REACHES edges created
+29000 PHP_REACHES edges created
+30000 PHP_REACHES edges created
+31000 PHP_REACHES edges created
+32000 PHP_REACHES edges created
+33000 PHP_REACHES edges created
+34000 PHP_REACHES edges created
+35000 PHP_REACHES edges created
+36000 PHP_REACHES edges created
+37000 PHP_REACHES edges created
+38000 PHP_REACHES edges created
+39000 PHP_REACHES edges created
+40000 PHP_REACHES edges created
+41000 PHP_REACHES edges created
+42000 PHP_REACHES edges created
+43000 PHP_REACHES edges created
+44000 PHP_REACHES edges created
+45000 PHP_REACHES edges created
+46000 PHP_REACHES edges created
+47000 PHP_REACHES edges created
+48000 PHP_REACHES edges created
+48460 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+10000 PHP_REACHES edges created
+11000 PHP_REACHES edges created
+12000 PHP_REACHES edges created
+12184 PHP_REACHES edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+5 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+6 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+5 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+7 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+9 DIRECTORY_OF edges created
+1 FILE_OF edges created
+9 DIRECTORY_OF edges created
+1 FILE_OF edges created
+9 DIRECTORY_OF edges created
+1 FILE_OF edges created
+9 DIRECTORY_OF edges created
+1 FILE_OF edges created
+9 DIRECTORY_OF edges created
+1 FILE_OF edges created
+9 DIRECTORY_OF edges created
+1 FILE_OF edges created
+9 DIRECTORY_OF edges created
+1 FILE_OF edges created
+9 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+8 DIRECTORY_OF edges created
+1 FILE_OF edges created
+72573 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 20888 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:02.507139.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 66 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:20.234461.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 9448
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 9448
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 61769
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 76147
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Added 2503 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:01:03.470948.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 2272 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.394524.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:09.231129.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 9448
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 9448
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 43530
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 61769
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 76147
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 80725
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:29.775184.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.182816.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.027972.
+
+66 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4775 PHP_REACHES edges created
+4841 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 2978 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.341986.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+25 SQL operations to process.
+SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = %s
+SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = absint(get_query_var("xid"))
+SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = absint(get_query_var("xid"))
+SQL command (SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = absint(get_query_var("xid"))) cannot be parsed correct.
+SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = absint(get_query_var("xid"))
+SQL command (SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = absint(get_query_var("xid"))) cannot be parsed correct.
+SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = absint(get_query_var("xid"))
+SQL command (SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = absint(get_query_var("xid"))) cannot be parsed correct.
+SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = absint(get_query_var("xid"))
+SQL command (SELECT post_id FROM $wpdb WHERE meta_key = _matador_source_id AND meta_value = absint(get_query_var("xid"))) cannot be parsed correct.
+orderby
+SQL command (orderby) cannot be parsed correct.
+meta_key
+SQL command (meta_key) cannot be parsed correct.
+orderby
+SQL command (orderby) cannot be parsed correct.
+p
+SQL command (p) cannot be parsed correct.
+post_type
+SQL command (post_type) cannot be parsed correct.
+orderby
+SQL command (orderby) cannot be parsed correct.
+meta_key
+SQL command (meta_key) cannot be parsed correct.
+post_type
+SQL command (post_type) cannot be parsed correct.
+orderby
+SQL command (orderby) cannot be parsed correct.
+orderby
+SQL command (orderby) cannot be parsed correct.
+orderby
+SQL command (orderby) cannot be parsed correct.
+meta_key
+SQL command (meta_key) cannot be parsed correct.
+order
+SQL command (order) cannot be parsed correct.
+meta_query
+SQL command (meta_query) cannot be parsed correct.
+orderby
+SQL command (orderby) cannot be parsed correct.
+post_type
+SQL command (post_type) cannot be parsed correct.
+feed
+SQL command (feed) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [60546, 60556, 60791, 60801, 54272, 54285, 54297, 60318, 60882, 60891, 62003, 62010, 62031, 62135, 62209, 62221, 62233, 62240, 62281, 61851, 61955, 61990, 63375, 63397, 63437]
+Added 0 SQL nodes. 0 out of 25 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.697198.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'assets/images/matador-jobs-avatar-on-white.png'' cannot be parsed correct.
+HTML code '$'wp_kses_post(__("Welcome to Matador Jobs!", "matador-jobs") . " " . __("To get started, connect your site to Bullhorn!", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'admin_url()edit.php?post_type=&page=connect-to-bullhorn'' cannot be parsed correct.
+HTML code '$'wp_kses_post(sprintf(__("For more information on "Pretty Permalinks", <a href="%s">visit this WordPress support document</a>.", "matador-jobs"), esc_url("https://codex.wordpress.org/Using_Permalinks")))'' cannot be parsed correct.
+HTML code '$'The time has come to finally connect your site to Bullhorn. When you click on &quot;Authorize&quot;, you will be redirected to Bullhorn\'s site where you will be asked to log in with your API Username and Password and accept the terms and conditions. After you finish that step, you will be returned here.'' cannot be parsed correct.
+HTML code '$'wp_kses_post(sprintf(__("The time has come to finally connect your site to Bullhorn. Unfortunately, Matador requires your site supports "Pretty Permalinks" and that a Permalink structure, other than "Plain" is enabled. <a href="%s" target="_blank">Edit your permalinks on this options page</a>, and be sure to choose any option other than "plain". Once you\\'ve made that change, return here to continue.", "matador-jobs"), esc_url(get_admin_url(null, "options-permalink.php"))))'' cannot be parsed correct.
+HTML code '$'_$group'' cannot be parsed correct.
+HTML code '$'_$group'' cannot be parsed correct.
+HTML code '$'trailingslashit(home_url())trailingslashit(Matador->variable("api_endpoint_prefix") . "authorize/")'' cannot be parsed correct.
+HTML code '$'Bullhorn API Credentials'' cannot be parsed correct.
+HTML code '$'Input the credentials you got from Bullhorn. The API User ID and API User Password are not required, but we recommend they be provided as it allows us to streamline your authorization process and attempt to automatically reconnect when your site becomes disconnected from Bullhorn.'' cannot be parsed correct.
+HTML code '$'To help you explain to them what you need, feel free to copy and paste, edit, and send this email to Bullhorn Support:'' cannot be parsed correct.
+HTML code '$'get_transient("error_"$field)'' cannot be parsed correct.
+HTML code '$'Select a Regional Datacenter'' cannot be parsed correct.
+HTML code '$'Welcome to Matador'' cannot be parsed correct.
+HTML code '$'Welcome to Matador. As you know, Matador makes it so your WordPress powered website can talk to your Bullhorn account, including downloading job data from and uploading candidate applications to Bullhorn. To make this magic happen, we need to first connect your site to Bullhorn.'' cannot be parsed correct.
+HTML code '$'activenull'' cannot be parsed correct.
+HTML code '$'activenull'' cannot be parsed correct.
+HTML code '$'activenull'' cannot be parsed correct.
+HTML code '$'activenull'' cannot be parsed correct.
+HTML code '$'_$group'' cannot be parsed correct.
+HTML code '$'_$group'' cannot be parsed correct.
+HTML code '$'activenull'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_bullhorn_connection_assistant_page_title", esc_html__("Bullhorn Connection Assistant", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'Your Bullhorn Client ID is invalid. Double check you entered it correctly, and if so, you may need to submit a support ticket to Bullhorn.'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'submit$type'' cannot be parsed correct.
+HTML code '$'name=$namenull'' cannot be parsed correct.
+HTML code '$'value=$valuenull'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'formnovalidatenull'' cannot be parsed correct.
+HTML code '$'button-primary$class'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$tab'' cannot be parsed correct.
+HTML code '$'style="display:none"'' cannot be parsed correct.
+HTML code '$'$section'' cannot be parsed correct.
+HTML code '$'$section'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_settings_section_title_" . $section, $fields[0])'' cannot be parsed correct.
+HTML code '$'Save Changes'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_settings_page_title", esc_html__("Upgrade Matador", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'sprintf(__("Upgrade to %1$s", "matador-jobs"), $version)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'str_replace(".", "-", $version)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$error'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'Show'' cannot be parsed correct.
+HTML code '$'Hide'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'checked($value, "1", false)'' cannot be parsed correct.
+HTML code '$'matador_build_attributes($attributes)'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'checked($value, "0", false)'' cannot be parsed correct.
+HTML code '$'matador_build_attributes($attributes)'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_settings_page_title", esc_html__("Matador Settings", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'wp_kses_post("<a href="#matador-settings-tab" . sanitize_key($tab) . "" class="nav-tab " . $active . " "" . $label . "</a>")'' cannot be parsed correct.
+HTML code '$'serialize($credentials)'' cannot be parsed correct.
+HTML code '$'wp_create_nonce("matador_api_test")'' cannot be parsed correct.
+HTML code '$'wp_create_nonce("matador_api_test")'' cannot be parsed correct.
+HTML code '$'ob_get_contents()'' cannot be parsed correct.
+HTML code '$'json_encode($request)'' cannot be parsed correct.
+HTML code '$'print_r(get_post_meta(get_the_ID()), true)'' cannot be parsed correct.
+HTML code '$'wp_kses_post(sprintf($format, esc_url(self->get_sync_url($post_id)), esc_html($label), "<img width="20px" src="https://app.bullhornstaffing.com/assets/images/circle-bull.png" />"))'' cannot be parsed correct.
+HTML code '$'wp_kses_post(sprintf($format, esc_url(self->get_sync_url($post_id)), esc_html($label)))'' cannot be parsed correct.
+HTML code '$'<div class="matador-deprecated-notice"><h4>Deprecation Notice</h4><p>sprintf($notice, $type, $old, $new)</p><p>Only you, a logged in user who can edit content, can see this notice.</p></div>'' cannot be parsed correct.
+HTML code '$'<script type="application/ld+json"></script>'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "_matador_source_id", true)'' cannot be parsed correct.
+HTML code '$'<!-- start output: null -->'' cannot be parsed correct.
+HTML code '$'matador_get_the_job_title($id, $context)'' cannot be parsed correct.
+HTML code '$'wp_kses_post(matador_get_the_job_title_link($id, $context))'' cannot be parsed correct.
+HTML code '$'matador_get_the_job_link($id, $context)'' cannot be parsed correct.
+HTML code '$'matador_get_the_job_apply_link($id, $context)'' cannot be parsed correct.
+HTML code '$'matador_get_the_job_confirmation_link($id, $context)'' cannot be parsed correct.
+HTML code '$'matador_get_the_jobs_link()'' cannot be parsed correct.
+HTML code '$'wp_kses_post(Template_Support->the_job_navigation($id, $context))'' cannot be parsed correct.
+HTML code '$'wp_kses_post(matador_get_the_job_info($fields, $atts, $context))'' cannot be parsed correct.
+HTML code '$'matador_get_the_job_description($id, $limit, $context)'' cannot be parsed correct.
+HTML code '$'matador_the_job_date($format, $id)'' cannot be parsed correct.
+HTML code '$'matador_get_the_job_relative_age($id)'' cannot be parsed correct.
+HTML code '$'wp_kses_post(matador_get_the_job_meta($key, $id, $context))'' cannot be parsed correct.
+HTML code '$'wp_kses_post(matador_get_the_job_field($key, $id, $atts, $context))'' cannot be parsed correct.
+HTML code '$'wp_kses_post(matador_get_job($args))'' cannot be parsed correct.
+HTML code '$'wp_kses_post(Template_Support->get_jobs($args))'' cannot be parsed correct.
+HTML code '$'wp_kses_post(matador_get_the_job_terms_list($taxonomy, $id, $args))'' cannot be parsed correct.
+HTML code '$'matador_get_the_application($args)'' cannot be parsed correct.
+HTML code '$'matador_get_the_application($args)'' cannot be parsed correct.
+HTML code '$'matador_get_the_confirmation()'' cannot be parsed correct.
+HTML code '$'wp_kses_post(Template_Support->pagination($query, $context))'' cannot be parsed correct.
+HTML code '$'$output'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_template_button_classes", $classes, $context)'' cannot be parsed correct.
+HTML code '$'call_user_func_array(["matador\\Template_Suppor", "build_classes"], func_get_args())'' cannot be parsed correct.
+HTML code '$'implode(" ", apply_filters("matador_application_form_classes", $args["class"]))'' cannot be parsed correct.
+HTML code '$'get_home_url(null, matador\\Matado->variable("api_endpoint_prefix") . "application")'' cannot be parsed correct.
+HTML code '$'$type'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_application_submit_button_text", esc_attr__("Submit Application", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_application_submitted_message", __("We are uploading your application. It may take a few moments to read your resume. Please wait!", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'matador_build_attributes($attributes)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'sprintf("<a href="%s">%s</a>", esc_html__("For more information on this issue, including how to resolve it, please visit our help documentation article on the topic.", "matador-jobs"), esc_url("https://docs.matadorjobs.com/articles/candidate-consent-management/"))'' cannot be parsed correct.
+HTML code '$'_$group'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'matador_build_attributes($attributes)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$option_value'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'matador_build_attributes($attributes)'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$error'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'implode($args["class"])'' cannot be parsed correct.
+HTML code '$'$content'' cannot be parsed correct.
+HTML code '$'wp_kses_post($before)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($before_each)null'' cannot be parsed correct.
+HTML code '$'matador_get_term_link($term, $term->taxonomy, $link_method, $link_multi)'' cannot be parsed correct.
+HTML code '$'$term'' cannot be parsed correct.
+HTML code '$'wp_kses_post($separate)'' cannot be parsed correct.
+HTML code '$'$term'' cannot be parsed correct.
+HTML code '$'wp_kses_post($separate)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($after_each)null'' cannot be parsed correct.
+HTML code '$'wp_kses_post($after)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($description)'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$sublabel'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'matador_build_attributes($attributes)'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'wp_kses_post(paginate_links($args))'' cannot be parsed correct.
+HTML code '$'matador_get_the_jobs_link()'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'multiple'' cannot be parsed correct.
+HTML code '$'get_the_id()'' cannot be parsed correct.
+HTML code '$'matador_get_the_job_title()'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_search_form_id_field_screen_reader_text", __("Job ID", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_search_form_id_field_label_text", "")'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_search_form_id_field_placeholder", esc_html__("Job ID", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_search_form_keyword_field_screen_reader_text", __("Key Word or Key Words", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_search_form_keyword_field_label_text", "")'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_search_form_keyword_field_placeholder", esc_html__("Search Jobs", "matador-jobs"))'' cannot be parsed correct.
+HTML code '$'$taxonomy_key'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_taxonomy_terms_select_label_screen_reader_text", $screen_reader_text, $args)'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$taxonomy_key'' cannot be parsed correct.
+HTML code '$'$taxonomy_key[]'' cannot be parsed correct.
+HTML code '$'$method'' cannot be parsed correct.
+HTML code '$'multiple'' cannot be parsed correct.
+HTML code '$'$content'' cannot be parsed correct.
+HTML code '$'wp_kses_post(apply_filters("matador_search_form_reset_label", __("Clear", "matador-jobs")))'' cannot be parsed correct.
+HTML code '$'wp_kses_post(apply_filters("matador_search_form_submit_label", __("Search", "matador-jobs")))'' cannot be parsed correct.
+HTML code '$'matador-job-$field'' cannot be parsed correct.
+HTML code '$'remove_query_arg($taxonomy["key"], matador\\Helpe->get_nopaging_url())'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_taxonomy_terms_all_term_screen_reader_text", $screen_reader_text, $terms_are_selected, $args)'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_taxonomy_terms_all_term_label", $label, $args)'' cannot be parsed correct.
+HTML code '$'matador_get_term_link($term, $taxonomy["key"], $method, $multi)'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_taxonomy_terms_term_screen_reader_text", $screen_reader_text, $term, $args)'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_taxonomy_terms_term_label", $term->name, $term, $args)'' cannot be parsed correct.
+HTML code '$'data-url=matador_get_the_jobs_link()'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_taxonomy_terms_all_term_label", $label, $args)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($after)'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_template_job_navigation_button_url", $url, $button, $id, $rule, $context)'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'$term'' cannot be parsed correct.
+HTML code '$'data-url=matador_get_term_link($term, $taxonomy["key"], $method, $multi)'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_taxonomy_terms_term_label", $term->name, $term, $args)'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_job_confirmation_headline", $headline)'' cannot be parsed correct.
+HTML code '$'apply_filters("matador_job_confirmation_message", $message)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($before)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($after)'' cannot be parsed correct.
+HTML code '$'wp_kses_post($before)'' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$'-1'' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$'-1'' cannot be parsed correct.
+HTML code '$'-0'' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$'-0'' cannot be parsed correct.
+HTML code '$'<!--
+					'' cannot be parsed correct.
+HTML code '$'
+          -->'' cannot be parsed correct.
+HTML code '$'<pre>'' cannot be parsed correct.
+HTML code '$'$api_method is needed'' cannot be parsed correct.
+HTML code '$'</pre>'' cannot be parsed correct.
+HTML code '$'<div class="matador-meta-scroll-box"><pre style="white-space: pre-wrap">'' cannot be parsed correct.
+HTML code '$'</pre></div>'' cannot be parsed correct.
+HTML code '$'				</label></h5>
+		'' cannot be parsed correct.
+HTML code '$'				</label></h5>
+		'' cannot be parsed correct.
+HTML code '$'					</label></h5>
+			'' cannot be parsed correct.
+HTML code '$'</div>
+			'' cannot be parsed correct.
+HTML code '$'			</div>
+		'' cannot be parsed correct.
+HTML code '$'
+		</tr>
+
+	</thead>
+
+	<tbody>
+
+	'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:20.030514.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.043814.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 516 do_action/apply_filters calls and 167 add_action/add_filter calls. Now connecting do-add pairs.
+Added 165 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:21.594642.
+
+165 PHP_REACHES edges created
+165 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running ArrayElementDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IBMDb2Detector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running FirebirdInterBaseDetector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running IngresDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector

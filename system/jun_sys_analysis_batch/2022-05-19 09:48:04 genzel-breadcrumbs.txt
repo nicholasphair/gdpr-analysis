@@ -1,0 +1,735 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on genzel-breadcrumbs
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.326024.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.009248.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 25 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.398418.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.391878.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 283 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.671701.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 6 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.060146.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+Added 1 PHP_REACHES edges.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.098747.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 125 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.910009.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1775
+Added 1335 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1775
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.158624.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/genzel-breadcrumbs/gb.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/genzel-breadcrumbs/genzel-breadcrumbs.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/genzel-breadcrumbs/page-options.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.322467.
+
+308 PHP_REACHES edges created
+4 CALLS edges created
+1000 PHP_REACHES edges created
+1463 PHP_REACHES edges created
+1775 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 707 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.968594.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.163547.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 19 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.049499.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 16 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.187098.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.029940.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.333363.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009131.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.042010.
+
+35 PHP_REACHES edges created
+35 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 36 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.163998.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.115626.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'Save changes'' cannot be parsed correct.
+HTML code '$'Load defaults'' cannot be parsed correct.
+HTML code '$'#$_POST_active-sectiondiv:first-child'' cannot be parsed correct.
+HTML code '$'<div class="updated"><p>Settings were updated.</p></div>'' cannot be parsed correct.
+HTML code '$'$GenzelBreadcrumbs_obj->build($args)'' cannot be parsed correct.
+HTML code '$'Genzel Breadcrumbs'' cannot be parsed correct.
+HTML code '$'Main settings'' cannot be parsed correct.
+HTML code '$'Rule Tokens'' cannot be parsed correct.
+HTML code '$'GenzelBreadcrumbs($args);'' cannot be parsed correct.
+HTML code '$'About plugin'' cannot be parsed correct.
+HTML code '$'You can change default settings here. But it can be overridden by arguments in function GenzelBreadcrumbs(). 
+ You should place call of the function in templates to output breadcrumbs.'' cannot be parsed correct.
+HTML code '$'Templates'' cannot be parsed correct.
+HTML code '$'Before breadcrumbs'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($acs["before"])'' cannot be parsed correct.
+HTML code '$'After breadcrumbs'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($acs["after"])'' cannot be parsed correct.
+HTML code '$'Item template'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($acs["template-item"])'' cannot be parsed correct.
+HTML code '$'Last item template'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($acs["template-last-item"])'' cannot be parsed correct.
+HTML code '$'Delimiter'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($acs["delimiter"])'' cannot be parsed correct.
+HTML code '$'Home/Front settings'' cannot be parsed correct.
+HTML code '$'Label'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($acs["home-label"])'' cannot be parsed correct.
+HTML code '$'URL'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($acs["home-uri"])'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'hide breadcrumbs on front'' cannot be parsed correct.
+HTML code '$'Useful, when you do not use front page template, can not separate templates.'' cannot be parsed correct.
+HTML code '$'Build vars'' cannot be parsed correct.
+HTML code '$'Menu'' cannot be parsed correct.
+HTML code '$'-- select menu--'' cannot be parsed correct.
+HTML code '$'<option value=$item"selected>htmlspecialchars($item->name)</option>'' cannot be parsed correct.
+HTML code '$'Rule'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($acs["rule"])'' cannot be parsed correct.
+HTML code '$'Rule inform programm how to build breadcrumbs. You have few tokens to drive this process. Look more info on rule tokens page.'' cannot be parsed correct.
+HTML code '$'Developer'' cannot be parsed correct.
+HTML code '$'Plugin page'' cannot be parsed correct.
+HTML code '$'Enjoy, this plugin is free to use. But you can support plugin development.'' cannot be parsed correct.
+HTML code '$'<br />
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="BLLQY2VNMZ44Y">
+			<input type="image" src="https://www.paypalobjects.com/en_US/RU/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</p>-->
+	</div>
+
+	<hr />	
+	<div class="sub-page-left-padding">
+		<button class="button-primary" onclick="jQuery(\'#ACS_form\').submit();">'' cannot be parsed correct.
+HTML code '$'</button>
+		<button type="button" class="button-primary" onclick="
+			var frm = jQuery(\'#ACS_form\').get(0); frm.action.value=\'load_defaults\'; frm.submit();" >'' cannot be parsed correct.
+HTML code '$'</button>
+			</td>
+		</tr>
+		
+	</div>
+	
+	</div>
+</div>
+<style>
+	.button-secondary-red {
+		background: #ba0000;
+		border-color: #690000 #690000 #690000;
+		-webkit-box-shadow: 0 1px 0 #690000;
+		box-shadow: 0 1px 0 #690000;
+		color: #fff;
+		text-decoration: none;
+		text-shadow: 0 -1px 1px #690000, 1px 0 1px #690000, 0 1px 1px #690000, -1px 0 1px #690000;	
+		display: inline-block;
+		text-decoration: none;
+		font-size: 13px;
+		line-height: 26px;
+		height: 28px;
+		margin: 0;
+		padding: 0 10px 1px;
+		cursor: pointer;
+		border-width: 1px;
+		border-style: solid;
+		-webkit-appearance: none;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		white-space: nowrap;
+	}
+	.button-secondary-red:hover {
+	    background: #ca0000;
+		color: #fff;
+	}
+	.block-elm {
+		display: inline-block;
+	}
+	.block-elm .about {
+		
+	}
+	
+	nav#ACH_pager {
+		border-bottom: 1px solid #696969;
+		padding: 0 0 0 15px;
+		box-shadow: 0 3px 0px #ccc;
+	}
+	nav#ACH_pager div {
+		background: #FFF;
+		-webkit-box-shadow: 0 1px 0 #696969;
+		box-shadow: 0 1px 0 #696969;
+		color: #000;
+		text-decoration: none;
+		display: inline-block;
+		text-decoration: none;
+		font-size: 20px;
+		line-height: 30px;
+		height: 32px;
+		margin: 0 5px 0 0;
+		padding: 0 20px 1px;
+		cursor: pointer;
+		border: 1px solid #696969;
+		border-bottom: 0;
+		border-radius: 3px 3px 0 0 ;
+		white-space: nowrap;
+	}
+	nav#ACH_pager div.active {
+		background: #008ec2;
+		color: #FFF;		
+	}
+
+	.sub-page {
+		padding: 0 0 0 15px;
+		display: none;
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.sub-page textarea {
+		width: 100%;
+	}
+	.sub-page input[type="text"] {
+		width: 100%;
+	}	
+	.sub-page p {
+		line-height: 18px;
+		font-size: 14px;
+	}	
+	.sub-page-left-padding {
+		padding-left: 15px;
+	}
+	
+</style>
+
+<script>
+jQuery(function() {
+	jQuery(\'nav#ACH_pager div\').click(function (){
+		jQuery(\'nav#ACH_pager div\').removeClass(\'active\');
+		jQuery(this).addClass(\'active\');
+		var pageID = jQuery(this).attr(\'data-page\');
+		jQuery(\'.sub-page\').hide();
+		jQuery(\'#\' + pageID).show();
+		jQuery(\'#\' + pageID).show();
+		jQuery(\'#ACS_as\').get(0).value = this.id;
+	});
+	
+	jQuery(\'nav#ACH_pager '' cannot be parsed correct.
+HTML code '$'\').trigger(\'click\');
+  // Handler for .ready() called.
+});
+
+</script>'' cannot be parsed correct.
+HTML code '$'</div>	
+			<div id="ACH_pager_stick_2" data-page="ACH_page_2">'' cannot be parsed correct.
+HTML code '$'</div>	
+			<div id="ACH_pager_stick_4" data-page="ACH_page_4">'' cannot be parsed correct.
+HTML code '$'</div>	
+			<div id="ACH_pager_stick_3" data-page="ACH_page_3">'' cannot be parsed correct.
+HTML code '$'</div>
+		</nav>	
+
+		<div class="sub-page" id="ACH_page_1" >
+		<table border=0 cellspacing=5 cellpadding=0 width=760>
+		<tr><td width="25%"></td><td width="25%"></td><td width="25%"></td><td width="25%"></td></tr>
+		<tr valign="top">
+			<td colspan=3>
+	<p>'' cannot be parsed correct.
+HTML code '$'	</p>		
+			<td></td>
+		</tr>
+		<tr valign="top">
+			<td colspan=3>
+			<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+			<label for="before"><b>'' cannot be parsed correct.
+HTML code '$'</b></label><br />
+			<textarea name="before" rows="2">'' cannot be parsed correct.
+HTML code '$'</textarea><br />
+			</td>
+			<td></td>
+		</tr>
+		<tr valign="top">
+			<td colspan=3>
+			<label for="after"><b>'' cannot be parsed correct.
+HTML code '$'</b></label><br />
+			<textarea name="after" rows="2">'' cannot be parsed correct.
+HTML code '$'</textarea><br />
+			</td>
+			<td></td>
+		</tr>
+		<tr valign="top">
+			<td colspan=3>
+			<label for="template-item"><b>'' cannot be parsed correct.
+HTML code '$'</b></label><br />
+			<textarea name="template-item" rows="2">'' cannot be parsed correct.
+HTML code '$'</textarea><br />
+			</td>
+			<td></td>
+		</tr>	
+		<tr valign="top">
+			<td colspan=3>
+			<label for="template-last-item"><b>'' cannot be parsed correct.
+HTML code '$'</b></label><br />
+			<textarea name="template-last-item" rows="2">'' cannot be parsed correct.
+HTML code '$'</textarea><br />
+			</td>
+			<td></td>
+		</tr>	
+		<tr valign="top">
+			<td colspan=3>
+			<label for="delimiter"><b>'' cannot be parsed correct.
+HTML code '$'</b></label><br />
+			<textarea name="delimiter" rows="2">'' cannot be parsed correct.
+HTML code '$'</textarea><br />
+			</td>
+			<td></td>
+		</tr>	
+		<tr valign="top">
+			<td colspan=4>
+			<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+		</tr>
+		<tr valign="top">
+			<td colspan=1>
+				<label for="home-label"><b>'' cannot be parsed correct.
+HTML code '$':</b></label>
+			</td>
+			<td colspan="2">
+			<input type="text" name="home-label" value="'' cannot be parsed correct.
+HTML code '$'" /><br />
+			</td>
+			<td></td>
+		</tr>	
+		<tr valign="top">
+			<td colspan=1>
+				<label for="home-uri"><b>'' cannot be parsed correct.
+HTML code '$':</b></label>
+			</td>
+			<td colspan="2">
+			<input type="text" name="home-uri" value="'' cannot be parsed correct.
+HTML code '$'" /><br />
+			</td>
+			<td></td>
+		</tr>
+		<tr valign="top">
+			<td colspan=4>
+			<label>
+			<input type="checkbox" name="hide-on-front" value="1" '' cannot be parsed correct.
+HTML code '$' />
+			'' cannot be parsed correct.
+HTML code '$'<br />
+			<small>'' cannot be parsed correct.
+HTML code '$'</small>
+			</label><br />
+			</td>
+		</tr>	
+
+		<tr valign="top">
+			<td colspan=4>
+			<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+		</tr>		
+		
+		<tr valign="top">
+			<td colspan=1>
+				<label for="home-uri"><b>'' cannot be parsed correct.
+HTML code '$':</b></label>
+			</td>
+			<td colspan="2">
+				<select name="use-menu">
+					<option value="">'' cannot be parsed correct.
+HTML code '$'</option>
+'' cannot be parsed correct.
+HTML code '$':</b></label>
+			</td>
+			<td colspan="2">
+			<input type="text" name="rule" value="'' cannot be parsed correct.
+HTML code '$'" /><br />
+			<small>
+			'' cannot be parsed correct.
+HTML code '$'			</small>
+			</td>
+			<td></td>
+		</tr>
+		</table>
+		</div>
+		
+	</form>
+	
+	<div class="sub-page" id="ACH_page_2" >
+		<p>Here is basic info about rule token used to form breadcrumbs RULE. You should separate tokens by breakspace. Programm reads tokens one by one and replace them by breadcrumbs links.</p>
+		<h3>Tokens</h3>
+		<p><b>front</b> - inserts link to home page. You can configure Home label and Home URL on the plugin settings page.</p>
+		<p><b>menu</b> - includes full menu chain for current website page. If you have few menus on your website, you can select default one on the plugin settings page.</p>
+		<p><b>menu:fin</b> - Fin modifier can interrupt rule chain if current page is in menu.</p>
+		<p><b>menu:trail</b> - includes full menu chain without last child.</p>
+		<p><b>tax</b> - includes arhive tag links. By default programm uses `post_tag` taxonomy.</p>
+		<p><b>tax:TAXONOMY_NAME</b> - Modify tax tag by real taxonomy name which link you want to insert in breadcrumb.</p>
+		<p><b>current</b> - inserts crumb of the curent page.</p>
+		<p><b>|</b> - Vertical line symbol (don\'t forget about breakspaces around it) allows you to apply only one tag from chain connected by vertical line. For example this rule : 
+			`tax:product_cat | tax:product_tag` will show `product_tag` tag archive link only if current page have no one `product_cat` term.
+		</p>
+		<h3>Rule examples</h3>
+		<p>
+			front menu:trail current
+		</p>
+		<p>
+			front menu:fin tax:post_tag | tax:category current
+		</p>
+		<p>
+			front menu:fin
+		</p>
+		<p>
+			front menu | current
+		</p>
+	</div>
+	
+	<div class="sub-page" id="ACH_page_4" >	
+	<p>
+		`GenzelBreadcrumbs` function allows to overrride default options and supports even more options than you could find on main settings page.
+	</p>
+	<h3>Defaults</h3>
+	<p>Default set of options is:</p>
+	<pre>
+array(
+  \'before\' => \'&lt;div class="breadcrumbs"&gt;\',
+  \'after\' => \'&lt;/div&gt;\',
+  \'delimiter\' => \' &gt; \',
+  \'template-item\' => \'&lt;a href="%url%" title="%title%"&gt;%title%&lt;/a&gt;\',
+  \'template-last-item\' => \'&lt;span&gt;%title%&lt;/span&gt;\',
+
+  \'home-label\' => \'Home\',
+  \'home-uri\' => \'/\',
+  \'hide-on-front\' => true,
+
+  \'rule\' => \'front menu:fin tax:post_tag current\',
+
+  \'archive-trails\' => array(
+    \'year\' => true,
+    \'month\' => true,
+  ),
+  \'mounts\' => \'\',
+  \'use-menu\' => \'\',
+);	</pre>
+	<p>You can restore defaults by `Load Defaults` button. Here you can see two options are not presented on main settings page.</p>
+	<h3>Archive trails</h3>
+	For calendar archives GenzelBreadcrumbs rule token `current` will create separate links for year, month, day. To hide year and/or month trails set flags to false.
+	<pre>&lt;?php
+GenzelBreadcrumbs(array(
+  //hide all calendar trails
+  \'archive-trails\' => array( )
+));
+?&gt;</pre>
+	<h3>Mounts</h3>
+	<p>Sometimes we have too many items (posts or ect) to include it to menu. For example products on `woocommerced` site. 
+		You can have thousands of them. What to do if you want \'to attach\' all of them for example to \'shop\' url?</p>
+	<p>Really you have few ways to solve this task. First of them is to use option `mounts`, which allows you to attach 
+		post by type or by term directly to necessary url. Go back to wocommerce example:</p>
+	<pre>&lt;?php
+GenzelBreadcrumbs(array(
+  \'mounts\' => array(
+    array(\'where\' => \'shop\', \'what\' => \'type:product\', \'how\' => \'tax:product_cat current\'),
+  ),
+));		
+?&gt;</pre>	
+	<p>
+		This method builds breadcrumbs for `/shop/` page using main rule. Then it will add breadcrumbs of current product page using rule in `how` option.
+		The `mounts\' conditions (`what` option) can use one more token - `term:TAXONOMY_NAME:TERM_SLUG`. Look example:
+	</p>
+<pre>&lt;?php
+GenzelBreadcrumbs(array(
+  \'mounts\' => array(
+    array(\'where\' => \'shop\', \'what\' => \'type:product term:product_cat:suveniry\', \'how\' => \'current\')
+  ),
+));		
+?&gt;</pre>
+	<p>Limitation of `mounts` is using only posts (but of any kind) in `where` option. You can not attach to archives or other virtual pages.</p>
+	<h3>Hooks</h3>
+	<p>
+		Plugin supports two hooks to change breadcrumb programmatically.
+	</p>
+	<p><b>genzel_breadcrumbs_links</b> - allow you filter links array is prepared to theming. Each link item has `title` and `url` variables.</p>
+	<p><b>genzel_breadcrumbs_links_themed</b> - allow you filter themed links array. Each item in array is html code of link.</p>
+	<p>Here is code example changing first breadcrumbs link:</p>
+<pre>&lt;?php
+add_filter(\'genzel_breadcrumbs_links_themed\', \'crumbs_hook\');
+
+function crumbs_hook($items) {
+  $items[0] = \'&lt;a href="/" title="Go to Homepage"&gt;My Blog&lt;/a&gt;\';
+  return $items;
+}	
+?&gt;</pre>	
+	</p>
+	
+	</div>
+	
+	<div class="sub-page" id="ACH_page_3" >
+		<p>
+			<b>Version: '' cannot be parsed correct.
+HTML code '$'<br />
+			'' cannot be parsed correct.
+HTML code '$': <a href="http://shra.ru" rel="nofollow" target="_blank" >Korol Yuriy</a><br />
+			'' cannot be parsed correct.
+HTML code '$': <a href="https://wordpress.org/plugins/genzel-breadcrumbs/" rel="nofollow" target="_blank" >wordpress.org/plugins/genzel-breadcrumbs</a><br />
+		</p>
+<!--		<p>
+			'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:07.568612.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047673.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 2 do_action/apply_filters calls and 3 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.359982.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PropertyDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running MySQLiDetector
+### Start running WordpressHashingFnDetector
+### Finish running PHPRetrievalDetector
+### Start running WordPressRemoteDetector
+### Finish running PHPStorageDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running WordPressStorageDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+gb.class.php:485
+  - RETRIEVAL call to fread($this->mutex_options, filesize($this->optionFilename)).
+  - Data types: file 
+
+gb.class.php:499
+  - STORAGE call to fwrite($this->mutex_options, $data).
+  - Data types: file 
+
+gb.class.php:104
+  - RETRIEVAL call to get_post($post->post_parent) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+gb.class.php:333
+  - RETRIEVAL call to get_the_author() alters data types {'user_meta'}. Returns (string|null).
+  - Data types: user_meta 
+
+By data type:
+file
+	PHPStorageDetector.fwrite($this->mutex_options, $data) - {'file'}
+	PHPRetrievalDetector.fread($this->mutex_options, filesize($this->optionFilename)) - {'file'}
+post
+	WordPressRetrievalDetector.get_post($post->post_parent) - {'wp_post', 'post_meta', 'post'}
+post_meta
+	WordPressRetrievalDetector.get_post($post->post_parent) - {'wp_post', 'post_meta', 'post'}
+user_meta
+	WordPressRetrievalDetector.get_the_author() - {'user_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($post->post_parent) - {'wp_post', 'post_meta', 'post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.836185.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 1 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.050480.
+
+1 STORE_REACHES edges created
+1 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 5 nodes as PERSONAL
+In total, tainted 5 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.192345.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:31.412921!
+RETRIEVAL call to fread($this->mutex_options, filesize($this->optionFilename)).,None,None
+STORAGE call to fwrite($this->mutex_options, $data).,None,None
+RETRIEVAL call to get_post($post->post_parent) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_the_author() alters data types {'user_meta'}. Returns (string|null).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,929 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on peer-feedback
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.660864.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.954580.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 14 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.283956.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.437685.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1109 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.230803.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 52 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.031895.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.216660.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 617 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:10.195189.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 6449
+Added 4657 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 7068
+Added 619 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.723730.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/peer-feedback.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/admin/criteria.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/admin/groups.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/admin/help.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/admin/student_feedback.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/classes/class-actions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/classes/class-ajax.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/classes/class-cpt-admin-setup.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/classes/class-draw.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/classes/class-peer-feedback.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/classes/class-queries.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/classes/class-utils.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/front_forms/distribution.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/front_forms/rubric.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/front_forms/text-only.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/peer-feedback/google-charts/class-googlecharts.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.551200.
+
+1000 PHP_REACHES edges created
+1123 PHP_REACHES edges created
+52 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+5274 PHP_REACHES edges created
+619 PHP_REACHES edges created
+7068 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 2322 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.189237.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.658325.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 52 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.392015.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 92 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.174403.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.268055.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.548181.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.021689.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.036219.
+
+144 PHP_REACHES edges created
+144 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 65 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.127545.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+26 SQL operations to process.
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_CRITERIA WHERE projectID = $projectID
+SQL command (DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_CRITERIA WHERE projectID = $projectID) cannot be parsed correct.
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_RESPONSE_OPTIONS WHERE projectID = $projectID
+SQL command (DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_RESPONSE_OPTIONS WHERE projectID = $projectID) cannot be parsed correct.
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_CITERIA_DESCRIPTORS WHERE projectID = $projectID
+SQL command (DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_CITERIA_DESCRIPTORS WHERE projectID = $projectID) cannot be parsed correct.
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_GROUPS WHERE groupID = $groupInfo
+SQL command (DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_GROUPS WHERE groupID = $groupInfo) cannot be parsed correct.
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_USERS WHERE groupID = $groupInfo
+SQL command (DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK_USERS WHERE groupID = $groupInfo) cannot be parsed correct.
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE userID=$_POST_currentUserID AND targetUserID=%d AND projectID=%d AND feedbackText = %d
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE userID=$_POST_currentUserID AND targetUserID=$_POST_targetUserID AND projectID=%d AND feedbackText = %d
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE use$_POST_projectIDD=$_POST_currentUserID AND targetUserID=$_POST_targetUserID AND projectID=%d AND feedbackText = %d
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE use$_POST_projectIDD=$_POST_currentUserID A$_POST_criteriaID targetUserID=$_POST_targetUserID AND projectID=%d AND feedbackText = %d
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE use$_POST_projectIDD=$_POST_currentUserID A$_POST_criteriaID targetUserID=$_POST_targetUserID AND projectID=%d AND feedbackText = %d
+SQL command (DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE use$_POST_projectIDD=$_POST_currentUserID A$_POST_criteriaID targetUserID=$_POST_targetUserID AND projectID=%d AND feedbackText = %d) cannot be parsed correct.
+INSERT into $wpdbDBTABLE_PEER_FEEDBACK (userID, targetUserID, projectID, feedbackText, feedbackValue, submitDate) 
+SQL command (INSERT into $wpdbDBTABLE_PEER_FEEDBACK (userID, targetUserID, projectID, feedbackText, feedbackValue, submitDate) ) cannot be parsed correct.
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE userID=$_POST_currentUserID AND targetUserID=%d AND projectID=%d
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE userID=$_POST_currentUserID AND targetUserID=$_POST_targetUserID AND projectID=%d
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE use$_POST_projectIDD=$_POST_currentUserID AND targetUserID=$_POST_targetUserID AND projectID=%d
+DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE use$_POST_projectIDD=$_POST_currentUserID AND targetUserID=$_POST_targetUserID AND projectID=%d
+SQL command (DELETE FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE use$_POST_projectIDD=$_POST_currentUserID AND targetUserID=$_POST_targetUserID AND projectID=%d) cannot be parsed correct.
+INSERT into $wpdbDBTABLE_PEER_FEEDBACK (userID, targetUserID, projectID, feedbackText, submitDate) 
+SQL command (INSERT into $wpdbDBTABLE_PEER_FEEDBACK (userID, targetUserID, projectID, feedbackText, submitDate) ) cannot be parsed correct.
+jquery-ui-core
+SQL command (jquery-ui-core) cannot be parsed correct.
+CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK (
+			feedbackID mediumint(9) NOT NULL AUTO_INCREMENT,
+			userID mediumint(9),
+			projectID mediumint(9),
+			targetUserID mediumint(9),
+			submitDate datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+			feedbackText longtext,
+			feedbackValue mediumint(9),
+			PRIMARY KEY  (feedbackID)
+			) substr(get_bloginfo("version"), 0, 3);
+SQL command (CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK ( feedbackID mediumint(9) NOT NULL AUTO_INCREMENT, userID mediumint(9), projectID mediumint(9), targetUserID mediumint(9), submitDate datetime DEFAULT '0000-00-00 00:00:00' NOT NULL, feedbackText longtext, feedbackValue mediumint(9), PRIMARY KEY (feedbackID) ) substr(get_bloginfo("version"), 0, 3);) cannot be parsed correct.
+CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_GROUPS (
+			groupID mediumint(9) NOT NULL AUTO_INCREMENT,
+			groupName varchar(255),
+			projectID mediumint(9),
+			PRIMARY KEY  (groupID)
+			) substr(get_bloginfo("version"), 0, 3);
+SQL command (CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_GROUPS ( groupID mediumint(9) NOT NULL AUTO_INCREMENT, groupName varchar(255), projectID mediumint(9), PRIMARY KEY (groupID) ) substr(get_bloginfo("version"), 0, 3);) cannot be parsed correct.
+CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_USERS (
+			ID mediumint(9) NOT NULL AUTO_INCREMENT,
+			groupID mediumint(9),
+			firstName varchar(255),
+			lastName varchar(255),
+			email varchar(255),
+			password varchar(255),
+			PRIMARY KEY  (ID)			
+			) substr(get_bloginfo("version"), 0, 3);
+SQL command (CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_USERS ( ID mediumint(9) NOT NULL AUTO_INCREMENT, groupID mediumint(9), firstName varchar(255), lastName varchar(255), email varchar(255), password varchar(255), PRIMARY KEY (ID) ) substr(get_bloginfo("version"), 0, 3);) cannot be parsed correct.
+CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_CRITERIA (
+			criteriaID mediumint(9) NOT NULL AUTO_INCREMENT,
+			projectID mediumint(9),
+			criteria longtext,
+			criteriaOrder mediumint(9),
+			PRIMARY KEY  (criteriaID)
+			) substr(get_bloginfo("version"), 0, 3);
+SQL command (CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_CRITERIA ( criteriaID mediumint(9) NOT NULL AUTO_INCREMENT, projectID mediumint(9), criteria longtext, criteriaOrder mediumint(9), PRIMARY KEY (criteriaID) ) substr(get_bloginfo("version"), 0, 3);) cannot be parsed correct.
+CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_RESPONSE_OPTIONS (
+			optionID mediumint(9) NOT NULL AUTO_INCREMENT,
+			projectID mediumint(9),
+			responseOption longtext,
+			optionOrder mediumint(9),
+			PRIMARY KEY  (optionID)
+			) substr(get_bloginfo("version"), 0, 3);
+SQL command (CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_RESPONSE_OPTIONS ( optionID mediumint(9) NOT NULL AUTO_INCREMENT, projectID mediumint(9), responseOption longtext, optionOrder mediumint(9), PRIMARY KEY (optionID) ) substr(get_bloginfo("version"), 0, 3);) cannot be parsed correct.
+CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_CITERIA_DESCRIPTORS (
+			criteriaID mediumint(9),
+			optionID mediumint(9),
+			projectID mediumint(9),
+			descriptor longtext
+			) substr(get_bloginfo("version"), 0, 3);
+SQL command (CREATE TABLE $wpdbDBTABLE_PEER_FEEDBACK_CITERIA_DESCRIPTORS ( criteriaID mediumint(9), optionID mediumint(9), projectID mediumint(9), descriptor longtext ) substr(get_bloginfo("version"), 0, 3);) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_GROUPS WHERE projectID={"projectID": "$projectID"}_projectID ORDER BY groupName ASC
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_GROUPS WHERE projectID={"projectID": "$projectID"}_projectID ORDER BY groupName ASC) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_GROUPS WHERE groupID={"groupID": "$userInfo_groupID"}_groupID
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_GROUPS WHERE groupID={"groupID": "$userInfo_groupID"}_groupID) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_USERS WHERE groupID={"groupID": "$groupInfo"}_groupID
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_USERS WHERE groupID={"groupID": "$groupInfo"}_groupID) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_CRITERIA WHERE projectID={"projectID": "$projectID"}_projectID ORDER BY criteriaOrder ASC
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_CRITERIA WHERE projectID={"projectID": "$projectID"}_projectID ORDER BY criteriaOrder ASC) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_RESPONSE_OPTIONS WHERE projectID={"projectID": "{\"projectID\": \"$projectID\", \"readOnly\": \"false\", \"userFeedbackID\": \"$userID\", \"userID\": \"$currentFeedbackUserID\"}_projectID"}_projectID ORDER BY optionOrder ASC
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_RESPONSE_OPTIONS WHERE projectID={"projectID": "{\"projectID\": \"$projectID\", \"readOnly\": \"false\", \"userFeedbackID\": \"$userID\", \"userID\": \"$currentFeedbackUserID\"}_projectID"}_projectID ORDER BY optionOrder ASC) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_CITERIA_DESCRIPTORS WHERE projectID={"projectID": "{\"projectID\": \"$projectID\", \"readOnly\": \"false\", \"userFeedbackID\": \"$userID\", \"userID\": \"$currentFeedbackUserID\"}_projectID"}_projectID
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_CITERIA_DESCRIPTORS WHERE projectID={"projectID": "{\"projectID\": \"$projectID\", \"readOnly\": \"false\", \"userFeedbackID\": \"$userID\", \"userID\": \"$currentFeedbackUserID\"}_projectID"}_projectID) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE projectID={"projectID": "$projectID", "userID": "$currentFeedbackUserID", "targetUserID": "$userID"}_projectID AND userID={"projectID": "$projectID", "userID": "$currentFeedbackUserID", "targetUserID": "$userID"}_userID AND targetUserID={"projectID": "$projectID", "userID": "$currentFeedbackUserID", "targetUserID": "$userID"}_targetUserID
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE projectID={"projectID": "$projectID", "userID": "$currentFeedbackUserID", "targetUserID": "$userID"}_projectID AND userID={"projectID": "$projectID", "userID": "$currentFeedbackUserID", "targetUserID": "$userID"}_userID AND targetUserID={"projectID": "$projectID", "userID": "$currentFeedbackUserID", "targetUserID": "$userID"}_targetUserID) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE userID={"userID": "$userInfo_userID"}_userID
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE userID={"userID": "$userInfo_userID"}_userID) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE targetUserID={"targetUserID": "{\"projectID\": \"get_the_ID()\", \"targetUserID\": \"$_GET_userID\", \"feedbackType\": \"get_post_meta($projectID, \\\"feedbackType\\\", true)\", \"anon_feedback\": \"get_post_meta($projectID, \\\"anon_feedback\\\", true)\", \"groupID\": \"$thisUserInfo_groupID\"}_targetUserID"}_targetUserID
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK WHERE targetUserID={"targetUserID": "{\"projectID\": \"get_the_ID()\", \"targetUserID\": \"$_GET_userID\", \"feedbackType\": \"get_post_meta($projectID, \\\"feedbackType\\\", true)\", \"anon_feedback\": \"get_post_meta($projectID, \\\"anon_feedback\\\", true)\", \"groupID\": \"$thisUserInfo_groupID\"}_targetUserID"}_targetUserID) cannot be parsed correct.
+SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_USERS WHERE ID = $_GET_userID
+SQL command (SELECT * FROM $wpdbDBTABLE_PEER_FEEDBACK_USERS WHERE ID = $_GET_userID) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [185, 202, 219, 849, 866, 2537, 2577, 2624, 2662, 7006, 7326, 7354, 7382, 7410, 7438, 7466, 7681, 7754, 7827, 8328, 8403, 8476, 8616, 8689, 8762, 8828]
+Added 0 SQL nodes. 0 out of 26 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:12.133130.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<h1>get_the_title($projectID) : Project Criteria</h1>'' cannot be parsed correct.
+HTML code '$'$projectID'' cannot be parsed correct.
+HTML code '$'<div class="updated notice"><p><b>0</b> students processed.</p></div>'' cannot be parsed correct.
+HTML code '$'<b>0</b> problems were ecountered<br/>'' cannot be parsed correct.
+HTML code '$'<li>$errorInfo</li>'' cannot be parsed correct.
+HTML code '$'<li>$errorInfo</li>'' cannot be parsed correct.
+HTML code '$'<li>$errorInfo</li>'' cannot be parsed correct.
+HTML code '$'<h3>$groupInfo</h3>'' cannot be parsed correct.
+HTML code '$'<img src=get_avatar_url($email, $args)"'' cannot be parsed correct.
+HTML code '$'<td>$userInfo_lastName, $userInfo_firstName</td><td width="200px"><a href="mailto:$userInfo_email"$userInfo_email</a></td>'' cannot be parsed correct.
+HTML code '$'0/count($groupUsers)'' cannot be parsed correct.
+HTML code '$'<td width="100"><a href="get_permalink($projectID)&password=$userInfo_password&userID=$userInfo_userID&preview=true" target="blank" class="button-secondary">Preview</a></td>'' cannot be parsed correct.
+HTML code '$'<td width="100"><a href="?page=as-pfeedack-student-feedback&projectID=$projectID&userID=$userInfo_userID" class="button-secondary">Feedback Received</a></td>'' cannot be parsed correct.
+HTML code '$'<h1>get_the_title($projectID)</h1>'' cannot be parsed correct.
+HTML code '$'<h2>$userInfo_firstName $userInfo_lastName  feedback</h2>'' cannot be parsed correct.
+HTML code '$'<a href="?page=as-pfeedack-project-groups&projectID$_GET_projectID" class="backLink">Back to Groups</a><hr/>'' cannot be parsed correct.
+HTML code '$'<h1>get_the_title($projectID) : Student Groups</h1>'' cannot be parsed correct.
+HTML code '$'$projectID'' cannot be parsed correct.
+HTML code '$'<hr/><a href="options.php?page=as-pfeedack-project-criteria&projectID$projectID" class="button-secondary">Edit Rubric</a>'' cannot be parsed correct.
+HTML code '$'<b>count($projectGroups)</b>'' cannot be parsed correct.
+HTML code '$'<b>count($projectStudents)</b>'' cannot be parsed correct.
+HTML code '$'<hr/><a href="options.php?page=as-pfeedack-project-groups&projectID$projectID" class="button-secondary">Add / Edit Groups</a>'' cannot be parsed correct.
+HTML code '$'><label for="distributionPoints" class="pfAdmin_label">Total Distriubtion Points</label><br/><input type="text" name="distributionPoints" id="distributionPoints" size="3" value="get_post_meta($post->ID, "distributionPoints", true)"> points</div'' cannot be parsed correct.
+HTML code '$'<input type="text" class="endDate" name="endDate" id="endDate" size="12" value="get_post_meta($post->ID, "endDate", true)"/'' cannot be parsed correct.
+HTML code '$'<a href="options.php?page=as-pfeedack-project-criteria&projectID$post_ID">Edit Criteria</a'' cannot be parsed correct.
+HTML code '$'<b>count($projectGroups)</b> group found<br/>'' cannot be parsed correct.
+HTML code '$'<a href="options.php?page=as-pfeedack-project-groups&projectID$post_ID">View / Edit Groups</a'' cannot be parsed correct.
+HTML code '$'<a href="#TB_inline?width=200&height=150&inlineId=disableLin$post_ID" class="thickbox button-secondary">Switch off</a>'' cannot be parsed correct.
+HTML code '$'<div id="disableLin$post_ID" style="display:none;">'' cannot be parsed correct.
+HTML code '$'<a href="edit.php?post_type=peer_projects&myAction=disableProject&projectID$post_ID" class="button-primary">Yes DISABLE this project</a>'' cannot be parsed correct.
+HTML code '$'<a href="#TB_inline?width=200&height=150&inlineId=launchLin$post_ID" class="thickbox button-primary">Launch Project</a>'' cannot be parsed correct.
+HTML code '$'<div id="launchLin$post_ID" style="display:none;">'' cannot be parsed correct.
+HTML code '$'<a href="edit.php?post_type=peer_projects&myAction=launchProject&projectID$post_ID" class="button-primary"> Yes LAUNCH this project</a>'' cannot be parsed correct.
+HTML code '$'<a href="#TB_inline?width=200&height=150&inlineId=disableFeedbackLin$post_ID" class="thickbox button-secondary">Disable feedback</a>'' cannot be parsed correct.
+HTML code '$'<div id="disableFeedbackLin$post_ID" style="display:none;">'' cannot be parsed correct.
+HTML code '$'<a href="edit.php?post_type=peer_projects&myAction=disableFeedback&projectID$post_ID" class="button-primary"> Yes make feedback unavailable</a>'' cannot be parsed correct.
+HTML code '$'<a href="#TB_inline?width=200&height=150&inlineId=enableFeedbackLin$post_ID" class="thickbox button-primary">Enable Feedback</a>'' cannot be parsed correct.
+HTML code '$'<div id="enableFeedbackLin$post_ID" style="display:none;">'' cannot be parsed correct.
+HTML code '$'<a href="edit.php?post_type=peer_projects&myAction=enableFeedback&projectID$post_ID" class="button-primary"> Yes enable feedback for this project</a>'' cannot be parsed correct.
+HTML code '$'
+		jQuery(document).ready(
+			function(){
+				/*
+				jQuery( "#submitButtonpFeedback_$userID" ).click(function() {
+				  jQuery( "#submitButtonDiv_pFeedback_$userID" ).hide( "fast", function() {
+					// Animation complete.
+				  });
+				});
+				*/
+				
+				
+				jQuery( "#submitButton_pFeedback_$userID" ).click(function() {
+				  jQuery( "#feedbackResponse_pFeedback_$userID" ).show( "fast", function() {
+					// Animation complete.
+				  });
+				});											
+		
+		
+			});	
+		'' cannot be parsed correct.
+HTML code '$'{"chartType": "bar", "data": "$chartData", "keyName": "Criteria", "valName": "Number of Votes", "title": "Peer Feedback", "elementID": "crtieriaChart", "width": "80%", "height": "200px", "maxValue": "0"}_chartType'' cannot be parsed correct.
+HTML code '$'[ \'{"chartType": "bar", "data": "$chartData", "keyName": "Criteria", "valName": "Number of Votes", "title": "Peer Feedback", "elementID": "crtieriaChart", "width": "80%", "height": "200px", "maxValue": "0"}_keyName\', \'{"chartType": "bar", "data": "$chartData", "keyName": "Criteria", "valName": "Number of Votes", "title": "Peer Feedback", "elementID": "crtieriaChart", "width": "80%", "height": "200px", "maxValue": "0"}_valName\' ],'' cannot be parsed correct.
+HTML code '$'{"chartType": "bar", "data": "$chartData", "keyName": "Criteria", "valName": "Number of Votes", "title": "Peer Feedback", "elementID": "crtieriaChart", "width": "80%", "height": "200px", "maxValue": "0"}_elementID'' cannot be parsed correct.
+HTML code '$'{"chartType": "bar", "data": "$chartData", "keyName": "Criteria", "valName": "Number of Votes", "title": "Peer Feedback", "elementID": "crtieriaChart", "width": "80%", "height": "200px", "maxValue": "0"}_title'' cannot be parsed correct.
+HTML code '$'{"chartType": "bar", "data": "$chartData", "keyName": "Criteria", "valName": "Number of Votes", "title": "Peer Feedback", "elementID": "crtieriaChart", "width": "80%", "height": "200px", "maxValue": "0"}_maxValue'' cannot be parsed correct.
+HTML code '$'<a href="edit.php?post_type=peer_projects">Back to Projects</a><hr/>'' cannot be parsed correct.
+HTML code '$'<div class="update-nag notice"><p>This feedback project is current live and so you cannot edit the criteria</p></div>'' cannot be parsed correct.
+HTML code '$'<div class="updated notice"><p>Criteria Uploaded</p></div>'' cannot be parsed correct.
+HTML code '$'<h1>Current Criteria</h1>'' cannot be parsed correct.
+HTML code '$'<div class="error  notice"><p>'' cannot be parsed correct.
+HTML code '$'<h3>The following people had an invalid email or no email address</h3>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<h3>The following people had no group assigned</h3>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<h3>The following people had no name</h3>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<h2>Current Groups</h2>'' cannot be parsed correct.
+HTML code '$'No groups found'' cannot be parsed correct.
+HTML code '$'No students found'' cannot be parsed correct.
+HTML code '$'<table class="peerFeedbackAdminTable">'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<td width="50">'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'<td width="200px">'' cannot be parsed correct.
+HTML code '$'<span class='' cannot be parsed correct.
+HTML code '$'successText'' cannot be parsed correct.
+HTML code '$'failText'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$' feedback given</span>'' cannot be parsed correct.
+HTML code '$'</td>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<a href="edit.php?post_type=peer_projects" class="backLink">Back to Projects</a><hr/>'' cannot be parsed correct.
+HTML code '$'<div class="update-nag  notice"><p>This feedback project is current live and so groups cannot be modified or deleted</p></div>'' cannot be parsed correct.
+HTML code '$'<h1>Instructions</h1>'' cannot be parsed correct.
+HTML code '$'test'' cannot be parsed correct.
+HTML code '$'No'' cannot be parsed correct.
+HTML code '$' groups found<hr/>'' cannot be parsed correct.
+HTML code '$'No'' cannot be parsed correct.
+HTML code '$' students found'' cannot be parsed correct.
+HTML code '$'<div class="updated notice"><p>Project Launched</p></div>'' cannot be parsed correct.
+HTML code '$'<div class="updated notice"><p>Feedback Enabled</p></div>'' cannot be parsed correct.
+HTML code '$'<h3>Anonymity</h3>'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" id="anon_feedback" name="anon_feedback" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$'<label for="anon_feedback">Feedback is anonymous</label>'' cannot be parsed correct.
+HTML code '$'<h3>Self Review</h3>'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" id="allow_self_review" name="allow_self_review" '' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$'<label for="allow_self_review">Allow students to rate themselves</label>'' cannot be parsed correct.
+HTML code '$'<h3>Feedback Type</h3>'' cannot be parsed correct.
+HTML code '$'<select name="feedbackType" id="feedbackType">'' cannot be parsed correct.
+HTML code '$'<option value="">Please Select</option>'' cannot be parsed correct.
+HTML code '$'<option value="textOnly"'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'>Written feedback only</option>'' cannot be parsed correct.
+HTML code '$'<option value="rubric"'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'>Criteria Grid (Rubric)</option>'' cannot be parsed correct.
+HTML code '$'<option value="distribution"'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'>Distribute X points</option>'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'<div id="distributionPointsInputDiv"'' cannot be parsed correct.
+HTML code '$'style="display:none;"'' cannot be parsed correct.
+HTML code '$'<label for="endDate">Closing Date</label><br/>'' cannot be parsed correct.
+HTML code '$'<hr/>'' cannot be parsed correct.
+HTML code '$'<script>'' cannot be parsed correct.
+HTML code '$'
+							jQuery(document).ready(
+							
+								function(){
+									jQuery( "#submitButtonDistribution" ).click(function() {
+									  jQuery( "#distributeSubmitButtonDiv" ).hide( "fast", function() {
+										// Animation complete.
+									  });
+									});
+									
+									jQuery( "#submitButtonDistribution" ).click(function() {
+											  jQuery( "#distributeSubmitFeedbackDiv" ).show( "fast", function() {
+												// Animation complete.
+											  });
+											});								
+								});	
+							'' cannot be parsed correct.
+HTML code '$'</script>'' cannot be parsed correct.
+HTML code '$'Point Distribution'' cannot be parsed correct.
+HTML code '$'Criteria Grid (Rubric)<br/>'' cannot be parsed correct.
+HTML code '$'Written Feedback'' cannot be parsed correct.
+HTML code '$'-'' cannot be parsed correct.
+HTML code '$'No groups found<br/>'' cannot be parsed correct.
+HTML code '$'Status : <span class="successText">Live</span><br/>'' cannot be parsed correct.
+HTML code '$'<div style="text-align:center;">'' cannot be parsed correct.
+HTML code '$'<h2>Are you sure you want to disable this project?</h2>'' cannot be parsed correct.
+HTML code '$'This will immediately prevent students from giving feedback<br/><br/>'' cannot be parsed correct.
+HTML code '$'<a href="" onclick="self.parent.tb_remove();return false" class="button-secondary">Cancel</a>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'Status : <span class="alertText">Awaiting Launch</span><br/>'' cannot be parsed correct.
+HTML code '$'<div style="text-align:center;">'' cannot be parsed correct.
+HTML code '$'<h2>Are you sure you want to launch this project?</h2>'' cannot be parsed correct.
+HTML code '$'This will send an email to each student in each group and allow them to start the feedback process<br/><br/>'' cannot be parsed correct.
+HTML code '$'<a href="" onclick="self.parent.tb_remove();return false" class="button-secondary">Cancel</a>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'Status : <span class="successText">Enabled</span><br/>'' cannot be parsed correct.
+HTML code '$'<div style="text-align:center;">'' cannot be parsed correct.
+HTML code '$'<h2>Are you sure you want to make feedback unavailable?</h2>'' cannot be parsed correct.
+HTML code '$'<a href="" onclick="self.parent.tb_remove();return false" class="button-secondary">Cancel</a>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'Status : <span class="alertText">Not yet enabled</span><br/>'' cannot be parsed correct.
+HTML code '$'<div style="text-align:center;">'' cannot be parsed correct.
+HTML code '$'<h2>Are you sure you want to enable feedback results for this project?</h2>'' cannot be parsed correct.
+HTML code '$'This will send an email to each student in each group alerting them they can view their feedback<br/><br/>'' cannot be parsed correct.
+HTML code '$'<a href="" onclick="self.parent.tb_remove();return false" class="button-secondary">Cancel</a>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<script>'' cannot be parsed correct.
+HTML code '$'		
+						jQuery( document ).ready( function () {
+							jQuery(\'.td-toggle\').on( \'click\', function ( e ) {
+								
+								jQuery( this ).find(\'input:radio\').prop(\'checked\', true); // Allow the whole TD to be clicked	
+								
+								var parent_tr	= jQuery( this ).parent();
+								var tds 		= jQuery( parent_tr ).children();
+								
+								jQuery( tds ).removeClass( \'td-highlight\' ); // Remove ALL highlights from tds in this row
+								jQuery( tds ).removeClass( \'td-green-highlight\' ); // Remove ALL green highlights from tds in this row
+								jQuery( this ).addClass( \'td-highlight\' ); // Add the highglight just to this cell
+
+								// HIDE the \'feedback saved\' message if they select something else after saving
+								var thisElementID = jQuery( this ).find(\'input:radio\').attr(\'id\');
+								// Get the targetUserID
+								var tempArray = thisElementID.split(\'_\');
+								// The target User ID is the first element of the temp array
+								var targetUserID = tempArray[1];
+								
+
+								
+								jQuery( \'#feedbackResponse_\'+targetUserID ).hide( \'fast\');		
+								
+								
+								
+							});
+						});
+						
+						'' cannot be parsed correct.
+HTML code '$'</script>'' cannot be parsed correct.
+HTML code '$'<!-- POPUP FOOTER -->'' cannot be parsed correct.
+HTML code '$'<div class="updated notice"><p>Project Disabled</p></div>'' cannot be parsed correct.
+HTML code '$'<div class="updated notice"><p>Feedback Disabled</p></div>'' cannot be parsed correct.
+HTML code '$'<script>'' cannot be parsed correct.
+HTML code '$'</script>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:12.941808.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046700.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 15 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.695119.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running IngresDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PHPRetrievalDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running maxdbDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+admin/criteria.php:116
+  - RETRIEVAL call to fgetcsv($handle, 1000, ",").
+  - Data types: file
+admin/groups.php:176
+  - RETRIEVAL call to fgetcsv($handle, 1000, ",").
+  - Data types: file 
+
+classes/class-queries.php:65
+  - object property '$userInfo->email' of personal types {'email'} is found.
+  - Data types: email 
+
+admin/groups.php:97
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+admin/groups.php:99
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+admin/groups.php:339
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+admin/groups.php:353
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+admin/groups.php:431
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+admin/groups.php:443
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+admin/groups.php:447
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+admin/groups.php:447
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+classes/class-draw.php:147
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+classes/class-queries.php:65
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+classes/class-queries.php:74
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+classes/class-queries.php:123
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+classes/class-queries.php:181
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+admin/criteria.php:9
+  - RETRIEVAL call to get_post_meta($projectID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin/groups.php:10
+  - RETRIEVAL call to get_post_meta($projectID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin/groups.php:11
+  - RETRIEVAL call to get_post_meta($projectID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin/groups.php:12
+  - RETRIEVAL call to get_post_meta($projectID, "allow_self_review", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin/groups.php:90
+  - RETRIEVAL call to get_users() alters data types {'user', 'user_meta'}. Returns (array).
+  - Data types: user, user_meta
+classes/class-cpt-admin-setup.php:258
+  - RETRIEVAL call to get_post_meta($post->ID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:366
+  - RETRIEVAL call to get_post_meta($post->ID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:367
+  - RETRIEVAL call to get_post_meta($post->ID, "anon_feedback", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:368
+  - RETRIEVAL call to get_post_meta($post->ID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:369
+  - RETRIEVAL call to get_post_meta($post->ID, "allow_self_review", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:370
+  - RETRIEVAL call to get_post_meta($post->ID, "distributionPoints", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:468
+  - RETRIEVAL call to get_post_meta($post->ID, "endDate", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:553
+  - RETRIEVAL call to get_post_meta($post_ID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:603
+  - RETRIEVAL call to get_post_meta($post_ID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:652
+  - RETRIEVAL call to get_post_meta($post_ID, "feedback_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:54
+  - RETRIEVAL call to get_post_meta($projectID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:55
+  - RETRIEVAL call to get_post_meta($projectID, "feedback_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:56
+  - RETRIEVAL call to get_post_meta($projectID, "allow_self_review", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:57
+  - RETRIEVAL call to get_post_meta($projectID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:58
+  - RETRIEVAL call to get_post_meta($projectID, "distributionPoints", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:59
+  - RETRIEVAL call to get_post_meta($projectID, "endDate", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:60
+  - RETRIEVAL call to get_post_meta($projectID, "anon_feedback", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:478
+  - RETRIEVAL call to get_post_meta($projectID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:480
+  - RETRIEVAL call to get_post_meta($projectID, "anon_feedback", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-draw.php:503
+  - RETRIEVAL call to get_post_meta($projectID, "distributionPoints", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+classes/class-peer-feedback.php:183
+  - RETRIEVAL call to get_option($this->opName) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+classes/class-peer-feedback.php:242
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+classes/class-peer-feedback.php:254
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+classes/class-peer-feedback.php:270
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+classes/class-peer-feedback.php:289
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+classes/class-peer-feedback.php:305
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+classes/class-peer-feedback.php:317
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+classes/class-actions.php:14
+  - STORAGE call to update_post_meta($projectID, "project_status", 1) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+classes/class-actions.php:60
+  - STORAGE call to update_post_meta($projectID, "feedback_status", 1) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:453
+  - STORAGE call to update_post_meta($postID, "allow_self_review", $allow_self_review) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:454
+  - STORAGE call to update_post_meta($postID, "anon_feedback", $anon_feedback) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:455
+  - STORAGE call to update_post_meta($postID, "feedbackType", $feedbackType) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:456
+  - STORAGE call to update_post_meta($postID, "distributionPoints", $distributionPoints) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+classes/class-cpt-admin-setup.php:457
+  - STORAGE call to update_post_meta($postID, "endDate", $endDate) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+classes/class-peer-feedback.php:188
+  - STORAGE call to update_option($this->opName, $ops) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+classes/class-peer-feedback.php:213
+  - STORAGE call to update_option($this->opName, $ops) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+classes/class-peer-feedback.php:357
+  - STORAGE call to update_post_meta($projectID, "project_status", 0) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+classes/class-peer-feedback.php:358
+  - STORAGE call to update_post_meta($projectID, "feedback_status", 0) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+classes/class-peer-feedback.php:373
+  - STORAGE call to update_post_meta($projectID, "feedback_status", 0) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+file
+	PHPRetrievalDetector.fgetcsv($handle, 1000, ",") - {'file'}
+	PHPRetrievalDetector.fgetcsv($handle, 1000, ",") - {'file'}
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressStorageDetector.update_option($this->opName, $ops) - {'option'}
+	WordPressStorageDetector.update_option($this->opName, $ops) - {'option'}
+	WordPressRetrievalDetector.get_option($this->opName) - {'option'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post->ID, "feedbackType", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "anon_feedback", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($postID, "anon_feedback", $anon_feedback) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "project_status", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($projectID, "project_status", 0) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "feedbackType", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($postID, "distributionPoints", $distributionPoints) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "allow_self_review", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "project_status", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($projectID, "feedback_status", 0) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($projectID, "project_status", 1) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "endDate", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "distributionPoints", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "allow_self_review", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "feedbackType", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "anon_feedback", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "project_status", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "endDate", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "project_status", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "project_status", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "distributionPoints", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($postID, "endDate", $endDate) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "feedback_status", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "feedbackType", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "feedback_status", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($projectID, "feedback_status", 1) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($projectID, "feedback_status", 0) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "feedbackType", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($postID, "allow_self_review", $allow_self_review) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "feedbackType", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "anon_feedback", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($postID, "feedbackType", $feedbackType) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "distributionPoints", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($projectID, "allow_self_review", true) - {'post_meta'}
+user
+	WordPressRetrievalDetector.get_users() - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.get_users() - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:12.148165.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 242 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.344555.
+
+242 STORE_REACHES edges created
+242 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 34 nodes as PERSONAL
+In total, tainted 34 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.169181.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:20.030089!
+RETRIEVAL call to fgetcsv($handle, 1000, ",").,None,None
+RETRIEVAL call to fgetcsv($handle, 1000, ",").,None,None
+object property '$userInfo->email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_post_meta($projectID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "allow_self_review", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_users() alters data types {'user', 'user_meta'}. Returns (array).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "anon_feedback", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "allow_self_review", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "distributionPoints", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "endDate", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "feedback_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "anon_feedback", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "distributionPoints", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "project_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "feedback_status", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "allow_self_review", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "feedbackType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "distributionPoints", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "endDate", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($projectID, "anon_feedback", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->opName) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to update_post_meta($projectID, "project_status", 1) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($projectID, "feedback_status", 1) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($postID, "allow_self_review", $allow_self_review) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($postID, "anon_feedback", $anon_feedback) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($postID, "feedbackType", $feedbackType) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($postID, "distributionPoints", $distributionPoints) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($postID, "endDate", $endDate) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_option($this->opName, $ops) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->opName, $ops) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_post_meta($projectID, "project_status", 0) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($projectID, "feedback_status", 0) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($projectID, "feedback_status", 0) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

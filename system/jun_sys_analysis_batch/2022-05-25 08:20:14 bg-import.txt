@@ -1,0 +1,535 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on bg-import
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.346272.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.120859.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 1 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.284373.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.649926.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1370 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.310491.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 38 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.050380.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.111234.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 284 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.919990.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 5968
+Added 4274 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 5968
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.571239.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bg-import/plugin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bg-import/import/blog_bg.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bg-import/import/log_bg.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bg-import/lib/cyr-cho/class.cyr-cho.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bg-import/lib/utf8-bg/utf8.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bg-import/lib/wp-admin-page/class.wp-admin-page.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.745155.
+
+1 PHP_REACHES edges created
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1370 PHP_REACHES edges created
+38 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4558 PHP_REACHES edges created
+5968 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1925 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.230904.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:04.094074.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 7295
+Added 76 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.497405.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 118 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.176754.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.461781.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 7295
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.801838.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.014293.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.044849.
+
+194 PHP_REACHES edges created
+194 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 113 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.124442.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+10 SQL operations to process.
+
+			SELECT `post_id`, `meta_value` AS `url`, `post_title`
+			FROM $wpdb
+			INNER JOIN $wpdb
+				ON $wpdb.id = $wpdb.post_id
+			WHERE meta_key = 'blog_bg_original_url' 
+SQL command ( SELECT `post_id`, `meta_value` AS `url`, `post_title` FROM $wpdb INNER JOIN $wpdb ON $wpdb.id = $wpdb.post_id WHERE meta_key = 'blog_bg_original_url' ) cannot be parsed correct.
+
+			SELECT `id`, `post_title`, `post_content`
+			FROM `$wpdb`
+			WHERE `post_content` Like '%/photos/%'
+				 -- AND `post_type` != 'attachment' 
+			ORDER BY `ID` 
+SQL command ( SELECT `id`, `post_title`, `post_content` FROM `$wpdb` WHERE `post_content` Like '%/photos/%' -- AND `post_type` != 'attachment' ORDER BY `ID` ) cannot be parsed correct.
+
+			SELECT `post_id`, `meta_value` AS `url`, `post_title`
+			FROM $wpdb
+			INNER JOIN $wpdb
+				ON $wpdb.id = $wpdb.post_id
+			WHERE meta_key = 'log_bg_original_url' 
+SQL command ( SELECT `post_id`, `meta_value` AS `url`, `post_title` FROM $wpdb INNER JOIN $wpdb ON $wpdb.id = $wpdb.post_id WHERE meta_key = 'log_bg_original_url' ) cannot be parsed correct.
+
+			SELECT Distinct `comment_author_url`, `comment_author`
+			FROM `$wpdb`
+			WHERE `comment_author_url` LIKE '%log.bg/%'
+				AND `comment_author_email` = ''
+			
+SQL command ( SELECT Distinct `comment_author_url`, `comment_author` FROM `$wpdb` WHERE `comment_author_url` LIKE '%log.bg/%' AND `comment_author_email` = '' ) cannot be parsed correct.
+
+			SELECT `id`, `post_title`, `post_content`
+			FROM `$wpdb`
+			WHERE `post_content` Like '%http://log.bg/users_images%'
+				 -- AND `post_type` != 'attachment' 
+			ORDER BY `ID` 
+SQL command ( SELECT `id`, `post_title`, `post_content` FROM `$wpdb` WHERE `post_content` Like '%http://log.bg/users_images%' -- AND `post_type` != 'attachment' ORDER BY `ID` ) cannot be parsed correct.
+UPDATE $wpdb
+				SET `post_content` = REPLACE(`post_content`, '', '')
+				WHERE `post_type` = 'post' 
+SQL command (UPDATE $wpdb SET `post_content` = REPLACE(`post_content`, '', '') WHERE `post_type` = 'post' ) cannot be parsed correct.
+UPDATE `$wpdb`
+						SET `post_content` = Replace(`post_content`,
+							'$wpdb->escape($url)',
+							'$wpdb->escape($exists$exists$upload["url"])')
+						WHERE `post_content` Like '%$url%'
+							AND `post_type` != 'attachment' 
+SQL command (UPDATE `$wpdb` SET `post_content` = Replace(`post_content`, '$wpdb->escape($url)', '$wpdb->escape($exists$exists$upload["url"])') WHERE `post_content` Like '%$url%' AND `post_type` != 'attachment' ) cannot be parsed correct.
+UPDATE $wpdb
+				SET `post_content` = REPLACE(`post_content`, '', '')
+				WHERE `post_type` = 'post' 
+SQL command (UPDATE $wpdb SET `post_content` = REPLACE(`post_content`, '', '') WHERE `post_type` = 'post' ) cannot be parsed correct.
+UPDATE `$wpdb`
+					SET `comment_author_email` = '$wpdb->escape($R[1])'
+					WHERE `comment_author` = '$wpdb->escape($_author->comment_author)'
+						AND `comment_author_url` = '$wpdb->escape($_author->comment_author_url)'
+					
+SQL command (UPDATE `$wpdb` SET `comment_author_email` = '$wpdb->escape($R[1])' WHERE `comment_author` = '$wpdb->escape($_author->comment_author)' AND `comment_author_url` = '$wpdb->escape($_author->comment_author_url)' ) cannot be parsed correct.
+UPDATE `$wpdb`
+						SET `post_content` = Replace(`post_content`,
+							'$wpdb->escape($url)',
+							'$wpdb->escape($exists$exists$upload["url"])')
+						WHERE `post_content` Like '%$url%'
+							AND `post_type` != 'attachment' 
+SQL command (UPDATE `$wpdb` SET `post_content` = Replace(`post_content`, '$wpdb->escape($url)', '$wpdb->escape($exists$exists$upload["url"])') WHERE `post_content` Like '%$url%' AND `post_type` != 'attachment' ) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1601, 2181, 4692, 5164, 5515, 1322, 2627, 4443, 5285, 5918]
+Added 0 SQL nodes. 0 out of 10 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:04.447870.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'$wpdb'' cannot be parsed correct.
+HTML code '$'$original'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$' class="alternate"'' cannot be parsed correct.
+HTML code '$'$record_url'' cannot be parsed correct.
+HTML code '$'$record_title'' cannot be parsed correct.
+HTML code '$'$record_date'' cannot be parsed correct.
+HTML code '$'join($record["categories"], "</b>, <b>")'' cannot be parsed correct.
+HTML code '$'join($record["tags"], "</b>, <b>")'' cannot be parsed correct.
+HTML code '$'<span style="color:gray">Ð¡ÑÐ°ÑÐ¸ÑÑÐ° ÑÑÑÐµÑÑÐ²ÑÐ²Ð° (Ð²ÐµÑÐµ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½Ð°).</span><b>Ð¡ÑÐ°ÑÐ¸ÑÑÐ° Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½Ð° ÑÑÐ¿ÐµÑÐ½Ð¾.</b>'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'$result_url'' cannot be parsed correct.
+HTML code '$'$result_post_title'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'$L_2_$i'' cannot be parsed correct.
+HTML code '$'$L_1_$i'' cannot be parsed correct.
+HTML code '$'$L_1_$i'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'{"current": "1", "total": "1"}_current'' cannot be parsed correct.
+HTML code '$'$this->_form()_url?page={"current": "1", "total": "1"}_current'' cannot be parsed correct.
+HTML code '$'$this->_form()_url?page={"current": "1", "total": "1"}_current'' cannot be parsed correct.
+HTML code '$' class="alternate"'' cannot be parsed correct.
+HTML code '$'{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "blog.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Blog.bg Blog Importer", "comment_content": ""}_comment_content'' cannot be parsed correct.
+HTML code '$'<a target=\'_blank\' href=\'{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "blog.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Blog.bg Blog Importer", "comment_content": ""}_comment_author_url\'>{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "blog.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Blog.bg Blog Importer", "comment_content": ""}_comment_author</a>{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "blog.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Blog.bg Blog Importer", "comment_content": ""}_comment_author'' cannot be parsed correct.
+HTML code '$'{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "blog.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Blog.bg Blog Importer", "comment_content": ""}_comment_date'' cannot be parsed correct.
+HTML code '$'<span style="color:gray">ÐÐ¾Ð¼ÐµÐ½ÑÐ°ÑÑÑ ÑÑÑÐµÑÑÐ²ÑÐ²Ð° (Ð²ÐµÑÐµ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½).</span><b>ÐÐ¾Ð¼ÐµÐ½ÑÐ°ÑÑÑ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½ ÑÑÐ¿ÐµÑÐ½Ð¾.</b>'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'$result_id'' cannot be parsed correct.
+HTML code '$'$result_post_title'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$' class="alternate" '' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_title'' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_original'' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_original'' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_local'' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_local'' cannot be parsed correct.
+HTML code '$'<span style="color:gray">Ð¤Ð°Ð¹Ð»ÑÑ ÑÑÑÐµÑÑÐ²ÑÐ²Ð° (Ð²ÐµÑÐµ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½).</span><b>Ð¤Ð°Ð¹Ð»ÑÑ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½ ÑÑÐ¿ÐµÑÐ½Ð¾.</b>'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'{"0": ": \u00d0\u0090\u00d0\u00b4\u00d1\u0080\u00d0\u00b5\u00d1\u0081 \u00d0\u00bd\u00d0\u00b0 \u00d0\u00b1\u00d0\u00bb\u00d0\u00be\u00d0\u00b3\u00d0\u00b0", "1": ": \u00d0\u009f\u00d1\u0080\u00d0\u00b5\u00d1\u0085\u00d0\u00b2\u00d1\u008a\u00d1\u0080\u00d0\u00bb\u00d1\u008f\u00d0\u00bd\u00d0\u00b5 \u00d0\u00bd\u00d0\u00b0 \u00d0\u00bf\u00d0\u00be\u00d1\u0081\u00d1\u0082\u00d0\u00be\u00d0\u00b2\u00d0\u00b5", "2": ": \u00d0\u009f\u00d1\u0080\u00d0\u00b5\u00d1\u0085\u00d0\u00b2\u00d1\u008a\u00d1\u0080\u00d0\u00bb\u00d1\u008f\u00d0\u00bd\u00d0\u00b5 \u00d0\u00bd\u00d0\u00b0 \u00d0\u00ba\u00d0\u00be\u00d0\u00bc\u00d0\u00b5\u00d0\u00bd\u00d1\u0082\u00d0\u00b0\u00d1\u0080\u00d0\u00b8", "3": ": \u00d0\u009f\u00d1\u0080\u00d0\u00b5\u00d1\u0085\u00d0\u00b2\u00d1\u008a\u00d1\u0080\u00d0\u00bb\u00d1\u008f\u00d0\u00bd\u00d0\u00b5 \u00d0\u00bd\u00d0\u00b0 \u00d1\u0084\u00d0\u00b0\u00d0\u00b9\u00d0\u00bb\u00d0\u00be\u00d0\u00b2\u00d0\u00b5", "4": ": \u00d0\u009f\u00d1\u0080\u00d0\u00b5\u00d1\u0085\u00d0\u00b2\u00d1\u008a\u00d1\u0080\u00d0\u00bb\u00d1\u008f\u00d0\u00bd\u00d0\u00b5 \u00d0\u00bd\u00d0\u00b0 \u00d0\u00bb\u00d0\u00b8\u00d0\u00bd\u00d0\u00ba\u00d0\u00be\u00d0\u00b2\u00d0\u00b5 \u00d0\u00be\u00d1\u0082 \u00d0\u00b1\u00d0\u00bb\u00d0\u00be\u00d0\u00b3\u00d1\u0080\u00d0\u00be\u00d0\u00bb\u00d0\u00b0", "5": ": \u00d0\u0093\u00d0\u00be\u00d1\u0082\u00d0\u00be\u00d0\u00b2\u00d0\u00be"}_'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'$wpdb'' cannot be parsed correct.
+HTML code '$'$original'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$' class="alternate"'' cannot be parsed correct.
+HTML code '$'$record_url'' cannot be parsed correct.
+HTML code '$'$record_title'' cannot be parsed correct.
+HTML code '$'$record_date'' cannot be parsed correct.
+HTML code '$'join($record["categories"], "</b>, <b>")'' cannot be parsed correct.
+HTML code '$'<span style="color:gray">Ð¡ÑÐ°ÑÐ¸ÑÑÐ° ÑÑÑÐµÑÑÐ²ÑÐ²Ð° (Ð²ÐµÑÐµ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½Ð°).</span><b>Ð¡ÑÐ°ÑÐ¸ÑÑÐ° Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½Ð° ÑÑÐ¿ÐµÑÐ½Ð¾.</b>'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'{"current": "1", "total": "1"}_current'' cannot be parsed correct.
+HTML code '$'$this->_form()_url?page={"current": "1", "total": "1"}_current'' cannot be parsed correct.
+HTML code '$'$this->_form()_url?page={"current": "1", "total": "1"}_current'' cannot be parsed correct.
+HTML code '$' class="alternate" '' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_title'' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_original'' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_original'' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_local'' cannot be parsed correct.
+HTML code '$'{"original": "$url", "local": "$wpdb->get_var(\"\r\n\t\t\t\t\t\tSELECT `guid`\r\n\t\t\t\t\t\tFROM `\"$wpdb->posts\"`\r\n\t\t\t\t\t\tWHERE `post_type` = \\\'attachment\\\'\r\n\t\t\t\t\t\t\tAND `post_name` =\\\'\" . $wpdb->escape(sanitize_title($filename)) . \"\\\'\r\n\t\t\t\t\t\t\")"}_local'' cannot be parsed correct.
+HTML code '$'<span style="color:gray">Ð¤Ð°Ð¹Ð»ÑÑ ÑÑÑÐµÑÑÐ²ÑÐ²Ð° (Ð²ÐµÑÐµ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½).</span><b>Ð¤Ð°Ð¹Ð»ÑÑ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½ ÑÑÐ¿ÐµÑÐ½Ð¾.</b>'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'$result_url'' cannot be parsed correct.
+HTML code '$'$result_post_title'' cannot be parsed correct.
+HTML code '$'{"current": "1", "total": "1"}_current'' cannot be parsed correct.
+HTML code '$'$result_url&page={"current": "1", "total": "1"}_current'' cannot be parsed correct.
+HTML code '$'$result_url&page={"current": "1", "total": "1"}_current'' cannot be parsed correct.
+HTML code '$'wp_insert_term($title, "link_category", ["slug" => cyr_cho->convert($title)])_name<i>Ð½ÑÐ¼Ð° Ð¸Ð¼Ðµ</i>'' cannot be parsed correct.
+HTML code '$'$L_2_$i'' cannot be parsed correct.
+HTML code '$'$L_1_$i'' cannot be parsed correct.
+HTML code '$'$L_1_$i'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'{"0": ": \u00d0\u0090\u00d0\u00b4\u00d1\u0080\u00d0\u00b5\u00d1\u0081 \u00d0\u00bd\u00d0\u00b0 \u00d0\u00b1\u00d0\u00bb\u00d0\u00be\u00d0\u00b3\u00d0\u00b0", "1": ": \u00d0\u009f\u00d1\u0080\u00d0\u00b5\u00d1\u0085\u00d0\u00b2\u00d1\u008a\u00d1\u0080\u00d0\u00bb\u00d1\u008f\u00d0\u00bd\u00d0\u00b5 \u00d0\u00bd\u00d0\u00b0 \u00d0\u00bf\u00d0\u00be\u00d1\u0081\u00d1\u0082\u00d0\u00be\u00d0\u00b2\u00d0\u00b5", "2": ": \u00d0\u009f\u00d1\u0080\u00d0\u00b5\u00d1\u0085\u00d0\u00b2\u00d1\u008a\u00d1\u0080\u00d0\u00bb\u00d1\u008f\u00d0\u00bd\u00d0\u00b5 \u00d0\u00bd\u00d0\u00b0 \u00d0\u00ba\u00d0\u00be\u00d0\u00bc\u00d0\u00b5\u00d0\u00bd\u00d1\u0082\u00d0\u00b0\u00d1\u0080\u00d0\u00b8", "3": ": \u00d0\u009f\u00d1\u0080\u00d0\u00b5\u00d1\u0085\u00d0\u00b2\u00d1\u008a\u00d1\u0080\u00d0\u00bb\u00d1\u008f\u00d0\u00bd\u00d0\u00b5 \u00d0\u00bd\u00d0\u00b0 \u00d1\u0084\u00d0\u00b0\u00d0\u00b9\u00d0\u00bb\u00d0\u00be\u00d0\u00b2\u00d0\u00b5", "4": ": \u00d0\u009f\u00d1\u0080\u00d0\u00b5\u00d1\u0085\u00d0\u00b2\u00d1\u008a\u00d1\u0080\u00d0\u00bb\u00d1\u008f\u00d0\u00bd\u00d0\u00b5 \u00d0\u00bd\u00d0\u00b0 \u00d0\u00bb\u00d0\u00b8\u00d0\u00bd\u00d0\u00ba\u00d0\u00be\u00d0\u00b2\u00d0\u00b5 \u00d0\u00be\u00d1\u0082 \u00d0\u00b1\u00d0\u00bb\u00d0\u00be\u00d0\u00b3\u00d1\u0080\u00d0\u00be\u00d0\u00bb\u00d0\u00b0", "5": ": \u00d0\u0093\u00d0\u00be\u00d1\u0082\u00d0\u00be\u00d0\u00b2\u00d0\u00be"}_'' cannot be parsed correct.
+HTML code '$'$_author'' cannot be parsed correct.
+HTML code '$'$_author'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$' class="alternate"'' cannot be parsed correct.
+HTML code '$'{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "log.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Log.bg Blog Importer", "comment_content": "x"}_comment_content'' cannot be parsed correct.
+HTML code '$'<a target=\'_blank\' href=\'{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "log.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Log.bg Blog Importer", "comment_content": "x"}_comment_author_url\'>{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "log.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Log.bg Blog Importer", "comment_content": "x"}_comment_author</a>{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "log.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Log.bg Blog Importer", "comment_content": "x"}_comment_author'' cannot be parsed correct.
+HTML code '$'{"comment_post_ID": "$result_post_id", "comment_approved": "1", "comment_author_IP": "", "user_id": "0", "comment_author_email": "log.bg.import@kaloyan.info", "comment_author_url": "", "comment_author": "", "comment_agent": "Log.bg Blog Importer", "comment_content": "x"}_comment_date'' cannot be parsed correct.
+HTML code '$'<span style="color:gray">ÐÐ¾Ð¼ÐµÐ½ÑÐ°ÑÑÑ ÑÑÑÐµÑÑÐ²ÑÐ²Ð° (Ð²ÐµÑÐµ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½).</span><b>ÐÐ¾Ð¼ÐµÐ½ÑÐ°ÑÑÑ Ðµ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½ ÑÑÐ¿ÐµÑÐ½Ð¾.</b>'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'$result_id'' cannot be parsed correct.
+HTML code '$'$result_post_title'' cannot be parsed correct.
+HTML code '$'htmlSpecialChars($data["url"])'' cannot be parsed correct.
+HTML code '$'$k'' cannot be parsed correct.
+HTML code '$'" selected="selected"> &rarr; "'' cannot be parsed correct.
+HTML code '$'$v'' cannot be parsed correct.
+HTML code '$'hr_md5($k . $v)'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$' checked="checked" '' cannot be parsed correct.
+HTML code '$'array_keys($options)'' cannot be parsed correct.
+HTML code '$'hr_md5($k . $v)'' cannot be parsed correct.
+HTML code '$'<em>$v</em>$v'' cannot be parsed correct.
+HTML code '$'$url'' cannot be parsed correct.
+HTML code '$'$url'' cannot be parsed correct.
+HTML code '$'$additional'' cannot be parsed correct.
+HTML code '$'$additional'' cannot be parsed correct.
+HTML code '$'join("</p></li>
+		<li><p>", $_errors)'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="$k" value="$v" />'' cannot be parsed correct.
+HTML code '$'wp_specialchars($search_query)'' cannot be parsed correct.
+HTML code '$'</table></li>'' cannot be parsed correct.
+HTML code '$'<li>ÐÑÐ¾Ð¼ÐµÐ½ÑÐ½Ðµ Ð½Ð° Ð²ÑÑÐ·ÐºÐ¸ÑÐµ ÐºÑÐ¼ ÑÑÐ°ÑÐ¸ÑÐµ ÑÑÐ°ÑÐ¸Ð¸ÑÐ¸ Ð² Ð¿ÑÑÑÐ½Ð¾ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½Ð¾ÑÐ¾ ÑÑÐ´ÑÑÐ¶Ð°Ð½Ð¸Ðµ.
+			<blockquote style="list-style: square inside;">'' cannot be parsed correct.
+HTML code '$'<li>ÐÑÐ¾Ð¼ÐµÐ½ÐµÐ½Ð¸ ÑÐ° '' cannot be parsed correct.
+HTML code '$' ÑÑÐ°ÑÐ¸Ð¸, ÑÑÐ´ÑÑÐ¶Ð°ÑÐ¸ '' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'<tr '' cannot be parsed correct.
+HTML code '$'>
+<td><a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"><big'' cannot be parsed correct.
+HTML code '$'</big></a><br/><small>ÐÐ°ÑÐ°: <b>'' cannot be parsed correct.
+HTML code '$'</b> | ÐÐ°ÑÐµÐ³Ð¾ÑÐ¸Ñ: <b>'' cannot be parsed correct.
+HTML code '$'</b> | Ð¢Ð°Ð³Ð¾Ð²Ðµ: <b>'' cannot be parsed correct.
+HTML code '$'</b></small></td>
+<td style="width:25%;">'' cannot be parsed correct.
+HTML code '$'</td>
+		</tr>'' cannot be parsed correct.
+HTML code '$'<li>ÐÐ¾Ð¼ÐµÐ½ÑÐ°ÑÐ¸ Ð½Ð° <a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></li>'' cannot be parsed correct.
+HTML code '$'<table class="widefat" cellspacing="0" style="margin-top: 5px; margin-bottom: 7px;">'' cannot be parsed correct.
+HTML code '$'<tr><td>ÐÑÐ¼Ð° Ð½Ð°Ð¼ÐµÑÐµÐ½Ð¸ ÐºÐ¾Ð¼ÐµÐ½ÑÐ°ÑÐ¸.</td></tr>'' cannot be parsed correct.
+HTML code '$'</table></li>'' cannot be parsed correct.
+HTML code '$'<li><b>'' cannot be parsed correct.
+HTML code '$'</b>: <a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></li>'' cannot be parsed correct.
+HTML code '$'</blockquote></li>'' cannot be parsed correct.
+HTML code '$'<li>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° #'' cannot be parsed correct.
+HTML code '$' (<a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>)<br />
+				<table class="widefat" cellspacing="0" style="margin-top: 5px;">'' cannot be parsed correct.
+HTML code '$'<tr '' cannot be parsed correct.
+HTML code '$'><td><big>'' cannot be parsed correct.
+HTML code '$'</big>'' cannot be parsed correct.
+HTML code '$'<br/><small>ÐÐ²ÑÐ¾Ñ: <b>'' cannot be parsed correct.
+HTML code '$'</b> | ÐÐ°ÑÐ°: <b>'' cannot be parsed correct.
+HTML code '$'</b></small></td><td style="width:25%;">'' cannot be parsed correct.
+HTML code '$'</td>
+		</tr>'' cannot be parsed correct.
+HTML code '$'<li>Ð¤Ð°Ð¹Ð»Ð¾Ð²Ðµ Ð¾Ñ <a target="_blank" href="./../?p='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></li>'' cannot be parsed correct.
+HTML code '$'<table class="widefat" cellspacing="0" style="margin-top: 5px; margin-bottom: 6px;">'' cannot be parsed correct.
+HTML code '$'<tr><td>ÐÑÐ¼Ð° Ð½Ð°Ð¼ÐµÑÐµÐ½Ð¸ ÑÐ°Ð¹Ð»Ð¾Ð²Ðµ.</td></tr>'' cannot be parsed correct.
+HTML code '$'</table></li>'' cannot be parsed correct.
+HTML code '$'<tr '' cannot be parsed correct.
+HTML code '$'>
+			<td><big>'' cannot be parsed correct.
+HTML code '$'</big><br/><small>ÐÐ·ÑÐ¾ÑÐ½Ð¸Ðº: <a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a> | ÐÐ¾ÐºÐ°Ð»Ð½Ð¾: <a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></small></td>
+<td style="width:25%;">'' cannot be parsed correct.
+HTML code '$'</td>
+		</tr>'' cannot be parsed correct.
+HTML code '$'<li>ÐÑÐ¾ ÑÐ¿Ð¸ÑÑÐºÐ° Ð¾Ñ Ð½Ð°Ð¼ÐµÑÐµÐ½Ð¸ÑÐµ Ð»Ð¸Ð½ÐºÐ¾Ð²Ðµ: <blockquote style="list-style: square inside;">'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<h2>ÐÐ¼Ð¿Ð¾ÑÑ Ð½Ð° Ð±Ð»Ð¾Ð³ Ð¾Ñ Blog.bg'' cannot be parsed correct.
+HTML code '$'</h2>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</table></li>'' cannot be parsed correct.
+HTML code '$'<li>ÐÑÐ¾Ð¼ÐµÐ½ÑÐ½Ðµ Ð½Ð° Ð²ÑÑÐ·ÐºÐ¸ÑÐµ ÐºÑÐ¼ ÑÑÐ°ÑÐ¸ÑÐµ ÑÑÐ°ÑÐ¸Ð¸ÑÐ¸ Ð² Ð¿ÑÑÑÐ½Ð¾ Ð¸Ð¼Ð¿Ð¾ÑÑÐ¸ÑÐ°Ð½Ð¾ÑÐ¾ ÑÑÐ´ÑÑÐ¶Ð°Ð½Ð¸Ðµ.
+			<blockquote style="list-style: square inside;">'' cannot be parsed correct.
+HTML code '$'<li>ÐÑÐ¾Ð¼ÐµÐ½ÐµÐ½Ð¸ ÑÐ° '' cannot be parsed correct.
+HTML code '$' ÑÑÐ°ÑÐ¸Ð¸, ÑÑÐ´ÑÑÐ¶Ð°ÑÐ¸ '' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'<tr '' cannot be parsed correct.
+HTML code '$'>
+<td><a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"><big'' cannot be parsed correct.
+HTML code '$'</big></a><br/><small>ÐÐ°ÑÐ°: <b>'' cannot be parsed correct.
+HTML code '$'</b> | ÐÐ°ÑÐµÐ³Ð¾ÑÐ¸Ñ: <b>'' cannot be parsed correct.
+HTML code '$'</b></small></td>
+<td style="width:25%;">'' cannot be parsed correct.
+HTML code '$'</td>
+		</tr>'' cannot be parsed correct.
+HTML code '$'<li>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° #'' cannot be parsed correct.
+HTML code '$' (<a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>)<br />
+				<table class="widefat" cellspacing="0" style="margin-top: 5px;">'' cannot be parsed correct.
+HTML code '$'<tr '' cannot be parsed correct.
+HTML code '$'>
+			<td><big>'' cannot be parsed correct.
+HTML code '$'</big><br/><small>ÐÐ·ÑÐ¾ÑÐ½Ð¸Ðº: <a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a> | ÐÐ¾ÐºÐ°Ð»Ð½Ð¾: <a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></small></td>
+<td style="width:25%;">'' cannot be parsed correct.
+HTML code '$'</td>
+		</tr>'' cannot be parsed correct.
+HTML code '$'<li>ÐÐ¾Ð¼ÐµÐ½ÑÐ°ÑÐ¸ Ð½Ð° <a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></li>'' cannot be parsed correct.
+HTML code '$'<li>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° #'' cannot be parsed correct.
+HTML code '$' (<a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>)<br />
+					<table class="widefat" cellspacing="0" style="margin-top: 5px;">'' cannot be parsed correct.
+HTML code '$'<tr><td>ÐÑÐ¼Ð° Ð½Ð°Ð¼ÐµÑÐµÐ½Ð¸ ÐºÐ¾Ð¼ÐµÐ½ÑÐ°ÑÐ¸.</td></tr>'' cannot be parsed correct.
+HTML code '$'</table></li>'' cannot be parsed correct.
+HTML code '$'<li>ÐÐ±Ð½Ð¾Ð²ÑÐ²Ð°Ð½Ðµ Ð½Ð° email Ð°Ð´ÑÐµÑÐ¸ÑÐµ Ð½Ð° Ð°Ð²ÑÐ¾ÑÐ¸ÑÐµ Ð½Ð° ÐºÐ¾Ð¼ÐµÐ½ÑÐ°ÑÐ¸ÑÐµ.
+				<blockquote style="list-style: square inside;">'' cannot be parsed correct.
+HTML code '$'<li>ÐÐ°ÑÐµÐ³Ð¾ÑÐ¸Ñ <big>&quot;'' cannot be parsed correct.
+HTML code '$'&quot;</big>: <blockquote style="list-style: square inside;">'' cannot be parsed correct.
+HTML code '$'<li><b>'' cannot be parsed correct.
+HTML code '$'</b>: <a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></li>'' cannot be parsed correct.
+HTML code '$'</blockquote></li>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<h2>ÐÐ¼Ð¿Ð¾ÑÑ Ð½Ð° Ð±Ð»Ð¾Ð³ Ð¾Ñ Log.bg'' cannot be parsed correct.
+HTML code '$'</h2>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<li>ÐÐ°Ð¼ÐµÑÐµÐ½ Ðµ email Ð°Ð´ÑÐµÑÐ° Ð½Ð° <a target="_blank" href="'' cannot be parsed correct.
+HTML code '$'"><b'' cannot be parsed correct.
+HTML code '$'</b></a></li>'' cannot be parsed correct.
+HTML code '$'<tr '' cannot be parsed correct.
+HTML code '$'><td><big>'' cannot be parsed correct.
+HTML code '$'</big>'' cannot be parsed correct.
+HTML code '$'<br/><small>ÐÐ²ÑÐ¾Ñ: <b>'' cannot be parsed correct.
+HTML code '$'</b> | ÐÐ°ÑÐ°: <b>'' cannot be parsed correct.
+HTML code '$'</b></small></td><td style="width:25%;">'' cannot be parsed correct.
+HTML code '$'</td>
+		</tr>'' cannot be parsed correct.
+HTML code '$'<li>Ð¤Ð°Ð¹Ð»Ð¾Ð²Ðµ Ð¾Ñ <a target="_blank" href="./../?p='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></li>'' cannot be parsed correct.
+HTML code '$'<table class="widefat" cellspacing="0" style="margin-top: 5px; margin-bottom: 6px;">'' cannot be parsed correct.
+HTML code '$'<tr><td>ÐÑÐ¼Ð° Ð½Ð°Ð¼ÐµÑÐµÐ½Ð¸ ÑÐ°Ð¹Ð»Ð¾Ð²Ðµ.</td></tr>'' cannot be parsed correct.
+HTML code '$'</table></li>'' cannot be parsed correct.
+HTML code '$'<option value='' cannot be parsed correct.
+HTML code '$'&nbsp; </option>'' cannot be parsed correct.
+HTML code '$'<label for='' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'<input class="chckbx" type="radio" name="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'
+				value='' cannot be parsed correct.
+HTML code '$'" id="'' cannot be parsed correct.
+HTML code '$'"/'' cannot be parsed correct.
+HTML code '$' </label>'' cannot be parsed correct.
+HTML code '$'<html>
+<head><meta http-equiv="refresh" content="5;URL='' cannot be parsed correct.
+HTML code '$'" /></head>
+<body><script type="text/javascript">document.location.href = \''' cannot be parsed correct.
+HTML code '$'\';</script></body>
+</html>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:01:37.979011.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.039935.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 3 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.267265.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PasswordHashingDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector

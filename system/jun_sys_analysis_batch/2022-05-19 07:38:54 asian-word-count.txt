@@ -1,0 +1,466 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on asian-word-count
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.489592.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.908580.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.234132.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.470299.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 174 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.650005.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.639864.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.125431.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 101 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.831506.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2114
+Added 1839 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2114
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.152386.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/asian-word-count/asianwordcount.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.200354.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2114 PHP_REACHES edges created
+2114 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 599 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.050613.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.486950.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.364401.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 1 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.160185.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.058382.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.035423.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008679.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.042012.
+
+2 PHP_REACHES edges created
+2 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.142309.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+SELECT ID, post_content, post_status, MID(post_date, 1, 7) AS post_date, post_title, post_author, post_type FROM $table_prefixposts WHERE post_status <> 'inherit' AND post_status <> 'auto-draft' AND (post_type = 'page' OR post_type = 'post') ORDER BY post_date DESC;
+SQL command (SELECT ID, post_content, post_status, MID(post_date, 1, 7) AS post_date, post_title, post_author, post_type FROM $table_prefixposts WHERE post_status <> 'inherit' AND post_status <> 'auto-draft' AND (post_type = 'page' OR post_type = 'post') ORDER BY post_date DESC;) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [213]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.398444.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div id="icon-edit-pages" class="icon32"></div><h2>Asian Word Count<a href="index.php?page=asianwordcount.php&ac=recount" class="add-new-h2" >Re-Count</a></h2> '' cannot be parsed correct.
+HTML code '$'<li><div class="top published">Published Posts</div>number_format($words_posts_publish)<div class="bottom">Words</div></li>'' cannot be parsed correct.
+HTML code '$'<li><div class="top published">Published Pages</div>number_format($words_pages_publish)<div class="bottom">Words</div></li>'' cannot be parsed correct.
+HTML code '$'<li><div class="top draft">Draft Posts</div>number_format($words_posts_draft)<div class="bottom">Words</div></li>'' cannot be parsed correct.
+HTML code '$'<li><div class="top draft">Draft Pages</div>number_format($words_pages_draft)<div class="bottom">Words</div></li>'' cannot be parsed correct.
+HTML code '$'<li><b class="published">number_format($words_posts_publish + $words_pages_publish)</b> <span>Published Words</span></li>'' cannot be parsed correct.
+HTML code '$'<li><b class="draft">number_format($words_posts_draft + $words_pages_draft)</b> <span>Unpublished Words</span></li>'' cannot be parsed correct.
+HTML code '$'<li> <span>Words</span><div class="bottom">Average Per Post</div></li>'' cannot be parsed correct.
+HTML code '$'<li> <span>Words</span><div class="bottom">Average Per Page</div></li>'' cannot be parsed correct.
+HTML code '$'<li> <span>Words</span><div class="bottom">Average Per Post</div></li>'' cannot be parsed correct.
+HTML code '$'<li> <span>Words</span><div class="bottom">Average Per Page</div></li>'' cannot be parsed correct.
+HTML code '$'<h2>All Posts &amp; Pages</h2>'' cannot be parsed correct.
+HTML code '$'<h2>Largest Posts &amp; Pages</h2>'' cannot be parsed correct.
+HTML code '$'<li><a href="?page=asianwordcount.php" class="current">Top <span class="count">($bjl_wp_posts_total)</span></a> |</li>'' cannot be parsed correct.
+HTML code '$'<li><a href="?page=asianwordcount.php&largest=all" class="current">All <span class="count">(count($bjl_content_word_count))</span></a></li>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="wordcount" class="manage-column column-author" style="width:75px; text-align:center;">Words</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="title" class="manage-column column-title">Title</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="type" class="manage-column column-author">Type</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="status" class="manage-column column-author">Status</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="author" class="manage-column column-author">Author</th>'' cannot be parsed correct.
+HTML code '$'Counting... Please wait a few minutes and re-open this page.'' cannot be parsed correct.
+HTML code '$'Configuration Saved.'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_author_posts_draft_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_author_pages_draft_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<tr class=\'alternate\'>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author" style="width:75px; text-align:center;">number_format($value)</td>'' cannot be parsed correct.
+HTML code '$'<td class="post-title column-title"><a href="post.php?post=$key&action=edit"><strong$bjl_content_post_title_$key</strong></a></td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">ucwords($bjl_content_post_type[$key])</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">ucwords($bjl_content_post_status[$key])</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">get_userdata($bjl_content_post_author[$key])_user_login</td>'' cannot be parsed correct.
+HTML code '$'<h2>Author Statistics</h2>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="author" class="manage-column column-author">Author</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="wordcount" class="manage-column column-author" style="width:75px; text-align:center;">Words</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="published_posts" class="manage-column column-author">Published Posts</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="published_ages" class="manage-column column-author">Published Pages</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="published_total" class="manage-column column-author">Published Total</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="draft_posts" class="manage-column column-author">Draft Posts</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="draft_pages" class="manage-column column-author">Draft Pages</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="draft_total" class="manage-column column-author">Draft Total</th>'' cannot be parsed correct.
+HTML code '$'<tr class=\'alternate\'>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author"><strong>$key</strong></td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author" style="width:75px; text-align:center;">number_format($value)</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_author_posts_publish_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_author_pages_publish_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_author_posts_publish_word_count[$key] + $bjl_author_pages_publish_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_author_posts_draft_word_count[$key] + $bjl_author_pages_draft_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<h2>Monthly Statistics</h2>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="author" class="manage-column column-author">Month</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="wordcount" class="manage-column column-author" style="width:75px; text-align:center;">Words</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="published_posts" class="manage-column column-author">Published Posts</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="published_ages" class="manage-column column-author">Published Pages</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="published_total" class="manage-column column-author">Published Total</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="draft_posts" class="manage-column column-author">Draft Posts</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="draft_pages" class="manage-column column-author">Draft Pages</th>'' cannot be parsed correct.
+HTML code '$'<th scope="col" id="draft_total" class="manage-column column-author">Draft Total</th>'' cannot be parsed correct.
+HTML code '$'<tr class=\'alternate\'>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author"><strong>$key</strong></td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author" style="width:75px; text-align:center;">number_format($value)</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_month_posts_publish_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_month_pages_publish_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_month_posts_publish_word_count[$key] + $bjl_month_pages_publish_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_month_posts_draft_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_month_pages_draft_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<td class="author column-author">number_format($bjl_month_posts_draft_word_count[$key] + $bjl_month_pages_draft_word_count[$key]) Words<br /> Word Avg.</td>'' cannot be parsed correct.
+HTML code '$'<h2>Configuration</h2>'' cannot be parsed correct.
+HTML code '$'<div>*If you find any error on this page, please click "recount" on top of this page.</div>'' cannot be parsed correct.
+HTML code '$'Save changes'' cannot be parsed correct.
+HTML code '$'<link rel=\'stylesheet\' type=\'text/css\' href=\'get_option("siteurl")/wp-content/plugins/basename(dirname())/style_admin.css\' />
+'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<ul id="bjl_word_count_main_stats">'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<ul id="bjl_word_count_main_totals">'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<ul id="bjl_word_count_main_averages">'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<ul class="subsubsub bjl_word_count_subsubsub">'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<table class="widefat post fixed" cellspacing="0">'' cannot be parsed correct.
+HTML code '$'<thead>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'<div id="message" class="updated"><p>'' cannot be parsed correct.
+HTML code '$'</p></div>'' cannot be parsed correct.
+HTML code '$'<div id="message" class="updated"><p>'' cannot be parsed correct.
+HTML code '$'</p></div>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</thead>'' cannot be parsed correct.
+HTML code '$'<tbody>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</tbody>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<table class="widefat post fixed" cellspacing="0">'' cannot be parsed correct.
+HTML code '$'<thead>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</thead>'' cannot be parsed correct.
+HTML code '$'<tbody>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</tbody>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<table class="widefat post fixed" cellspacing="0">'' cannot be parsed correct.
+HTML code '$'<thead>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</thead>'' cannot be parsed correct.
+HTML code '$'<tbody>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</tbody>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'/>
+			</form>
+		'' cannot be parsed correct.
+HTML code '$'<br /><br /></div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:13.177215.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046601.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.366520.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running CubridDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running MsqlDetector
+### Start running MySQLDetector
+### Finish running IBMDb2Detector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running ArrayElementDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PHPRetrievalDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running MySQLiDetector
+### Start running GenericEncryptionDetector
+### Finish running maxdbDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+asianwordcount.php:203
+  - RETRIEVAL call to get_option("bjl_word_count_main") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+asianwordcount.php:219
+  - RETRIEVAL call to get_option("bjl_word_count_main") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+asianwordcount.php:223
+  - RETRIEVAL call to get_option("bjl_word_count_cache") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+asianwordcount.php:227
+  - RETRIEVAL call to get_option("bjl_word_count_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+asianwordcount.php:231
+  - RETRIEVAL call to get_option("bjl_word_count_month") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+asianwordcount.php:291
+  - RETRIEVAL call to get_userdata($bjl_content_post_author[$key]) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user_meta, user
+asianwordcount.php:326
+  - RETRIEVAL call to get_userdata($key) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user_meta, user
+asianwordcount.php:491
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+asianwordcount.php:492
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+asianwordcount.php:148
+  - STORAGE call to update_option("bjl_word_count_main", $arr_bjl_word_count_main) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+asianwordcount.php:159
+  - STORAGE call to update_option("bjl_word_count_cache", $arr_bjl_word_count_cache) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+asianwordcount.php:174
+  - STORAGE call to update_option("bjl_word_count_author", $arr_bjl_word_count_author) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+asianwordcount.php:189
+  - STORAGE call to update_option("bjl_word_count_month", $arr_bjl_word_count_month) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("bjl_word_count_main") - {'option'}
+	WordPressRetrievalDetector.get_option("bjl_word_count_cache") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("bjl_word_count_main") - {'option'}
+	WordPressStorageDetector.update_option("bjl_word_count_cache", $arr_bjl_word_count_cache) - {'option'}
+	WordPressStorageDetector.update_option("bjl_word_count_main", $arr_bjl_word_count_main) - {'option'}
+	WordPressStorageDetector.update_option("bjl_word_count_author", $arr_bjl_word_count_author) - {'option'}
+	WordPressStorageDetector.update_option("bjl_word_count_month", $arr_bjl_word_count_month) - {'option'}
+	WordPressRetrievalDetector.get_option("bjl_word_count_author") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("bjl_word_count_month") - {'option'}
+user
+	WordPressRetrievalDetector.get_userdata($bjl_content_post_author[$key]) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_userdata($key) - {'user_meta', 'user'}
+user_meta
+	WordPressRetrievalDetector.get_userdata($bjl_content_post_author[$key]) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_userdata($key) - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.288893.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 28 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.107191.
+
+28 STORE_REACHES edges created
+28 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 14 nodes as PERSONAL
+In total, tainted 14 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.359359.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:36.912676!
+RETRIEVAL call to get_option("bjl_word_count_main") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bjl_word_count_main") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bjl_word_count_cache") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bjl_word_count_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bjl_word_count_month") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_userdata($bjl_content_post_author[$key]) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_userdata($key) alters data types {'user_meta', 'user'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("bjl_word_count_main", $arr_bjl_word_count_main) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("bjl_word_count_cache", $arr_bjl_word_count_cache) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("bjl_word_count_author", $arr_bjl_word_count_author) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("bjl_word_count_month", $arr_bjl_word_count_month) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

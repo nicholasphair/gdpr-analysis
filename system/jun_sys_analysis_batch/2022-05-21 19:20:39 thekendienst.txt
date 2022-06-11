@@ -1,0 +1,518 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on thekendienst
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.641584.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.982580.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.184783.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.430400.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 373 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.834248.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.598433.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.119581.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 149 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.656304.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3139
+Added 2617 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3419
+Added 280 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.191838.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/thekendienst/thekendienstFunktionen.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/thekendienst/thekendienst_ics.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/thekendienst/thekendienst.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.315303.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3139 PHP_REACHES edges created
+280 PHP_REACHES edges created
+3419 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1004 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.067854.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.789031.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 3195
+Added 48 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.099023.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 45 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.154177.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.137428.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 3195
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.582066.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018919.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.039282.
+
+93 PHP_REACHES edges created
+93 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 49 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.147797.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+27 SQL operations to process.
+CREATE TABLE $table_prefixthekendienst (
+   ID mediumint(9) NOT NULL AUTO_INCREMENT KEY,
+   AufstellungsID mediumint(9) NOT NULL,
+   AufstellungsName varchar(100) DEFAULT "notset",
+   IDZeitfenster smallint(9),
+   KommentarZeitfenster varchar(45) DEFAULT "",
+   Tag date,
+   Startzeit time,
+   Endzeit time,
+   AnzahlMitarbeiter tinyint(9) DEFAULT "1",
+   IDMitarbeiter smallint(9) DEFAULT NULL,
+   NameMitarbeiter varchar(40),
+   Ausgeblendet varchar(45) DEFAULT NULL,
+   Archiv boolean DEFAULT "0");
+SQL command (CREATE TABLE $table_prefixthekendienst ( ID mediumint(9) NOT NULL AUTO_INCREMENT KEY, AufstellungsID mediumint(9) NOT NULL, AufstellungsName varchar(100) DEFAULT "notset", IDZeitfenster smallint(9), KommentarZeitfenster varchar(45) DEFAULT "", Tag date, Startzeit time, Endzeit time, AnzahlMitarbeiter tinyint(9) DEFAULT "1", IDMitarbeiter smallint(9) DEFAULT NULL, NameMitarbeiter varchar(40), Ausgeblendet varchar(45) DEFAULT NULL, Archiv boolean DEFAULT "0");) cannot be parsed correct.
+CREATE TABLE $table_prefixthekendienst (
+   ID mediumint(9) NOT NULL AUTO_INCREMENT KEY,
+   AufstellungsID mediumint(9) NOT NULL,
+   AufstellungsName varchar(100) DEFAULT "notset",
+   IDZeitfenster smallint(9),
+   KommentarZeitfenster varchar(45) DEFAULT "",
+   Tag date,
+   Startzeit time,
+   Endzeit time,
+   AnzahlMitarbeiter tinyint(9) DEFAULT "1",
+   IDMitarbeiter smallint(9) DEFAULT NULL,
+   NameMitarbeiter varchar(40),
+   Ausgeblendet varchar(45) DEFAULT NULL,
+   Archiv boolean DEFAULT "0");
+SQL command (CREATE TABLE $table_prefixthekendienst ( ID mediumint(9) NOT NULL AUTO_INCREMENT KEY, AufstellungsID mediumint(9) NOT NULL, AufstellungsName varchar(100) DEFAULT "notset", IDZeitfenster smallint(9), KommentarZeitfenster varchar(45) DEFAULT "", Tag date, Startzeit time, Endzeit time, AnzahlMitarbeiter tinyint(9) DEFAULT "1", IDMitarbeiter smallint(9) DEFAULT NULL, NameMitarbeiter varchar(40), Ausgeblendet varchar(45) DEFAULT NULL, Archiv boolean DEFAULT "0");) cannot be parsed correct.
+SELECT IDMitarbeiter, NameMitarbeiter FROM $table_prefixthekendienst WHERE (AufstellungsID=$IDAufstellung AND IDZeitfenster=$IDZeitfenster) ORDER BY AufstellungsID, IDZeitfenster, IDMitarbeiter DESC, NameMitarbeiter DESC
+SQL command (SELECT IDMitarbeiter, NameMitarbeiter FROM $table_prefixthekendienst WHERE (AufstellungsID=$IDAufstellung AND IDZeitfenster=$IDZeitfenster) ORDER BY AufstellungsID, IDZeitfenster, IDMitarbeiter DESC, NameMitarbeiter DESC) cannot be parsed correct.
+SELECT ID, user_login, display_name FROM $wpdb
+SQL command (SELECT ID, user_login, display_name FROM $wpdb) cannot be parsed correct.
+SELECT AufstellungsID, AufstellungsName FROM $table_prefixthekendienst GROUP BY AufstellungsID ORDER BY AufstellungsID
+SQL command (SELECT AufstellungsID, AufstellungsName FROM $table_prefixthekendienst GROUP BY AufstellungsID ORDER BY AufstellungsID) cannot be parsed correct.
+SELECT IDZeitfenster, Tag, KommentarZeitfenster, Startzeit, Endzeit, AnzahlMitarbeiter, IDMitarbeiter, Ausgeblendet FROM $table_prefixthekendienst WHERE (AufstellungsID=$ID" AND Archiv!="1") ORDER BY Tag, Startzeit, AufstellungsID, IDZeitfenster, IDMitarbeiter ASC
+SQL command (SELECT IDZeitfenster, Tag, KommentarZeitfenster, Startzeit, Endzeit, AnzahlMitarbeiter, IDMitarbeiter, Ausgeblendet FROM $table_prefixthekendienst WHERE (AufstellungsID=$ID" AND Archiv!="1") ORDER BY Tag, Startzeit, AufstellungsID, IDZeitfenster, IDMitarbeiter ASC) cannot be parsed correct.
+SELECT IDZeitfenster, Tag, KommentarZeitfenster, Startzeit, Endzeit, AnzahlMitarbeiter, IDMitarbeiter, Ausgeblendet FROM $table_prefixthekendienst WHERE (AufstellungsID=$ID") ORDER BY Tag, Startzeit, AufstellungsID, IDZeitfenster, IDMitarbeiter AS
+SQL command (SELECT IDZeitfenster, Tag, KommentarZeitfenster, Startzeit, Endzeit, AnzahlMitarbeiter, IDMitarbeiter, Ausgeblendet FROM $table_prefixthekendienst WHERE (AufstellungsID=$ID") ORDER BY Tag, Startzeit, AufstellungsID, IDZeitfenster, IDMitarbeiter AS) cannot be parsed correct.
+SELECT AufstellungsID, AufstellungsName, Ausgeblendet FROM $table_prefixthekendienst WHERE Archiv!="1" GROUP BY AufstellungsID ORDER BY AufstellungsID DESC
+SQL command (SELECT AufstellungsID, AufstellungsName, Ausgeblendet FROM $table_prefixthekendienst WHERE Archiv!="1" GROUP BY AufstellungsID ORDER BY AufstellungsID DESC) cannot be parsed correct.
+
+		SELECT Ausgeblendet 
+		FROM $table_prefixthekendienst
+		WHERE AufstellungsID=str_replace("ein_ausblenden", "", $_POST["dauerhaft_ein_ausblenden"])
+		
+SQL command ( SELECT Ausgeblendet FROM $table_prefixthekendienst WHERE AufstellungsID=str_replace("ein_ausblenden", "", $_POST["dauerhaft_ein_ausblenden"]) ) cannot be parsed correct.
+SELECT ID FROM $wpdb WHERE user_login='$_POST_NameMitarbeiter'
+SQL command (SELECT ID FROM $wpdb WHERE user_login='$_POST_NameMitarbeiter') cannot be parsed correct.
+
+				INSERT INTO $table_prefixthekendienst 
+				SET AufstellungsID=$zeile_AufstellungsID",
+					AufstellungsName="$zeile_AufstellungsName",
+					IDZeitfenster="$zeile_IDZeitfenster", 
+					KommentarZeitfenster="$zeile_KommentarZeitfenster",
+					Tag="$_POST_Tag", 
+					Startzeit="$_POST_Startzeit", 
+					Endzeit="$_POST_Endzeit", 
+					AnzahlMitarbeiter="$_POST_AnzahlMitarbeiter
+SQL command ( INSERT INTO $table_prefixthekendienst SET AufstellungsID=$zeile_AufstellungsID", AufstellungsName="$zeile_AufstellungsName", IDZeitfenster="$zeile_IDZeitfenster", KommentarZeitfenster="$zeile_KommentarZeitfenster", Tag="$_POST_Tag", Startzeit="$_POST_Startzeit", Endzeit="$_POST_Endzeit", AnzahlMitarbeiter="$_POST_AnzahlMitarbeiter) cannot be parsed correct.
+
+				DELETE FROM $table_prefixthekendienst 
+				WHERE (AufstellungsID=$_POST_AufstellungsID" AND 
+					AufstellungsName="$_POST_AufstellungsName" AND 
+					IDZeitfenster="$_POST_IDZeitfenster")
+				ORDER BY ID DESC
+				LIMIT 
+SQL command ( DELETE FROM $table_prefixthekendienst WHERE (AufstellungsID=$_POST_AufstellungsID" AND AufstellungsName="$_POST_AufstellungsName" AND IDZeitfenster="$_POST_IDZeitfenster") ORDER BY ID DESC LIMIT ) cannot be parsed correct.
+
+		DELETE FROM $table_prefixthekendienst 
+		WHERE (AufstellungsID=$_POST_ID_Veranstaltung" AND IDZeitfenster="$_POST_ID_Zeitfenster")
+		LIMIT$i
+SQL command ( DELETE FROM $table_prefixthekendienst WHERE (AufstellungsID=$_POST_ID_Veranstaltung" AND IDZeitfenster="$_POST_ID_Zeitfenster") LIMIT$i) cannot be parsed correct.
+UPDATE $table_prefixthekendienst SET Archiv="1", AnzahlMitarbeiter="0" WHERE (AufstellungsID="$_POST_ID_Veranstaltung" AND IDZeitfenster="$_POST_ID_Zeitfenster"
+SQL command (UPDATE $table_prefixthekendienst SET Archiv="1", AnzahlMitarbeiter="0" WHERE (AufstellungsID="$_POST_ID_Veranstaltung" AND IDZeitfenster="$_POST_ID_Zeitfenster") cannot be parsed correct.
+
+				UPDATE $table_prefixthekendienst
+				SET Ausgeblendet=$_POST_aktuellerbenutzer;$liste_einzeln_Ausgeblendet"
+				WHERE AufstellungsID="str_replace("ein_ausblenden", "", $_POST["dauerhaft_ein_ausblenden"])
+SQL command ( UPDATE $table_prefixthekendienst SET Ausgeblendet=$_POST_aktuellerbenutzer;$liste_einzeln_Ausgeblendet" WHERE AufstellungsID="str_replace("ein_ausblenden", "", $_POST["dauerhaft_ein_ausblenden"])) cannot be parsed correct.
+
+				UPDATE $table_prefixthekendienst
+				SET Ausgeblendet=implode(";", $neuer_inhalt)"
+				WHERE AufstellungsID="str_replace("ein_ausblenden", "", $_POST["dauerhaft_ein_ausblenden"])
+SQL command ( UPDATE $table_prefixthekendienst SET Ausgeblendet=implode(";", $neuer_inhalt)" WHERE AufstellungsID="str_replace("ein_ausblenden", "", $_POST["dauerhaft_ein_ausblenden"])) cannot be parsed correct.
+
+		SELECT * FROM $table_prefixthekendienst 
+		WHERE AufstellungsID=$_POST_veranstaltungsid"
+	
+SQL command ( SELECT * FROM $table_prefixthekendienst WHERE AufstellungsID=$_POST_veranstaltungsid" ) cannot be parsed correct.
+
+			DELETE FROM $table_prefixthekendienst 
+			WHERE AufstellungsID=$_POST_veranstaltungsid"
+			LIMIT$wpdb->query($sql_anzahleintraege)
+SQL command ( DELETE FROM $table_prefixthekendienst WHERE AufstellungsID=$_POST_veranstaltungsid" LIMIT$wpdb->query($sql_anzahleintraege)) cannot be parsed correct.
+
+			UPDATE $table_prefixthekendienst 
+			SET Archiv="1", AnzahlMitarbeiter="0"
+			WHERE AufstellungsID="$_POST_veranstaltungsid
+SQL command ( UPDATE $table_prefixthekendienst SET Archiv="1", AnzahlMitarbeiter="0" WHERE AufstellungsID="$_POST_veranstaltungsid) cannot be parsed correct.
+
+			SELECT AufstellungsID, AufstellungsName
+			FROM $table_prefixthekendienst 
+			WHERE (
+				AufstellungsID=$_POST_AufstellungsID" AND 
+				AufstellungsName="$_POST_AufstellungsName"
+				
+SQL command ( SELECT AufstellungsID, AufstellungsName FROM $table_prefixthekendienst WHERE ( AufstellungsID=$_POST_AufstellungsID" AND AufstellungsName="$_POST_AufstellungsName" ) cannot be parsed correct.
+
+			INSERT INTO $table_prefixthekendienst (AufstellungsID, AufstellungsName) 
+			VALUES ($_POST_AufstellungsID","$_POST_AufstellungsName"
+SQL command ( INSERT INTO $table_prefixthekendienst (AufstellungsID, AufstellungsName) VALUES ($_POST_AufstellungsID","$_POST_AufstellungsName") cannot be parsed correct.
+
+			UPDATE $table_prefixthekendienst 
+			SET IDMitarbeiter=$zeile_IDMitarbeiter", 
+				NameMitarbeiter="$zeile_NameMitarbeiter"
+			WHERE (
+				AufstellungsID="$zeile_AufstellungsID" AND 
+				IDZeitfenster="$zeile_IDZeitfenster" AND
+				IDMitarbeiter IS NULL)
+			ORDER BY ID, AufstellungsID, IDZeitfenster, IDMitarbeiter ASC
+			LIMIT 
+SQL command ( UPDATE $table_prefixthekendienst SET IDMitarbeiter=$zeile_IDMitarbeiter", NameMitarbeiter="$zeile_NameMitarbeiter" WHERE ( AufstellungsID="$zeile_AufstellungsID" AND IDZeitfenster="$zeile_IDZeitfenster" AND IDMitarbeiter IS NULL) ORDER BY ID, AufstellungsID, IDZeitfenster, IDMitarbeiter ASC LIMIT ) cannot be parsed correct.
+
+		UPDATE $table_prefixthekendienst 
+		SET IDMitarbeiter=NULL, 
+			NameMitarbeiter=NULL
+		WHERE (
+			AufstellungsID=$_POST_AufstellungsIDAustragen" AND 
+			IDZeitfenster="$_POST_IDZeitfensterAustragen" AND
+			NameMitarbeiter="$_POST_NameMitarbeiterAustragen" AND
+			IDMitarbeiter="$_POST_IDMitarbeiterAustragen")
+		ORDER BY AufstellungsID, IDZeitfenster, NameMitarbeiter
+		LIMIT 
+SQL command ( UPDATE $table_prefixthekendienst SET IDMitarbeiter=NULL, NameMitarbeiter=NULL WHERE ( AufstellungsID=$_POST_AufstellungsIDAustragen" AND IDZeitfenster="$_POST_IDZeitfensterAustragen" AND NameMitarbeiter="$_POST_NameMitarbeiterAustragen" AND IDMitarbeiter="$_POST_IDMitarbeiterAustragen") ORDER BY AufstellungsID, IDZeitfenster, NameMitarbeiter LIMIT ) cannot be parsed correct.
+
+			SELECT *
+			FROM $table_prefixthekendienst 
+			WHERE (
+				AufstellungsID=$_POST_AufstellungsID" AND 
+				AufstellungsName="$_POST_AufstellungsName" AND 
+				IDZeitfenster="$_POST_IDZeitfenster"
+				
+SQL command ( SELECT * FROM $table_prefixthekendienst WHERE ( AufstellungsID=$_POST_AufstellungsID" AND AufstellungsName="$_POST_AufstellungsName" AND IDZeitfenster="$_POST_IDZeitfenster" ) cannot be parsed correct.
+
+			UPDATE $table_prefixthekendienst 
+			SET IDZeitfenster=$zeile_IDZeitfenster", 
+				KommentarZeitfenster="$zeile_KommentarZeitfenster",
+				Tag="$zeile_Tag", 
+				Startzeit="$zeile_Startzeit", 
+				Endzeit="$_POST_Endzeit", 
+				AnzahlMitarbeiter="$_POST_AnzahlMitarbeiter"
+			WHERE (AufstellungsID="$_POST_AufstellungsID" AND 
+				AufstellungsName="$_POST_AufstellungsName" AND 
+				IDZeitfenster IS NULL)
+			ORDER BY AufstellungsID, IDZeitfenster, IDMitarbeiter
+			LIMIT 
+SQL command ( UPDATE $table_prefixthekendienst SET IDZeitfenster=$zeile_IDZeitfenster", KommentarZeitfenster="$zeile_KommentarZeitfenster", Tag="$zeile_Tag", Startzeit="$zeile_Startzeit", Endzeit="$_POST_Endzeit", AnzahlMitarbeiter="$_POST_AnzahlMitarbeiter" WHERE (AufstellungsID="$_POST_AufstellungsID" AND AufstellungsName="$_POST_AufstellungsName" AND IDZeitfenster IS NULL) ORDER BY AufstellungsID, IDZeitfenster, IDMitarbeiter LIMIT ) cannot be parsed correct.
+
+			INSERT INTO $table_prefixthekendienst 
+			SET AufstellungsID=$zeile_AufstellungsID",
+				AufstellungsName="$zeile_AufstellungsName",
+				IDZeitfenster="$zeile_IDZeitfenster", 
+				KommentarZeitfenster="$zeile_KommentarZeitfenster",
+				Tag="$_POST_Tag", 
+				Startzeit="$_POST_Startzeit", 
+				Endzeit="$_POST_Endzeit", 
+				AnzahlMitarbeiter="$_POST_AnzahlMitarbeiter
+SQL command ( INSERT INTO $table_prefixthekendienst SET AufstellungsID=$zeile_AufstellungsID", AufstellungsName="$zeile_AufstellungsName", IDZeitfenster="$zeile_IDZeitfenster", KommentarZeitfenster="$zeile_KommentarZeitfenster", Tag="$_POST_Tag", Startzeit="$_POST_Startzeit", Endzeit="$_POST_Endzeit", AnzahlMitarbeiter="$_POST_AnzahlMitarbeiter) cannot be parsed correct.
+
+				UPDATE $table_prefixthekendienst 
+				SET IDZeitfenster=$zeile_IDZeitfenster", 
+					KommentarZeitfenster="$zeile_KommentarZeitfenster",
+					Tag="$zeile_Tag", 
+					Startzeit="$zeile_Startzeit", 
+					Endzeit="$zeile_Endzeit", 
+					AnzahlMitarbeiter="$_POST_AnzahlMitarbeiter"
+				WHERE (AufstellungsID="$_POST_AufstellungsID" AND 
+					AufstellungsName="$_POST_AufstellungsName" AND 
+					IDZeitfenster="$_POST_IDZeitfenster")
+				ORDER BY ID ASC
+			
+SQL command ( UPDATE $table_prefixthekendienst SET IDZeitfenster=$zeile_IDZeitfenster", KommentarZeitfenster="$zeile_KommentarZeitfenster", Tag="$zeile_Tag", Startzeit="$zeile_Startzeit", Endzeit="$zeile_Endzeit", AnzahlMitarbeiter="$_POST_AnzahlMitarbeiter" WHERE (AufstellungsID="$_POST_AufstellungsID" AND AufstellungsName="$_POST_AufstellungsName" AND IDZeitfenster="$_POST_IDZeitfenster") ORDER BY ID ASC ) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [127, 181, 1144, 1350, 285, 551, 564, 1751, 3237, 3663, 3005, 3034, 3128, 3135, 3329, 3432, 3532, 3572, 3595, 2340, 2354, 3775, 3874, 2664, 2678, 2707, 2976]
+Added 0 SQL nodes. 0 out of 27 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:11.291540.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'Datenbankanlegen()'' cannot be parsed correct.
+HTML code '$'Tabellenanfang()AufstellungermittelnAdmin()Tabellenende()'' cannot be parsed correct.
+HTML code '$'mysql_error()'' cannot be parsed correct.
+HTML code '$'str_replace("[Thekendienst=" . $zeile["AufstellungsID"] . "]", "Die Datenbank ist defekt -> Bitte Administrator/Support umgehend informieren", $content)'' cannot be parsed correct.
+HTML code '$'str_replace("[Thekendienst=" . $zeile["AufstellungsID"] . "]", "Es ist zu vermuten, dass das Formular doppelt abgeschickt wurde. Script wird unterbrochen.", $content)'' cannot be parsed correct.
+HTML code '$'str_replace("[Thekendienst=" . $zeile["AufstellungsID"] . "]", "Fehler, Es wurde kein Name vergeben (neueveranstaltungeintragen)", $content)'' cannot be parsed correct.
+HTML code '$'mysql_error()'' cannot be parsed correct.
+HTML code '$'mysql_error()'' cannot be parsed correct.
+HTML code '$'str_replace("[Thekendienst=" . $zeile["AufstellungsID"] . "]", "Es ist zu vermuten, dass das Formular doppelt abgeschickt wurde. Script wird unterbrochen.", $content)'' cannot be parsed correct.
+HTML code '$'<link rel=\'stylesheet\' href=\'WP_PLUGIN_URL/thekendienst/thekendienststyles.css\' type=\'text/css\' media=\'all\' />'' cannot be parsed correct.
+HTML code '$'BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:$_GET_blogname
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:$title$date$start$descriptiontime()@Thekendienst-Plugin
+ORGANIZER;CN="thekendienstplugin":MAILTO:
+SUMMARY:Thekendienst - $title
+DESCRIPTION:Thekendienst bei der Veranstaltung $title"\n am date("d.m.Y", $_GET["day"]) um $_GET_start  eingetragen. Kommentar zur Veranstaltung: $_GET_comment
+CLASS:PUBLIC
+DTSTART;TZID="(GMT+0200)":date("Ymd", $_GET["day"])Tstr_replace(":", "", $_GET["start"])
+DTEND;TZID="(GMT+0200)":date("Ymd", $_GET["day"])Tstr_replace(":", "", $_GET["end"])
+DTSTAMP:date("Ymd", time())Tdate("His", time())Z
+URL:$_GET_url
+END:VEVENT
+END:VCALENDAR'' cannot be parsed correct.
+HTML code '$'Fehler: Die eingegebene Daten entsprechen nicht dem notwendigen Format (zeitfensteraendern)'' cannot be parsed correct.
+HTML code '$'Datenbank kaputt -> support fragen! (function: dauerhaft_ein_ausblenden())'' cannot be parsed correct.
+HTML code '$'an error occured'' cannot be parsed correct.
+HTML code '$'Fehler: Entweder ist im Zeitfenster kein Platz mehr frei, oder das Zeitfenster existiert nicht, oder die Veranstaltung gibt es nicht. Es wurde kein Name vergeben (eintragenName)'' cannot be parsed correct.
+HTML code '$'Fehler: Entweder wurde kein Name eingegeben oder für den Namen konnte keine ID ermittelt werden. (eintragenName)'' cannot be parsed correct.
+HTML code '$'Fehler: Der Benutzer, die Veranstaltung oder das Zeitfenster konnte nicht gefunden werden. Evtl. wurde es zwischenzeitlich gelöscht. (Funktion: austragenName() )'' cannot be parsed correct.
+HTML code '$'Fehler: Die eingegebene Daten entsprechen nicht dem notwendigen Format (zeitfenstereintragen)'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.278702.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.061938.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 8 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.381121.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running CubridDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FileProDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running MongoDbDetector
+### Start running MySQLDetector
+### Finish running IBMDb2Detector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running HashDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+thekendienst.php:66
+  - RETRIEVAL call to get_option("thekendienst_db_version", null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+thekendienst.php:70
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+thekendienst.php:76
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+thekendienst.php:71
+  - STORAGE call to add_option("thekendienst_db_version", $thekendienst_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+thekendienst.php:77
+  - STORAGE call to update_option("thekendienst_db_version", $thekendienst_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressStorageDetector.update_option("thekendienst_db_version", $thekendienst_db_version) - {'option'}
+	WordPressRetrievalDetector.get_option("thekendienst_db_version", null) - {'option'}
+	WordPressStorageDetector.add_option("thekendienst_db_version", $thekendienst_db_version) - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.830736.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 2 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.059078.
+
+2 STORE_REACHES edges created
+2 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006176.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:40.170405!
+RETRIEVAL call to get_option("thekendienst_db_version", null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to add_option("thekendienst_db_version", $thekendienst_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("thekendienst_db_version", $thekendienst_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

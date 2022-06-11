@@ -1,0 +1,908 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on mncombine
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.567974.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.932287.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 155 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.616927.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.409053.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1004 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.020629.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 6 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.007943.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+Added 2 PHP_REACHES edges.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.142669.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 268 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.732222.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 5649
+Added 4214 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 5751
+Added 102 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.208350.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/class-plugin-mncombine.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/cssmin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/jsmin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/mncombine.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/views/admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/views/cache.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/views/css.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/views/display.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/mncombine/views/js.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.164228.
+
+1000 PHP_REACHES edges created
+1159 PHP_REACHES edges created
+2 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4488 PHP_REACHES edges created
+102 PHP_REACHES edges created
+5751 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1983 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.591638.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.831988.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 575
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 575
+Added 66 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.794453.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 74 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.153356.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.121052.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 575
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 575
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.458026.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.016382.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.032207.
+
+140 PHP_REACHES edges created
+140 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 130 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.187222.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.128464.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug)'' cannot be parsed correct.
+HTML code '$'_e("General Settings", "mn-combine")'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=cache")'' cannot be parsed correct.
+HTML code '$'_e("Cache", "mn-combine")'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=js")'' cannot be parsed correct.
+HTML code '$'_e("Javascript", "mn-combine")'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=css")'' cannot be parsed correct.
+HTML code '$'_e("CSS", "mn-combine")'' cannot be parsed correct.
+HTML code '$'$this->errors->get_error_data()'' cannot be parsed correct.
+HTML code '$'_e($error, "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("No", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Yes", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Mode", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Choose a mode to determine when to compress", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Development", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Production", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Force Combine", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Force scripts queued to load in the header or footer only", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Do not force", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("In the header", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("learn more", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("In the footer", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("learn more", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Don\\'t combine css on regex", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Don\\'t combine css files on specific pages", "mn-combine")'' cannot be parsed correct.
+HTML code '$'get_option("mn_exclude_css_regex", $this->exclude_css_regex)'' cannot be parsed correct.
+HTML code '$'_e("/\\/$|\\/about$/ : exclude home and about", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("A regex matching REQUEST_URI.", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Don\\'t combine js on regex", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Don\\'t combine js files on specific pages", "mn-combine")'' cannot be parsed correct.
+HTML code '$'get_option("mn_exclude_js_regex", $this->exclude_js_regex)'' cannot be parsed correct.
+HTML code '$'_e("/\\/$|\\/about$/ : exclude home and about", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("A regex matching REQUEST_URI.", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Save Changes")'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug)'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=cache")'' cannot be parsed correct.
+HTML code '$'_e("Javascript Compression Engine", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("choose which javascript engine to use when compressing", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("No Compression", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Google Closure", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("learn more", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("JSMin", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Not recommended but it still works", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("learn more", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("Compress CSS", "mn-combine")'' cannot be parsed correct.
+HTML code '$'_e("choose whether or not to compress the css", "mn-combine")'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'trim($asset)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'trim($asset)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'basename($asset)'' cannot be parsed correct.
+HTML code '$'str_replace(str_replace("", "/", ABSPATH), "", $asset)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'trim($asset)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'trim($asset)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'basename($asset)'' cannot be parsed correct.
+HTML code '$'str_replace(str_replace("", "/", ABSPATH), "", $asset)'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug)'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=cache")'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=js")'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=css")'' cannot be parsed correct.
+HTML code '$'$this->errors->get_error_data()'' cannot be parsed correct.
+HTML code '$'$error'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'trim($asset)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'trim($asset)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'basename($asset)'' cannot be parsed correct.
+HTML code '$'str_replace(str_replace("", "/", ABSPATH), "", $asset)'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=js")'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=css")'' cannot be parsed correct.
+HTML code '$'$this->errors->get_error_data()'' cannot be parsed correct.
+HTML code '$'$error'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$asset_file'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'basename($asset["file"])'' cannot be parsed correct.
+HTML code '$'$asset_compiled'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$asset_file'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'basename($asset["file"])'' cannot be parsed correct.
+HTML code '$'$asset_compiled'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug)'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=cache")'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=js")'' cannot be parsed correct.
+HTML code '$'admin_url(get_admin_page_parent() . "?page="$this->plugin_slug"&action=css")'' cannot be parsed correct.
+HTML code '$'$this->errors->get_error_data()'' cannot be parsed correct.
+HTML code '$'$error'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'trim($asset)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'trim($asset)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'basename($asset)'' cannot be parsed correct.
+HTML code '$'str_replace(str_replace("", "/", ABSPATH), "", $asset)'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'nav-tab-active'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:12.327258.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.044760.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 2 do_action/apply_filters calls and 7 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.554641.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running maxdbDetector
+### Start running PropertyDetector
+### Finish running MySQLiDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running Sqlite3Detector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running UserInputDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running PHPStorageDetector
+### Start running UninstallDetector
+### Finish running PhpCurlDetector
+### Finish running WordPressStorageDetector
+### Finish running PHPRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+class-plugin-mncombine.php:848
+  - External request to URL http://closure-compiler.appspot.com/compile.
+  - Data types: remote 
+
+class-plugin-mncombine.php:731
+  - MD5 called with parameters [implode, array_keys, mtimes, footer, ,]. Ignore if [implode, array_keys, mtimes, footer, ,] does not contain personal information.
+class-plugin-mncombine.php:732
+  - MD5 called with parameters [implode, header, array_keys, mtimes, ,]. Ignore if [implode, header, array_keys, mtimes, ,] does not contain personal information.
+class-plugin-mncombine.php:1020
+  - MD5 called with parameters [keys]. Ignore if [keys] does not contain personal information. 
+
+class-plugin-mncombine.php:515
+  - RETRIEVAL call to fgets($f).
+  - Data types: file
+class-plugin-mncombine.php:811
+  - RETRIEVAL call to file_get_contents($src).
+  - Data types: file
+class-plugin-mncombine.php:825
+  - RETRIEVAL call to file_get_contents($path).
+  - Data types: file
+class-plugin-mncombine.php:1063
+  - RETRIEVAL call to file_get_contents($src).
+  - Data types: file
+class-plugin-mncombine.php:1073
+  - RETRIEVAL call to file_get_contents($path).
+  - Data types: file
+class-plugin-mncombine.php:1187
+  - RETRIEVAL call to file_get_contents($file).
+  - Data types: file 
+
+class-plugin-mncombine.php:799
+  - STORAGE call to file_put_contents($path, "").
+  - Data types: file
+class-plugin-mncombine.php:817
+  - STORAGE call to file_put_contents($path, $content . ";", FILE_APPENDLOCK_EX).
+  - Data types: file
+class-plugin-mncombine.php:829
+  - STORAGE call to file_put_contents($path, "/*"$implode"*/
+
+" . $contents).
+  - Data types: file
+class-plugin-mncombine.php:1052
+  - STORAGE call to file_put_contents($path, "").
+  - Data types: file
+class-plugin-mncombine.php:1065
+  - STORAGE call to file_put_contents($path, "/*"$key"*/
+"$content"
+
+", FILE_APPENDLOCK_EX).
+  - Data types: file
+class-plugin-mncombine.php:1077
+  - STORAGE call to file_put_contents($path, "/*"$implode"*/
+
+" . $contents).
+  - Data types: file 
+
+class-plugin-mncombine.php:1221
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+class-plugin-mncombine.php:1221
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+class-plugin-mncombine.php:1222
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+class-plugin-mncombine.php:1225
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+class-plugin-mncombine.php:1227
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+class-plugin-mncombine.php:1227
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+class-plugin-mncombine.php:1228
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+class-plugin-mncombine.php:1228
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+class-plugin-mncombine.php:1230
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address 
+
+class-plugin-mncombine.php:441
+  - RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:621
+  - RETRIEVAL call to get_option("mn_exclude_js_regex", $this->exclude_js_regex) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:630
+  - RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:631
+  - RETRIEVAL call to get_option("mn_force_combine", $this->force_combine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:632
+  - RETRIEVAL call to get_option("mn_compile_mode", $this->compile_mode) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:791
+  - RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:792
+  - RETRIEVAL call to get_option("mn_compression_engine", $this->compression_engine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:921
+  - RETRIEVAL call to get_option("mn_force_combine", $this->force_combine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:957
+  - RETRIEVAL call to get_option("mn_exclude_css_regex", $this->exclude_css_regex) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:962
+  - RETRIEVAL call to get_option("mn_compile_mode", $this->compile_mode) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:963
+  - RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+class-plugin-mncombine.php:1118
+  - RETRIEVAL call to get_option("mn_css_compression", $this->css_compression) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/admin.php:43
+  - RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/admin.php:44
+  - RETRIEVAL call to get_option("mn_compression_engine", $this->compression_engine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/admin.php:45
+  - RETRIEVAL call to get_option("mn_compile_mode", $this->compile_mode) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/admin.php:46
+  - RETRIEVAL call to get_option("mn_force_combine", $this->force_combine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/admin.php:47
+  - RETRIEVAL call to get_option("mn_css_compression", $this->css_compression) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/admin.php:48
+  - RETRIEVAL call to get_option("mn_exclude_css_regex", $this->exclude_css_regex) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/admin.php:49
+  - RETRIEVAL call to get_option("mn_exclude_js_regex", $this->exclude_js_regex) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/css.php:44
+  - RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/css.php:45
+  - RETRIEVAL call to get_option("mn_compression_engine", "none") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/js.php:43
+  - RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+views/js.php:44
+  - RETRIEVAL call to get_option("mn_compression_engine", "none") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option 
+
+class-plugin-mncombine.php:464
+  - STORAGE call to update_option("mn_compression_engine", $_POST["compression_engine"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+class-plugin-mncombine.php:465
+  - STORAGE call to update_option("mn_compile_mode", $_POST["compile_mode"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+class-plugin-mncombine.php:466
+  - STORAGE call to update_option("mn_force_combine", $_POST["force_combine"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+class-plugin-mncombine.php:467
+  - STORAGE call to update_option("mn_css_compression", $_POST["css_compression"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+class-plugin-mncombine.php:468
+  - STORAGE call to update_option("mn_exclude_css_regex", stripslashes($_POST["exclude_css_regex"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+class-plugin-mncombine.php:469
+  - STORAGE call to update_option("mn_exclude_js_regex", stripslashes($_POST["exclude_js_regex"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+class-plugin-mncombine.php:476
+  - STORAGE call to update_option("mn_comine_assets", $save) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+class-plugin-mncombine.php:482
+  - STORAGE call to update_option("mn_comine_assets", $save) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+address
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+file
+	PHPRetrievalDetector.file_get_contents($src) - {'file'}
+	PHPRetrievalDetector.file_get_contents($path) - {'file'}
+	PHPStorageDetector.file_put_contents($path, "/*"$implode"*/
+
+" . $contents) - {'file'}
+	PHPRetrievalDetector.file_get_contents($src) - {'file'}
+	PHPStorageDetector.file_put_contents($path, $content . ";", FILE_APPENDLOCK_EX) - {'file'}
+	PHPStorageDetector.file_put_contents($path, "/*"$implode"*/
+
+" . $contents) - {'file'}
+	PHPRetrievalDetector.file_get_contents($file) - {'file'}
+	PHPStorageDetector.file_put_contents($path, "") - {'file'}
+	PHPRetrievalDetector.file_get_contents($path) - {'file'}
+	PHPRetrievalDetector.fgets($f) - {'file'}
+	PHPStorageDetector.file_put_contents($path, "") - {'file'}
+	PHPStorageDetector.file_put_contents($path, "/*"$key"*/
+"$content"
+
+", FILE_APPENDLOCK_EX) - {'file'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressStorageDetector.update_option("mn_compile_mode", $_POST["compile_mode"]) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_css_compression", $this->css_compression) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_force_combine", $this->force_combine) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_compression_engine", "none") - {'option'}
+	WordPressRetrievalDetector.get_option("mn_comine_assets", $this->default) - {'option'}
+	WordPressStorageDetector.update_option("mn_comine_assets", $save) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_force_combine", $this->force_combine) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_css_compression", $this->css_compression) - {'option'}
+	WordPressStorageDetector.update_option("mn_compression_engine", $_POST["compression_engine"]) - {'option'}
+	WordPressStorageDetector.update_option("mn_exclude_js_regex", stripslashes($_POST["exclude_js_regex"])) - {'option'}
+	WordPressStorageDetector.update_option("mn_exclude_css_regex", stripslashes($_POST["exclude_css_regex"])) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_force_combine", $this->force_combine) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_comine_assets", $this->default) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_exclude_css_regex", $this->exclude_css_regex) - {'option'}
+	WordPressStorageDetector.update_option("mn_comine_assets", $save) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_comine_assets", $this->default) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_exclude_css_regex", $this->exclude_css_regex) - {'option'}
+	WordPressStorageDetector.update_option("mn_force_combine", $_POST["force_combine"]) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_exclude_js_regex", $this->exclude_js_regex) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_comine_assets", $this->default) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_compile_mode", $this->compile_mode) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_comine_assets", $this->default) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_compile_mode", $this->compile_mode) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_compression_engine", $this->compression_engine) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_exclude_js_regex", $this->exclude_js_regex) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_comine_assets", $this->default) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_compile_mode", $this->compile_mode) - {'option'}
+	WordPressStorageDetector.update_option("mn_css_compression", $_POST["css_compression"]) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_comine_assets", $this->default) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_compression_engine", $this->compression_engine) - {'option'}
+	WordPressRetrievalDetector.get_option("mn_compression_engine", "none") - {'option'}
+remote
+	PhpCurlDetector.(unknown) - {'remote'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:12.157963.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 220 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.321529.
+
+220 STORE_REACHES edges created
+220 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 132 nodes as PERSONAL
+In total, tainted 132 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 3 nodes as ENCRYPTED
+In total, tainted 3 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:02.606433.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:00.057623!
+MD5 called with parameters [keys]. Ignore if [keys] does not contain personal information.,md5,None
+MD5 called with parameters [implode, array_keys, mtimes, footer, ,]. Ignore if [implode, array_keys, mtimes, footer, ,] does not contain personal information.,md5,None
+MD5 called with parameters [implode, header, array_keys, mtimes, ,]. Ignore if [implode, header, array_keys, mtimes, ,] does not contain personal information.,md5,None
+RETRIEVAL call to file_get_contents($src).,None,None
+RETRIEVAL call to file_get_contents($path).,None,None
+RETRIEVAL call to file_get_contents($file).,None,None
+RETRIEVAL call to fgets($f).,None,None
+RETRIEVAL call to file_get_contents($src).,None,None
+RETRIEVAL call to file_get_contents($path).,None,None
+STORAGE call to file_put_contents($path, "").,None,None
+STORAGE call to file_put_contents($path, "/*"$key"*/
+"$content"
+
+", FILE_APPENDLOCK_EX).,None,None
+STORAGE call to file_put_contents($path, "/*"$implode"*/
+
+" . $contents).,None,None
+STORAGE call to file_put_contents($path, "").,None,None
+STORAGE call to file_put_contents($path, $content . ";", FILE_APPENDLOCK_EX).,None,None
+STORAGE call to file_put_contents($path, "/*"$implode"*/
+
+" . $contents).,None,None
+External request to URL http://closure-compiler.appspot.com/compile.,https,['http://closure-compiler.appspot.com/compile']
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+RETRIEVAL call to get_option("mn_css_compression", $this->css_compression) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_exclude_js_regex", $this->exclude_js_regex) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_force_combine", $this->force_combine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_compile_mode", $this->compile_mode) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_compression_engine", $this->compression_engine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_force_combine", $this->force_combine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_exclude_css_regex", $this->exclude_css_regex) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_compile_mode", $this->compile_mode) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_compression_engine", $this->compression_engine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_compile_mode", $this->compile_mode) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_force_combine", $this->force_combine) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_css_compression", $this->css_compression) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_exclude_css_regex", $this->exclude_css_regex) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_exclude_js_regex", $this->exclude_js_regex) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_compression_engine", "none") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_comine_assets", $this->default) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mn_compression_engine", "none") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+STORAGE call to update_option("mn_compression_engine", $_POST["compression_engine"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mn_compile_mode", $_POST["compile_mode"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mn_force_combine", $_POST["force_combine"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mn_css_compression", $_POST["css_compression"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mn_exclude_css_regex", stripslashes($_POST["exclude_css_regex"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mn_exclude_js_regex", stripslashes($_POST["exclude_js_regex"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mn_comine_assets", $save) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("mn_comine_assets", $save) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+Data Deletion violation! The plugin has storage node that has no identifier and cannot be accessed!
+Data Deletion violation! The plugin has storage node that has no identifier and cannot be accessed!
+Data Deletion violation! The plugin has storage node that has no identifier and cannot be accessed!
+Data Deletion violation! The plugin has storage node that has no identifier and cannot be accessed!
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Unstructured data storage of PII types (['address']) to files through function "file_put_contents", found in file class-plugin-mncombine.php at line 1077. 
+
+[has_storage] Unstructured data storage of PII types (['address']) to files through function "file_put_contents", found in file class-plugin-mncombine.php at line 817. 
+
+[has_storage] Unstructured data storage of PII types (['address']) to files through function "file_put_contents", found in file class-plugin-mncombine.php at line 829. 
+
+[has_storage] Unstructured data storage of PII types (['address']) to files through function "file_put_contents", found in file class-plugin-mncombine.php at line 1065. 
+
+[has_storage] Storage check is CUSTOM_UNSTRUCTURED 
+
+[Art.17, Right to erasure] Complete data deletion is required for storage at node ID 4131 , but is impossible due to custom storage of PII without identifiers. Found in file class-plugin-mncombine.php at line 1077 
+
+[Art.17, Right to erasure] Complete data deletion is required for storage at node ID 2945 , but is impossible due to custom storage of PII without identifiers. Found in file class-plugin-mncombine.php at line 817 
+
+[Art.17, Right to erasure] Complete data deletion is required for storage at node ID 2992 , but is impossible due to custom storage of PII without identifiers. Found in file class-plugin-mncombine.php at line 829 
+
+[Art.17, Right to erasure] Complete data deletion is required for storage at node ID 4080 , but is impossible due to custom storage of PII without identifiers. Found in file class-plugin-mncombine.php at line 1065 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Complete data access is required for storage at node ID 4131 , but is impossible due to custom storage of PII without identifiers. Found in file class-plugin-mncombine.php at line 1077 
+
+[Art.15, Right to access] Complete data access is required for storage at node ID 2945 , but is impossible due to custom storage of PII without identifiers. Found in file class-plugin-mncombine.php at line 817 
+
+[Art.15, Right to access] Complete data access is required for storage at node ID 2992 , but is impossible due to custom storage of PII without identifiers. Found in file class-plugin-mncombine.php at line 829 
+
+[Art.15, Right to access] Complete data access is required for storage at node ID 4080 , but is impossible due to custom storage of PII without identifiers. Found in file class-plugin-mncombine.php at line 1065 
+
+[Art.15, Right to access] Data access is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? True 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function mncombine_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'mncombine' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function mncombine_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'mncombine' ),
+        'callback'             => 'mncombine_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'mncombine_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function mncombine_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'mncombine' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'mncombine' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'mncombine' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'mncombine', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'mncombine_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

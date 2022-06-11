@@ -1,0 +1,551 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on react-and-share
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.019014.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.898950.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.152802.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.434261.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 297 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.762134.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.592339.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.097809.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 176 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.192790.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2231
+Added 1758 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4344
+Added 2113 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.196888.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/react-and-share/rns.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.157682.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2231 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2113 PHP_REACHES edges created
+4344 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 744 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.157789.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.136840.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 11 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.863266.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 7 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.169332.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.006027.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.137623.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006661.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.050172.
+
+18 PHP_REACHES edges created
+18 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 18 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.131783.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.135340.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<input type=\'text\' name=\'rns_settings[rns_$args_label]\' value=\'$args_label\'>'' cannot be parsed correct.
+HTML code '$'<input type=\'text\' name=\'rns_settings[rns_heading]\' value=\'get_option("rns_settings")\' placeholder=\'$this_heading\'>'' cannot be parsed correct.
+HTML code '$'$args_value'' cannot be parsed correct.
+HTML code '$'$args_key'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/settings-logo.png'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/pinterest-icon.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/logo.svg'' cannot be parsed correct.
+HTML code '$'$rns->renderPlugin($options, $post_object)'' cannot be parsed correct.
+HTML code '$'<h3 class=\'rns-header\'>get_option("rns_settings")_rns_heading</h3>'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/like.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/love.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/happy.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/surprised.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/sad.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/angry.png'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/fb-icon.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/linkedin64.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/twitter-64.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'trailingslashit(plugin_dir_url())assets/img/whatsapp-icon.png'' cannot be parsed correct.
+HTML code '$'get_option("rns_settings")'' cannot be parsed correct.
+HTML code '$'<span style=\'margin-left: 1em; color: red\'>API key does not match your domain!</span>'' cannot be parsed correct.
+HTML code '$'\'>
+		'' cannot be parsed correct.
+HTML code '$']"'' cannot be parsed correct.
+HTML code '$' >
+		'' cannot be parsed correct.
+HTML code '$'</span>
+					</a>'' cannot be parsed correct.
+HTML code '$'" />
+						<span class="rns-share-label">'' cannot be parsed correct.
+HTML code '$'</span>
+					</a>
+				'' cannot be parsed correct.
+HTML code '$'">
+					</a>
+				</div>
+			</div>
+		'' cannot be parsed correct.
+HTML code '$'asdf'' cannot be parsed correct.
+HTML code '$'>Enable reactions on this post</label>
+		'' cannot be parsed correct.
+HTML code '$'">
+		'' cannot be parsed correct.
+HTML code '$'</em>
+					<img src='' cannot be parsed correct.
+HTML code '$'" />
+					<span>0</span>
+				</a>
+			</li>
+			<li class="rns-reaction-button" data-reaction="love">
+				<a href="">
+					<em>'' cannot be parsed correct.
+HTML code '$'</em>
+					<img src='' cannot be parsed correct.
+HTML code '$'" />
+					<span>0</span>
+				</a>
+			</li>
+			<li class="rns-reaction-button" data-reaction="happy">
+				<a href="">
+					<em>'' cannot be parsed correct.
+HTML code '$'</em>
+					<img src='' cannot be parsed correct.
+HTML code '$'" />
+					<span>0</span>
+				</a>
+			</li>
+			<li class="rns-reaction-button" data-reaction="surprised">
+				<a href="">
+					<em>'' cannot be parsed correct.
+HTML code '$'</em>
+					<img src='' cannot be parsed correct.
+HTML code '$'" />
+					<span>0</span>
+				</a>
+			</li>
+				<li class="rns-reaction-button" data-reaction="sad">
+					<a href="">
+						<em>'' cannot be parsed correct.
+HTML code '$'</em>
+						<img src='' cannot be parsed correct.
+HTML code '$'" />
+						<span>0</span>
+					</a>
+				</li>
+			<li class="rns-reaction-button" data-reaction="angry">
+				<a href="">
+					<em>'' cannot be parsed correct.
+HTML code '$'</em>
+					<img src='' cannot be parsed correct.
+HTML code '$'" />
+					<span>0</span>
+				</a>
+			</li>
+		</ul>
+
+
+		<div style="clear: both;"></div>
+
+		'' cannot be parsed correct.
+HTML code '$'" />
+						<span class="rns-share-label">'' cannot be parsed correct.
+HTML code '$'</span>
+					</a>'' cannot be parsed correct.
+HTML code '$'" />
+						<span class="rns-share-label">'' cannot be parsed correct.
+HTML code '$'</span>
+					</a>'' cannot be parsed correct.
+HTML code '$'" />
+						<span class="rns-share-label">'' cannot be parsed correct.
+HTML code '$'</span>
+					</a>'' cannot be parsed correct.
+HTML code '$'" />
+						<span class="rns-share-label">'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:06.197350.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.048190.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 20 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.876864.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running PHPRetrievalDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+rns.php:68
+  - RETRIEVAL call to get_option("rns_do_activation_redirect", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rns.php:81
+  - RETRIEVAL call to get_post_meta($id, $meta_key, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+rns.php:81
+  - RETRIEVAL call to get_post_meta($id, $meta_key, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+rns.php:109
+  - RETRIEVAL call to get_transient("rns-plugin-activation-notice") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+rns.php:131
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:169
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:172
+  - RETRIEVAL call to get_post_meta($post_id, "rns_enable", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+rns.php:188
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:243
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:251
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:260
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:293
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:302
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:322
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:395
+  - RETRIEVAL call to get_the_author() alters data types {'user_meta'}. Returns (string|null).
+  - Data types: user_meta
+rns.php:415
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:418
+  - RETRIEVAL call to get_post_meta($post_id, "rns_enable", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+rns.php:429
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:598
+  - RETRIEVAL call to get_post_meta($id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).
+  - Data types: post_meta
+rns.php:611
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rns.php:639
+  - RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+rns.php:69
+  - STORAGE call to delete_option("rns_do_activation_redirect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+rns.php:76
+  - STORAGE call to add_option("rns_do_activation_redirect", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+rns.php:116
+  - STORAGE call to delete_transient("rns-plugin-activation-notice") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+rns.php:160
+  - STORAGE call to update_post_meta($post_id, "rns_enable", $meta_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+rns.php:581
+  - STORAGE call to update_post_meta($post_id, "rns_reaction_" . $reaction, $amount) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+rns.php:587
+  - STORAGE call to update_post_meta($post_id, "rns_reaction_" . $reaction, $amount) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+rns.php:69
+  - DELETION call to delete_option("rns_do_activation_redirect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressStorageDetector.add_option("rns_do_activation_redirect", true) - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	DeletionDetector.delete_option("rns_do_activation_redirect") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressStorageDetector.delete_option("rns_do_activation_redirect") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_do_activation_redirect", false) - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("rns_settings") - {'option'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post_id, "rns_enable", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id, $meta_key, true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "rns_reaction_" . $reaction, $amount) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "rns_reaction_" . $reaction, $amount) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "rns_enable", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "rns_enable", $meta_value) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id, $meta_key, true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id) - {'post_meta'}
+site
+	WordPressStorageDetector.delete_transient("rns-plugin-activation-notice") - {'site'}
+	WordPressRetrievalDetector.get_transient("rns-plugin-activation-notice") - {'site'}
+user_meta
+	WordPressRetrievalDetector.get_the_author() - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.450397.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 44 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.221641.
+
+44 STORE_REACHES edges created
+44 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 91 nodes as PERSONAL
+In total, tainted 91 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.442725.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:37.988879!
+DELETION call to delete_option("rns_do_activation_redirect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_transient("rns-plugin-activation-notice") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "rns_enable", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_the_author() alters data types {'user_meta'}. Returns (string|null).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "rns_enable", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rns_do_activation_redirect", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($id, $meta_key, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($id, $meta_key, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+STORAGE call to delete_transient("rns-plugin-activation-notice") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, "rns_enable", $meta_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "rns_reaction_" . $reaction, $amount) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($post_id, "rns_reaction_" . $reaction, $amount) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_option("rns_do_activation_redirect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_option("rns_do_activation_redirect", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,526 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on front-end-users
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.406678.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.890562.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 52 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.374591.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 4 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.622173.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 382 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.712151.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.535777.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.094023.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 163 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.269582.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2700
+Added 2099 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2700
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.198168.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/example_hooks.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/front_end_users.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/functions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/admin/options.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/lib/front_end_users.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/views/footer.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/views/header.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/views/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/views/menu.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/views/not-logged-in.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/front-end-users/views/settings.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.994969.
+
+52 PHP_REACHES edges created
+4 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2644 PHP_REACHES edges created
+2700 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 999 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.130742.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.690304.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 26 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.598982.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 66 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.203628.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.058931.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.227006.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011880.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.031621.
+
+92 PHP_REACHES edges created
+92 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 84 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.143745.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.165593.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'apply_filters("feu_box_", $html)'' cannot be parsed correct.
+HTML code '$'apply_filters("_feu_box", $html)'' cannot be parsed correct.
+HTML code '$'$feu->get_user_menu()'' cannot be parsed correct.
+HTML code '$'<div class=$feu->update_user_settings($user, $_POST)"$feu->update_user_settings($user, $_POST)_1</div>'' cannot be parsed correct.
+HTML code '$'
+<br />
+$this->get_view($view_key)'' cannot be parsed correct.
+HTML code '$'<input type="text" id="url_path" name="front_end_users_options[url_path]" value="get_option("front_end_users_options")_url_path" /'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" id="display_custom_profile_settings" name="front_end_users_options[display_custom_profile_settings]" value="1"get_option("front_end_users_options") />'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" id="roles_with_admin_access_$role_key" name="front_end_users_options[roles_with_admin_access][]" value="$role_keyarray_unique(array_merge($roles_with_admin_access, [$this->administrator_role_key]))$disabled />'' cannot be parsed correct.
+HTML code '$' <label for=roles_with_admin_access_$role_key"$role_name</label>'' cannot be parsed correct.
+HTML code '$'wp_login_url(site_url($_SERVER["REQUEST_URI"]))'' cannot be parsed correct.
+HTML code '$'feu_get_url("settings")'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'feu_get_display_names_options_html($user)'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'" />
+		</p>
+		
+	</form>
+	
+</div'' cannot be parsed correct.
+HTML code '$'<div class="message">Successfully updated!</div>'' cannot be parsed correct.
+HTML code '$'<br /><em>(A value of "profile" will mean the user landing page is at "http://mysite.com/profile/".)</em>'' cannot be parsed correct.
+HTML code '$'<br /><em>(This determines whether profile fields added by plugins or themes will show up in the default public settings view. Please note that some plugins\' profile fields may not function correctly outside of the admin section.)</em>'' cannot be parsed correct.
+HTML code '$'<div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<p>Sorry, you need to be logged in to view these settings.</p>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.100690.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.049311.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 15 do_action/apply_filters calls and 22 add_action/add_filter calls. Now connecting do-add pairs.
+Added 7 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.523685.
+
+7 PHP_REACHES edges created
+7 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running PHPStorageDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running PropertyDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+example_hooks.php:99
+  - Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name 
+
+lib/front_end_users.php:433
+  - object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.
+  - Data types: user, first_name, user_meta
+lib/front_end_users.php:433
+  - object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.
+  - Data types: user, first_name, user_meta
+lib/front_end_users.php:634
+  - object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.
+  - Data types: user, first_name, user_meta
+lib/front_end_users.php:635
+  - object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.
+  - Data types: user, first_name, user_meta
+lib/front_end_users.php:637
+  - object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.
+  - Data types: last_name, user, user_meta
+lib/front_end_users.php:638
+  - object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.
+  - Data types: last_name, user, user_meta
+lib/front_end_users.php:640
+  - object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.
+  - Data types: user, first_name, user_meta
+lib/front_end_users.php:640
+  - object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.
+  - Data types: last_name, user, user_meta
+lib/front_end_users.php:641
+  - object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.
+  - Data types: user, first_name, user_meta
+lib/front_end_users.php:641
+  - object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.
+  - Data types: last_name, user, user_meta
+lib/front_end_users.php:642
+  - object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.
+  - Data types: user, first_name, user_meta
+lib/front_end_users.php:642
+  - object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.
+  - Data types: last_name, user, user_meta
+views/settings.php:61
+  - object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.
+  - Data types: user, first_name, user_meta
+views/settings.php:71
+  - object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.
+  - Data types: last_name, user, user_meta
+views/settings.php:109
+  - object property '$user->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+lib/front_end_users.php:51
+  - RETRIEVAL call to get_option("front_end_users_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/front_end_users.php:141
+  - RETRIEVAL call to get_option("active_plugins", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+lib/front_end_users.php:300
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).
+  - Data types: user, user_meta
+lib/front_end_users.php:347
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).
+  - Data types: user, user_meta
+lib/front_end_users.php:420
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+lib/front_end_users.php:432
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+lib/front_end_users.php:598
+  - RETRIEVAL call to wp_set_current_user($user_id) alters data types {'user_meta'}. Passed arguments: 0: $id (int). Returns (WP_User).
+  - Data types: user_meta
+lib/front_end_users.php:728
+  - RETRIEVAL call to get_option("front_end_users_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/front_end_users.php:734
+  - RETRIEVAL call to get_option("front_end_users_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lib/front_end_users.php:742
+  - RETRIEVAL call to get_option("front_end_users_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+views/settings.php:5
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta 
+
+lib/front_end_users.php:18
+  - STORAGE call to add_option("front_end_users_url_path", "profile") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/front_end_users.php:19
+  - STORAGE call to add_option("front_end_users_display_custom_profile_settings", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/front_end_users.php:60
+  - STORAGE call to update_option("front_end_users_options", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/front_end_users.php:595
+  - STORAGE call to edit_user($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (int|WP_Error).
+  - Data types: user, user_meta 
+
+By data type:
+email
+	PropertyDetector.(unknown) - {'email'}
+first_name
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	ArrayElementDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+last_name
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+option
+	WordPressRetrievalDetector.get_option("front_end_users_options") - {'option'}
+	WordPressStorageDetector.add_option("front_end_users_url_path", "profile") - {'option'}
+	WordPressStorageDetector.add_option("front_end_users_display_custom_profile_settings", 0) - {'option'}
+	WordPressStorageDetector.update_option("front_end_users_options", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("front_end_users_options") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins", []) - {'option'}
+	WordPressRetrievalDetector.get_option("front_end_users_options") - {'option'}
+	WordPressRetrievalDetector.get_option("front_end_users_options") - {'option'}
+user
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	WordPressStorageDetector.edit_user($user_id) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	WordPressStorageDetector.edit_user($user_id) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_set_current_user($user_id) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'first_name', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'last_name', 'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.656634.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 21 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.125777.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 3044
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 3119
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 4701
+21 STORE_REACHES edges created
+21 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 187 nodes as PERSONAL
+In total, tainted 187 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:03.113423.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:45.865146!
+Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.,,None
+object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.,,None
+object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.,,None
+object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.,,None
+object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.,,None
+object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.,,None
+object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.,,None
+object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.,,None
+object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.,,None
+object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.,,None
+object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.,,None
+object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.,,None
+object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.,,None
+object property '$user->user_email' of personal types {'email'} is found.,,None
+object property '$user->first_name' of personal types {'user', 'first_name', 'user_meta'} is found.,,None
+object property '$user->last_name' of personal types {'last_name', 'user', 'user_meta'} is found.,,None
+RETRIEVAL call to get_option("active_plugins", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("front_end_users_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_set_current_user($user_id) alters data types {'user_meta'}. Passed arguments: 0: $id (int). Returns (WP_User).,None,None
+RETRIEVAL call to get_option("front_end_users_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("front_end_users_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("front_end_users_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+STORAGE call to add_option("front_end_users_url_path", "profile") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("front_end_users_display_custom_profile_settings", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to edit_user($user_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (int|WP_Error).,None,None
+STORAGE call to update_option("front_end_users_options", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] WP User info of types (['user', 'user_meta']) stored through WordPress function "edit_user($user_id)", found in file lib/front_end_users.php at line 595. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

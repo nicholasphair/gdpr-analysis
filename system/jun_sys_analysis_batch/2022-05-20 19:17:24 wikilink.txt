@@ -1,0 +1,572 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on wikilink
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.639185.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.894138.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.298564.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.803186.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 256 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.754646.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.758400.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.116484.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 76 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.652872.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1327
+Added 994 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2766
+Added 1439 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.187842.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wikilink/wikilink.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wikilink/wikipedia-api.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wikilink/wikipedia-functions.php' cannot be parsed correct.
+Added new directory node for: cache
+Added new directory node for: wikipedia
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wikilink/cache/wikipedia/index.html
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wikilink/cache/wikipedia/index.html' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.622134.
+
+4 Nodes Created
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1326 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1439 PHP_REACHES edges created
+3 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2770 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 414 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.068486.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.702386.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 9 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.941857.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 12 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.160249.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.072666.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.171339.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008331.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.037893.
+
+21 PHP_REACHES edges created
+21 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 9 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.163170.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.123274.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<link rel="stylesheet" href="wikiPath()js/sexy-tooltips/get_option("wiki_css").css" type="text/css" media="all"/>'' cannot be parsed correct.
+HTML code '$'<link rel="stylesheet" href="wikiPath()css/style.css" type="text/css" media="all"/>'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript">
+    var wiki = new Array();
+    wiki["dir"]     = "wikiPath()";
+    wiki["width"]   = get_option("wiki_width");
+    wiki["event"]   = "get_option("wiki_event")";
+    wiki["lang"]    = "get_option("wiki_lang")";
+  </script'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="wikiPath()js/sexy-tooltips.js"></script'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="wikiPath()js/wikicore.js"></script'' cannot be parsed correct.
+HTML code '$'Delete Cache'' cannot be parsed correct.
+HTML code '$'$_SERVER_REQUEST_URI'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'utf8_encode($body)'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'get_option("wiki_width")'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'get_option("wiki_css")'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'$_SERVER_REQUEST_URI'' cannot be parsed correct.
+HTML code '$'
+
+<!-- wikiLink Start -->
+	'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools-yui-compressed.js"></script>'' cannot be parsed correct.
+HTML code '$'
+
+<!-- wikiLink End -->
+	'' cannot be parsed correct.
+HTML code '$'<b>OOPS, This section is down for maintinance.  Please try again later.</b>'' cannot be parsed correct.
+HTML code '$'"/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><label for="wiki_width">Mode</label></th>
+          <td>
+          <select name="wiki_event"/>
+          <option value="click" '' cannot be parsed correct.
+HTML code '$'</label></th>
+          <td>
+          <select name="wiki_css"/>
+          <option value="vista"   '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.858259.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.052587.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 6 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.453059.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MongoDbDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PropertyDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running SqlServerDetector
+### Start running VariableDetector
+### Finish running PHPRetrievalDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running MySQLiDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running PHPStorageDetector
+### Finished running detectors
+wikipedia-api.php:130
+  - RETRIEVAL call to fread($fh, filesize($cache)).
+  - Data types: file 
+
+wikipedia-api.php:123
+  - STORAGE call to fwrite($fh, $body).
+  - Data types: file 
+
+wikilink.php:36
+  - RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:54
+  - RETRIEVAL call to get_option("wiki_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:55
+  - RETRIEVAL call to get_option("wiki_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:56
+  - RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:59
+  - RETRIEVAL call to get_option("wiki_framework") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:131
+  - RETRIEVAL call to get_option("wiki_framework") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:132
+  - RETRIEVAL call to get_option("wiki_framework") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:140
+  - RETRIEVAL call to get_option("wiki_images") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:141
+  - RETRIEVAL call to get_option("wiki_images") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:149
+  - RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:150
+  - RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:151
+  - RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:152
+  - RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:153
+  - RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:154
+  - RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:155
+  - RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:162
+  - RETRIEVAL call to get_option("wiki_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:169
+  - RETRIEVAL call to get_option("wiki_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:170
+  - RETRIEVAL call to get_option("wiki_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:175
+  - RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:178
+  - RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:179
+  - RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:180
+  - RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:181
+  - RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:182
+  - RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:190
+  - RETRIEVAL call to get_option("wiki_cache") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikilink.php:191
+  - RETRIEVAL call to get_option("wiki_cache") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikipedia-api.php:15
+  - RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikipedia-api.php:22
+  - RETRIEVAL call to get_option("wiki_cache") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wikipedia-api.php:23
+  - RETRIEVAL call to get_option("wiki_images") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+wikilink.php:12
+  - STORAGE call to add_option("wiki_cache", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:13
+  - STORAGE call to add_option("wiki_images", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:14
+  - STORAGE call to add_option("wiki_lang", "en") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:15
+  - STORAGE call to add_option("wiki_event", "click") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:16
+  - STORAGE call to add_option("wiki_width", 240) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:17
+  - STORAGE call to add_option("wiki_css", "vista") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:18
+  - STORAGE call to add_option("wiki_framework", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:93
+  - STORAGE call to update_option("wiki_framework", $_POST["wiki_framework"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:94
+  - STORAGE call to update_option("wiki_images", $_POST["wiki_images"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:95
+  - STORAGE call to update_option("wiki_lang", $_POST["wiki_lang"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:96
+  - STORAGE call to update_option("wiki_width", $_POST["wiki_width"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:97
+  - STORAGE call to update_option("wiki_event", $_POST["wiki_event"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:98
+  - STORAGE call to update_option("wiki_css", $_POST["wiki_css"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+wikilink.php:99
+  - STORAGE call to update_option("wiki_cache", $_POST["wiki_cache"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.fwrite($fh, $body) - {'file'}
+	PHPRetrievalDetector.fread($fh, filesize($cache)) - {'file'}
+option
+	WordPressRetrievalDetector.get_option("wiki_framework") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_event") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_css") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_lang") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_images") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_lang") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_cache") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_lang") - {'option'}
+	WordPressStorageDetector.update_option("wiki_css", $_POST["wiki_css"]) - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_lang") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_width") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_width") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_images") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_cache") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_event") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_css") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_css") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_css") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_lang") - {'option'}
+	WordPressStorageDetector.update_option("wiki_images", $_POST["wiki_images"]) - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_lang") - {'option'}
+	WordPressStorageDetector.add_option("wiki_framework", 1) - {'option'}
+	WordPressStorageDetector.update_option("wiki_width", $_POST["wiki_width"]) - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_framework") - {'option'}
+	WordPressStorageDetector.add_option("wiki_images", true) - {'option'}
+	WordPressStorageDetector.add_option("wiki_event", "click") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_css") - {'option'}
+	WordPressStorageDetector.add_option("wiki_css", "vista") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_lang") - {'option'}
+	WordPressStorageDetector.update_option("wiki_event", $_POST["wiki_event"]) - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_framework") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_lang") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_css") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_event") - {'option'}
+	WordPressStorageDetector.update_option("wiki_lang", $_POST["wiki_lang"]) - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_lang") - {'option'}
+	WordPressStorageDetector.add_option("wiki_cache", true) - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_images") - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_cache") - {'option'}
+	WordPressStorageDetector.update_option("wiki_framework", $_POST["wiki_framework"]) - {'option'}
+	WordPressRetrievalDetector.get_option("wiki_css") - {'option'}
+	WordPressStorageDetector.add_option("wiki_lang", "en") - {'option'}
+	WordPressStorageDetector.add_option("wiki_width", 240) - {'option'}
+	WordPressStorageDetector.update_option("wiki_cache", $_POST["wiki_cache"]) - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.939410.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 421 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.378041.
+
+421 STORE_REACHES edges created
+421 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.007363.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:33.756187!
+RETRIEVAL call to fread($fh, filesize($cache)).,None,None
+STORAGE call to fwrite($fh, $body).,None,None
+RETRIEVAL call to get_option("wiki_framework") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_framework") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_images") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_images") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_cache") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_cache") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_css") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_width") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_event") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_framework") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_cache") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wiki_images") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("wiki_cache", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wiki_images", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wiki_lang", "en") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wiki_event", "click") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wiki_width", 240) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wiki_css", "vista") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wiki_framework", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wiki_framework", $_POST["wiki_framework"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wiki_images", $_POST["wiki_images"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wiki_lang", $_POST["wiki_lang"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wiki_width", $_POST["wiki_width"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wiki_event", $_POST["wiki_event"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wiki_css", $_POST["wiki_css"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wiki_cache", $_POST["wiki_cache"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

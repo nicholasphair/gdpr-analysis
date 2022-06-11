@@ -1,0 +1,415 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on tantan-spam
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.299233.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.881865.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 25 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.456021.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.567937.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 255 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.916922.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.556342.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.105936.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 123 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.988022.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1755
+Added 1352 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1755
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.157698.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tantan-spam/plugin.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.173326.
+
+1000 PHP_REACHES edges created
+1755 PHP_REACHES edges created
+1755 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 654 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.046060.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.805423.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 30 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.121710.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 53 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.174670.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.048792.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.437359.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018618.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.036307.
+
+83 PHP_REACHES edges created
+83 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 56 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.131880.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+5 SQL operations to process.
+SELECT comment_ID, comment_post_ID, comment_content  FROM $wpdb WHERE comment_post_ID = '$post_ID' AND comment_approved = '1'
+SQL command (SELECT comment_ID, comment_post_ID, comment_content FROM $wpdb WHERE comment_post_ID = '$post_ID' AND comment_approved = '1') cannot be parsed correct.
+SELECT * FROM $wpdb WHERE comment_approved = 'spam'
+SQL command (SELECT * FROM $wpdb WHERE comment_approved = 'spam') cannot be parsed correct.
+SELECT * FROM $wpdb WHERE comment_approved != 'spam'
+SQL command (SELECT * FROM $wpdb WHERE comment_approved != 'spam') cannot be parsed correct.
+SELECT * FROM $wpdb WHERE comment_approved = 'spam'
+SQL command (SELECT * FROM $wpdb WHERE comment_approved = 'spam') cannot be parsed correct.
+DELETE FROM $wpdb WHERE comment_approved = 'spam' AND comment_ID = '$spam'
+SQL command (DELETE FROM $wpdb WHERE comment_approved = 'spam' AND comment_ID = '$spam') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1439, 1875, 1929, 1995, 2033]
+Added 0 SQL nodes. 0 out of 5 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:02.343227.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div id="message" class="updated fade"><p>Deleted $this->processSpam() spams from your spams queue.</p></div>'' cannot be parsed correct.
+HTML code '$'$this->getSpamCount()'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'display:none;'' cannot be parsed correct.
+HTML code '$'recaptcha_get_signup_url(recaptcha_wp_blog_domain(), "tantan-spam-filter")'' cannot be parsed correct.
+HTML code '$'$this_captcha_public'' cannot be parsed correct.
+HTML code '$'$this_captcha_private'' cannot be parsed correct.
+HTML code '$'$this_options_limit'' cannot be parsed correct.
+HTML code '$'checked=\'checked\''' cannot be parsed correct.
+HTML code '$'implode("
+", $this->getSpamPatterns())'' cannot be parsed correct.
+HTML code '$'implode(" ", $this->getSpamWords())'' cannot be parsed correct.
+HTML code '$'count($words)'' cannot be parsed correct.
+HTML code '$'<a href=\'#\' class=\'spam\' title=\'$count occurrences\' onclick="return addWord(this, $word\')"$word</a> '' cannot be parsed correct.
+HTML code '$'</textarea>
+		<br /><small>One <a href="http://www.php.net/manual/en/function.eregi.php">regex pattern</a> per line. <a href="http://code.google.com/p/tantan-toolkit/wiki/SpamFilterRules">List of useful patterns</a>.</small>
+       <br /><br />
+	   <strong>Banned Words List</strong>: <br />
+	   <textarea name="options[wordsToDieOn]" id="wordsToDieOn">'' cannot be parsed correct.
+HTML code '$'</textarea><br />
+       <p class="submit">
+       <input type="submit" value="save rules" /><br />
+       Process the <a href="edit-comments.php?page=akismet-admin">spam queue</a> with these rules <input type="checkbox" name="processSpam" value="1" />
+       </p>
+       '' cannot be parsed correct.
+HTML code '$'</strong> possible spam words from your existing spam queue.
+	       You can use this list to help you tweak the plugin\'s banned words list. Just click on a word to add it to the list.</p>
+       '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.447634.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046640.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.300233.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running DbaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MsqlDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running HashDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running maxdbDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running PHPRetrievalDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running MySQLiDetector
+### Start running VariableDetector
+### Finish running Sqlite3Detector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running PHPStorageDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running SqlServerDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+plugin.php:427
+  - hash_hmac called with unapproved hash algorithm md5. Ignore if this is not encrypting personal information 
+
+plugin.php:427
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+plugin.php:429
+  - MD5 called with parameters [TANTAN_SPAMFILTER_TOKEN, data]. Ignore if [TANTAN_SPAMFILTER_TOKEN, data] does not contain personal information. 
+
+plugin.php:446
+  - RETRIEVAL call to fgets($fs, 1160).
+  - Data types: file
+plugin.php:559
+  - RETRIEVAL call to fgets($fs, 1160).
+  - Data types: file 
+
+plugin.php:445
+  - STORAGE call to fwrite($fs, $http_request).
+  - Data types: file
+plugin.php:556
+  - STORAGE call to fwrite($fs, $http_request).
+  - Data types: file 
+
+plugin.php:57
+  - RETRIEVAL call to get_option("tantan_spam_filter") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin.php:83
+  - RETRIEVAL call to get_option("tantan_spam_filter") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin.php:84
+  - RETRIEVAL call to get_option("tantan_spam_filter_recaptcha") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin.php:230
+  - RETRIEVAL call to get_option("tantan_spam_filter") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin.php:244
+  - RETRIEVAL call to get_option("tantan_spam_filter_recaptcha") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin.php:298
+  - RETRIEVAL call to get_option("tantan_spam_filter_recaptcha") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+plugin.php:383
+  - RETRIEVAL call to get_option("tantan-spam-count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+plugin.php:76
+  - STORAGE call to update_option("tantan_spam_filter", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+plugin.php:80
+  - STORAGE call to update_option("tantan_spam_filter_recaptcha", $_POST["recaptcha"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+plugin.php:389
+  - STORAGE call to update_option("tantan-spam-count", $count + 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+plugin.php:455
+  - STORAGE call to update_option("update_plugins", $new) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+plugin.php:242
+  - CRYPTOGRAPHY call to $this->hash($_POST["tantan_override_ts"]).
+plugin.php:294
+  - CRYPTOGRAPHY call to $this->hash($time).
+plugin.php:427
+  - CRYPTOGRAPHY call to hash_hmac("md5", $data, TANTAN_SPAMFILTER_TOKEN). 
+
+By data type:
+file
+	PHPRetrievalDetector.fgets($fs, 1160) - {'file'}
+	PHPStorageDetector.fwrite($fs, $http_request) - {'file'}
+	PHPStorageDetector.fwrite($fs, $http_request) - {'file'}
+	PHPRetrievalDetector.fgets($fs, 1160) - {'file'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	HashDetector.(unknown) - set()
+	GenericEncryptionDetector.hash_hmac("md5", $data, TANTAN_SPAMFILTER_TOKEN) - set()
+	GenericEncryptionDetector.$this->hash($_POST["tantan_override_ts"]) - set()
+	GenericEncryptionDetector.$this->hash($time) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("tantan_spam_filter_recaptcha") - {'option'}
+	WordPressRetrievalDetector.get_option("tantan-spam-count") - {'option'}
+	WordPressStorageDetector.update_option("tantan_spam_filter", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("tantan_spam_filter") - {'option'}
+	WordPressRetrievalDetector.get_option("tantan_spam_filter") - {'option'}
+	WordPressRetrievalDetector.get_option("tantan_spam_filter_recaptcha") - {'option'}
+	WordPressRetrievalDetector.get_option("tantan_spam_filter_recaptcha") - {'option'}
+	WordPressRetrievalDetector.get_option("tantan_spam_filter") - {'option'}
+	WordPressStorageDetector.update_option("tantan-spam-count", $count + 1) - {'option'}
+	WordPressStorageDetector.update_option("update_plugins", $new) - {'option'}
+	WordPressStorageDetector.update_option("tantan_spam_filter_recaptcha", $_POST["recaptcha"]) - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.995821.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 32 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.133456.
+
+32 STORE_REACHES edges created
+32 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 22 nodes as ENCRYPTED
+In total, tainted 22 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.590765.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:33.205935!
+CRYPTOGRAPHY call to $this->hash($_POST["tantan_override_ts"]).,None,None
+CRYPTOGRAPHY call to $this->hash($time).,None,None
+CRYPTOGRAPHY call to hash_hmac("md5", $data, TANTAN_SPAMFILTER_TOKEN).,None,None
+hash_hmac called with unapproved hash algorithm md5. Ignore if this is not encrypting personal information,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters [TANTAN_SPAMFILTER_TOKEN, data]. Ignore if [TANTAN_SPAMFILTER_TOKEN, data] does not contain personal information.,md5,None
+RETRIEVAL call to fgets($fs, 1160).,None,None
+RETRIEVAL call to fgets($fs, 1160).,None,None
+STORAGE call to fwrite($fs, $http_request).,None,None
+STORAGE call to fwrite($fs, $http_request).,None,None
+RETRIEVAL call to get_option("tantan_spam_filter") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("tantan_spam_filter_recaptcha") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("tantan_spam_filter_recaptcha") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("tantan-spam-count") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("tantan_spam_filter") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("tantan_spam_filter") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("tantan_spam_filter_recaptcha") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("tantan-spam-count", $count + 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("update_plugins", $new) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("tantan_spam_filter", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("tantan_spam_filter_recaptcha", $_POST["recaptcha"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

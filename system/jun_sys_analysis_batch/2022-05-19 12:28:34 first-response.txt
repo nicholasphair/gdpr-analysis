@@ -1,0 +1,439 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on first-response
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.326113.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.824269.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 167 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.458005.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.594792.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 238 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.723450.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 2 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.693394.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.121470.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 107 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.588837.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2255
+Added 1739 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2255
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.057632.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/first-response/Emergency_Call.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/first-response/first-response.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.258992.
+
+167 PHP_REACHES edges created
+2 REACHES edges created
+238 PHP_REACHES edges created
+2 CALLS edges created
+1000 PHP_REACHES edges created
+1846 PHP_REACHES edges created
+2255 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 761 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.060297.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.955423.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 15 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.311904.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 14 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.149065.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.079167.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.180110.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007459.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.033896.
+
+29 PHP_REACHES edges created
+29 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 31 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.119625.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+SELECT * FROM call_tags
+SQL command (SELECT * FROM call_tags) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [703]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.310950.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$last_post->format("j F Y")'' cannot be parsed correct.
+HTML code '$'Warning: Skipping email with empty message: imap_fetch_overview($inbox, $email_number, 0)_0_subject" onimap_fetch_overview($inbox, $email_number, 0)_0_date'' cannot be parsed correct.
+HTML code '$'ID: $call->write()<br />'' cannot be parsed correct.
+HTML code '$'$call'' cannot be parsed correct.
+HTML code '$'<div>0 calls imported.</div>'' cannot be parsed correct.
+HTML code '$'<div>0 calls found. None imported.</div>'' cannot be parsed correct.
+HTML code '$'$this->setReport($message)'' cannot be parsed correct.
+HTML code '$'<div class="call" style="border: 1px solid black; background:#fff; margin: 10px 0; padding: 30px;">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.583865.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045398.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 2 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.375448.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running CubridDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running HashDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running maxdbDetector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running MySQLiDetector
+### Start running WordpressHashingFnDetector
+### Finish running Sqlite3Detector
+### Start running WordPressRemoteDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running SqlServerDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running VariableDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+Emergency_Call.php:49
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+Emergency_Call.php:64
+  - variable '$username' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+Emergency_Call.php:68
+  - variable '$emails' of personal types {'email'} is found.
+  - Data types: email
+Emergency_Call.php:77
+  - variable '$emails' of personal types {'email'} is found.
+  - Data types: email
+Emergency_Call.php:86
+  - variable '$emails' of personal types {'email'} is found.
+  - Data types: email
+Emergency_Call.php:86
+  - variable '$email_number' of personal types {'email'} is found.
+  - Data types: email
+Emergency_Call.php:89
+  - variable '$email_number' of personal types {'email'} is found.
+  - Data types: email
+Emergency_Call.php:91
+  - variable '$email_number' of personal types {'email'} is found.
+  - Data types: email 
+
+Emergency_Call.php:54
+  - RETRIEVAL call to get_posts(["post_type" => "ems_call", "numberposts" => 1]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+Emergency_Call.php:61
+  - RETRIEVAL call to get_post_meta($most_recent[0]->ID, "call_number", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta 
+
+Emergency_Call.php:283
+  - STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+Emergency_Call.php:289
+  - STORAGE call to update_post_meta($id, "full_description", $this->report) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+Emergency_Call.php:290
+  - STORAGE call to update_post_meta($id, "call_received", $this->date->format("ymd")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+Emergency_Call.php:291
+  - STORAGE call to update_post_meta($id, "dispatched", $this->date->format("H:i")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+Emergency_Call.php:293
+  - STORAGE call to update_post_meta($id, "call_number", $this->call_number) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+none
+	WordPressRetrievalDetector.get_posts(["post_type" => "ems_call", "numberposts" => 1]) - set()
+	WordPressStorageDetector.wp_insert_post($post) - set()
+post_meta
+	WordPressStorageDetector.update_post_meta($id, "call_received", $this->date->format("ymd")) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($id, "call_number", $this->call_number) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($id, "dispatched", $this->date->format("H:i")) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($id, "full_description", $this->report) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($most_recent[0]->ID, "call_number", true) - {'post_meta'}
+user
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+user_meta
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.807599.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 4 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.065582.
+
+4 STORE_REACHES edges created
+4 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 289 nodes as PERSONAL
+In total, tainted 289 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:04.361890.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:35.084745!
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$username' of personal types {'user', 'user_meta'} is found.,,None
+variable '$emails' of personal types {'email'} is found.,,None
+variable '$emails' of personal types {'email'} is found.,,None
+variable '$emails' of personal types {'email'} is found.,,None
+variable '$email_number' of personal types {'email'} is found.,,None
+variable '$email_number' of personal types {'email'} is found.,,None
+variable '$email_number' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_posts(["post_type" => "ems_call", "numberposts" => 1]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($most_recent[0]->ID, "call_number", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to update_post_meta($id, "full_description", $this->report) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($id, "call_received", $this->date->format("ymd")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($id, "dispatched", $this->date->format("H:i")) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to update_post_meta($id, "call_number", $this->call_number) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['user', 'user_meta', 'email']) stored through WordPress function "wp_insert_post($post)", found in file Emergency_Call.php at line 283. 
+
+[has_storage] PII of types (['user', 'user_meta', 'email']) stored through WordPress function "update_post_meta($id, "call_received", $this->date->format("ymd"))", found in file Emergency_Call.php at line 290. 
+
+[has_storage] PII of types (['user', 'user_meta', 'email']) stored through WordPress function "update_post_meta($id, "call_number", $this->call_number)", found in file Emergency_Call.php at line 293. 
+
+[has_storage] PII of types (['user', 'user_meta', 'email']) stored through WordPress function "update_post_meta($id, "dispatched", $this->date->format("H:i"))", found in file Emergency_Call.php at line 291. 
+
+[has_storage] PII of types (['user', 'user_meta', 'email']) stored through WordPress function "update_post_meta($id, "full_description", $this->report)", found in file Emergency_Call.php at line 289. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through wp_insert_post($post) does not have corresponding deletion method. Storage method found in file Emergency_Call.php at line 283. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_post_meta($id, "call_received", $this->date->format("ymd")) does not have corresponding deletion method. Storage method found in file Emergency_Call.php at line 290. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_post_meta($id, "call_number", $this->call_number) does not have corresponding deletion method. Storage method found in file Emergency_Call.php at line 293. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_post_meta($id, "dispatched", $this->date->format("H:i")) does not have corresponding deletion method. Storage method found in file Emergency_Call.php at line 291. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_post_meta($id, "full_description", $this->report) does not have corresponding deletion method. Storage method found in file Emergency_Call.php at line 289. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1198. Found in file Emergency_Call.php at line 283 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1246. Found in file Emergency_Call.php at line 290 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1287. Found in file Emergency_Call.php at line 293 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1261. Found in file Emergency_Call.php at line 291 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1235. Found in file Emergency_Call.php at line 289 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        

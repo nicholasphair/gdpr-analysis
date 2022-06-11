@@ -1,0 +1,570 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on bridge-paypal-to-email-lists
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.368706.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.891285.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.266026.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.593633.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 152 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.938789.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.656654.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.112553.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 84 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.573833.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1051
+Added 814 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1051
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.982455.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bridge-paypal-to-email-lists/bridge_paypal.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.166378.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1050 PHP_REACHES edges created
+1051 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 393 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.052704.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.354935.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.651605.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 2 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.210615.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.024821.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.038498.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007831.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.058292.
+
+3 PHP_REACHES edges created
+3 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.163429.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.132340.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_option("grumpy_bpte_activation_key")'' cannot be parsed correct.
+HTML code '$'site_url()/?bridge_action=paypal_ipn'' cannot be parsed correct.
+HTML code '$'get_option("grumpy_bpte_ac_url")'' cannot be parsed correct.
+HTML code '$'get_option("grumpy_bpte_ac_api_key")'' cannot be parsed correct.
+HTML code '$'get_option("grumpy_bpte_list_from")_0'' cannot be parsed correct.
+HTML code '$'<option value=$l_asEmailAcList_id" selected="selected">$l_asEmailAcList_name</option>'' cannot be parsed correct.
+HTML code '$'<option value=$l_asEmailAcList_id"$l_asEmailAcList_name</option>'' cannot be parsed correct.
+HTML code '$'<select name="grumpy_bpte_list_to[]"><option value="">(select)</option>'' cannot be parsed correct.
+HTML code '$'$l_asTransaction_0'' cannot be parsed correct.
+HTML code '$'$l_asTransaction_1'' cannot be parsed correct.
+HTML code '$'$l_asTransaction_2'' cannot be parsed correct.
+HTML code '$'addslashes($l_sEmailAcListSelect)'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'display:none;'' cannot be parsed correct.
+HTML code '$'">
+							        </td>
+							        <td>
+								        <select name="grumpy_bpte_list_to[]">
+									        <option value="">(select)</option>
+											'' cannot be parsed correct.
+HTML code '$'</td><td><a class="page-title-action" href="javascript:void(0)" onclick="deleteRow(this)">Delete Row</a></td></tr>
+							</tr>
+				    '' cannot be parsed correct.
+HTML code '$'</td>
+						<td>'' cannot be parsed correct.
+HTML code '$'</td>
+						<td>'' cannot be parsed correct.
+HTML code '$'</td>						
+					</tr>
+		'' cannot be parsed correct.
+HTML code '$'</td><td><a class="page-title-action" href="javascript:void(0)" onclick="deleteRow(this)">Delete Row</a></td></tr>\');
+	}
+	function bridgeAddUpgradeRow(){
+		jQuery(\'#bridge_mapping_table\').append(\'<tr class="mapping_row"><td colspan="2">Need to map more than one field?  <a href="http://erinhookkelly.com/bridge" target="_blank">Get the Pro Version</a>.</td><td><a class="page-title-action" href="javascript:void(0)" onclick="deleteRow(this)">Delete Row</a></td></tr>\');
+	}
+	function deleteRow(p_xRow){
+		var l_nCount = jQuery(\'#bridge_mapping_table tr.mapping_row\').size();
+		if(l_nCount > 1){
+			jQuery(p_xRow).parent().parent().remove();
+		}else{
+			alert("Must have at least one row.");
+		}
+	}
+</script>
+'' cannot be parsed correct.
+HTML code '$'done'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.098187.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.048405.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.410795.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running OpenSSLDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPStorageDetector
+### Start running PhpVarDetector
+### Finish running PHPRetrievalDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running maxdbDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running MySQLiDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running PHPIncludedDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running VariableDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running PhpCurlDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+bridge_paypal.php:371
+  - Request variable '$_POST["receiver_email"]' of personal types {'email'} is found.
+  - Data types: email
+bridge_paypal.php:372
+  - Request variable '$_POST["payer_email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+bridge_paypal.php:406
+  - External request to URL https://www.sandbox.paypal.com/cgi-bin/webscr.
+  - Data types: remote 
+
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+bridge_paypal.php:345
+  - MD5 called with parameters []. Ignore if [] does not contain personal information. 
+
+bridge_paypal.php:371
+  - variable '$p_sReceiver_email' of personal types {'email'} is found.
+  - Data types: email
+bridge_paypal.php:372
+  - variable '$p_sPayer_email' of personal types {'email'} is found.
+  - Data types: email
+bridge_paypal.php:497
+  - variable '$p_sPayer_email' of personal types {'email'} is found.
+  - Data types: email
+bridge_paypal.php:517
+  - variable '$p_sPayer_email' of personal types {'email'} is found.
+  - Data types: email
+bridge_paypal.php:534
+  - variable '$p_sPayer_email' of personal types {'email'} is found.
+  - Data types: email 
+
+bridge_paypal.php:47
+  - RETRIEVAL call to get_option("grumpy_bpte_list_from") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:48
+  - RETRIEVAL call to get_option("grumpy_bpte_list_to") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:50
+  - RETRIEVAL call to get_option("grumpy_bpte_activation_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:52
+  - RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:54
+  - RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:57
+  - RETRIEVAL call to get_option("grumpy_bpte_ac_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:58
+  - RETRIEVAL call to get_option("grumpy_bpte_ac_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:107
+  - RETRIEVAL call to get_option("grumpy_bpte_activation_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:149
+  - RETRIEVAL call to get_option("grumpy_bpte_service") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:150
+  - RETRIEVAL call to get_option("grumpy_bpte_service") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:156
+  - RETRIEVAL call to get_option("grumpy_bpte_service") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:159
+  - RETRIEVAL call to get_option("grumpy_bpte_ac_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:163
+  - RETRIEVAL call to get_option("grumpy_bpte_ac_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:336
+  - RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:413
+  - RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:441
+  - RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:450
+  - RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:459
+  - RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:468
+  - RETRIEVAL call to get_option("grumpy_bpte_service") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:470
+  - RETRIEVAL call to get_option("grumpy_bpte_list_from") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:471
+  - RETRIEVAL call to get_option("grumpy_bpte_list_to") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:479
+  - RETRIEVAL call to get_option("grumpy_bpte_ac_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:480
+  - RETRIEVAL call to get_option("grumpy_bpte_ac_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bridge_paypal.php:556
+  - RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+bridge_paypal.php:21
+  - STORAGE call to update_option("grumpy_bpte_transactions", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bridge_paypal.php:338
+  - STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bridge_paypal.php:416
+  - STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bridge_paypal.php:444
+  - STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bridge_paypal.php:453
+  - STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bridge_paypal.php:462
+  - STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bridge_paypal.php:559
+  - STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("grumpy_bpte_transactions") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_transactions") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_service") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_ac_url") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_transactions") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_list_to") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_transactions") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_ac_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_activation_key") - {'option'}
+	WordPressStorageDetector.update_option("grumpy_bpte_transactions", $l_axLog) - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_transactions") - {'option'}
+	WordPressStorageDetector.update_option("grumpy_bpte_transactions", $l_axLog) - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_transactions") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_ac_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_list_from") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_ac_url") - {'option'}
+	WordPressStorageDetector.update_option("grumpy_bpte_transactions", $l_axLog) - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_service") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_ac_url") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_list_to") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_service") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_activation_key") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_transactions") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_service") - {'option'}
+	WordPressStorageDetector.update_option("grumpy_bpte_transactions", "") - {'option'}
+	WordPressStorageDetector.update_option("grumpy_bpte_transactions", $l_axLog) - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_list_from") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_transactions") - {'option'}
+	WordPressRetrievalDetector.get_option("grumpy_bpte_ac_api_key") - {'option'}
+	WordPressStorageDetector.update_option("grumpy_bpte_transactions", $l_axLog) - {'option'}
+	WordPressStorageDetector.update_option("grumpy_bpte_transactions", $l_axLog) - {'option'}
+remote
+	PhpCurlDetector.(unknown) - {'remote'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.390713.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 168 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.247511.
+
+168 STORE_REACHES edges created
+168 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 30 nodes as PERSONAL
+In total, tainted 30 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 10 nodes as ENCRYPTED
+In total, tainted 10 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.045834.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:28.936058!
+Request variable '$_POST["receiver_email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["payer_email"]' of personal types {'email'} is found.,,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+External request to URL https://www.sandbox.paypal.com/cgi-bin/webscr.,https,['https://www.sandbox.paypal.com/cgi-bin/webscr']
+variable '$p_sReceiver_email' of personal types {'email'} is found.,,None
+variable '$p_sPayer_email' of personal types {'email'} is found.,,None
+variable '$p_sPayer_email' of personal types {'email'} is found.,,None
+variable '$p_sPayer_email' of personal types {'email'} is found.,,None
+variable '$p_sPayer_email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_option("grumpy_bpte_activation_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_service") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_service") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_service") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_ac_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_ac_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_service") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_list_from") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_list_from") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_list_to") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_ac_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_list_to") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_ac_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_activation_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_transactions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_ac_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("grumpy_bpte_ac_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("grumpy_bpte_transactions", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("grumpy_bpte_transactions", $l_axLog) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

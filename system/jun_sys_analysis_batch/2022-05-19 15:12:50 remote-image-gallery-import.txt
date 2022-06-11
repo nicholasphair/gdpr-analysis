@@ -1,0 +1,590 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on remote-image-gallery-import
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.337413.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.901410.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.278567.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.545770.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 254 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.513750.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.927062.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.135905.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 97 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.906974.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1251
+Added 900 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1251
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.980135.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/remote-image-gallery-import/image-leech.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.181085.
+
+1000 PHP_REACHES edges created
+1251 PHP_REACHES edges created
+1251 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 454 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.944111.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.920639.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 13 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.331268.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 9 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.192709.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.091129.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.290412.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011583.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.039885.
+
+22 PHP_REACHES edges created
+22 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 13 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.119606.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.111174.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'
+<style tyle="text/css">
+
+#images{display:none;}
+
+#imglist table { border: 0; border-collapse: collapse; width: 100%; }
+
+#imglist table td {
+	padding: 5px 10px 5px 10px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	overflow:hidden;
+}
+
+#imglist table thead td {
+	padding: 10px 10px;
+	background-color: #f8f8f8;
+	font-weight: bolder;
+	color: #333;
+}
+
+#imglist {
+	margin: 10px 0 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 3px;	
+}
+
+.il-title { width: 90%; }
+
+td.ic { width: 36px;}
+td.id { width: 100px;}
+
+.lab { 	display: inline-block; 	width: 140px; }
+
+.lline{line-height: 30px;}
+
+#posttitle, #srclink {width: 400px;}
+#postdescr  {width: 600px;}
+#remoteurl {width: 360px;}
+#ir-width, #ir-height { width: 50px; }
+
+#wait-msg{
+	background: #fffff0;
+	text-align: center;
+	padding: 5px 0 5px 0;
+	margin: 5px 0 5px 0;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	display:none;
+}
+
+.import-panel {
+	margin: 10px 0 10px 0;
+	padding: 10px 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #fcfcfc;
+}
+
+</style>
+
+<div class="wrap">
+<div id="icon-upload" class="icon32"><br></div>
+<h2>Import Images From External Webpage</h2>
+
+
+<div id="wait-msg"></div>
+
+<div class="import-panel" id="source-params">
+
+	<p class="description">
+	Enter the URL of the webpage that has embedded images.
+	Specify optional filter parameters (minimum width or height or both), so plugin will filter out those images that are
+	smaller specified dimensions. Then you will be able to selected found images and import them to your media gallery and optionally create Draft post which will have them embedded.
+	</p>
+
+	<form id="url-form" class="ajaxform" action="$GLOBALS_PHP_SELF?page=$_REQUEST_page&noheader=1" method="post">
+		<input type="hidden" name="mode" id="img" value="img">
+		<div class="lline"><span class="lab"><label for="remoteurl">Remote URL</label></span>
+			<input type="text" name="remoteurl" id="remoteurl" size="50" />
+			<input type="submit" name="" id="doaction" class="button action" value="Fetch">
+		</div>
+		<!-- <div class="lline"><span class="lab">Work with</span>
+			<label for="img"><input type="radio" name="mode" id="img" value="img" checked="checked">Images</label>
+			&nbsp; <label for="links"><input type="radio" name="mode"  id="links" value="links">Links</label>
+		</div> -->
+		<div class="lline"><span class="lab">Image filter</span> <label for="minwidth">min width</label> <input type="text" name="minwidth" id="minwidth" size="5" value="400" />
+			<label for="minheight">min height</label> <input type="text" name="minheight" id="minheight" size="5" value="0" />
+		</div>
+	</form>
+	
+</div>
+
+<div class="results-panel" id="images">
+	<h3>Import Parameters</h3>
+	<form id="foundimages" method="post" action="$GLOBALS_PHP_SELF?page=$_REQUEST_page&noheader=1">
+	<div id="imgactions" class="import-panel">
+		<div class="lline"><span class="lab">Import selected and</span>
+			<select name="perform" id="perform">
+				<option value="import">Only import images</option>
+				<option value="post">Insert post with embedded images</option>
+				<option value="gallery">Insert as gallery</option>
+			</select>
+			&nbsp;&nbsp;&nbsp;
+			<input type="submit" id="proceed" class="button action" value="Proceed &raquo;">
+		</div>
+		
+	
+		<div class="lline"><span class="lab">Post title</span><input type="text" name="posttitle" id="posttitle" value="" /></div>
+		<div class="lline"><span class="lab">Post excerpt</span><input type="text" name="postdescr" id="postdescr" /></div>
+		
+		<div class="lline"><span class="lab"><label><input type="checkbox" name="addsrc" id="ir-addsrc" value="1" checked="checked" /> Add source link</label></span>
+			<input type="text" name="srclink" id="srclink" value="IMGLEECH_SRCTEXT" />
+		</div>
+
+		<div class="lline"><span class="lab"><label><input type="checkbox" name="resize" id="ir-resize" value="1" /> Resize images to</label></span>
+			<input type="text" id="ir-width" name="width" value="" /> x
+			<input type="text" id="ir-height" name="height" value="" /> px
+		</div>
+
+		<div class="lline"><span class="lab">Options</span>
+			<label><input type="checkbox" name="usehash" id="ir-usehash" value="1" /> Convert image names to 32 char md5 of their names (more unique names)</label> Also use this if all images on remote page has same name. 
+		</div>
+
+		<div class="lline"><span class="lab"></span>
+			<label><input type="checkbox" name="addtitles" id="ir-addtitles" value="1" /> Add titles under images (in embedded images post)</label>
+		</div>
+
+		<div class="lline"><span class="lab"></span>
+			<label><input type="checkbox" name="addftr" id="ir-addftr" value="1" checked="checked" /> Add random image as featured in post</label>
+		</div>
+		
+		
+	</div>
+	<h3>Found images</h3>
+	<div id="imglist"><table>
+	    <thead>
+		<tr class="il-head"><td class="ic"><input type="checkbox" name="checkall" id="checkall" /></td>
+		<td class="is">Image/Name</td><td class="id">Dimensions</td></tr>
+	    </thead>
+	    <tbody id="imglistb"/></table>
+	</div>
+	</form>
+
+</div>
+
+</div>
+
+<!-- -=*=- -->
+
+<script type="text/javascript">
+
+jQuery(\'#url-form\').submit(il_fetch);
+jQuery(\'#foundimages\').submit(il_perform_img_import);
+jQuery(\'#ir-width, #ir-height\').focus(function(){
+	jQuery(\'#ir-resize\').attr(\'checked\', \'checked\');
+});
+
+var li_mode = \'img\', li_mw = 0, li_mh = 0, fetchurl, fetchtitle = \'\', fetchdescr = \'\';
+
+jQuery(\'#checkall\').click(function(){
+	var m = jQuery(this).is(\':checked\'), mm;
+	mm = jQuery(\'#imglistb .ic input\');
+	mm.each(function(){
+		if(m) jQuery(this).attr(\'checked\', \'checked\'); else jQuery(this).removeAttr(\'checked\');
+	});
+});
+
+
+function il_fetch(){
+	
+	var ru = jQuery(\'#remoteurl\').val();
+	if(ru.indexOf(\'http\') != 0){
+		jQuery(\'#remoteurl\').select().focus();
+		return false;
+	}
+	
+	fetchurl = ru;
+	
+	var form = jQuery(this).serialize() + \'&act=fetch\', url = this.action;
+
+	jQuery(\'#doaction, #proceed\').attr(\'disabled\', \'disabled\');
+	jQuery(\'#wait-msg\').text(\'Examining resource... Please wait.\').show();
+
+	if(jQuery(\'#links\').is(\':checked\')) li_mode = \'links\'; else li_mode = \'img\';
+	
+	
+
+	jQuery.ajax({
+		url: url,
+		dataType: \'json\',
+		type: "POST",
+                data: form,
+                cache: false,
+                success: il_render_images,
+		error: il_error
+	});
+	
+	return false;
+}
+
+function il_error(){
+	jQuery(\'#wait-msg\').hide();
+	jQuery(\'#doaction, #proceed\').removeAttr(\'disabled\');
+	alert(\'Internal error\');
+}
+
+function il_render_images(ret){
+	jQuery(\'#wait-msg\').hide();
+	jQuery(\'#doaction, #proceed\').removeAttr(\'disabled\');
+	
+	
+	li_mw = parseInt(jQuery(\'#minwidth\').val());
+	li_mh = parseInt(jQuery(\'#minheight\').val());
+	
+	var url, data, ss, nn = 0; 
+	if(\'img\' == li_mode){
+		jQuery(\'#imglistb\').html(\'\');
+		jQuery(\'#images\').show();
+		
+		for( url in ret.img){
+			data = ret.img[url];
+			ss = \'<tr id="tr-img-\' + nn + \'"><td class="ic"><input type="checkbox" value="\' + url +\'" name="icheck[\' + nn + \']" /></td>\' +
+				\'<td class="is"><img id="il-img-\' + nn + \'" src="\' + url + \'" class="il-tmb"/><br/>\' +
+				\'<input type="text" class="il-title" name="ititle[\' + nn + \']" id="il-title-\' + nn + \'" />\' +
+				\'</td><td class="id">&nbsp;</td></tr>\';
+			jQuery(\'#imglistb\').append(ss);
+			jQuery(\'#il-img-\' + nn).load(il_img_data);
+			jQuery(\'#il-img-\' + nn).error(il_img_data);
+			jQuery(\'#il-img-\' + nn).click(il_img_click);
+			jQuery(\'#il-title-\' + nn).val(data.n);
+			nn++;
+		}
+		
+
+		
+	}
+	
+	if(ret.title){ fetchtitle = ret.title; jQuery(\'#posttitle\').val(fetchtitle); }
+	if(ret.descr){ fetchdescr = ret.descr; jQuery(\'#postdescr\').val(fetchdescr); }
+	
+	//console.log(ret);
+	
+}
+
+function il_perform_img_import(){
+	var form = jQuery(\'#foundimages\').serialize() + \'&act=import&mode=\' + li_mode + \'&baseurl=\' + escape(fetchurl), url = this.action;
+
+	jQuery(\'#doaction, #proceed\').attr(\'disabled\', \'disabled\');
+	jQuery(\'#wait-msg\').text(\'Importing ... Please wait, this may take a while...\').show();
+
+	jQuery.ajax({
+		url: url,
+		dataType: \'json\',
+		type: "POST",
+                data: form,
+                cache: false,
+                success: il_import_result,
+		error: il_error
+	});
+	
+	return false;
+}
+
+function il_img_data(){
+
+	var w = jQuery(this).width(), h = jQuery(this).height();
+	if(w == 0 || h == 0 || (li_mw > 0 && w < li_mw) || (li_mh>0 && h < li_mh) ){
+		jQuery(this).parents(\'tr\').remove();
+	}else{
+		jQuery(this).parents(\'tr\').find(\'.id\').first().html(w + \'x\' + h);
+	}
+}
+
+function il_img_click(){
+	var cb = jQuery(this).parents(\'tr\').find(\'.ic input\').first();
+	if(!cb.is(\':checked\')) cb.attr(\'checked\', \'checked\'); else cb.removeAttr(\'checked\');
+}
+
+function il_import_result(ret){
+	jQuery(\'#wait-msg\').hide();
+	jQuery(\'#doaction, #proceed\').removeAttr(\'disabled\');
+	
+	if(ret.error){
+		alert(ret.error);
+	}
+	
+	// console.log(ret);
+	if(ret.post_id) document.location = \'post.php?action=edit&post=\' + ret.post_id;
+}
+
+
+
+
+</script>'' cannot be parsed correct.
+HTML code '$'json_encode($out)'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.060886.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.050833.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 1 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.271193.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running CubridDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running FileProDetector
+### Start running IngresDetector
+### Finish running IngresDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPRetrievalDetector
+### Start running PropertyDetector
+### Finish running PHPIncludedDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PHPStorageDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running maxdbDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running WordPressRetrievalDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+image-leech.php:508
+  - MD5 called with parameters [url]. Ignore if [url] does not contain personal information. 
+
+image-leech.php:532
+  - STORAGE call to fwrite($fb, $data["body"], strlen($data["body"])).
+  - Data types: file 
+
+image-leech.php:433
+  - API call to wp_remote_get($url, $opts). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+image-leech.php:492
+  - STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+image-leech.php:599
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error). 
+
+By data type:
+file
+	PHPStorageDetector.fwrite($fb, $data["body"], strlen($data["body"])) - {'file'}
+none
+	WordPressStorageDetector.wp_update_post($post) - set()
+	PHPIncludedDetector.(unknown) - set()
+	WordPressStorageDetector.wp_insert_post($post) - set()
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.716957.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.052767.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 1 nodes as ENCRYPTED
+In total, tainted 1 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.112089.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:24.491888!
+MD5 called with parameters [url]. Ignore if [url] does not contain personal information.,md5,None
+STORAGE call to fwrite($fb, $data["body"], strlen($data["body"])).,None,None
+API call to wp_remote_get($url, $opts). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+STORAGE call to wp_insert_post($post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,723 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on bbpress-live
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.397041.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.156448.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 49 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.423417.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.413775.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 400 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.870198.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.605289.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.087105.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 88 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.606403.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2316
+Added 1779 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2316
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.142617.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bbpress-live/bbpress-live.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.188095.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2316 PHP_REACHES edges created
+2316 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 756 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.145592.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.526857.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 23 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.428104.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 41 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.193076.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.041727.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.312736.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009757.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035888.
+
+64 PHP_REACHES edges created
+64 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 36 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.114797.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+3 SQL operations to process.
+$method
+SQL command ($method) cannot be parsed correct.
+bb.getForums
+SQL command (bb.getForums) cannot be parsed correct.
+bb.getTopics
+SQL command (bb.getTopics) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [2366, 2757, 2853]
+Added 0 SQL nodes. 0 out of 3 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.496405.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_title'' cannot be parsed correct.
+HTML code '$'$this_options_$instance_number_title'' cannot be parsed correct.
+HTML code '$'$after_title'' cannot be parsed correct.
+HTML code '$'<a href=$forum_forum_uri"$forum_forum_name</a> '' cannot be parsed correct.
+HTML code '$'<th>Forum</th>'' cannot be parsed correct.
+HTML code '$'<th>Topics</th>'' cannot be parsed correct.
+HTML code '$'<th>Posts</th>'' cannot be parsed correct.
+HTML code '$'<td><a href=$forum_forum_uri"$forum_forum_name</a></td>'' cannot be parsed correct.
+HTML code '$'<td>$forum_topics</td>'' cannot be parsed correct.
+HTML code '$'<td>$forum_posts</td>'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'$layout_list'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'$layout_table'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_title'' cannot be parsed correct.
+HTML code '$'$this_options_$instance_number_title'' cannot be parsed correct.
+HTML code '$'$after_title'' cannot be parsed correct.
+HTML code '$'<a href=$topic_topic_uri"$topic_topic_title</a> '' cannot be parsed correct.
+HTML code '$'<th>Topic</th>'' cannot be parsed correct.
+HTML code '$'<th>Posts</th>'' cannot be parsed correct.
+HTML code '$'<th>Last Poster</th>'' cannot be parsed correct.
+HTML code '$'<th>Freshness</th>'' cannot be parsed correct.
+HTML code '$'<td><a href=$topic_topic_uri"$topic_topic_title</a></td>'' cannot be parsed correct.
+HTML code '$'<td>$topic_topic_posts</td>'' cannot be parsed correct.
+HTML code '$'<td>$topic_topic_last_poster_display_name</td>'' cannot be parsed correct.
+HTML code '$'<td>$topic_topic_time_since</td>'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'attribute_escape(stripslashes($options[$instance]["title"]))'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'attribute_escape(stripslashes($options[$instance]["forum"]))'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'5'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'$layout_list'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'attribute_escape(stripslashes($options[$instance]["title"]))'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'attribute_escape(stripslashes($options[$instance]["parent"]))'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'$options_$instance_number_depth'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'%i%'' cannot be parsed correct.
+HTML code '$'attribute_escape($fetch_options["target_uri"])'' cannot be parsed correct.
+HTML code '$'attribute_escape($fetch_options["username"])'' cannot be parsed correct.
+HTML code '$'attribute_escape($fetch_options["password"])'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'attribute_escape($options["cache_timeout"])'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'attribute_escape($options["post_to_topic_forum"])'' cannot be parsed correct.
+HTML code '$'attribute_escape($options["post_to_topic_delay"])'' cannot be parsed correct.
+HTML code '$'$layout_table'' cannot be parsed correct.
+HTML code '$'$instance_number'' cannot be parsed correct.
+HTML code '$'<ol>'' cannot be parsed correct.
+HTML code '$'<li>'' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'</ol>'' cannot be parsed correct.
+HTML code '$'<table>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<ol>'' cannot be parsed correct.
+HTML code '$'<li>'' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'</ol>'' cannot be parsed correct.
+HTML code '$'<table>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td>
+					<input name="target_uri" type="text" id="target_uri" value="'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td>
+					<input name="username" type="text" id="username" value="'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td>
+					<input name="password" type="password" id="password" value="'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td>
+					<input name="always_use_auth" type="checkbox" id="always_use_auth" value="1"'' cannot be parsed correct.
+HTML code '$'</h3>
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row"><label for="cache_enabled">'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td>
+					<input name="cache_enabled" type="checkbox" id="cache_enabled" value="1"'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td>
+					<input name="cache_timeout" type="text" id="cache_timeout" value="'' cannot be parsed correct.
+HTML code '$'<br />
+					'' cannot be parsed correct.
+HTML code '$'</h3>
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row"><label for="widget_forums">'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td><input name="widget_forums" type="checkbox" id="widget_forums" value="1"'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td><input name="widget_topics" type="checkbox" id="widget_topics" value="1"'' cannot be parsed correct.
+HTML code '$' (not implemented)</h3>
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row"><label for="">'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td>
+					<input name="post_to_topic" type="checkbox" id="post_to_topic" value="1"'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td>
+					<input name="post_to_topic_forum" type="text" id="post_to_topic_forum" value="'' cannot be parsed correct.
+HTML code '$'</label></th>
+				<td>
+					<input name="post_to_topic_delay" type="text" id="post_to_topic_delay" value="'' cannot be parsed correct.
+HTML code '$'<br />
+					'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:12.083254.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046040.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.368049.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running CubridDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running FileProDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PHPIncludedDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PostgreSQLDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running maxdbDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running SqlServerDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+bbpress-live.php:648
+  - Request variable '$_POST["username"]' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta 
+
+bbpress-live.php:580
+  - MD5 called with parameters [depth, _, forums_, parent]. Ignore if [depth, _, forums_, parent] does not contain personal information.
+bbpress-live.php:597
+  - MD5 called with parameters [_, forum, page, topics_, number]. Ignore if [_, forum, page, topics_, number] does not contain personal information. 
+
+bbpress-live.php:31
+  - RETRIEVAL call to get_option("bbpress_live_widget_forums") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bbpress-live.php:232
+  - RETRIEVAL call to get_option("bbpress_live_widget_topics") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bbpress-live.php:448
+  - RETRIEVAL call to get_option("bbpress_live_fetch") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bbpress-live.php:509
+  - RETRIEVAL call to get_option("bbpress_live") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+bbpress-live.php:569
+  - RETRIEVAL call to get_option("bbpress_live_cache_" . $key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+bbpress-live.php:159
+  - STORAGE call to update_option("bbpress_live_widget_forums", $this->options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbpress-live.php:163
+  - STORAGE call to delete_option("bbpress_live_widget_forums") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbpress-live.php:363
+  - STORAGE call to update_option("bbpress_live_widget_topics", $this->options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbpress-live.php:367
+  - STORAGE call to delete_option("bbpress_live_widget_topics") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbpress-live.php:539
+  - STORAGE call to update_option("bbpress_live_cache_" . $key, $cache) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbpress-live.php:552
+  - STORAGE call to delete_option("bbpress_live_cache_" . $key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbpress-live.php:652
+  - STORAGE call to update_option("bbpress_live_fetch", $_fetch_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+bbpress-live.php:663
+  - STORAGE call to update_option("bbpress_live", $_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+bbpress-live.php:163
+  - DELETION call to delete_option("bbpress_live_widget_forums") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbpress-live.php:367
+  - DELETION call to delete_option("bbpress_live_widget_topics") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+bbpress-live.php:552
+  - DELETION call to delete_option("bbpress_live_cache_" . $key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressStorageDetector.update_option("bbpress_live_widget_forums", $this->options) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpress_live_widget_forums") - {'option'}
+	WordPressStorageDetector.update_option("bbpress_live", $_options) - {'option'}
+	WordPressStorageDetector.delete_option("bbpress_live_cache_" . $key) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpress_live_fetch") - {'option'}
+	WordPressStorageDetector.delete_option("bbpress_live_widget_topics") - {'option'}
+	DeletionDetector.delete_option("bbpress_live_widget_topics") - {'option'}
+	WordPressStorageDetector.update_option("bbpress_live_fetch", $_fetch_options) - {'option'}
+	WordPressStorageDetector.delete_option("bbpress_live_widget_forums") - {'option'}
+	WordPressStorageDetector.update_option("bbpress_live_widget_topics", $this->options) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpress_live") - {'option'}
+	WordPressRetrievalDetector.get_option("bbpress_live_widget_topics") - {'option'}
+	DeletionDetector.delete_option("bbpress_live_widget_forums") - {'option'}
+	DeletionDetector.delete_option("bbpress_live_cache_" . $key) - {'option'}
+	WordPressRetrievalDetector.get_option("bbpress_live_cache_" . $key) - {'option'}
+	WordPressStorageDetector.update_option("bbpress_live_cache_" . $key, $cache) - {'option'}
+user
+	ArrayElementDetector.(unknown) - {'user', 'user_meta'}
+user_meta
+	ArrayElementDetector.(unknown) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.293659.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 40 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.116904.
+
+40 STORE_REACHES edges created
+40 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 187 nodes as PERSONAL
+In total, tainted 187 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 2 nodes as ENCRYPTED
+In total, tainted 2 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:02.773197.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:42.365946!
+Request variable '$_POST["username"]' of personal types {'user', 'user_meta'} is found.,,None
+DELETION call to delete_option("bbpress_live_widget_forums") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpress_live_widget_topics") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("bbpress_live_cache_" . $key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+MD5 called with parameters [depth, _, forums_, parent]. Ignore if [depth, _, forums_, parent] does not contain personal information.,md5,None
+MD5 called with parameters [_, forum, page, topics_, number]. Ignore if [_, forum, page, topics_, number] does not contain personal information.,md5,None
+RETRIEVAL call to get_option("bbpress_live_widget_topics") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpress_live_widget_forums") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpress_live_fetch") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpress_live") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bbpress_live_cache_" . $key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("bbpress_live_widget_forums", $this->options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpress_live_widget_forums") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("bbpress_live_widget_topics", $this->options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpress_live_widget_topics") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("bbpress_live_cache_" . $key, $cache) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("bbpress_live_cache_" . $key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("bbpress_live_fetch", $_fetch_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("bbpress_live", $_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "update_option("bbpress_live_widget_forums", $this->options)", found in file bbpress-live.php at line 159. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "update_option("bbpress_live_fetch", $_fetch_options)", found in file bbpress-live.php at line 652. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "update_option("bbpress_live_widget_topics", $this->options)", found in file bbpress-live.php at line 363. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "update_option("bbpress_live_cache_" . $key, $cache)", found in file bbpress-live.php at line 539. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_widget_forums", $this->options) has deletion method delete_option("bbpress_live_widget_forums"). Storage method found in file bbpress-live.php at line 159. Deletion method found in file bbpress-live.php at line 163. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_widget_forums", $this->options) has deletion method delete_option("bbpress_live_widget_topics"). Storage method found in file bbpress-live.php at line 159. Deletion method found in file bbpress-live.php at line 367. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_widget_forums", $this->options) has deletion method delete_option("bbpress_live_cache_" . $key). Storage method found in file bbpress-live.php at line 159. Deletion method found in file bbpress-live.php at line 552. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_fetch", $_fetch_options) has deletion method delete_option("bbpress_live_widget_forums"). Storage method found in file bbpress-live.php at line 652. Deletion method found in file bbpress-live.php at line 163. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_fetch", $_fetch_options) has deletion method delete_option("bbpress_live_widget_topics"). Storage method found in file bbpress-live.php at line 652. Deletion method found in file bbpress-live.php at line 367. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_fetch", $_fetch_options) has deletion method delete_option("bbpress_live_cache_" . $key). Storage method found in file bbpress-live.php at line 652. Deletion method found in file bbpress-live.php at line 552. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_widget_topics", $this->options) has deletion method delete_option("bbpress_live_widget_forums"). Storage method found in file bbpress-live.php at line 363. Deletion method found in file bbpress-live.php at line 163. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_widget_topics", $this->options) has deletion method delete_option("bbpress_live_widget_topics"). Storage method found in file bbpress-live.php at line 363. Deletion method found in file bbpress-live.php at line 367. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_widget_topics", $this->options) has deletion method delete_option("bbpress_live_cache_" . $key). Storage method found in file bbpress-live.php at line 363. Deletion method found in file bbpress-live.php at line 552. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_cache_" . $key, $cache) has deletion method delete_option("bbpress_live_widget_forums"). Storage method found in file bbpress-live.php at line 539. Deletion method found in file bbpress-live.php at line 163. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_cache_" . $key, $cache) has deletion method delete_option("bbpress_live_widget_topics"). Storage method found in file bbpress-live.php at line 539. Deletion method found in file bbpress-live.php at line 367. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("bbpress_live_cache_" . $key, $cache) has deletion method delete_option("bbpress_live_cache_" . $key). Storage method found in file bbpress-live.php at line 539. Deletion method found in file bbpress-live.php at line 552. 
+
+[Art.17, Right to erasure] Deletion access is NONE_BUT_NOT_REQUIRED 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 723. Found in file bbpress-live.php at line 159 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3078. Found in file bbpress-live.php at line 652 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1779. Found in file bbpress-live.php at line 363 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 2567. Found in file bbpress-live.php at line 539 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? False 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function bbpress-live_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+    //TODO: Delete the user data that was stored using Wordpress functions
+
+    //Below is the sample code for deleting user meta and may need to be modified to suit the plugin.
+    $user_id = get_user_by('email', $email_address)
+    $key = 'email' //Sample user meta key
+    if ( $customer->user_id > 0 ) {
+        //Delete user meta data by $key
+        delete_user_meta( $user_id, $key );
+    }
+        
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'bbpress-live' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function bbpress-live_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'bbpress-live' ),
+        'callback'             => 'bbpress-live_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'bbpress-live_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function bbpress-live_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'bbpress-live' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'bbpress-live' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'bbpress-live' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'bbpress-live', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'bbpress-live_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

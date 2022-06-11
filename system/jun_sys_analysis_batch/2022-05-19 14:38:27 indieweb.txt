@@ -1,0 +1,613 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on indieweb
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.730604.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.082954.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 2 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.298634.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.542064.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 418 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.858549.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 42 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.195124.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.101341.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 164 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.925517.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 7811
+Added 7184 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 8645
+Added 834 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.687451.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/indieweb.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/includes/class-general-settings.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/includes/class-hcard-author-widget.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/includes/class-hcard-user.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/includes/class-integrations.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/includes/class-plugin-installer.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/includes/class-relme-domain-icon-map.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/includes/class-relme-widget.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/includes/getting-started.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/includes/simple-icons.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/indieweb/templates/h-card.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.151737.
+
+2 PHP_REACHES edges created
+1 REACHES edges created
+418 PHP_REACHES edges created
+42 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+7348 PHP_REACHES edges created
+834 PHP_REACHES edges created
+8645 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1230 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.051588.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:03.609156.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 43 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.415748.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 68 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.178125.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.357808.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.517852.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.017870.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.047749.
+
+111 PHP_REACHES edges created
+111 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 45 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.234132.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+2 SQL operations to process.
+The following function calls could not successfully be analyzed for SQL content: [5432, 5432]
+Added 0 SQL nodes. 0 out of 2 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.332293.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this->get_field_id("avatar")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("avatar")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("avatar")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("avatar")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("avatar")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("location")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("location")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("location")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("location")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("location")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("notes")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("notes")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("notes")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("notes")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("notes")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("email")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("email")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("email")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("email")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("email")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("me")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("me")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("me")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("me")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("me")'' cannot be parsed correct.
+HTML code '$'<input name=\'$args_name\' type=\'hidden\' value=\'0\' />'' cannot be parsed correct.
+HTML code '$'<input name=\'$args_name\' type=\'checkbox\' value=\'1\' checked($checked, 1, false) disabled  /> '' cannot be parsed correct.
+HTML code '$'<label for=$args_name"$args_description</label>'' cannot be parsed correct.
+HTML code '$'absint($user->ID)'' cannot be parsed correct.
+HTML code '$'$user'' cannot be parsed correct.
+HTML code '$'$args_before_widget'' cannot be parsed correct.
+HTML code '$'$args_after_widget'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("avatar_size")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("avatar_size")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("avatar_size")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_avatar_size'' cannot be parsed correct.
+HTML code '$'<h3>Address</h3>'' cannot be parsed correct.
+HTML code '$'<p>Fill in all fields you wish displayed.</p>'' cannot be parsed correct.
+HTML code '$'<h3>Additional Profile Information</h3>'' cannot be parsed correct.
+HTML code '$'<p>Fill in all fields you are wish displayed.</p>'' cannot be parsed correct.
+HTML code '$'$key'' cannot be parsed correct.
+HTML code '$'$title'' cannot be parsed correct.
+HTML code '$'$key'' cannot be parsed correct.
+HTML code '$'$key'' cannot be parsed correct.
+HTML code '$'get_the_author_meta($key, $user->ID)'' cannot be parsed correct.
+HTML code '$'$description'' cannot be parsed correct.
+HTML code '$'$key'' cannot be parsed correct.
+HTML code '$'$title'' cannot be parsed correct.
+HTML code '$'$key'' cannot be parsed correct.
+HTML code '$'$key'' cannot be parsed correct.
+HTML code '$'implode("
+", $value)'' cannot be parsed correct.
+HTML code '$'$description'' cannot be parsed correct.
+HTML code '$'plugins_api("plugin_information", ["slug" => sanitize_file_name($plugin["slug"]), "fields" => ["short_description" => true, "sections" => false, "requires" => false, "downloaded" => true, "last_updated" => false, "added" => false, "tags" => false, "compatibility" => false, "homepage" => false, "donate_link" => false, "icons" => true, "banners" => true]])_icons_1x'' cannot be parsed correct.
+HTML code '$'plugins_api("plugin_information", ["slug" => sanitize_file_name($plugin["slug"]), "fields" => ["short_description" => true, "sections" => false, "requires" => false, "downloaded" => true, "last_updated" => false, "added" => false, "tags" => false, "compatibility" => false, "homepage" => false, "donate_link" => false, "icons" => true, "banners" => true]])_name'' cannot be parsed correct.
+HTML code '$'plugins_api("plugin_information", ["slug" => sanitize_file_name($plugin["slug"]), "fields" => ["short_description" => true, "sections" => false, "requires" => false, "downloaded" => true, "last_updated" => false, "added" => false, "tags" => false, "compatibility" => false, "homepage" => false, "donate_link" => false, "icons" => true, "banners" => true]])_short_description'' cannot be parsed correct.
+HTML code '$'plugins_api("plugin_information", ["slug" => sanitize_file_name($plugin["slug"]), "fields" => ["short_description" => true, "sections" => false, "requires" => false, "downloaded" => true, "last_updated" => false, "added" => false, "tags" => false, "compatibility" => false, "homepage" => false, "donate_link" => false, "icons" => true, "banners" => true]])_author'' cannot be parsed correct.
+HTML code '$'button disabled'' cannot be parsed correct.
+HTML code '$'plugins_api("plugin_information", ["slug" => sanitize_file_name($plugin["slug"]), "fields" => ["short_description" => true, "sections" => false, "requires" => false, "downloaded" => true, "last_updated" => false, "added" => false, "tags" => false, "compatibility" => false, "homepage" => false, "donate_link" => false, "icons" => true, "banners" => true]])_slug'' cannot be parsed correct.
+HTML code '$'plugins_api("plugin_information", ["slug" => sanitize_file_name($plugin["slug"]), "fields" => ["short_description" => true, "sections" => false, "requires" => false, "downloaded" => true, "last_updated" => false, "added" => false, "tags" => false, "compatibility" => false, "homepage" => false, "donate_link" => false, "icons" => true, "banners" => true]])_name'' cannot be parsed correct.
+HTML code '$'add_query_arg(["action" => "install-plugin", "plugin" => $api->slug, "_wpnonce" => wp_create_nonce("install-plugin_" . $api->slug)], get_admin_url(null, "/update.php"))'' cannot be parsed correct.
+HTML code '$'Activated'' cannot be parsed correct.
+HTML code '$'plugins_api("plugin_information", ["slug" => sanitize_file_name($plugin["slug"]), "fields" => ["short_description" => true, "sections" => false, "requires" => false, "downloaded" => true, "last_updated" => false, "added" => false, "tags" => false, "compatibility" => false, "homepage" => false, "donate_link" => false, "icons" => true, "banners" => true]])_slug'' cannot be parsed correct.
+HTML code '$'admin_url("admin.php?page=indieweb-installer")'' cannot be parsed correct.
+HTML code '$'<h1>IndieWeb Plugin Installer</h1>'' cannot be parsed correct.
+HTML code '$'<p>The below plugins are recommended to enable additional IndieWeb functionality.</p>'' cannot be parsed correct.
+HTML code '$'$url'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$url'' cannot be parsed correct.
+HTML code '$'$avatar'' cannot be parsed correct.
+HTML code '$'$name'' cannot be parsed correct.
+HTML code '$'$email'' cannot be parsed correct.
+HTML code '$'$email'' cannot be parsed correct.
+HTML code '$'$user->get("locality")'' cannot be parsed correct.
+HTML code '$'$user->get("region")'' cannot be parsed correct.
+HTML code '$'$user->get("country-name")'' cannot be parsed correct.
+HTML code '$'$user->get("tel")'' cannot be parsed correct.
+HTML code '$'$user->get("tel")'' cannot be parsed correct.
+HTML code '$'$user->get("description")'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'	<form method="post" action="options.php">'' cannot be parsed correct.
+HTML code '$'	</form>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<table class="form-table">'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<table class="form-table">'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:11.662849.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.044974.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 8 do_action/apply_filters calls and 25 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.109190.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running HashDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running OpenSSLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PHPRetrievalDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+includes/class-relme-domain-icon-map.php:53
+  - RETRIEVAL call to file_get_contents($file).
+  - Data types: file 
+
+includes/class-hcard-user.php:106
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+includes/class-hcard-user.php:132
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+includes/class-hcard-user.php:463
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+templates/h-card.php:13
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+templates/h-card.php:13
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+includes/class-general-settings.php:171
+  - RETRIEVAL call to get_option($args["name"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-general-settings.php:185
+  - RETRIEVAL call to get_users(["orderby" => "ID", "fields" => ["ID", "display_name"]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).
+  - Data types: user, user_meta
+includes/class-general-settings.php:192
+  - RETRIEVAL call to get_option("iw_default_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-hcard-author-widget.php:34
+  - RETRIEVAL call to get_option("iw_single_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-hcard-author-widget.php:35
+  - RETRIEVAL call to get_option("iw_default_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-hcard-author-widget.php:45
+  - RETRIEVAL call to get_userdata($display_author) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+includes/class-hcard-user.php:11
+  - RETRIEVAL call to get_option("iw_author_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-hcard-user.php:37
+  - RETRIEVAL call to get_userdata($author_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).
+  - Data types: user, user_meta
+includes/class-hcard-user.php:177
+  - RETRIEVAL call to get_the_author_meta($key, $user->ID) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+includes/class-hcard-user.php:185
+  - RETRIEVAL call to get_the_author_meta($key, $user->ID) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+includes/class-hcard-user.php:215
+  - RETRIEVAL call to get_user_meta($user["id"], "first_name") alters data types {'first_name', 'user_meta'}. Passed arguments: 0: $user_id (int), 1: $key (string). Returns (mixed).
+  - Data types: first_name, user_meta
+includes/class-hcard-user.php:285
+  - RETRIEVAL call to get_the_author_meta("ID") alters data types {'user_meta'}. Passed arguments: 0: $field (string). Returns (string).
+  - Data types: user_meta
+includes/class-hcard-user.php:295
+  - RETRIEVAL call to get_the_author_meta($silo, $author_id) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+includes/class-hcard-user.php:312
+  - RETRIEVAL call to get_the_author_meta("relme", $author_id) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+includes/class-hcard-user.php:341
+  - RETRIEVAL call to get_the_author_meta("display_name", $author_id) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+includes/class-hcard-user.php:364
+  - RETRIEVAL call to get_the_author_meta("display_name", $author_id) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).
+  - Data types: user_meta
+includes/class-hcard-user.php:373
+  - RETRIEVAL call to get_option("iw_single_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-hcard-user.php:375
+  - RETRIEVAL call to get_option("iw_default_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-hcard-user.php:377
+  - RETRIEVAL call to get_user_by("slug", get_query_var("author_name")) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user, user_meta
+includes/class-hcard-user.php:393
+  - RETRIEVAL call to get_user_option("pgp", $author_id) alters data types {'user_meta'}. Passed arguments: 0: $option (string), 1: $user (int). Returns (mixed).
+  - Data types: user_meta
+includes/class-relme-domain-icon-map.php:79
+  - RETRIEVAL call to get_transient("indieweb_mastodon") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+includes/class-relme-domain-icon-map.php:99
+  - RETRIEVAL call to get_user_meta($user->ID, "mastodon", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+includes/class-relme-widget.php:37
+  - RETRIEVAL call to get_option("iw_single_author", is_multi_author()"0""1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/class-relme-widget.php:38
+  - RETRIEVAL call to get_option("iw_default_author", $default_admin_user) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/class-relme-widget.php:89
+  - RETRIEVAL call to get_users(["role" => "administrator", "number" => 1, "fields" => "ID"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).
+  - Data types: user, user_meta
+indieweb.php:90
+  - RETRIEVAL call to get_option("iw_relme_bw") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+includes/class-general-settings.php:155
+  - STORAGE call to delete_option("iw_single_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+includes/class-hcard-user.php:229
+  - STORAGE call to update_user_meta($user_id, $key, sanitize_text_field($p[$key])) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: user_meta
+includes/class-hcard-user.php:231
+  - STORAGE call to delete_user_meta($user_id, $key) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: user_meta
+includes/class-hcard-user.php:237
+  - STORAGE call to update_user_meta($user_id, "relme", self->clean_urls($relme)) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: user_meta
+includes/class-hcard-user.php:239
+  - STORAGE call to delete_user_meta($user_id, "relme") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: user_meta
+includes/class-hcard-user.php:242
+  - STORAGE call to delete_transient("indieweb_mastodon") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+includes/class-relme-domain-icon-map.php:104
+  - STORAGE call to set_transient("indieweb_mastodon", $value) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).
+  - Data types: site 
+
+includes/class-hcard-user.php:442
+  - WP_User object is created.
+  - Data types: user, user_meta 
+
+includes/class-general-settings.php:155
+  - DELETION call to delete_option("iw_single_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+includes/class-hcard-user.php:231
+  - DELETION call to delete_user_meta($user_id, $key) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: user_meta
+includes/class-hcard-user.php:239
+  - DELETION call to delete_user_meta($user_id, "relme") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: user_meta 
+
+By data type:
+address
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+file
+	PHPRetrievalDetector.file_get_contents($file) - {'file'}
+first_name
+	WordPressRetrievalDetector.get_user_meta($user["id"], "first_name") - {'first_name', 'user_meta'}
+option
+	WordPressRetrievalDetector.get_option("iw_author_url") - {'option'}
+	WordPressRetrievalDetector.get_option($args["name"]) - {'option'}
+	WordPressRetrievalDetector.get_option("iw_single_author", is_multi_author()"0""1") - {'option'}
+	WordPressRetrievalDetector.get_option("iw_default_author", $default_admin_user) - {'option'}
+	WordPressRetrievalDetector.get_option("iw_default_author") - {'option'}
+	WordPressRetrievalDetector.get_option("iw_default_author") - {'option'}
+	WordPressRetrievalDetector.get_option("iw_single_author") - {'option'}
+	WordPressRetrievalDetector.get_option("iw_relme_bw") - {'option'}
+	WordPressStorageDetector.delete_option("iw_single_author") - {'option'}
+	WordPressRetrievalDetector.get_option("iw_default_author") - {'option'}
+	DeletionDetector.delete_option("iw_single_author") - {'option'}
+	WordPressRetrievalDetector.get_option("iw_single_author") - {'option'}
+site
+	WordPressStorageDetector.delete_transient("indieweb_mastodon") - {'site'}
+	WordPressRetrievalDetector.get_transient("indieweb_mastodon") - {'site'}
+	WordPressStorageDetector.set_transient("indieweb_mastodon", $value) - {'site'}
+user
+	WordPressRetrievalDetector.get_userdata($author_id) - {'user', 'user_meta'}
+	WP_UserDetector.WP_User($user) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_users(["orderby" => "ID", "fields" => ["ID", "display_name"]]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($display_author) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("slug", get_query_var("author_name")) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_users(["role" => "administrator", "number" => 1, "fields" => "ID"]) - {'user', 'user_meta'}
+user_meta
+	WordPressStorageDetector.update_user_meta($user_id, $key, sanitize_text_field($p[$key])) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("display_name", $author_id) - {'user_meta'}
+	WordPressStorageDetector.delete_user_meta($user_id, "relme") - {'user_meta'}
+	WordPressRetrievalDetector.get_user_meta($user["id"], "first_name") - {'first_name', 'user_meta'}
+	DeletionDetector.delete_user_meta($user_id, "relme") - {'user_meta'}
+	WordPressRetrievalDetector.get_userdata($author_id) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("relme", $author_id) - {'user_meta'}
+	WordPressStorageDetector.update_user_meta($user_id, "relme", self->clean_urls($relme)) - {'user_meta'}
+	WordPressRetrievalDetector.get_user_option("pgp", $author_id) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta($silo, $author_id) - {'user_meta'}
+	WP_UserDetector.WP_User($user) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_meta($user->ID, "mastodon", true) - {'user_meta'}
+	WordPressStorageDetector.delete_user_meta($user_id, $key) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta($key, $user->ID) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("display_name", $author_id) - {'user_meta'}
+	WordPressRetrievalDetector.get_users(["orderby" => "ID", "fields" => ["ID", "display_name"]]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdata($display_author) - {'user', 'user_meta'}
+	DeletionDetector.delete_user_meta($user_id, $key) - {'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta("ID") - {'user_meta'}
+	WordPressRetrievalDetector.get_user_by("slug", get_query_var("author_name")) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_the_author_meta($key, $user->ID) - {'user_meta'}
+	WordPressRetrievalDetector.get_users(["role" => "administrator", "number" => 1, "fields" => "ID"]) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.236786.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 72 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.252543.
+
+72 STORE_REACHES edges created
+72 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 195 nodes as PERSONAL
+In total, tainted 195 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:04.725403.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:00.263252!
+DELETION call to delete_option("iw_single_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_user_meta($user_id, $key) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_user_meta($user_id, "relme") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).,None,None
+RETRIEVAL call to file_get_contents($file).,None,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+WP_User object is created.,,None
+RETRIEVAL call to get_option($args["name"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_users(["orderby" => "ID", "fields" => ["ID", "display_name"]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).,None,None
+RETRIEVAL call to get_option("iw_default_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iw_single_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iw_default_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_userdata($display_author) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("iw_author_url") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_the_author_meta($key, $user->ID) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta($key, $user->ID) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_user_meta($user["id"], "first_name") alters data types {'first_name', 'user_meta'}. Passed arguments: 0: $user_id (int), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_the_author_meta("ID") alters data types {'user_meta'}. Passed arguments: 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta($silo, $author_id) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta("relme", $author_id) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta("display_name", $author_id) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_the_author_meta("display_name", $author_id) alters data types {'user_meta'}. Passed arguments: 1: $user_id (int|false), 0: $field (string). Returns (string).,None,None
+RETRIEVAL call to get_userdata($author_id) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_id (int). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("iw_single_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iw_default_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_by("slug", get_query_var("author_name")) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_user_option("pgp", $author_id) alters data types {'user_meta'}. Passed arguments: 0: $option (string), 1: $user (int). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("indieweb_mastodon") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($user->ID, "mastodon", true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iw_single_author", is_multi_author()"0""1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iw_default_author", $default_admin_user) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_users(["role" => "administrator", "number" => 1, "fields" => "ID"]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $args (array). Returns (array).,None,None
+RETRIEVAL call to get_option("iw_relme_bw") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to delete_option("iw_single_author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_user_meta($user_id, $key, sanitize_text_field($p[$key])) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_user_meta($user_id, $key) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to update_user_meta($user_id, "relme", self->clean_urls($relme)) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_user_meta($user_id, "relme") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to delete_transient("indieweb_mastodon") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to set_transient("indieweb_mastodon", $value) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).

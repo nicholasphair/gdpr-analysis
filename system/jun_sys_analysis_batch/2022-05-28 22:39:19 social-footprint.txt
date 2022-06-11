@@ -1,0 +1,442 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on social-footprint
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.931123.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.930258.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 70 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.515659.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.409964.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 519 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.857882.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 1 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.589158.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.078463.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 280 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.804665.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 4096
+Added 3226 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 5532
+Added 1436 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.268836.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/authorship-social-counter.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/includes/PagesSocialStatsPlugin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/includes/UrlSocialStatsChecker.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/includes/wpUrlList.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/views/help.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/views/manage_urls_back.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/views/manage_urls.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/views/settings.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/views/shortcode.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/social-footprint/views/total_share.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.912661.
+
+589 PHP_REACHES edges created
+1 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3506 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1436 PHP_REACHES edges created
+5532 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1592 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.022117.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.775675.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 124 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.997499.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 156 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.182140.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.021184.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.025514.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.031257.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.043429.
+
+280 PHP_REACHES edges created
+280 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 269 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.155211.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.128167.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this->render_view("manage_urls", ["items" => $this->get_items(), "form_data" => $formData, "form_errors" => $formErrors])'' cannot be parsed correct.
+HTML code '$'Unexpected error: $e->getMessage()'' cannot be parsed correct.
+HTML code '$'$this->render_view("settings", ["services" => $this->get_services()])'' cannot be parsed correct.
+HTML code '$'$this->render_view("help", ["text" => file_get_contents(dirname() . "/../readme.txt")])'' cannot be parsed correct.
+HTML code '$'<input type="hidden" id="order" name="order" value="$this_order" /'' cannot be parsed correct.
+HTML code '$'<input type="hidden" id="orderby" name="orderby" value="$this_orderby" /'' cannot be parsed correct.
+HTML code '$'$this->get_setting("menu-main-title")'' cannot be parsed correct.
+HTML code '$'$this->get_setting("menu-main-title")'' cannot be parsed correct.
+HTML code '$'<img src=plugins_url("includes/mattLogo.png", )" alt="Matthew Barby" width="150px">'' cannot be parsed correct.
+HTML code '$'$this->get_page_url()'' cannot be parsed correct.
+HTML code '$'join("<br />", $form_errors)'' cannot be parsed correct.
+HTML code '$'$form_data_url'' cannot be parsed correct.
+HTML code '$'$this->get_page_url()'' cannot be parsed correct.
+HTML code '$'$this->get_page_url()'' cannot be parsed correct.
+HTML code '$'<img src=plugins_url("includes/mattLogo.png", )" alt="Matthew Barby" width="150px">'' cannot be parsed correct.
+HTML code '$'$this->get_setting("page-manage-items-title", "Manage URLs")'' cannot be parsed correct.
+HTML code '$'$this->get_page_url()'' cannot be parsed correct.
+HTML code '$'$service_key'' cannot be parsed correct.
+HTML code '$'$service_key'' cannot be parsed correct.
+HTML code '$'$this->get_service_label_by_code($service_key)'' cannot be parsed correct.
+HTML code '$'join("</li><li>", $parts)'' cannot be parsed correct.
+HTML code '$'$this->get_service_label_by_code($service_key)'' cannot be parsed correct.
+HTML code '$'$this->get_refresh_stats_url(true)'' cannot be parsed correct.
+HTML code '$'Ordering by $this->get_service_label_by_code($_POST["set_order"])'' cannot be parsed correct.
+HTML code '$'$url'' cannot be parsed correct.
+HTML code '$'$url'' cannot be parsed correct.
+HTML code '$'$stats_$service_key0'' cannot be parsed correct.
+HTML code '$'$stats_totals'' cannot be parsed correct.
+HTML code '$'date("Y-m-d H:i:s", $stats["ct"])-'' cannot be parsed correct.
+HTML code '$'add_query_arg(["cmd" => "refresh_stats", "url" => $url])'' cannot be parsed correct.
+HTML code '$'add_query_arg(["cmd" => "delete_url", "url" => $url])'' cannot be parsed correct.
+HTML code '$'$this->get_page_url()'' cannot be parsed correct.
+HTML code '$'join("<br />", $form_errors)'' cannot be parsed correct.
+HTML code '$'$form_data_url'' cannot be parsed correct.
+HTML code '$'$this->get_page_url()'' cannot be parsed correct.
+HTML code '$'$this->get_page_url()'' cannot be parsed correct.
+HTML code '$'$this->get_service_label_by_code($key)'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'array_sum($total_stats)'' cannot be parsed correct.
+HTML code '$'$this->get_setting("page-settings-title", "Settings")'' cannot be parsed correct.
+HTML code '$'$this->get_page_url("settings")'' cannot be parsed correct.
+HTML code '$'$serviceKey'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'$this->get_service_label_by_code($serviceKey)'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" async="async" src="$this->get_refresh_stats_url()"></script'' cannot be parsed correct.
+HTML code '$'join("</li><li>", $parts)'' cannot be parsed correct.
+HTML code '$'array_sum($stats)'' cannot be parsed correct.
+HTML code '$'"ok";'' cannot be parsed correct.
+HTML code '$';'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:07.172748.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.059986.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.662284.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running maxdbDetector
+### Start running Sqlite3Detector
+### Finish running MySQLiDetector
+### Start running SqliteDetector
+### Finish running PropertyDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running PHPRetrievalDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running PhpVarDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running PhpCurlDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+includes/PagesSocialStatsPlugin.php:385
+  - RETRIEVAL call to fgetcsv($handle, 1000, "\\").
+  - Data types: file
+includes/PagesSocialStatsPlugin.php:449
+  - RETRIEVAL call to file_get_contents(dirname() . "/../readme.txt").
+  - Data types: file 
+
+includes/PagesSocialStatsPlugin.php:228
+  - RETRIEVAL call to get_posts(["posts_per_page" => -1, "post_type" => "post", "post_status" => "publish"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+includes/PagesSocialStatsPlugin.php:398
+  - RETRIEVAL call to get_posts(["posts_per_page" => -1, "post_type" => "post", "post_status" => "publish"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+includes/PagesSocialStatsPlugin.php:515
+  - RETRIEVAL call to get_option($this->get_option_name("items"), []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:635
+  - RETRIEVAL call to get_option($this->get_option_name("totals"), null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:669
+  - RETRIEVAL call to get_transient($cache_refresh_flag) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+includes/PagesSocialStatsPlugin.php:871
+  - RETRIEVAL call to get_option($this->get_option_name("settings")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+includes/PagesSocialStatsPlugin.php:325
+  - STORAGE call to add_option($this->get_option_name("settings"), null, "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:326
+  - STORAGE call to add_option($this->get_option_name("items"), [], "", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:327
+  - STORAGE call to add_option($this->get_option_name("totals"), null, "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:332
+  - STORAGE call to delete_option($this->get_option_name("settings")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:333
+  - STORAGE call to delete_option($this->get_option_name("items")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:334
+  - STORAGE call to delete_option($this->get_option_name("totals")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:563
+  - STORAGE call to update_option($this->get_option_name("items"), $this->items$this->items[]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:656
+  - STORAGE call to update_option($this->get_option_name("totals"), $result) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:672
+  - STORAGE call to set_transient($cache_refresh_flag, true, $this->get_setting("auto-refresh-time")) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+includes/PagesSocialStatsPlugin.php:860
+  - STORAGE call to update_option($this->get_option_name("settings"), $saveMap) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+includes/PagesSocialStatsPlugin.php:332
+  - DELETION call to delete_option($this->get_option_name("settings")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:333
+  - DELETION call to delete_option($this->get_option_name("items")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+includes/PagesSocialStatsPlugin.php:334
+  - DELETION call to delete_option($this->get_option_name("totals")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents(dirname() . "/../readme.txt") - {'file'}
+	PHPRetrievalDetector.fgetcsv($handle, 1000, "\\") - {'file'}
+none
+	WordPressRetrievalDetector.get_posts(["posts_per_page" => -1, "post_type" => "post", "post_status" => "publish"]) - set()
+	WordPressRetrievalDetector.get_posts(["posts_per_page" => -1, "post_type" => "post", "post_status" => "publish"]) - set()
+option
+	WordPressStorageDetector.delete_option($this->get_option_name("settings")) - {'option'}
+	WordPressStorageDetector.add_option($this->get_option_name("items"), [], "", "no") - {'option'}
+	WordPressStorageDetector.delete_option($this->get_option_name("totals")) - {'option'}
+	DeletionDetector.delete_option($this->get_option_name("items")) - {'option'}
+	WordPressStorageDetector.add_option($this->get_option_name("settings"), null, "", "yes") - {'option'}
+	DeletionDetector.delete_option($this->get_option_name("totals")) - {'option'}
+	WordPressRetrievalDetector.get_option($this->get_option_name("totals"), null) - {'option'}
+	WordPressStorageDetector.add_option($this->get_option_name("totals"), null, "", "yes") - {'option'}
+	WordPressStorageDetector.delete_option($this->get_option_name("items")) - {'option'}
+	DeletionDetector.delete_option($this->get_option_name("settings")) - {'option'}
+	WordPressRetrievalDetector.get_option($this->get_option_name("items"), []) - {'option'}
+	WordPressRetrievalDetector.get_option($this->get_option_name("settings")) - {'option'}
+	WordPressStorageDetector.update_option($this->get_option_name("settings"), $saveMap) - {'option'}
+	WordPressStorageDetector.update_option($this->get_option_name("items"), $this->items$this->items[]) - {'option'}
+	WordPressStorageDetector.update_option($this->get_option_name("totals"), $result) - {'option'}
+site
+	WordPressRetrievalDetector.get_transient($cache_refresh_flag) - {'site'}
+	WordPressStorageDetector.set_transient($cache_refresh_flag, true, $this->get_setting("auto-refresh-time")) - {'site'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.828940.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 28 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.146538.
+
+28 STORE_REACHES edges created
+28 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006067.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:50.454495!
+DELETION call to delete_option($this->get_option_name("settings")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option($this->get_option_name("items")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option($this->get_option_name("totals")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to fgetcsv($handle, 1000, "\\").,None,None
+RETRIEVAL call to file_get_contents(dirname() . "/../readme.txt").,None,None
+RETRIEVAL call to get_posts(["posts_per_page" => -1, "post_type" => "post", "post_status" => "publish"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_posts(["posts_per_page" => -1, "post_type" => "post", "post_status" => "publish"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_option($this->get_option_name("items"), []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->get_option_name("totals"), null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_transient($cache_refresh_flag) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->get_option_name("settings")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option($this->get_option_name("settings"), null, "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option($this->get_option_name("items"), [], "", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option($this->get_option_name("totals"), null, "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option($this->get_option_name("settings")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option($this->get_option_name("items")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option($this->get_option_name("totals")) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option($this->get_option_name("items"), $this->items$this->items[]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->get_option_name("totals"), $result) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to set_transient($cache_refresh_flag, true, $this->get_setting("auto-refresh-time")) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to update_option($this->get_option_name("settings"), $saveMap) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

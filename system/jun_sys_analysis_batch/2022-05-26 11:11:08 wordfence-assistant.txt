@@ -1,0 +1,409 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on wordfence-assistant
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.629799.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.838976.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 9 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.345832.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.383317.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 217 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.514884.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 37 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.561733.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+Added 4 PHP_REACHES edges.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.096960.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 73 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.328002.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1946
+Added 1606 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2242
+Added 296 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.980009.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wordfence-assistant/wordfence-assistant.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wordfence-assistant/lib/mainMenu.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wordfence-assistant/lib/wfaWAFAutoPrependUninstaller.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wordfence-assistant/lib/wfaWebServerInfo.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wordfence-assistant/lib/wordfenceAssistantClass.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.557045.
+
+226 PHP_REACHES edges created
+26 CALLS edges created
+6 PHP_REACHES edges created
+3 CALLS edges created
+1000 PHP_REACHES edges created
+1685 PHP_REACHES edges created
+296 PHP_REACHES edges created
+2242 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 718 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.917836.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:04.012435.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 24 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.576555.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 91 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.159127.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.291625.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.279681.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.014150.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.032490.
+
+115 PHP_REACHES edges created
+115 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 61 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.159326.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+15 SQL operations to process.
+truncate table $wpdbwfHits
+SQL command (truncate table $wpdbwfHits) cannot be parsed correct.
+delete from $wpdbwfHits
+SQL command (delete from $wpdbwfHits) cannot be parsed correct.
+truncate table $wpdbwfhits
+SQL command (truncate table $wpdbwfhits) cannot be parsed correct.
+delete from $wpdbwfhits
+SQL command (delete from $wpdbwfhits) cannot be parsed correct.
+update $wpdbwfConfig set val=0 where name='autoUpdate'
+SQL command (update $wpdbwfConfig set val=0 where name='autoUpdate') cannot be parsed correct.
+update $wpdbwfconfig set val=0 where name='autoUpdate'
+SQL command (update $wpdbwfconfig set val=0 where name='autoUpdate') cannot be parsed correct.
+update $wpdbwfConfig set val=0 where name='firewallEnabled'
+SQL command (update $wpdbwfConfig set val=0 where name='firewallEnabled') cannot be parsed correct.
+update $wpdbwfconfig set val=0 where name='firewallEnabled'
+SQL command (update $wpdbwfconfig set val=0 where name='firewallEnabled') cannot be parsed correct.
+truncate table $wpdb$t
+SQL command (truncate table $wpdb$t) cannot be parsed correct.
+delete from $wpdb$t
+SQL command (delete from $wpdb$t) cannot be parsed correct.
+truncate table $wpdbstrtolower($t)
+SQL command (truncate table $wpdbstrtolower($t)) cannot be parsed correct.
+delete from $wpdbstrtolower($t)
+SQL command (delete from $wpdbstrtolower($t)) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdb$t
+SQL command (DROP TABLE IF EXISTS $wpdb$t) cannot be parsed correct.
+DROP TABLE IF EXISTS $wpdbstrtolower($t)
+SQL command (DROP TABLE IF EXISTS $wpdbstrtolower($t)) cannot be parsed correct.
+SELECT `blog_id` FROM `$wpdb` WHERE `deleted` = 0
+SQL command (SELECT `blog_id` FROM `$wpdb` WHERE `deleted` = 0) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1795, 1808, 1821, 1834, 1886, 1899, 2203, 2216, 2789, 2804, 2819, 2837, 3176, 3191, 3550]
+Added 0 SQL nodes. 0 out of 15 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.882023.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'</h2>
+	<div class="wfAstBlock">
+	<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+	<p>
+		'' cannot be parsed correct.
+HTML code '$'</h3>
+	<p>
+		'' cannot be parsed correct.
+HTML code '$'		<br /><br />
+		<input class="button-primary" type="button" name="but1" value="'' cannot be parsed correct.
+HTML code '$'" onclick="WFAST.disableAutoUpdate(); return ;" />
+	</p>
+	<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+	<p>
+		'' cannot be parsed correct.
+HTML code '$'<br /><br />
+		<b>/wp-content/plugins/wordfence/</b>
+		<br /><br />
+		'' cannot be parsed correct.
+HTML code '$'		<br /><br />
+		'' cannot be parsed correct.
+HTML code '$'		<br /><br />
+		<input class="button-primary" type="button" name="but1" value="'' cannot be parsed correct.
+HTML code '$'" onclick="WFAST.disableFirewall(); return ;" />
+		<span id="disableFirewall"></span>
+	</p>
+	<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+	<p>
+		'' cannot be parsed correct.
+HTML code '$'		<br /><br />
+		<input class="button-primary" type="button" name="but1" value="'' cannot be parsed correct.
+HTML code '$'" onclick="WFAST.disableBlacklist(); return ;" />
+		<span id="disableBlacklist"></span>
+	</p>
+	<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+	<p>
+		'' cannot be parsed correct.
+HTML code '$'		<br /><br />
+		<span class="wf-assistant-checkbox">
+			<input type="checkbox" id="delete_2fa_secrets"/>
+			<label>'' cannot be parsed correct.
+HTML code '$'</label>
+		</span>
+		<input class="button-primary" type="button" name="but1" value="'' cannot be parsed correct.
+HTML code '$'" onclick="WFAST.delAll(); return false;" />
+	</p>
+	<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+	<p>
+		'' cannot be parsed correct.
+HTML code '$'		<br /><br />
+		<input class="button-primary" type="button" name="but1" value="'' cannot be parsed correct.
+HTML code '$'" onclick="WFAST.clearLocks();" />
+	</p>
+	<h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+	<p>
+		'' cannot be parsed correct.
+HTML code '$'		<br /><br />
+		<input class="button-primary" type="button" name="but1" value="'' cannot be parsed correct.
+HTML code '$'" onclick="WFAST.clearLiveTraffic(); return;" />
+	</p>
+	</div>
+
+</div>
+
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.238732.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.091712.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.331843.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PropertyDetector
+### Start running SqliteDetector
+### Finish running Sqlite3Detector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running SqlServerDetector
+### Start running VariableDetector
+### Finish running PHPRetrievalDetector
+### Start running WordpressHashingFnDetector
+### Finish running PHPStorageDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running maxdbDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+lib/wordfenceAssistantClass.php:148
+  - RETRIEVAL call to file_get_contents(WFWAF_LOG_PATH . "/config.php").
+  - Data types: file 
+
+lib/wordfenceAssistantClass.php:160
+  - STORAGE call to file_put_contents(WFWAF_LOG_PATH . "/config.php", $configContents).
+  - Data types: file 
+
+lib/wordfenceAssistantClass.php:281
+  - STORAGE call to update_option("wordfenceActivated", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lib/wordfenceAssistantClass.php:291
+  - STORAGE call to delete_option($opt) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+lib/wordfenceAssistantClass.php:291
+  - DELETION call to delete_option($opt) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.file_put_contents(WFWAF_LOG_PATH . "/config.php", $configContents) - {'file'}
+	PHPRetrievalDetector.file_get_contents(WFWAF_LOG_PATH . "/config.php") - {'file'}
+option
+	WordPressStorageDetector.update_option("wordfenceActivated", 0) - {'option'}
+	DeletionDetector.delete_option($opt) - {'option'}
+	WordPressStorageDetector.delete_option($opt) - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.691212.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 1 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.067509.
+
+1 STORE_REACHES edges created
+1 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005363.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:33.443041!
+DELETION call to delete_option($opt) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to file_get_contents(WFWAF_LOG_PATH . "/config.php").,None,None
+STORAGE call to file_put_contents(WFWAF_LOG_PATH . "/config.php", $configContents).,None,None
+STORAGE call to update_option("wordfenceActivated", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option($opt) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,974 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on fraudgrade
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:02.217079.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.587445.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 12 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.440485.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.674583.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 529 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.834788.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 15 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.741144.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.097632.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 323 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:11.085672.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 5162
+Added 4282 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 38233
+Added 33071 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:03.766789.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fraudgrade/fraudgrade.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fraudgrade/lang/language.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fraudgrade/libraries/admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fraudgrade/libraries/datagrid.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fraudgrade/libraries/global.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fraudgrade/libraries/meta-columns.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fraudgrade/views/meta-block.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fraudgrade/views/widget.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.842391.
+
+12 PHP_REACHES edges created
+1 REACHES edges created
+529 PHP_REACHES edges created
+15 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4605 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+10000 PHP_REACHES edges created
+11000 PHP_REACHES edges created
+12000 PHP_REACHES edges created
+13000 PHP_REACHES edges created
+14000 PHP_REACHES edges created
+15000 PHP_REACHES edges created
+16000 PHP_REACHES edges created
+17000 PHP_REACHES edges created
+18000 PHP_REACHES edges created
+19000 PHP_REACHES edges created
+20000 PHP_REACHES edges created
+21000 PHP_REACHES edges created
+22000 PHP_REACHES edges created
+23000 PHP_REACHES edges created
+24000 PHP_REACHES edges created
+25000 PHP_REACHES edges created
+26000 PHP_REACHES edges created
+27000 PHP_REACHES edges created
+28000 PHP_REACHES edges created
+29000 PHP_REACHES edges created
+30000 PHP_REACHES edges created
+31000 PHP_REACHES edges created
+32000 PHP_REACHES edges created
+33000 PHP_REACHES edges created
+33071 PHP_REACHES edges created
+38233 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1584 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.082861.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.081125.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 7577
+Added 14 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.284697.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 35 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.137701.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.295597.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Error! AST Method should have parameters but the parameters cannot be matched. FuncID: 7577
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.456045.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.016609.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.042017.
+
+49 PHP_REACHES edges created
+49 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 23 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.124554.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+2 SQL operations to process.
+
+		 		SELECT $wpdb.ID, $wpdb.post_title
+		 			FROM $wpdb
+		 		WHERE $wpdb.post_title = 'json_decode($json)_ip'
+		 			AND $wpdb.post_type = 'ip_check'
+		 			AND $wpdb.post_status = 'publish'
+		 		LIMIT 1
+SQL command ( SELECT $wpdb.ID, $wpdb.post_title FROM $wpdb WHERE $wpdb.post_title = 'json_decode($json)_ip' AND $wpdb.post_type = 'ip_check' AND $wpdb.post_status = 'publish' LIMIT 1) cannot be parsed correct.
+
+		 		SELECT $wpdb.ID, $wpdb.post_title
+		 			FROM $wpdb
+		 		WHERE $wpdb.post_title = '$ip'
+		 			AND $wpdb.post_type = 'ip_check'
+		 			AND $wpdb.post_status = 'publish'
+		 		LIMIT 1
+SQL command ( SELECT $wpdb.ID, $wpdb.post_title FROM $wpdb WHERE $wpdb.post_title = '$ip' AND $wpdb.post_type = 'ip_check' AND $wpdb.post_status = 'publish' LIMIT 1) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [6637, 7020]
+Added 0 SQL nodes. 0 out of 2 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.994782.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<input id=\'ipc_search_engine_$args_engine\' type=\'checkbox\' name=\'ipc_settings[ipc_search_engines][$args_engine]\' checked($options["ipc_search_engines"][$engine], 1, FALSE) value=\'1\'>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-$args_engine"_hint_$args_engine</p>'' cannot be parsed correct.
+HTML code '$'<option selected="selected"  value=\'#homepage\'>Homepage</option>
+'' cannot be parsed correct.
+HTML code '$'<option value=$page"selected="selected" >$page</option>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-wl_pages">_hint_whitelist_pages</p>'' cannot be parsed correct.
+HTML code '$'<option value=\'$ip\' selected=\'selected\' >$ip</option>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-whitelist">_hint_whiteList</p>'' cannot be parsed correct.
+HTML code '$'<input class=\'regular-text\' type=\'text\' name=\'ipc_settings[ipc_text_apikey]\' value=\'$value\'>'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-apiKey">_hint_apiKey</p>'' cannot be parsed correct.
+HTML code '$'<input type=\'checkbox\' name=\'ipc_settings[ipc_checkbox_field_1]\'  value=\'1\'>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-blockProxy">_hint_blockProxy</p>'' cannot be parsed correct.
+HTML code '$'<input type=\'checkbox\' name=\'ipc_settings[ipc_checkbox_field_2]\'  value=\'1\'>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-blockTor">_hint_blockTor</p>'' cannot be parsed correct.
+HTML code '$'<input type=\'checkbox\' name=\'ipc_settings[ipc_checkbox_field_3]\'  value=\'1\'>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-blockVPN">_hint_blockVPN</p>'' cannot be parsed correct.
+HTML code '$'<input type=\'checkbox\' name=\'ipc_settings[ipc_checkbox_field_4]\'  value=\'1\'>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-blockData">_hint_blockData</p>'' cannot be parsed correct.
+HTML code '$'<input type=\'checkbox\' name=\'ipc_settings[ipc_checkbox_field_5]\' checked($options["ipc_checkbox_field_5"], 1, FALSE) value=\'1\'>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-blockBlack">_hint_blockBlack</p>'' cannot be parsed correct.
+HTML code '$'<option value=\'$key\'  selected="true" >$value</option>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-country">_hint_country</p>'' cannot be parsed correct.
+HTML code '$'<option value=$page"selected="selected" >$page</option>
+'' cannot be parsed correct.
+HTML code '$'<option value=$options_ipc_redirect" selected="selected">$options_ipc_redirect</option>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-redirect">_hint_redirect</p>'' cannot be parsed correct.
+HTML code '$'_hint_whitelist_pages'' cannot be parsed correct.
+HTML code '$'<div id="ip_check_settings_metabox" class="postbox"> <button type="button" class="handlediv" aria-expanded="true"><span class="screen-reader-text">Toggle panel: Debug Information</span><span class="toggle-indicator" aria-hidden="true"></span></button><h2 class="hndle ui-sortable-handle"><span>FraudGrade Settings</span></h2><div class="inside">'' cannot be parsed correct.
+HTML code '$'<div id="ip_check_settings_metabox" class="postbox"> <button type="button" class="handlediv" aria-expanded="true"><span class="screen-reader-text">Toggle panel: FraudGrade Settings</span><span class="toggle-indicator" aria-hidden="true"></span></button><h2 class="hndle ui-sortable-handle"><span>FraudGrade Settings</span></h2><div class="inside">'' cannot be parsed correct.
+HTML code '$'<div id="ip_check_ip_check_settings_searchengine_metabox" class="postbox"> <button type="button" class="handlediv" aria-expanded="true"><span class="screen-reader-text">Toggle panel: Whitelist Robots/Crawlers</span><span class="toggle-indicator" aria-hidden="true"></span></button><h2 class="hndle ui-sortable-handle"><span>Whitelist Robots/Crawlers</span></h2><div class="inside">'' cannot be parsed correct.
+HTML code '$'<div id="ip_check_chart_metabox" class="postbox"> <button type="button" class="handlediv" aria-expanded="true"><span class="screen-reader-text">Toggle panel: Debug Information</span><span class="toggle-indicator" aria-hidden="true"></span></button><h2 class="hndle ui-sortable-handle"><span>FraudGrade Settings</span></h2><div class="inside">'' cannot be parsed correct.
+HTML code '$'<option value=\'$time\' selected($options["ipc_cache_time"], $time, FALSE)>$time day</option>
+'' cannot be parsed correct.
+HTML code '$'<p class="description" id="hint-cacheTime">_hint_cacheTime</p>'' cannot be parsed correct.
+HTML code '$'<iframe width="100%" height=\'250px\' src="https://maps.google.com/maps?q=get_post_meta($post->ID)__latitude_0,get_post_meta($post->ID)__longitude_0&z=5&output=embed&attribution_source=FraudGrade&attribution_web_url=https://www.FraudGrade.com/"></iframe'' cannot be parsed correct.
+HTML code '$'Total Cached Blocked IPs : $blocks</br>'' cannot be parsed correct.
+HTML code '$'Total Cached NonBlocked IPs : $visits<br/>'' cannot be parsed correct.
+HTML code '$'Total Blocked IPs : $total_blocks</br>'' cannot be parsed correct.
+HTML code '$'Total NonBlocked IPs : $total_visits<br/>'' cannot be parsed correct.
+HTML code '$'_notice_missing_apikey'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "_ipGrade", true)'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "_ipGradeDetails", true)'' cannot be parsed correct.
+HTML code '$'NOYES'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "_anonymizerDetails", true)'' cannot be parsed correct.
+HTML code '$'NOYES'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "_isBlacklistedDetails", true)'' cannot be parsed correct.
+HTML code '$'
+<script>
+window.location = _ipc_redirect";
+</script>'' cannot be parsed correct.
+HTML code '$'<legend style="background:lightgrey; padding:5px;">$callee_file @ line: $callee_line</legend><pre>'' cannot be parsed correct.
+HTML code '$'<br/><strong>Debug # of count($arguments)</strong>: '' cannot be parsed correct.
+HTML code '$'</pre>PHP_EOL'' cannot be parsed correct.
+HTML code '$'</fieldset>PHP_EOL'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_ipGrade", true)'' cannot be parsed correct.
+HTML code '$'_hint_ipGrade'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_ipGradeDetails", true)'' cannot be parsed correct.
+HTML code '$'_hint_ipGradeDetails'' cannot be parsed correct.
+HTML code '$'_hint_anonymizerDetected'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_anonymizerDetails", true)'' cannot be parsed correct.
+HTML code '$'_hint_anonymizerDetails'' cannot be parsed correct.
+HTML code '$'_hint_isBlacklisted'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_isBlacklistedDetails", true)'' cannot be parsed correct.
+HTML code '$'_hint_isBlacklistedDetails'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_city", true)'' cannot be parsed correct.
+HTML code '$'_hint_city'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_postalCode", true)'' cannot be parsed correct.
+HTML code '$'_hint_postalCode'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_state", true)'' cannot be parsed correct.
+HTML code '$'_hint_state'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_stateIsoCode", true)'' cannot be parsed correct.
+HTML code '$'_hint_stateIsoCode'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_country", true)'' cannot be parsed correct.
+HTML code '$'_hint_country'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_countryIsoCode", true)'' cannot be parsed correct.
+HTML code '$'_hint_countryIsoCode'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_latitude", true)'' cannot be parsed correct.
+HTML code '$'_hint_latitude'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_longitude", true)'' cannot be parsed correct.
+HTML code '$'_hint_longitude'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_accuracyRadius", true)'' cannot be parsed correct.
+HTML code '$'_hint_accuracyRadius'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_isp", true)'' cannot be parsed correct.
+HTML code '$'_hint_isp'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_connectionType", true)'' cannot be parsed correct.
+HTML code '$'_hint_connectionType'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_organization", true)'' cannot be parsed correct.
+HTML code '$'_hint_organization'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_asn", true)'' cannot be parsed correct.
+HTML code '$'_hint_asn'' cannot be parsed correct.
+HTML code '$'get_post_meta($post->ID, "_asnOrganization", true)'' cannot be parsed correct.
+HTML code '$'_hint_asnOrganization'' cannot be parsed correct.
+HTML code '$'NOYES'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "_anonymizerDetails", true)'' cannot be parsed correct.
+HTML code '$'NOYES'' cannot be parsed correct.
+HTML code '$'get_post_meta($post_id, "_isBlacklistedDetails", true)'' cannot be parsed correct.
+HTML code '$'<style type="text/css"> #slugdiv, #edit-slug-box { display: none; }</style>
+'' cannot be parsed correct.
+HTML code '$'<script>'' cannot be parsed correct.
+HTML code '$'jQuery(document).ready(function(){
+        	jQuery("a.page-title-action, #edit_timestamp, div.misc-pub-visibility, a.preview.button").hide();
+        	jQuery("#title").attr(\'disabled\',\'disabled\');
+        });'' cannot be parsed correct.
+HTML code '$'</script>'' cannot be parsed correct.
+HTML code '$'<select multiple id="wl_pages" class="regular-text" name="ipc_settings[ipc_whitelisted_pages][]">'' cannot be parsed correct.
+HTML code '$'</select>
+'' cannot be parsed correct.
+HTML code '$'<select multiple class=\'regular-text\' id=\'whiteList\' name=\'ipc_settings[ipc_whitelist][]\'>
+'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'<select class=\'f16 large-text\' multiple id=\'country_code\' name=\'ipc_settings[country_code][]\'>
+'' cannot be parsed correct.
+HTML code '$'</select>
+'' cannot be parsed correct.
+HTML code '$'<select id="redirect_page" class="regular-text" name="ipc_settings[ipc_redirect]">'' cannot be parsed correct.
+HTML code '$'</select>
+'' cannot be parsed correct.
+HTML code '$'<div id="poststuff">'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<div class="column-2">'' cannot be parsed correct.
+HTML code '$'<form action="options.php" method="post">'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'</div></div></div>'' cannot be parsed correct.
+HTML code '$'<div id="poststuff">'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<div class="column-2">'' cannot be parsed correct.
+HTML code '$'<form action="options.php" method="post">'' cannot be parsed correct.
+HTML code '$'</div></div>'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'</div></div></div>'' cannot be parsed correct.
+HTML code '$'<div class="column-2">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div></div></div>'' cannot be parsed correct.
+HTML code '$'<select name=\'ipc_settings[ipc_cache_time]\'>
+'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'<div class="inside">\n'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'		<div class=\'inside\'>
+'' cannot be parsed correct.
+HTML code '$'      </div>'' cannot be parsed correct.
+HTML code '$'<div class="notice notice-error is-dismissible"><p>'' cannot be parsed correct.
+HTML code '$'</p></div>'' cannot be parsed correct.
+HTML code '$'<fieldset style="background: #fefefe !important; border:2px red solid; padding:5px">'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:12.751925.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.043209.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 24 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.158145.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IBMDb2Detector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running HashDetector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running ArrayElementDetector
+### Start running MySQLiDetector
+### Finish running IngresDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running MySQLDetector
+### Start running ParadoxDetector
+### Finish running MsqlDetector
+### Start running PasswordHashingDetector
+### Finish running OpenSSLDetector
+### Start running PhpCurlDetector
+### Finish running Oci8Detector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running ParadoxDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PasswordHashingDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPIncludedDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running Sqlite3Detector
+### Start running SqlServerDetector
+### Finish running PHPRetrievalDetector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running SqliteDetector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running UserInputDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UninstallDetector
+### Finish running maxdbDetector
+### Finish running MySQLiDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+libraries/global.php:522
+  - RETRIEVAL call to file($dir . $file . ".txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).
+  - Data types: file 
+
+libraries/global.php:421
+  - object property '$data->country' of personal types {'country'} is found.
+  - Data types: country
+libraries/global.php:422
+  - object property '$data->countryIsoCode' of personal types {'country'} is found.
+  - Data types: country 
+
+views/meta-block.php:42
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+views/meta-block.php:43
+  - variable '$countryIsoCode' of personal types {'country'} is found.
+  - Data types: country
+views/meta-block.php:143
+  - variable '$country' of personal types {'country'} is found.
+  - Data types: country
+views/meta-block.php:151
+  - variable '$countryIsoCode' of personal types {'country'} is found.
+  - Data types: country 
+
+libraries/global.php:497
+  - API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote 
+
+fraudgrade.php:96
+  - RETRIEVAL call to get_option("ipc_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fraudgrade.php:109
+  - RETRIEVAL call to get_posts(["post_type" => "ip_check"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+fraudgrade.php:116
+  - RETRIEVAL call to get_option("_ipc_total_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fraudgrade.php:117
+  - RETRIEVAL call to get_option("_ipc_total_nonblocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fraudgrade.php:118
+  - RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fraudgrade.php:119
+  - RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/admin.php:77
+  - RETRIEVAL call to get_transient("ipc_set_cron_timer") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+libraries/admin.php:160
+  - RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/admin.php:161
+  - RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/admin.php:718
+  - RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/admin.php:719
+  - RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/admin.php:852
+  - RETRIEVAL call to get_post_meta($post->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).
+  - Data types: post_meta
+libraries/admin.php:863
+  - RETRIEVAL call to get_option("_ipc_total_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/admin.php:864
+  - RETRIEVAL call to get_option("_ipc_total_nonblocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/admin.php:865
+  - RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/admin.php:866
+  - RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/admin.php:886
+  - RETRIEVAL call to get_post_meta($post->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).
+  - Data types: post_meta
+libraries/datagrid.php:71
+  - RETRIEVAL call to get_post_meta($post_id, "_ipGrade", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+libraries/datagrid.php:74
+  - RETRIEVAL call to get_post_meta($post_id, "_ipGradeDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+libraries/datagrid.php:77
+  - RETRIEVAL call to get_post_meta($post_id, "_anonymizerDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+libraries/datagrid.php:81
+  - RETRIEVAL call to get_post_meta($post_id, "_anonymizerDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+libraries/datagrid.php:84
+  - RETRIEVAL call to get_post_meta($post_id, "_isBlacklisted", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+libraries/datagrid.php:88
+  - RETRIEVAL call to get_post_meta($post_id, "_isBlacklistedDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+libraries/global.php:88
+  - RETRIEVAL call to get_option("_ipc_whitelisted") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/global.php:123
+  - RETRIEVAL call to get_option("_ipc_total_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/global.php:126
+  - RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/global.php:133
+  - RETRIEVAL call to get_option("_ipc_total_nonblocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/global.php:136
+  - RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+libraries/global.php:208
+  - RETRIEVAL call to get_post_meta($test->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).
+  - Data types: post_meta
+libraries/global.php:481
+  - RETRIEVAL call to get_post_meta($data->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:29
+  - RETRIEVAL call to get_post_meta($post->ID, "_anonymizerDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:30
+  - RETRIEVAL call to get_post_meta($post->ID, "_isBlacklisted", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:31
+  - RETRIEVAL call to get_post_meta($post->ID, "_anonymizerDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:32
+  - RETRIEVAL call to get_post_meta($post->ID, "_isBlacklistedDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:33
+  - RETRIEVAL call to get_post_meta($post->ID, "_ipGrade", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:34
+  - RETRIEVAL call to get_post_meta($post->ID, "_ipGradeDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:35
+  - RETRIEVAL call to get_post_meta($post->ID, "_vpnDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:36
+  - RETRIEVAL call to get_post_meta($post->ID, "_proxyDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:37
+  - RETRIEVAL call to get_post_meta($post->ID, "_torDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:38
+  - RETRIEVAL call to get_post_meta($post->ID, "_city", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:39
+  - RETRIEVAL call to get_post_meta($post->ID, "_postalCode", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:40
+  - RETRIEVAL call to get_post_meta($post->ID, "_state", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:41
+  - RETRIEVAL call to get_post_meta($post->ID, "_stateIsoCode", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:42
+  - RETRIEVAL call to get_post_meta($post->ID, "_country", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:43
+  - RETRIEVAL call to get_post_meta($post->ID, "_countryIsoCode", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:44
+  - RETRIEVAL call to get_post_meta($post->ID, "_latitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:45
+  - RETRIEVAL call to get_post_meta($post->ID, "_longitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:46
+  - RETRIEVAL call to get_post_meta($post->ID, "_accuracyRadius", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:47
+  - RETRIEVAL call to get_post_meta($post->ID, "_connectionType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:48
+  - RETRIEVAL call to get_post_meta($post->ID, "_asn", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:49
+  - RETRIEVAL call to get_post_meta($post->ID, "_asnOrganization", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:50
+  - RETRIEVAL call to get_post_meta($post->ID, "_organization", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/meta-block.php:51
+  - RETRIEVAL call to get_post_meta($post->ID, "_isp", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/widget.php:79
+  - RETRIEVAL call to get_post_meta($post_id, "_anonymizerDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/widget.php:83
+  - RETRIEVAL call to get_post_meta($post_id, "_anonymizerDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/widget.php:86
+  - RETRIEVAL call to get_post_meta($post_id, "_isBlacklisted", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+views/widget.php:90
+  - RETRIEVAL call to get_post_meta($post_id, "_isBlacklistedDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta 
+
+fraudgrade.php:112
+  - STORAGE call to wp_delete_post($item->ID, true) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: wp_post, post, post_meta
+fraudgrade.php:120
+  - STORAGE call to update_option("_ipc_total_blocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fraudgrade.php:121
+  - STORAGE call to update_option("_ipc_total_nonblocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fraudgrade.php:166
+  - STORAGE call to update_option("ipc_settings", $settings) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fraudgrade.php:167
+  - STORAGE call to update_option("_ipc_whitelisted", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fraudgrade.php:168
+  - STORAGE call to update_option("_ipc_total_blocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fraudgrade.php:169
+  - STORAGE call to update_option("_ipc_total_nonblocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fraudgrade.php:170
+  - STORAGE call to update_option("_ipc_alltime_blocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fraudgrade.php:171
+  - STORAGE call to update_option("_ipc_alltime_visits", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fraudgrade.php:188
+  - STORAGE call to delete_option("ipc_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+libraries/admin.php:760
+  - STORAGE call to set_transient("ipc_set_cron_timer", 1, 60 * 60) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+libraries/global.php:90
+  - STORAGE call to update_option("_ipc_whitelisted", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+libraries/global.php:125
+  - STORAGE call to update_option("_ipc_total_blocks", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+libraries/global.php:128
+  - STORAGE call to update_option("_ipc_alltime_blocks", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+libraries/global.php:135
+  - STORAGE call to update_option("_ipc_total_nonblocks", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+libraries/global.php:138
+  - STORAGE call to update_option("_ipc_alltime_visits", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+libraries/global.php:436
+  - STORAGE call to wp_insert_post($new_post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error). 
+
+fraudgrade.php:112
+  - DELETION call to wp_delete_post($item->ID, true) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: wp_post, post, post_meta
+fraudgrade.php:188
+  - DELETION call to delete_option("ipc_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+country
+	VariableDetector.(unknown) - {'country'}
+	PropertyDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	PropertyDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+file
+	PHPRetrievalDetector.file($dir . $file . ".txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES) - {'file'}
+none
+	WordPressRetrievalDetector.get_posts(["post_type" => "ip_check"]) - set()
+	WordPressStorageDetector.wp_insert_post($new_post) - set()
+option
+	WordPressStorageDetector.update_option("_ipc_total_nonblocks", 0) - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_visits") - {'option'}
+	WordPressStorageDetector.update_option("_ipc_total_nonblocks", 0) - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_total_blocks") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_total_nonblocks") - {'option'}
+	WordPressStorageDetector.update_option("ipc_settings", $settings) - {'option'}
+	WordPressStorageDetector.update_option("_ipc_total_blocks", 0) - {'option'}
+	WordPressStorageDetector.update_option("_ipc_whitelisted", 0) - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_blocks") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_visits") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_total_nonblocks") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_total_blocks") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_total_nonblocks") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_visits") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_blocks") - {'option'}
+	WordPressStorageDetector.update_option("_ipc_total_nonblocks", $value) - {'option'}
+	WordPressStorageDetector.update_option("_ipc_alltime_blocks", 0) - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_blocks") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_blocks") - {'option'}
+	DeletionDetector.delete_option("ipc_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_visits") - {'option'}
+	WordPressStorageDetector.update_option("_ipc_alltime_visits", $value) - {'option'}
+	WordPressRetrievalDetector.get_option("ipc_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_blocks") - {'option'}
+	WordPressStorageDetector.update_option("_ipc_total_blocks", $value) - {'option'}
+	WordPressStorageDetector.update_option("_ipc_alltime_blocks", $value) - {'option'}
+	WordPressStorageDetector.update_option("_ipc_whitelisted", $value) - {'option'}
+	WordPressStorageDetector.delete_option("ipc_settings") - {'option'}
+	WordPressStorageDetector.update_option("_ipc_alltime_visits", 1) - {'option'}
+	WordPressStorageDetector.update_option("_ipc_total_blocks", 0) - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_whitelisted") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_alltime_visits") - {'option'}
+	WordPressRetrievalDetector.get_option("_ipc_total_blocks") - {'option'}
+post
+	WordPressStorageDetector.wp_delete_post($item->ID, true) - {'wp_post', 'post', 'post_meta'}
+	DeletionDetector.wp_delete_post($item->ID, true) - {'wp_post', 'post', 'post_meta'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_isBlacklisted", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_isBlacklisted", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_latitude", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_organization", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_ipGrade", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_state", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_anonymizerDetected", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($data->ID) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_longitude", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_city", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($test->ID) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_ipGradeDetails", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_asn", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_anonymizerDetected", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_ipGrade", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_asnOrganization", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_postalCode", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_country", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_anonymizerDetails", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_ipGradeDetails", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_stateIsoCode", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_connectionType", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_torDetected", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_anonymizerDetails", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_anonymizerDetected", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_isBlacklisted", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_accuracyRadius", true) - {'post_meta'}
+	WordPressStorageDetector.wp_delete_post($item->ID, true) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_countryIsoCode", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_anonymizerDetails", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_vpnDetected", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_isBlacklistedDetails", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_proxyDetected", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_isp", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_isBlacklistedDetails", true) - {'post_meta'}
+	DeletionDetector.wp_delete_post($item->ID, true) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, "_isBlacklistedDetails", true) - {'post_meta'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+site
+	WordPressRetrievalDetector.get_transient("ipc_set_cron_timer") - {'site'}
+	WordPressStorageDetector.set_transient("ipc_set_cron_timer", 1, 60 * 60) - {'site'}
+wp_post
+	WordPressStorageDetector.wp_delete_post($item->ID, true) - {'wp_post', 'post', 'post_meta'}
+	DeletionDetector.wp_delete_post($item->ID, true) - {'wp_post', 'post', 'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:18.128759.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 290 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.495092.
+
+290 STORE_REACHES edges created
+290 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 14 nodes as PERSONAL
+In total, tainted 14 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.148609.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:21.810291!
+DELETION call to wp_delete_post($item->ID, true) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+DELETION call to delete_option("ipc_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to file($dir . $file . ".txt", FILE_IGNORE_NEW_LINESFILE_SKIP_EMPTY_LINES).,None,None
+object property '$data->country' of personal types {'country'} is found.,,None
+object property '$data->countryIsoCode' of personal types {'country'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$countryIsoCode' of personal types {'country'} is found.,,None
+variable '$country' of personal types {'country'} is found.,,None
+variable '$countryIsoCode' of personal types {'country'} is found.,,None
+API call to wp_remote_get($url). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,['https://fraudgrade.com/api/ipValidation/?key=%s&ip=%s']
+RETRIEVAL call to get_posts(["post_type" => "ip_check"]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_option("_ipc_total_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_total_nonblocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ipc_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("ipc_set_cron_timer") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_total_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_total_nonblocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_ipGrade", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_ipGradeDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_anonymizerDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_anonymizerDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_isBlacklisted", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_isBlacklistedDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_total_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_blocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_total_nonblocks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_alltime_visits") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($test->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($data->ID) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_option("_ipc_whitelisted") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_anonymizerDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_isBlacklisted", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_anonymizerDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_isBlacklistedDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_ipGrade", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_ipGradeDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_vpnDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_proxyDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_torDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_city", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_postalCode", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_state", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_stateIsoCode", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_country", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_countryIsoCode", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_latitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_longitude", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_accuracyRadius", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_connectionType", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_asn", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_asnOrganization", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_organization", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_isp", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_anonymizerDetected", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_anonymizerDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_isBlacklisted", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, "_isBlacklistedDetails", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+STORAGE call to wp_delete_post($item->ID, true) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+STORAGE call to update_option("_ipc_total_blocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_total_nonblocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ipc_settings", $settings) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_whitelisted", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_total_blocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_total_nonblocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_alltime_blocks", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_alltime_visits", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("ipc_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to set_transient("ipc_set_cron_timer", 1, 60 * 60) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_total_blocks", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_alltime_blocks", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_total_nonblocks", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("_ipc_alltime_visits", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_insert_post($new_post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to update_option("_ipc_whitelisted", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['country']) stored through WordPress function "wp_insert_post($new_post)", found in file libraries/global.php at line 436. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through wp_insert_post($new_post) does not have corresponding deletion method. Storage method found in file libraries/global.php at line 436. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 6959. Found in file libraries/global.php at line 436 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        

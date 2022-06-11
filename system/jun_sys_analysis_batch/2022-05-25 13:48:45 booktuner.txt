@@ -1,0 +1,628 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on booktuner
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.311631.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.049673.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.191695.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.418790.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 99 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.567395.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.654204.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.115353.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 51 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.147455.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 674
+Added 524 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 674
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.911618.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/booktuner/booktuner.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.181203.
+
+674 PHP_REACHES edges created
+674 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 257 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.348918.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.483937.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 3 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.745694.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 9 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.232450.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.027006.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.106110.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018721.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.044775.
+
+12 PHP_REACHES edges created
+12 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 3 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.201356.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.150940.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'str_replace($aTags, $aData, $sDisplayFormat)'' cannot be parsed correct.
+HTML code '$'Please <a href=get_bloginfo("wpurl")/wp-admin/options-general.php?page=booktuner/booktuner.php">set bookTuner options</a> in your WordPress administration panel'' cannot be parsed correct.
+HTML code '$'get_option("booktuner_limit")'' cannot be parsed correct.
+HTML code '$'get_option("booktuner_review_length")'' cannot be parsed correct.
+HTML code '$'get_option("booktuner_display_format")'' cannot be parsed correct.
+HTML code '$'get_option("booktuner_userid")'' cannot be parsed correct.
+HTML code '$'get_option("booktuner_shelf")'' cannot be parsed correct.
+HTML code '$'bookTuner requires PHP version 5 or greater.  Please contact your web host for more information.'' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'selected="selected" '' cannot be parsed correct.
+HTML code '$'" />
+					</p>
+				</form>
+			</div>
+		</div>
+			
+	'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.781035.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.124423.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 2 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.479869.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PropertyDetector
+### Start running Sqlite3Detector
+### Finish running maxdbDetector
+### Start running SqliteDetector
+### Finish running MySQLiDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running VariableDetector
+### Start running WordPressStorageDetector
+### Finish running PHPStorageDetector
+### Start running WP_UserDetector
+### Finish running UserInputDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running PHPRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running PhpCurlDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finished running detectors
+booktuner.php:75
+  - RETRIEVAL call to file_get_contents($sCachePath).
+  - Data types: file
+booktuner.php:178
+  - RETRIEVAL call to file_get_contents($sApiUrl).
+  - Data types: file 
+
+booktuner.php:70
+  - STORAGE call to file_put_contents($sCachePath, $sTracksXml).
+  - Data types: file
+booktuner.php:82
+  - STORAGE call to file_put_contents($sCachePath, $sTracksXml).
+  - Data types: file
+booktuner.php:294
+  - STORAGE call to file_put_contents(get_option("booktuner_cachepath"), $sTracksXml).
+  - Data types: file 
+
+booktuner.php:44
+  - RETRIEVAL call to get_option("booktuner_update_frequency") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:45
+  - RETRIEVAL call to get_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:46
+  - RETRIEVAL call to get_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:48
+  - RETRIEVAL call to get_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:50
+  - RETRIEVAL call to get_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:51
+  - RETRIEVAL call to get_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:52
+  - RETRIEVAL call to get_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:53
+  - RETRIEVAL call to get_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:54
+  - RETRIEVAL call to get_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:55
+  - RETRIEVAL call to get_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:220
+  - RETRIEVAL call to get_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:280
+  - RETRIEVAL call to get_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:282
+  - RETRIEVAL call to get_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:283
+  - RETRIEVAL call to get_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:285
+  - RETRIEVAL call to get_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:286
+  - RETRIEVAL call to get_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:287
+  - RETRIEVAL call to get_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:288
+  - RETRIEVAL call to get_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:289
+  - RETRIEVAL call to get_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:294
+  - RETRIEVAL call to get_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:315
+  - RETRIEVAL call to get_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:322
+  - RETRIEVAL call to get_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:333
+  - RETRIEVAL call to get_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:356
+  - RETRIEVAL call to get_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:366
+  - RETRIEVAL call to get_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:376
+  - RETRIEVAL call to get_option("booktuner_update_frequency") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:392
+  - RETRIEVAL call to get_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:404
+  - RETRIEVAL call to get_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+booktuner.php:425
+  - RETRIEVAL call to get_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+booktuner.php:203
+  - STORAGE call to add_option("booktuner_cachepath", dirname() . "/booktuner_cache.xml") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:204
+  - STORAGE call to add_option("booktuner_userid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:205
+  - STORAGE call to add_option("booktuner_shelf", "read") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:206
+  - STORAGE call to add_option("booktuner_sort", "date_read") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:207
+  - STORAGE call to add_option("booktuner_sort_order", "d") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:208
+  - STORAGE call to add_option("booktuner_update_frequency", 3600) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:209
+  - STORAGE call to add_option("booktuner_limit", 2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:210
+  - STORAGE call to add_option("booktuner_display_format", "<li>[::author::] - [::title::]<img src="[::image::]" alt="[::title::] by [::author::]" /></li>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:211
+  - STORAGE call to add_option("booktuner_image_size", "book_medium_image_url") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:212
+  - STORAGE call to add_option("booktuner_review_length", 100) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+booktuner.php:224
+  - STORAGE call to delete_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:225
+  - STORAGE call to delete_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:226
+  - STORAGE call to delete_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:227
+  - STORAGE call to delete_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:228
+  - STORAGE call to delete_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:229
+  - STORAGE call to delete_option("booktuner_update_frequency") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:230
+  - STORAGE call to delete_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:231
+  - STORAGE call to delete_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:232
+  - STORAGE call to delete_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:233
+  - STORAGE call to delete_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+booktuner.php:224
+  - DELETION call to delete_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:225
+  - DELETION call to delete_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:226
+  - DELETION call to delete_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:227
+  - DELETION call to delete_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:228
+  - DELETION call to delete_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:229
+  - DELETION call to delete_option("booktuner_update_frequency") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:230
+  - DELETION call to delete_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:231
+  - DELETION call to delete_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:232
+  - DELETION call to delete_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+booktuner.php:233
+  - DELETION call to delete_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.file_put_contents(get_option("booktuner_cachepath"), $sTracksXml) - {'file'}
+	PHPRetrievalDetector.file_get_contents($sCachePath) - {'file'}
+	PHPStorageDetector.file_put_contents($sCachePath, $sTracksXml) - {'file'}
+	PHPStorageDetector.file_put_contents($sCachePath, $sTracksXml) - {'file'}
+	PHPRetrievalDetector.file_get_contents($sApiUrl) - {'file'}
+option
+	WordPressRetrievalDetector.get_option("booktuner_shelf") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_limit") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_update_frequency", 3600) - {'option'}
+	DeletionDetector.delete_option("booktuner_update_frequency") - {'option'}
+	DeletionDetector.delete_option("booktuner_image_size") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_shelf") - {'option'}
+	DeletionDetector.delete_option("booktuner_sort") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_image_size") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_sort_order") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_limit") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_cachepath") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_display_format") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_review_length", 100) - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_sort") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_display_format") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_userid") - {'option'}
+	DeletionDetector.delete_option("booktuner_sort_order") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_cachepath") - {'option'}
+	DeletionDetector.delete_option("booktuner_shelf") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_shelf", "read") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_cachepath", dirname() . "/booktuner_cache.xml") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_sort_order", "d") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_review_length") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_review_length") - {'option'}
+	DeletionDetector.delete_option("booktuner_userid") - {'option'}
+	DeletionDetector.delete_option("booktuner_limit") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_display_format") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_limit") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_display_format", "<li>[::author::] - [::title::]<img src="[::image::]" alt="[::title::] by [::author::]" /></li>") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_sort") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_sort_order") - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_sort_order") - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_update_frequency") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_cachepath") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_image_size") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_sort", "date_read") - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_limit") - {'option'}
+	DeletionDetector.delete_option("booktuner_cachepath") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_update_frequency") - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_review_length") - {'option'}
+	DeletionDetector.delete_option("booktuner_review_length") - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_userid") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_update_frequency") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_userid") - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_cachepath") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_image_size") - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_display_format") - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_image_size") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_shelf") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_sort") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_userid", "") - {'option'}
+	DeletionDetector.delete_option("booktuner_display_format") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_image_size", "book_medium_image_url") - {'option'}
+	WordPressStorageDetector.delete_option("booktuner_shelf") - {'option'}
+	WordPressStorageDetector.add_option("booktuner_limit", 2) - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_sort_order") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_review_length") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_userid") - {'option'}
+	WordPressRetrievalDetector.get_option("booktuner_sort") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.276103.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 589 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.472882.
+
+589 STORE_REACHES edges created
+589 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005985.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:28.014623!
+DELETION call to delete_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("booktuner_update_frequency") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to file_get_contents($sApiUrl).,None,None
+RETRIEVAL call to file_get_contents($sCachePath).,None,None
+STORAGE call to file_put_contents(get_option("booktuner_cachepath"), $sTracksXml).,None,None
+STORAGE call to file_put_contents($sCachePath, $sTracksXml).,None,None
+STORAGE call to file_put_contents($sCachePath, $sTracksXml).,None,None
+RETRIEVAL call to get_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_update_frequency") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_update_frequency") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("booktuner_cachepath", dirname() . "/booktuner_cache.xml") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("booktuner_userid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("booktuner_shelf", "read") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("booktuner_sort", "date_read") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("booktuner_sort_order", "d") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("booktuner_update_frequency", 3600) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("booktuner_limit", 2) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("booktuner_display_format", "<li>[::author::] - [::title::]<img src="[::image::]" alt="[::title::] by [::author::]" /></li>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("booktuner_image_size", "book_medium_image_url") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("booktuner_review_length", 100) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_cachepath") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_userid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_shelf") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_sort") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_sort_order") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_update_frequency") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_limit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_display_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_image_size") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("booktuner_review_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

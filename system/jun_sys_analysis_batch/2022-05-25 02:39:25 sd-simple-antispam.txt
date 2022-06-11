@@ -1,0 +1,623 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on sd-simple-antispam
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.375960.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.967186.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 72 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.461966.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.611672.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1555 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.252928.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 18 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.778442.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.078149.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 368 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.913998.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 7299
+Added 5284 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 7299
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.360706.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/sd-simple-antispam/SD_Form.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/sd-simple-antispam/SD_Simple_Antispam_Base.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/sd-simple-antispam/SD_Simple_Antispam.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.317097.
+
+72 PHP_REACHES edges created
+2 REACHES edges created
+1000 PHP_REACHES edges created
+1555 PHP_REACHES edges created
+18 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+5652 PHP_REACHES edges created
+7299 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 2370 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.150871.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.426942.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 179 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:06.649409.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 187 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.218363.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.148765.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.572489.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.021306.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.032029.
+
+366 PHP_REACHES edges created
+366 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 329 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.134610.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+4 SQL operations to process.
+$query
+SQL command ($query) cannot be parsed correct.
+SHOW TABLES LIKE '$table_name'
+SQL command (SHOW TABLES LIKE '$table_name') cannot be parsed correct.
+$query
+SQL command ($query) cannot be parsed correct.
+SHOW TABLES LIKE '$table_name'
+SQL command (SHOW TABLES LIKE '$table_name') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [7009, 6976, 7049, 7131]
+Added 0 SQL nodes. 0 out of 4 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.629743.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'
+			$form->start()
+			<p>
+				$this->_("The following techniques are available to help block spam.")
+			</p>
+			
+			<h3>$this->_("Extra fields") ($this->_("recommended"))</h3>
+			
+			<p>
+				$this->_("Extra, invisible fields are inserted into the comment form. Bots will either omit these fields or fill them in, which will result in rejection of the comment.")
+			</p>
+
+			<p>
+				$form->make_input($inputs["extra_fields"])
+				$form->make_label($inputs["extra_fields"])
+			</p>
+
+			<h3>$this->_("No author website")</h3>
+			
+			<p>
+				$this->_("The author website must be left empty for the comment to pass. If you use this setting, don\\'t forget to hide the author url field in your theme\\'s CSS file.")
+			</p>
+
+			<p>
+				$form->make_input($inputs["empty_url"])
+				$form->make_label($inputs["empty_url"])
+			</p>
+
+			<h3>$this->_("Logging")</h3>
+			
+			<p>
+				sprintf($this->_("This plugin uses %sThreeWP Activity Monitor%s to log activity."), "<a href="http://wordpress.org/extend/plugins/threewp-activity-monitor/">", "</a>")
+			</p>
+
+			<p>
+				$form->make_input($inputs["update"])
+			</p>
+			$form->stop()
+		'' cannot be parsed correct.
+HTML code '$'
+			$form->start()
+			<p>
+				This page will remove all the plugin tables and settings from the database and then deactivate the plugin.
+			</p>
+
+			<p>
+				$form->make_input($inputs["sure"]) $form->make_label($inputs["sure"])
+			</p>
+
+			<p>
+				$form->make_input($inputs["uninstall"])
+			</p>
+			$form->stop()
+		'' cannot be parsed correct.
+HTML code '$'
+				<div style="display: none;">
+					$form->make_label($inputs["email"])
+					$form->make_input($inputs["email"])
+					$form->make_label($inputs["comment"])
+					$form->make_input($inputs["comment"])
+				</div>
+			'' cannot be parsed correct.
+HTML code '$'<div class=$type">
+			<p style="margin-right: 1em; float: left; color: #888;" class="message_timestamp">$this->now()</p>
+			<p>implode("</p><p>", $string)</p></div>'' cannot be parsed correct.
+HTML code '$'$options_displayBeforeTabName$options_tabs_$tab_index$options_displayAfterTabName'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<div style="clear: both"></div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.281741.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.040629.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.303625.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running HashDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PHPIncludedDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PostgreSQLDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running maxdbDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running MySQLiDetector
+### Start running WordPressStorageDetector
+### Finish running WordpressHashingFnDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running VariableDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+SD_Simple_Antispam_Base.php:1044
+  - hash called with unknown hash algorithm. 
+
+SD_Simple_Antispam.php:187
+  - MD5 called with parameters [PHP_INT_MAX, rand]. Ignore if [PHP_INT_MAX, rand] does not contain personal information.
+SD_Simple_Antispam.php:194
+  - MD5 called with parameters [PHP_INT_MAX, rand]. Ignore if [PHP_INT_MAX, rand] does not contain personal information. 
+
+SD_Form.php:966
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Form.php:973
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Form.php:974
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Form.php:1051
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Form.php:1052
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Form.php:1053
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1094
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1096
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1097
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1098
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1102
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1104
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1105
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1106
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1110
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1112
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1113
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1114
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1132
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1134
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1135
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+SD_Simple_Antispam_Base.php:1136
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+SD_Simple_Antispam.php:175
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).
+  - Data types: user_meta, user
+SD_Simple_Antispam.php:238
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).
+  - Data types: user_meta, user
+SD_Simple_Antispam_Base.php:381
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).
+  - Data types: user_meta, user
+SD_Simple_Antispam_Base.php:469
+  - RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+SD_Simple_Antispam_Base.php:515
+  - RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+SD_Simple_Antispam_Base.php:592
+  - RETRIEVAL call to $this->get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+SD_Simple_Antispam_Base.php:599
+  - RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+SD_Simple_Antispam_Base.php:617
+  - RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+SD_Simple_Antispam_Base.php:486
+  - STORAGE call to update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:502
+  - STORAGE call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:531
+  - STORAGE call to update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:542
+  - STORAGE call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:593
+  - STORAGE call to $this->update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:600
+  - STORAGE call to update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:618
+  - STORAGE call to update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:630
+  - STORAGE call to $this->delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:636
+  - STORAGE call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:650
+  - STORAGE call to delete_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+SD_Simple_Antispam_Base.php:1044
+  - CRYPTOGRAPHY call to hash($type, $string). 
+
+SD_Simple_Antispam_Base.php:502
+  - DELETION call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:542
+  - DELETION call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:630
+  - DELETION call to $this->delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:636
+  - DELETION call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+SD_Simple_Antispam_Base.php:650
+  - DELETION call to delete_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	HashDetector.(unknown) - set()
+	GenericEncryptionDetector.hash($type, $string) - set()
+option
+	DeletionDetector.delete_option($option) - {'option'}
+	DeletionDetector.delete_option($option) - {'option'}
+	WordPressStorageDetector.update_option($option, $value) - {'option'}
+	DeletionDetector.delete_option($option, $value) - {'option'}
+	WordPressStorageDetector.delete_option($option) - {'option'}
+	WordPressStorageDetector.delete_option($option) - {'option'}
+	WordPressRetrievalDetector.get_option($option) - {'option'}
+	WordPressRetrievalDetector.get_option($option) - {'option'}
+	WordPressStorageDetector.delete_option($option, $value) - {'option'}
+	WordPressStorageDetector.update_option($option, $value) - {'option'}
+	WordPressStorageDetector.update_option($option, $value) - {'option'}
+	WordPressRetrievalDetector.$this->get_option($option) - {'option'}
+	DeletionDetector.$this->delete_option($option) - {'option'}
+	WordPressRetrievalDetector.get_option($option) - {'option'}
+	DeletionDetector.delete_option($option) - {'option'}
+	WordPressStorageDetector.$this->update_option($option, $value) - {'option'}
+	WordPressRetrievalDetector.get_option($option) - {'option'}
+	WordPressStorageDetector.$this->delete_option($option) - {'option'}
+	WordPressStorageDetector.update_option($option, $value) - {'option'}
+	WordPressStorageDetector.delete_option($option) - {'option'}
+user
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+user_meta
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.267172.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 50 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.130455.
+
+50 STORE_REACHES edges created
+50 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 78 nodes as PERSONAL
+In total, tainted 78 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 4 nodes as ENCRYPTED
+In total, tainted 4 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:02.089206.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:52.081853!
+DELETION call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to $this->delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+CRYPTOGRAPHY call to hash($type, $string).,None,None
+hash called with unknown hash algorithm.,None,None
+MD5 called with parameters [PHP_INT_MAX, rand]. Ignore if [PHP_INT_MAX, rand] does not contain personal information.,md5,None
+MD5 called with parameters [PHP_INT_MAX, rand]. Ignore if [PHP_INT_MAX, rand] does not contain personal information.,md5,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to $this->get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to $this->update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to $this->delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option($option, $value) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

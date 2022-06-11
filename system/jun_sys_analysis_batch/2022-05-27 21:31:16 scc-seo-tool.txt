@@ -1,0 +1,656 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on scc-seo-tool
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.971355.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.055974.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 113 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.596842.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 3 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.623201.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1832 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.297290.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 2 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.529730.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.072757.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 509 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:08.320224.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 8150
+Added 5691 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 12328
+Added 4178 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.625367.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/scc-seo-tool/functions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/scc-seo-tool/scc-seo-tool.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/scc-seo-tool/view-post.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/scc-seo-tool/admin/admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/scc-seo-tool/admin/forms.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/scc-seo-tool/admin/panel.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.625169.
+
+113 PHP_REACHES edges created
+3 REACHES edges created
+1000 PHP_REACHES edges created
+1832 PHP_REACHES edges created
+2 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+6200 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4178 PHP_REACHES edges created
+12328 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 2542 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.067949.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 4 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.130485.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 98 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.139120.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 76 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.176499.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.100856.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.863883.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.017131.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035218.
+
+4 CALLS edges created
+174 PHP_REACHES edges created
+178 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 124 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.157341.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+SELECT * FROM $wpdb WHERE post_title = sccstslug_get_request("title", "") OR post_name = %s
+SELECT * FROM $wpdb WHERE post_title = sccstslug_get_request("title", "") OR post_name = strtolower(sccstslug_convertalias($title))
+SELECT * FROM $wpdb WHERE post_title = sccstslug_get_request("title", "") OR post_name = strtolower(sccstslug_convertalias($title))
+SQL command (SELECT * FROM $wpdb WHERE post_title = sccstslug_get_request("title", "") OR post_name = strtolower(sccstslug_convertalias($title))) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [8110]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.936989.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'call_user_func($field["callback"], $field)'' cannot be parsed correct.
+HTML code '$'<tr><td colspan="2"><div class="description">wp_parse_args($field, $args)_value</div></td></tr>'' cannot be parsed correct.
+HTML code '$'<tr><th>wp_parse_args($field, $args)_title</th><td>'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, $defaults)_after_container'' cannot be parsed correct.
+HTML code '$'$before_row'' cannot be parsed correct.
+HTML code '$'$before_title<label for=sanitize_field_id($name)>wp_parse_args($args, $defaults)_title</label>  <span class="tip">(?)</span><div style="display:none;">$tip</div>$after_title '' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, $defaults)_prepend '' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, $defaults)_custom'' cannot be parsed correct.
+HTML code '$' wp_parse_args($args, $defaults)_append '' cannot be parsed correct.
+HTML code '$' <div class="description">$desc</div>'' cannot be parsed correct.
+HTML code '$'$after_row'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, $defaults)_before_container'' cannot be parsed correct.
+HTML code '$'<span class=\'dp-color-handle colorSelector\'>&nbsp;</span> <input type="text" name=$name value=stripslashes($value)sanitize_html_class($name) class=$class style=$style>'' cannot be parsed correct.
+HTML code '$'<p>Author: <a href=wp_get_theme()_AuthorURI"wp_get_theme()_Author</a></p>'' cannot be parsed correct.
+HTML code '$'<p>Description: wp_get_theme()_Description</span></p>'' cannot be parsed correct.
+HTML code '$'<p>We spend a lot of effort on Free WordPress development. Any help would be highly appreciated. Thanks!</p>'' cannot be parsed correct.
+HTML code '$'<li class="link-it"><a href="get_plugin_data(trailingslashit(WP_PLUGIN_DIR) . $this->plugin_file, false)_PluginURI"Link to it so others can find out about it</a></li>'' cannot be parsed correct.
+HTML code '$'<li class="rating-it"><a href="$this"Give it a good rating on WordPress.org</a></li>'' cannot be parsed correct.
+HTML code '$'<li class="donate-it"><a href="$this"Donate something to our team</a></li>'' cannot be parsed correct.
+HTML code '$'<li class="trans-it"><a href="$this"Help us translating it</a></li>'' cannot be parsed correct.
+HTML code '$'<p>Name: <a target="_blank" href="get_plugin_data(trailingslashit(WP_PLUGIN_DIR) . $this->plugin_file, false)_PluginURI"><strongget_plugin_data(trailingslashit(WP_PLUGIN_DIR) . $this->plugin_file, false)_Name</strong></a></p>'' cannot be parsed correct.
+HTML code '$'<p>Version: get_plugin_data(trailingslashit(WP_PLUGIN_DIR) . $this->plugin_file, false)_Version</p>'' cannot be parsed correct.
+HTML code '$'<p>Author: <a href=get_plugin_data(trailingslashit(WP_PLUGIN_DIR) . $this->plugin_file, false)_AuthorURI"get_plugin_data(trailingslashit(WP_PLUGIN_DIR) . $this->plugin_file, false)_Author</a></p>'' cannot be parsed correct.
+HTML code '$'<p>Description: get_plugin_data(trailingslashit(WP_PLUGIN_DIR) . $this->plugin_file, false)_Description</span></p>'' cannot be parsed correct.
+HTML code '$'<p>Name: <a target="_blank" href="wp_get_theme()_URI"><strongwp_get_theme()_Name</strong></a></p>'' cannot be parsed correct.
+HTML code '$'<p>Version: wp_get_theme()_Version</p>'' cannot be parsed correct.
+HTML code '$'<a href=admin_url("admin.php?page=" . $sub[2])"$sub_0</a></li>'' cannot be parsed correct.
+HTML code '$'<input type="submit" name="save" value="LÆ°u láº¡i" class="button-primary"> '' cannot be parsed correct.
+HTML code '$'<input type="submit" value="LÃ m láº¡i" name="reset" class="reset button-highlighted"> '' cannot be parsed correct.
+HTML code '$'sprintf(__("If you have any problems or ideas for improvements or enhancements, please use the <a href="%s">Our Support Forums</a>.", "dp"), $this->support_url)'' cannot be parsed correct.
+HTML code '$'<div id="message" class="updated"><p><strong>ÄÃ£ lÆ°u láº¡i.</strong></p></div>'' cannot be parsed correct.
+HTML code '$'<input type="button" class="button toggel-all" value="Toggle Boxes" /'' cannot be parsed correct.
+HTML code '$'get_admin_page_title()'' cannot be parsed correct.
+HTML code '$'width:25%;'' cannot be parsed correct.
+HTML code '$'width:25%;'' cannot be parsed correct.
+HTML code '$'width:50%;'' cannot be parsed correct.
+HTML code '$'display:none;width:50%;'' cannot be parsed correct.
+HTML code '$' has-right-sidebar'' cannot be parsed correct.
+HTML code '$'<div id="message" class="updated"><p><strong>ÄÃ£ lÃ m láº¡i.</strong></p></div>'' cannot be parsed correct.
+HTML code '$'<a target="_blank" href="http://dedepress.com">get_screen_icon("themes")</a>'' cannot be parsed correct.
+HTML code '$'sccstslugDP_form_fields($new_fields)'' cannot be parsed correct.
+HTML code '$'<h3>$this_title</h3>'' cannot be parsed correct.
+HTML code '$'sccstslugDP_form_fields($new_fields)'' cannot be parsed correct.
+HTML code '$'<h3>$this_title</h3>'' cannot be parsed correct.
+HTML code '$'sccstslugDP_form_fields($new_fields)'' cannot be parsed correct.
+HTML code '$'BÃ i ÄÃ£ cÃ³ >> $wpdb->get_row($wpdb->prepare($query, $title, $slug))_ID >> sccstslug_get_request("title", "")'' cannot be parsed correct.
+HTML code '$'ÄÃ£ lÆ°u bÃ i: wp_insert_post(["ID" => $post_id, "post_title" => $title, "post_date" => $publish_up, "post_content" => $post_content, "post_status" => $status, "post_category" => $arr_cat]) >> sccstslug_get_request("title", "")'' cannot be parsed correct.
+HTML code '$'$itemPage'' cannot be parsed correct.
+HTML code '$'</td></tr>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'<ul class="subsubsub">'' cannot be parsed correct.
+HTML code '$'<li>'' cannot be parsed correct.
+HTML code '$' | '' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<meta http-equiv="content-type" content="text/html; charset=utf-8" />'' cannot be parsed correct.
+HTML code '$'Pháº£i cÃ³ tiÃªu Äá» vÃ  ná»i dung'' cannot be parsed correct.
+HTML code '$'KhÃ´ng thÃ nh cÃ´ng.'' cannot be parsed correct.
+HTML code '$'Image source must be image tag!'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:09.461718.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.048205.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 5 do_action/apply_filters calls and 28 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.150245.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FrontBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ArrayElementDetector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PHPRetrievalDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PhpVarDetector
+### Start running SqliteDetector
+### Finish running PropertyDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running PHPIncludedDetector
+### Start running WordPressRetrievalDetector
+### Finish running VariableDetector
+### Start running WordPressStorageDetector
+### Finish running UserInputDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running maxdbDetector
+### Start running UninstallDetector
+### Finish running MySQLiDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Finished running detectors
+admin/panel.php:717
+  - MD5 called with parameters [new_meta_vlue]. Ignore if [new_meta_vlue] does not contain personal information.
+admin/panel.php:845
+  - MD5 called with parameters [new_meta_vlue]. Ignore if [new_meta_vlue] does not contain personal information.
+admin/panel.php:936
+  - MD5 called with parameters [new_meta_vlue]. Ignore if [new_meta_vlue] does not contain personal information. 
+
+functions.php:402
+  - API call to wp_remote_get($url_to_download, $args). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+admin/admin.php:67
+  - RETRIEVAL call to get_option(SCCST_OPT_NAME) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/forms.php:362
+  - RETRIEVAL call to get_post_meta($post->ID, $name[0], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin/forms.php:364
+  - RETRIEVAL call to get_user_meta($object->ID, $name[0], true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+admin/forms.php:368
+  - RETRIEVAL call to get_option($name[0]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/panel.php:288
+  - RETRIEVAL call to get_option($this->menu_slug . "_say_hello") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/panel.php:710
+  - RETRIEVAL call to get_post_meta($post_id, $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+admin/panel.php:928
+  - RETRIEVAL call to get_user_meta($user_id, $name, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: user_meta
+functions.php:32
+  - RETRIEVAL call to get_option(SCCST_OPT_NAME) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+admin/panel.php:252
+  - STORAGE call to update_option($option_name, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/panel.php:269
+  - STORAGE call to update_option($option_name, $option_value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/panel.php:297
+  - STORAGE call to update_option($option_name, $option_value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/panel.php:300
+  - STORAGE call to update_option($this->menu_slug . "_say_hello", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/panel.php:720
+  - STORAGE call to add_post_meta($post_id, $name, $new_meta_value, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: post_meta
+admin/panel.php:723
+  - STORAGE call to update_post_meta($post_id, $name, $new_meta_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+admin/panel.php:725
+  - STORAGE call to delete_post_meta($post_id, $name, $meta_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).
+  - Data types: post_meta
+admin/panel.php:939
+  - STORAGE call to add_user_meta($user_id, $name, $new_meta_value, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).
+  - Data types: user_meta
+admin/panel.php:941
+  - STORAGE call to update_user_meta($user_id, $name, $new_meta_value) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: user_meta
+admin/panel.php:943
+  - STORAGE call to delete_user_meta($user_id, $name, $meta_value) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).
+  - Data types: user_meta
+functions.php:129
+  - STORAGE call to wp_insert_post(["ID" => $post_id, "post_title" => $title, "post_date" => $publish_up, "post_content" => $post_content, "post_status" => $status, "post_category" => $arr_cat]). Passed arguments: 0: $postarr (array). Returns (int|WP_Error). 
+
+admin/panel.php:725
+  - DELETION call to delete_post_meta($post_id, $name, $meta_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).
+  - Data types: post_meta
+admin/panel.php:943
+  - DELETION call to delete_user_meta($user_id, $name, $meta_value) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).
+  - Data types: user_meta 
+
+By data type:
+none
+	WordPressStorageDetector.wp_insert_post(["ID" => $post_id, "post_title" => $title, "post_date" => $publish_up, "post_content" => $post_content, "post_status" => $status, "post_category" => $arr_cat]) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressStorageDetector.update_option($option_name, $value) - {'option'}
+	WordPressRetrievalDetector.get_option(SCCST_OPT_NAME) - {'option'}
+	WordPressStorageDetector.update_option($option_name, $option_value) - {'option'}
+	WordPressStorageDetector.update_option($this->menu_slug . "_say_hello", true) - {'option'}
+	WordPressStorageDetector.update_option($option_name, $option_value) - {'option'}
+	WordPressRetrievalDetector.get_option(SCCST_OPT_NAME) - {'option'}
+	WordPressRetrievalDetector.get_option($name[0]) - {'option'}
+	WordPressRetrievalDetector.get_option($this->menu_slug . "_say_hello") - {'option'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post_id, $name, true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, $name, $meta_value) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, $name, $new_meta_value) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $name[0], true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, $name, $new_meta_value, true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, $name, $meta_value) - {'post_meta'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+user_meta
+	WordPressStorageDetector.update_user_meta($user_id, $name, $new_meta_value) - {'user_meta'}
+	WordPressRetrievalDetector.get_user_meta($object->ID, $name[0], true) - {'user_meta'}
+	DeletionDetector.delete_user_meta($user_id, $name, $meta_value) - {'user_meta'}
+	WordPressStorageDetector.delete_user_meta($user_id, $name, $meta_value) - {'user_meta'}
+	WordPressRetrievalDetector.get_user_meta($user_id, $name, true) - {'user_meta'}
+	WordPressStorageDetector.add_user_meta($user_id, $name, $new_meta_value, true) - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:12.860403.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 28 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.151525.
+
+28 STORE_REACHES edges created
+28 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 18 nodes as PERSONAL
+In total, tainted 18 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 3 nodes as ENCRYPTED
+In total, tainted 3 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.017318.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:10.247397!
+DELETION call to delete_post_meta($post_id, $name, $meta_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).,None,None
+DELETION call to delete_user_meta($user_id, $name, $meta_value) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).,None,None
+MD5 called with parameters [new_meta_vlue]. Ignore if [new_meta_vlue] does not contain personal information.,md5,None
+MD5 called with parameters [new_meta_vlue]. Ignore if [new_meta_vlue] does not contain personal information.,md5,None
+MD5 called with parameters [new_meta_vlue]. Ignore if [new_meta_vlue] does not contain personal information.,md5,None
+API call to wp_remote_get($url_to_download, $args). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+RETRIEVAL call to get_option(SCCST_OPT_NAME) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $name[0], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($object->ID, $name[0], true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($name[0]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->menu_slug . "_say_hello") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post_id, $name, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($user_id, $name, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(SCCST_OPT_NAME) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option($option_name, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($option_name, $option_value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($option_name, $option_value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->menu_slug . "_say_hello", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_post_meta($post_id, $name, $new_meta_value, true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to update_post_meta($post_id, $name, $new_meta_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, $name, $meta_value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).,None,None
+STORAGE call to add_user_meta($user_id, $name, $new_meta_value, true) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed), 3: $unique (bool). Returns (int|false).,None,None
+STORAGE call to update_user_meta($user_id, $name, $new_meta_value) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_user_meta($user_id, $name, $meta_value) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).,None,None
+STORAGE call to wp_insert_post(["ID" => $post_id, "post_title" => $title, "post_date" => $publish_up, "post_content" => $post_content, "post_status" => $status, "post_category" => $arr_cat]). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['user_meta']) stored through WordPress function "update_user_meta($user_id, $name, $new_meta_value)", found in file admin/panel.php at line 941. 
+
+[has_storage] PII of types (['user_meta']) stored through WordPress function "add_user_meta($user_id, $name, $new_meta_value, true)", found in file admin/panel.php at line 939. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_user_meta($user_id, $name, $new_meta_value) has deletion method delete_user_meta($user_id, $name, $meta_value). Storage method found in file admin/panel.php at line 941. Deletion method found in file admin/panel.php at line 943. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through add_user_meta($user_id, $name, $new_meta_value, true) has deletion method delete_user_meta($user_id, $name, $meta_value). Storage method found in file admin/panel.php at line 939. Deletion method found in file admin/panel.php at line 943. 
+
+[Art.17, Right to erasure] Deletion access is NONE_BUT_NOT_REQUIRED 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 7517. Found in file admin/panel.php at line 941 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 7495. Found in file admin/panel.php at line 939 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? False 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function scc-seo-tool_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+    //TODO: Delete the user data that was stored using Wordpress functions
+
+    //Below is the sample code for deleting user meta and may need to be modified to suit the plugin.
+    $user_id = get_user_by('email', $email_address)
+    $key = 'email' //Sample user meta key
+    if ( $customer->user_id > 0 ) {
+        //Delete user meta data by $key
+        delete_user_meta( $user_id, $key );
+    }
+        
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'scc-seo-tool' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function scc-seo-tool_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'scc-seo-tool' ),
+        'callback'             => 'scc-seo-tool_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'scc-seo-tool_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function scc-seo-tool_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'scc-seo-tool' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'scc-seo-tool' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'scc-seo-tool' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'scc-seo-tool', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'scc-seo-tool_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

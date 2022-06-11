@@ -1,0 +1,1031 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on find-duplicates
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.618019.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.941296.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 2 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.320566.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.552363.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 452 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.873578.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 13 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.844936.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.097672.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 212 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.059471.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3781
+Added 3101 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4733
+Added 952 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.184674.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/find-duplicates/find-duplicates.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/find-duplicates/tpl/donation.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/find-duplicates/tpl/metabox.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/find-duplicates/tpl/options.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/find-duplicates/tpl/search.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.552250.
+
+2 PHP_REACHES edges created
+1 REACHES edges created
+452 PHP_REACHES edges created
+13 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3313 PHP_REACHES edges created
+952 PHP_REACHES edges created
+4733 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1282 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.035860.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.795916.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 25 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.991268.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 12 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.143204.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.080812.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.280825.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005902.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.031740.
+
+37 PHP_REACHES edges created
+37 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 25 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.109769.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+7 SQL operations to process.
+SELECT ID,post_title,post_date,post_content FROM $wpdb WHERE post_type='get_post_type($newpost)' AND post_status IN('implode("\',\'", $options["auto"]["statuses"])') AND ID != $pid
+SQL command (SELECT ID,post_title,post_date,post_content FROM $wpdb WHERE post_type='get_post_type($newpost)' AND post_status IN('implode("\',\'", $options["auto"]["statuses"])') AND ID != $pid) cannot be parsed correct.
+SELECT COUNT(ID) as count FROM $wpdb WHERE post_type='$_POST_types' AND post_status IN('implode("\',\'", $statuses)') 
+SQL command (SELECT COUNT(ID) as count FROM $wpdb WHERE post_type='$_POST_types' AND post_status IN('implode("\',\'", $statuses)') ) cannot be parsed correct.
+SELECT COUNT(ID) as count FROM $wpdb WHERE $datewherepost_type='$options_search_types' AND post_status IN('implode("\',\'", $options["search"]["statuses"])') AND ID NOT IN('implode("\',\'", $options["search"]["done"])')
+SQL command (SELECT COUNT(ID) as count FROM $wpdb WHERE $datewherepost_type='$options_search_types' AND post_status IN('implode("\',\'", $options["search"]["statuses"])') AND ID NOT IN('implode("\',\'", $options["search"]["done"])')) cannot be parsed correct.
+SELECT ID,post_title,post_date,post_content FROM $wpdb WHERE $datewherepost_type='$options_search_types' AND post_status IN('implode("\',\'", $options["search"]["statuses"])') AND ID NOT IN('implode("\',\'", $options["search"]["done"])') LIMIT get_option("find_duplicates_data", [])_search_post2_offset,get_option("find_duplicates_data", [])_search_comparelimit
+SQL command (SELECT ID,post_title,post_date,post_content FROM $wpdb WHERE $datewherepost_type='$options_search_types' AND post_status IN('implode("\',\'", $options["search"]["statuses"])') AND ID NOT IN('implode("\',\'", $options["search"]["done"])') LIMIT get_option("find_duplicates_data", [])_search_post2_offset,get_option("find_duplicates_data", [])_search_comparelimit) cannot be parsed correct.
+SELECT ID,post_title,post_date,post_content FROM $wpdb WHERE $datewherepost_type='$options_search_types' AND post_status IN('implode("\',\'", $options["search"]["statuses"])') AND ID NOT IN('implode("\',\'", $options["search"]["done"])') LIMIT 1
+SQL command (SELECT ID,post_title,post_date,post_content FROM $wpdb WHERE $datewherepost_type='$options_search_types' AND post_status IN('implode("\',\'", $options["search"]["statuses"])') AND ID NOT IN('implode("\',\'", $options["search"]["done"])') LIMIT 1) cannot be parsed correct.
+SELECT COUNT(ID) as count FROM $wpdb WHERE post_type='$type' AND post_status IN('implode("\',\'", $options["meta"]["statuses"])') AND ID != $id
+SQL command (SELECT COUNT(ID) as count FROM $wpdb WHERE post_type='$type' AND post_status IN('implode("\',\'", $options["meta"]["statuses"])') AND ID != $id) cannot be parsed correct.
+SELECT ID,post_title,post_date,post_content FROM $wpdb WHERE post_type='$type' AND post_status IN('implode("\',\'", $options["meta"]["statuses"])') AND ID != $id
+SQL command (SELECT ID,post_title,post_date,post_content FROM $wpdb WHERE post_type='$type' AND post_status IN('implode("\',\'", $options["meta"]["statuses"])') AND ID != $id) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [660, 2106, 2366, 2414, 2509, 3502, 3544]
+Added 0 SQL nodes. 0 out of 7 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:04.077602.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'json_encode([intval($count)])'' cannot be parsed correct.
+HTML code '$'json_encode([$result])'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'Draft'' cannot be parsed correct.
+HTML code '$'Automatic duplicate handling'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Activate automatic post handling'' cannot be parsed correct.
+HTML code '$'Set all posts matching the following criteria as "pending" directly after publishing it.'' cannot be parsed correct.
+HTML code '$'Delete all posts with an <strong>content-similarity</strong> of more than:'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_auto_similarity'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_auto_similarity'' cannot be parsed correct.
+HTML code '$'Activate for these <strong>types</strong>:'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" value="$post_type" name="auto_types[]"'' cannot be parsed correct.
+HTML code '$'> $post_type<br /> '' cannot be parsed correct.
+HTML code '$'Include these <strong>statuses</strong>:'' cannot be parsed correct.
+HTML code '$'<input name="auto_status[]" type="checkbox" value="$key'' cannot be parsed correct.
+HTML code '$'> $value<br />'' cannot be parsed correct.
+HTML code '$'Limit by <strong>post date</strong>:'' cannot be parsed correct.
+HTML code '$'from'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_auto_datefrom'' cannot be parsed correct.
+HTML code '$'until'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_auto_dateto'' cannot be parsed correct.
+HTML code '$'or the last'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_auto_days'' cannot be parsed correct.
+HTML code '$'days'' cannot be parsed correct.
+HTML code '$'Compare'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'content (post_content)'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'title (post_title)'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'content and title'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Filter out HTML-Tags while comparing'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Decode HTML-Entities before comparing'' cannot be parsed correct.
+HTML code '$'Ignore these words while comparing'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_auto_filterwords'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_auto_log", "")'' cannot be parsed correct.
+HTML code '$'Manual duplicate handling'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Activate manual post handling'' cannot be parsed correct.
+HTML code '$'Allows you to check for similar entries before publishing an post.'' cannot be parsed correct.
+HTML code '$'Include all posts with an <strong>content-similarity</strong> of more than:'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_meta_similarity'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_meta_similarity'' cannot be parsed correct.
+HTML code '$'Activate for these <strong>types</strong>:'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" value="$post_type" name="meta_types[]"'' cannot be parsed correct.
+HTML code '$'> $post_type<br /> '' cannot be parsed correct.
+HTML code '$'Include these <strong>statuses</strong>:'' cannot be parsed correct.
+HTML code '$'<input name="meta_status[]" type="checkbox" value="$key'' cannot be parsed correct.
+HTML code '$'> $value<br />'' cannot be parsed correct.
+HTML code '$'Limit by <strong>post date</strong>:'' cannot be parsed correct.
+HTML code '$'from'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_meta_datefrom'' cannot be parsed correct.
+HTML code '$'until'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_meta_dateto'' cannot be parsed correct.
+HTML code '$'or the last'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_meta_days'' cannot be parsed correct.
+HTML code '$'days'' cannot be parsed correct.
+HTML code '$'Compare'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'content (post_content)'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'title (post_title)'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'content and title'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Filter out HTML-Tags while comparing'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Decode HTML-Entities before comparing'' cannot be parsed correct.
+HTML code '$'How much comparisons per Server-Request?'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_meta_comparelimit'' cannot be parsed correct.
+HTML code '$'Ignore these words while comparing'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_meta_filterwords'' cannot be parsed correct.
+HTML code '$'Save settings'' cannot be parsed correct.
+HTML code '$'plugins_url("/", )'' cannot be parsed correct.
+HTML code '$'Search settings'' cannot be parsed correct.
+HTML code '$'Get all posts with an <strong>content-similarity</strong> of more than:'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_search_similarity'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_search_similarity'' cannot be parsed correct.
+HTML code '$'Compare this <strong>type</strong>:'' cannot be parsed correct.
+HTML code '$'<input type="radio" value="$post_type" name="types"'' cannot be parsed correct.
+HTML code '$'> $post_type<br /> '' cannot be parsed correct.
+HTML code '$'Include these <strong>statuses</strong>:'' cannot be parsed correct.
+HTML code '$'<input name="status[]" type="checkbox" value="$key'' cannot be parsed correct.
+HTML code '$'> $value<br />'' cannot be parsed correct.
+HTML code '$'Limit by <strong>post date</strong>:'' cannot be parsed correct.
+HTML code '$'from'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_search_datefrom'' cannot be parsed correct.
+HTML code '$'until'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_search_dateto'' cannot be parsed correct.
+HTML code '$'Compare'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'content (post_content)'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'title (post_title)'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'content and title'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Filter out HTML-Tags while comparing'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Decode HTML-Entities before comparing'' cannot be parsed correct.
+HTML code '$'How much comparisons per Server-Request?'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_search_comparelimit'' cannot be parsed correct.
+HTML code '$'Ignore these words while comparing'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_search_filterwords'' cannot be parsed correct.
+HTML code '$'plugins_url("/", )'' cannot be parsed correct.
+HTML code '$'loading'' cannot be parsed correct.
+HTML code '$'Start new search'' cannot be parsed correct.
+HTML code '$'cancel'' cannot be parsed correct.
+HTML code '$'Continue old search'' cannot be parsed correct.
+HTML code '$'Move selected posts to'' cannot be parsed correct.
+HTML code '$'get_option("find_duplicates_data")_settings_target'' cannot be parsed correct.
+HTML code '$'similarity'' cannot be parsed correct.
+HTML code '$'newer post'' cannot be parsed correct.
+HTML code '$'older post'' cannot be parsed correct.
+HTML code '$'<tr class="resultrow" id="$element_0" olderid="$element_1"<td>$element_2%</td><td><input type="checkbox" class="delete-new-checkbox" postid="$element_0" value="1"> <a href="get_admin_url()post.php?post=$element_0&action=edit"get_the_title($element[0]) (ID: $element_0)</a></td><td><input type="checkbox" class="delete-old-checkbox" postid="$element_1" value="1"> <a href="get_admin_url()post.php?post=$element_1&action=edit"get_the_title($element[1]) (ID: $element_1)</a></td></tr>'' cannot be parsed correct.
+HTML code '$'Say "Thank you"'' cannot be parsed correct.
+HTML code '$'Say "Thank you" and further more free plugins!'' cannot be parsed correct.
+HTML code '$'<a class="button" title="Similarity: $options_meta_similarity% | Date: $options_meta_datefrom-$options_meta_dateto | Status: implode(",", $options["meta"]["statuses"])" id="fd-meta-start">Find duplicates</a><!--<input type="checkbox" name="field" id="field" value="1"> only compare title-->'' cannot be parsed correct.
+HTML code '$'<div id="ajax-loader" style="display:none;margin-top:10px"><img src="plugins_url("/", )../img/ajax-loader.gif" />loading</div>'' cannot be parsed correct.
+HTML code '$'</ul>
+    <script>
+        jQuery("#fd-meta-start").click(function(){
+            jQuery("#ajax-loader").show();
+            find_meta("get_post_type($post)");
+        });
+    </script>
+   '' cannot be parsed correct.
+HTML code '$'plugins_url("/", )'' cannot be parsed correct.
+HTML code '$'Settings'' cannot be parsed correct.
+HTML code '$'Common Settings'' cannot be parsed correct.
+HTML code '$'Default target for duplicates'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'Trash'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'Pending'' cannot be parsed correct.
+HTML code '$'</option>
+                    <option value="draft"'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="container" id="options" class="form-wrap">
+            <h3>'' cannot be parsed correct.
+HTML code '$'</h3>
+            <ul id="settings">
+
+                <li>
+                    <input name="auto_active" id="auto_active" type="checkbox" value="1"'' cannot be parsed correct.
+HTML code '$'> '' cannot be parsed correct.
+HTML code '$'                    <p>'' cannot be parsed correct.
+HTML code '$'</p>
+                </li>
+
+                <li>'' cannot be parsed correct.
+HTML code '$'                    <strong><span id="auto_similarity_amount">'' cannot be parsed correct.
+HTML code '$'</span>%</strong>
+                    <div id="auto_similarity"></div>
+                    <input type="hidden" value="'' cannot be parsed correct.
+HTML code '$'" name="auto_similarity">
+                </li>
+
+                <li id="types"><label for="types">'' cannot be parsed correct.
+HTML code '$'</label><br/>
+                    '' cannot be parsed correct.
+HTML code '$' checked'' cannot be parsed correct.
+HTML code '$'                    <br/>
+                    '' cannot be parsed correct.
+HTML code '$' checked'' cannot be parsed correct.
+HTML code '$'<br/>
+                    '' cannot be parsed correct.
+HTML code '$' <input id="auto_datefrom" name="auto_datefrom"
+                                                                       class="datepicker" type="text"
+                                                                       value="'' cannot be parsed correct.
+HTML code '$'"
+                                                                       readonly="readonly"> '' cannot be parsed correct.
+HTML code '$'                    <input
+                        id="auto_dateto" name="auto_dateto" class="datepicker" type="text"
+                        value="'' cannot be parsed correct.
+HTML code '$'" readonly="readonly">
+                    <br />
+                    '' cannot be parsed correct.
+HTML code '$' <input size="5" type="text" id="auto_days" name="auto_days" value="'' cannot be parsed correct.
+HTML code '$'">'' cannot be parsed correct.
+HTML code '$'                </li>
+
+                <li>
+                    '' cannot be parsed correct.
+HTML code '$' <select name="auto_field" id="auto_field">
+                        <option value="0" '' cannot be parsed correct.
+HTML code '$'>
+                            '' cannot be parsed correct.
+HTML code '$'                        </option>
+                        <option value="1" '' cannot be parsed correct.
+HTML code '$'>
+                            '' cannot be parsed correct.
+HTML code '$'                        </option>
+                        <option value="2" '' cannot be parsed correct.
+HTML code '$'>
+                            '' cannot be parsed correct.
+HTML code '$'                        </option>
+                    </select><br/>
+                    <input name="auto_filterhtml" id="auto_filterhtml" type="checkbox"
+                           value="1"'' cannot be parsed correct.
+HTML code '$'> '' cannot be parsed correct.
+HTML code '$'                    <br /><input name="auto_filterhtmlentities" id="auto_filterhtmlentities" type="checkbox"
+                           value="1"'' cannot be parsed correct.
+HTML code '$'> '' cannot be parsed correct.
+HTML code '$'                </li>
+
+                <li>
+                    '' cannot be parsed correct.
+HTML code '$' <input
+                        name="auto_filterwords" id="auto_filterwords" type="text"
+                        value="'' cannot be parsed correct.
+HTML code '$'">
+                </li>
+
+                <li>
+                    <div style="height:100px;overflow: scroll;">
+                        LOG:<br/>
+                        '' cannot be parsed correct.
+HTML code '$'</h3>
+            <ul id="settings">
+                <li>
+                    <input name="meta_active" id="meta_active" type="checkbox"
+                           value="1"'' cannot be parsed correct.
+HTML code '$'> '' cannot be parsed correct.
+HTML code '$'                    <p>'' cannot be parsed correct.
+HTML code '$'</p>
+                </li>
+
+                <li>'' cannot be parsed correct.
+HTML code '$'                    <strong><span id="meta_similarity_amount">'' cannot be parsed correct.
+HTML code '$'</span>%</strong>
+
+                    <div id="meta_similarity"></div>
+                    <input type="hidden" value="'' cannot be parsed correct.
+HTML code '$'" name="meta_similarity">
+                </li>
+
+                <li id="types"><label for="types">'' cannot be parsed correct.
+HTML code '$'</label><br/>
+                    '' cannot be parsed correct.
+HTML code '$' checked'' cannot be parsed correct.
+HTML code '$'                    <br/>
+                    '' cannot be parsed correct.
+HTML code '$' checked'' cannot be parsed correct.
+HTML code '$'<br/>
+                    '' cannot be parsed correct.
+HTML code '$' <input id="meta_datefrom" name="meta_datefrom"
+                                                                       class="datepicker" type="text"
+                                                                       value="'' cannot be parsed correct.
+HTML code '$'"
+                                                                       readonly="readonly"> '' cannot be parsed correct.
+HTML code '$'                    <input
+                        id="meta_dateto" name="meta_dateto" class="datepicker" type="text"
+                        value="'' cannot be parsed correct.
+HTML code '$'" readonly="readonly">
+                    <br />
+                    '' cannot be parsed correct.
+HTML code '$' <input type="text" size="5" id="meta_days" name="meta_days" value="'' cannot be parsed correct.
+HTML code '$'">'' cannot be parsed correct.
+HTML code '$'                </li>
+
+                <li>
+                    '' cannot be parsed correct.
+HTML code '$' <select name="meta_field" id="meta_field">
+                        <option value="0" '' cannot be parsed correct.
+HTML code '$'>
+                            '' cannot be parsed correct.
+HTML code '$'                        </option>
+                        <option value="1" '' cannot be parsed correct.
+HTML code '$'>
+                            '' cannot be parsed correct.
+HTML code '$'                        </option>
+                        <option value="2" '' cannot be parsed correct.
+HTML code '$'>
+                            '' cannot be parsed correct.
+HTML code '$'                        </option>
+                    </select><br/>
+                    <input name="meta_filterhtml" id="meta_filterhtml" type="checkbox"
+                           value="1"'' cannot be parsed correct.
+HTML code '$'> '' cannot be parsed correct.
+HTML code '$'<br />
+                    <input name="filterhtmlentities" id="meta_filterhtmlentities" type="checkbox"
+                           value="1"'' cannot be parsed correct.
+HTML code '$'> '' cannot be parsed correct.
+HTML code '$'                    <br/>
+                    '' cannot be parsed correct.
+HTML code '$' <input
+                        name="meta_comparelimit" id="meta_comparelimit" type="text"
+                        value="'' cannot be parsed correct.
+HTML code '$'">
+                </li>
+
+                <li>
+                   '' cannot be parsed correct.
+HTML code '$' <input
+                        name="meta_filterwords" id="meta_filterwords" type="text"
+                        value="'' cannot be parsed correct.
+HTML code '$'">
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+        <input id="save" title="for searching while editing posts" class="button button-highlighted" type="submit" name="save" value="'' cannot be parsed correct.
+HTML code '$'">
+    </form>
+</div>
+
+<script>
+    jQuery(document).ready(function () {
+        jQuery("#auto_similarity").slider({
+            min: 50,
+            max: 100,
+            value: jQuery("input[name=\'auto_similarity\']").val(),
+            change: function (event, ui) {
+                jQuery("#auto_similarity_amount").html(ui.value);
+                jQuery("input[name=\'auto_similarity\']").val(ui.value);
+            }
+        });
+        jQuery("#meta_similarity").slider({
+            min: 50,
+            max: 100,
+            value: jQuery("input[name=\'meta_similarity\']").val(),
+            change: function (event, ui) {
+                jQuery("#meta_similarity_amount").html(ui.value);
+                jQuery("input[name=\'meta_similarity\']").val(ui.value);
+            }
+        });
+        jQuery("#auto_similarity_amount").html(jQuery("#auto_similarity").slider("value"));
+        jQuery("#meta_similarity_amount").html(jQuery("#meta_similarity").slider("value"));
+
+            var dates = jQuery("#auto_datefrom, #auto_dateto").datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                dateFormat: "yy-mm-dd",
+                clearText: \'lÃ¶schen\', clearStatus: \'aktuelles Datum lÃ¶schen\',
+                showOn: "button",
+                buttonImage: "images/date-button.gif",
+                buttonImageOnly: true,
+                showButtonPanel: true,
+                beforeShow: function (input) {
+                    setTimeout(function () {
+                        var buttonPane = jQuery(input)
+                            .datepicker("widget")
+                            .find(".ui-datepicker-buttonpane");
+
+                        var btn = jQuery(\'<button class="ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all" type="button">Clear</button>\');
+                        btn
+                            .unbind("click")
+                            .bind("click", function () {
+                                jQuery.datepicker._clearDate(input);
+                                jQuery(input).val("");
+                            });
+
+                        btn.appendTo(buttonPane);
+
+                    }, 1);
+                },
+                //numberOfMonths: 1,
+                onSelect: function (selectedDate) {
+                    var option = this.id == "auto_datefrom" ? "minDate" : "maxDate",
+                        instance = jQuery(this).data("datepicker"),
+                        date = jQuery.datepicker.parseDate(
+                            instance.settings.dateFormat ||
+                                jQuery.datepicker._defaults.dateFormat,
+                            selectedDate, instance.settings);
+                    dates.not(this).datepicker("option", option, date);
+                }
+            });
+
+
+            var dates = jQuery("#meta_datefrom, #meta_dateto").datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                dateFormat: "yy-mm-dd",
+                clearText: \'lÃ¶schen\', clearStatus: \'aktuelles Datum lÃ¶schen\',
+                showOn: "button",
+                buttonImage: "images/date-button.gif",
+                buttonImageOnly: true,
+                showButtonPanel: true,
+                beforeShow: function (input) {
+                    setTimeout(function () {
+                        var buttonPane = jQuery(input)
+                            .datepicker("widget")
+                            .find(".ui-datepicker-buttonpane");
+
+                        var btn = jQuery(\'<button class="ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all" type="button">Clear</button>\');
+                        btn
+                            .unbind("click")
+                            .bind("click", function () {
+                                jQuery.datepicker._clearDate(input);
+                                jQuery(input).val("");
+                            });
+
+                        btn.appendTo(buttonPane);
+
+                    }, 1);
+                },
+                //numberOfMonths: 1,
+                onSelect: function (selectedDate) {
+                    var option = this.id == "meta_datefrom" ? "minDate" : "maxDate",
+                        instance = jQuery(this).data("datepicker"),
+                        date = jQuery.datepicker.parseDate(
+                            instance.settings.dateFormat ||
+                                jQuery.datepicker._defaults.dateFormat,
+                            selectedDate, instance.settings);
+                    dates.not(this).datepicker("option", option, date);
+                }
+            });
+    });
+</script>'' cannot be parsed correct.
+HTML code '$'../css/styles.css"/>
+<div class="wrap metabox-holder"><h2>Find duplicates</h2>
+    '' cannot be parsed correct.
+HTML code '$'
+    <div id="logtabs" class="container">
+        <h3>Log:</h3>
+
+        <div id="log"></div>
+    </div>
+    <div class="postbox" id="options">
+        <h3 class="hndle">'' cannot be parsed correct.
+HTML code '$'</h3>
+
+        <div class="inside">
+            <form method="POST">
+                <ul id="settings">
+                    <li>'' cannot be parsed correct.
+HTML code '$'                        <strong><span id="similarity_amount">'' cannot be parsed correct.
+HTML code '$'</span>%</strong>
+                        <div id="similarity"></div>
+                    </li>
+                    <input type="hidden" value="'' cannot be parsed correct.
+HTML code '$'" name="similarity">
+                    <li id="types"><label
+                            for="types">'' cannot be parsed correct.
+HTML code '$'</label><br/>
+                        '' cannot be parsed correct.
+HTML code '$' checked'' cannot be parsed correct.
+HTML code '$'                        <br/>
+                        '' cannot be parsed correct.
+HTML code '$' checked'' cannot be parsed correct.
+HTML code '$'<br/>
+                        '' cannot be parsed correct.
+HTML code '$' <input id="datefrom" name="datefrom" class="datepicker" type="text" value="'' cannot be parsed correct.
+HTML code '$'" readonly="readonly"> '' cannot be parsed correct.
+HTML code '$'                        <input
+                            id="dateto" name="dateto" class="datepicker" type="text"
+                            value="'' cannot be parsed correct.
+HTML code '$'" readonly="readonly">
+                    </li>
+                    <li>
+                        '' cannot be parsed correct.
+HTML code '$' <select name="search_field" id="search_field">
+                            <option value="0" '' cannot be parsed correct.
+HTML code '$'>
+                                '' cannot be parsed correct.
+HTML code '$'                            </option>
+                            <option value="1" '' cannot be parsed correct.
+HTML code '$'>
+                                '' cannot be parsed correct.
+HTML code '$'                            </option>
+                            <option value="2" '' cannot be parsed correct.
+HTML code '$'>
+                                '' cannot be parsed correct.
+HTML code '$'                            </option>
+                        </select><br/>
+                        <input name="filterhtml" id="filterhtml" type="checkbox" value="1"'' cannot be parsed correct.
+HTML code '$'> '' cannot be parsed correct.
+HTML code '$'                        <br/>
+                        <input name="filterhtmlentities" id="filterhtmlentities" type="checkbox" value="1"'' cannot be parsed correct.
+HTML code '$'> '' cannot be parsed correct.
+HTML code '$'                        <br/>
+                        '' cannot be parsed correct.
+HTML code '$' <input name="comparelimit" id="comparelimit" type="text" value="'' cannot be parsed correct.
+HTML code '$'">
+                    </li>
+                    <li>
+                       '' cannot be parsed correct.
+HTML code '$' <input
+                            name="filterwords" id="filterwords" type="text"
+                            value="'' cannot be parsed correct.
+HTML code '$'">
+                    </li>
+                </ul>
+
+
+                <div id=\'ajax-loader\' style="display:none"><img
+                        src="'' cannot be parsed correct.
+HTML code '$'../img/ajax-loader.gif"/>'' cannot be parsed correct.
+HTML code '$'                </div>
+                <input id="startbutton" class="button button-highlighted" type="button"
+                       value="'' cannot be parsed correct.
+HTML code '$'">
+                <input class="button" type="button" value="'' cannot be parsed correct.
+HTML code '$'" id="cancel"
+                       style="display:none">
+
+                <input id="continuebutton" '' cannot be parsed correct.
+HTML code '$'display: none'' cannot be parsed correct.
+HTML code '$'">
+
+                <div class="clear"></div>
+            </form>
+
+
+            <div class="clear"></div>
+
+            <br/>
+            '' cannot be parsed correct.
+HTML code '$'display: none'' cannot be parsed correct.
+HTML code '$' '' cannot be parsed correct.
+HTML code '$'">
+        </div>
+    </div>
+    <table id="results" class="widefat">
+        <thead>
+        <tr>
+            <th class="column-title">'' cannot be parsed correct.
+HTML code '$'</th>
+            <th><input type="checkbox" id="delete-all-new" value="0"> '' cannot be parsed correct.
+HTML code '$'            </th>
+            <th><input type="checkbox" id="delete-all-old" value="0"> '' cannot be parsed correct.
+HTML code '$'            </th>
+        </tr>
+        </thead>
+        <tbody>
+        '' cannot be parsed correct.
+HTML code '$'</h3>
+    <div class="inside">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="4S7SVMALSSZ2Y">
+        '' cannot be parsed correct.
+HTML code '$'<ul id="fd-meta-results">'' cannot be parsed correct.
+HTML code '$'../css/styles.css"/>
+<div class="wrap"><h2>Find duplicates - '' cannot be parsed correct.
+HTML code '$'</h2>
+    '' cannot be parsed correct.
+HTML code '$'    <form method="POST">
+        <div class="postbox">
+            <h3 class="hndle">'' cannot be parsed correct.
+HTML code '$'</h3>
+            <div class="inside">
+                '' cannot be parsed correct.
+HTML code '$': <select name="settings_target" id="settings_target">
+                    <option value="trash"'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>
+                    <option value="pending"'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:20.104646.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.044785.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 2 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.626270.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running MySQLiDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+find-duplicates.php:109
+  - RETRIEVAL call to get_post($pid) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post, post_meta
+find-duplicates.php:110
+  - RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:115
+  - RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:173
+  - RETRIEVAL call to get_option("find_duplicates_auto_log", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:200
+  - RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:210
+  - RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:244
+  - RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:279
+  - RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:304
+  - RETRIEVAL call to get_option("find_duplicates_data", null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:385
+  - RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:443
+  - RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+find-duplicates.php:517
+  - RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+tpl/options.php:2
+  - RETRIEVAL call to get_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+tpl/options.php:99
+  - RETRIEVAL call to get_option("find_duplicates_auto_log", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+tpl/search.php:2
+  - RETRIEVAL call to get_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+find-duplicates.php:43
+  - STORAGE call to delete_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+find-duplicates.php:98
+  - STORAGE call to update_option("find_duplicates_data", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+find-duplicates.php:102
+  - STORAGE call to delete_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+find-duplicates.php:144
+  - STORAGE call to wp_delete_post($pid, false) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: wp_post, post, post_meta
+find-duplicates.php:151
+  - STORAGE call to wp_update_post($my_post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+find-duplicates.php:158
+  - STORAGE call to wp_update_post($my_post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+find-duplicates.php:174
+  - STORAGE call to update_option("find_duplicates_auto_log", $old_log . $log) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+find-duplicates.php:224
+  - STORAGE call to update_option("find_duplicates_data", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+find-duplicates.php:273
+  - STORAGE call to update_option("find_duplicates_data", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+find-duplicates.php:285
+  - STORAGE call to wp_delete_post($id, false) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: wp_post, post, post_meta
+find-duplicates.php:292
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+find-duplicates.php:299
+  - STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+find-duplicates.php:310
+  - STORAGE call to update_option("find_duplicates_data", $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+find-duplicates.php:435
+  - STORAGE call to update_option("find_duplicates_data", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+find-duplicates.php:43
+  - DELETION call to delete_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+find-duplicates.php:102
+  - DELETION call to delete_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+find-duplicates.php:144
+  - DELETION call to wp_delete_post($pid, false) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: wp_post, post, post_meta
+find-duplicates.php:285
+  - DELETION call to wp_delete_post($id, false) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).
+  - Data types: wp_post, post, post_meta 
+
+By data type:
+none
+	WordPressStorageDetector.wp_update_post($post) - set()
+	WordPressStorageDetector.wp_update_post($post) - set()
+	WordPressStorageDetector.wp_update_post($my_post) - set()
+	WordPressStorageDetector.wp_update_post($my_post) - set()
+option
+	WordPressStorageDetector.update_option("find_duplicates_data", $data) - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", []) - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", []) - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", []) - {'option'}
+	WordPressStorageDetector.delete_option("find_duplicates_data") - {'option'}
+	DeletionDetector.delete_option("find_duplicates_data") - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", []) - {'option'}
+	WordPressStorageDetector.update_option("find_duplicates_data", $options) - {'option'}
+	WordPressStorageDetector.update_option("find_duplicates_data", $options) - {'option'}
+	WordPressStorageDetector.update_option("find_duplicates_auto_log", $old_log . $log) - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", []) - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data") - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_auto_log", "") - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", []) - {'option'}
+	WordPressStorageDetector.delete_option("find_duplicates_data") - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_auto_log", "") - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data") - {'option'}
+	DeletionDetector.delete_option("find_duplicates_data") - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", []) - {'option'}
+	WordPressStorageDetector.update_option("find_duplicates_data", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", null) - {'option'}
+	WordPressStorageDetector.update_option("find_duplicates_data", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", []) - {'option'}
+	WordPressRetrievalDetector.get_option("find_duplicates_data", []) - {'option'}
+post
+	WordPressRetrievalDetector.get_post($pid) - {'wp_post', 'post', 'post_meta'}
+	DeletionDetector.wp_delete_post($id, false) - {'wp_post', 'post', 'post_meta'}
+	DeletionDetector.wp_delete_post($pid, false) - {'wp_post', 'post', 'post_meta'}
+	WordPressStorageDetector.wp_delete_post($pid, false) - {'wp_post', 'post', 'post_meta'}
+	WordPressStorageDetector.wp_delete_post($id, false) - {'wp_post', 'post', 'post_meta'}
+post_meta
+	WordPressRetrievalDetector.get_post($pid) - {'wp_post', 'post', 'post_meta'}
+	DeletionDetector.wp_delete_post($id, false) - {'wp_post', 'post', 'post_meta'}
+	DeletionDetector.wp_delete_post($pid, false) - {'wp_post', 'post', 'post_meta'}
+	WordPressStorageDetector.wp_delete_post($pid, false) - {'wp_post', 'post', 'post_meta'}
+	WordPressStorageDetector.wp_delete_post($id, false) - {'wp_post', 'post', 'post_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($pid) - {'wp_post', 'post', 'post_meta'}
+	DeletionDetector.wp_delete_post($id, false) - {'wp_post', 'post', 'post_meta'}
+	DeletionDetector.wp_delete_post($pid, false) - {'wp_post', 'post', 'post_meta'}
+	WordPressStorageDetector.wp_delete_post($pid, false) - {'wp_post', 'post', 'post_meta'}
+	WordPressStorageDetector.wp_delete_post($id, false) - {'wp_post', 'post', 'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.372230.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 114 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.213629.
+
+114 STORE_REACHES edges created
+114 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006519.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:55.278299!
+DELETION call to delete_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to wp_delete_post($pid, false) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+DELETION call to wp_delete_post($id, false) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+DELETION call to delete_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_post($pid) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_auto_log", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_auto_log", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to delete_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to wp_delete_post($pid, false) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+STORAGE call to wp_update_post($my_post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post($my_post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to update_option("find_duplicates_auto_log", $old_log . $log) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("find_duplicates_data", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("find_duplicates_data", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_delete_post($id, false) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 1: $force_delete (bool), 0: $postid (int). Returns (WP_Post|false|null).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post($post). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to update_option("find_duplicates_data", $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("find_duplicates_data") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("find_duplicates_data", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("find_duplicates_data", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

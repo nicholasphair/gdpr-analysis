@@ -1,0 +1,853 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on matomo-analytics
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.399780.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.944990.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.295063.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.683434.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 184 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.725648.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.765628.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.186192.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 180 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.750264.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1742
+Added 1377 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1742
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.127293.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matomo-analytics/ajdg-matomo-tracker-dashboard.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matomo-analytics/ajdg-matomo-tracker-functions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matomo-analytics/ajdg-matomo-tracker.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matomo-analytics/images/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/matomo-analytics/library/index.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.649531.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1741 PHP_REACHES edges created
+1742 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 568 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.059862.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.176970.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 5 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.798495.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 5 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.173277.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.028374.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.090607.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011397.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.055995.
+
+10 PHP_REACHES edges created
+10 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 5 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.159740.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.110278.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_option("ajdg_matomo_siteid")'' cannot be parsed correct.
+HTML code '$'get_option("ajdg_matomo_siteurl")'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'	<div class="ajdg-notification-logo" style="background-image: url(\'plugins_url("/images/notification.png", )\');"><span></span></div'' cannot be parsed correct.
+HTML code '$'	<div class="ajdg-notification-message">Hey there <strong>$displayname</strong>! You have been using <strong>AJdG Matomo Tracker</strong> for a few days.<br />If you like the plugin, please <strong>write a review</strong>.<br />If you have questions, complaints or something else that does not belong in a review, please use the <a href="https://ajdg.solutions/forums/forum/wordpress-plugins/?pk_campaign=matomo_tracker&pk_kwd=review-banner&pk_source=plugin">support forum</a>!</div>'' cannot be parsed correct.
+HTML code '$'	<div class="ajdg-notification-logo" style="background-image: url(\'plugins_url("/images/notification.png", )\');"><span></span></div'' cannot be parsed correct.
+HTML code '$'	<div class="ajdg-notification-message"><strong>Analytics for Matomo</strong> has detected _n("one issue that requires", "several issues that require", count($has_error), "ajdg-matomo-tracker") your attention:<br />'' cannot be parsed correct.
+HTML code '$'&raquo; $message<br />'' cannot be parsed correct.
+HTML code '$'	<br /><a href=admin_url("/tools.php?page=matomo-tracker")"Check your settings</a>!'' cannot be parsed correct.
+HTML code '$'<div class="updated"><p>Settings saved</p></div>'' cannot be parsed correct.
+HTML code '$'<div class="error"><p>Unexpected error</p></div>'' cannot be parsed correct.
+HTML code '$'	<h2 style="text-align: center;">Oh no! Something went wrong!</h2>'' cannot be parsed correct.
+HTML code '$'	<p style="text-align: center;">WordPress was unable to verify the authenticity of the url you have clicked. Verify if the url used is valid or log in via your browser.</p>'' cannot be parsed correct.
+HTML code '$'	<p style="text-align: center;">If you have received the url you want to visit via email, you are being tricked!</p>'' cannot be parsed correct.
+HTML code '$'	<p style="text-align: center;">Contact support if the issue persists: <a href="https://ajdg.solutions/forums/forum/wordpress-plugins/?pk_campaign=matomo_tracker&pk_kwd=nonce-error" title="AJdG Solutions Support" target="_blank">AJdG Solutions Support</a>.</p>'' cannot be parsed correct.
+HTML code '$'	_paq.push([\'setTrackerUrl\', \'get_option("ajdg_matomo_siteurl")/matomo.php\']);
+'' cannot be parsed correct.
+HTML code '$'	_paq.push([\'setSiteId\', \'get_option("ajdg_matomo_siteid")\']);
+'' cannot be parsed correct.
+HTML code '$'	g.type=\'text/javascript\'; g.async=true; g.defer=true; g.src=\'get_option("ajdg_matomo_siteurl")/matomo.js\'; s.parentNode.insertBefore(g,s);
+'' cannot be parsed correct.
+HTML code '$'<noscript><img src=get_option("ajdg_matomo_siteurl")/matomo.php?idsite=get_option("ajdg_matomo_siteid")&amp;rec=1" style="border:0" alt="" /></noscript>
+'' cannot be parsed correct.
+HTML code '$'<div class="ajdg-notification notice" style="">'' cannot be parsed correct.
+HTML code '$'	<div class="ajdg-notification-cta">'' cannot be parsed correct.
+HTML code '$'		<a href="https://wordpress.org/support/plugin/matomo-analytics/reviews?rate=5#postform" class="ajdg-notification-act button-primary">Write a Review</a>'' cannot be parsed correct.
+HTML code '$'		<a href="tools.php?page=matomo-tracker&hide=1" class="ajdg-notification-dismiss">Maybe later</a>'' cannot be parsed correct.
+HTML code '$'	</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div class="ajdg-notification notice" style="">'' cannot be parsed correct.
+HTML code '$'	</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<!-- Matomo -->
+'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript">
+'' cannot be parsed correct.
+HTML code '$'var _paq = window._paq || [];
+'' cannot be parsed correct.
+HTML code '$'_paq.push([\'setDocumentTitle\', \'404/URL = \' + encodeURIComponent(document.location.pathname + document.location.search) + \' Referrer = \' + encodeURIComponent(document.referrer)]);
+'' cannot be parsed correct.
+HTML code '$'_paq.push([\'setDoNotTrack\', true]);
+'' cannot be parsed correct.
+HTML code '$'_paq.push([\'enableHeartBeatTimer\']);
+'' cannot be parsed correct.
+HTML code '$'_paq.push([\'setDownloadClasses\', \'woocommerce-MyAccount-downloads-file\']);
+'' cannot be parsed correct.
+HTML code '$'_paq.push([\'alwaysUseSendBeacon\']);
+'' cannot be parsed correct.
+HTML code '$'_paq.push([\'trackPageView\']);
+'' cannot be parsed correct.
+HTML code '$'_paq.push([\'enableLinkTracking\']);
+'' cannot be parsed correct.
+HTML code '$'(function() {
+'' cannot be parsed correct.
+HTML code '$'	var d=document, g=d.createElement(\'script\'), s=d.getElementsByTagName(\'script\')[0];
+'' cannot be parsed correct.
+HTML code '$'})();
+'' cannot be parsed correct.
+HTML code '$'</script>
+'' cannot be parsed correct.
+HTML code '$'<!-- /Matomo -->
+
+'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:06.184572.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.054252.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 8 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.476515.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running maxdbDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+ajdg-matomo-tracker-functions.php:157
+  - object property '$current_user->user_firstname' of personal types {'first_name', 'user', 'user_meta'} is found.
+  - Data types: first_name, user, user_meta
+ajdg-matomo-tracker-functions.php:157
+  - object property '$current_user->user_firstname' of personal types {'first_name', 'user', 'user_meta'} is found.
+  - Data types: first_name, user, user_meta
+ajdg-matomo-tracker-functions.php:157
+  - object property '$current_user->user_firstname' of personal types {'first_name', 'user', 'user_meta'} is found.
+  - Data types: first_name, user, user_meta
+ajdg-matomo-tracker-functions.php:157
+  - object property '$current_user->user_firstname' of personal types {'first_name', 'user', 'user_meta'} is found.
+  - Data types: first_name, user, user_meta 
+
+ajdg-matomo-tracker-dashboard.php:13
+  - RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-dashboard.php:14
+  - RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-dashboard.php:15
+  - RETRIEVAL call to get_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-dashboard.php:16
+  - RETRIEVAL call to get_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-dashboard.php:17
+  - RETRIEVAL call to get_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-dashboard.php:18
+  - RETRIEVAL call to get_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-dashboard.php:19
+  - RETRIEVAL call to get_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-dashboard.php:20
+  - RETRIEVAL call to get_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-dashboard.php:21
+  - RETRIEVAL call to get_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-dashboard.php:22
+  - RETRIEVAL call to get_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:119
+  - RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:122
+  - RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:125
+  - RETRIEVAL call to get_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:128
+  - RETRIEVAL call to get_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:131
+  - RETRIEVAL call to get_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:134
+  - RETRIEVAL call to get_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:137
+  - RETRIEVAL call to get_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:140
+  - RETRIEVAL call to get_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:143
+  - RETRIEVAL call to get_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:146
+  - RETRIEVAL call to get_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:163
+  - RETRIEVAL call to get_option("ajdg_matomo_hide_review") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:194
+  - RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:195
+  - RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:196
+  - RETRIEVAL call to get_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:301
+  - RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:302
+  - RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:366
+  - RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:367
+  - RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:369
+  - RETRIEVAL call to get_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:370
+  - RETRIEVAL call to get_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:371
+  - RETRIEVAL call to get_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:372
+  - RETRIEVAL call to get_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:373
+  - RETRIEVAL call to get_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker.php:38
+  - RETRIEVAL call to get_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker.php:40
+  - RETRIEVAL call to get_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker.php:42
+  - RETRIEVAL call to get_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ajdg-matomo-tracker.php:76
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta 
+
+ajdg-matomo-tracker-functions.php:27
+  - STORAGE call to update_option("ajdg_matomo_siteid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:28
+  - STORAGE call to update_option("ajdg_matomo_siteurl", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:29
+  - STORAGE call to update_option("ajdg_matomo_active", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:30
+  - STORAGE call to update_option("ajdg_matomo_track_feed_clicks", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:31
+  - STORAGE call to update_option("ajdg_matomo_track_feed_impressions", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:32
+  - STORAGE call to update_option("ajdg_matomo_track_error_pages", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:33
+  - STORAGE call to update_option("ajdg_matomo_track_incognito", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:34
+  - STORAGE call to update_option("ajdg_matomo_heartbeat_enable", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:35
+  - STORAGE call to update_option("ajdg_matomo_wc_downloads", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:36
+  - STORAGE call to update_option("ajdg_matomo_high_accuracy", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:37
+  - STORAGE call to update_option("ajdg_matomo_hide_review", current_time("timestamp")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:46
+  - STORAGE call to delete_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:47
+  - STORAGE call to delete_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:48
+  - STORAGE call to delete_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:49
+  - STORAGE call to delete_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:50
+  - STORAGE call to delete_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:51
+  - STORAGE call to delete_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:52
+  - STORAGE call to delete_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:53
+  - STORAGE call to delete_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:54
+  - STORAGE call to delete_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:55
+  - STORAGE call to delete_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:56
+  - STORAGE call to delete_option("ajdg_matomo_hide_review") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:95
+  - STORAGE call to update_option("ajdg_matomo_siteid", $siteid) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:96
+  - STORAGE call to update_option("ajdg_matomo_siteurl", $siteurl) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:97
+  - STORAGE call to update_option("ajdg_matomo_active", $track_active) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:98
+  - STORAGE call to update_option("ajdg_matomo_track_feed_clicks", $track_feed_clicks) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:99
+  - STORAGE call to update_option("ajdg_matomo_track_error_pages", $track_error_pages) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:100
+  - STORAGE call to update_option("ajdg_matomo_track_incognito", $track_incognito) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:101
+  - STORAGE call to update_option("ajdg_matomo_heartbeat_enable", $track_heartbeat) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:102
+  - STORAGE call to update_option("ajdg_matomo_wc_downloads", $track_wc_downloads) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:103
+  - STORAGE call to update_option("ajdg_matomo_track_feed_impressions", $track_feed_impressions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:104
+  - STORAGE call to update_option("ajdg_matomo_high_accuracy", $track_high_accuracy) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:120
+  - STORAGE call to update_option("ajdg_matomo_siteid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:123
+  - STORAGE call to update_option("ajdg_matomo_siteurl", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:126
+  - STORAGE call to update_option("ajdg_matomo_active", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:129
+  - STORAGE call to update_option("ajdg_matomo_track_feed_clicks", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:132
+  - STORAGE call to update_option("ajdg_matomo_track_error_pages", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:135
+  - STORAGE call to update_option("ajdg_matomo_track_incognito", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:138
+  - STORAGE call to update_option("ajdg_matomo_heartbeat_enable", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:141
+  - STORAGE call to update_option("ajdg_matomo_wc_downloads", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:144
+  - STORAGE call to update_option("ajdg_matomo_track_feed_impressions", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:147
+  - STORAGE call to update_option("ajdg_matomo_high_accuracy", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:160
+  - STORAGE call to update_option("ajdg_matomo_hide_review", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+ajdg-matomo-tracker-functions.php:46
+  - DELETION call to delete_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:47
+  - DELETION call to delete_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:48
+  - DELETION call to delete_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:49
+  - DELETION call to delete_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:50
+  - DELETION call to delete_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:51
+  - DELETION call to delete_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:52
+  - DELETION call to delete_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:53
+  - DELETION call to delete_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:54
+  - DELETION call to delete_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:55
+  - DELETION call to delete_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+ajdg-matomo-tracker-functions.php:56
+  - DELETION call to delete_option("ajdg_matomo_hide_review") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+first_name
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+option
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteid") - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_track_feed_impressions") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_heartbeat_enable") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteid") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_feed_impressions") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_siteid", $siteid) - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_siteurl", $siteurl) - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_siteurl") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_high_accuracy", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_feed_impressions") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_wc_downloads") - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_track_error_pages") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteid") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteurl") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_incognito", "no") - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_high_accuracy") - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_wc_downloads") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_active") - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_track_error_pages") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_feed_impressions", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_feed_clicks") - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_hide_review") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_high_accuracy") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_hide_review") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_feed_clicks", "no") - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_heartbeat_enable") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_incognito") - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_track_feed_clicks") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_feed_clicks", $track_feed_clicks) - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_active") - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_track_incognito") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_wc_downloads", $track_wc_downloads) - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_error_pages", $track_error_pages) - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_incognito", $track_incognito) - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_wc_downloads") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_heartbeat_enable") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_active") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_heartbeat_enable", $track_heartbeat) - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_active", $track_active) - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_active", "no") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_feed_impressions", $track_feed_impressions) - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_siteurl") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_high_accuracy", $track_high_accuracy) - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_error_pages", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_active") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_siteid", "") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_wc_downloads") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_feed_impressions") - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_siteid") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_error_pages") - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_track_incognito") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_feed_clicks") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_feed_impressions", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_error_pages") - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_heartbeat_enable") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_wc_downloads", "no") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_siteid", "") - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_high_accuracy") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_wc_downloads") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_active", "no") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_siteurl", "") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_error_pages", "yes") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_incognito", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_incognito") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_heartbeat_enable", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteid") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_track_feed_clicks", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_feed_clicks") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_active") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_high_accuracy") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_heartbeat_enable", "no") - {'option'}
+	WordPressStorageDetector.delete_option("ajdg_matomo_hide_review") - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_siteid") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_wc_downloads", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_heartbeat_enable") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_incognito") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_hide_review", 1) - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_active") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_hide_review", current_time("timestamp")) - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_track_error_pages") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_high_accuracy") - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_track_feed_impressions") - {'option'}
+	DeletionDetector.delete_option("ajdg_matomo_track_feed_clicks") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteid") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_high_accuracy", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("ajdg_matomo_siteurl") - {'option'}
+	WordPressStorageDetector.update_option("ajdg_matomo_siteurl", "") - {'option'}
+user
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+user_meta
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'first_name', 'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:12.291291.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 1548 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.613533.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 3176
+1000 STORE_REACHES edges created
+1548 STORE_REACHES edges created
+1548 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 10 nodes as PERSONAL
+In total, tainted 10 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.417433.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:36.540809!
+DELETION call to delete_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ajdg_matomo_hide_review") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+object property '$current_user->user_firstname' of personal types {'first_name', 'user', 'user_meta'} is found.,,None
+object property '$current_user->user_firstname' of personal types {'first_name', 'user', 'user_meta'} is found.,,None
+object property '$current_user->user_firstname' of personal types {'first_name', 'user', 'user_meta'} is found.,,None
+object property '$current_user->user_firstname' of personal types {'first_name', 'user', 'user_meta'} is found.,,None
+RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_hide_review") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+STORAGE call to update_option("ajdg_matomo_track_incognito", $track_incognito) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_heartbeat_enable", $track_heartbeat) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_wc_downloads", $track_wc_downloads) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_feed_impressions", $track_feed_impressions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_high_accuracy", $track_high_accuracy) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_siteid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_siteurl", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_active", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_feed_clicks", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_error_pages", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_incognito", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_heartbeat_enable", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_wc_downloads", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_feed_impressions", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_high_accuracy", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_hide_review", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_siteid", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_siteurl", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_active", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_feed_clicks", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_feed_impressions", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_error_pages", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_incognito", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_heartbeat_enable", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_wc_downloads", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_high_accuracy", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_hide_review", current_time("timestamp")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_siteid") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_track_feed_clicks") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_track_feed_impressions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_track_error_pages") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_track_incognito") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_heartbeat_enable") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_wc_downloads") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_high_accuracy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ajdg_matomo_hide_review") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_siteid", $siteid) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_siteurl", $siteurl) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_active", $track_active) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_feed_clicks", $track_feed_clicks) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ajdg_matomo_track_error_pages", $track_error_pages) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

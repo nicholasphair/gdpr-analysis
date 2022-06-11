@@ -1,0 +1,648 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on ekoma
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.608049.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.997899.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 39 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.488651.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.608075.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 79 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.574400.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 2 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.653159.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.101510.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 51 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.008900.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1137
+Added 965 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1147
+Added 10 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.039381.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/ekoma.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/admin/class-ekoma-admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/admin/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/admin/partials/ekoma-admin-display.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/includes/class-ekoma-activator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/includes/class-ekoma-deactivator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/includes/class-ekoma-i18n.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/includes/class-ekoma-loader.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/includes/class-ekoma.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/includes/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/public/class-ekoma-public.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/public/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ekoma/public/partials/ekoma-public-display.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.456201.
+
+39 PHP_REACHES edges created
+1 REACHES edges created
+79 PHP_REACHES edges created
+2 CALLS edges created
+1000 PHP_REACHES edges created
+1016 PHP_REACHES edges created
+10 PHP_REACHES edges created
+1147 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 430 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.035180.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 2 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.579743.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 25 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.280551.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 12 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.160363.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.199086.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.298887.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011238.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.034941.
+
+2 CALLS edges created
+37 PHP_REACHES edges created
+39 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 43 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.166363.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+3 SQL operations to process.
+DELETE FROM $wpdbwc_webhooks WHERE delivery_url LIKE 'EKOMA_API_URL%'
+SQL command (DELETE FROM $wpdbwc_webhooks WHERE delivery_url LIKE 'EKOMA_API_URL%') cannot be parsed correct.
+UPDATE wp_options SET option_value='yes' WHERE option_name='woocommerce_api_enabled'
+SQL command (UPDATE wp_options SET option_value='yes' WHERE option_name='woocommerce_api_enabled') cannot be parsed correct.
+DELETE FROM $wpdbwc_webhooks WHERE delivery_url LIKE 'EKOMA_API_URL%'
+SQL command (DELETE FROM $wpdbwc_webhooks WHERE delivery_url LIKE 'EKOMA_API_URL%') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [144, 1046, 1078]
+Added 0 SQL nodes. 0 out of 3 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.718431.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'plugins_url("ekoma/admin/images/ekoma-text-200.svg")'' cannot be parsed correct.
+HTML code '$'httpshttp://$_SERVER_HTTP_HOST$_SERVER_REQUEST_URI'' cannot be parsed correct.
+HTML code '$'wp_create_nonce("ekoma_admin_nonce")'' cannot be parsed correct.
+HTML code '$'get_option("ekoma_api_key")'' cannot be parsed correct.
+HTML code '$'get_option("ekoma_salt_key")'' cannot be parsed correct.
+HTML code '$'get_option("ekoma_integration")'' cannot be parsed correct.
+HTML code '$'EKOMA_API_URL'' cannot be parsed correct.
+HTML code '$'get_option("ekoma_integration")'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'md5(md5($email . $ekoma_api_key . $url) . $ekoma_salt_key)'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()get_bloginfo("admin_email")'' cannot be parsed correct.
+HTML code '$'<h4 style=\'font-family: Arial;\'>Your website must use HTTPS (with a valid SSL).</h4>'' cannot be parsed correct.
+HTML code '$'<h4 style=\'font-family: Arial;\'>WooCommerce must be installed before activating Ekoma</h4>'' cannot be parsed correct.
+HTML code '$'md5($email . esc_attr(get_option("ekoma_salt_key")))'' cannot be parsed correct.
+HTML code '$'get_option("ekoma_integration")'' cannot be parsed correct.
+HTML code '$'$_ENV_EKOMA_JShttps://s3.us-east-2.amazonaws.com/ekoma/ekoma.js.gz'' cannot be parsed correct.
+HTML code '$'" />
+			</div>
+      <form method="post" action="'' cannot be parsed correct.
+HTML code '$'">
+			'' cannot be parsed correct.
+HTML code '$'" />
+				<div style="">
+					<label style="font-size: 15px;">API Key</label>
+					<div style="margin-top: 10px; margin-bottom: 20px;">
+						<input type="text" name="ekoma_api_key" placeholder="Type your api key here..." value="'' cannot be parsed correct.
+HTML code '$'/public/woocommerce/auth?integration='' cannot be parsed correct.
+HTML code '$'&email='' cannot be parsed correct.
+HTML code '$'&digest='' cannot be parsed correct.
+HTML code '$'">
+            Ekoma admin panel
+          </a>
+        </div>
+			<? }else{ ?>
+				<div style="text-align: center; border-left: 3px solid #1967D2; border-right: 3px solid #1967D2; color: #1967D2; background-color: #e2efff; width: 300px; margin: auto; padding: 20px; border-radius: 3px; margin-top: 20px;">
+					A confirmation email has been sent to<br />
+					<b>'' cannot be parsed correct.
+HTML code '$'</b><br />
+					<br />
+					Please, click on the confirmation link in this email to continue the installation
+				</div>
+      '' cannot be parsed correct.
+HTML code '$'" customer-email="'' cannot be parsed correct.
+HTML code '$'" ekoma-integration="'' cannot be parsed correct.
+HTML code '$'\'></script>
+		'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.925177.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.050461.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.380348.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PasswordHashingDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPRetrievalDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector
+### Finish running PHPIncludedDetector
+### Start running SqliteDetector
+### Finish running PostgreSQLDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running MySQLiDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running SybaseDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running PropertyDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Start running DeletionDetector
+### Finish running VariableDetector
+### Start running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressRemoteDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+includes/class-ekoma-deactivator.php:44
+  - hash_hmac called with approved hash algorithm sha256. 
+
+admin/class-ekoma-admin.php:87
+  - MD5 called with parameters [get_option, ekoma_api_key, ekoma_salt_key]. Ignore if [get_option, ekoma_api_key, ekoma_salt_key] does not contain personal information.
+admin/class-ekoma-admin.php:123
+  - MD5 called with parameters [email, md5, ekoma_salt_key, ekoma_api_key, url]. Ignore if [email, md5, ekoma_salt_key, ekoma_api_key, url] does not contain personal information.
+admin/class-ekoma-admin.php:123
+  - MD5 called with parameters [ekoma_api_key, url, email]. Ignore if [ekoma_api_key, url, email] does not contain personal information.
+includes/class-ekoma-deactivator.php:42
+  - MD5 called with parameters [salt]. Ignore if [salt] does not contain personal information.
+public/class-ekoma-public.php:65
+  - MD5 called with parameters [get_option, email, esc_attr, ekoma_salt_key]. Ignore if [get_option, email, esc_attr, ekoma_salt_key] does not contain personal information. 
+
+admin/class-ekoma-admin.php:122
+  - object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.
+  - Data types: email
+admin/class-ekoma-admin.php:161
+  - object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.
+  - Data types: email
+admin/class-ekoma-admin.php:161
+  - object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.
+  - Data types: email
+includes/class-ekoma-activator.php:47
+  - object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.
+  - Data types: email
+includes/class-ekoma-activator.php:47
+  - object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+admin/class-ekoma-admin.php:122
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+admin/class-ekoma-admin.php:123
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+admin/class-ekoma-admin.php:152
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+admin/class-ekoma-admin.php:154
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+includes/class-ekoma-activator.php:47
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+includes/class-ekoma-activator.php:54
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+includes/class-ekoma-activator.php:55
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+public/class-ekoma-public.php:63
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+public/class-ekoma-public.php:64
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+public/class-ekoma-public.php:65
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+public/class-ekoma-public.php:67
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+includes/class-ekoma-activator.php:50
+  - API call to wp_remote_get(EKOMA_API_URL . "/public/woocommerce/invite?" . http_build_query(["store_name" => $name, "store_url" => $url, "user_email" => $email, "user_name" => wp_get_current_user()->display_namewp_get_current_user()->display_name$email]), ["sslverify" => !isset($_ENV["EKOMA_DEV"])]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+includes/class-ekoma-deactivator.php:47
+  - API call to wp_remote_post(EKOMA_API_URL . "/public/woocommerce/uninstall", ["method" => "POST", "sslverify" => false, "body" => $body, "headers" => ["X-WC-Webhook-Signature" => $calculated_hmac, "X-WC-Webhook-Source" => $url]]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+admin/class-ekoma-admin.php:87
+  - RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:87
+  - RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:91
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+admin/class-ekoma-admin.php:115
+  - RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:116
+  - RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:117
+  - RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:122
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+admin/class-ekoma-admin.php:137
+  - RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:141
+  - RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:145
+  - RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:152
+  - RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:154
+  - RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-ekoma-admin.php:161
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+admin/class-ekoma-admin.php:161
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+includes/class-ekoma-activator.php:47
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+includes/class-ekoma-activator.php:47
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+includes/class-ekoma-activator.php:55
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+includes/class-ekoma-activator.php:55
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+includes/class-ekoma-deactivator.php:39
+  - RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-ekoma-deactivator.php:41
+  - RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+includes/class-ekoma-deactivator.php:41
+  - RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-ekoma-public.php:58
+  - RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-ekoma-public.php:59
+  - RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-ekoma-public.php:60
+  - RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-ekoma-public.php:62
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+public/class-ekoma-public.php:65
+  - RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+public/class-ekoma-public.php:67
+  - RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+admin/class-ekoma-admin.php:104
+  - STORAGE call to update_option("ekoma_api_key", sanitize_key($_POST["ekoma_api_key"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/class-ekoma-admin.php:105
+  - STORAGE call to update_option("ekoma_salt_key", sanitize_key($_POST["ekoma_salt_key"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/class-ekoma-admin.php:106
+  - STORAGE call to update_option("ekoma_integration", filter_var($_POST["ekoma_integration"], FILTER_SANITIZE_NUMBER_INT)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+includes/class-ekoma-deactivator.php:44
+  - CRYPTOGRAPHY call to hash_hmac("sha256", $query, $md5, true). 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+none
+	HashDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+	GenericEncryptionDetector.hash_hmac("sha256", $query, $md5, true) - set()
+option
+	WordPressRetrievalDetector.get_option("ekoma_integration") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_integration") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_integration") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_integration") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_salt_key") - {'option'}
+	WordPressStorageDetector.update_option("ekoma_api_key", sanitize_key($_POST["ekoma_api_key"])) - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_salt_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_integration") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_salt_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_integration") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_integration") - {'option'}
+	WordPressStorageDetector.update_option("ekoma_integration", filter_var($_POST["ekoma_integration"], FILTER_SANITIZE_NUMBER_INT)) - {'option'}
+	WordPressStorageDetector.update_option("ekoma_salt_key", sanitize_key($_POST["ekoma_salt_key"])) - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_salt_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_salt_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_salt_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_api_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ekoma_api_key") - {'option'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+user
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.467254.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 58 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.243325.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 968
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 424
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 939
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1974
+58 STORE_REACHES edges created
+58 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 57 nodes as PERSONAL
+In total, tainted 57 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 29 nodes as ENCRYPTED
+In total, tainted 29 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.918415.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:35.109351!
+CRYPTOGRAPHY call to hash_hmac("sha256", $query, $md5, true).,None,None
+hash_hmac called with approved hash algorithm sha256.,sha256,None
+MD5 called with parameters [email, md5, ekoma_salt_key, ekoma_api_key, url]. Ignore if [email, md5, ekoma_salt_key, ekoma_api_key, url] does not contain personal information.,md5,None
+MD5 called with parameters [ekoma_api_key, url, email]. Ignore if [ekoma_api_key, url, email] does not contain personal information.,md5,None
+MD5 called with parameters [get_option, ekoma_api_key, ekoma_salt_key]. Ignore if [get_option, ekoma_api_key, ekoma_salt_key] does not contain personal information.,md5,None
+MD5 called with parameters [salt]. Ignore if [salt] does not contain personal information.,md5,None
+MD5 called with parameters [get_option, email, esc_attr, ekoma_salt_key]. Ignore if [get_option, email, esc_attr, ekoma_salt_key] does not contain personal information.,md5,None
+object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.,,None
+object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.,,None
+object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.,,None
+object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.,,None
+object property 'wp_get_current_user()->user_email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+API call to wp_remote_get(EKOMA_API_URL . "/public/woocommerce/invite?" . http_build_query(["store_name" => $name, "store_url" => $url, "user_email" => $email, "user_name" => wp_get_current_user()->display_namewp_get_current_user()->display_name$email]), ["sslverify" => !isset($_ENV["EKOMA_DEV"])]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+API call to wp_remote_post(EKOMA_API_URL . "/public/woocommerce/uninstall", ["method" => "POST", "sslverify" => false, "body" => $body, "headers" => ["X-WC-Webhook-Signature" => $calculated_hmac, "X-WC-Webhook-Source" => $url]]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_api_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("ekoma_salt_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ekoma_integration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("ekoma_api_key", sanitize_key($_POST["ekoma_api_key"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ekoma_salt_key", sanitize_key($_POST["ekoma_salt_key"])) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ekoma_integration", filter_var($_POST["ekoma_integration"], FILTER_SANITIZE_NUMBER_INT)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[encryption] API call that sends PII to unknown url uses unknown protocol. PII is securely encrypted with ['generic']. Found in file includes/class-ekoma-activator.php at line 50 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+No findings

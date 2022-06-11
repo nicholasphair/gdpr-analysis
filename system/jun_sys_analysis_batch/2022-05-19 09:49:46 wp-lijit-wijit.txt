@@ -1,0 +1,1096 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on wp-lijit-wijit
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.373200.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.908798.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 10 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.386424.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.444424.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 193 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.725786.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.587789.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.117092.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 64 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.440348.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1676
+Added 1409 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1676
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.314031.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-lijit-wijit/cf_validate.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-lijit-wijit/lijit.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.330296.
+
+1000 PHP_REACHES edges created
+1676 PHP_REACHES edges created
+1676 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 529 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.034581.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.606183.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 47 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.916897.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 74 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.194587.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.026723.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.710921.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.013522.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.038793.
+
+121 PHP_REACHES edges created
+121 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 59 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.150073.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.107839.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div class="updated fade-ff0000"><p>Settings Updated</p>'' cannot be parsed correct.
+HTML code '$'cflj_get_head_scripts(["lj_js_admin"])cflj_get_head_styles(["lj_css_admin"])'' cannot be parsed correct.
+HTML code '$'PHP_EOLcflj_get_head_scripts(["lj_js_page"])'' cannot be parsed correct.
+HTML code '$'PHP_EOLcflj_get_head_styles(["lj_css_page"])'' cannot be parsed correct.
+HTML code '$'file_get_contents($filepath)'' cannot be parsed correct.
+HTML code '$'fread($h, filesize($filepath))'' cannot be parsed correct.
+HTML code '$'
+			<p style="text-align:right;">
+            <label for="Lijit-widget-title">Title:
+			</label>
+            <input style="width: 200px;" id="Lijit-widget-title" name="Lijit-widget-title" type="text" value="htmlspecialchars($options["title"], ENT_QUOTES)" />
+			</p'' cannot be parsed correct.
+HTML code '$'$before_widget$before_titlehtmlspecialchars($options["title"], ENT_QUOTES)$after_title'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="http://www.lijit.com/wijitinit?uri=http%3A%2F%2Fwww.lijit.com%2Fusers%2Fget_option("lijit_username")&amp;js=1"></script'' cannot be parsed correct.
+HTML code '$'<a style="color: #999" href="http://www.lijit.com" id="lijit_wijit_pvs_link">Lijit Search</a>$after_widget'' cannot be parsed correct.
+HTML code '$'			
+// quick function to toggle the display of widget raw code
+function show_widget_code(type) {
+	jQuery(\'#\'+type).slideToggle(\'normal\');
+}
+
+// set blog registration value
+var tgt = false;
+function toggle_this_one(obj) {
+	if(!tgt) { tgt = document.getElementById(\'lijit_blog_url\'); }
+	if(obj.checked) {
+		tgt.oldValue = tgt.value;
+		tgt.value = obj.value;
+	}
+	else {
+		if(tgt.oldValue) { tgt.value = tgt.oldValue; }
+		else { tgt.value = \'\'; }
+	}
+}
+
+// try remote registration through lijit API
+function lijit_register_callback(lijitStatus){
+	if(lijitStatus.success) {
+		// log username locally
+		jQuery.post(\'get_bloginfo("wpurl")/wp-admin/options-general.php?page=basename()\',
+					{\'lijit_username\':document.getElementById(\'lijit_username\').value,\'lj_action\':\'lijit_register_username\',\'lj_aj_request\':1},
+					function(ret){
+							if(!ret.success) { alert(\'An error occured while saving your usernmae to WordPress\'); }
+						},
+					\'json\');
+		jQuery(\'#lijit_register\').hide();
+		jQuery(\'#lijit_register_results\').removeClass(\'ljnotice\').html(\'<p><b>Registration Successful</b></p>\'+ 
+																	   \'<p><a href=get_bloginfo("wpurl")/wp-admin/options-general.php?page=basename()">Click here</a> after\'+
+																	   \' registration to complete your blog setup.</p>\'+
+																	   \'<iframe id="lijit_registration" src="\'+lijitStatus.url+\'" scrolling="auto"/>\').insertAfter(\'#lijit_select_user_type\');
+	}
+	else {
+		jQuery(\'#lijit_register_results\').addClass(\'ljnotice\').html(\'<p><b>Registration Failed</b>: \' + lijitStatus.message + \'</p>\');
+	}
+}
+
+// prepare info type switching
+jQuery(\'window\').ready(function(){
+	jQuery(\'#lijit_user_type_new\').click(function(){
+			jQuery(\'#lijit_register\').css(\'display\',\'block\');
+			jQuery(\'#lijit_existing\').css(\'display\',\'none\');
+			return true;
+		});
+	jQuery(\'#lijit_user_type_existing\').click(function(){
+			jQuery(\'#lijit_existing\').css(\'display\',\'block\');
+			jQuery(\'#lijit_register\').css(\'display\',\'none\');
+			return true;
+		});
+	// open previously selected radio target
+	//jQuery(\'#lijit_select_user_type input[@type=radio][@checked]\').trigger(\'click\');
+	jQuery(\'#lijit_select_user_type input:radio:checked\').trigger(\'click\');
+	
+});
+		'' cannot be parsed correct.
+HTML code '$'	
+			<div class="wrap lijit_wrap">
+				<h2>Lijit Statistics</h2>
+				<p><a href=get_bloginfo("wpurl")/wp-admin/options-general.php?page=basename()">Plugin Options</a></p>
+				<br />
+				<iframe id="lijit_stats" src="http://www.lijit.com/users/get_option("lijit_username")/stats" scrolling="auto"></iframe>
+			</div>
+			'' cannot be parsed correct.
+HTML code '$'$wrap_0PHP_EOL<p><b>There werewas an errors processing this request:</b></p>$wrap_list_0PHP_EOL'' cannot be parsed correct.
+HTML code '$'$wrap_each_0$error_1$wrap_each_1PHP_EOL'' cannot be parsed correct.
+HTML code '$'$wrap_list_1PHP_EOL$wrap_1PHP_EOL'' cannot be parsed correct.
+HTML code '$'lijit_page_javascript($query)'' cannot be parsed correct.
+HTML code '$'lijit_std_javascript()'' cannot be parsed correct.
+HTML code '$'lijit_admin_javascript()'' cannot be parsed correct.
+HTML code '$'lijit_page_css()'' cannot be parsed correct.
+HTML code '$'lijit_admin_css()'' cannot be parsed correct.
+HTML code '$'				</span>
+						</div>
+					</fieldset>
+					<p><a href=get_bloginfo("wpurl")/wp-admin/widgets.php">Click here to go to the Widget Admin page</a>.</p>
+					<p>More configuration options available at your <a href="http://www.lijit.com/users/cflj_get_option("lijit_username")" onclick="window.open(this.href); return false;">Lijit Profile</a>.</p>
+					<div class="lijit_submit">
+						<input type="submit" name="submit" value="Save Options" /><div class="button-end"></div>
+					</div>
+				</form>
+			</div>
+			'' cannot be parsed correct.
+HTML code '$'
+			<div class="wrap lijit_wrap">
+				<h2>Plugin Registration</h2>
+				<form id="lijit_select_user_type" onsubmit="return false;">
+					<fieldset>
+						<legend>Select User Type</legend>
+						<div>
+							<p>I am:</p>
+							<label for="lijit_user_type_new"> 
+								<input type="radio" name="lijit_user_type" id="lijit_user_type_new" value="new" checked="checked" />
+								A new user
+							</label>
+							<label for="lijit_user_type_existing">
+								<input type="radio" name="lijit_user_type" id="lijit_user_type_existing" value="existing" checked="checked" />
+								An existing user
+							</label>
+						</div>
+					</fieldset>
+				</form>
+				<form id="lijit_register" method="post" action="" style="display: none;">
+					<div id="lijit_register_results"></div>
+					<input type="hidden" name="lijit_referer" value="http:$_SERVER_SERVER_NAME$_SERVER_REQUEST_URI" />
+					<input type="hidden" id="lijit_group_name" name="lijit_group_name" value="wordpress_plugin_brand" />
+					<fieldset>
+						<legend>Register as New User</legend>
+						<div>
+							<label for="lijit_username">Username</label>
+							<input type="text" name="lijit_username" id="lijit_username" />
+						</div>
+						<div>
+							<label for="lijit_email">Email</label>
+							<input type="text" name="lijit_email" id="lijit_email" />
+						</div>
+						<div>
+							<label for="lijit_blog_url">Blog/Site</label>
+							<input type="text" name="lijit_blog_url" id="lijit_blog_url" /><label class="ltw" for="lijit_this_one"><input type="checkbox" id="lijit_this_one" name="lijit_this_one" value="get_bloginfo("wpurl")" onclick="toggle_this_one(this);">Register this site\'s URL</label>
+						</div>
+					</fieldset>
+					<div class="lijit_submit">
+						<input type="submit" name="submit" value="Register" /><div class="button-end"></div>
+					</div>					
+				</form>
+				<form id="lijit_existing" method="post" action="" style="display: none;">
+					<div id="lijit_existing_results"  class="ljnotice"><p>Username cannot be empty</p></div>
+					<input type="hidden" name="lj_action" value="lijit_register_username" />
+					<fieldset>
+						<legend>Use Existing Account</legend>
+						<div>
+							<label for="lijit_existing_username">Username</label>
+							<input type="text" name="lijit_username" id="lijit_existing_username" value=$_POST_lijit_username"/>
+						</div>
+						<div><span>Can\'t remember your user name? <a href="mailto:support@lijit.com?subject=Lost%20User%20Name%20for%20WordPress%20Install">Click here</a> to contact Lijit Support</a></span></div>
+					</fieldset>
+					<div class="lijit_submit">
+						<input type="submit" name="submit" value="Save" /><div class="button-end"></div>
+					</div>
+				</form>
+			</div>
+			<script type="text/javascript" language="JavaScript" src="http://www.lijit.com/external/signupScript"></script>
+			<script type="text/javascript" language="JavaScript">Lijit.SignupAPI.attachToForm("6d216d073defaa62aaf1579e85be202b","lijit_register",lijit_register_callback);</script>
+			'' cannot be parsed correct.
+HTML code '$'
+			<div class="wrap lijit_wrap">
+				<h2>Lijit Options</h2>
+				<form method="post" action="get_bloginfo("wpurl")/wp-admin/options-general.php?page=lijit.php" id="lijitoptions" name="lijitoptions">
+				<h3>Account Statistics</h3>
+					<fieldset class="np">
+						<p><a href="get_bloginfo("wpurl")/wp-admin/index.php?page=statistics_lijit.php">View your account statistics</a></p>
+					</fieldset>
+					<input type="hidden" name="lj_action" value="lijit_update_settings" />
+					<h3>User Name</h3>
+					$username_error
+					<fieldset class="options">
+						<div>
+							<label for="lijit_username">Lijit Username:</label>
+							<input type="text" name="lijit_username" id="lijit_username" size="30" value="$username"/>
+						</div>
+					</fieldset>
+					<h3Search Options</h3>
+					
+					<fieldset class="np">
+						<div>
+							<p>Choose which search type you would like to display:</p>
+							<label class="cbr" for="lijit_search_type_wijit">
+								<input type="radio" name="lijit_search_type" id="lijit_search_type_wijit" value="wijit" checked="checked" />
+								Use standard Lijit Wijit
+								<span>Select this option to use the default Lijit Wijit in your Sidebar.</span>
+							</label>
+							<span>'' cannot be parsed correct.
+HTML code '$'			<span class="notice blue"><p><b>The Lijit Sidebar Wijit has been added to the <a href="get_bloginfo("wpurl")/wp-admin/widgets.php">Widget Admin Page</a>.<br />
+				   					   You now need to add the Wijit to your sidebar.</b></p></span'' cannot be parsed correct.
+HTML code '$'				<p><b>It doesn\'t appear that any sidebars are enabled.</b> Enable a sidebar in the 
+									   <a href=get_bloginfo("wpurl")/wp-admin/widgets.php">Widget Admin Page</a> and 
+									   add the Lijit Sidebar Wijit.</p'' cannot be parsed correct.
+HTML code '$'				 	<p><a href="#" onclick="show_widget_code(\'wijit_code_sample\'); return false;">Click here</a> if your theme is not Widget enabled or if you want to manually  
+									   add the Wijit code to your theme</p>
+									<span class="manual_code" id="wijit_code_sample" style="display: none;"><span>
+										<p>Add this code in your theme\'s sidebar.php file:</p>
+										<pre>&lt;script type="text/javascript" src="http://www.lijit.com/wijitinit?uri=http%3A%2F%2Fwww.lijit.com%2Fusers%2Fcflj_get_option("lijit_username")&amp;js=1"&gt;&lt;/script&gt;
+&lt;a style="color: #999" href="http://www.lijit.com" id="lijit_wijit_pvs_link"&gt;Lijit Search&lt;/a&gt;</pre>
+									</span></span>
+								</span>'' cannot be parsed correct.
+HTML code '$'				</span>
+							
+							<label class="cbr" for="lijit_search_type_hijack">
+								<input type="radio" name="lijit_search_type" id="lijit_search_type_hijack" value="hijack" checked="checked" />
+								Override WordPress Search Widget
+								<span>Select this option if you want to have the default WordPress search widget in your theme but to have it behave like the Lijit Wijit.</span>
+							</label>
+							<span>'' cannot be parsed correct.
+HTML code '$'				<p><b>It doesn\'t appear that any sidebars are enabled.</b> Enable a sidebar in the 
+									   <a href=get_bloginfo("wpurl")/wp-admin/widgets.php">Widget Admin Page</a> and 
+									   add the WordPress Search Widget.</p'' cannot be parsed correct.
+HTML code '$'				<p><b>A sidebar is enabled but the WordPress Search Widget may not be.</b> If you\'re not using the default sidebar you now need to add the WordPress Search Widget to your sidebar on the <a href=get_bloginfo("wpurl")/wp-admin/widgets.php">Widget Admin Page</a>.</p'' cannot be parsed correct.
+HTML code '$'<p><b>WP-Cache was detected.</b> If WP-Cache is enabled please clear your cache to ensure proper application of the updated settings</p>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'{"success":true}'' cannot be parsed correct.
+HTML code '$'{"success":false}'' cannot be parsed correct.
+HTML code '$'#lwp_main{display:none;}#lwpnet_main{display:none;}#lwp_wijit_container{display:none;}'' cannot be parsed correct.
+HTML code '$'// attach event listener for hijack
+if(window.addEventListener) { window.addEventListener(\'load\', lwp_hijack_search, false); }
+else { window.attachEvent(\'onload\', lwp_hijack_search); }
+// Prep WP search form for Lijit functionality
+
+function lwp_pnode( objNode, strTagName ){                                       
+    for ( 
+	objNode = objNode.parentNode ; 
+	(
+	    objNode && (			
+		(objNode.tagName && (objNode.tagName.toLowerCase() != strTagName)) ||
+		(!objNode.tagName && (objNode.nodeType != 3)) 
+	    )
+	);
+	objNode = objNode.parentNode
+	){}
+    return( objNode );
+}
+		
+function lwp_findElem(lwp_el_type,lwp_method){
+
+  if (lwp_el_type == \'FORM\')
+  {
+    lwp_search_id = new Array(\'searchform\',\'searchForm\',\'search_form\',\'search\',\'Search\',\'search-form\',\'searchform2\');
+  }
+  else if (lwp_el_type == \'INPUT\')
+  {
+     lwp_search_id = new Array(\'s\',\'search\',\'search-text\',\'search-input\',\'Search\',\'searchbox\',\'q\');
+
+  }
+  
+    for (var i in lwp_search_id)
+    {
+     
+	if (document.getElementById(lwp_search_id[i]) && document.getElementById(lwp_search_id[i]).tagName == lwp_el_type)
+	{
+		if (lwp_el_type == \'INPUT\'&& lwp_method == \'id\')
+		{
+		      lwp_obj = document.getElementById(lwp_search_id[i]);
+		      if (!lwp_obj)
+		      {
+			lwp_obj = document.getElementsByName(lwp_search_id[i])[0];
+		      }
+		      var lwp_both = new Array(lwp_obj,lwp_pnode(lwp_obj,\'form\'));
+		      return lwp_both;
+		}
+		else
+		{
+		      return document.getElementById(lwp_search_id[i]);
+		}
+	     
+	}
+	else
+	{
+		if (lwp_el_type == \'INPUT\'&& lwp_method == \'id\')
+		{
+		
+			lwp_obj = document.getElementsByName(lwp_search_id[i])[0];
+			var lwp_both = new Array(lwp_obj,lwp_pnode(lwp_obj,\'form\'));
+			return lwp_both;
+		 }
+		 else if (lwp_el_type == \'INPUT\' && lwp_method == \'\')
+		 {
+
+			lwp_obj = document.getElementsByName(lwp_search_id[i])[0];
+			return lwp_obj;
+		 }
+	}
+     }
+
+   return false;
+}
+
+function lwp_hijack_search() {
+  
+	var lwp_formId = lwp_findElem(\'FORM\',\'id\');
+	if (!lwp_formId)
+	{
+		var lwp_finder= lwp_findElem(\'INPUT\',\'id\');
+		inputText = lwp_finder[0];
+		lwp_formId = lwp_finder[1];
+		inputText.value = \'Lijit Search\';
+		inputText.onblur = function(){if (inputText.value == \'\'){inputText.value = \'Lijit Search\';}};
+		inputText.onfocus = function(){if (inputText.value == \'Lijit Search\'){inputText.value = \'\';}};
+	
+		try
+		{
+			lwp_formId.onsubmit = lwp_hijack_submit;
+		}
+		catch(err)
+		{
+		
+		}
+	}
+	else
+	{
+		var inputText= lwp_findElem(\'INPUT\',\'\');	
+		inputText.value = \'Lijit Search\';
+		inputText.onblur = function(){if (inputText.value == \'\'){inputText.value = \'Lijit Search\';}};
+		inputText.onfocus = function(){if (inputText.value = \'Lijit Search\'){inputText.value = \'\';}};
+	
+		try
+		{
+			  
+			lwp_formId.onsubmit = lwp_hijack_submit;
+		}
+		catch(err)
+		{
+			
+		}
+	}
+
+}
+// do the search
+function lwp_hijack_submit(e) {
+	var lwp_inputText = lwp_findElem(\'INPUT\',\'\');
+	lwp_dosearch(lwp_inputText.value);
+	return false;
+}
+				'' cannot be parsed correct.
+HTML code '$'<input type="hidden" id="Lijit-widget-submit" name="Lijit-widget-submit" value="1" />'' cannot be parsed correct.
+HTML code '$'			<span class="notice blue"><p>The Lijit Sidebar Wijit is enabled.</p></span>'' cannot be parsed correct.
+HTML code '$'			<span class="notice">'' cannot be parsed correct.
+HTML code '$'			<span class="notice">'' cannot be parsed correct.
+HTML code '$'				<span class="notice blue"><p>The WordPress Sidebar Widget is enabled and will be overidden by the Lijit Search functionality.</p></span>'' cannot be parsed correct.
+HTML code '$'			<span class="notice">'' cannot be parsed correct.
+HTML code '$'			<span class="notice">'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:06.893777.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.052170.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 8 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.436589.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running ArrayElementDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running PHPRetrievalDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running MySQLiDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running WordPressRemoteDetector
+### Finish running VariableDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+lijit.php:131
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:131
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:133
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:142
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:143
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:569
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:637
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:637
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:699
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:699
+  - Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user 
+
+lijit.php:284
+  - RETRIEVAL call to file_get_contents($filepath).
+  - Data types: file
+lijit.php:288
+  - RETRIEVAL call to fread($h, filesize($filepath)).
+  - Data types: file 
+
+lijit.php:549
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:555
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:617
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:617
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:618
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:718
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:730
+  - variable '$username_error' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:734
+  - variable '$username_error' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:752
+  - variable '$username_error' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:756
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:793
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user
+lijit.php:828
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user 
+
+lijit.php:859
+  - API call to wp_remote_request($uri). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote 
+
+cf_validate.php:33
+  - RETRIEVAL call to get_option($field_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+cf_validate.php:60
+  - RETRIEVAL call to get_option($option_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+cf_validate.php:86
+  - RETRIEVAL call to get_option($field_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+cf_validate.php:106
+  - RETRIEVAL call to get_option($field_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:28
+  - RETRIEVAL call to get_option("lijit_search_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:120
+  - RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:120
+  - RETRIEVAL call to get_option("lijit_username_validated") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:120
+  - RETRIEVAL call to get_option("lijit_search_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:193
+  - RETRIEVAL call to get_option("lijit_search_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:298
+  - RETRIEVAL call to get_option("lijit_search_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:428
+  - RETRIEVAL call to get_option("widget_Lijit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:456
+  - RETRIEVAL call to get_option("widget_Lijit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:459
+  - RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:538
+  - RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:538
+  - RETRIEVAL call to get_option("lijit_username_validated") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:549
+  - RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:591
+  - RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:599
+  - RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:599
+  - RETRIEVAL call to get_option("lijit_username_validated") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:603
+  - RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:603
+  - RETRIEVAL call to get_option("lijit_username_validated") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+lijit.php:617
+  - RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+cf_validate.php:42
+  - STORAGE call to update_option($field_name, $val) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+cf_validate.php:64
+  - STORAGE call to update_option($option_name, $_POST[$option_name]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lijit.php:133
+  - STORAGE call to update_option("lijit_username", $_POST["lijit_username"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lijit.php:134
+  - STORAGE call to update_option("lijit_username_validated", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lijit.php:143
+  - STORAGE call to update_option("lijit_username", $_POST["lijit_username"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lijit.php:144
+  - STORAGE call to update_option("lijit_username_validated", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lijit.php:436
+  - STORAGE call to update_option("widget_Lijit", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+lijit.php:600
+  - STORAGE call to update_option("lijit_username_validated", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPRetrievalDetector.fread($h, filesize($filepath)) - {'file'}
+	PHPRetrievalDetector.file_get_contents($filepath) - {'file'}
+option
+	WordPressRetrievalDetector.get_option("lijit_search_type") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username_validated") - {'option'}
+	WordPressRetrievalDetector.get_option($key) - {'option'}
+	WordPressStorageDetector.update_option("lijit_username_validated", "1") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_search_type") - {'option'}
+	WordPressStorageDetector.update_option($option_name, $_POST[$option_name]) - {'option'}
+	WordPressRetrievalDetector.get_option("widget_Lijit") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username") - {'option'}
+	WordPressStorageDetector.update_option("widget_Lijit", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username_validated") - {'option'}
+	WordPressRetrievalDetector.get_option("widget_Lijit") - {'option'}
+	WordPressRetrievalDetector.get_option($field_name) - {'option'}
+	WordPressStorageDetector.update_option("lijit_username_validated", "1") - {'option'}
+	WordPressRetrievalDetector.get_option($option_name) - {'option'}
+	WordPressStorageDetector.update_option("lijit_username", $_POST["lijit_username"]) - {'option'}
+	WordPressStorageDetector.update_option($field_name, $val) - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username") - {'option'}
+	WordPressStorageDetector.update_option("lijit_username", $_POST["lijit_username"]) - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_search_type") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username_validated") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username") - {'option'}
+	WordPressRetrievalDetector.get_option($field_name) - {'option'}
+	WordPressRetrievalDetector.get_option($field_name) - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_username_validated") - {'option'}
+	WordPressRetrievalDetector.get_option("lijit_search_type") - {'option'}
+	WordPressStorageDetector.update_option("lijit_username_validated", 1) - {'option'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+user
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+user_meta
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+	ArrayElementDetector.(unknown) - {'user_meta', 'user'}
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.457366.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 176 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.271170.
+
+176 STORE_REACHES edges created
+176 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 152 nodes as PERSONAL
+In total, tainted 152 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:02.435413.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:38.062494!
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+Request variable '$_POST["lijit_username"]' of personal types {'user_meta', 'user'} is found.,,None
+RETRIEVAL call to file_get_contents($filepath).,None,None
+RETRIEVAL call to fread($h, filesize($filepath)).,None,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username_error' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username_error' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username_error' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+API call to wp_remote_request($uri). Passed arguments: 0: $url (string). Returns (array|WP_Error).,,['http://www.lijit.com/api/json/profiles/']
+RETRIEVAL call to get_option($field_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($field_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($option_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($field_name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_search_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username_validated") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_search_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_search_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_search_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("widget_Lijit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("widget_Lijit") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username_validated") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username_validated") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username_validated") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("lijit_username") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option($field_name, $val) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($option_name, $_POST[$option_name]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("lijit_username", $_POST["lijit_username"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("lijit_username_validated", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("lijit_username", $_POST["lijit_username"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("lijit_username_validated", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("widget_Lijit", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("lijit_username_validated", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] PII of types (['user_meta', 'user']) stored through WordPress function "update_option("lijit_username", $_POST["lijit_username"])", found in file lijit.php at line 143. 
+
+[has_storage] PII of types (['user_meta', 'user']) stored through WordPress function "update_option("lijit_username", $_POST["lijit_username"])", found in file lijit.php at line 133. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("lijit_username", $_POST["lijit_username"]) does not have corresponding deletion method. Storage method found in file lijit.php at line 143. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_option("lijit_username", $_POST["lijit_username"]) does not have corresponding deletion method. Storage method found in file lijit.php at line 133. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1166. Found in file lijit.php at line 143 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 1129. Found in file lijit.php at line 133 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party at "http://www.lijit.com/api/json/profiles/" used with data types ['user_meta', 'user'], found in file lijit.php at line 859 . Personal data flows from sources with nodeID [2114, 2308, 1161, 1134, 1171, 2324]  
+
+[third_party] Third party usage is CONFIRMED for data types ['user', 'user_meta'] 
+
+[encryption] API call that sends PII to "http://www.lijit.com/api/json/profiles/" uses http. PII is insecurely encrypted with []. Found in file lijit.php at line 859 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? True 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function wp-lijit-wijit_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+    //TODO: Delete the user data that was stored using Wordpress functions
+
+    //Below is the sample code for deleting user meta and may need to be modified to suit the plugin.
+    $user_id = get_user_by('email', $email_address)
+    $key = 'email' //Sample user meta key
+    if ( $customer->user_id > 0 ) {
+        //Delete user meta data by $key
+        delete_user_meta( $user_id, $key );
+    }
+        
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'wp-lijit-wijit' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function wp-lijit-wijit_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'wp-lijit-wijit' ),
+        'callback'             => 'wp-lijit-wijit_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'wp-lijit-wijit_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function wp-lijit-wijit_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'wp-lijit-wijit' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'wp-lijit-wijit' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'wp-lijit-wijit' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'wp-lijit-wijit', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'wp-lijit-wijit_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

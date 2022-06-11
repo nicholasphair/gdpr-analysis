@@ -1,0 +1,501 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on apprised
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.383475.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.824875.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.205296.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.435812.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 99 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.666542.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 7 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.774672.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.142681.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 43 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.890776.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 666
+Added 517 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 666
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.934215.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/apprised/apprised.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.154334.
+
+99 PHP_REACHES edges created
+7 CALLS edges created
+560 PHP_REACHES edges created
+666 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 260 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.932208.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.309116.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 6 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.754722.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 20 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.167023.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.313051.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.123357.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012436.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035947.
+
+26 PHP_REACHES edges created
+26 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 6 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.143090.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.124108.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'https://my.apprised.app/pixel/apprised_get_api_key()'' cannot be parsed correct.
+HTML code '$'get_admin_page_title()'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()assets/apprisedlogo.png'' cannot be parsed correct.
+HTML code '$'get_option(ApprisedConstants->option_api_key())'' cannot be parsed correct.
+HTML code '$'print_r($message)'' cannot be parsed correct.
+HTML code '$'$message'' cannot be parsed correct.
+HTML code '$'"></script>
+    <!-- End of Async Apprised Code -->
+
+   '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.429474.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.080449.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 7 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.487049.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running CubridDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running ArrayElementDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PostgreSQLDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running MySQLiDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running Sqlite3Detector
+### Start running WordPressRemoteDetector
+### Finish running PropertyDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WordPressStorageDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running VariableDetector
+### Finish running WordPressRemoteDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+apprised.php:148
+  - Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:148
+  - Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:150
+  - Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:165
+  - Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:165
+  - Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:167
+  - Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.
+  - Data types: last_name 
+
+apprised.php:114
+  - object property '$user->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+apprised.php:131
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+apprised.php:137
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+apprised.php:137
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+apprised.php:142
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:143
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:145
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:145
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:147
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:150
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:151
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:153
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:153
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:155
+  - variable '$first_name' of personal types {'first_name'} is found.
+  - Data types: first_name
+apprised.php:159
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:160
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:162
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:162
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:164
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:167
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:168
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:170
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:170
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name
+apprised.php:172
+  - variable '$last_name' of personal types {'last_name'} is found.
+  - Data types: last_name 
+
+apprised.php:187
+  - API call to wp_remote_post($url, ["headers" => $headers, "body" => $json]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+apprised.php:215
+  - API call to wp_remote_post($url, ["headers" => $headers, "body" => json_encode($data)]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+apprised.php:42
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apprised.php:108
+  - RETRIEVAL call to get_user_meta($id) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int). Returns (mixed).
+  - Data types: user_meta
+apprised.php:120
+  - RETRIEVAL call to get_user_meta($id) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int). Returns (mixed).
+  - Data types: user_meta
+apprised.php:223
+  - RETRIEVAL call to get_option(ApprisedConstants->option_api_key()) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apprised.php:260
+  - RETRIEVAL call to get_option(ApprisedConstants->option_api_key()) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+apprised.php:107
+  - WP_User object is created.
+  - Data types: user_meta, user
+apprised.php:119
+  - WP_User object is created.
+  - Data types: user_meta, user 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+first_name
+	VariableDetector.(unknown) - {'first_name'}
+	ArrayElementDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	ArrayElementDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+	ArrayElementDetector.(unknown) - {'first_name'}
+	VariableDetector.(unknown) - {'first_name'}
+last_name
+	VariableDetector.(unknown) - {'last_name'}
+	ArrayElementDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	ArrayElementDetector.(unknown) - {'last_name'}
+	VariableDetector.(unknown) - {'last_name'}
+	ArrayElementDetector.(unknown) - {'last_name'}
+option
+	WordPressRetrievalDetector.get_option(ApprisedConstants->option_api_key()) - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressRetrievalDetector.get_option(ApprisedConstants->option_api_key()) - {'option'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+user
+	WP_UserDetector.WP_User($id) - {'user_meta', 'user'}
+	WP_UserDetector.WP_User($id) - {'user_meta', 'user'}
+user_meta
+	WP_UserDetector.WP_User($id) - {'user_meta', 'user'}
+	WordPressRetrievalDetector.get_user_meta($id) - {'user_meta'}
+	WordPressRetrievalDetector.get_user_meta($id) - {'user_meta'}
+	WP_UserDetector.WP_User($id) - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.273582.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.070347.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 889
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 86 nodes as PERSONAL
+In total, tainted 86 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.820035.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:26.507090!
+Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.,,None
+Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.,,None
+Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.,,None
+Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.,,None
+Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.,,None
+Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.,,None
+object property '$user->user_email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$first_name' of personal types {'first_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+variable '$last_name' of personal types {'last_name'} is found.,,None
+WP_User object is created.,,None
+WP_User object is created.,,None
+API call to wp_remote_post($url, ["headers" => $headers, "body" => $json]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://my.apprised.app/api/WoocommerceConversion']
+API call to wp_remote_post($url, ["headers" => $headers, "body" => json_encode($data)]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://my.apprised.app/api/WoocommerceConversion']
+RETRIEVAL call to get_user_meta($id) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_user_meta($id) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_option(ApprisedConstants->option_api_key()) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(ApprisedConstants->option_api_key()) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party at "https://my.apprised.app/api/WoocommerceConversion" used with data types ['user_meta', 'email', 'user'], found in file apprised.php at line 187 . Personal data flows from sources with nodeID [417, 548, 554, 503, 445]  
+
+[third_party] Third party usage is CONFIRMED for data types ['email', 'user', 'user_meta'] 
+
+[encryption] API call that sends PII to "https://my.apprised.app/api/WoocommerceConversion" uses https. PII is insecurely encrypted with []. Found in file apprised.php at line 187 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? True 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+No findings

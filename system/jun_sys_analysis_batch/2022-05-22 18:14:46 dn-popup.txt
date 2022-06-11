@@ -1,0 +1,541 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on dn-popup
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.336418.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.919614.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.294293.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.385148.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 288 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.798073.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.658311.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.119352.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 114 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.151863.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2956
+Added 2554 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2956
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:02.900259.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/dn-popup/dn-popup.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.387641.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2956 PHP_REACHES edges created
+2956 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 899 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.180805.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.136807.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 86 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.614442.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 71 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.183881.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.004715.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.967152.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.021260.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035430.
+
+157 PHP_REACHES edges created
+157 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 86 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.162569.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.119538.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'dn_popup_html_box("" . dn_popup_html_title("<h3>" . __("Tools", "dn-popup") . "</h3>") . dn_popup_html_row(__("Reset cookie", "dn-popup"), "<input type="checkbox" name="dn_popup_save[cookievalue]" value="1" style="width:auto" /> " . __("reset the control cookie so that all visitors see the popup again", "dn-popup")))'' cannot be parsed correct.
+HTML code '$'dn_popup_html_box("" . dn_popup_html_title("<h3>" . __("Info", "dn-popup") . "</h3>") . dn_popup_html_title(__("This plugin uses a technical cookie to remember who has already viewed the popup. The name of the cookie is "dn_popup_agreed".", "dn-popup")))'' cannot be parsed correct.
+HTML code '$'<input type="submit" class="button-primary" value="Save" /></form'' cannot be parsed correct.
+HTML code '$'dn_popup_html_box("<form action="" method="post"><input type="hidden" name="view" value="archive" />
+		<input type="submit" class="button-primary" name="dn_popup_export" value="" . __("Export to CSV", "dn-popup") . "" /></form")'' cannot be parsed correct.
+HTML code '$'<table class="wp-list-table widefat fixed dn_footer_contacts-table"><thead><tr>
+			<td>dn_popup_get_string("date")</td>
+			<td>dn_popup_get_string("email")</td>
+			<td>dn_popup_get_string("name")</td>
+			<td>dn_popup_get_string("phone")</td>
+			<td>dn_popup_get_string("message")</td>
+			<td>dn_popup_get_string("privacy")</td>
+	</tr></thead><tbody>'' cannot be parsed correct.
+HTML code '$'<tr>
+			<td>date($_format, strtotime($o["date"]))</td>
+			<td>$o_email</td>
+			<td>$o_name</td>
+			<td>$o_phone</td>
+			<td>$o_message</td>
+			<td>$o_privacy</td>
+		</tr>'' cannot be parsed correct.
+HTML code '$'<tr><td colspan="6"><br><br><center>No items yet</center><br><br></td></tr>'' cannot be parsed correct.
+HTML code '$'dn_popup_html_box("<form action="" method="post" onsubmit="return confirm(\\'" . esc_attr(__("Are you sure you want to delete the archive?", "dn-popup")) . "\\')"><input type="hidden" name="view" value="archive" />
+		<input type="submit" class="button-primary" name="dn_popup_delete_archive" value="" . __("Delete archive", "dn-popup") . "" /></form")'' cannot be parsed correct.
+HTML code '$'<h1>$ver_label</h1>'' cannot be parsed correct.
+HTML code '$'<input type="text" name="dn_popup_save[content.title$id]"  value="dn_popup_get_options()_content.title$id" style="padding:3px 8px;font-size:1.7em;line-height:100%;height:1.7em;width:100%;outline:0;margin:0 0 10px" />'' cannot be parsed correct.
+HTML code '$'dn_popup_styles_backend()'' cannot be parsed correct.
+HTML code '$'<div style="margin:0 0 10px 0"><b style="font-size:24px">DN_POPUP_NAME</b><div class="dn_popup-menu">'' cannot be parsed correct.
+HTML code '$'<a href="options-general.php?page=dn_popup_manage&view$tab" class="active"$label</a>'' cannot be parsed correct.
+HTML code '$'dn_popup_html_box("" . dn_popup_html_row(__("Email label", "dn-popup"), "<input type="text" name="dn_popup_save[form.email" . esc_attr($id) . "]" value="" . esc_attr($_options["form.email" . esc_attr($id) . ""]) . "" /><small" . __("If this have a label then it will required in form", "dn-popup") . "</small>") . dn_popup_html_row(__("Name label", "dn-popup"), "<input type="text" name="dn_popup_save[form.name" . esc_attr($id) . "]" value="" . esc_attr($_options["form.name" . esc_attr($id) . ""]) . "" /") . dn_popup_html_row(__("Phone label", "dn-popup"), "<input type="text" name="dn_popup_save[form.phone" . esc_attr($id) . "]" value="" . esc_attr($_options["form.phone" . esc_attr($id) . ""]) . "" /") . dn_popup_html_row(__("Message label", "dn-popup"), "<input type="text" name="dn_popup_save[form.message" . esc_attr($id) . "]" value="" . esc_attr($_options["form.message" . esc_attr($id) . ""]) . "" /") . dn_popup_html_row(__("Consent flag", "dn-popup"), "<textarea name="dn_popup_save[form.privac" . esc_attr($id) . "]" rows="3">" . $_options["form.privacy" . esc_attr($id) . ""] . "</textarea><small>" . __("This field can be used to request privacy consent or participation in specific promotions", "dn-popup") . "<br>" . __("If privacy page is set in the settings, it will show as clickable link", "dn-popup") . "</small>") . dn_popup_html_row(__("Button label", "dn-popup"), "<input type="text" name="dn_popup_save[form.button" . esc_attr($id) . "]" value="" . esc_attr($_options["form.button" . esc_attr($id) . ""]) . "" /") . dn_popup_html_row(__("Answer", "dn-popup"), "<textarea name="dn_popup_save[form.answe" . esc_attr($id) . "]" rows="4">" . $_options["form.answer" . esc_attr($id) . ""] . "</textarea><small>" . __("Response to be displayed after clicking on the button", "dn-popup") . ". " . __("You can to use this shortcode by inserted user data: %name% for name, %phone% and %email% for phone and email", "dn-popup") . "</small>") . dn_popup_html_row(__("Mail subject", "dn-popup"), "<input type="text" name="dn_popup_save[form.mail.title" . esc_attr($id) . "]" value="" . esc_attr($_options["form.mail.title" . esc_attr($id) . ""]) . "" /") . dn_popup_html_row(__("Error", "dn-popup"), "<input type="text" name="dn_popup_save[form.error" . esc_attr($id) . "]" value="" . esc_attr($_options["form.error" . esc_attr($id) . ""]) . "" /") . dn_popup_html_row(__("Email invalid", "dn-popup"), "<input type="text" name="dn_popup_save[form.error.email" . esc_attr($id) . "]" value="" . esc_attr($_options["form.error.email" . esc_attr($id) . ""]) . "" /") . dn_popup_html_row(__("Privacy not agreed", "dn-popup"), "<input type="text" name="dn_popup_save[form.error.privacy" . esc_attr($id) . "]" value="" . esc_attr($_options["form.error.privacy" . esc_attr($id) . ""]) . "" /"))'' cannot be parsed correct.
+HTML code '$'<p><input type="submit" class="button-primary" value="Save" /></p'' cannot be parsed correct.
+HTML code '$'dn_popup_html_box("" . dn_popup_html_row(__("Status", "dn-popup"), "<select name="dn_popup_save[status]"><option value="0">" . __("Hidden", "dn-popup") . "</option>" . $html_status . "</select>") . dn_popup_html_row(__("Target", "dn-popup"), "<select name="dn_popup_save[target]"><option value="0">" . __("All", "dn-popup") . "</option>" . $html_target . "</select>") . dn_popup_html_row(__("Propose again", "dn-popup"), "<select name="dn_popup_save[again]"><option value="0">" . __("never", "dn-popup") . "</option>" . $html_again . "</select>") . dn_popup_html_row(__("Send answer to email", "dn-popup"), "<select name="dn_popup_save[sendemail]"><option value="0">" . __("No", "dn-popup") . "</option><option value="1" " . $_options["sendemail"] == 1"selected""" . ">" . __("Yes", "dn-popup") . "</option></select>") . dn_popup_html_row(__("Notify me", "dn-popup"), "<select name="dn_popup_save[form.notify]"><option value="0">" . __("No", "dn-popup") . "</option><option value="1" " . $_options["form.notify"] == 1"selected""" . ">" . __("Yes", "dn-popup") . "</option></select><small>" . __("if it is yes then it will send notify to admin email", "dn-popup") . " (" . get_option("admin_email") . ")</small>"))'' cannot be parsed correct.
+HTML code '$'dn_popup_html_box("" . dn_popup_html_title("<h3>" . __("Colors", "dn-popup") . "</h3><p>" . __("For the colors use exadecimal with sharp simbol example: #ffffff or rgb/rgba function example: rgb(250,250,250)", "dn-popup") . "</p>") . dn_popup_html_row(__("Background", "dn-popup"), "<input type="text" name="dn_popup_save[color.background]" value="" . esc_attr($_options["color.background"]) . "" /") . dn_popup_html_row(__("Border", "dn-popup"), "<input type="text" name="dn_popup_save[color.border]" value="" . esc_attr($_options["color.border"]) . "" /") . dn_popup_html_row(__("Title", "dn-popup"), "<input type="text" name="dn_popup_save[color.title]" value="" . esc_attr($_options["color.title"]) . "" /") . dn_popup_html_row(__("Testo", "dn-popup"), "<input type="text" name="dn_popup_save[color.text]" value="" . esc_attr($_options["color.text"]) . "" /"))'' cannot be parsed correct.
+HTML code '$'dn_popup_options_filter_languages($_options, dn_popup_lang_current() != dn_popup_lang_default()"-" . dn_popup_lang_current()"")_form.answer'' cannot be parsed correct.
+HTML code '$'dn_popup_options_filter_languages($_options, dn_popup_lang_current() != dn_popup_lang_default()"-" . dn_popup_lang_current()"")_form.error'' cannot be parsed correct.
+HTML code '$'ob_get_clean()'' cannot be parsed correct.
+HTML code '$'<textarea style="width:100%;height:300px;line-height:1;font-size:12px">print_r($a, true)</textarea>'' cannot be parsed correct.
+HTML code '$'<div style="width: calc(100% - 60px);background:#508e50;padding:10px 20px;color:white"><span style="float:right;cursor:pointer" onclick="jQuery(this).parent().remove()">X</span>dn_popup_session_read_notify("success")</div>'' cannot be parsed correct.
+HTML code '$'<div style="width: calc(100% - 60px);background:#d76a6a;padding:10px 20px;color:white"><span style="float:right;cursor:pointer" onclick="jQuery(this).parent().remove()">X</span>dn_popup_session_read_notify("error")</div>'' cannot be parsed correct.
+HTML code '$'<div id="dn_popup_html_container">
+			<a class="dn_popup_html_close" href="javascript:void(0)" onclick="dn_popup_close_popup_js();dn_popup_hide_js();"><b>X</b></a>
+			<div class="dn_popup_html_head">dn_popup_options_filter_languages($_options, dn_popup_lang_current() != dn_popup_lang_default()"-" . dn_popup_lang_current()"")_content.title</div>
+			<div class="dn_popup_html_content">apply_filters("the_content", $popup["content.text"])</div>
+			<div class="dn_popup_html_foot"></div>
+			</div>
+		</div>'' cannot be parsed correct.
+HTML code '$'<div id="dn_popup_html_container-shortcode" class="dn_popup_html_container shortcoded"> 
+			<h4>dn_popup_options_filter_languages($_options, dn_popup_lang_current() != dn_popup_lang_default()"-" . dn_popup_lang_current()"")_content.title</h4>
+			<div class="dn_popup_html_content">apply_filters("the_content", $popup["content.text"])</div>
+			<div class="dn_popup_html_foot"></div>
+			</div>
+		</div>'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript">
+		function dn_popup_send_popup_js(ui){
+			let fs={email:"",name:"",phone:"",privacy:"",message:""},err="";
+			if(!ui)ui=""; 
+			var email=document.getElementById("dn_popup_html_email"+ui);if(email){ 
+				if(email.value.length==0||email.value.indexOf("@")<3)err+="\n$popup_form.error.email";
+				else fs.email=email.value;
+			}
+			var privacy=document.getElementById("dn_popup_html_privacy"+ui);if(privacy){
+				if(!privacy.checked)err+="\n$popup_form.error.privacy";
+				else fs.privacy=privacy.value;
+			}
+			var name=document.getElementById("dn_popup_html_name"+ui);if(name)fs.name=name.value;
+			var phone=document.getElementById("dn_popup_html_phone"+ui);if(phone)fs.phone=phone.value;
+			var message=document.getElementById("dn_popup_html_message"+ui);if(message)fs.message=message.value;
+
+			if(err.length>0)alert("dn_popup_options_filter_languages($_options, dn_popup_lang_current() != dn_popup_lang_default()"-" . dn_popup_lang_current()"")_form.error"+err);
+			else{
+				dn_popup_close_popup_js(ui);
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange=function(){if(this.readyState==4&&this.status==200)alert(this.responseText)};
+				xhttp.open("POST","get_option("siteurl")",true);
+				xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				xhttp.send("dn_popup_send[email]="+fs.email
+						  +"&dn_popup_send[name]="+fs.name
+						  +"&dn_popup_send[phone]="+fs.phone
+						  +"&dn_popup_send[message]="+fs.message
+						  +"&dn_popup_send[privacy]="+fs.privacy);
+			}
+		}
+		function dn_popup_close_popup_js(ui){
+			var xhttp = new XMLHttpRequest();
+			if(ui==undefined)ui="";
+			//xhttp.onreadystatechange=function(){if(this.readyState==4&&this.status==200)dn_popup_hide_js(ui)};
+			xhttp.open("POST","get_option("siteurl")?dn_popup_agreed=1",true);
+			xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xhttp.send("dn_popup_agreed=1");
+		}
+		function dn_popup_hide_js(ui){
+			if (typeof jQuery == "undefined") {
+				var dn_popup_html_container = document.getElementById("dn_popup_html_container");
+				dn_popup_html_container.remove();		
+			}else jQuery("#dn_popup_html_container").fadeOut();
+		}
+		function dn_popup_show_js(){
+			if (typeof jQuery == "undefined") {
+				var dn_popup_html_container = document.getElementById("dn_popup_html_container");
+				dn_popup_html_container.style.display="block";			
+			}else jQuery("#dn_popup_html_container").fadeIn();
+		}
+	</script>'' cannot be parsed correct.
+HTML code '$'<style>
+			#dn_popup_html_container{display:none;background:$_options_color.background;border-radius:$_options_radius;box-shadow: 0px 0px 4px #888;overflow:hidden;border: $_options_thickness solid $_options_color.border;z-index:999999;max-height:80vw;max-width: 70vw;left:20%;right:20%;top: 50%;padding: 30px;position: fixed;transform: translate(0%,-50%);-webkit-transform: translate(0%,-50%);-moz-transform: translate(0%,-50%);-ms-transform: translate(0%,-50%)}
+			#dn_popup_html_container.shortcoded{display:inline-block;}
+			#dn_popup_html_container *{color:$_options_color.text;line-height:1.2;max-width:100%}
+			#dn_popup_html_container h1{font-size:32px}
+			#dn_popup_html_container a, #dn_popup_html_container p a{text-decoration:underline;cursor:pointer}
+			#dn_popup_html_container .dn_popup_html_head{color:$_options_color.title;font-size: 150%;line-height: 1.2}
+			#dn_popup_html_container .dn_popup_html_foot{}
+			#dn_popup_html_container .dn_popup_html_content *{max-width:100%}
+			#dn_popup_html_container .dn_popup_html_content{max-height:40vw;overflow:auto;margin:10px 0;padding:0;max-width:100%}
+			#dn_popup_html_container .dn_popup_html_content button{background:dn_popup_get_options()_color.border;border:1px solid dn_popup_get_options()_color.border;padding:8px 24px;font-size:inherit;margin-top:10px}
+			#dn_popup_html_container input{color:#333}
+			#dn_popup_html_container .dn_popup_html_content textarea,
+			#dn_popup_html_container .dn_popup_html_content input[type="email"],
+			#dn_popup_html_container .dn_popup_html_content input[type="text"]{color:#333 !important;width:100%;padding:5px 10px;margin:10px 0;border:1px solid silver;font-weight:normal;font-size:inherit}
+			#dn_popup_html_container .dn_popup_html_close{color:dn_popup_get_options()_color.text;position: absolute;text-transform:uppercase;padding:0;right:10px;top:10px}
+			#dn_popup_html_container a.dn_popup_html_close{text-decoration:none !important;font-size:24px}
+			#dn_popup_html_container a:hover, #dn_popup_html_container p a:hover,#dn_popup_html_container .dn_popup_html_close:hover,#dn_popup_html_container .dn_popup_html_content button:hover{cursor:pointer;opacity:0.6}
+			@media(max-width:480px){
+				#dn_popup_html_container{left:10px;right:10px;max-height:none;max-width:none}
+				#dn_popup_html_container .dn_popup_html_content{max-height: 100vw;}
+			}	
+	</style>'' cannot be parsed correct.
+HTML code '$'</tbody></table><br>'' cannot be parsed correct.
+HTML code '$'<form action="" method="post"><input type="hidden" name="view" value="main" />'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'</div></div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<form action="" method="post"><input type="hidden" name="view" value="settings" />'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript">'' cannot be parsed correct.
+HTML code '$'window.addEventListener("load",function(){dn_popup_show_js()});'' cannot be parsed correct.
+HTML code '$'document.addEventListener("scroll",function(){if(window.scrollY>150)dn_popup_show_js()});'' cannot be parsed correct.
+HTML code '$'setTimeout("dn_popup_show_js()",5000);'' cannot be parsed correct.
+HTML code '$'setTimeout("dn_popup_show_js()",20000);'' cannot be parsed correct.
+HTML code '$'setTimeout("dn_popup_show_js()",30000);'' cannot be parsed correct.
+HTML code '$'</script>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:07.048969.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.066476.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 3 do_action/apply_filters calls and 6 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.444248.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MsqlDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running PHPStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+dn-popup.php:207
+  - STORAGE call to fputcsv($df, $head).
+  - Data types: file
+dn-popup.php:208
+  - STORAGE call to fputcsv($df, $row).
+  - Data types: file 
+
+dn-popup.php:268
+  - variable '$_email' of personal types {'email'} is found.
+  - Data types: email
+dn-popup.php:273
+  - variable '$_email' of personal types {'email'} is found.
+  - Data types: email 
+
+dn-popup.php:54
+  - RETRIEVAL call to get_option("wp_page_for_privacy_policy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:64
+  - RETRIEVAL call to get_option("dn_popup_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:109
+  - RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:130
+  - RETRIEVAL call to get_option("dn_popup-items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:131
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:131
+  - RETRIEVAL call to get_option("time_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:195
+  - RETRIEVAL call to get_option("dn_popup-items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:256
+  - RETRIEVAL call to get_option("dn_popup-items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:268
+  - RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:269
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:269
+  - RETRIEVAL call to get_option("time_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:345
+  - RETRIEVAL call to get_post($popup["form.privacy_id"]) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post
+dn-popup.php:382
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:395
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+dn-popup.php:448
+  - RETRIEVAL call to get_post($popup["form.privacy_id"]) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post_meta, post 
+
+dn-popup.php:215
+  - STORAGE call to update_option("dn_popup-items", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+dn-popup.php:231
+  - STORAGE call to update_option("dn_popup_settings", $_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+dn-popup.php:266
+  - STORAGE call to update_option("dn_popup-items", $ls) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+file
+	PHPStorageDetector.fputcsv($df, $head) - {'file'}
+	PHPStorageDetector.fputcsv($df, $row) - {'file'}
+option
+	WordPressStorageDetector.update_option("dn_popup-items", $ls) - {'option'}
+	WordPressRetrievalDetector.get_option("dn_popup-items") - {'option'}
+	WordPressRetrievalDetector.get_option("dn_popup_settings") - {'option'}
+	WordPressStorageDetector.update_option("dn_popup-items", []) - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("time_format") - {'option'}
+	WordPressRetrievalDetector.get_option("time_format") - {'option'}
+	WordPressRetrievalDetector.get_option("wp_page_for_privacy_policy") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+	WordPressRetrievalDetector.get_option("dn_popup-items") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("dn_popup-items") - {'option'}
+	WordPressRetrievalDetector.get_option("admin_email") - {'option'}
+	WordPressRetrievalDetector.get_option("admin_email") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+	WordPressStorageDetector.update_option("dn_popup_settings", $_options) - {'option'}
+post
+	WordPressRetrievalDetector.get_post($popup["form.privacy_id"]) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($popup["form.privacy_id"]) - {'wp_post', 'post_meta', 'post'}
+post_meta
+	WordPressRetrievalDetector.get_post($popup["form.privacy_id"]) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($popup["form.privacy_id"]) - {'wp_post', 'post_meta', 'post'}
+wp_post
+	WordPressRetrievalDetector.get_post($popup["form.privacy_id"]) - {'wp_post', 'post_meta', 'post'}
+	WordPressRetrievalDetector.get_post($popup["form.privacy_id"]) - {'wp_post', 'post_meta', 'post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.293523.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 39 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.149914.
+
+39 STORE_REACHES edges created
+39 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 3 nodes as PERSONAL
+In total, tainted 3 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.224617.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:35.383885!
+STORAGE call to fputcsv($df, $head).,None,None
+STORAGE call to fputcsv($df, $row).,None,None
+variable '$_email' of personal types {'email'} is found.,,None
+variable '$_email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dn_popup-items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("time_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dn_popup-items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dn_popup-items") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("time_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($popup["form.privacy_id"]) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($popup["form.privacy_id"]) alters data types {'wp_post', 'post_meta', 'post'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("wp_page_for_privacy_policy") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("dn_popup_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("dn_popup-items", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("dn_popup_settings", $_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("dn_popup-items", $ls) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

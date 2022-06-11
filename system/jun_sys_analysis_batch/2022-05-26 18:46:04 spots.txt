@@ -1,0 +1,600 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on spots
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.075323.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.963064.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 41 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.331594.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.631323.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 474 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.840859.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 4 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.693376.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.091390.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 150 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.646770.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 4092
+Added 3421 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 7907
+Added 3815 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.635919.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/spots/icit-spots.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/spots/includes/icit-plugin.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.528098.
+
+41 PHP_REACHES edges created
+2 REACHES edges created
+474 PHP_REACHES edges created
+4 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3571 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3815 PHP_REACHES edges created
+7907 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1379 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.191114.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.570482.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 20 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.146290.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 28 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.156450.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.044242.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.258260.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012895.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.045160.
+
+48 PHP_REACHES edges created
+48 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 30 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.185732.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+2 SQL operations to process.
+DELETE FROM $wpdb WHERE option_name LIKE ( '_transient%_spot_esc_sql($post_id)%' )
+SQL command (DELETE FROM $wpdb WHERE option_name LIKE ( '_transient%_spot_esc_sql($post_id)%' )) cannot be parsed correct.
+DELETE FROM $wpdb WHERE option_name LIKE ( '_transient%_spot_%' )
+SQL command (DELETE FROM $wpdb WHERE option_name LIKE ( '_transient%_spot_%' )) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [2069, 2110]
+Added 0 SQL nodes. 0 out of 2 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.604974.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'admin_url("images/wpspin_light.gif")'' cannot be parsed correct.
+HTML code '$'admin_url("images/wpspin_light.gif")'' cannot be parsed correct.
+HTML code '$'admin_url("images/wpspin_light.gif")'' cannot be parsed correct.
+HTML code '$'<div class="icit-spot-edit-link-holder"><a class="icit-spot-edit-link" href="get_edit_post_link($spot_id)"Edit Spot</a></div>'' cannot be parsed correct.
+HTML code '$'SPOTS_POST_TYPE'' cannot be parsed correct.
+HTML code '$'SPOTS_POST_TYPE'' cannot be parsed correct.
+HTML code '$'set_url_scheme(includes_url("/js/jquery/jquery.js"), is_ssl()"https""http")'' cannot be parsed correct.
+HTML code '$'trailingslashit(SPOTS_URL)'' cannot be parsed correct.
+HTML code '$'json_encode(admin_url("admin-ajax.php"))'' cannot be parsed correct.
+HTML code '$'trailingslashit(SPOTS_URL)'' cannot be parsed correct.
+HTML code '$'<input type="text" name="spots_cache_time" value="get_option("spots_cache_time", SPOTS_CACHE_TIME)" /'' cannot be parsed correct.
+HTML code '$'<p class="description">Enter an amount of time in seconds to cache spots for. Set to 0 to turn the caching off, recommeneded if you use a caching plugin.</p>'' cannot be parsed correct.
+HTML code '$'checked(get_option("spots_norobots", 1), 1)'' cannot be parsed correct.
+HTML code '$'<p class="description">Each Spot has a dedicated page, allow these pages to be indexed by search engines?</p>'' cannot be parsed correct.
+HTML code '$'implode("
+", $output)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'$title'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("id")'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("id")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("id")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("id")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("content")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("content")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("content")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("content")'' cannot be parsed correct.
+HTML code '$'format_for_editor($spot_post->post_content)'' cannot be parsed correct.
+HTML code '$'wp_richedit_pre($spot_post->post_content)'' cannot be parsed correct.
+HTML code '$'$this->_wp_post_thumbnail_html(null, $spot_post->ID)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("template")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("template")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("template")'' cannot be parsed correct.
+HTML code '$' style="display:none;"'' cannot be parsed correct.
+HTML code '$'$id'' cannot be parsed correct.
+HTML code '$'SPOTS_POST_TYPE'' cannot be parsed correct.
+HTML code '$'preg_replace("/class="", "class="spot" . $template . " ", $before_widget)'' cannot be parsed correct.
+HTML code '$'$before_titleapply_filters("widget_title", $instance["title"])$after_title'' cannot be parsed correct.
+HTML code '$'icit_get_spot($spot_id, !empty($template)$template"")'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'ob_get_clean()'' cannot be parsed correct.
+HTML code '$'$this_plugins_$this_plugin_icon'' cannot be parsed correct.
+HTML code '$'<h2>$this_plugins_$this_plugin_page_title</h2>'' cannot be parsed correct.
+HTML code '$'$this_plugins_$this_plugin_icon'' cannot be parsed correct.
+HTML code '$'<h2>$this_plugins_$this_plugin_page_title</h2>'' cannot be parsed correct.
+HTML code '$'
+			<form name="icit" action="admin_url("options.php")" method="post" enctype="multipart/form-data">'' cannot be parsed correct.
+HTML code '$'
+			<div id="poststuff">
+			<div id="post-body" class="metabox-holder columns-12">
+				<div class="right-column postbox-container" id="postbox-container-1">
+					<div class="column-inner">
+						<div class="postbox icit-branding">
+							<h3>$plugin_data_Name</h3>
+							<div class="version">v$plugin_data_Version</div>
+							<p class="description">get_plugin_data($plugin["file"])_Description</p>
+							<div class="plugin-url"><a href="get_plugin_data($plugin["file"])_PluginURI"Visit plugin page</a></div>
+							<div class="credit">by <a href="get_plugin_data($plugin["file"])_AuthorURI">interconnect/it</a></div>
+						</div'' cannot be parsed correct.
+HTML code '$'<table class="form-table">trim(ob_get_clean())</table>'' cannot be parsed correct.
+HTML code '$'trim(ob_get_clean())'' cannot be parsed correct.
+HTML code '$'ob_get_clean()'' cannot be parsed correct.
+HTML code '$'ob_get_clean()'' cannot be parsed correct.
+HTML code '$'
+			<form name="icit" action="admin_url("options.php")" method="post" enctype="multipart/form-data">'' cannot be parsed correct.
+HTML code '$'
+				<div class="right-column">
+					<div class="column-inner">
+						<div class="postbox icit-branding">
+							<h3>$plugin_data_Name</h3>
+							<div class="version">v$plugin_data_Version</div>
+							<p class="description">get_plugin_data($plugin["file"])_Description</p>
+							<div class="plugin-url"><a href="get_plugin_data($plugin["file"])_PluginURI"Visit plugin page</a></div>
+							<div class="credit">by <a href="get_plugin_data($plugin["file"])_AuthorURI">interconnect/it</a></div>
+						</div'' cannot be parsed correct.
+HTML code '$'<table class="form-table">trim(ob_get_clean())</table>'' cannot be parsed correct.
+HTML code '$'trim(ob_get_clean())'' cannot be parsed correct.
+HTML code '$'ob_get_clean()'' cannot be parsed correct.
+HTML code '$'ob_get_clean()'' cannot be parsed correct.
+HTML code '$'</label>
+				<select name="page_template" id="page_template">
+					<option value="">'' cannot be parsed correct.
+HTML code '$'toggle-arrow-active'' cannot be parsed correct.
+HTML code '$' style="display:none"'' cannot be parsed correct.
+HTML code '$'</div>
+						<p id="current_item_title">'' cannot be parsed correct.
+HTML code '$'</em></div>
+						<ul id="search_results"> '' cannot be parsed correct.
+HTML code '$'</label>
+							<select id="spot_template">
+								<option value="">'' cannot be parsed correct.
+HTML code '$'</a>
+					</p> '' cannot be parsed correct.
+HTML code '$'</a>
+					</p> '' cannot be parsed correct.
+HTML code '$'"></script>
+			<script src="'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" name="spots_norobots" value="1" '' cannot be parsed correct.
+HTML code '$' />'' cannot be parsed correct.
+HTML code '$'</label>
+					<select class="widefat" name="'' cannot be parsed correct.
+HTML code '$'<div class="icit-spot-content">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'
+		<div class="wrap icit-plugin metabox-holder">'' cannot be parsed correct.
+HTML code '$'
+		<div class="wrap icit-plugin">'' cannot be parsed correct.
+HTML code '$'
+					</div>
+				</div>
+				<div class="left-column postbox-container" id="postbox-container-2">
+					<div class="column-inner">'' cannot be parsed correct.
+HTML code '$'
+					</div>
+				</div>
+			</div>
+			</div>
+			</form>
+		</div>'' cannot be parsed correct.
+HTML code '$'
+					</div>
+				</div>
+				<div class="left-column">
+					<div class="column-inner">'' cannot be parsed correct.
+HTML code '$'
+					</div>
+				</div>
+			</form>
+		</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:09.230915.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046583.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 19 do_action/apply_filters calls and 36 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.809531.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running ArrayElementDetector
+### Start running ParadoxDetector
+### Finish running Oci8Detector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running PhpCurlDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running HashDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PHPRetrievalDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running PHPIncludedDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Start running DeletionDetector
+### Finish running MySQLiDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+icit-spots.php:1454
+  - MD5 called with parameters [template]. Ignore if [template] does not contain personal information. 
+
+icit-spots.php:66
+  - RETRIEVAL call to get_option("spots_norobots", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+icit-spots.php:97
+  - RETRIEVAL call to get_option("spots_cache_time", 365 * 24 * 60 * 60) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+icit-spots.php:132
+  - RETRIEVAL call to get_option("spots_cache_time", SPOTS_CACHE_TIME) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+icit-spots.php:138
+  - RETRIEVAL call to get_option("spots_norobots", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+icit-spots.php:169
+  - RETRIEVAL call to get_posts(["post_type" => SPOTS_POST_TYPE, "suppress_filters" => true, "update_post_term_cache" => false, "update_post_meta_cache" => false, "post_status" => "publish", "order" => "DESC", "orderby" => "post_date", "posts_per_page" => 20, "search" => $q, "s" => $q]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+icit-spots.php:251
+  - RETRIEVAL call to get_option( . "_setup", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+icit-spots.php:316
+  - RETRIEVAL call to get_post_meta($post->ID, "_spot_part", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+icit-spots.php:473
+  - RETRIEVAL call to get_post_meta($post->ID, "_spot_part", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+icit-spots.php:551
+  - RETRIEVAL call to get_user_setting("wplink", "0"). Passed arguments: 0: $name (string), 1: $default (string). Returns (mixed).
+icit-spots.php:780
+  - RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta
+icit-spots.php:820
+  - RETRIEVAL call to get_posts(["post_type" => SPOTS_POST_TYPE, "showposts" => 10]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+icit-spots.php:951
+  - RETRIEVAL call to get_post($_REQUEST["attachment_id"]) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post, post_meta
+icit-spots.php:1163
+  - RETRIEVAL call to get_post($id) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post, post_meta
+icit-spots.php:1166
+  - RETRIEVAL call to get_posts(["numberposts" => -1, "post_type" => SPOTS_POST_TYPE]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+icit-spots.php:1293
+  - RETRIEVAL call to get_post_meta($post_ID, "_thumbnail_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+icit-spots.php:1296
+  - RETRIEVAL call to get_post($thumbnail_id) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post, post_meta
+icit-spots.php:1447
+  - RETRIEVAL call to get_post_meta($spot_id, "_spot_part", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+icit-spots.php:1460
+  - RETRIEVAL call to get_transient($cache_id) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+icit-spots.php:1474
+  - RETRIEVAL call to get_post($spot_id) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: wp_post, post, post_meta 
+
+icit-spots.php:261
+  - STORAGE call to update_option( . "_setup", $args) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+icit-spots.php:262
+  - STORAGE call to add_option( . "_setup", $args) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+icit-spots.php:470
+  - STORAGE call to update_post_meta($post_id, "_spot_part", $template) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+icit-spots.php:523
+  - STORAGE call to delete_option("spots_do_once_setup") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+icit-spots.php:1131
+  - STORAGE call to wp_insert_post(["post_title" => $instance["title"], "post_content" => "", "post_type" => SPOTS_POST_TYPE, "post_status" => "publish"]). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+icit-spots.php:1141
+  - STORAGE call to wp_update_post(["ID" => $instance["id"], "post_content" => $new_instance["content"]]). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+icit-spots.php:1275
+  - STORAGE call to delete_post_meta($post_ID, "_thumbnail_id") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta
+icit-spots.php:1432
+  - STORAGE call to wp_insert_post(["post_title" => $name, "post_type" => SPOTS_POST_TYPE, "post_status" => "draft"]). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+icit-spots.php:1438
+  - STORAGE call to wp_update_post(["ID" => $new_id, "post_content" => "<div><a href=" . get_edit_post_link($new_id) . """ . sprintf(__("Click here to edit the %s spot.", SPOTS_DOM), esc_html($name)) . "</a></div>"]). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+icit-spots.php:1515
+  - STORAGE call to delete_transient($cache_id) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+icit-spots.php:1517
+  - STORAGE call to set_transient($cache_id, ["output" => $output, "status" => $status], SPOTS_CACHE_TIME) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site 
+
+icit-spots.php:523
+  - DELETION call to delete_option("spots_do_once_setup") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+icit-spots.php:1275
+  - DELETION call to delete_post_meta($post_ID, "_thumbnail_id") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+By data type:
+none
+	WordPressStorageDetector.wp_update_post(["ID" => $new_id, "post_content" => "<div><a href=" . get_edit_post_link($new_id) . """ . sprintf(__("Click here to edit the %s spot.", SPOTS_DOM), esc_html($name)) . "</a></div>"]) - set()
+	WordPressRetrievalDetector.get_posts(["post_type" => SPOTS_POST_TYPE, "showposts" => 10]) - set()
+	WordPressStorageDetector.wp_insert_post(["post_title" => $name, "post_type" => SPOTS_POST_TYPE, "post_status" => "draft"]) - set()
+	PHPIncludedDetector.(unknown) - set()
+	WordPressStorageDetector.wp_update_post(["ID" => $instance["id"], "post_content" => $new_instance["content"]]) - set()
+	WordPressRetrievalDetector.get_posts(["numberposts" => -1, "post_type" => SPOTS_POST_TYPE]) - set()
+	WordPressRetrievalDetector.get_user_setting("wplink", "0") - set()
+	WordPressRetrievalDetector.get_posts(["post_type" => SPOTS_POST_TYPE, "suppress_filters" => true, "update_post_term_cache" => false, "update_post_meta_cache" => false, "post_status" => "publish", "order" => "DESC", "orderby" => "post_date", "posts_per_page" => 20, "search" => $q, "s" => $q]) - set()
+	WordPressStorageDetector.wp_insert_post(["post_title" => $instance["title"], "post_content" => "", "post_type" => SPOTS_POST_TYPE, "post_status" => "publish"]) - set()
+option
+	WordPressRetrievalDetector.get_option("spots_cache_time", SPOTS_CACHE_TIME) - {'option'}
+	DeletionDetector.delete_option("spots_do_once_setup") - {'option'}
+	WordPressStorageDetector.add_option( . "_setup", $args) - {'option'}
+	WordPressRetrievalDetector.get_option( . "_setup", []) - {'option'}
+	WordPressRetrievalDetector.get_option("spots_norobots", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("spots_norobots", 1) - {'option'}
+	WordPressStorageDetector.update_option( . "_setup", $args) - {'option'}
+	WordPressStorageDetector.delete_option("spots_do_once_setup") - {'option'}
+	WordPressRetrievalDetector.get_option("spots_cache_time", 365 * 24 * 60 * 60) - {'option'}
+post
+	WordPressRetrievalDetector.get_post($id) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($spot_id) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($thumbnail_id) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($_REQUEST["attachment_id"]) - {'wp_post', 'post', 'post_meta'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_spot_part", true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_ID, "_thumbnail_id") - {'post_meta'}
+	WordPressRetrievalDetector.get_post($id) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($spot_id) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($thumbnail_id) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, "_spot_part", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_ID, "_thumbnail_id", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, "_spot_part", $template) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_ID, "_thumbnail_id") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($spot_id, "_spot_part", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($_REQUEST["attachment_id"]) - {'wp_post', 'post', 'post_meta'}
+site
+	WordPressRetrievalDetector.get_transient($cache_id) - {'site'}
+	WordPressStorageDetector.delete_transient($cache_id) - {'site'}
+	WordPressStorageDetector.set_transient($cache_id, ["output" => $output, "status" => $status], SPOTS_CACHE_TIME) - {'site'}
+user_meta
+	WordPressRetrievalDetector.get_user_option("rich_editing") - {'user_meta'}
+wp_post
+	WordPressRetrievalDetector.get_post($id) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($spot_id) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($thumbnail_id) - {'wp_post', 'post', 'post_meta'}
+	WordPressRetrievalDetector.get_post($_REQUEST["attachment_id"]) - {'wp_post', 'post', 'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.710960.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 33 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.232692.
+
+33 STORE_REACHES edges created
+33 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 1 nodes as PERSONAL
+In total, tainted 1 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 1 nodes as ENCRYPTED
+In total, tainted 1 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.193342.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:52.184086!
+DELETION call to delete_post_meta($post_ID, "_thumbnail_id") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+DELETION call to delete_option("spots_do_once_setup") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+MD5 called with parameters [template]. Ignore if [template] does not contain personal information.,md5,None
+RETRIEVAL call to get_post($id) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_posts(["numberposts" => -1, "post_type" => SPOTS_POST_TYPE]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($post_ID, "_thumbnail_id", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($thumbnail_id) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("spots_cache_time", SPOTS_CACHE_TIME) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("spots_norobots", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($spot_id, "_spot_part", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient($cache_id) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post($spot_id) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_posts(["post_type" => SPOTS_POST_TYPE, "suppress_filters" => true, "update_post_term_cache" => false, "update_post_meta_cache" => false, "post_status" => "publish", "order" => "DESC", "orderby" => "post_date", "posts_per_page" => 20, "search" => $q, "s" => $q]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_option( . "_setup", []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_spot_part", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, "_spot_part", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_setting("wplink", "0"). Passed arguments: 0: $name (string), 1: $default (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("spots_norobots", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts(["post_type" => SPOTS_POST_TYPE, "showposts" => 10]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post($_REQUEST["attachment_id"]) alters data types {'wp_post', 'post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_option("spots_cache_time", 365 * 24 * 60 * 60) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+STORAGE call to wp_insert_post(["post_title" => $instance["title"], "post_content" => "", "post_type" => SPOTS_POST_TYPE, "post_status" => "publish"]). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post(["ID" => $instance["id"], "post_content" => $new_instance["content"]]). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to delete_post_meta($post_ID, "_thumbnail_id") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+STORAGE call to wp_insert_post(["post_title" => $name, "post_type" => SPOTS_POST_TYPE, "post_status" => "draft"]). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to wp_update_post(["ID" => $new_id, "post_content" => "<div><a href=" . get_edit_post_link($new_id) . """ . sprintf(__("Click here to edit the %s spot.", SPOTS_DOM), esc_html($name)) . "</a></div>"]). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to delete_transient($cache_id) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to set_transient($cache_id, ["output" => $output, "status" => $status], SPOTS_CACHE_TIME) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to update_option( . "_setup", $args) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option( . "_setup", $args) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_post_meta($post_id, "_spot_part", $template) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_option("spots_do_once_setup") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

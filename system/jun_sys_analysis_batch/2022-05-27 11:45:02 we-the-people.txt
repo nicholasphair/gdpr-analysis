@@ -1,0 +1,492 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on we-the-people
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.649374.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.143742.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 15 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.472480.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.526360.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 192 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.625490.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 23 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:01.913047.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+Added 9 PHP_REACHES edges.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.098599.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 91 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.624549.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2329
+Added 1998 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2825
+Added 496 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.147583.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/we-the-people.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/inc/plugin-options.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/inc/template-tags.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/inc/tinymce-plugin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/inc/widget.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/inc/wtp-entity.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/templates/wtp-petition-error.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/templates/wtp-petition.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/templates/wtp-petition-widget.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/we-the-people/templates/wtp-signature-form.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.006110.
+
+15 PHP_REACHES edges created
+1 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2313 PHP_REACHES edges created
+496 PHP_REACHES edges created
+2825 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 875 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.085959.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.978581.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 35 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.286426.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 35 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.159759.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.111805.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.565559.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011934.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.033216.
+
+70 PHP_REACHES edges created
+70 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 57 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.124531.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.162751.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$before_titlePetition unavailable$after_title'' cannot be parsed correct.
+HTML code '$'Petition unavailable'' cannot be parsed correct.
+HTML code '$'$petition'' cannot be parsed correct.
+HTML code '$'$before_title$petition$after_title'' cannot be parsed correct.
+HTML code '$'apply_filters("wethepeople_petition_body", $petition->body)'' cannot be parsed correct.
+HTML code '$'$petition'' cannot be parsed correct.
+HTML code '$'$petition'' cannot be parsed correct.
+HTML code '$'Sign this petition on We The People'' cannot be parsed correct.
+HTML code '$'$petition'' cannot be parsed correct.
+HTML code '$'$petition'' cannot be parsed correct.
+HTML code '$'$petition'' cannot be parsed correct.
+HTML code '$'apply_filters("wethepeople_petition_body", $petition->body)'' cannot be parsed correct.
+HTML code '$'$petition'' cannot be parsed correct.
+HTML code '$'$petition'' cannot be parsed correct.
+HTML code '$'Sign this petition on We The People'' cannot be parsed correct.
+HTML code '$'$petition'' cannot be parsed correct.
+HTML code '$'admin_url("admin-ajax.php")'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'wethepeople_get_signature_form($petition_id)'' cannot be parsed correct.
+HTML code '$'time()'' cannot be parsed correct.
+HTML code '$'e.g. Guns, taxes, etc.'' cannot be parsed correct.
+HTML code '$'Insert'' cannot be parsed correct.
+HTML code '$'Cancel'' cannot be parsed correct.
+HTML code '$'includes_url("/js/jquery/jquery.js")'' cannot be parsed correct.
+HTML code '$'includes_url("/js/tinymce/tiny_mce_popup.js")'' cannot be parsed correct.
+HTML code '$'admin_url("admin-ajax.php")'' cannot be parsed correct.
+HTML code '$'apply_filters("wethepeople_shortcode_name", "wtp-petition")'' cannot be parsed correct.
+HTML code '$'$args_before_widget'' cannot be parsed correct.
+HTML code '$'$args_after_widget'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'wp_get_current_user()'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'$petition_id'' cannot be parsed correct.
+HTML code '$'json_encode($response)'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:05.870160.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.049135.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 8 do_action/apply_filters calls and 15 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.142316.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running ArrayElementDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PostgreSQLDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running VariableDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running MySQLiDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running WordPressRemoteDetector
+### Finish running UninstallDetector
+### Finished running detectors
+we-the-people.php:296
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email
+we-the-people.php:296
+  - Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name
+we-the-people.php:296
+  - Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.
+  - Data types: last_name
+we-the-people.php:303
+  - Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.
+  - Data types: first_name
+we-the-people.php:304
+  - Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.
+  - Data types: last_name
+we-the-people.php:305
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+we-the-people.php:469
+  - MD5 called with parameters [request_uri]. Ignore if [request_uri] does not contain personal information. 
+
+templates/wtp-signature-form.php:38
+  - object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.
+  - Data types: user_meta, first_name, user
+templates/wtp-signature-form.php:38
+  - object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.
+  - Data types: user_meta, first_name, user
+templates/wtp-signature-form.php:45
+  - object property '$current_user->user_lastname' of personal types {'user_meta', 'last_name', 'user'} is found.
+  - Data types: user_meta, last_name, user
+templates/wtp-signature-form.php:45
+  - object property '$current_user->user_lastname' of personal types {'user_meta', 'last_name', 'user'} is found.
+  - Data types: user_meta, last_name, user
+templates/wtp-signature-form.php:52
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+we-the-people.php:325
+  - API call to wp_remote_post($request_uri, $params). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+we-the-people.php:479
+  - API call to wp_remote_get($request_uri). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote 
+
+inc/plugin-options.php:97
+  - RETRIEVAL call to get_option(self::"OPTION_NAME") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+inc/plugin-options.php:129
+  - RETRIEVAL call to get_option(WeThePeople_Plugin_Options::"OPTION_NAME") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+templates/wtp-petition-widget.php:32
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+templates/wtp-petition.php:42
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+templates/wtp-petition.php:57
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+templates/wtp-signature-form.php:11
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).
+  - Data types: user_meta, user
+we-the-people.php:96
+  - RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta
+we-the-people.php:474
+  - RETRIEVAL call to get_transient($transient_name) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+we-the-people.php:483
+  - RETRIEVAL call to get_transient($lt_transient_name) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+we-the-people.php:565
+  - RETRIEVAL call to get_option("template") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+we-the-people.php:509
+  - STORAGE call to set_transient($transient_name, $body->results, self::"TRANSIENT_EXPIRES") alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+we-the-people.php:510
+  - STORAGE call to set_transient($lt_transient_name, $body->results, self::"TRANSIENT_LT_EXPIRES") alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site 
+
+By data type:
+email
+	PropertyDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+first_name
+	ArrayElementDetector.(unknown) - {'first_name'}
+	ArrayElementDetector.(unknown) - {'first_name'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+last_name
+	ArrayElementDetector.(unknown) - {'last_name'}
+	ArrayElementDetector.(unknown) - {'last_name'}
+	PropertyDetector.(unknown) - {'user_meta', 'last_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'last_name', 'user'}
+none
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("template") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+	WordPressRetrievalDetector.get_option(WeThePeople_Plugin_Options::"OPTION_NAME") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+	WordPressRetrievalDetector.get_option(self::"OPTION_NAME") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+site
+	WordPressRetrievalDetector.get_transient($transient_name) - {'site'}
+	WordPressStorageDetector.set_transient($lt_transient_name, $body->results, self::"TRANSIENT_LT_EXPIRES") - {'site'}
+	WordPressStorageDetector.set_transient($transient_name, $body->results, self::"TRANSIENT_EXPIRES") - {'site'}
+	WordPressRetrievalDetector.get_transient($lt_transient_name) - {'site'}
+user
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'last_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'last_name', 'user'}
+user_meta
+	WordPressRetrievalDetector.get_user_option("rich_editing") - {'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'last_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'first_name', 'user'}
+	PropertyDetector.(unknown) - {'user_meta', 'last_name', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.243013.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 4 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.120611.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 2005
+4 STORE_REACHES edges created
+4 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 55 nodes as PERSONAL
+In total, tainted 55 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 1 nodes as ENCRYPTED
+In total, tainted 1 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.443650.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:38.928755!
+Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.,,None
+Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["first_name"]' of personal types {'first_name'} is found.,,None
+Request variable '$_POST["last_name"]' of personal types {'last_name'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+MD5 called with parameters [request_uri]. Ignore if [request_uri] does not contain personal information.,md5,None
+object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.,,None
+object property '$current_user->user_firstname' of personal types {'user_meta', 'first_name', 'user'} is found.,,None
+object property '$current_user->user_lastname' of personal types {'user_meta', 'last_name', 'user'} is found.,,None
+object property '$current_user->user_lastname' of personal types {'user_meta', 'last_name', 'user'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+API call to wp_remote_post($request_uri, $params). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+API call to wp_remote_get($request_uri). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,[]
+RETRIEVAL call to get_option(WeThePeople_Plugin_Options::"OPTION_NAME") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(self::"OPTION_NAME") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_transient($transient_name) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient($lt_transient_name) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("template") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to set_transient($transient_name, $body->results, self::"TRANSIENT_EXPIRES") alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to set_transient($lt_transient_name, $body->results, self::"TRANSIENT_LT_EXPIRES") alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[encryption] API call that sends PII to unknown url uses unknown protocol. PII is insecurely encrypted with []. Found in file we-the-people.php at line 325 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+No findings

@@ -1,0 +1,628 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on cf7-kimera-crm
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.653508.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.004709.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 35 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.434838.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 3 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.781881.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1092 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.955666.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 4 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.780356.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+Added 1 PHP_REACHES edges.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.090975.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 343 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:05.548920.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 6621
+Added 5143 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 7488
+Added 867 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.501108.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/cf7-kimera-crm-admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/cf7-kimera-crm.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/ajax/ajax.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/modules/hidden.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/modules/kbutton.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/modules/kcheckbox.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/modules/kdate.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/modules/kfile.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/modules/kpanel.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/modules/kselect.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/views/kimeracrm_panel_help.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/cf7-kimera-crm/views/kimeracrm_panel.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.114921.
+
+35 PHP_REACHES edges created
+3 REACHES edges created
+1000 PHP_REACHES edges created
+1092 PHP_REACHES edges created
+4 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+5487 PHP_REACHES edges created
+867 PHP_REACHES edges created
+7488 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 2130 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.128175.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:06.470154.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 42 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.238738.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 19 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.133223.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.216216.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.326846.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006319.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.031885.
+
+61 PHP_REACHES edges created
+61 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 47 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.114778.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.160690.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'json_encode($retVal)'' cannot be parsed correct.
+HTML code '$'<p><strong>Kimera CRM Add-on</strong> has detected some issues:</p>'' cannot be parsed correct.
+HTML code '$'<li>Contact Form 7 is not installed!</li>'' cannot be parsed correct.
+HTML code '$'<li>The version of Contact Form 7 installed is incompatible</li>'' cannot be parsed correct.
+HTML code '$'<li>&nbsp;&nbsp;&nbsp;required version: <strong>CF7_KIMERA__CF7_REQUIRED_VERSION</strong></li>'' cannot be parsed correct.
+HTML code '$'<li>&nbsp;&nbsp;&nbsp;installed version: <strong>WPCF7_VERSION</strong></li>'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html($description), $desc_link)'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'Name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'Default value'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'Id attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'Insert Tag'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html(__("To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab.", "contact-form-7")), "<strong><span class="mail-tag"></span></strong>")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Class attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_id'' cannot be parsed correct.
+HTML code '$'Insert Tag'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html(__("To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab.", "contact-form-7")), "<strong><span class="mail-tag"></span></strong>")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'Generate a form-tag for a button to refresh elements.'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'Name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'Label'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'Id attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Class attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'Fire refresh event on click'' cannot be parsed correct.
+HTML code '$'Fire refresh event change'' cannot be parsed correct.
+HTML code '$'kbutton'' cannot be parsed correct.
+HTML code '$'Insert Tag'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html($description), $desc_link)'' cannot be parsed correct.
+HTML code '$'Field type'' cannot be parsed correct.
+HTML code '$'Field type'' cannot be parsed correct.
+HTML code '$'Required field'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'Name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_resource'' cannot be parsed correct.
+HTML code '$'Resource'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_resource'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_filter'' cannot be parsed correct.
+HTML code '$'Filter'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_filter'' cannot be parsed correct.
+HTML code '$'Options'' cannot be parsed correct.
+HTML code '$'Options'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'One option per line.'' cannot be parsed correct.
+HTML code '$'Put a label first, a checkbox last'' cannot be parsed correct.
+HTML code '$'Wrap each item with label element'' cannot be parsed correct.
+HTML code '$'Make checkboxes exclusive'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html($description), $desc_link)'' cannot be parsed correct.
+HTML code '$'Field type'' cannot be parsed correct.
+HTML code '$'Field type'' cannot be parsed correct.
+HTML code '$'Required field'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'Name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'Placeholder'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'Use this text as the placeholder of the field'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-dateFormat'' cannot be parsed correct.
+HTML code '$'Format'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-dateFormat'' cannot be parsed correct.
+HTML code '$'Format'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-yearRange'' cannot be parsed correct.
+HTML code '$'Years selector range (optional)'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-yearRange'' cannot be parsed correct.
+HTML code '$'Format'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-defaultDate'' cannot be parsed correct.
+HTML code '$'Starting date (optional)'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'Id attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Class attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'Master elements:'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_master_elements'' cannot be parsed correct.
+HTML code '$'Refresh panels on click event'' cannot be parsed correct.
+HTML code '$'Refresh panels on change event'' cannot be parsed correct.
+HTML code '$'checkbox'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html($description), $desc_link)'' cannot be parsed correct.
+HTML code '$'Field type'' cannot be parsed correct.
+HTML code '$'Field type'' cannot be parsed correct.
+HTML code '$'Required field'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'Name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-entitycontroller'' cannot be parsed correct.
+HTML code '$'Document resource'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-entitycontroller'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-entityfield'' cannot be parsed correct.
+HTML code '$'Entity field'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-entityfield'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-limit'' cannot be parsed correct.
+HTML code '$'File size limit (bytes)'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-limit'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-filetypes'' cannot be parsed correct.
+HTML code '$'Acceptable file types'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-filetypes'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-defaultDate'' cannot be parsed correct.
+HTML code '$'Format'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'Id attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Class attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'kdate'' cannot be parsed correct.
+HTML code '$'Insert Tag'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html(__("To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab.", "contact-form-7")), "<strong><span class="mail-tag"></span></strong>")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'Master elements:'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_master_elements'' cannot be parsed correct.
+HTML code '$'kpanel_begin'' cannot be parsed correct.
+HTML code '$'Insert Tag'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html($description), $desc_link)'' cannot be parsed correct.
+HTML code '$'Field type'' cannot be parsed correct.
+HTML code '$'Field type'' cannot be parsed correct.
+HTML code '$'Required field'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'Name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_resource'' cannot be parsed correct.
+HTML code '$'Resource'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_resource'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_filter'' cannot be parsed correct.
+HTML code '$'Filter'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_filter'' cannot be parsed correct.
+HTML code '$'Options'' cannot be parsed correct.
+HTML code '$'Options'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'Id attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Class attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'Master elements:'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_master_elements'' cannot be parsed correct.
+HTML code '$'Refresh panels on click event'' cannot be parsed correct.
+HTML code '$'Refresh panels on change event'' cannot be parsed correct.
+HTML code '$'file'' cannot be parsed correct.
+HTML code '$'Insert Tag'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html(__("To attach the file uploaded through this field to mail, you need to insert the corresponding mail-tag (%s) into the File Attachments field on the Mail tab.", "contact-form-7")), "<strong><span class="mail-tag"></span></strong>")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'Generate a form-tag for a refresh panel.'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'Name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-name'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'Id attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-values'' cannot be parsed correct.
+HTML code '$'One option per line.'' cannot be parsed correct.
+HTML code '$'Use the first value as a label'' cannot be parsed correct.
+HTML code '$'Allow multiple selections'' cannot be parsed correct.
+HTML code '$'Insert a blank item as the first option'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'Id attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Class attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'Master elements:'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-cf7k_master_elements'' cannot be parsed correct.
+HTML code '$'Refresh panels on click event'' cannot be parsed correct.
+HTML code '$'Refresh panels on change event'' cannot be parsed correct.
+HTML code '$'Insert Tag'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'sprintf(esc_html(__("To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab.", "contact-form-7")), "<strong><span class="mail-tag"></span></strong>")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-mailtag'' cannot be parsed correct.
+HTML code '$'Settings for Kimera CRM'' cannot be parsed correct.
+HTML code '$'Enable Kimera CRM integration for this Contact Form.'' cannot be parsed correct.
+HTML code '$'WARNING: in order to take advantage of all the functionalities of this plugin we STRONGLY RECOMMEND to include the "define( \'WPCF7_AUTOP\', false );" directive in your "wp-config.php" file.'' cannot be parsed correct.
+HTML code '$'Insert the URL for your Kimera CRM installation and the Authorization Key associated to enable read/write data features.'' cannot be parsed correct.
+HTML code '$'Url CRM'' cannot be parsed correct.
+HTML code '$'$kimeracrm_url'' cannot be parsed correct.
+HTML code '$'Authorization key'' cannot be parsed correct.
+HTML code '$'$kimeracrm_key'' cannot be parsed correct.
+HTML code '$'Retrieve this value from the \'Impostazioni / Gestione Form Web\' section of the CRM. Look for the label \'Codice\''' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Enable HTML 5 fallback functionality (useful when using DATE input)'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Enable the submission of data to Kimera CRM'' cannot be parsed correct.
+HTML code '$'Performs an insert operation on a resource of a Kimera CRM installation. E.g Resource: Anagrafiche, Action: POST.'' cannot be parsed correct.
+HTML code '$'Resource'' cannot be parsed correct.
+HTML code '$'$kimeracrm_controller'' cannot be parsed correct.
+HTML code '$'Action'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-id'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Class attribute'' cannot be parsed correct.
+HTML code '$'wp_parse_args($args, [])_content-class'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'Events'' cannot be parsed correct.
+HTML code '$'List of available resources and related fields on the selected crm'' cannot be parsed correct.
+HTML code '$'Resource'' cannot be parsed correct.
+HTML code '$'Field Code'' cannot be parsed correct.
+HTML code '$'Description'' cannot be parsed correct.
+HTML code '$'sizeof($controller["fields"])'' cannot be parsed correct.
+HTML code '$'$controller_id'' cannot be parsed correct.
+HTML code '$'$fields_id'' cannot be parsed correct.
+HTML code '$'$fields_text'' cannot be parsed correct.
+HTML code '$'Error --> return code: curl_getinfo($ch)_http_code'' cannot be parsed correct.
+HTML code '$'$kimeracrm_action'' cannot be parsed correct.
+HTML code '$'Fixed parameters'' cannot be parsed correct.
+HTML code '$'$kimeracrm_parameters'' cannot be parsed correct.
+HTML code '$'Sets Form independent values.  E.g. idTipologia=xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&idProvenienza=xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$'Prevent Conctat Form 7 from actually sending the email.'' cannot be parsed correct.
+HTML code '$'<div id="message" class="error cf7k-error">'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:22.822047.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.041970.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 35 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.961494.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running maxdbDetector
+### Start running SybaseDetector
+### Finish running MySQLiDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running PhpCurlDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+cf7-kimera-crm.php:104
+  - RETRIEVAL call to $tag->get_option("cf7k_resource", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:128
+  - RETRIEVAL call to $tag->get_option("entityfield", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:128
+  - RETRIEVAL call to $tag->get_option("entityfield", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:128
+  - RETRIEVAL call to $tag->get_option("entitycontroller", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:128
+  - RETRIEVAL call to $tag->get_option("entitycontroller", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:317
+  - RETRIEVAL call to $tag->get_option("idtipologia", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:317
+  - RETRIEVAL call to $tag->get_option("idtipologia", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:318
+  - RETRIEVAL call to $tag->get_option("entityfield", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:318
+  - RETRIEVAL call to $tag->get_option("entityfield", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:428
+  - RETRIEVAL call to $this->tag->get_option("cf7k_resource", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:430
+  - RETRIEVAL call to $this->tag->get_option("cf7k_filter", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:516
+  - RETRIEVAL call to $tt->get_option("cf7k_filter", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:642
+  - RETRIEVAL call to $tag->get_option("cf7k_master_elements", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:663
+  - RETRIEVAL call to $tag->get_option("cf7k_resource", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+cf7-kimera-crm.php:666
+  - RETRIEVAL call to $tag->get_option("cf7k_filter", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+modules/kbutton.php:16
+  - RETRIEVAL call to $tag->get_option("tabindex", "int", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+modules/kdate.php:37
+  - RETRIEVAL call to $tag->get_option("tabindex", "int", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+modules/kdate.php:38
+  - RETRIEVAL call to $tag->get_option("dateFormat", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+modules/kdate.php:39
+  - RETRIEVAL call to $tag->get_option("defaultDate", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+modules/kdate.php:40
+  - RETRIEVAL call to $tag->get_option("yearRange", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.$this->tag->get_option("cf7k_resource", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("entitycontroller", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("entityfield", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("entityfield", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("cf7k_resource", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("idtipologia", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("defaultDate", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("cf7k_resource", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("entitycontroller", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("cf7k_filter", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("tabindex", "int", true) - {'option'}
+	WordPressRetrievalDetector.$this->tag->get_option("cf7k_filter", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("tabindex", "int", true) - {'option'}
+	WordPressRetrievalDetector.$tt->get_option("cf7k_filter", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("dateFormat", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("entityfield", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("cf7k_master_elements", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("yearRange", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("entityfield", "", true) - {'option'}
+	WordPressRetrievalDetector.$tag->get_option("idtipologia", "", true) - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.680067.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.148654.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.007987.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:08.891794!
+RETRIEVAL call to $tag->get_option("cf7k_resource", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("entitycontroller", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("entityfield", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("entitycontroller", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("entityfield", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("idtipologia", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("idtipologia", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("entityfield", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("entityfield", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $this->tag->get_option("cf7k_resource", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $this->tag->get_option("cf7k_filter", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tt->get_option("cf7k_filter", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("cf7k_master_elements", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("cf7k_resource", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("cf7k_filter", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("tabindex", "int", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("tabindex", "int", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("dateFormat", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("defaultDate", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to $tag->get_option("yearRange", "", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

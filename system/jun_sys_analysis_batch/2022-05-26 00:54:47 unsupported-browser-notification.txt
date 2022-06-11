@@ -1,0 +1,503 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on unsupported-browser-notification
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.499789.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.854705.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 10 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.381377.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.443167.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 94 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.640580.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.799919.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.112096.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 45 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.966087.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1088
+Added 939 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1197
+Added 109 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.986371.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/unsupported-browser-notification/supported-browser.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.168094.
+
+1000 PHP_REACHES edges created
+1088 PHP_REACHES edges created
+109 PHP_REACHES edges created
+1197 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 342 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.950396.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.128152.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 5 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.708953.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 6 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.170810.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.010863.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.108560.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008479.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.050626.
+
+11 PHP_REACHES edges created
+11 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 15 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.141601.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.117828.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<p>Select the appropriate versions of the following browsers which support for your website.</p>'' cannot be parsed correct.
+HTML code '$'<p>When the user\'s browser does not support for your website, the notification message will be displayed. You can specify the background of overlay and the custom message as you wish in this section.</p>'' cannot be parsed correct.
+HTML code '$'<label for=oe_sb_opt_$args_name"From version: '' cannot be parsed correct.
+HTML code '$'<select name="oe_sb_opt_background">'' cannot be parsed correct.
+HTML code '$'<textarea name="oe_sb_opt_message" rows="8" cols="50">get_option("oe_sb_opt_message")</textarea>'' cannot be parsed correct.
+HTML code '$'<p>sprintf(__("This plugin can not be activated because it requires a PHP version greater than %1$s. Please update your PHP version before you activate it.", "oe-sb"), $php_version_required)</p>'' cannot be parsed correct.
+HTML code '$'<p>sprintf(__("This plugin can not be activated because it requires a WordPress version greater than %1$s. Please go to Dashboard &#9656; Updates to get the latest version of WordPress .", "oe-sb"), $wp_version_required)</p>'' cannot be parsed correct.
+HTML code '$'$this->get_plugin_display_name()'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.478855.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046655.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 3 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.478671.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running maxdbDetector
+### Start running WordPressStorageDetector
+### Finish running WordpressHashingFnDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+supported-browser.php:161
+  - RETRIEVAL call to get_option("oe_sb_opt_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:167
+  - RETRIEVAL call to get_option("oe_sb_opt_firefox") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:173
+  - RETRIEVAL call to get_option("oe_sb_opt_ie") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:179
+  - RETRIEVAL call to get_option("oe_sb_opt_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:185
+  - RETRIEVAL call to get_option("oe_sb_opt_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:190
+  - RETRIEVAL call to get_option("oe_sb_opt_message") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:192
+  - RETRIEVAL call to get_option("oe_sb_opt_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:359
+  - RETRIEVAL call to get_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:362
+  - RETRIEVAL call to get_option($identity) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:379
+  - RETRIEVAL call to get_option("oe_sb_opt_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:391
+  - RETRIEVAL call to get_option("oe_sb_opt_message") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:433
+  - RETRIEVAL call to get_option("oe_sb_opt_" . $browser["name"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+supported-browser.php:445
+  - RETRIEVAL call to get_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+supported-browser.php:47
+  - STORAGE call to add_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:55
+  - STORAGE call to update_option("oe_supported_browser_options", $pluginOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:58
+  - STORAGE call to update_option("oe_sb_opt_chrome", "32") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:59
+  - STORAGE call to update_option("oe_sb_opt_firefox", "28") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:60
+  - STORAGE call to update_option("oe_sb_opt_ie", "9") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:61
+  - STORAGE call to update_option("oe_sb_opt_safari", "5") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:62
+  - STORAGE call to update_option("oe_sb_opt_opera", "11.5") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:63
+  - STORAGE call to update_option("oe_sb_opt_background", "0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:64
+  - STORAGE call to update_option("oe_sb_opt_message", __("We built our website using latest technology. This makes our website faster and easier to use. Unfortunately, your browser does not support those technology. Download one of these great browsers below and you will be on your way.")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:97
+  - STORAGE call to delete_option("oe_sb_opt_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:98
+  - STORAGE call to delete_option("oe_sb_opt_firefox") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:99
+  - STORAGE call to delete_option("oe_sb_opt_ie") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:100
+  - STORAGE call to delete_option("oe_sb_opt_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:101
+  - STORAGE call to delete_option("oe_sb_opt_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:102
+  - STORAGE call to delete_option("oe_sb_opt_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:103
+  - STORAGE call to delete_option("oe_sb_opt_message") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:104
+  - STORAGE call to delete_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:331
+  - STORAGE call to update_option("oe_sb_opt_chrome", $_POST["oe_sb_opt_chrome"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:332
+  - STORAGE call to update_option("oe_sb_opt_firefox", $_POST["oe_sb_opt_firefox"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:333
+  - STORAGE call to update_option("oe_sb_opt_ie", $_POST["oe_sb_opt_ie"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:334
+  - STORAGE call to update_option("oe_sb_opt_safari", $_POST["oe_sb_opt_safari"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:335
+  - STORAGE call to update_option("oe_sb_opt_opera", $_POST["oe_sb_opt_opera"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:336
+  - STORAGE call to update_option("oe_sb_opt_background", $_POST["oe_sb_opt_background"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+supported-browser.php:337
+  - STORAGE call to update_option("oe_sb_opt_message", $_POST["oe_sb_opt_message"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+supported-browser.php:97
+  - DELETION call to delete_option("oe_sb_opt_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:98
+  - DELETION call to delete_option("oe_sb_opt_firefox") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:99
+  - DELETION call to delete_option("oe_sb_opt_ie") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:100
+  - DELETION call to delete_option("oe_sb_opt_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:101
+  - DELETION call to delete_option("oe_sb_opt_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:102
+  - DELETION call to delete_option("oe_sb_opt_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:103
+  - DELETION call to delete_option("oe_sb_opt_message") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+supported-browser.php:104
+  - DELETION call to delete_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	DeletionDetector.delete_option("oe_sb_opt_message") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_safari", $_POST["oe_sb_opt_safari"]) - {'option'}
+	WordPressRetrievalDetector.get_option("oe_supported_browser_options") - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_background") - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_message") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_firefox", $_POST["oe_sb_opt_firefox"]) - {'option'}
+	WordPressStorageDetector.delete_option("oe_sb_opt_message") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_chrome", $_POST["oe_sb_opt_chrome"]) - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_background", "0") - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_opera") - {'option'}
+	DeletionDetector.delete_option("oe_sb_opt_ie") - {'option'}
+	DeletionDetector.delete_option("oe_supported_browser_options") - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_message") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_opera", "11.5") - {'option'}
+	WordPressStorageDetector.delete_option("oe_sb_opt_background") - {'option'}
+	DeletionDetector.delete_option("oe_sb_opt_firefox") - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_safari") - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_firefox") - {'option'}
+	WordPressStorageDetector.delete_option("oe_sb_opt_ie") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_message", $_POST["oe_sb_opt_message"]) - {'option'}
+	WordPressStorageDetector.delete_option("oe_sb_opt_safari") - {'option'}
+	DeletionDetector.delete_option("oe_sb_opt_safari") - {'option'}
+	WordPressRetrievalDetector.get_option("oe_supported_browser_options") - {'option'}
+	DeletionDetector.delete_option("oe_sb_opt_chrome") - {'option'}
+	DeletionDetector.delete_option("oe_sb_opt_background") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_firefox", "28") - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_ie") - {'option'}
+	WordPressStorageDetector.update_option("oe_supported_browser_options", $pluginOptions) - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_background") - {'option'}
+	WordPressStorageDetector.delete_option("oe_supported_browser_options") - {'option'}
+	WordPressStorageDetector.delete_option("oe_sb_opt_opera") - {'option'}
+	WordPressStorageDetector.delete_option("oe_sb_opt_firefox") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_message", __("We built our website using latest technology. This makes our website faster and easier to use. Unfortunately, your browser does not support those technology. Download one of these great browsers below and you will be on your way.")) - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_background", $_POST["oe_sb_opt_background"]) - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_chrome") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_chrome", "32") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_ie", "9") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_opera", $_POST["oe_sb_opt_opera"]) - {'option'}
+	DeletionDetector.delete_option("oe_sb_opt_opera") - {'option'}
+	WordPressRetrievalDetector.get_option("oe_sb_opt_" . $browser["name"]) - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_safari", "5") - {'option'}
+	WordPressStorageDetector.delete_option("oe_sb_opt_chrome") - {'option'}
+	WordPressStorageDetector.update_option("oe_sb_opt_ie", $_POST["oe_sb_opt_ie"]) - {'option'}
+	WordPressRetrievalDetector.get_option($identity) - {'option'}
+	WordPressStorageDetector.add_option("oe_supported_browser_options") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.961814.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 312 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.268252.
+
+312 STORE_REACHES edges created
+312 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005725.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:26.055523!
+DELETION call to delete_option("oe_sb_opt_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("oe_sb_opt_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("oe_sb_opt_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("oe_sb_opt_message") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("oe_sb_opt_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("oe_sb_opt_firefox") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("oe_sb_opt_ie") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_firefox") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_ie") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_message") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($identity) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_message") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_sb_opt_" . $browser["name"]) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to delete_option("oe_sb_opt_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("oe_sb_opt_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("oe_sb_opt_background") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("oe_sb_opt_message") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_chrome", $_POST["oe_sb_opt_chrome"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_firefox", $_POST["oe_sb_opt_firefox"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_ie", $_POST["oe_sb_opt_ie"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_safari", $_POST["oe_sb_opt_safari"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_opera", $_POST["oe_sb_opt_opera"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_background", $_POST["oe_sb_opt_background"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_message", $_POST["oe_sb_opt_message"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("oe_supported_browser_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("oe_supported_browser_options", $pluginOptions) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_chrome", "32") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_firefox", "28") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_ie", "9") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_safari", "5") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_opera", "11.5") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_background", "0") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("oe_sb_opt_message", __("We built our website using latest technology. This makes our website faster and easier to use. Unfortunately, your browser does not support those technology. Download one of these great browsers below and you will be on your way.")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("oe_sb_opt_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("oe_sb_opt_firefox") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("oe_sb_opt_ie") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

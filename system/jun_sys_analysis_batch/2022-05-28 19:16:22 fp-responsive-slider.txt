@@ -1,0 +1,586 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on fp-responsive-slider
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.704310.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.077144.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.166941.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.567642.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 202 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.578793.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.506421.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.090984.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 106 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.901500.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1675
+Added 1365 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2540
+Added 865 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.115243.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/fp-responsive-slider/fp_responsive_slider.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.157661.
+
+2 REACHES edges created
+1000 PHP_REACHES edges created
+1673 PHP_REACHES edges created
+865 PHP_REACHES edges created
+2540 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 577 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.924677.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.630862.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.399286.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 1 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.144514.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.034519.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.029561.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006509.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035254.
+
+2 PHP_REACHES edges created
+2 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.155493.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.107531.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this->get_field_id("timeout")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("timeout")'' cannot be parsed correct.
+HTML code '$'attribute_escape($timeout)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("pager")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("pager")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("pager")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("nav")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("nav")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("nav")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("pause")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("pause")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("pause")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("imgWidth")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("imgWidth")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("imgWidth")'' cannot be parsed correct.
+HTML code '$'attribute_escape($imgWidth)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("imgHeight")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("imgHeight")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("imgHeight")'' cannot be parsed correct.
+HTML code '$'attribute_escape($imgHeight)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("limit")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("limit")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("limit")'' cannot be parsed correct.
+HTML code '$'plugins_url("", )'' cannot be parsed correct.
+HTML code '$'plugins_url("", )'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'attribute_escape($title)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("auto")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("auto")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("auto")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("random")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("random")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("random")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("speed")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("speed")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("speed")'' cannot be parsed correct.
+HTML code '$'attribute_escape($speed)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("maxwidth")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("maxwidth")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("maxwidth")'' cannot be parsed correct.
+HTML code '$'attribute_escape($maxwidth)'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("timeout")'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_title$title$after_title'' cannot be parsed correct.
+HTML code '$'$auto'' cannot be parsed correct.
+HTML code '$'$speed'' cannot be parsed correct.
+HTML code '$'$timeout'' cannot be parsed correct.
+HTML code '$'$pager'' cannot be parsed correct.
+HTML code '$'$nav'' cannot be parsed correct.
+HTML code '$'$random'' cannot be parsed correct.
+HTML code '$'$pause'' cannot be parsed correct.
+HTML code '$'$maxwidth'' cannot be parsed correct.
+HTML code '$'$_POST_maxWidth'' cannot be parsed correct.
+HTML code '$'get_option("$speed_op")'' cannot be parsed correct.
+HTML code '$'$_POST_img_width'' cannot be parsed correct.
+HTML code '$'$_POST_img_height'' cannot be parsed correct.
+HTML code '$'get_option("$slide_timeout_op")'' cannot be parsed correct.
+HTML code '$'get_option("$auto_play_op")'' cannot be parsed correct.
+HTML code '$'get_option("$speed_op")'' cannot be parsed correct.
+HTML code '$'get_option("$slide_timeout_op")'' cannot be parsed correct.
+HTML code '$'get_option("$fp_pager_op")'' cannot be parsed correct.
+HTML code '$'get_option("$control_arrow_op")'' cannot be parsed correct.
+HTML code '$'get_option("$random_play_op")'' cannot be parsed correct.
+HTML code '$'get_option("$hover_control_op")'' cannot be parsed correct.
+HTML code '$'get_option("$maxWidth_op")'' cannot be parsed correct.
+HTML code '$'the_post_thumbnail("fprslide_page")'' cannot be parsed correct.
+HTML code '$'<img src=ST4_get_featured_image($post_ID)" /'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'<li>'' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<ul class=\'rslides\'>'' cannot be parsed correct.
+HTML code '$'" />
+          px</td>
+      </tr>
+      <tr>
+        <td align="left" scope="row"><label>Animation Speed: </label></td>
+        <td><input name="speed" type="text" value="'' cannot be parsed correct.
+HTML code '$'" />
+          milliseconds</td>
+      </tr>
+      <tr>
+        <td align="left" scope="row"><label>Featured Image Width: </label></td>
+        <td><input name="img_width" type="text" value="'' cannot be parsed correct.
+HTML code '$'" />
+          px</td>
+      </tr>
+      <tr>
+        <td align="left" scope="row"><label>Featured Image Height: </label></td>
+        <td><input name="img_height" type="text" value="'' cannot be parsed correct.
+HTML code '$'" />
+          px</td>
+      </tr>
+      <tr>
+        <td align="left" scope="row"><label>Slide Timeout: </label></td>
+        <td><input name="slide_timeout" type="text" value="'' cannot be parsed correct.
+HTML code '$'" />
+          milliseconds</td>
+      </tr>
+      <tr>
+        <td align="left" scope="row"><label>Pagination: </label></td>
+        <td><select name="fp_pager" id="fp_pager">
+            <option value="true" '' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'<ul class=\'rslides\'>'' cannot be parsed correct.
+HTML code '$'<li>'' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:11.983102.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045001.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 12 do_action/apply_filters calls and 8 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.607514.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PropertyDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running PHPStorageDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Start running DeletionDetector
+### Finish running MySQLiDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running maxdbDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+fp_responsive_slider.php:309
+  - RETRIEVAL call to get_option("$maxWidth_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:310
+  - RETRIEVAL call to get_option("$speed_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:311
+  - RETRIEVAL call to get_option("$img_width_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:312
+  - RETRIEVAL call to get_option("$img_height_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:313
+  - RETRIEVAL call to get_option("$slide_timeout_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:314
+  - RETRIEVAL call to get_option("$fp_pager_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:315
+  - RETRIEVAL call to get_option("$slide_limit_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:316
+  - RETRIEVAL call to get_option("$control_arrow_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:317
+  - RETRIEVAL call to get_option("$hover_control_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:318
+  - RETRIEVAL call to get_option("$auto_play_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:319
+  - RETRIEVAL call to get_option("$random_play_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:447
+  - RETRIEVAL call to get_option("$img_width_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:448
+  - RETRIEVAL call to get_option("$img_height_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:449
+  - RETRIEVAL call to get_option("$maxWidth_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:450
+  - RETRIEVAL call to get_option("$speed_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:451
+  - RETRIEVAL call to get_option("$slide_timeout_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:452
+  - RETRIEVAL call to get_option("$fp_pager_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:453
+  - RETRIEVAL call to get_option("$slide_limit_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:454
+  - RETRIEVAL call to get_option("$control_arrow_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:455
+  - RETRIEVAL call to get_option("$hover_control_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:456
+  - RETRIEVAL call to get_option("$auto_play_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+fp_responsive_slider.php:457
+  - RETRIEVAL call to get_option("$random_play_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+fp_responsive_slider.php:338
+  - STORAGE call to update_option("$maxWidth_op", $maxWidth_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:339
+  - STORAGE call to update_option("$speed_op", $speed_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:340
+  - STORAGE call to update_option("$img_width_op", $img_width_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:341
+  - STORAGE call to update_option("$img_height_op", $img_height_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:342
+  - STORAGE call to update_option("$slide_timeout_op", $slide_timeout_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:343
+  - STORAGE call to update_option("$fp_pager_op", $fp_pager_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:344
+  - STORAGE call to update_option("$slide_limit_op", $slide_limit_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:345
+  - STORAGE call to update_option("$control_arrow_op", $control_arrow_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:346
+  - STORAGE call to update_option("$hover_control_op", $hover_control_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:347
+  - STORAGE call to update_option("$auto_play_op", $auto_play_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+fp_responsive_slider.php:348
+  - STORAGE call to update_option("$random_play_op", $random_play_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressStorageDetector.update_option("$hover_control_op", $hover_control_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$hover_control_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$img_width_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$fp_pager_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$slide_limit_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$img_height_op") - {'option'}
+	WordPressStorageDetector.update_option("$fp_pager_op", $fp_pager_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$img_height_op") - {'option'}
+	WordPressStorageDetector.update_option("$slide_limit_op", $slide_limit_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$auto_play_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$random_play_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$img_width_op") - {'option'}
+	WordPressStorageDetector.update_option("$maxWidth_op", $maxWidth_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$slide_timeout_op") - {'option'}
+	WordPressStorageDetector.update_option("$control_arrow_op", $control_arrow_saved) - {'option'}
+	WordPressStorageDetector.update_option("$img_width_op", $img_width_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$control_arrow_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$maxWidth_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$slide_timeout_op") - {'option'}
+	WordPressStorageDetector.update_option("$img_height_op", $img_height_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$speed_op") - {'option'}
+	WordPressStorageDetector.update_option("$auto_play_op", $auto_play_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$hover_control_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$random_play_op") - {'option'}
+	WordPressStorageDetector.update_option("$slide_timeout_op", $slide_timeout_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$maxWidth_op") - {'option'}
+	WordPressStorageDetector.update_option("$speed_op", $speed_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$speed_op") - {'option'}
+	WordPressStorageDetector.update_option("$random_play_op", $random_play_saved) - {'option'}
+	WordPressRetrievalDetector.get_option("$fp_pager_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$auto_play_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$slide_limit_op") - {'option'}
+	WordPressRetrievalDetector.get_option("$control_arrow_op") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.298707.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 242 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.243840.
+
+242 STORE_REACHES edges created
+242 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005860.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:37.164095!
+RETRIEVAL call to get_option("$maxWidth_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$speed_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$img_width_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$img_height_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$slide_timeout_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$fp_pager_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$slide_limit_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$control_arrow_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$hover_control_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$auto_play_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$random_play_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$img_width_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$img_height_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$maxWidth_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$speed_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$slide_timeout_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$fp_pager_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$slide_limit_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$control_arrow_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$hover_control_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$auto_play_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("$random_play_op") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("$maxWidth_op", $maxWidth_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$speed_op", $speed_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$img_width_op", $img_width_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$img_height_op", $img_height_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$slide_timeout_op", $slide_timeout_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$fp_pager_op", $fp_pager_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$slide_limit_op", $slide_limit_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$control_arrow_op", $control_arrow_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$hover_control_op", $hover_control_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$auto_play_op", $auto_play_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("$random_play_op", $random_play_saved) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

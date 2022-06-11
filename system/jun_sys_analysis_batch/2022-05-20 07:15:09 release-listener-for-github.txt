@@ -1,0 +1,503 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on release-listener-for-github
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.344384.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.798398.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.314345.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.469662.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 79 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.598693.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.572149.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.110144.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 49 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.895199.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 656
+Added 528 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 656
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.909675.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/release-listener-for-github/options.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/release-listener-for-github/release-listener-for-github.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.282155.
+
+656 PHP_REACHES edges created
+656 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 212 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.010719.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.012668.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 6 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.735690.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 14 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.173366.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.098311.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.177561.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009350.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.039217.
+
+20 PHP_REACHES edges created
+20 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 6 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.122123.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+6 SQL operations to process.
+The following function calls could not successfully be analyzed for SQL content: [523, 530, 536, 768, 775, 781]
+Added 0 SQL nodes. 0 out of 6 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.284182.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_option("wgrl-webhook-secret")'' cannot be parsed correct.
+HTML code '$'admin_url("admin-ajax.php")'' cannot be parsed correct.
+HTML code '$'wp_dropdown_users(["name" => "wgrl-post-author", "echo" => false, "selected" => get_option("wgrl-post-author")])'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'wgrl_get_custom_tag()'' cannot be parsed correct.
+HTML code '$'get_option("wgrl-title-prefix")'' cannot be parsed correct.
+HTML code '$'json_encode(["success" => false, "error" => "Wrong content type selected"])'' cannot be parsed correct.
+HTML code '$'json_encode(["success" => false, "error" => "Failed to validate the secret"])'' cannot be parsed correct.
+HTML code '$'json_encode(["success" => true, "release_published" => $release_published])'' cannot be parsed correct.
+HTML code '$'" required /></td>
+            </tr>
+            <tr>
+                <th>Payload URL</th>
+                <td><code'' cannot be parsed correct.
+HTML code '$'?action=wgrl_release_post</code></td>
+            </tr>
+        </table>
+
+        <a href="#" id="wgrl_help_link" onClick="showHelp()">How do I use this?</a>
+        <div id="wgrl_help" class="card" style="display:none;">
+            <h3>Connecting with GitHub</h3>
+            <ol>
+                <li>Go to your project settings on GitHub</li>
+                <li>Select Webhooks -> Add webhook</li>
+                <li>Copy payload URL from here to GitHub</li>
+                <li>Select "application/json" as content type</li>
+                <li>Create a passcode (a random string) and copy it to "Secret" field on both here and GitHub</li>
+                <li>Choose "Let me select individual events" as triggers</li>
+                <li>Tick "Release" and untick everything else</li>
+                <li>Save your plugin settings</li>
+                <li>Click "Add webhook" on GitHub</li>
+            </ol>
+            <p>
+                GitHub sends a ping to your payload URL on webhook activation.
+                If the activation was successful it should return status 200 and <code>{"success":true,"release_published":false}</code>.
+                Please note that nothing will be published on your site before an actual release is made on GitHub.
+            </p>
+            <a href="#" onClick="closeHelp()">Close</a>
+        </div>
+
+        <h1 style="margin-top: 30px;">Advanced options</h1>
+
+        <table class="form-table">
+            <tr>
+                <th>Assign posts to user</th>
+                <td>
+                    '' cannot be parsed correct.
+HTML code '$'                    <p class="description">User must have post create and publish capabilities</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Post type</th>
+                <td>
+                    <select name="wgrl-custom-post-type" id="wgrl-custom-post-type">
+                        <option value="0">Post</option>
+                        <option value="1" '' cannot be parsed correct.
+HTML code '$'>Release (custom post type)</option>
+                    </select>
+                    <p class="description">Choose Release if you do not wish to list releases with your other posts</p>
+                </td>
+            </tr>
+            <tr id="wgrl-tag-post-tr">
+                <th>Tag post</th>
+                <td>
+                    <input type="text" name="wgrl-tag-post" value="'' cannot be parsed correct.
+HTML code '$'" required />
+                    <p class="description">Tag is used to list posts containing release notes, e.g. using shortcode</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Title prefix</th>
+                <td>
+                    <input type="text" name="wgrl-title-prefix" value="'' cannot be parsed correct.
+HTML code '$'" />
+                    <p class="description">This will be prepended to the post title (e.g. "v3.25" can become "Release v3.25")</p>
+                </td>
+            </tr>
+        </table>
+        '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.745420.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.052567.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.433590.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running maxdbDetector
+### Start running TokyoTyrantDetector
+### Finish running PHPRetrievalDetector
+### Start running UserInputDetector
+### Finish running MySQLiDetector
+### Start running VariableDetector
+### Finish running SybaseDetector
+### Start running WordpressHashingFnDetector
+### Finish running PropertyDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running TokyoTyrantDetector
+### Start running WP_UserDetector
+### Finish running SqlServerDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+release-listener-for-github.php:21
+  - hash_hmac called with unapproved hash algorithm sha1. Ignore if this is not encrypting personal information 
+
+release-listener-for-github.php:21
+  - SHA1 called with parameters []. Ignore if [] does not contain personal information. 
+
+release-listener-for-github.php:20
+  - RETRIEVAL call to file_get_contents("php://input").
+  - Data types: file 
+
+options.php:9
+  - RETRIEVAL call to get_option("wgrl-webhook-secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+options.php:45
+  - RETRIEVAL call to get_option("wgrl-post-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+options.php:54
+  - RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+options.php:69
+  - RETRIEVAL call to get_option("wgrl-title-prefix") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:21
+  - RETRIEVAL call to get_option("wgrl-webhook-secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:42
+  - RETRIEVAL call to get_option("wgrl-title-prefix") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:42
+  - RETRIEVAL call to get_option("wgrl-title-prefix") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:46
+  - RETRIEVAL call to get_option("wgrl-post-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:49
+  - RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:58
+  - RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:92
+  - RETRIEVAL call to get_post_meta(get_the_id(), "download_zip", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+release-listener-for-github.php:93
+  - RETRIEVAL call to get_post_meta(get_the_id(), "download_tar", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+release-listener-for-github.php:129
+  - RETRIEVAL call to get_post_meta(get_the_id(), "release_tag", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+release-listener-for-github.php:131
+  - RETRIEVAL call to get_post_meta(get_the_id(), "download_zip", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+release-listener-for-github.php:133
+  - RETRIEVAL call to get_post_meta(get_the_id(), "download_zip", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+release-listener-for-github.php:135
+  - RETRIEVAL call to get_post_meta(get_the_id(), "download_zip", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+release-listener-for-github.php:137
+  - RETRIEVAL call to get_post_meta(get_the_id(), "download_tar", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+release-listener-for-github.php:147
+  - RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:195
+  - RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:205
+  - RETRIEVAL call to get_option("wgrl-tag-post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:205
+  - RETRIEVAL call to get_option("wgrl-tag-post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+release-listener-for-github.php:206
+  - RETRIEVAL call to get_option("wgrl-tag-post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+release-listener-for-github.php:52
+  - STORAGE call to wp_insert_post($new_post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+release-listener-for-github.php:55
+  - STORAGE call to add_post_meta($post_id, "release_tag", $data["release"]["tag_name"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+release-listener-for-github.php:56
+  - STORAGE call to add_post_meta($post_id, "download_tar", $data["release"]["tarball_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+release-listener-for-github.php:57
+  - STORAGE call to add_post_meta($post_id, "download_zip", $data["release"]["zipball_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta 
+
+release-listener-for-github.php:21
+  - CRYPTOGRAPHY call to hash_hmac("sha1", $raw_data, get_option("wgrl-webhook-secret")). 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents("php://input") - {'file'}
+none
+	WordPressStorageDetector.wp_insert_post($new_post) - set()
+	PHPIncludedDetector.(unknown) - set()
+	GenericEncryptionDetector.hash_hmac("sha1", $raw_data, get_option("wgrl-webhook-secret")) - set()
+	HashDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("wgrl-custom-post-type") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-custom-post-type") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-custom-post-type") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-tag-post") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-webhook-secret") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-title-prefix") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-custom-post-type") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-webhook-secret") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-post-author") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-tag-post") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-tag-post") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-title-prefix") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-title-prefix") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-post-author") - {'option'}
+	WordPressRetrievalDetector.get_option("wgrl-custom-post-type") - {'option'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta(get_the_id(), "release_tag", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta(get_the_id(), "download_zip", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta(get_the_id(), "download_zip", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta(get_the_id(), "download_tar", true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "download_zip", $data["release"]["zipball_url"]) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta(get_the_id(), "download_tar", true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "release_tag", $data["release"]["tag_name"]) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta(get_the_id(), "download_zip", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta(get_the_id(), "download_zip", true) - {'post_meta'}
+	WordPressStorageDetector.add_post_meta($post_id, "download_tar", $data["release"]["tarball_url"]) - {'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.667249.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 21 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.218247.
+
+21 STORE_REACHES edges created
+21 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 6 nodes as ENCRYPTED
+In total, tainted 6 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.284941.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:24.153300!
+CRYPTOGRAPHY call to hash_hmac("sha1", $raw_data, get_option("wgrl-webhook-secret")).,None,None
+hash_hmac called with unapproved hash algorithm sha1. Ignore if this is not encrypting personal information,sha1,None
+SHA1 called with parameters []. Ignore if [] does not contain personal information.,sha1,None
+RETRIEVAL call to file_get_contents("php://input").,None,None
+RETRIEVAL call to get_option("wgrl-post-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-title-prefix") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-webhook-secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta(get_the_id(), "release_tag", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta(get_the_id(), "download_zip", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta(get_the_id(), "download_zip", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta(get_the_id(), "download_zip", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta(get_the_id(), "download_tar", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-tag-post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-tag-post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-tag-post") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-webhook-secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-title-prefix") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-title-prefix") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-post-author") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wgrl-custom-post-type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta(get_the_id(), "download_zip", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta(get_the_id(), "download_tar", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+STORAGE call to wp_insert_post($new_post). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to add_post_meta($post_id, "release_tag", $data["release"]["tag_name"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to add_post_meta($post_id, "download_tar", $data["release"]["tarball_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to add_post_meta($post_id, "download_zip", $data["release"]["zipball_url"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

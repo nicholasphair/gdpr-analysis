@@ -1,0 +1,762 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on tractis-identity-verifications
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.322537.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.860875.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 112 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.592717.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.605905.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 314 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.712205.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.525785.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.079218.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 150 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.946495.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2483
+Added 1906 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2483
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.142110.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/tractis_auth.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/tractis_comment.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/tractis_model.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/tractis_profile.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/tractis_ui.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/tractis_user.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/tractis_wigdet.php' cannot be parsed correct.
+Added new directory node for: docs
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/docs/faq.html
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/docs/faq.html' cannot be parsed correct.
+Added new directory node for: docs
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/docs/install.html
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/docs/install.html' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/inc/httplib.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/views/edit_wp_profile.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/views/ui_settings.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/tractis-identity-verifications/views/widget.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.217763.
+
+6 Nodes Created
+112 PHP_REACHES edges created
+1 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2370 PHP_REACHES edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2489 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 907 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.083890.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.801704.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 33 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.782912.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 44 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.152987.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.096204.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.275687.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.013638.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.036755.
+
+77 PHP_REACHES edges created
+77 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 71 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.136028.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+6 SQL operations to process.
+SELECT * FROM $this->model->get_users_table_name() WHERE tractis_auth_userid = '$this_prefixhash("md5", $params["tractis:attribute:dni"] . $params["tractis:attribute:name"])'
+SQL command (SELECT * FROM $this->model->get_users_table_name() WHERE tractis_auth_userid = '$this_prefixhash("md5", $params["tractis:attribute:dni"] . $params["tractis:attribute:name"])') cannot be parsed correct.
+SELECT * FROM $this->model->get_users_table_name() WHERE ID = $id
+SQL command (SELECT * FROM $this->model->get_users_table_name() WHERE ID = $id) cannot be parsed correct.
+SELECT * FROM $wpdb wpcomments, $wpdb posts WHERE wpcomments.comment_post_ID=posts.ID AND wpcomments.comment_ID = $id
+SELECT * FROM $wpdb wpcomments, $wpdb posts WHERE wpcomments.comment_post_ID=posts.ID AND wpcomments.comment_ID = $id
+SQL command (SELECT * FROM $wpdb wpcomments, $wpdb posts WHERE wpcomments.comment_post_ID=posts.ID AND wpcomments.comment_ID = $id) cannot be parsed correct.
+UPDATE $this->model->get_comments_table_name() SET tractis_auth_user='$this_prefixhash("md5", $params["tractis:attribute:dni"] . $params["tractis:attribute:name"])' WHERE comment_ID='$comment_ID' LIMIT 1
+SQL command (UPDATE $this->model->get_comments_table_name() SET tractis_auth_user='$this_prefixhash("md5", $params["tractis:attribute:dni"] . $params["tractis:attribute:name"])' WHERE comment_ID='$comment_ID' LIMIT 1) cannot be parsed correct.
+UPDATE $this->model->get_users_table_name() SET tractis_auth_userid='$this_prefixhash("md5", $params["tractis:attribute:dni"] . $params["tractis:attribute:name"])' WHERE ID=wp_insert_user($user_data) LIMIT 1
+SQL command (UPDATE $this->model->get_users_table_name() SET tractis_auth_userid='$this_prefixhash("md5", $params["tractis:attribute:dni"] . $params["tractis:attribute:name"])' WHERE ID=wp_insert_user($user_data) LIMIT 1) cannot be parsed correct.
+UPDATE $this->model->get_users_table_name() SET tractis_auth_lastlogin=date("U") WHERE ID=$this->get_user($this->user_login) LIMIT 1
+SQL command (UPDATE $this->model->get_users_table_name() SET tractis_auth_lastlogin=date("U") WHERE ID=$this->get_user($this->user_login) LIMIT 1) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [3497, 3570, 2347, 2411, 3712, 3755]
+Added 0 SQL nodes. 0 out of 6 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.624429.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<link rel="stylesheet" type="text/css" href="clean_url($css_url)" /'' cannot be parsed correct.
+HTML code '$'TRACTIS_AUTH_PLUGIN_IMAGES'' cannot be parsed correct.
+HTML code '$'TRACTIS_AUTH_PLUGIN_IMAGES'' cannot be parsed correct.
+HTML code '$'TRACTIS_AUTH_PLUGIN_IMAGES'' cannot be parsed correct.
+HTML code '$'TRACTIS_AUTH_PLUGIN_IMAGES'' cannot be parsed correct.
+HTML code '$'TRACTIS_AUTH_PLUGIN_IMAGES'' cannot be parsed correct.
+HTML code '$'TRACTIS_AUTH_PLUGIN_IMAGES'' cannot be parsed correct.
+HTML code '$'TRACTIS_AUTH_PLUGIN_IMAGES'' cannot be parsed correct.
+HTML code '$'$_SERVER_REQUEST_URI'' cannot be parsed correct.
+HTML code '$'$tractis_auth_settings_tractis_auth_api_key'' cannot be parsed correct.
+HTML code '$'TRACTIS_AUTH_PLUGIN_IMAGES'' cannot be parsed correct.
+HTML code '$'$tractis_auth_settings_tractis_auth_api_key'' cannot be parsed correct.
+HTML code '$'https://$_SERVER_SERVER_NAME$_SERVER_REQUEST_URIhttp://$_SERVER_SERVER_NAME$_SERVER_REQUEST_URI'' cannot be parsed correct.
+HTML code '$'TRACTIS_AUTH_PLUGIN_IMAGES/$tractis_auth_settings_tractis_auth_button'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'" class="button-primary" />
+        </div>        
+        
+     </form>
+ </div>
+ 
+<!-- /Tractis Identity Verifications settings user interface -->'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.481284.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.047778.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 12 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.481865.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MongoDbDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running PasswordHashingDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running HashDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPIncludedDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PHPStorageDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running MySQLiDetector
+### Start running WordpressHashingFnDetector
+### Finish running maxdbDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running PropertyDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+tractis_user.php:22
+  - hash called with unapproved hash algorithm md5. Ignore if this is not encrypting personal information 
+
+tractis_user.php:22
+  - MD5 called with parameters []. Ignore if [] does not contain personal information.
+tractis_user.php:23
+  - MD5 called with parameters [uniqid, REMOTE_ADDR, microtime, _SERVER]. Ignore if [uniqid, REMOTE_ADDR, microtime, _SERVER] does not contain personal information.
+tractis_user.php:179
+  - MD5 called with parameters [user_pass, userdata]. Ignore if [user_pass, userdata] does not contain personal information. 
+
+inc/httplib.php:114
+  - RETRIEVAL call to fread($this->_fp, 1024).
+  - Data types: file 
+
+inc/httplib.php:112
+  - STORAGE call to fwrite($this->_fp, $req).
+  - Data types: file 
+
+tractis_model.php:23
+  - object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_model.php:24
+  - object property '$this->usermeta_table_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_model.php:43
+  - object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_model.php:44
+  - object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_model.php:47
+  - object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_model.php:48
+  - object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_model.php:52
+  - object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_model.php:60
+  - object property '$this->usermeta_table_name' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_user.php:23
+  - object property '$this->user_pass' of personal types {'password'} is found.
+  - Data types: password
+tractis_user.php:24
+  - object property '$this->user_nicename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_user.php:39
+  - object property '$this->user_pass' of personal types {'password'} is found.
+  - Data types: password
+tractis_user.php:39
+  - object property '$user->user_pass' of personal types {'password'} is found.
+  - Data types: password
+tractis_user.php:40
+  - object property '$this->user_nicename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_user.php:40
+  - object property '$user->user_nicename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_user.php:64
+  - object property '$this->user_pass' of personal types {'password'} is found.
+  - Data types: password
+tractis_user.php:65
+  - object property '$this->user_nicename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+tractis_user.php:179
+  - object property '$userdata->user_pass' of personal types {'password'} is found.
+  - Data types: password 
+
+tractis_auth.php:33
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+tractis_auth.php:93
+  - RETRIEVAL call to get_option($setting) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+tractis_auth.php:102
+  - RETRIEVAL call to get_option($setting) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+tractis_auth.php:205
+  - RETRIEVAL call to get_usermeta($comment->user_id, "verification_url") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (mixed).
+  - Data types: user_meta
+tractis_auth.php:231
+  - RETRIEVAL call to get_option("tractis_auth_auto_aprove_comments") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+tractis_auth.php:261
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+tractis_ui.php:20
+  - RETRIEVAL call to get_option("default_role") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+tractis_user.php:33
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+tractis_user.php:50
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+tractis_user.php:60
+  - RETRIEVAL call to get_userdatabylogin($this->user_login) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_login (string). Returns (bool|object).
+  - Data types: user, user_meta
+tractis_user.php:132
+  - RETRIEVAL call to get_usermeta($id, "tractis_auth_issuer") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (mixed).
+  - Data types: user_meta
+tractis_user.php:133
+  - RETRIEVAL call to get_usermeta($id, "verification_url") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (mixed).
+  - Data types: user_meta
+tractis_user.php:146
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).
+  - Data types: user, user_meta
+tractis_user.php:179
+  - RETRIEVAL call to wp_setcookie($userdata->user_login, md5($userdata->user_pass), true, "", "", $remember). Passed arguments: 0: $username (string), 5: $remember (bool), 4: $siteurl (string), 3: $home (string), 2: $already_md5 (bool), 1: $password (string). 
+
+tractis_ui.php:32
+  - STORAGE call to update_option($setting, $_POST[$setting]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+tractis_user.php:70
+  - STORAGE call to wp_insert_user($user_data) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).
+  - Data types: user, user_meta
+tractis_user.php:74
+  - STORAGE call to update_usermeta($wpid, "tractis_auth_issuer", $this->issuer) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).
+  - Data types: user_meta
+tractis_user.php:75
+  - STORAGE call to update_usermeta($wpid, "verification_url", $this->verification_url) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).
+  - Data types: user_meta
+tractis_user.php:76
+  - STORAGE call to update_usermeta($wpid, "first_name", $this->display_name) alters data types {'first_name', 'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).
+  - Data types: first_name, user_meta 
+
+tractis_user.php:22
+  - CRYPTOGRAPHY call to hash("md5", $params["tractis:attribute:dni"] . $params["tractis:attribute:name"]). 
+
+By data type:
+file
+	PHPRetrievalDetector.fread($this->_fp, 1024) - {'file'}
+	PHPStorageDetector.fwrite($this->_fp, $req) - {'file'}
+first_name
+	WordPressStorageDetector.update_usermeta($wpid, "first_name", $this->display_name) - {'first_name', 'user_meta'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	GenericEncryptionDetector.hash("md5", $params["tractis:attribute:dni"] . $params["tractis:attribute:name"]) - set()
+	HashDetector.(unknown) - set()
+	WordPressRetrievalDetector.wp_setcookie($userdata->user_login, md5($userdata->user_pass), true, "", "", $remember) - set()
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option($setting) - {'option'}
+	WordPressRetrievalDetector.get_option($setting) - {'option'}
+	WordPressRetrievalDetector.get_option("tractis_auth_auto_aprove_comments") - {'option'}
+	WordPressRetrievalDetector.get_option("default_role") - {'option'}
+	WordPressStorageDetector.update_option($setting, $_POST[$setting]) - {'option'}
+password
+	PropertyDetector.(unknown) - {'password'}
+	PropertyDetector.(unknown) - {'password'}
+	PropertyDetector.(unknown) - {'password'}
+	PropertyDetector.(unknown) - {'password'}
+	PropertyDetector.(unknown) - {'password'}
+user
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressStorageDetector.wp_insert_user($user_data) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdatabylogin($this->user_login) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+user_meta
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressStorageDetector.wp_insert_user($user_data) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressStorageDetector.update_usermeta($wpid, "first_name", $this->display_name) - {'first_name', 'user_meta'}
+	WordPressStorageDetector.update_usermeta($wpid, "tractis_auth_issuer", $this->issuer) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_usermeta($id, "verification_url") - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_usermeta($id, "tractis_auth_issuer") - {'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_usermeta($comment->user_id, "verification_url") - {'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.wp_get_current_user() - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressStorageDetector.update_usermeta($wpid, "verification_url", $this->verification_url) - {'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_userdatabylogin($this->user_login) - {'user', 'user_meta'}
+	PropertyDetector.(unknown) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.460490.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 38 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.182115.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 3062
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 2045
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 3159
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 3650
+38 STORE_REACHES edges created
+38 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 194 nodes as PERSONAL
+In total, tainted 194 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 79 nodes as ENCRYPTED
+In total, tainted 79 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:04.834199.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:48.076717!
+CRYPTOGRAPHY call to hash("md5", $params["tractis:attribute:dni"] . $params["tractis:attribute:name"]).,None,None
+hash called with unapproved hash algorithm md5. Ignore if this is not encrypting personal information,md5,None
+MD5 called with parameters [user_pass, userdata]. Ignore if [user_pass, userdata] does not contain personal information.,md5,None
+MD5 called with parameters []. Ignore if [] does not contain personal information.,md5,None
+MD5 called with parameters [uniqid, REMOTE_ADDR, microtime, _SERVER]. Ignore if [uniqid, REMOTE_ADDR, microtime, _SERVER] does not contain personal information.,md5,None
+RETRIEVAL call to fread($this->_fp, 1024).,None,None
+STORAGE call to fwrite($this->_fp, $req).,None,None
+object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->usermeta_table_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->users_table_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->usermeta_table_name' of personal types {'user', 'user_meta'} is found.,,None
+object property '$userdata->user_pass' of personal types {'password'} is found.,,None
+object property '$this->user_pass' of personal types {'password'} is found.,,None
+object property '$this->user_nicename' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->user_pass' of personal types {'password'} is found.,,None
+object property '$user->user_pass' of personal types {'password'} is found.,,None
+object property '$user->user_nicename' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->user_nicename' of personal types {'user', 'user_meta'} is found.,,None
+object property '$this->user_pass' of personal types {'password'} is found.,,None
+object property '$this->user_nicename' of personal types {'user', 'user_meta'} is found.,,None
+RETRIEVAL call to get_option($setting) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_usermeta($comment->user_id, "verification_url") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("tractis_auth_auto_aprove_comments") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($setting) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("default_role") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_usermeta($id, "tractis_auth_issuer") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_usermeta($id, "verification_url") alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_setcookie($userdata->user_login, md5($userdata->user_pass), true, "", "", $remember). Passed arguments: 0: $username (string), 5: $remember (bool), 4: $siteurl (string), 3: $home (string), 2: $already_md5 (bool), 1: $password (string).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user', 'user_meta'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_userdatabylogin($this->user_login) alters data types {'user', 'user_meta'}. Passed arguments: 0: $user_login (string). Returns (bool|object).,None,None
+STORAGE call to update_option($setting, $_POST[$setting]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_insert_user($user_data) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).,None,None
+STORAGE call to update_usermeta($wpid, "tractis_auth_issuer", $this->issuer) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).,None,None
+STORAGE call to update_usermeta($wpid, "verification_url", $this->verification_url) alters data types {'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).,None,None
+STORAGE call to update_usermeta($wpid, "first_name", $this->display_name) alters data types {'first_name', 'user_meta'}. Passed arguments: 0: $user_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] WP User info of types (['password', 'user_meta', 'first_name', 'user']) stored through WordPress function "wp_insert_user($user_data)", found in file tractis_user.php at line 70. 
+
+[has_storage] PII of types (['first_name', 'user', 'user_meta']) stored through WordPress function "update_usermeta($wpid, "first_name", $this->display_name)", found in file tractis_user.php at line 76. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "update_usermeta($wpid, "tractis_auth_issuer", $this->issuer)", found in file tractis_user.php at line 74. 
+
+[has_storage] PII of types (['user', 'user_meta']) stored through WordPress function "update_usermeta($wpid, "verification_url", $this->verification_url)", found in file tractis_user.php at line 75. 
+
+[has_storage] Storage check is WP 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_usermeta($wpid, "first_name", $this->display_name) does not have corresponding deletion method. Storage method found in file tractis_user.php at line 76. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_usermeta($wpid, "tractis_auth_issuer", $this->issuer) does not have corresponding deletion method. Storage method found in file tractis_user.php at line 74. 
+
+[Art.17, Right to erasure] Wordpress storage of PII through update_usermeta($wpid, "verification_url", $this->verification_url) does not have corresponding deletion method. Storage method found in file tractis_user.php at line 75. 
+
+[Art.17, Right to erasure] Deletion access is NONE 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3353. Found in file tractis_user.php at line 76 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3331. Found in file tractis_user.php at line 74 
+
+[Art.15, Right to access] Data access is not strictly required for wordpress storage at node ID 3342. Found in file tractis_user.php at line 75 
+
+[Art.15, Right to access] Data access is NONE_BUT_NOT_REQUIRED 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['access', 'deletion', 'encryption', 'third_party'] 
+
+[main] Is deletion in violation? True 
+
+[main] Is access in violation? False 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? False 
+
+
+###########
+### Q&A ###
+###########
+
+1. Why is my plugin in violation against GDPR?
+
+GDPR (https://gdpr-info.eu/) aims to give citizens in the European Union (EU) control over their personal data. If a website collects or store user data, it is required to provide users functionalities to control their data, such as ones to erase or export their data. While a plugin do not directly interact with users, it may provide functionalities that collect or store personal data, which would make websites that deploy the plugin in violation against GDPR if the plugin does not provide corresponding functionalities to allow users control their personal data. Therefore, plugin developers are responsible to provide functions to manage the personal data they handle in accordance with GDPR. We list requirements by specific GDPR articles relevant to your plugin below.
+
+
+[Art. 13, Information to be provided where personal data are collected from the data subject] If a plugin collects or handles personal data, it needs to provide privacy policy texts that explain what personal data is being collected and for what purpose. The texts are meant to be added to the privacy policy of the websites that deploy the plugin. 
+
+
+            
+[Art.17, Right to erasure] If a plugin stores personal data in a custom database they create or manage, or through Wordpress's native storage functions (e.g., update_user_meta), it needs to provide methods for users to erase the data upon request. Note that deleting data for all users upon uninstallation does not satisfy the requirement. 
+
+
+            
+        
+
+2. How do I make my plugin compliant?
+
+Please refer to the fix report below to see how you can make your plugin comply with GDPR.
+
+        
+
+##################
+### Fix Report ###
+##################
+
+############################
+# Data Deletion Fix Report #
+############################
+
+This report suggests fixes to comply with the GDPR Art. 17, Right to erasure (https://gdpr-info.eu/art-17-gdpr/). The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/ for more details.
+
+1) Implement a function that deletes all the user data collected in the plugin. Sample code:
+
+
+/**
+* Removes all collected data of a user.
+*
+* @param string $email_address   email address to manipulate
+* @param int    $page            pagination
+*
+* @return array
+*/
+function tractis-identity-verifications_remove_data( $email_address, $page = 1 ) {
+    
+    $page = (int) $page;
+
+
+    //TODO: Delete the user data that was stored using Wordpress functions
+
+    //Below is the sample code for deleting user meta and may need to be modified to suit the plugin.
+    $user_id = get_user_by('email', $email_address)
+    $key = 'email' //Sample user meta key
+    if ( $customer->user_id > 0 ) {
+        //Delete user meta data by $key
+        delete_user_meta( $user_id, $key );
+    }
+        
+
+
+
+    // Tell core if we have more data to delete still
+    $done = true;
+    return array(
+        'items_removed'  => $items_removed, // true if collected data of a user is being deleted
+        'items_retained' => $items_retained, // true if certain data needs to be retained
+        'messages'       => sprintf( __( 'Data of user with email %s successfully deleted.', 'tractis-identity-verifications' ), $email_address ), // Put messages for data removal
+        'done'           => $done, // true if all the removal processes are done (all data of the user is removed)
+    );
+}
+        
+
+2) Hook the deletion function to the Wordpress's Personal Data Removal tool
+
+
+/**
+* Registers all data erasers.
+*
+* @param array $exporters
+*
+* @return mixed
+*/
+function tractis-identity-verifications_register_privacy_erasers( $erasers ) {
+    $erasers['my-plugin-slug'] = array(
+        'eraser_friendly_name' => __( '<eraser name>', 'tractis-identity-verifications' ),
+        'callback'             => 'tractis-identity-verifications_remove_data',
+    );
+    return $erasers;
+}
+        
+
+add_filter( 'wp_privacy_personal_data_erasers', 'tractis-identity-verifications_register_privacy_erasers' );
+        
+
+        
+
+#############################
+# Privacy Policy Fix Report #
+#############################
+
+This report suggests fixes to comply with the GDPR Art. 13 (https://gdpr-info.eu/art-13-gdpr/) through including a privacy notice. The report
+is based on guidelines provided by Wordpress. Refer to https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/ for more details.
+
+1) Implement a function that includes the privacy policy for the plugin and provide it to wordpress through wp_add_privacy_policy_content(). Sample code:
+
+
+/**
+* Adds a privacy policy statement.
+*/
+function tractis-identity-verifications_add_privacy_policy_content() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+        return;
+    }
+    //TODO: modify the content below to include the privacy policy for the plugin.
+    $content = '<p class="privacy-policy-tutorial">' . __( 'Some introductory content for the suggested text.', 'tractis-identity-verifications' ) . '</p>'
+            . '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'tractis-identity-verifications' ) . '</strong> '
+            . sprintf(
+                __( 'When you leave a comment on this site, we send your name, email address, IP address and comment text to example.com. Example.com does not retain your personal data. The example.com privacy policy is <a href="%1$s" target="_blank">here</a>.', 'tractis-identity-verifications' ),
+                'https://example.com/privacy-policy'
+            );
+    wp_add_privacy_policy_content( 'tractis-identity-verifications', wp_kses_post( wpautop( $content, false ) ) );
+}
+        
+
+2) Hook the privacy policy function to the Wordpress's admin initialization action.
+
+
+add_action( 'admin_init', 'tractis-identity-verifications_add_privacy_policy_content' );
+        
+
+        
+
+
+Disclaimer: The sample code provided above is only for reference and does not guarantee GDPR compliance. The recommended list of data to delete/export may not be comprehensive. 
+        
+Done.

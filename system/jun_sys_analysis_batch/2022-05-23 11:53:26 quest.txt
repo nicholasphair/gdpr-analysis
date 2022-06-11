@@ -1,0 +1,650 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on quest
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.535074.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.837151.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.284880.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.427803.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 345 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.794742.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.758994.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.127988.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 133 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.443070.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2126
+Added 1648 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2306
+Added 180 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.061278.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/quest/wp-quest-checker.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/quest/wp-quest.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.497198.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2126 PHP_REACHES edges created
+180 PHP_REACHES edges created
+2306 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 724 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.977224.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.869197.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 3 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.438321.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.161246.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.219051.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.041161.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.004604.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.039812.
+
+3 PHP_REACHES edges created
+3 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 3 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.110487.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+20 SQL operations to process.
+SELECT * FROM $wpdbwp_quest_user_quests WHERE user = $_POST_user AND notified = 0
+SQL command (SELECT * FROM $wpdbwp_quest_user_quests WHERE user = $_POST_user AND notified = 0) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_quests WHERE id = $unq_quest
+SQL command (SELECT * FROM $wpdbwp_quest_quests WHERE id = $unq_quest) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS $wpdbwp_quest_$tn_name ($tn_sql);
+SQL command (CREATE TABLE IF NOT EXISTS $wpdbwp_quest_$tn_name ($tn_sql);) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_user_quests WHERE user = $current_user ORDER BY time_completed DESC
+SQL command (SELECT * FROM $wpdbwp_quest_user_quests WHERE user = $current_user ORDER BY time_completed DESC) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_user_levels WHERE user = false
+SQL command (SELECT * FROM $wpdbwp_quest_user_levels WHERE user = false) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_levels WHERE id = $wpdb->get_row("SELECT * FROM "$user_level_tablename" WHERE user = "$userID)_level
+SQL command (SELECT * FROM $wpdbwp_quest_levels WHERE id = $wpdb->get_row("SELECT * FROM "$user_level_tablename" WHERE user = "$userID)_level) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_levels WHERE xp_req > $wpdb->get_row("SELECT * FROM "$user_level_tablename" WHERE user = "$userID)_current_xp ORDER BY xp_req ASC
+SQL command (SELECT * FROM $wpdbwp_quest_levels WHERE xp_req > $wpdb->get_row("SELECT * FROM "$user_level_tablename" WHERE user = "$userID)_current_xp ORDER BY xp_req ASC) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_quests WHERE id = $uqd_quest
+SQL command (SELECT * FROM $wpdbwp_quest_quests WHERE id = $uqd_quest) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_quests WHERE id = $uqd_quest
+SQL command (SELECT * FROM $wpdbwp_quest_quests WHERE id = $uqd_quest) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_quests WHERE id = $wpdb->get_results("SELECT * FROM "$user_quest_tablename" WHERE user = "$userID" ORDER BY time_completed DESC", ARRAY_A)_0_quest
+SQL command (SELECT * FROM $wpdbwp_quest_quests WHERE id = $wpdb->get_results("SELECT * FROM "$user_quest_tablename" WHERE user = "$userID" ORDER BY time_completed DESC", ARRAY_A)_0_quest) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_rules WHERE (page = 0 OR page = $post) AND id NOT IN ('SELECT * FROM $wpdbwp_quest_user_rules WHERE user = $current_user AND partial = 0') AND type = login
+SQL command (SELECT * FROM $wpdbwp_quest_rules WHERE (page = 0 OR page = $post) AND id NOT IN ('SELECT * FROM $wpdbwp_quest_user_rules WHERE user = $current_user AND partial = 0') AND type = login) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_user_rules WHERE user = $current_user AND partial = '1' AND rule = $rf_id
+SQL command (SELECT * FROM $wpdbwp_quest_user_rules WHERE user = $current_user AND partial = '1' AND rule = $rf_id) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_user_rules WHERE user = $current_user AND rule = $rf_id
+SQL command (SELECT * FROM $wpdbwp_quest_user_rules WHERE user = $current_user AND rule = $rf_id) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_user_rules WHERE user = $current_user AND rule = $rf_id
+SQL command (SELECT * FROM $wpdbwp_quest_user_rules WHERE user = $current_user AND rule = $rf_id) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_quests WHERE id NOT IN ('SELECT * FROM $wpdbwp_quest_user_quests WHERE user = $current_user')
+SQL command (SELECT * FROM $wpdbwp_quest_quests WHERE id NOT IN ('SELECT * FROM $wpdbwp_quest_user_quests WHERE user = $current_user')) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_user_rules WHERE (rule = $qf_rule_1) AND (user = $current_user)
+SQL command (SELECT * FROM $wpdbwp_quest_user_rules WHERE (rule = $qf_rule_1) AND (user = $current_user)) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_user_quests WHERE (user = $current_user) AND (quest = $qf_id)
+SQL command (SELECT * FROM $wpdbwp_quest_user_quests WHERE (user = $current_user) AND (quest = $qf_id)) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_user_levels WHERE user = $current_user
+SQL command (SELECT * FROM $wpdbwp_quest_user_levels WHERE user = $current_user) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_user_levels WHERE user = $current_user
+SQL command (SELECT * FROM $wpdbwp_quest_user_levels WHERE user = $current_user) cannot be parsed correct.
+SELECT * FROM $wpdbwp_quest_levels WHERE xp_req < $wpdb->get_results("SELECT * FROM "$user_level_tablename" WHERE user = "$userID, ARRAY_A)_0_current_xp ORDER BY xp_req DESC
+SQL command (SELECT * FROM $wpdbwp_quest_levels WHERE xp_req < $wpdb->get_results("SELECT * FROM "$user_level_tablename" WHERE user = "$userID, ARRAY_A)_0_current_xp ORDER BY xp_req DESC) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [73, 117, 307, 1894, 1913, 1935, 1957, 2152, 2226, 2278, 2569, 2617, 2738, 2810, 2877, 2939, 3010, 3081, 3199, 3249]
+Added 0 SQL nodes. 0 out of 20 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:08.706150.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<tr><td>mysql_fetch_array($quest_query)_name</td><td>'' cannot be parsed correct.
+HTML code '$'mysql_fetch_array($rule_fetch)_name'' cannot be parsed correct.
+HTML code '$'</td><td>mysql_fetch_array($quest_query)_xp</td><td>'' cannot be parsed correct.
+HTML code '$'mysql_fetch_array($quest_query)_icon_path'' cannot be parsed correct.
+HTML code '$'<label><input type=\'checkbox\' name=\'rules[]\' value=\'mysql_fetch_array($rule_query)_id\'> mysql_fetch_array($rule_query)_name</label><br />'' cannot be parsed correct.
+HTML code '$'<p>No rules to add. Visit the <a href=\'get_bloginfo("url")/wp-admin/admin.php?page=wp-quest\'>Rules</a> page to add some now.</p>'' cannot be parsed correct.
+HTML code '$'<tr><td>mysql_fetch_array($level_query)_name</td><td>mysql_fetch_array($level_query)_xp_req</td><td>mysql_fetch_array($level_query)_icon_path</td><tr>'' cannot be parsed correct.
+HTML code '$'<tr><td>mysql_fetch_array($rule_query)_name</td><td>mysql_fetch_array($rule_query)_type</td><td>mysql_fetch_array($rule_query)_page</td><td>mysql_fetch_array($rule_query)_num</td><tr>'' cannot be parsed correct.
+HTML code '$'$page'' cannot be parsed correct.
+HTML code '$'$page'' cannot be parsed correct.
+HTML code '$'$post'' cannot be parsed correct.
+HTML code '$'$post'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_title'' cannot be parsed correct.
+HTML code '$'<h3 class="widget-title">$current_user</h3>'' cannot be parsed correct.
+HTML code '$'$after_title'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM "$level_tablename" WHERE id = "$current_level_id)_name'' cannot be parsed correct.
+HTML code '$'<div class="wp_quest_current_user_xp"><span class="wp_quest_display_section_title">Current XP: </span><span class="wp_quest_current_user_xp_val">$wpdb->get_row("SELECT * FROM "$user_level_tablename" WHERE user = "$userID)_current_xp</span></div>'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM "$user_level_tablename" WHERE user = "$userID)_current_xp'' cannot be parsed correct.
+HTML code '$'<span class="wp_quest_current_user_individual_quest">$wpdb->get_row("SELECT * FROM "$quest_tablename" WHERE id = "$this_quest_id)_name</span>'' cannot be parsed correct.
+HTML code '$'<span class="wp_quest_current_user_individual_quest">$wpdb->get_row("SELECT * FROM "$quest_tablename" WHERE id = "$this_quest_id)_name</span>'' cannot be parsed correct.
+HTML code '$'<span class="wp_quest_current_user_individual_quest">$wpdb->get_row("SELECT * FROM "$quest_tablename" WHERE id = "$this_quest_id)_name</span>'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'$fallback'' cannot be parsed correct.
+HTML code '$'This widget uses the options set in <a href=get_bloginfo("url")/wp-admin/admin.php?page=wp-quest-settings">WordPress Quest Settings</a'' cannot be parsed correct.
+HTML code '$'<h2>Quests</h2>'' cannot be parsed correct.
+HTML code '$'<table class=\'widefat\'>
+		<tr><th scope=\'col\' class=\'column-name\'>Quest name</th><th scope=\'col\' class=\'column-name\'>Quest Rules</th><th scope=\'col\' class=\'column-name\'>XP</th><th scope=\'col\' class=\'column-name\'>Path to icon</th></tr>'' cannot be parsed correct.
+HTML code '$', '' cannot be parsed correct.
+HTML code '$'None'' cannot be parsed correct.
+HTML code '$'</td><tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<p>No Quests so far. Why not add one now?</p>'' cannot be parsed correct.
+HTML code '$'<h2>Levels</h2>'' cannot be parsed correct.
+HTML code '$'<table class=\'widefat\'>
+		<tr><th scope=\'col\' class=\'column-name\'>Level name</th><th scope=\'col\' class=\'column-name\'>XP Requirement</th><th scope=\'col\' class=\'column-name\'>Path to icon</th></tr>'' cannot be parsed correct.
+HTML code '$'<h2>Rules</h2>'' cannot be parsed correct.
+HTML code '$'<table class=\'widefat\'>
+		<tr><th scope=\'col\' class=\'column-name\'>Rule name</th><th scope=\'col\' class=\'column-name\'>Rule type</th><th scope=\'col\' class=\'column-name\'>On Page</th><th scope=\'col\' class=\'column-name\'>Number of times required</th></tr>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<p>No rules so far. Why not add one now?</p>'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'<p>No levels so far. Why not add one now?</p>'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'checked'' cannot be parsed correct.
+HTML code '$'<h2>Quest Analytics</h2><p>Quest Analytics are coming soon, rest assured your data is being saved!</p>'' cannot be parsed correct.
+HTML code '$'<div class="wordpress-quest">'' cannot be parsed correct.
+HTML code '$'<div class="wp_quest_current_user_level"><span class="wp_quest_display_section_title">Level: </span><span class="wp_quest_current_user_level_val">'' cannot be parsed correct.
+HTML code '$'</span></div>'' cannot be parsed correct.
+HTML code '$'<div class="wp_quest_current_user_distance"><span class="wp_quest_display_section_title">Distance to Next Level: </span><span class="wp_quest_current_user_distance_val">'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'</span></div>'' cannot be parsed correct.
+HTML code '$'<div class="wp_quest_current_user_all_quests"><span class="wp_quest_display_section_title">All Completed Quests: </span>'' cannot be parsed correct.
+HTML code '$'<span class=\'wp_quest_level_list_comma\'>, </span>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div class="wp_quest_current_user_recent_quests"><span class="wp_quest_display_section_title">Recent Quests: </span>'' cannot be parsed correct.
+HTML code '$'<span class=\'wp_quest_level_list_comma\'>, </span>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div class="wp_quest_current_user_last_quests"><span class="wp_quest_display_section_title">Last Completed Quest: </span>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:17.810827.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.043870.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 8 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.459606.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running CubridDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running InformixDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running FirebirdInterBaseDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running UserInputDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running MySQLiDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running WordPressStorageDetector
+Error in GenericDatabaseUsageDetector:
+### Finish running VariableDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+wp-quest-checker.php:12
+  - variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest-checker.php:14
+  - variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest-checker.php:18
+  - variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest-checker.php:30
+  - variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:634
+  - variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:635
+  - variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:638
+  - variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:639
+  - variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:757
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:759
+  - variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:761
+  - variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:782
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:795
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:804
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:817
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:830
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:833
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:853
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:856
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:872
+  - variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:886
+  - variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:903
+  - variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:906
+  - variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:921
+  - variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:927
+  - variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:941
+  - variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:961
+  - variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta
+wp-quest.php:971
+  - variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.
+  - Data types: user, user_meta 
+
+wp-quest.php:106
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+wp-quest.php:263
+  - RETRIEVAL call to get_posts(). Returns (WP_Post[]|int[]).
+wp-quest.php:536
+  - RETRIEVAL call to get_option("level") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:537
+  - RETRIEVAL call to get_option("xp") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:538
+  - RETRIEVAL call to get_option("distance") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:539
+  - RETRIEVAL call to get_option("quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:540
+  - RETRIEVAL call to get_option("recent-quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:541
+  - RETRIEVAL call to get_option("last-quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:619
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).
+  - Data types: user, user_meta
+wp-quest.php:648
+  - RETRIEVAL call to get_option("level") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:649
+  - RETRIEVAL call to get_option("xp") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:650
+  - RETRIEVAL call to get_option("distance") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:651
+  - RETRIEVAL call to get_option("quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:652
+  - RETRIEVAL call to get_option("recent-quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:653
+  - RETRIEVAL call to get_option("last-quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-quest.php:755
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).
+  - Data types: user, user_meta
+wp-quest.php:1001
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).
+  - Data types: user, user_meta 
+
+wp-quest.php:109
+  - STORAGE call to add_option("wp_quest_db_version", $wp_quest_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.get_posts() - set()
+option
+	WordPressRetrievalDetector.get_option("distance") - {'option'}
+	WordPressRetrievalDetector.get_option("xp") - {'option'}
+	WordPressStorageDetector.add_option("wp_quest_db_version", $wp_quest_db_version) - {'option'}
+	WordPressRetrievalDetector.get_option("last-quest") - {'option'}
+	WordPressRetrievalDetector.get_option("last-quest") - {'option'}
+	WordPressRetrievalDetector.get_option("quest") - {'option'}
+	WordPressRetrievalDetector.get_option("distance") - {'option'}
+	WordPressRetrievalDetector.get_option("level") - {'option'}
+	WordPressRetrievalDetector.get_option("recent-quest") - {'option'}
+	WordPressRetrievalDetector.get_option("level") - {'option'}
+	WordPressRetrievalDetector.get_option("quest") - {'option'}
+	WordPressRetrievalDetector.get_option("recent-quest") - {'option'}
+	WordPressRetrievalDetector.get_option("xp") - {'option'}
+user
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+user_meta
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+	VariableDetector.(unknown) - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.706081.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 12 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.259951.
+
+12 STORE_REACHES edges created
+12 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 182 nodes as PERSONAL
+In total, tainted 182 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:02.963482.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:55.382158!
+variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_rules_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_quest_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.,,None
+variable '$user_level_tablename' of personal types {'user', 'user_meta'} is found.,,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_posts(). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_option("level") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("xp") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("distance") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("recent-quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("last-quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_option("level") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("xp") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("distance") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("recent-quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("last-quest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).,None,None
+STORAGE call to add_option("wp_quest_db_version", $wp_quest_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

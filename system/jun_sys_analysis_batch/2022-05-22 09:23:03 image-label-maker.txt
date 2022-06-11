@@ -1,0 +1,418 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on image-label-maker
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.414408.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.004414.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.282497.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.558292.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 181 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.798393.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.560975.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.087478.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 101 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.757881.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1044
+Added 762 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1044
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.980012.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/image-label-maker/image-label-maker.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.391851.
+
+1000 PHP_REACHES edges created
+1044 PHP_REACHES edges created
+1044 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 382 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.934446.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.161774.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.436289.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.170887.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.007613.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.041359.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005322.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.050231.
+
+1 PHP_REACHES edges created
+1 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.140186.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.149304.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'1024sanitize_text_field(intval(get_option("filesize_imglbl")))'' cannot be parsed correct.
+HTML code '$'60sanitize_text_field(intval(get_option("deletetime_imglbl")))'' cannot be parsed correct.
+HTML code '$'<form class="imagelabelmaker" action="$_SERVER_REQUEST_URI" method="post" enctype="multipart/form-data">'' cannot be parsed correct.
+HTML code '$'<label>Main Image</label> <small>(jpg,jpeg,png|Max size:intval(get_option("filesize_imglbl")) KB|required)</small><br/>'' cannot be parsed correct.
+HTML code '$'<label>Label Image</label> <small>(jpg,jpeg,png|Max size:intval(get_option("filesize_imglbl")) KB|required)</small> <br/>'' cannot be parsed correct.
+HTML code '$'<label>Answer:</label>  rand(21, 80) + rand(1, 20) ? <br/>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="img-human" value="rand(21, 80)"/'' cannot be parsed correct.
+HTML code '$'<form action=$_SERVER_REQUEST_URI" method="post"><input type="submit" class="backbtn" name="backbutton" value="Back" /></form>'' cannot be parsed correct.
+HTML code '$'  </td></tr>
+                </tbody>
+                </table>
+        </form>
+'' cannot be parsed correct.
+HTML code '$'You don\'t have enough permission'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'<input type="file" name="img-main" accept=".jpg,.jpeg,.png"  required/>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'<input type="file" name="img-label" accept=".jpg,.jpeg,.png"  required/>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<p><input type="checkbox" name="trans-png" value="1">  Label Image is a png file with transparent background</p>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'<label>Place label at</label><br/>'' cannot be parsed correct.
+HTML code '$'<select name="img-position" />'' cannot be parsed correct.
+HTML code '$'<option value="0" selected>Center</option>'' cannot be parsed correct.
+HTML code '$'<option value="1">Top-left corner</option>'' cannot be parsed correct.
+HTML code '$'<option value="2">Bottom-left corner</option>'' cannot be parsed correct.
+HTML code '$'<option value="3">Top-right corner</option>'' cannot be parsed correct.
+HTML code '$'<option value="4">Bottom-right corner</option>'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'<label>Distance of label image from corners</label><br/>'' cannot be parsed correct.
+HTML code '$'<input type="number" value="10" min="0" step="1" name="img-margin" required/>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'<label>Label image transparency</label><br/>'' cannot be parsed correct.
+HTML code '$'<input type="number" value="50" min="0" step="1" max="100" name="img-trans" required/>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<p>'' cannot be parsed correct.
+HTML code '$'<label>Output Type</label><br/>'' cannot be parsed correct.
+HTML code '$'<input type="radio" value="0" name="img-type" checked/>jpg'' cannot be parsed correct.
+HTML code '$'<input type="radio" value="1" name="img-type" />png'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<input type="text" name="img-answer" pattern="[0-9]{1,3}" title="invalid value" required/>'' cannot be parsed correct.
+HTML code '$'</p>'' cannot be parsed correct.
+HTML code '$'<p><input type="submit" name="label-maker-submitted" value="Generate"></p>'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'<br/>'' cannot be parsed correct.
+HTML code '$'<p class="imglblerror">You do not have enough permission to access this item</p>'' cannot be parsed correct.
+HTML code '$'<p class="imglblerror">The files were not uploaded correctly</p>'' cannot be parsed correct.
+HTML code '$'<p class="imglblerror">Sorry, This type of files are not supported</p>'' cannot be parsed correct.
+HTML code '$'<p class="imglblerror">Error: Images size is large</p>'' cannot be parsed correct.
+HTML code '$'<p class="imglblerror">Please enter the correct answer!</p>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.242749.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.055939.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.410787.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running Sqlite3Detector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressStorageDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running maxdbDetector
+### Start running UninstallDetector
+### Finish running MySQLiDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+image-label-maker.php:50
+  - RETRIEVAL call to get_option("access_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:51
+  - RETRIEVAL call to get_option("access_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:53
+  - RETRIEVAL call to get_option("question_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:54
+  - RETRIEVAL call to get_option("question_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:56
+  - RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:56
+  - RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:58
+  - RETRIEVAL call to get_option("deletetime_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:58
+  - RETRIEVAL call to get_option("deletetime_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:77
+  - RETRIEVAL call to get_option("access_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:92
+  - RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:96
+  - RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:123
+  - RETRIEVAL call to get_option("question_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:166
+  - RETRIEVAL call to get_option("question_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:180
+  - RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:286
+  - RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).
+  - Data types: user_meta, user
+image-label-maker.php:338
+  - RETRIEVAL call to get_option("deletetime_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image-label-maker.php:338
+  - RETRIEVAL call to get_option("deletetime_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("filesize_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("question_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("question_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("access_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("access_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("deletetime_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("filesize_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("deletetime_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("filesize_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("question_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("deletetime_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("access_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("filesize_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("question_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("filesize_imglbl") - {'option'}
+	WordPressRetrievalDetector.get_option("deletetime_imglbl") - {'option'}
+user
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+user_meta
+	WordPressRetrievalDetector.wp_get_current_user() - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.341915.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.180675.
+
+!!!!!!!!!!Assumption violated. request variable is assigned to multiple variable at the same time. Check 1381
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 30 nodes as PERSONAL
+In total, tainted 30 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.574102.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:26.007467!
+RETRIEVAL call to get_option("question_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("question_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to wp_get_current_user() alters data types {'user_meta', 'user'}. Returns (WP_User).,None,None
+RETRIEVAL call to get_option("deletetime_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("deletetime_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("access_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("access_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("question_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("question_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("deletetime_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("deletetime_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("access_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("filesize_imglbl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,604 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on google-news-sitemap
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.368511.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.839864.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.242915.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.524558.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 128 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.820042.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.711253.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.102721.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 85 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.766624.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 946
+Added 733 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 946
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.004861.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/google-news-sitemap/apgnsm.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.172708.
+
+946 PHP_REACHES edges created
+946 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 356 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.129504.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.974373.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.429861.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 8 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.180040.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.053034.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.048594.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012567.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.041564.
+
+9 PHP_REACHES edges created
+9 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.157845.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+SELECT * FROM $wpdb WHERE `post_status`='publish'
+				AND post_modified_gmt >= ( NOW() - INTERVAL 48 HOUR ) AND (`post_type`='page' OR `post_type`='post')   AND `ID` NOT IN ( get_option("apgnsm_n_excludepostlist")) GROUP BY `ID` ORDER BY `post_modified_gmt` DESC
+SQL command (SELECT * FROM $wpdb WHERE `post_status`='publish' AND post_modified_gmt >= ( NOW() - INTERVAL 48 HOUR ) AND (`post_type`='page' OR `post_type`='post') AND `ID` NOT IN ( get_option("apgnsm_n_excludepostlist")) GROUP BY `ID` ORDER BY `post_modified_gmt` DESC) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [838]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.757355.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'Error: there is a problem with <em>sitemap-news.xml</em>. It doesn\'t exist or is not writable. <a href="http://www.andreapernici.com/wordpress/google-news-sitemap/" target="_blank" >For help see the plugin\'s homepage</a>.'' cannot be parsed correct.
+HTML code '$'$_SERVER_REQUEST_URI'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'get_option("apgnsm_n_name")'' cannot be parsed correct.
+HTML code '$'get_option("apgnsm_n_lang")'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'get_option("apgnsm_path")'' cannot be parsed correct.
+HTML code '$'get_option("apgnsm_n_excludepostlist")'' cannot be parsed correct.
+HTML code '$'" /></label></li>
+										<li><label for="apgnsm_n_lang">Your Article Language (it, en, es...): <input name="apgnsm_n_lang" type="text" id="apgnsm_n_lang" value="'' cannot be parsed correct.
+HTML code '$'" /></label></li>
+										<li>
+											<label for="apgnsm_n_genres">
+												<input name="apgnsm_n_genres" type="checkbox" id="apgnsm_n_genres" value="1" '' cannot be parsed correct.
+HTML code '$'" />
+											</label>
+										</li>
+									</ul>
+
+								</div>
+							</div>
+							<!-- Excluded Items -->
+
+							<div id="sm_excludes" class="postbox">
+								<h3 class="hndle"><span>Escludi elementi</span></h3>
+
+								<div class="inside">
+
+									<b>Exclude Category:</b>
+
+									'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.452061.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.049843.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.425215.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MsqlDetector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MongoDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running PHPStorageDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finished running detectors
+apgnsm.php:91
+  - STORAGE call to fwrite($fp, "<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:n="http://www.google.com/schemas/sitemap-news/0.9" />").
+  - Data types: file
+apgnsm.php:243
+  - STORAGE call to fwrite($fp, $xml_sitemap_google_news).
+  - Data types: file 
+
+apgnsm.php:56
+  - RETRIEVAL call to get_option("apgnsm_news_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:57
+  - RETRIEVAL call to get_option("apgnsm_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:59
+  - RETRIEVAL call to get_option("apgnsm_n_name", "<n:name>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+apgnsm.php:60
+  - RETRIEVAL call to get_option("apgnsm_n_lang", "<n:language>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+apgnsm.php:61
+  - RETRIEVAL call to get_option("apgnsm_n_access", "<n:access>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+apgnsm.php:62
+  - RETRIEVAL call to get_option("apgnsm_n_genres", "<n:genres>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+apgnsm.php:80
+  - RETRIEVAL call to get_option("apgnsm_news_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:82
+  - RETRIEVAL call to get_option("apgnsm_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:152
+  - RETRIEVAL call to get_option("apgnsm_news_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:153
+  - RETRIEVAL call to get_option("apgnsm_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:155
+  - RETRIEVAL call to get_option("apgnsm_n_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:156
+  - RETRIEVAL call to get_option("apgnsm_n_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:158
+  - RETRIEVAL call to get_option("apgnsm_n_genres") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:159
+  - RETRIEVAL call to get_option("apgnsm_n_genres_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:161
+  - RETRIEVAL call to get_option("apgnsm_n_access") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:162
+  - RETRIEVAL call to get_option("apgnsm_n_access_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:165
+  - RETRIEVAL call to get_option("apgnsm_n_excludecatlist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:166
+  - RETRIEVAL call to get_option("apgnsm_n_excludepostlist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:190
+  - RETRIEVAL call to get_option("home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:248
+  - RETRIEVAL call to get_option("apgnsm_last_ping") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:304
+  - RETRIEVAL call to get_option("apgnsm_news_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:305
+  - RETRIEVAL call to get_option("apgnsm_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:306
+  - RETRIEVAL call to get_option("apgnsm_n_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:307
+  - RETRIEVAL call to get_option("apgnsm_n_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:308
+  - RETRIEVAL call to get_option("apgnsm_n_genres") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:309
+  - RETRIEVAL call to get_option("apgnsm_n_genres_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:310
+  - RETRIEVAL call to get_option("apgnsm_n_access") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:311
+  - RETRIEVAL call to get_option("apgnsm_n_access_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:312
+  - RETRIEVAL call to get_option("apgnsm_n_excludepostlist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+apgnsm.php:478
+  - RETRIEVAL call to get_option("apgnsm_n_excludecatlist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+apgnsm.php:32
+  - STORAGE call to add_option("apgnsm_news_active", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:33
+  - STORAGE call to add_option("apgnsm_tags", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:34
+  - STORAGE call to add_option("apgnsm_path", "./") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:35
+  - STORAGE call to add_option("apgnsm_last_ping", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:37
+  - STORAGE call to add_option("apgnsm_n_name", "Your Google News Name") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:38
+  - STORAGE call to add_option("apgnsm_n_lang", "it") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:40
+  - STORAGE call to add_option("apgnsm_n_genres", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:41
+  - STORAGE call to add_option("apgnsm_n_genres_type", "blog") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:43
+  - STORAGE call to add_option("apgnsm_n_access", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:44
+  - STORAGE call to add_option("apgnsm_n_access_type", "Subscription") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:47
+  - STORAGE call to add_option("apgnsm_n_excludecatlist", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:48
+  - STORAGE call to add_option("apgnsm_n_excludepostlist", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:253
+  - STORAGE call to update_option("apgnsm_last_ping", time()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:265
+  - STORAGE call to update_option("apgnsm_news_active", $_POST["apgnsm_news_active"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:266
+  - STORAGE call to update_option("apgnsm_n_name", $_POST["apgnsm_n_name"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:267
+  - STORAGE call to update_option("apgnsm_n_lang", $_POST["apgnsm_n_lang"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:268
+  - STORAGE call to update_option("apgnsm_n_access", $_POST["apgnsm_n_access"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:269
+  - STORAGE call to update_option("apgnsm_n_genres", $_POST["apgnsm_n_genres"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:270
+  - STORAGE call to update_option("apgnsm_n_excludecat", $_POST["apgnsm_n_excludecat"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:271
+  - STORAGE call to update_option("apgnsm_n_excludepostlist", $_POST["apgnsm_n_excludepostlist"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:277
+  - STORAGE call to update_option("apgnsm_path", $newPath) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:285
+  - STORAGE call to update_option("apgnsm_n_genres_type", $_POST["apgnsm_n_genres_type"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:287
+  - STORAGE call to update_option("apgnsm_n_genres_type", "blog") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:290
+  - STORAGE call to update_option("apgnsm_n_access_type", $_POST["apgnsm_n_access_type"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:291
+  - STORAGE call to update_option("apgnsm_n_access_type", "Subscription") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+apgnsm.php:298
+  - STORAGE call to update_option("apgnsm_n_excludecatlist", $exCats) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.fwrite($fp, $xml_sitemap_google_news) - {'file'}
+	PHPStorageDetector.fwrite($fp, "<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:n="http://www.google.com/schemas/sitemap-news/0.9" />") - {'file'}
+option
+	WordPressRetrievalDetector.get_option("apgnsm_n_lang", "<n:language>") - {'option'}
+	WordPressRetrievalDetector.get_option("home") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_news_active") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_path", "./") - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_lang", $_POST["apgnsm_n_lang"]) - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_last_ping", time()) - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_access", $_POST["apgnsm_n_access"]) - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_excludecatlist", $exCats) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_lang") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_news_active") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_n_name", "Your Google News Name") - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_news_active", $_POST["apgnsm_news_active"]) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_news_active") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_n_excludepostlist", "") - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_name", $_POST["apgnsm_n_name"]) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_genres", "<n:genres>") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_news_active", true) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_excludecatlist") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_n_access_type", "Subscription") - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_genres", $_POST["apgnsm_n_genres"]) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_access") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_path") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_path") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_genres_type") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_access") - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_excludepostlist", $_POST["apgnsm_n_excludepostlist"]) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_excludepostlist") - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_excludecat", $_POST["apgnsm_n_excludecat"]) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_name") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_genres_type") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_path") - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_access_type", "Subscription") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_access_type") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_n_access", false) - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_tags", true) - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_last_ping", 0) - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_path", $newPath) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_access", "<n:access>") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_genres") - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_access_type", $_POST["apgnsm_n_access_type"]) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_path") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_excludecatlist") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_n_genres", false) - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_genres_type", $_POST["apgnsm_n_genres_type"]) - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_lang") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_excludepostlist") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_name", "<n:name>") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_n_genres_type", "blog") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_access_type") - {'option'}
+	WordPressStorageDetector.update_option("apgnsm_n_genres_type", "blog") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_name") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_n_excludecatlist", "") - {'option'}
+	WordPressStorageDetector.add_option("apgnsm_n_lang", "it") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_n_genres") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_news_active") - {'option'}
+	WordPressRetrievalDetector.get_option("apgnsm_last_ping") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.276754.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 780 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.408181.
+
+780 STORE_REACHES edges created
+780 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.008631.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:28.916443!
+STORAGE call to fwrite($fp, $xml_sitemap_google_news).,None,None
+STORAGE call to fwrite($fp, "<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:n="http://www.google.com/schemas/sitemap-news/0.9" />").,None,None
+RETRIEVAL call to get_option("apgnsm_news_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_genres") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_genres_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_access") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_access_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_excludecatlist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_excludepostlist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_last_ping") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_news_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_lang") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_genres") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_genres_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_access") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_access_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_excludepostlist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_excludecatlist") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_news_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_name", "<n:name>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_lang", "<n:language>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_access", "<n:access>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_n_genres", "<n:genres>") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_news_active") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("apgnsm_path") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("apgnsm_last_ping", time()) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_news_active", $_POST["apgnsm_news_active"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_name", $_POST["apgnsm_n_name"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_lang", $_POST["apgnsm_n_lang"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_access", $_POST["apgnsm_n_access"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_genres", $_POST["apgnsm_n_genres"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_excludecat", $_POST["apgnsm_n_excludecat"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_excludepostlist", $_POST["apgnsm_n_excludepostlist"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_path", $newPath) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_genres_type", $_POST["apgnsm_n_genres_type"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_genres_type", "blog") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_access_type", $_POST["apgnsm_n_access_type"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_access_type", "Subscription") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("apgnsm_n_excludecatlist", $exCats) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_news_active", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_tags", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_path", "./") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_last_ping", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_n_name", "Your Google News Name") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_n_lang", "it") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_n_genres", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_n_genres_type", "blog") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_n_access", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_n_access_type", "Subscription") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_n_excludecatlist", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("apgnsm_n_excludepostlist", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

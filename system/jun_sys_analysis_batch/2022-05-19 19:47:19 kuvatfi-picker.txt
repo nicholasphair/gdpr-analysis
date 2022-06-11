@@ -1,0 +1,430 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on kuvatfi-picker
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.691096.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.886636.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.476478.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.707788.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 212 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.784136.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.610944.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.109447.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 96 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.013586.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1534
+Added 1226 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2619
+Added 1085 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.140537.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/kuvatfi-picker/kuvatfi.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.210255.
+
+1000 PHP_REACHES edges created
+1534 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1085 PHP_REACHES edges created
+2619 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 566 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.948175.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.122104.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 41 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.169544.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 97 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.187494.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005465.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.610926.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.023229.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.040107.
+
+138 PHP_REACHES edges created
+138 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 41 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.163229.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.145468.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_option("kuvatfi_option_apikey")'' cannot be parsed correct.
+HTML code '$'file_get_contents($url)'' cannot be parsed correct.
+HTML code '$'<meta http-equiv="refresh" content="0" />'' cannot be parsed correct.
+HTML code '$'<meta http-equiv="refresh" content="0" />'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:00.766165.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.052149.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 12 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.785192.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PhpVarDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running SqlServerDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running maxdbDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running PHPRetrievalDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finished running detectors
+kuvatfi.php:322
+  - RETRIEVAL call to file_get_contents($url).
+  - Data types: file
+kuvatfi.php:584
+  - RETRIEVAL call to file_get_contents($url).
+  - Data types: file 
+
+kuvatfi.php:117
+  - RETRIEVAL call to get_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+kuvatfi.php:170
+  - RETRIEVAL call to get_transient("kuvatfi_sid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+kuvatfi.php:171
+  - RETRIEVAL call to get_transient("kuvatfi_uid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+kuvatfi.php:172
+  - RETRIEVAL call to get_transient("kuvatfi_validated") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+kuvatfi.php:217
+  - RETRIEVAL call to get_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+kuvatfi.php:269
+  - RETRIEVAL call to get_transient("kuvatfi_lastgallery") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+kuvatfi.php:340
+  - RETRIEVAL call to get_transient("kuvatfi_foldertree") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site 
+
+kuvatfi.php:183
+  - STORAGE call to set_transient("kuvatfi_validated", true, 60 * 60) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+kuvatfi.php:201
+  - STORAGE call to set_transient("kuvatfi_sid", $sid) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).
+  - Data types: site
+kuvatfi.php:231
+  - STORAGE call to set_transient("kuvatfi_uid", $uid) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).
+  - Data types: site
+kuvatfi.php:247
+  - STORAGE call to delete_transient("kuvatfi_lastgallery") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:248
+  - STORAGE call to delete_transient("kuvatfi_foldertree") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:249
+  - STORAGE call to delete_transient("kuvatfi_validated") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:250
+  - STORAGE call to delete_transient("kuvatfi_sid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:251
+  - STORAGE call to delete_transient("kuvatfi_uid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:253
+  - STORAGE call to delete_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+kuvatfi.php:361
+  - STORAGE call to set_transient("kuvatfi_foldertree", $foldersForGallery, 60 * 15) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+kuvatfi.php:385
+  - STORAGE call to delete_transient("kuvatfi_foldertree") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:504
+  - STORAGE call to wp_update_post($update). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).
+kuvatfi.php:507
+  - STORAGE call to update_post_meta($attid, "_wp_attachment_image_alt", $path["filename"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+kuvatfi.php:533
+  - STORAGE call to set_transient("kuvatfi_lastgallery", $host) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).
+  - Data types: site 
+
+kuvatfi.php:253
+  - DELETION call to delete_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+kuvatfi.php:247
+  - Uninstall deletion call: DELETION call to delete_transient("kuvatfi_lastgallery") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:248
+  - Uninstall deletion call: DELETION call to delete_transient("kuvatfi_foldertree") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:249
+  - Uninstall deletion call: DELETION call to delete_transient("kuvatfi_validated") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:250
+  - Uninstall deletion call: DELETION call to delete_transient("kuvatfi_sid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:251
+  - Uninstall deletion call: DELETION call to delete_transient("kuvatfi_uid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).
+  - Data types: site
+kuvatfi.php:253
+  - Uninstall deletion call: DELETION call to delete_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents($url) - {'file'}
+	PHPRetrievalDetector.file_get_contents($url) - {'file'}
+none
+	WordPressStorageDetector.wp_update_post($update) - set()
+option
+	UninstallDetector.delete_option("kuvatfi_option_apikey") - {'option'}
+	WordPressRetrievalDetector.get_option("kuvatfi_option_apikey") - {'option'}
+	WordPressRetrievalDetector.get_option("kuvatfi_option_apikey") - {'option'}
+	DeletionDetector.delete_option("kuvatfi_option_apikey") - {'option'}
+	WordPressStorageDetector.delete_option("kuvatfi_option_apikey") - {'option'}
+post_meta
+	WordPressStorageDetector.update_post_meta($attid, "_wp_attachment_image_alt", $path["filename"]) - {'post_meta'}
+site
+	UninstallDetector.delete_transient("kuvatfi_foldertree") - {'site'}
+	WordPressRetrievalDetector.get_transient("kuvatfi_foldertree") - {'site'}
+	WordPressStorageDetector.delete_transient("kuvatfi_validated") - {'site'}
+	UninstallDetector.delete_transient("kuvatfi_sid") - {'site'}
+	WordPressRetrievalDetector.get_transient("kuvatfi_sid") - {'site'}
+	WordPressStorageDetector.delete_transient("kuvatfi_foldertree") - {'site'}
+	WordPressStorageDetector.delete_transient("kuvatfi_foldertree") - {'site'}
+	WordPressStorageDetector.delete_transient("kuvatfi_lastgallery") - {'site'}
+	UninstallDetector.delete_transient("kuvatfi_validated") - {'site'}
+	WordPressRetrievalDetector.get_transient("kuvatfi_lastgallery") - {'site'}
+	WordPressStorageDetector.set_transient("kuvatfi_validated", true, 60 * 60) - {'site'}
+	WordPressStorageDetector.set_transient("kuvatfi_sid", $sid) - {'site'}
+	WordPressRetrievalDetector.get_transient("kuvatfi_uid") - {'site'}
+	WordPressRetrievalDetector.get_transient("kuvatfi_validated") - {'site'}
+	UninstallDetector.delete_transient("kuvatfi_lastgallery") - {'site'}
+	WordPressStorageDetector.set_transient("kuvatfi_foldertree", $foldersForGallery, 60 * 15) - {'site'}
+	WordPressStorageDetector.delete_transient("kuvatfi_sid") - {'site'}
+	WordPressStorageDetector.delete_transient("kuvatfi_uid") - {'site'}
+	UninstallDetector.delete_transient("kuvatfi_uid") - {'site'}
+	WordPressStorageDetector.set_transient("kuvatfi_uid", $uid) - {'site'}
+	WordPressStorageDetector.set_transient("kuvatfi_lastgallery", $host) - {'site'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.114563.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 57 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.179671.
+
+57 STORE_REACHES edges created
+57 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006481.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:26.754704!
+DELETION call to delete_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to file_get_contents($url).,None,None
+RETRIEVAL call to file_get_contents($url).,None,None
+Uninstall deletion call: DELETION call to delete_transient("kuvatfi_lastgallery") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_transient("kuvatfi_foldertree") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_transient("kuvatfi_validated") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_transient("kuvatfi_sid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_transient("kuvatfi_uid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("kuvatfi_sid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("kuvatfi_uid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("kuvatfi_validated") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("kuvatfi_lastgallery") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("kuvatfi_foldertree") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+STORAGE call to set_transient("kuvatfi_validated", true, 60 * 60) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to set_transient("kuvatfi_sid", $sid) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to set_transient("kuvatfi_uid", $uid) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_transient("kuvatfi_lastgallery") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to delete_transient("kuvatfi_foldertree") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to delete_transient("kuvatfi_validated") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to delete_transient("kuvatfi_sid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to delete_transient("kuvatfi_uid") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to delete_option("kuvatfi_option_apikey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to set_transient("kuvatfi_foldertree", $foldersForGallery, 60 * 15) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to delete_transient("kuvatfi_foldertree") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (bool).,None,None
+STORAGE call to wp_update_post($update). Passed arguments: 0: $postarr (array|object). Returns (int|WP_Error).,None,None
+STORAGE call to update_post_meta($attid, "_wp_attachment_image_alt", $path["filename"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to set_transient("kuvatfi_lastgallery", $host) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

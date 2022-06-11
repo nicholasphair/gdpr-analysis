@@ -1,0 +1,707 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on jettweet
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.902967.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.047971.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 232 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.713157.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 3 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.635319.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1369 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.143864.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 26 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.777692.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.085210.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 483 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:07.089391.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 9466
+Added 7353 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 10850
+Added 1384 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.708672.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/jettweet-fields.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/jettweet-main.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/jettweet.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/jettweet-rest.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/jettweet-setting.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/jettweet-widget.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/library/twitteroauth/OAuth.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/library/twitteroauth/twitteroauth.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/jettweet/templates/default/template.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.002556.
+
+232 PHP_REACHES edges created
+3 REACHES edges created
+1000 PHP_REACHES edges created
+1369 PHP_REACHES edges created
+26 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+7836 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1384 PHP_REACHES edges created
+10850 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 3184 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.172083.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 3 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.360013.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 188 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:05.441078.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 146 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.192357.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.279951.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.793259.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.029935.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.029794.
+
+3 CALLS edges created
+334 PHP_REACHES edges created
+337 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 266 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.134984.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.178870.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<label for=\'$id\'>'' cannot be parsed correct.
+HTML code '$'<input class=\'checkbox\' type=\'checkbox\' id=\'$id\' name=\'$name\' checked($val, true, false) />$params_label</label>'' cannot be parsed correct.
+HTML code '$'<span class=\'controlDesc\'>$params_desc</span>'' cannot be parsed correct.
+HTML code '$'<label for=\'$id\'>$params_label</label>'' cannot be parsed correct.
+HTML code '$'<span class=\'controlDesc\'>$params_desc</span>'' cannot be parsed correct.
+HTML code '$'<input type=\'text\' class=\'smallfat\' id=\'$id\' name=\'$name\' value=\'wp_parse_args($instance, $defaults)\' />'' cannot be parsed correct.
+HTML code '$'<label for=\'$id\'>$params_label</label>'' cannot be parsed correct.
+HTML code '$'<span class=\'controlDesc\'>$params_desc</span>'' cannot be parsed correct.
+HTML code '$'<input type=\'text\' class=\'widefat\' id=\'$id\' name=\'$name\' value=\'wp_parse_args($instance, $defaults)\' />'' cannot be parsed correct.
+HTML code '$'<label for=\'$id\'>$params_label</label>'' cannot be parsed correct.
+HTML code '$'<span class=\'controlDesc\'>$params_desc</span>'' cannot be parsed correct.
+HTML code '$'<select class=\'smallfat jt-change\' id=\'$id\' name=\'$name\'>'' cannot be parsed correct.
+HTML code '$'<option value=\'$k\' selected($instance, $k, false)>$k</option>'' cannot be parsed correct.
+HTML code '$'
+			<div id="jt-message" class="updated"><p>
+				<strong>Jet Tweet</strong> uses Twitter API 1.1 and requires Twitter authentication by OAuth. You will need to 
+				<a href="admin_url("options-general.php?page=jettweet")">update your settings</a> 
+				for granting this plugin access to retrieve the twitter feeds.</p>
+			</div'' cannot be parsed correct.
+HTML code '$'<link rel=\'stylesheet\' href=\'JETTWEET_TPL_URLtrailingslashit($tpl)template.css\' type=\'text/css\' />'' cannot be parsed correct.
+HTML code '$'<div class=\'tweet tpl-wp_parse_args($instance, $defaults)\'><ul class=\'tweet_list\'><li class=\'tweet_odd\'>str_replace("{retweet_count}", "<span class="retweet_count">57 retweets</span>", $data)</li></ul></div>'' cannot be parsed correct.
+HTML code '$'The template <strong>wp_parse_args($instance, $defaults)</strong> does not exist! Please check this plugin directory of reupload.'' cannot be parsed correct.
+HTML code '$'<div id=\'shortcode-$id\' class=\'jet-tweet jet-tweet-shortcode tpl-get_option("jettweet")_shortcodes_$id_template\' data-shortcode=\'$id\' data-style=\'get_option("jettweet")_shortcodes_$id_style\'></div>'' cannot be parsed correct.
+HTML code '$'apply_filters("jettweet_ajax", $html)'' cannot be parsed correct.
+HTML code '$'<li class=0"'' cannot be parsed correct.
+HTML code '$'$section<input type=\'hidden\' name=\'jettweet[tab][]\' value=\'0\' />'' cannot be parsed correct.
+HTML code '$'<div id=$slug-section" class="tab-pane">'' cannot be parsed correct.
+HTML code '$'<tr valign="top">
+										<th scope="row">&nbsp;</th>
+										<td>
+											<input id="submit" class="button-primary" type="submit" value="Save Changes" name="submit">
+										</td>
+									  </tr>'' cannot be parsed correct.
+HTML code '$'sections[\'0\'] = \'$slug\';'' cannot be parsed correct.
+HTML code '$'<div class="wrap">
+			<div class="icon32" id="icon-options-general"></div>
+			<h2>$this_title Settings</h2>'' cannot be parsed correct.
+HTML code '$'<div id="totalFooter">
+						<p class="totalInfo">					
+							<a href="http://codecanyon.net/item/ztwitter-twitter-feed-widget-for-wordpress/254257?ref=zourbuth">Get Jet Tweet Premium</a> | 
+							<a href="http://zourbuth.com/archives/847/jet-tweet-a-twitter-feed-plugin-for-wordpress/">Jet Tweet JETTWEET_VERSION</a> | 
+							<a href="hhttp://www.gnu.org/licenses/gpl-2.0.html">Licenses</a>
+						</p>
+					  </div>'' cannot be parsed correct.
+HTML code '$'<span class=\'description\'>$desc</span>'' cannot be parsed correct.
+HTML code '$'<input class=\'regular-text \' type=\'text\' id=\'$id\' name=\'jettweet[$section][$id]\' placeholder=\'$std\' value=\'get_option($this->slug)_$section_$id\' />'' cannot be parsed correct.
+HTML code '$'
+				$(".tab-pane").each(function(index) {
+					$(this).attr("id", sections[index]+\'-section\');
+					if (index == 0)
+						$(this).addClass("active");
+
+				});
+				
+
+				// Tabs function
+				$("ul.nav-tabs li").each(function(i) {
+					$(this).bind("click", function() {
+						var liIndex = $(this).index();
+						var content = $(this).parent("ul").next().children(".tab-pane").eq(liIndex);
+						$(this).addClass("active").siblings("li").removeClass("active");
+						$(content).fadeIn().addClass("active").siblings().hide().removeClass("active");
+	
+						$(this).parent("ul").find("input").val(0);
+						$("input", this).val(1);
+						return false;
+					});
+				});
+			});
+		</script>'' cannot be parsed correct.
+HTML code '$'<input class=\'checkbox\' type=\'checkbox\' id=\'$id\' name=\'jettweet[$section][$id]\' value=\'1\'checked($options[$section][$id], 1, false) />'' cannot be parsed correct.
+HTML code '$'<span class=\'description\'>$desc</span>'' cannot be parsed correct.
+HTML code '$'<select class=\'select\' name=\'jettweet[$section][$id]\'>'' cannot be parsed correct.
+HTML code '$'<option value=\'$key\'selected($options[$section][$id], $key, false)>$value</option>'' cannot be parsed correct.
+HTML code '$'<span class=\'description\'>$desc</span>'' cannot be parsed correct.
+HTML code '$'<input class="radi$field_class" type="radio" name="jettweet[$id]" id="$id$i" value="$key"checked($options[$id], $key, false)> <label for=$id0"$value</label>'' cannot be parsed correct.
+HTML code '$'<span class=\'description\'>$desc</span>'' cannot be parsed correct.
+HTML code '$'<textarea class=\'large-text code  $class\' id=\'$id\' name=\'jettweet[$section][$id]\'>get_option($this->slug)_$section_$id</textarea>'' cannot be parsed correct.
+HTML code '$'<span class=\'description\'>$desc</span>'' cannot be parsed correct.
+HTML code '$'<input class=\'regular-text  $class\' type=\'password\' id=\'$id\' name=\'jettweet[$section][$id]\' value=\'get_option($this->slug)_$section_$id\' />'' cannot be parsed correct.
+HTML code '$'<span class=\'description\'>$desc</span>'' cannot be parsed correct.
+HTML code '$'<img alt=\'\' class=\'optionImage\' src=\'get_option($this->slug)_$section_$id\'>'' cannot be parsed correct.
+HTML code '$'<a href=\'#\' class=\'addImage button\'>Add Image</a>'' cannot be parsed correct.
+HTML code '$'<a class=\'showRemove removeImage button\' href=\'#\'>Remove</a>'' cannot be parsed correct.
+HTML code '$'<span class=\'description\'>$desc</span>'' cannot be parsed correct.
+HTML code '$'<p class="description">$desc</p>'' cannot be parsed correct.
+HTML code '$'{"id": "get_option($this->slug)_num"}_id'' cannot be parsed correct.
+HTML code '$'{"id": "get_option($this->slug)_num"}_id'' cannot be parsed correct.
+HTML code '$'{"id": "get_option($this->slug)_num"}_id'' cannot be parsed correct.
+HTML code '$'{"id": "get_option($this->slug)_num"}_id'' cannot be parsed correct.
+HTML code '$'<label><input class="checkbox" type="checkbox" name="jettweet[$id][$type]" value="1" checked(isset($options[$id][$type]), 1, false) /> $type</label><br />'' cannot be parsed correct.
+HTML code '$'<span class="description">$desc</span>'' cannot be parsed correct.
+HTML code '$'<input type=\'hidden\' id=\'$id\' name=\'jettweet[$id]\' value=\'get_option($this->slug)_$section_$id\' />'' cannot be parsed correct.
+HTML code '$'<span class=\'description\'>$desc</span>'' cannot be parsed correct.
+HTML code '$'<div id="slider$id"'' cannot be parsed correct.
+HTML code '$'<span class="from">$slide_from</span>'' cannot be parsed correct.
+HTML code '$'<span class="to">$slide_to</span>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="jettweet[$id]" id="$id" value="get_option($this->slug)_$section_$id" /'' cannot be parsed correct.
+HTML code '$'<span class=\'description\'>$desc</span>'' cannot be parsed correct.
+HTML code '$'
+					<script type="text/javascript">
+						jQuery(function() {
+							jQuery( "#slider-$id" ).slider({
+								value$options_$section_$id,
+								min:$slide_from,
+								max:$slide_to,
+								step:$slide_step,
+								slide: function( event, ui ) {
+									if ( ui.value != $options_$section_$id ) {
+										jQuery( "$id" ).val(ui.value);
+										jQuery( "a span", this ).text( ui.value );
+									}
+								}
+							});
+							jQuery( "#slider-$id a" ).prepend( "<span>get_option($this->slug)_$section_$id</span>" );
+						});
+					</script'' cannot be parsed correct.
+HTML code '$'<input type="text" class="color-input" id="$id" name="jettweet[$id]" style="background: #get_option($this->slug)_$section_$id; color: #'' cannot be parsed correct.
+HTML code '$'" value="$options_$section_$id" />
+				<a class="pickcolor" href="#" id="pickcolor$id">pickcolor</a>
+				<div id="zcolorpicker$id" style="z-index: 100; background:#eee; border:1px solid #ccc; position:absolute; display:none; margin-top: 10px;"></div>
+			
+				<script type="text/javascript">
+
+				var farbtastic$id;
+				function pickcolor$id(a){
+					farbtastic$id.setColor(a);
+					jQuery("$id").val(a);
+					jQuery("#$id").css("background-color",a)
+				}
+
+				jQuery("#pickcolor$id").click(function(){
+					jQuery("#zcolorpicker$id").show();
+					return false});
+					jQuery("#$id").keyup(function(){var b=jQuery("#$id").val(),a=b;
+					/* if(a.charAt(0)!="#"){a="#"+a}a=a.replace(/[^#a-fA-F0-9]+/,""); */ // uncomment this if you want the "#" still left at the textbox.
+					if(a!=b){jQuery("#$id").val(a)}if(a.length==4||a.length==7){pickcolo$id(a)}});
+					farbtastic$id=jQuery.farbtastic("#zcolorpicke$id",function(a){pickcolo$id(a)});pickcolor$id(jQuery("$id").val());
+					jQuery(document).mousedown(function(){
+						jQuery("#zcolorpicker$id").each(function(){var a=jQuery(this).css("display");if(a=="block"){jQuery(this).fadeOut(2)}})
+				})
+
+				</script>'' cannot be parsed correct.
+HTML code '$'$val_customstylescript'' cannot be parsed correct.
+HTML code '$'get_option($this->slug)_custom'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_titleapply_filters("widget_title", $instance["title"], $instance, $this->id_base)$after_title'' cannot be parsed correct.
+HTML code '$'<p class=$this-intro-text intro-text"$instance_intro_text</p>'' cannot be parsed correct.
+HTML code '$'<div class=\'jet-tweet jet-tweet-widget tpl-$instance_template\' data-widget=\'$this\' data-style=\'$instance_style\'></div>'' cannot be parsed correct.
+HTML code '$'<br /><a href=\'https://twitter.com/get_option("jettweet")_general_screen_name\' class=\'twitter-follow-button\' data-dnt=\'true\'>Follow @get_option("jettweet")_general_screen_name</a>'' cannot be parsed correct.
+HTML code '$'<p class=$this-outro-text outro-text"$instance_outro_text</p>'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'JETTWEET_VERSION'' cannot be parsed correct.
+HTML code '$'$this'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("tabs")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_tabs_0'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("tabs")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_tabs_1'' cannot be parsed correct.
+HTML code '$'<option value=readdir($handle)"selected($instance["template"], $entry)>readdir($handle)</option>'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("intro_text")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("intro_text")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("intro_text")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_intro_text'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("outro_text")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("outro_text")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("outro_text")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_outro_text'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("customstylescript")'' cannot be parsed correct.
+HTML code '$'<code>#$this</code>'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("customstylescript")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("customstylescript")'' cannot be parsed correct.
+HTML code '$'htmlentities($instance["customstylescript"])'' cannot be parsed correct.
+HTML code '$'JETTWEET_URLimages/jettweet.png'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("tabs")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_tabs_2'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("tabs")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_tabs_3'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("rest")'' cannot be parsed correct.
+HTML code '$'jettweet_rest_api()_wp_parse_args($instance, $defaults)_rest_desc<br />See <a target="_blank" href="jettweet_rest_api()_wp_parse_args($instance, $defaults)_rest_docs"full documentation</a>.'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("avatar_size")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("avatar_size")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("avatar_size")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_avatar_size'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("follow_button")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("follow_button")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("follow_button")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("style")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("style")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("style")'' cannot be parsed correct.
+HTML code '$'$option_value'' cannot be parsed correct.
+HTML code '$'$option_label'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("template")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("template")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("template")'' cannot be parsed correct.
+HTML code '$'<li>'' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+HTML code '$'<div class="tab-content">'' cannot be parsed correct.
+HTML code '$'<form action="options.php" method="post">'' cannot be parsed correct.
+HTML code '$'<table class="form-table">'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				var sections = [];'' cannot be parsed correct.
+HTML code '$'<div id="uppSettings" class="tabbable tabs-left">'' cannot be parsed correct.
+HTML code '$'<ul class="nav nav-tabs">'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+HTML code '$'
+			<p style="margin:0";>
+				Please register your twitter application to get the OAuth and access token information for the fields below.<br />
+			<a target="_blank" href="http://goo.gl/kQWyX">Read the online documentation here</a>.</p>.'' cannot be parsed correct.
+HTML code '$'Data fetching failed, please try again!'' cannot be parsed correct.
+HTML code '$'<div id=\'shortcodeWrapper\' class=\'\' style=\'background: none;\'>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<a class=\'addShortcode button\' href=\'#\'>Create Shortcode</a>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'fff'' cannot be parsed correct.
+HTML code '$'000'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:20.610879.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.042182.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 7 do_action/apply_filters calls and 17 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.750725.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MongoDbDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running ArrayElementDetector
+### Start running ParadoxDetector
+### Finish running Oci8Detector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running HashDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PHPStorageDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running MySQLiDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressStorageDetector
+### Finish running PhpCurlDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+library/twitteroauth/OAuth.php:116
+  - hash_hmac called with unapproved hash algorithm sha1. Ignore if this is not encrypting personal information 
+
+library/twitteroauth/OAuth.php:116
+  - SHA1 called with parameters []. Ignore if [] does not contain personal information.
+library/twitteroauth/OAuth.php:477
+  - MD5 called with parameters [rand, mt]. Ignore if [rand, mt] does not contain personal information. 
+
+library/twitteroauth/OAuth.php:270
+  - RETRIEVAL call to file_get_contents(self"POST_INPUT").
+  - Data types: file 
+
+library/twitteroauth/twitteroauth.php:133
+  - variable '$username' of personal types {'user_meta', 'user'} is found.
+  - Data types: user_meta, user 
+
+jettweet-main.php:34
+  - RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-main.php:129
+  - RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-rest.php:18
+  - RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-rest.php:162
+  - RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-rest.php:182
+  - RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-rest.php:216
+  - RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-rest.php:412
+  - RETRIEVAL call to get_option("widget_jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-rest.php:414
+  - RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-setting.php:48
+  - RETRIEVAL call to $this->get_option() alters data types {'option'}. Returns (mixed).
+  - Data types: option
+jettweet-setting.php:63
+  - RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-setting.php:117
+  - RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-setting.php:191
+  - RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-setting.php:244
+  - RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-setting.php:429
+  - RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-setting.php:461
+  - RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-setting.php:525
+  - RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-setting.php:664
+  - RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-setting.php:709
+  - RETRIEVAL call to $this->get_option() alters data types {'option'}. Returns (mixed).
+  - Data types: option
+jettweet-setting.php:771
+  - RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+jettweet-widget.php:173
+  - RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+jettweet-setting.php:440
+  - STORAGE call to update_option($this->slug, $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+jettweet-setting.php:444
+  - STORAGE call to update_option($this->slug, $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+jettweet-setting.php:449
+  - STORAGE call to update_option($this->slug, $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+jettweet-setting.php:694
+  - STORAGE call to update_option($this->slug, $defaults) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+uninstall.php:6
+  - STORAGE call to delete_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+library/twitteroauth/OAuth.php:116
+  - CRYPTOGRAPHY call to hash_hmac("sha1", $base_string, $key, true). 
+
+uninstall.php:6
+  - DELETION call to delete_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+uninstall.php:6
+  - Uninstall deletion call: DELETION call to delete_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPRetrievalDetector.file_get_contents(self"POST_INPUT") - {'file'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	GenericEncryptionDetector.hash_hmac("sha1", $base_string, $key, true) - set()
+	PHPIncludedDetector.(unknown) - set()
+	HashDetector.(unknown) - set()
+option
+	WordPressStorageDetector.update_option($this->slug, $options) - {'option'}
+	WordPressRetrievalDetector.get_option($this->slug) - {'option'}
+	WordPressRetrievalDetector.get_option($this->slug) - {'option'}
+	WordPressRetrievalDetector.get_option("widget_jettweet") - {'option'}
+	WordPressRetrievalDetector.get_option("jettweet") - {'option'}
+	WordPressRetrievalDetector.get_option("jettweet") - {'option'}
+	WordPressRetrievalDetector.get_option($this->slug) - {'option'}
+	WordPressRetrievalDetector.get_option("jettweet") - {'option'}
+	WordPressStorageDetector.update_option($this->slug, $options) - {'option'}
+	WordPressRetrievalDetector.get_option("date_format") - {'option'}
+	WordPressRetrievalDetector.$this->get_option() - {'option'}
+	WordPressStorageDetector.update_option($this->slug, $options) - {'option'}
+	WordPressRetrievalDetector.get_option($this->slug) - {'option'}
+	WordPressRetrievalDetector.get_option("jettweet") - {'option'}
+	UninstallDetector.delete_option("jettweet") - {'option'}
+	WordPressRetrievalDetector.get_option($this->slug) - {'option'}
+	WordPressRetrievalDetector.get_option("jettweet") - {'option'}
+	WordPressRetrievalDetector.get_option($this->slug) - {'option'}
+	WordPressRetrievalDetector.$this->get_option() - {'option'}
+	WordPressStorageDetector.update_option($this->slug, $defaults) - {'option'}
+	WordPressRetrievalDetector.get_option("jettweet") - {'option'}
+	DeletionDetector.delete_option("jettweet") - {'option'}
+	WordPressRetrievalDetector.get_option("jettweet") - {'option'}
+	WordPressRetrievalDetector.get_option($this->slug) - {'option'}
+	WordPressStorageDetector.delete_option("jettweet") - {'option'}
+	WordPressRetrievalDetector.get_option($this->slug) - {'option'}
+	WordPressRetrievalDetector.get_option($this->slug) - {'option'}
+user
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+user_meta
+	VariableDetector.(unknown) - {'user_meta', 'user'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.994766.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 100 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.182323.
+
+100 STORE_REACHES edges created
+100 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 2 nodes as PERSONAL
+In total, tainted 2 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 6 nodes as ENCRYPTED
+In total, tainted 6 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.622804.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:15.357310!
+DELETION call to delete_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+CRYPTOGRAPHY call to hash_hmac("sha1", $base_string, $key, true).,None,None
+hash_hmac called with unapproved hash algorithm sha1. Ignore if this is not encrypting personal information,sha1,None
+SHA1 called with parameters []. Ignore if [] does not contain personal information.,sha1,None
+MD5 called with parameters [rand, mt]. Ignore if [rand, mt] does not contain personal information.,md5,None
+RETRIEVAL call to file_get_contents(self"POST_INPUT").,None,None
+Uninstall deletion call: DELETION call to delete_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+variable '$username' of personal types {'user_meta', 'user'} is found.,,None
+RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("widget_jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to $this->get_option() alters data types {'option'}. Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to $this->get_option() alters data types {'option'}. Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->slug) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option($this->slug, $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->slug, $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->slug, $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->slug, $defaults) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("jettweet") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

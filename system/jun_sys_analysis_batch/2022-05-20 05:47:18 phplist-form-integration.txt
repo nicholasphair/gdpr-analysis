@@ -1,0 +1,556 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on phplist-form-integration
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.352867.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.877209.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.206350.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.775794.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 282 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.857391.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.838975.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.119264.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 165 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.940052.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1852
+Added 1405 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1852
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.094000.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/phplist-form-integration/phplist.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.174598.
+
+1000 PHP_REACHES edges created
+1852 PHP_REACHES edges created
+1852 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 648 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.072566.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.147890.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 19 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.387626.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 39 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.179875.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.005384.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.441890.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018827.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.052475.
+
+58 PHP_REACHES edges created
+58 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 19 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.136031.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.109698.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$before_widget$before_titleget_option("phplist_widget")_title$after_title'' cannot be parsed correct.
+HTML code '$'<h3>Thank You For Subscribing</h3>'' cannot be parsed correct.
+HTML code '$'<h3>An Error Occurred</h3>'' cannot be parsed correct.
+HTML code '$'<p>We were unable to add your email to our list. Please send us an email at <a href="mailto:support@getoutbayarea.com">support@getoutbayarea.com</a> letting us know what happened and we\'ll make sure you get on the list.'' cannot be parsed correct.
+HTML code '$'phplist_construct_form(true)'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'<div class="updated"><p><strong>Options saved and Reset List Count</strong></p></div>'' cannot be parsed correct.
+HTML code '$'<h3>Thank you for subscribing to our email list</h3>'' cannot be parsed correct.
+HTML code '$'    <div class="wrap">
+         <h2>General Settings</h2>
+		<form method="post">
+        <fieldset class="options">
+		<table>
+         <tr>
+          <td><p><strong><label for="php_list_uri">PHPList URL:</label></strong></td>
+          <td><input name="phplist[php_list_uri]" type="text" id="php_list_uri" value="phplist_get_options()_php_list_uri" size="50" /> <em>http://www.yoursite.com/lists/</em></p></td>
+         </tr>
+         <tr>
+          <td><p><strong><label for="php_list_login">PHPList Admin Login</label></strong></td>
+          <td><input name="phplist[php_list_login]" type="text" id="php_list_login" value="phplist_get_options()_php_list_login" size="50" /> <em>Enter PHPList Admin Login</em></p></td>
+         </tr>
+		 <tr>
+          <td><p><strong><label for="php_list_pass">PHPList Admin Password</label></strong></td>
+          <td><input name="phplist[php_list_pass]" type="password" id="php_list_pass" value="phplist_get_options()_php_list_pass" size="50" /> <em>Enter PHPList Admin Password</em></p></td>
+         </tr>
+		  <tr>
+          <td valign="top"><p><strong><label for="php_list_listid">PHPList List Information</label></strong></td>
+          <td>
+		  <table width="100%" border="0">
+            <tr>
+              <td><em><b>Enter PHPList ID</b></em></td>
+              <td><em><b>Enter Name of List</b></em></td>
+            </tr>
+				$lists<tr>
+              <td><input name="phplist[php_list_listi$counter]" type="text" id="phplist[php_list_listid$counter]" value="phplist_get_options()_php_list_listid$counter" size="50" /></td>
+              <td><input name="phplist[php_list_listname1]" type="text" id="phplist[php_list_listname1]" value="phplist_get_options()_php_list_listname1" size="50"/></td></tr>
+          </table>
+		<input type="submit" name="reset" value="Reset &raquo;" style="font-weight:bold;float:right" />
+		  <input type="submit" name="add_more" value="Add Another List &raquo;" style="font-weight:bold;float:right" />
+			<div style="clear:both"></div>
+            <p><em>For each list enter the list number and name of the list in the above table.  <a href="http://www.jesseheap.com/projects/wordpress-phplist-plugin.php#ListID"><strong>See
+                help</strong></a> for more info.</em></p>
+            </td>
+         </tr>
+		 <tr>
+		  <td></td>
+		  <td><p><input name="phplist[php_list_skip_confirm]" type="checkbox" id="php_list_skip_confirm" value="1" phplist_get_options()/>  <label for="php_list_skip_confirm"><strong>Skip Confirmation Email</strong> (Check to bypass confirmation email)</label></p></td>
+		 </tr>
+        </table>
+        </fieldset>
+        <div class="submit">
+			  <input type="hidden" name="phplist[php_list_maxLists]" value="phplist_get_options()" />
+           <input type="submit" name="save_settings" value="Update Options &raquo;" style="font-weight:bold;" />
+		</div>
+    </div>
+
+
+	    <div class="wrap">
+        <h2>Form Settings</h2>
+
+		<p>Use these settings to <strong>OPTIONALLY</strong> configure your form.  Currently the form supports two text fields.
+		The first field supports any text label and should correspond to a text field you capture in PHPList.  Most people capture NAME in this field.  The second field is the <strong>required</strong> email field.</p>
+        <fieldset class="options">
+
+    <table>
+      <tr>
+        <td align="left" ><p><strong>
+            <label for "php_list_txt_show">Show on Form?</label>
+            </strong></p></td>
+        <td align="left" ><p><strong>
+            <label for "php_list_txt_label">Text Field Label Name</label>
+            </strong></p></td>
+        <td align="left"><p><strong>
+            <label for "php_list_txt_id">Text Field ID</label>
+            </strong></p></td>
+        <td align="left"><p><strong>
+            <label for="php_list_txt_size">Text Field Size</label>
+            </strong></td>
+        <td align="left"><p><strong>
+            <label for="php_list_txt_max">Text Field Max Size</label>
+            </strong></td>
+        <td align="left"><p><strong>
+            <label for="php_list_txt_req">Required Field?</label>
+            </strong></td>
+      </tr>
+      <tr>
+        <td><input name="phplist[php_list_txt_show]" type="checkbox" id="php_list_txt_show" value="1" phplist_get_options() />
+        </td>
+        <td><input name="phplist[php_list_txt_label]" type="text" id="php_list_txt_label" value="phplist_get_options()_php_list_txt_label" size="20" />
+        </td>
+        <td><input name="phplist[php_list_txt_id]" type="text" id="php_list_txt_id" value="phplist_get_options()_php_list_txt_id" size="20" />
+        </td>
+        <td><input name="phplist[php_list_txt_size]" type="text" id="php_list_txt_size" value="phplist_get_options()_php_list_txt_size" size="5" /></td>
+        <td><input name="phplist[php_list_txt_max]" type="text" id="php_list_txt_max" value="phplist_get_options()_php_list_txt_max" size="5" /></td>
+        <td><input name="phplist[php_list_txt_req]" type="checkbox" id="php_list_txt_req" value="1"  phplist_get_options() /></td>
+      </tr>
+      <tr>
+        <td><em>Check to show field on form</em></em></td>
+        <td><em>Enter Text Label (i.e. Name)</em></td>
+        <td><em>Enter Text ID - <a href="http://www.jesseheap.com/projects/wordpress-phplist-plugin.php#FieldID" target="_blank">see
+          help </a>for more information</em></td>
+        <td><em>Enter size of text field</em></td>
+        <td><em>Enter max size of text field</em></td>
+        <td><em>Check to make field required</em></td>
+      </tr>
+      <tr>
+        <td><input name="phplist[php_list_email_show]" type="checkbox" id="php_list_email_show" disabled value="1" checked="checked">
+        </td>
+        <td ><input name="phplist[php_list_email]" type="text" id="php_list_email"  value="phplist_get_options()_php_list_email" size="20" /> </p>
+        </td>
+        <td ><input name="phplist[php_list_email_id]" type="text" id="php_list_email_id" disabled value="email" size="20" /></p>
+        </td>
+        <td ><input name="phplist[php_list_email_size]" type="text" id="php_list_email_size"  value="phplist_get_options()_php_list_email_size" size="5" /> </p>
+        </td>
+        <td ><input name="phplist[php_list_email_max]" type="text" id="php_list_email_max"  value="phplist_get_options()_php_list_email_max" size="5" /> </p>
+        </td>
+        <td ><input name="phplist[php_list_email_req]" type="checkbox" id="php_list_email_req" disabled value ="1" checked="checked"/> </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <input name="phplist[php_list_show_css]" id="php_list_show_css" type="checkbox" value="1" phplist_get_options()>
+          Use default CSS for subscriber form. (Uncheck to use your own CSS for the form)</td>
+      </tr>
+    </table>
+        </fieldset>
+        <div class="submit">
+           <input type="submit" name="save_form_settings" value="Update Options &raquo;" style="font-weight:bold;" /></div>
+        </form>
+    </div>
+
+	<div class="wrap">
+	<h2>Information & Support</h2>
+
+  <p>Visit <a href="http://www.jesseheap.com/projects/wordpress-phplist-plugin.php?ver=<?php echo $ver ?>" target="_blank">our
+    help section</a> for installation and help</p>
+  <p><strong>Like this script?</strong> Show your support by linking to <a href="http://www.jesseheap.com">our
+    site</a> - www.jesseheap.com.</p>
+	</div>'' cannot be parsed correct.
+HTML code '$'
+	<!-- CSS Added By PhpList Plugin. Version $ver -->
+'' cannot be parsed correct.
+HTML code '$'
+	<link href=\'get_bloginfo("wpurl")/wp-content/plugins/plugin_basename(dirname())/phplist.css\' rel=\'stylesheet\' type=\'text/css\' />'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.867277.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.046422.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.334327.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running SqlServerDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running maxdbDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running VariableDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running PhpCurlDetector
+### Finished running detectors
+phplist.php:28
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:426
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+phplist.php:130
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:131
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:132
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:157
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:426
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:427
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:427
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:428
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:428
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:441
+  - variable '$email_size' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:442
+  - variable '$email_max' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:457
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:460
+  - variable '$email_size' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:460
+  - variable '$email_max' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:460
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:463
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:569
+  - variable '$email_name' of personal types {'email'} is found.
+  - Data types: email
+phplist.php:583
+  - variable '$email_name' of personal types {'email'} is found.
+  - Data types: email 
+
+phplist.php:42
+  - RETRIEVAL call to get_option("phplist_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+phplist.php:65
+  - RETRIEVAL call to get_option("phplist_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+phplist.php:210
+  - RETRIEVAL call to get_option("phplistsettings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+phplist.php:73
+  - STORAGE call to update_option("phplist_widget", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+phplist.php:214
+  - STORAGE call to update_option("phplistsettings", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+phplist.php:253
+  - STORAGE call to update_option("phplistsettings", $_POST["phplist"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+option
+	WordPressStorageDetector.update_option("phplist_widget", $options) - {'option'}
+	WordPressStorageDetector.update_option("phplistsettings", $_POST["phplist"]) - {'option'}
+	WordPressRetrievalDetector.get_option("phplist_widget") - {'option'}
+	WordPressRetrievalDetector.get_option("phplist_widget") - {'option'}
+	WordPressStorageDetector.update_option("phplistsettings", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("phplistsettings") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.264310.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 9 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.079215.
+
+9 STORE_REACHES edges created
+9 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 84 nodes as PERSONAL
+In total, tainted 84 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.688235.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:30.558389!
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email_size' of personal types {'email'} is found.,,None
+variable '$email_max' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email_max' of personal types {'email'} is found.,,None
+variable '$email_size' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email_name' of personal types {'email'} is found.,,None
+variable '$email_name' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_option("phplistsettings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("phplist_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("phplist_widget") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("phplistsettings", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("phplistsettings", $_POST["phplist"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("phplist_widget", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

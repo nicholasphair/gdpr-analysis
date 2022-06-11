@@ -1,0 +1,897 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on timed-content
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.149921.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.347259.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 182 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.609334.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 4 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.627560.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1781 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.416270.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 2 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.686400.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.074937.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 623 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:12.463684.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 11047
+Added 8455 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 19200
+Added 8153 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:02.290940.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/timed-content/timed-content.php' cannot be parsed correct.
+Added new directory node for: js
+Added new directory node for: jquery-ui-timepicker-0.3.3
+Added new directory node for: i18n
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/timed-content/js/jquery-ui-timepicker-0.3.3/i18n/i18n.html
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/timed-content/js/jquery-ui-timepicker-0.3.3/i18n/i18n.html' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/timed-content/lib/customFieldsInterface.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/timed-content/tinymce_plugin/dialog.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.537451.
+
+5 Nodes Created
+182 PHP_REACHES edges created
+4 REACHES edges created
+1000 PHP_REACHES edges created
+1781 PHP_REACHES edges created
+2 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+9000 PHP_REACHES edges created
+9078 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+8000 PHP_REACHES edges created
+8153 PHP_REACHES edges created
+4 DIRECTORY_OF edges created
+1 FILE_OF edges created
+19205 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 3383 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.185224.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:03.908718.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 87 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.324646.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 40 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.137015.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.700350.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.549178.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008314.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.030080.
+
+127 PHP_REACHES edges created
+127 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 122 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.120292.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+3 SQL operations to process.
+post_type
+SQL command (post_type) cannot be parsed correct.
+orderby
+SQL command (orderby) cannot be parsed correct.
+order
+SQL command (order) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [5075, 5085, 5092]
+Added 0 SQL nodes. 0 out of 3 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.155672.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<em>This menu is empty.</em>
+'' cannot be parsed correct.
+HTML code '$'<select name=$this_prefix$customField_name[]" id="$this_prefix$customField_name" style="width: auto; height: auto; padding: 3px;" size="$customField_size" multiple="multiple">
+'' cannot be parsed correct.
+HTML code '$'	<option value=$prefix'' cannot be parsed correct.
+HTML code '$'>$label</option>
+'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name" style="display:inline;"><strong>$customField_title</strong></label><br />
+'' cannot be parsed correct.
+HTML code '$'<em>This menu is empty.</em>
+'' cannot be parsed correct.
+HTML code '$'<select name=$this_prefix$customField_name" id="$this_prefix$customField_name" style="width: auto;">
+'' cannot be parsed correct.
+HTML code '$'	<option value=$prefix'' cannot be parsed correct.
+HTML code '$'>$label</option>
+'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name" style="display:inline;"><strong>$customField_title</strong></label><br />
+'' cannot be parsed correct.
+HTML code '$'<select name=$this_prefix$customField_name" id="$this_prefix$customField_name" style="width: auto;">
+'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name" style="display:inline;"><strong>$customField_title</strong><br />
+'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" name="$this_prefix$customField_name" id="$this_prefix$customField_name" value="yes"'' cannot be parsed correct.
+HTML code '$' />Yes</label>
+'' cannot be parsed correct.
+HTML code '$'$this_desc'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'$customField_display'' cannot be parsed correct.
+HTML code '$'<strong>$customField_title</strong><br />
+'' cannot be parsed correct.
+HTML code '$'<input type="radio" name="$this_prefix$customField_name" id="$this_prefix$customField_name_$prefix" value="$prefix'' cannot be parsed correct.
+HTML code '$' /><label for=$this_prefix$customField_name_$prefix" style="display: inline;">$label</label><br />
+'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name" style="display:inline;"><strong>$customField_title</strong></label><br />
+'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name" style="display:inline;"><strong>$customField_title</strong></label><br />
+'' cannot be parsed correct.
+HTML code '$'<strong>$customField_title</strong><br />
+'' cannot be parsed correct.
+HTML code '$'<em>This menu is empty.</em>
+'' cannot be parsed correct.
+HTML code '$'<input type="checkbox" name="$this_prefix$customField_name[]" id="$this_prefix$customField_name_$prefix" value="$prefix'' cannot be parsed correct.
+HTML code '$' /><label for=$this_prefix$customField_name_$prefix" style="display: inline;" >$label</label><br />
+'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name"><strong$customField_title</strong></label><br />
+'' cannot be parsed correct.
+HTML code '$'<textarea name=$this_prefix$customField_name" id="$this_prefix$customField_name" columns="30" rows="3">htmlspecialchars($value)</textarea>
+'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name"><strong$customField_title</strong></label><br />
+'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_prefix$customField_name" id="$this_prefix$customField_name" value="$prefix" size="7" maxlength="7" style="width: 100px;" />
+'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'$customField_custom_functions'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_prefix$customField_name" id="$this_prefix$customField_name" value="htmlspecialchars($value)" style="width: 175px;" />
+'' cannot be parsed correct.
+HTML code '$'<span style="display:inline;"><strong>$customField_title</strong></span><br />
+'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name_date" style="display:inline;"><em>_x("Date", "Date field label", "timed-content"):</em></label>
+'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_prefix$customField_name[date]" id="$this_prefix$customField_name_date" value="$prefix_date" style="width: 175px;" />
+'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name_time" style="display:inline;"><em>_x("Time", "Time field label", "timed-content"):</em></label>
+'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_prefix$customField_name[time]" id="$this_prefix$customField_name_time" value="$prefix_time" style="width: 125px;" />
+'' cannot be parsed correct.
+HTML code '$'$this_prefix$customField_name'' cannot be parsed correct.
+HTML code '$'$customField_min'' cannot be parsed correct.
+HTML code '$'$customField_max'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name" style="display:inline;"><strong>$customField_title</strong></label><br />
+'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_prefix$customField_name" id="$this_prefix$customField_name" value="$prefix" size="2" />
+'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="$this_prefix$customField_name" id="$this_prefix$customField_name" value="$prefix" />'' cannot be parsed correct.
+HTML code '$'<label for=$this_prefix$customField_name"><strong$customField_title</strong></label><br/>
+'' cannot be parsed correct.
+HTML code '$'<input type="text" name="$this_prefix$customField_name" id="$this_prefix$customField_name" value="$prefix" />'' cannot be parsed correct.
+HTML code '$'<p>$customField_description</p>
+'' cannot be parsed correct.
+HTML code '$'json_encode($this->getRulePeriods($args))'' cannot be parsed correct.
+HTML code '$'$this->getScheduleDescription($args)'' cannot be parsed correct.
+HTML code '$'TIMED_CONTENT_RULE_TYPE'' cannot be parsed correct.
+HTML code '$'TIMED_CONTENT_RULE_TYPE'' cannot be parsed correct.
+HTML code '$'<a href=\'edit.php?post_type=TIMED_CONTENT_RULE_TYPE\'><li class=TIMED_CONTENT_RULE_TYPE-count"number_format_i18n($num_posts->publish) _n("Timed Content rule", "Timed Content rules", intval($num_posts->publish), "timed-content")</a></li>'' cannot be parsed correct.
+HTML code '$'<a href=\'edit.php?post_status=pending&post_type=TIMED_CONTENT_RULE_TYPE\'><li class=TIMED_CONTENT_RULE_TYPE-count"number_format_i18n($num_posts->pending) _n("Timed Content rule pending", "Timed Content rules pending", intval($num_posts->pending), "timed-content")</a></li>'' cannot be parsed correct.
+HTML code '$'ob_get_contents()'' cannot be parsed correct.
+HTML code '$'<code>[TIMED_CONTENT_SHORTCODE_RULE id=$post_ID"]...[TIMED_CONTENT_SHORTCODE_RULE]</code>'' cannot be parsed correct.
+HTML code '$'<em>$this->getScheduleDescriptionById($post_ID)</em>'' cannot be parsed correct.
+HTML code '$'includes_url()'' cannot be parsed correct.
+HTML code '$'includes_url()'' cannot be parsed correct.
+HTML code '$'$this->getRulesJS()'' cannot be parsed correct.
+HTML code '$'TIMED_CONTENT_SHORTCODE_CLIENT'' cannot be parsed correct.
+HTML code '$'TIMED_CONTENT_SHORTCODE_SERVER'' cannot be parsed correct.
+HTML code '$'TIMED_CONTENT_SHORTCODE_RULE'' cannot be parsed correct.
+HTML code '$'TIMED_CONTENT_PLUGIN_URL'' cannot be parsed correct.
+HTML code '$'strftime("%Y-%m-%d %H:%M", current_time("timestamp", 0))'' cannot be parsed correct.
+HTML code '$'get_option("timezone_string")'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'</select>
+'' cannot be parsed correct.
+HTML code '$' selected="selected"'' cannot be parsed correct.
+HTML code '$'</select>
+'' cannot be parsed correct.
+HTML code '$'</select>
+'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+HTML code '$' checked="checked"'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:15.997188.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.044773.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 14 do_action/apply_filters calls and 26 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.370223.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running ArrayElementDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MongoDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running Oci8Detector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running OpenSSLDetector
+### Start running SqliteDetector
+### Finish running PostgreSQLDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running UserInputDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running maxdbDetector
+### Start running UninstallDetector
+### Finish running MySQLiDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+lib/customFieldsInterface.php:198
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:200
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:219
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:221
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:242
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:244
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:261
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:263
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:275
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:277
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:291
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:293
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:315
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:316
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:336
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:337
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:361
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:362
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:386
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:387
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:422
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:423
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:448
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:450
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:458
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+lib/customFieldsInterface.php:460
+  - RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:145
+  - RETRIEVAL call to get_option("start_of_week") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+timed-content.php:151
+  - RETRIEVAL call to get_option("time_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+timed-content.php:951
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "frequency", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:952
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "timezone", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:953
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:954
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_num_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:955
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_end_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:956
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_days_of_week_to_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:958
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "hourly_num_of_hours", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:961
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "daily_num_of_days", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:964
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_num_of_weeks", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:967
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_num_of_months", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:970
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "yearly_num_of_years", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:972
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "instance_start", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:973
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "instance_end", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:974
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:975
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_nth", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:976
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_weekday", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:978
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "exceptions_dates") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1212
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "action", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1213
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "action", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1214
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "frequency", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1215
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "frequency", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1216
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "timezone", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1217
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "timezone", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1218
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1219
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1221
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_num_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1222
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_num_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1224
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_end_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1225
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_end_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1227
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_days_of_week_to_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1228
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_days_of_week_to_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1231
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "hourly_num_of_hours", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1232
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "hourly_num_of_hours", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1236
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "daily_num_of_days", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1237
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "daily_num_of_days", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1241
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_num_of_weeks", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1242
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_num_of_weeks", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1246
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_num_of_months", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1247
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_num_of_months", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1251
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "yearly_num_of_years", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1252
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "yearly_num_of_years", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1255
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "instance_start", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1256
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "instance_start", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1257
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "instance_end", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1258
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "instance_end", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1259
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1260
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1262
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_nth", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1263
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_nth", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1265
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_weekday", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1267
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_weekday", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1269
+  - RETRIEVAL call to get_post_meta($ID, $prefix . "exceptions_dates") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1470
+  - RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+timed-content.php:1590
+  - RETRIEVAL call to get_post_meta($id, $prefix . "action", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:1718
+  - RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta
+timed-content.php:1737
+  - RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta
+timed-content.php:1795
+  - RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+timed-content.php:1954
+  - RETRIEVAL call to get_post_meta($post_id, TIMED_CONTENT_RULE_POSTMETA_PREFIX . "exceptions_dates") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).
+  - Data types: post_meta
+timed-content.php:2015
+  - RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+tinymce_plugin/dialog.php:171
+  - RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+tinymce_plugin/dialog.php:175
+  - RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+lib/customFieldsInterface.php:522
+  - STORAGE call to update_post_meta($post_id, $this->prefix . $customField["name"], $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).
+  - Data types: post_meta
+lib/customFieldsInterface.php:524
+  - STORAGE call to delete_post_meta($post_id, $this->prefix . $customField["name"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+lib/customFieldsInterface.php:524
+  - DELETION call to delete_post_meta($post_id, $this->prefix . $customField["name"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).
+  - Data types: post_meta 
+
+By data type:
+none
+	WordPressRetrievalDetector.get_posts($args) - set()
+option
+	WordPressRetrievalDetector.get_option("timezone_string") - {'option'}
+	WordPressRetrievalDetector.get_option("timezone_string") - {'option'}
+	WordPressRetrievalDetector.get_option("start_of_week") - {'option'}
+	WordPressRetrievalDetector.get_option("time_format") - {'option'}
+	WordPressRetrievalDetector.get_option("timezone_string") - {'option'}
+	WordPressRetrievalDetector.get_option("timezone_string") - {'option'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "recurrence_duration_num_repeat", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($id, $prefix . "action", true) - {'post_meta'}
+	WordPressStorageDetector.delete_post_meta($post_id, $this->prefix . $customField["name"]) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "recurrence_duration_end_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "exceptions_dates") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_nth", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "recurrence_duration", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "recurrence_duration_end_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "weekly_num_of_weeks", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "recurrence_duration_num_repeat", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "frequency", true) - {'post_meta'}
+	DeletionDetector.delete_post_meta($post_id, $this->prefix . $customField["name"]) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "weekly_days_of_week_to_repeat", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "timezone", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_weekday", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "instance_end", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "instance_end", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "recurrence_duration_end_date", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "frequency", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "yearly_num_of_years", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "weekly_days_of_week_to_repeat", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "daily_num_of_days", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_nth", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "weekly_days_of_week_to_repeat", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "instance_start", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "action", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_nth", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "recurrence_duration", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post_id, TIMED_CONTENT_RULE_POSTMETA_PREFIX . "exceptions_dates") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_weekday", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "recurrence_duration_num_repeat", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_num_of_months", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "hourly_num_of_hours", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "weekly_num_of_weeks", true) - {'post_meta'}
+	WordPressStorageDetector.update_post_meta($post_id, $this->prefix . $customField["name"], $value) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_num_of_months", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "weekly_num_of_weeks", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "recurrence_duration", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "action", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "daily_num_of_days", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "exceptions_dates") - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "yearly_num_of_years", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "frequency", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "instance_end", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_weekday", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "timezone", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "instance_start", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "daily_num_of_days", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "monthly_num_of_months", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "yearly_num_of_years", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "timezone", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "hourly_num_of_hours", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($post->ID, $this->prefix . $customField["name"], true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "instance_start", true) - {'post_meta'}
+	WordPressRetrievalDetector.get_post_meta($ID, $prefix . "hourly_num_of_hours", true) - {'post_meta'}
+user_meta
+	WordPressRetrievalDetector.get_user_option("rich_editing") - {'user_meta'}
+	WordPressRetrievalDetector.get_user_option("rich_editing") - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:25.142386.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 160 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.549540.
+
+160 STORE_REACHES edges created
+160 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 2 nodes as PERSONAL
+In total, tainted 2 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.298949.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:32.878663!
+DELETION call to delete_post_meta($post_id, $this->prefix . $customField["name"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($post->ID, $this->prefix . $customField["name"], true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "action", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "action", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "frequency", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "frequency", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "timezone", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "timezone", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_num_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_num_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_end_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_end_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_days_of_week_to_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_days_of_week_to_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "hourly_num_of_hours", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "hourly_num_of_hours", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "daily_num_of_days", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "daily_num_of_days", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_num_of_weeks", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_num_of_weeks", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_num_of_months", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_num_of_months", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "yearly_num_of_years", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "yearly_num_of_years", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "instance_start", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "instance_start", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "instance_end", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "instance_end", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_nth", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_nth", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_weekday", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_weekday", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "exceptions_dates") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("start_of_week") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("time_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($id, $prefix . "action", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts($args). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post_meta($post_id, TIMED_CONTENT_RULE_POSTMETA_PREFIX . "exceptions_dates") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "frequency", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "timezone", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_num_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "recurrence_duration_end_date", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_days_of_week_to_repeat", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "hourly_num_of_hours", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "daily_num_of_days", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "weekly_num_of_weeks", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_num_of_months", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "yearly_num_of_years", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "instance_start", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "instance_end", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_nth", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "monthly_nth_weekday_of_month_weekday", true) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 2: $single (bool), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_meta($ID, $prefix . "exceptions_dates") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $key (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_post_meta($post_id, $this->prefix . $customField["name"], $value) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|bool).,None,None
+STORAGE call to delete_post_meta($post_id, $this->prefix . $customField["name"]) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

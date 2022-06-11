@@ -1,0 +1,712 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on shockingly-big-ie6-warning
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.234514.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.950986.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.306224.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.496744.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 463 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.822569.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.623418.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.094146.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 69 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.514712.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2509
+Added 1977 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3571
+Added 1062 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.133957.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/shockingly-big-ie6-warning/shockingly-big-ie6-warning.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.131170.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2509 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1062 PHP_REACHES edges created
+3571 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 834 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.126571.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.241181.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 5 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.669433.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 13 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.199816.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.047406.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.131397.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.007587.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.040081.
+
+18 PHP_REACHES edges created
+18 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 5 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.165277.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.156905.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<!-- IE6WDebug Type:$opt_type CrashMethod:get_option("ie6w_options")_crashmode Test:get_option("ie6w_options")_test PHPTest:get_option("ie6w_options")_phptest JSTest:get_option("ie6w_options")_jstest -->'' cannot be parsed correct.
+HTML code '$'<div id="message" class="updated fade"><p><strong>Settings saved.</strong></p></div>'' cannot be parsed correct.
+HTML code '$'<div id="message" class="updated fade"><p><strong>Default options loaded.</strong></p></div>'' cannot be parsed correct.
+HTML code '$'Description'' cannot be parsed correct.
+HTML code '$'Crash Methods'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'2'' cannot be parsed correct.
+HTML code '$'Use the following code to crash IE6'' cannot be parsed correct.
+HTML code '$'Debug Mode'' cannot be parsed correct.
+HTML code '$'<div id="message" class="updated fade"><p><strong>Options deleted.</strong></p></div>'' cannot be parsed correct.
+HTML code '$'<div id="message" class="updated fade"><p><strong>Attention: JavaScript Test is On, but Test Mode is Off, JavaScript Test will not work.</strong></p></div>'' cannot be parsed correct.
+HTML code '$'Shockingly Big IE6 Warning Settings'' cannot be parsed correct.
+HTML code '$'Options'' cannot be parsed correct.
+HTML code '$'Message'' cannot be parsed correct.
+HTML code '$'Advanced'' cannot be parsed correct.
+HTML code '$'Registry'' cannot be parsed correct.
+HTML code '$'Settings'' cannot be parsed correct.
+HTML code '$'Description'' cannot be parsed correct.
+HTML code '$'Warning Type'' cannot be parsed correct.
+HTML code '$'Off'' cannot be parsed correct.
+HTML code '$'Top'' cannot be parsed correct.
+HTML code '$'Center'' cannot be parsed correct.
+HTML code '$'Crash'' cannot be parsed correct.
+HTML code '$'The warnings: <strong>Top</strong>, the discreet top bar. <strong>Center</strong>, the full screen one. <strong>Crash</strong>, the mean option.'' cannot be parsed correct.
+HTML code '$'Test Mode'' cannot be parsed correct.
+HTML code '$'Off'' cannot be parsed correct.
+HTML code '$'On'' cannot be parsed correct.
+HTML code '$'Turn this <strong>On</strong> if you want to test the Warnings in any browser.'' cannot be parsed correct.
+HTML code '$'Browsers'' cannot be parsed correct.
+HTML code '$'URL'' cannot be parsed correct.
+HTML code '$'Show'' cannot be parsed correct.
+HTML code '$'Hide'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_firefox'' cannot be parsed correct.
+HTML code '$'Show'' cannot be parsed correct.
+HTML code '$'Hide'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_opera'' cannot be parsed correct.
+HTML code '$'Show'' cannot be parsed correct.
+HTML code '$'Hide'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_chrome'' cannot be parsed correct.
+HTML code '$'Settings'' cannot be parsed correct.
+HTML code '$'Description'' cannot be parsed correct.
+HTML code '$'Head Comment'' cannot be parsed correct.
+HTML code '$'Off'' cannot be parsed correct.
+HTML code '$'On'' cannot be parsed correct.
+HTML code '$'This mode will put a comment in the <code>head</code> of your blog with info about the setting of the plugin.'' cannot be parsed correct.
+HTML code '$'JavaScript Test'' cannot be parsed correct.
+HTML code '$'Off'' cannot be parsed correct.
+HTML code '$'On'' cannot be parsed correct.
+HTML code '$'Make the warning JavaScript pop up two alerts, one in the begin and other in the end of the script, this way you can know if the script is correctly loaded. For security this function only work with <strong>Test Mode</strong> activated.'' cannot be parsed correct.
+HTML code '$'Cleanup Registry'' cannot be parsed correct.
+HTML code '$'Delete Options'' cannot be parsed correct.
+HTML code '$'This option will remove any <strong>Shockingly Big IE6 Warning</strong> from the Wordpress database, use it for clean uninstall. If you want to use it againt deactivate and activate it or press the Reset Options button.'' cannot be parsed correct.
+HTML code '$'Field'' cannot be parsed correct.
+HTML code '$'Value'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_name'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_version'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_site'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_type'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_test'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_phptest'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_crashmode'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_headcomm'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_jstest'' cannot be parsed correct.
+HTML code '$'Value'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_texts_t1'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_texts_t2'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_texts_t3'' cannot be parsed correct.
+HTML code '$'Value'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsers_firefox'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsers_opera'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsers_chrome'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsers_safari'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsers_ie'' cannot be parsed correct.
+HTML code '$'Value'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_firefox'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_opera'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_chrome'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_safari'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_ie'' cannot be parsed correct.
+HTML code '$'Save Changes'' cannot be parsed correct.
+HTML code '$'Reset Options'' cannot be parsed correct.
+HTML code '$'<strong>Note</strong>: i\'m learning PHP & Wordpress coding and using this plugin to study, so if you have any idea or any kind of suggestion please contact me.'' cannot be parsed correct.
+HTML code '$'<a href=$opt_site"get_option("ie6w_options")_name vget_option("ie6w_options")_version</a> by <a href="mailto:matias@incerteza.org">matias s.</a> at <a href="http://www.incerteza.org/blog/" target="_blank">incerteza.org</a>'' cannot be parsed correct.
+HTML code '$'Show'' cannot be parsed correct.
+HTML code '$'Hide'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_safari'' cannot be parsed correct.
+HTML code '$'Show'' cannot be parsed correct.
+HTML code '$'Hide'' cannot be parsed correct.
+HTML code '$'get_option("ie6w_options")_browsersu_ie'' cannot be parsed correct.
+HTML code '$'Field'' cannot be parsed correct.
+HTML code '$'Text'' cannot be parsed correct.
+HTML code '$'Title'' cannot be parsed correct.
+HTML code '$'stripslashes(htmlspecialchars($opt["texts"]["t1"]))'' cannot be parsed correct.
+HTML code '$'Text'' cannot be parsed correct.
+HTML code '$'stripslashes(htmlspecialchars($opt["texts"]["t2"]))'' cannot be parsed correct.
+HTML code '$'Observation'' cannot be parsed correct.
+HTML code '$'stripslashes(htmlspecialchars($opt["texts"]["t3"]))'' cannot be parsed correct.
+HTML code '$'PHP Detection'' cannot be parsed correct.
+HTML code '$'Settings'' cannot be parsed correct.
+HTML code '$'Description'' cannot be parsed correct.
+HTML code '$'PHP Detection'' cannot be parsed correct.
+HTML code '$'Off'' cannot be parsed correct.
+HTML code '$'On'' cannot be parsed correct.
+HTML code '$'Turn this On <strong>only</strong> if you are having some kind of trouble, like layout errors, when this plugin is On. A PHP function will render the code <strong>only</strong> if you are using <strong>IE6</strong>. Can cause false negatives.'' cannot be parsed correct.
+HTML code '$'IE6 Crash Methods'' cannot be parsed correct.
+HTML code '$'Settings'' cannot be parsed correct.
+HTML code '$'<!--[if lte IE 6]><style>*{position:relative}</style><table><input></table><![endif]-->'' cannot be parsed correct.
+HTML code '$'<!--[if lte IE 6]><STYLE>@;/*<![endif]-->'' cannot be parsed correct.
+HTML code '$'<!--[if lte IE 6]><style>*{position:relative}</style><table><input></table><![endif]-->'' cannot be parsed correct.
+HTML code '$'<!--[if lte IE 6]><STYLE>@;/*<![endif]-->'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+        <tr>
+          <td width="125">version</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">site</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+        <tr>
+          <td width="125">type</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">test</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">phptest</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">crashmode</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">headcomm</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">jstest</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <thead>
+          <tr>
+            <th width="125">texts</th>
+            <th>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">t2</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">t3</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <thead>
+          <tr>
+            <th width="125">browsers</th>
+            <th>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">opera</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">chrome</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">safari</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">ie</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <thead>
+          <tr>
+            <th width="125">browsersu</th>
+            <th>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">opera</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">chrome</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">safari</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+        <tr>
+          <td width="125">ie</td>
+          <td>'' cannot be parsed correct.
+HTML code '$'</td>
+        </tr>
+      </table>
+    </div>
+    <p class="submit">
+      <input type="submit" name="update_options" class="button-primary" value="'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:14.134906.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.058424.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 6 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.445862.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running maxdbDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running MySQLiDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+shockingly-big-ie6-warning.php:79
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+shockingly-big-ie6-warning.php:114
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+shockingly-big-ie6-warning.php:123
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+shockingly-big-ie6-warning.php:133
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+shockingly-big-ie6-warning.php:183
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+shockingly-big-ie6-warning.php:234
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+shockingly-big-ie6-warning.php:317
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+shockingly-big-ie6-warning.php:342
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+shockingly-big-ie6-warning.php:349
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+shockingly-big-ie6-warning.php:354
+  - RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+shockingly-big-ie6-warning.php:81
+  - STORAGE call to delete_option("ie6w_setup") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:82
+  - STORAGE call to delete_option("ie6w_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:83
+  - STORAGE call to delete_option("ie6w_jq") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:84
+  - STORAGE call to delete_option("ie6w_t1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:85
+  - STORAGE call to delete_option("ie6w_t2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:86
+  - STORAGE call to delete_option("ie6w_t3") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:87
+  - STORAGE call to delete_option("ie6w_b_ff") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:88
+  - STORAGE call to delete_option("ie6w_b_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:89
+  - STORAGE call to delete_option("ie6w_b_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:90
+  - STORAGE call to delete_option("ie6w_b_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:91
+  - STORAGE call to delete_option("ie6w_b_ie7") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:93
+  - STORAGE call to add_option("ie6w_options", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:100
+  - STORAGE call to update_option("ie6w_options", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:341
+  - STORAGE call to update_option("ie6w_options", $opt) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:347
+  - STORAGE call to update_option("ie6w_options", $opt) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:352
+  - STORAGE call to delete_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+shockingly-big-ie6-warning.php:81
+  - DELETION call to delete_option("ie6w_setup") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:82
+  - DELETION call to delete_option("ie6w_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:83
+  - DELETION call to delete_option("ie6w_jq") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:84
+  - DELETION call to delete_option("ie6w_t1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:85
+  - DELETION call to delete_option("ie6w_t2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:86
+  - DELETION call to delete_option("ie6w_t3") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:87
+  - DELETION call to delete_option("ie6w_b_ff") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:88
+  - DELETION call to delete_option("ie6w_b_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:89
+  - DELETION call to delete_option("ie6w_b_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:90
+  - DELETION call to delete_option("ie6w_b_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:91
+  - DELETION call to delete_option("ie6w_b_ie7") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+shockingly-big-ie6-warning.php:352
+  - DELETION call to delete_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressStorageDetector.delete_option("ie6w_t2") - {'option'}
+	WordPressStorageDetector.update_option("ie6w_options", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	WordPressStorageDetector.update_option("ie6w_options", $opt) - {'option'}
+	DeletionDetector.delete_option("ie6w_b_ff") - {'option'}
+	DeletionDetector.delete_option("ie6w_options") - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	DeletionDetector.delete_option("ie6w_b_opera") - {'option'}
+	DeletionDetector.delete_option("ie6w_b_chrome") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_b_safari") - {'option'}
+	WordPressStorageDetector.update_option("ie6w_options", $opt) - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_b_chrome") - {'option'}
+	DeletionDetector.delete_option("ie6w_b_safari") - {'option'}
+	DeletionDetector.delete_option("ie6w_b_ie7") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_type") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_t3") - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	DeletionDetector.delete_option("ie6w_jq") - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_b_ff") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_setup") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_jq") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_b_opera") - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	WordPressStorageDetector.add_option("ie6w_options", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_t1") - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	DeletionDetector.delete_option("ie6w_type") - {'option'}
+	DeletionDetector.delete_option("ie6w_t3") - {'option'}
+	WordPressRetrievalDetector.get_option("ie6w_options") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_b_ie7") - {'option'}
+	WordPressStorageDetector.delete_option("ie6w_options") - {'option'}
+	DeletionDetector.delete_option("ie6w_t1") - {'option'}
+	DeletionDetector.delete_option("ie6w_setup") - {'option'}
+	DeletionDetector.delete_option("ie6w_t2") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.039784.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 160 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.194624.
+
+160 STORE_REACHES edges created
+160 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.009671.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:37.455823!
+DELETION call to delete_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_setup") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_jq") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_t1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_t2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_t3") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_b_ff") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_b_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_b_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_b_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("ie6w_b_ie7") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("ie6w_options", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ie6w_options", $opt) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ie6w_options", $opt) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_setup") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_jq") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_t1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_t2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_t3") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_b_ff") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_b_opera") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_b_chrome") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_b_safari") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("ie6w_b_ie7") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_option("ie6w_options", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,870 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on install-tracker
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.493150.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.949403.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 24 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.522998.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.451146.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 643 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.954366.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.496495.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.090998.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 305 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.359473.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3577
+Added 2605 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 3874
+Added 297 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.241524.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/install-tracker/admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/install-tracker/installtrial.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/install-tracker/options.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.373286.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3577 PHP_REACHES edges created
+297 PHP_REACHES edges created
+3874 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1310 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.204529.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:04.486204.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 59 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.224153.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 41 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.181929.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.282551.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.329933.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.009824.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.050111.
+
+100 PHP_REACHES edges created
+100 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 74 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.147607.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+11 SQL operations to process.
+SELECT * FROM $wpdbkyght_companytry order by usecount
+SQL command (SELECT * FROM $wpdbkyght_companytry order by usecount) cannot be parsed correct.
+SELECT * FROM $wpdbkyght_producttry
+SQL command (SELECT * FROM $wpdbkyght_producttry) cannot be parsed correct.
+SELECT * FROM $wpdbkyght_companytry LIMIT 5, 5
+SQL command (SELECT * FROM $wpdbkyght_companytry LIMIT 5, 5) cannot be parsed correct.
+SELECT * FROM $wpdbkyght_companytry WHERE id = $_GET_id
+SELECT * FROM $wpdbkyght_companytry WHERE id = $_GET_id
+SQL command (SELECT * FROM $wpdbkyght_companytry WHERE id = $_GET_id) cannot be parsed correct.
+SELECT * FROM $wpdbkyght_upgrade
+SQL command (SELECT * FROM $wpdbkyght_upgrade) cannot be parsed correct.
+SELECT * FROM $wpdbkyght_upgrade WHERE id = $_GET_id
+SELECT * FROM $wpdbkyght_upgrade WHERE id = $_GET_id
+SQL command (SELECT * FROM $wpdbkyght_upgrade WHERE id = $_GET_id) cannot be parsed correct.
+CREATE TABLE KYG_INSTK_COMPANY_TABLE (
+		id int(10) NOT NULL AUTO_INCREMENT,
+		time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+		keyguid varchar(100) NOT NULL,
+		name varchar(60) NOT NULL,
+		email varchar(120) NULL,
+		contact varchar(60) NULL,
+		phone varchar(30) NULL,
+		address varchar(120) NULL,
+		city varchar(60) NULL,
+		state varchar(50) NULL,
+		zipcode varchar(15) NULL,
+		product varchar(50) NULL,
+		version varchar(15) NULL,
+		usecount int(10) NULL,
+		lastused datetime DEFAULT '0000-00-00 00:00:00' NULL,
+		custom varchar(60) NULL,
+		UNIQUE KEY id (id),
+		INDEX (keyguid)
+	) $wpdb->get_charset_collate();
+SQL command (CREATE TABLE KYG_INSTK_COMPANY_TABLE ( id int(10) NOT NULL AUTO_INCREMENT, time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL, keyguid varchar(100) NOT NULL, name varchar(60) NOT NULL, email varchar(120) NULL, contact varchar(60) NULL, phone varchar(30) NULL, address varchar(120) NULL, city varchar(60) NULL, state varchar(50) NULL, zipcode varchar(15) NULL, product varchar(50) NULL, version varchar(15) NULL, usecount int(10) NULL, lastused datetime DEFAULT '0000-00-00 00:00:00' NULL, custom varchar(60) NULL, UNIQUE KEY id (id), INDEX (keyguid) ) $wpdb->get_charset_collate();) cannot be parsed correct.
+CREATE TABLE KYG_INSTK_PRODUCT_TABLE (
+		id int(10) NOT NULL AUTO_INCREMENT,
+		product varchar(50) NOT NULL,
+		version varchar(15) NOT NULL,
+		usecount int(10) NULL,
+		lastupdate datetime DEFAULT '0000-00-00 00:00:00' NULL,
+		UNIQUE KEY id (id),
+		INDEX (product)
+	) $wpdb->get_charset_collate();
+SQL command (CREATE TABLE KYG_INSTK_PRODUCT_TABLE ( id int(10) NOT NULL AUTO_INCREMENT, product varchar(50) NOT NULL, version varchar(15) NOT NULL, usecount int(10) NULL, lastupdate datetime DEFAULT '0000-00-00 00:00:00' NULL, UNIQUE KEY id (id), INDEX (product) ) $wpdb->get_charset_collate();) cannot be parsed correct.
+CREATE TABLE KYG_INSTK_UPGRADE_TABLE (
+		id int(10) NOT NULL AUTO_INCREMENT,
+		product varchar(50) NOT NULL,
+		version varchar(15) NOT NULL,
+		vernum int(10) NOT NULL,
+		custom varchar(60) NULL,
+		url varchar(255) NOT NULL,
+		notesurl varchar(255) NULL,
+		UNIQUE KEY id (id),
+		INDEX upidx (product, custom)
+	) $wpdb->get_charset_collate();
+SQL command (CREATE TABLE KYG_INSTK_UPGRADE_TABLE ( id int(10) NOT NULL AUTO_INCREMENT, product varchar(50) NOT NULL, version varchar(15) NOT NULL, vernum int(10) NOT NULL, custom varchar(60) NULL, url varchar(255) NOT NULL, notesurl varchar(255) NULL, UNIQUE KEY id (id), INDEX upidx (product, custom) ) $wpdb->get_charset_collate();) cannot be parsed correct.
+SELECT * FROM KYG_INSTK_UPGRADE_TABLE WHERE product = $_POST_product and (custom is null or custom = '') and vernum > %d order by id desc limit 1
+SELECT * FROM KYG_INSTK_UPGRADE_TABLE WHERE product = $_POST_product and (custom is null or custom = '') and vernum > str_replace(" ", "", $vernum) order by id desc limit 1
+SELECT * FROM KYG_INSTK_UPGRADE_TABLE WHERE product = $_POST_product and (custom is null or custom = '') and vernum > str_replace(" ", "", $vernum) order by id desc limit 1
+SQL command (SELECT * FROM KYG_INSTK_UPGRADE_TABLE WHERE product = $_POST_product and (custom is null or custom = '') and vernum > str_replace(" ", "", $vernum) order by id desc limit 1) cannot be parsed correct.
+SELECT * FROM KYG_INSTK_UPGRADE_TABLE WHERE product = $_POST_product and custom = %s and vernum > %d order by id limit 1
+SELECT * FROM KYG_INSTK_UPGRADE_TABLE WHERE product = $_POST_product and custom = $_POST_custom and vernum > %d order by id limit 1
+SELECT * FROM KYG_INSTK_UPGRADE_TABLE WHERE product = $_POST_product astr_replace(" ", "", $vernum) custom = $_POST_custom and vernum > %d order by id limit 1
+SELECT * FROM KYG_INSTK_UPGRADE_TABLE WHERE product = $_POST_product astr_replace(" ", "", $vernum) custom = $_POST_custom and vernum > %d order by id limit 1
+SQL command (SELECT * FROM KYG_INSTK_UPGRADE_TABLE WHERE product = $_POST_product astr_replace(" ", "", $vernum) custom = $_POST_custom and vernum > %d order by id limit 1) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [206, 384, 583, 890, 1155, 1414, 2023, 2049, 2075, 2629, 2654]
+Added 0 SQL nodes. 0 out of 11 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:05.132637.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_email'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_phone'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_product'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_version'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_custom'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_usecount'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_lastused'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_keyguid'' cannot be parsed correct.
+HTML code '$'<a class=\'button-primary\' href=\'admin_url($path)\'>Delete</a>'' cannot be parsed correct.
+HTML code '$'$_GET_id'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'<a href=\'admin_url($path)\'>$entry</a>'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'<a href=\'admin_url($path)\'>Add</a>'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_product'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_version'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_vernum'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_custom'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_url'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_notesurl'' cannot be parsed correct.
+HTML code '$'<a class=\'button-primary\' href=\'admin_url($path)\'>Delete</a>'' cannot be parsed correct.
+HTML code '$'$_GET_id'' cannot be parsed correct.
+HTML code '$'$wpdb->get_var("SELECT count(*) FROM " . $table_name)'' cannot be parsed correct.
+HTML code '$'$wpdb->get_var("SELECT sum(usecount) FROM " . $table_name)'' cannot be parsed correct.
+HTML code '$'$wpdb->get_var("SELECT count(*) FROM " . $table_name)'' cannot be parsed correct.
+HTML code '$'$wpdb->get_var("SELECT avg(usecount) FROM " . $table_name)'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'<a href=\'admin_url($path)\'>$entry</a>'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'<a class=\'button-primary\' href=\'admin_url($path)\'>Delete</a>'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'<a href=\'admin_url($path)\'>$entry</a>'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'$entry'' cannot be parsed correct.
+HTML code '$'<div class="tablenav"><div class="tablenav-pages" style="margin: 1em 0">paginate_links(["base" => add_query_arg("pagenum", "%#%"), "format" => "", "prev_text" => __("&laquo;", "aag"), "next_text" => __("&raquo;", "aag"), "total" => $num_of_pages, "current" => $pagenum])</div></div>'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_name'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_address'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_city'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_state'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_zipcode'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row($wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id = %d", $id))_contact'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$kyreg->to_json()'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$kyreg->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreg->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreg->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreg->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreply->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreg->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreplyto_json()'' cannot be parsed correct.
+HTML code '$'$kyreply->to_json()'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'$kyreply->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreply->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreply->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreply->to_json()'' cannot be parsed correct.
+HTML code '$'$kyreply->to_json()'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Email</td><td><input type="text" size="50" id="email" name="email" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Phone</td><td><input type="text" size="25" id="phone" name="phone" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Product</td><td><input type="text" size="40" id="product" name="product" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Version</td><td><input type="text" size="20" id="version" name="version" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Custom</td><td><input type="text" size="20" id="custom" name="custom" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Usage</td><td'' cannot be parsed correct.
+HTML code '$'</td></tr>
+			      <tr><td>Last Used</td><td>'' cannot be parsed correct.
+HTML code '$'</td></tr>
+			      <tr><td>Client Key</td><td>'' cannot be parsed correct.
+HTML code '$'</td></tr>
+			      <tr>
+						   <td><input type="button" id="submit" name="submit" value="Submit" class="button-primary"/></td>
+						   <td style="text-align:right">
+						      '' cannot be parsed correct.
+HTML code '$'"/>
+          <input type="hidden" id="action" name="action" value="kyg_reg_edit"/>
+      </form>
+   </div>
+'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<h2>Upgrades Available</h2>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<h2>Unable to locate that upgrade record</h2>'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Version</td><td><input type="text" size="15" id="version" name="version" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Version Number</td><td><input type="text" size="15" id="vernum" name="vernum" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Custom</td><td><input type="text" id="custom" size="50" name="custom" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>URL</td><td><input type="text" id="url" size="80" name="url" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Notes (URL)</td><td><input type="text" size="80" id="notesurl" name="notesurl" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr>
+						   <td><input type="button" id="submit" name="submit" value="Submit" class="button-primary"/></td>
+						   <td style="text-align:right">
+						      '' cannot be parsed correct.
+HTML code '$'"/>
+          <input type="hidden" id="action" name="action" value="kyg_upgrade_edit"/>
+      </form>
+   </div>
+'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<h2>Install Tracker Summary</h2>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'</td>
+				</tr>
+				<tr>
+					<td>Total Usage</td><td>'' cannot be parsed correct.
+HTML code '$'</td>
+				</tr>
+	    </tbody>
+		</table>
+
+		<br/>
+		<table class="widefat">
+	    <thead>
+	        <tr>
+	            <th colspan="2" scope="col" class="manage-column column-name" style=""><h3>Registration Summary</h3></th>
+					</tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+					<td width="50%">Number of Registrations</td><td>'' cannot be parsed correct.
+HTML code '$'</td>
+				</tr>
+				<tr>
+					<td>Average Usage</td><td>'' cannot be parsed correct.
+HTML code '$'</td>
+		    </tr>
+				<tr>
+					<td colspan="2"><strong>Top 10 by Usage</strong></td>
+		    </tr>
+	        '' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<h2>Products</h2>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<h2>Registrations</h2>'' cannot be parsed correct.
+HTML code '$'<h2>Unable to locate that upgrade record</h2>'' cannot be parsed correct.
+HTML code '$'<h2>Upgrade Record Deleted</h2>'' cannot be parsed correct.
+HTML code '$'<h2>Unable to locate that product record</h2>'' cannot be parsed correct.
+HTML code '$'<h2>Product Track Record Deleted</h2>'' cannot be parsed correct.
+HTML code '$'<h2>Unable to locate that product record</h2>'' cannot be parsed correct.
+HTML code '$'<h2>Registration Record Deleted</h2>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<h2>Unable to locate that upgrade record</h2>'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Address</td><td><input type="text" size="40" id="address" name="address" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>City</td><td><input type="text" size="40" id="city" name="city" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>State</td><td><input type="text" id="state" size="40" name="state" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Zip\Postal</td><td><input type="text" id="zipcode" size="40" name="zipcode" value="'' cannot be parsed correct.
+HTML code '$'"/></td></tr>
+			      <tr><td>Contact</td><td><input type="text" id="contact" size="40" name="contact" value="'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:11.805520.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.050148.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 13 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.569520.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running ArrayElementDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running PHPRetrievalDetector
+### Start running SybaseDetector
+### Finish running SqliteDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running maxdbDetector
+### Start running WordPressRetrievalDetector
+### Finish running MySQLiDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running VariableDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+installtrial.php:475
+  - Request variable '$_POST["zipcode"]' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:476
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:765
+  - Request variable '$_POST["address"]' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:769
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:774
+  - Request variable '$_POST["zipcode"]' of personal types {'zipcode'} is found.
+  - Data types: zipcode 
+
+admin.php:91
+  - object property '$entry->email' of personal types {'email'} is found.
+  - Data types: email
+admin.php:255
+  - object property '$entry->email' of personal types {'email'} is found.
+  - Data types: email
+admin.php:325
+  - object property '$uprow->address' of personal types {'address'} is found.
+  - Data types: address
+admin.php:328
+  - object property '$uprow->zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin.php:330
+  - object property '$uprow->email' of personal types {'email'} is found.
+  - Data types: email 
+
+installtrial.php:221
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:224
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:225
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:246
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:249
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:250
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:422
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:424
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:428
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:475
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:476
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:493
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:495
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:511
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:511
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:517
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:517
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:519
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:519
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:546
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:546
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:561
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:561
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:765
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:769
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:774
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:778
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:781
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:783
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:797
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:797
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:799
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:799
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:803
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:803
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:805
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:805
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+installtrial.php:812
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:812
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:817
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+installtrial.php:817
+  - variable '$address' of personal types {'address'} is found.
+  - Data types: address
+installtrial.php:817
+  - variable '$zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode 
+
+installtrial.php:135
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+installtrial.php:149
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+installtrial.php:165
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+installtrial.php:174
+  - RETRIEVAL call to get_option("jal_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+installtrial.php:191
+  - RETRIEVAL call to get_option("jal_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+installtrial.php:448
+  - RETRIEVAL call to get_option("kytracker_option_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+installtrial.php:578
+  - RETRIEVAL call to get_option("kytracker_option_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+installtrial.php:642
+  - RETRIEVAL call to get_option("kytracker_option_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+options.php:40
+  - RETRIEVAL call to get_option("kytracker_option_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+installtrial.php:178
+  - STORAGE call to add_option("jal_db_version", $KYGINTR_jal_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+installtrial.php:195
+  - STORAGE call to update_option("jal_db_version", $KYGINTR_jal_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+admin.php:530
+  - Data from table $wpdbkyght_upgrade deleted: "$wpdb->delete($table_name, ["id" => $id])"
+admin.php:549
+  - Data from table $wpdbkyght_producttry deleted: "$wpdb->delete($table_name, ["id" => $id])"
+admin.php:567
+  - Data from table $wpdbkyght_companytry deleted: "$wpdb->delete($table_name, ["id" => $id])" 
+
+By data type:
+address
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	PropertyDetector.(unknown) - {'address'}
+	ArrayElementDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	DeletionDetector.$wpdb->delete($table_name, ["id" => $id]) - set()
+	DeletionDetector.$wpdb->delete($table_name, ["id" => $id]) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	DeletionDetector.$wpdb->delete($table_name, ["id" => $id]) - set()
+option
+	WordPressStorageDetector.update_option("jal_db_version", $KYGINTR_jal_db_version) - {'option'}
+	WordPressRetrievalDetector.get_option("kytracker_option_name") - {'option'}
+	WordPressRetrievalDetector.get_option("kytracker_option_name") - {'option'}
+	WordPressRetrievalDetector.get_option("kytracker_option_name") - {'option'}
+	WordPressRetrievalDetector.get_option("jal_db_version") - {'option'}
+	WordPressStorageDetector.add_option("jal_db_version", $KYGINTR_jal_db_version) - {'option'}
+	WordPressRetrievalDetector.get_option("jal_db_version") - {'option'}
+	WordPressRetrievalDetector.get_option("kytracker_option_name") - {'option'}
+zipcode
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	PropertyDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	ArrayElementDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	ArrayElementDetector.(unknown) - {'zipcode'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.952269.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 12 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.107557.
+
+12 STORE_REACHES edges created
+12 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 92 nodes as PERSONAL
+In total, tainted 92 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:02.507081.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:57.146640!
+Request variable '$_POST["zipcode"]' of personal types {'zipcode'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["address"]' of personal types {'address'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["zipcode"]' of personal types {'zipcode'} is found.,,None
+Data from table $wpdbkyght_upgrade deleted: "$wpdb->delete($table_name, ["id" => $id])",None,None
+Data from table $wpdbkyght_producttry deleted: "$wpdb->delete($table_name, ["id" => $id])",None,None
+Data from table $wpdbkyght_companytry deleted: "$wpdb->delete($table_name, ["id" => $id])",None,None
+object property '$entry->email' of personal types {'email'} is found.,,None
+object property '$uprow->address' of personal types {'address'} is found.,,None
+object property '$uprow->zipcode' of personal types {'zipcode'} is found.,,None
+object property '$uprow->email' of personal types {'email'} is found.,,None
+object property '$entry->email' of personal types {'email'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+variable '$zipcode' of personal types {'zipcode'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$address' of personal types {'address'} is found.,,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_option("jal_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("jal_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("kytracker_option_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("kytracker_option_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("kytracker_option_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("kytracker_option_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("jal_db_version", $KYGINTR_jal_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("jal_db_version", $KYGINTR_jal_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

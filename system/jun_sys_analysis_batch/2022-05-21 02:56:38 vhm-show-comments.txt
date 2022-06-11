@@ -1,0 +1,406 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on vhm-show-comments
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.446855.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.078702.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 13 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.403061.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.517697.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 86 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.587686.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.489611.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.083789.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 33 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.776409.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1056
+Added 923 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1123
+Added 67 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.131299.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vhm-show-comments/settings.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/vhm-show-comments/vhm-show-comments.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.233384.
+
+13 PHP_REACHES edges created
+1 REACHES edges created
+1000 PHP_REACHES edges created
+1042 PHP_REACHES edges created
+67 PHP_REACHES edges created
+1123 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 344 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.961816.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.847511.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.383822.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 1 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.183252.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.093944.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.025020.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008250.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.035370.
+
+2 PHP_REACHES edges created
+2 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 2 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.108678.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+4 SQL operations to process.
+CREATE TABLE $this_table_name (
+				ID int(11) NOT NULL AUTO_INCREMENT,
+				item_title TEXT NULL,
+				item_source VARCHAR(8) NULL,
+				item_source_id INT NULL,
+				item_number INT(11) NULL,
+				item_order VARCHAR(4) NULL,
+				item_before TEXT NULL,
+				item_loop LONGTEXT NULL,
+				item_after TEXT NULL,
+				PRIMARY KEY (ID),
+				UNIQUE KEY ID (ID)
+			) $wpdb->get_charset_collate();
+SQL command (CREATE TABLE $this_table_name ( ID int(11) NOT NULL AUTO_INCREMENT, item_title TEXT NULL, item_source VARCHAR(8) NULL, item_source_id INT NULL, item_number INT(11) NULL, item_order VARCHAR(4) NULL, item_before TEXT NULL, item_loop LONGTEXT NULL, item_after TEXT NULL, PRIMARY KEY (ID), UNIQUE KEY ID (ID) ) $wpdb->get_charset_collate();) cannot be parsed correct.
+SELECT * FROM $wpdbvhm_show_comments
+SQL command (SELECT * FROM $wpdbvhm_show_comments) cannot be parsed correct.
+SELECT c.* FROM wp_comments AS c
+SQL command (SELECT c.* FROM wp_comments AS c) cannot be parsed correct.
+SELECT * FROM $wpdbvhm_show_comments WHERE ID=$id
+SQL command (SELECT * FROM $wpdbvhm_show_comments WHERE ID=$id) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1164, 1465, 1692, 1539]
+Added 0 SQL nodes. 0 out of 4 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.133003.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'Shortcode was successfully CREATED.'' cannot be parsed correct.
+HTML code '$'Shortcode was NOT CREATED.'' cannot be parsed correct.
+HTML code '$'Shortcode was successfully DELETED.'' cannot be parsed correct.
+HTML code '$'admin_url("edit-comments.php?page=vhm_show_comments")'' cannot be parsed correct.
+HTML code '$' nav-tab-activefalse'' cannot be parsed correct.
+HTML code '$'admin_url("edit-comments.php?page=vhm_show_comments&tab=generator")'' cannot be parsed correct.
+HTML code '$' nav-tab-activefalse'' cannot be parsed correct.
+HTML code '$'admin_url("edit-comments.php?page=vhm_show_comments&tab=shortcodes")'' cannot be parsed correct.
+HTML code '$' nav-tab-activefalse'' cannot be parsed correct.
+HTML code '$'admin_url("edit-comments.php?page=vhm_show_comments&tab=about")'' cannot be parsed correct.
+HTML code '$' nav-tab-activefalse'' cannot be parsed correct.
+HTML code '$'get_option("vhmShowCommentsSettings")_source_id0'' cannot be parsed correct.
+HTML code '$'get_option("vhmShowCommentsSettings")_number0'' cannot be parsed correct.
+HTML code '$' selected="selected"false'' cannot be parsed correct.
+HTML code '$' selected="selected"false'' cannot be parsed correct.
+HTML code '$' selected="selected"false'' cannot be parsed correct.
+HTML code '$'get_option("vhmShowCommentsSettings")_before_items<ol>'' cannot be parsed correct.
+HTML code '$'get_option("vhmShowCommentsSettings")_after_items</ol>'' cannot be parsed correct.
+HTML code '$'$shortcode'' cannot be parsed correct.
+HTML code '$'$shortcode'' cannot be parsed correct.
+HTML code '$'admin_url("edit-comments.php?page=vhm_show_comments&tab=shortcodes&action=trash&id=" . $shortcode->ID)'' cannot be parsed correct.
+HTML code '$'$shortcode'' cannot be parsed correct.
+HTML code '$'</p></div>
+	'' cannot be parsed correct.
+HTML code '$'" class="nav-tab'' cannot be parsed correct.
+HTML code '$'" class="nav-tab'' cannot be parsed correct.
+HTML code '$'" class="nav-tab'' cannot be parsed correct.
+HTML code '$'" class="nav-tab'' cannot be parsed correct.
+HTML code '$'</th>
+							<th scope="col" class="column-description desc" style="">'' cannot be parsed correct.
+HTML code '$'</th>
+							<th scope="col" class="column-description" style="">'' cannot be parsed correct.
+HTML code '$'</p>
+							</td>
+							<td class="column-description">
+								'' cannot be parsed correct.
+HTML code '$'</h3>
+				<p>'' cannot be parsed correct.
+HTML code '$'</p>
+				<table class="form-table">  
+					
+					<tr valign="top">
+						<th scope="row"><label for="item_title">'' cannot be parsed correct.
+HTML code '$'</label></th>
+						<td>
+							<input type="text" name="item_title" id="item_title" value="" />
+							<p class="description">'' cannot be parsed correct.
+HTML code '$'</label></th>
+						<td>
+							<select id="source" name="item_source">
+								<option value="post">'' cannot be parsed correct.
+HTML code '$'</label></th>
+						<td>
+							<input type="text" name="item_source_id" id="source_id" value="'' cannot be parsed correct.
+HTML code '$'</label></th>
+						<td>
+							<input type="text" name="item_number" id="number" value="'' cannot be parsed correct.
+HTML code '$'</label></th>
+						<td>
+							<select name="item_order">
+								<option value="DESC"'' cannot be parsed correct.
+HTML code '$'</label></th>
+						<td>
+							<textarea name="item_loop" id="loop" style="width:100%" rows="10"><li>"%COMMENT%" &mdash; <a href="%URL%">%AUTHOR%</a> '' cannot be parsed correct.
+HTML code '$'</label></th>
+						<td>
+							<input type="text" name="item_after" id="item_after" value="'' cannot be parsed correct.
+HTML code '$'</th>
+							<th scope="col" class="column-description desc" style="">'' cannot be parsed correct.
+HTML code '$'</th>
+							<th scope="col" class="column-description" style="">'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a></span>
+								</div>
+							</td>
+							<td>
+								<input type="text" value=\'[vhm_show_comments id="'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.120594.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.048049.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 7 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.441298.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running ArrayElementDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PhpVarDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressStorageDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running MySQLiDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running WP_UserDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+settings.php:1
+  - RETRIEVAL call to get_option("vhmShowCommentsSettings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vhm-show-comments.php:45
+  - RETRIEVAL call to get_option("vhmShowCommentsSettings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+vhm-show-comments.php:85
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+vhm-show-comments.php:266
+  - RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: user_meta 
+
+vhm-show-comments.php:157
+  - Data from table $this_table_name deleted: "$wpdb->delete($this->table_name, ["ID" => $_REQUEST["id"]])" 
+
+By data type:
+none
+	DeletionDetector.$wpdb->delete($this->table_name, ["ID" => $_REQUEST["id"]]) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressRetrievalDetector.get_option("vhmShowCommentsSettings") - {'option'}
+	WordPressRetrievalDetector.get_option("vhmShowCommentsSettings") - {'option'}
+user_meta
+	WordPressRetrievalDetector.get_user_option("rich_editing") - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.049856.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.052599.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 1 nodes as PERSONAL
+In total, tainted 1 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.151215.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:28.581534!
+Data from table $this_table_name deleted: "$wpdb->delete($this->table_name, ["ID" => $_REQUEST["id"]])",None,None
+RETRIEVAL call to get_option("vhmShowCommentsSettings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_user_option("rich_editing") alters data types {'user_meta'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("vhmShowCommentsSettings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

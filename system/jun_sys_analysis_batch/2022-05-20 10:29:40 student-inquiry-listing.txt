@@ -1,0 +1,604 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on student-inquiry-listing
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.719727.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.923459.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.245919.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.484093.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 273 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.773955.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.866935.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.119452.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 117 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.094416.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2002
+Added 1612 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2272
+Added 270 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.031245.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/student-inquiry-listing/student-inquiry.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.173379.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2002 PHP_REACHES edges created
+270 PHP_REACHES edges created
+2272 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 702 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.059711.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.401861.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 8 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.139307.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 7 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.430259.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.230379.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.169842.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.025679.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.044105.
+
+15 PHP_REACHES edges created
+15 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 13 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.158947.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+7 SQL operations to process.
+CREATE TABLE $wpdbinquiries (
+            id int(11) NOT NULL AUTO_INCREMENT,
+            name VARCHAR(255) NOT NULL,
+            email VARCHAR(255) NOT NULL,
+            subject VARCHAR(255) NOT NULL,
+            message text,
+            course VARCHAR(255),
+            amount VARCHAR(255),
+            status VARCHAR(10),
+            PRIMARY KEY (id)
+        );
+SQL command (CREATE TABLE $wpdbinquiries ( id int(11) NOT NULL AUTO_INCREMENT, name VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, subject VARCHAR(255) NOT NULL, message text, course VARCHAR(255), amount VARCHAR(255), status VARCHAR(10), PRIMARY KEY (id) );) cannot be parsed correct.
+SELECT * FROM $wpdbinquiries ORDER BY {"name": "{\"1\": [\"name\"], \"2\": [\"true\"]}", "email": "{\"1\": [\"email\"], \"2\": [\"false\"]}"} $order LIMIT 20 OFFSET %d
+SELECT * FROM $wpdbinquiries ORDER BY {"name": "{\"1\": [\"name\"], \"2\": [\"true\"]}", "email": "{\"1\": [\"email\"], \"2\": [\"false\"]}"} $order LIMIT 20 OFFSET 20
+SELECT * FROM $wpdbinquiries ORDER BY {"name": "{\"1\": [\"name\"], \"2\": [\"true\"]}", "email": "{\"1\": [\"email\"], \"2\": [\"false\"]}"} $order LIMIT 20 OFFSET 20
+SQL command (SELECT * FROM $wpdbinquiries ORDER BY {"name": "{\"1\": [\"name\"], \"2\": [\"true\"]}", "email": "{\"1\": [\"email\"], \"2\": [\"false\"]}"} $order LIMIT 20 OFFSET 20) cannot be parsed correct.
+SELECT * FROM $wpdbinquiries WHERE id in (shortcode_atts($default, $_REQUEST)_selected_ids) 
+SQL command (SELECT * FROM $wpdbinquiries WHERE id in (shortcode_atts($default, $_REQUEST)_selected_ids) ) cannot be parsed correct.
+WHERE name LIKE %trim($s)% and id not in (implode(",", $selected))
+WHERE name LIKE %trim($s)% and id not in (implode(",", $selected))
+SQL command (WHERE name LIKE %trim($s)% and id not in (implode(",", $selected))) cannot be parsed correct.
+SELECT * FROM $wpdbinquiries WHERE id = sanitize_key($_REQUEST["id"])
+SELECT * FROM $wpdbinquiries WHERE id = sanitize_key($_REQUEST["id"])
+SQL command (SELECT * FROM $wpdbinquiries WHERE id = sanitize_key($_REQUEST["id"])) cannot be parsed correct.
+DELETE FROM $wpdbinquiries WHERE id IN(implode(",", $ids))
+SQL command (DELETE FROM $wpdbinquiries WHERE id IN(implode(",", $ids))) cannot be parsed correct.
+INSERT INTO `$wpdbinquiries` ( `name`, `email`, `subject`, `message` ) VALUES ( {"1": ["sanitize_text_field($_POST[\"inquiry_name\"])"], "2": ["sanitize_email($_POST[\"inquiry_email\"])"], "3": ["sanitize_text_field($_POST[\"inquiry_subject\"])"], "4": ["sanitize_textarea_field($_POST[\"inquiry_message\"])"]}, %s, %s, %s )
+None
+The following function calls could not successfully be analyzed for SQL content: [58, 792, 2191, 2873, 1334, 598, 3332]
+Added 0 SQL nodes. 0 out of 7 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:04.810840.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_admin_url(get_current_blog_id(), "admin.php?page=inquiries_form")'' cannot be parsed correct.
+HTML code '$'<div class="updated below-h2" id="message"><p>sprintf(__("Items deleted: %d", "student_inquiry"), count($_REQUEST["id"]))</p></div>'' cannot be parsed correct.
+HTML code '$'$_REQUEST_page'' cannot be parsed correct.
+HTML code '$'get_admin_url(get_current_blog_id(), "admin.php?page=inquiries")'' cannot be parsed correct.
+HTML code '$'Item updated successfully.'' cannot be parsed correct.
+HTML code '$'wp_create_nonce(basename())'' cannot be parsed correct.
+HTML code '$'$default_id'' cannot be parsed correct.
+HTML code '$'$item_name'' cannot be parsed correct.
+HTML code '$'$item_email'' cannot be parsed correct.
+HTML code '$'$item_subject'' cannot be parsed correct.
+HTML code '$'$item_message'' cannot be parsed correct.
+HTML code '$'$item_course'' cannot be parsed correct.
+HTML code '$'$item_amount'' cannot be parsed correct.
+HTML code '$'Name'' cannot be parsed correct.
+HTML code '$'Email address'' cannot be parsed correct.
+HTML code '$'Subject'' cannot be parsed correct.
+HTML code '$'Message'' cannot be parsed correct.
+HTML code '$'wp_create_nonce("inquiry-nonce")'' cannot be parsed correct.
+HTML code '$'Submit'' cannot be parsed correct.
+HTML code '$'get_admin_url(get_current_blog_id(), "admin.php?page=inquiries")'' cannot be parsed correct.
+HTML code '$'Please select student to send invite.'' cannot be parsed correct.
+HTML code '$'Invite send successfully.'' cannot be parsed correct.
+HTML code '$'wp_create_nonce(basename())'' cannot be parsed correct.
+HTML code '$'$item_body'' cannot be parsed correct.
+HTML code '$'json_encode($results)'' cannot be parsed correct.
+HTML code '$'admin_url("admin-ajax.php")'' cannot be parsed correct.
+HTML code '$'json_encode($result)'' cannot be parsed correct.
+HTML code '$' <a class="add-new-h2" href="'' cannot be parsed correct.
+HTML code '$'</a>
+            </h2>
+            '' cannot be parsed correct.
+HTML code '$'" />
+               '' cannot be parsed correct.
+HTML code '$'            </form>
+
+        </div>
+    '' cannot be parsed correct.
+HTML code '$' <a class="add-new-h2" href="'' cannot be parsed correct.
+HTML code '$'</a>
+            </h2>
+
+            '' cannot be parsed correct.
+HTML code '$'</p>
+                </div>
+            '' cannot be parsed correct.
+HTML code '$'</p>
+                </div>
+            '' cannot be parsed correct.
+HTML code '$'" />
+               '' cannot be parsed correct.
+HTML code '$'" />
+
+                <div class="metabox-holder" id="poststuff">
+                    <div id="post-body">
+                        <div id="post-body-content">
+                            '' cannot be parsed correct.
+HTML code '$'" id="submit" class="button-primary" name="submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    '' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <input id="name" name="name" type="text" value="'' cannot be parsed correct.
+HTML code '$'" size="50" class="code" required>
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="email">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <input id="email" name="email" type="email" value="'' cannot be parsed correct.
+HTML code '$'" size="50" class="code" required>
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="subject">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <input id="subject" name="subject" type="text" value="'' cannot be parsed correct.
+HTML code '$'" size="50" class="code" required>
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="message">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <textarea id="message" name="message" rows="6" class="code" required>'' cannot be parsed correct.
+HTML code '$'</textarea>
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="course">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <input id="course" name="course" type="text" value="'' cannot be parsed correct.
+HTML code '$'" size="50" class="code" />
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="amount">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <input id="amount" name="amount" type="text" value="'' cannot be parsed correct.
+HTML code '$'" size="50" class="code" />
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="status">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <div style="margin-bottom:15px;"><input type="radio" name="status" id="status_active" value="active" checked />&nbsp; Active</div>
+                        <div><input type="radio" name="status" id="status_inactive" value="inactive" />&nbsp; Inactive</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    '' cannot be parsed correct.
+HTML code '$' <a class="add-new-h2" href="'' cannot be parsed correct.
+HTML code '$'</a>
+            </h2>
+
+            '' cannot be parsed correct.
+HTML code '$'</p>
+                </div>
+            '' cannot be parsed correct.
+HTML code '$'</p>
+                </div>
+            '' cannot be parsed correct.
+HTML code '$'" />
+               '' cannot be parsed correct.
+HTML code '$'" id="submit" class="button-primary" name="submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    '' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <input id="from" name="from" type="email" value="" size="50" class="code">
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="to">'' cannot be parsed correct.
+HTML code '$'<span style="color:red">*</span></label>
+                    </th>
+                    <td>
+                        <input id="to" name="to" type="text" value="" size="50" class="code">
+                        <div class="selected-tags"></div>
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="subject">'' cannot be parsed correct.
+HTML code '$'<span style="color:red">*</span></label>
+                    </th>
+                    <td>
+                        <input id="subject" name="subject" type="text" value="" size="50" class="code" required>
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="invite_type">'' cannot be parsed correct.
+HTML code '$'<span style="color:red">*</span></label>
+                    </th>
+                    <td>
+                        <select name="invite_type" id="invite_type">
+                            <option value="zoom">Zoom</option>
+                            <option value="whatsapp">Whatsapp</option>
+                            <option value="google">Google Meet</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="form-field conditional_field zoom google">
+                    <th valign="top" scope="row">
+                        <label for="invite_link">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <input id="invite_link" name="invite_link" type="text" value="" size="50" class="code" />
+                    </td>
+                </tr>
+                <tr class="form-field conditional_field zoom">
+                    <th valign="top" scope="row">
+                        <label for="invite_password">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <input id="invite_password" name="invite_password" type="text" value="" size="50" class="code" />
+                    </td>
+                </tr>
+                <tr class="form-field conditional_field whatsapp" style="display:none;">
+                    <th valign="top" scope="row">
+                        <label for="whatsapp_num">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <input id="whatsapp_num" name="whatsapp_num" type="text" value="" size="50" class="code" />
+                    </td>
+                </tr>
+                <tr class="form-field">
+                    <th valign="top" scope="row">
+                        <label for="body">'' cannot be parsed correct.
+HTML code '$'</label>
+                    </th>
+                    <td>
+                        <div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:05.474615.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.059812.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 8 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.500488.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDbDetector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running IBMDb2Detector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running ArrayElementDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running MySQLiDetector
+### Start running SybaseDetector
+### Finish running maxdbDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running PhpVarDetector
+### Start running WordPressStorageDetector
+### Finish running SqlServerDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running UserInputDetector
+### Finish running VariableDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+student-inquiry.php:1016
+  - Request variable '$_POST["inquiry_email"]' of personal types {'email'} is found.
+  - Data types: email
+student-inquiry.php:1016
+  - Request variable '$_POST["inquiry_email"]' of personal types {'email'} is found.
+  - Data types: email
+student-inquiry.php:1017
+  - Request variable '$_POST["inquiry_email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+student-inquiry.php:511
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+student-inquiry.php:535
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+student-inquiry.php:1017
+  - variable '$inquiry_email' of personal types {'email'} is found.
+  - Data types: email
+student-inquiry.php:1041
+  - variable '$inquiry_email' of personal types {'email'} is found.
+  - Data types: email 
+
+student-inquiry.php:55
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+student-inquiry.php:515
+  - RETRIEVAL call to get_option("blogname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+student-inquiry.php:517
+  - RETRIEVAL call to get_option("blogname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+student-inquiry.php:517
+  - RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+student-inquiry.php:563
+  - RETRIEVAL call to get_option("blogname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+student-inquiry.php:58
+  - STORAGE call to add_option("student_inquiry_db_version", $student_inquiry_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+email
+	ArrayElementDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressRetrievalDetector.get_option("blogname") - {'option'}
+	WordPressRetrievalDetector.get_option("blogname") - {'option'}
+	WordPressRetrievalDetector.get_option("admin_email") - {'option'}
+	WordPressStorageDetector.add_option("student_inquiry_db_version", $student_inquiry_db_version) - {'option'}
+	WordPressRetrievalDetector.get_option("blogname") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.107726.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 4 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.065069.
+
+4 STORE_REACHES edges created
+4 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 15 nodes as PERSONAL
+In total, tainted 15 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.457464.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:36.992666!
+Request variable '$_POST["inquiry_email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["inquiry_email"]' of personal types {'email'} is found.,,None
+Request variable '$_POST["inquiry_email"]' of personal types {'email'} is found.,,None
+variable '$inquiry_email' of personal types {'email'} is found.,,None
+variable '$inquiry_email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_option("blogname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("blogname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("admin_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_option("blogname") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("student_inquiry_db_version", $student_inquiry_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

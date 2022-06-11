@@ -1,0 +1,375 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on browser-sniff
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.336582.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.935813.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.356118.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 4 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.885608.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 1202 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.286164.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.591216.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.121874.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 488 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:07.407760.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 4223
+Added 2529 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4223
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.232967.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/browser-sniff/browsersniff.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.202778.
+
+4 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4219 PHP_REACHES edges created
+4223 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1462 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.135814.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.202886.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 79 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.592497.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 68 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.163374.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.043078.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.843133.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.018552.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.034089.
+
+147 PHP_REACHES edges created
+147 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 79 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.129766.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.110266.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<td><input type=text width="76px" value="unserialize(get_option("bs_options"))_width" name="bs_width"> x <input type=text width="76" value="unserialize(get_option("bs_options"))_height" name="bs_height">
+					<p class=\'help\'>The default is 14x14 px and keep in mind that all images are squared.
+					</p></td></tr>'' cannot be parsed correct.
+HTML code '$'<td><input type=text value=unserialize(get_option("bs_options"))_before" name="bs_before">
+					<p class=\'help\'>This is the string that is printed before browser name. Default is "Using".
+					</p></td></tr>'' cannot be parsed correct.
+HTML code '$'<td><input type=text value=unserialize(get_option("bs_options"))_between" name="bs_between">
+					<p class=\'help\'>This string is printed between browser name and OS name. Default is "on".
+					</p></td></tr>'' cannot be parsed correct.
+HTML code '$'<td><input type=text value=unserialize(get_option("bs_options"))_after" name="bs_after">
+					<p class=\'help\'>This string is printed after everything. Default is blank.
+					</p></td></tr>'' cannot be parsed correct.
+HTML code '$'unserialize(get_option("bs_options"))_beforepri_browser_string($comment->comment_agent, $image, $between) <a href=\'#\' title=\'htmlspecialchars($comment->comment_agent)\'>*</a>unserialize(get_option("bs_options"))_after'' cannot be parsed correct.
+HTML code '$'<div><form method="post">'' cannot be parsed correct.
+HTML code '$'<div class="wrap"><h2>Browser Sniff - Show the World your browser and OS</h2>'' cannot be parsed correct.
+HTML code '$'
+				<h3 class="title">How does this "sniff" works?</h3>
+				<p><a href="http://brunopedrassani.com/wordpress/plugins/browser-sniff" target="_blank">Browser-Sniff</a> is a simple plugin that takes the user-agent string stored in Wordpress and convert it into "images", in order to show in the comment loop what the commenter used to... make the comment. Something like "Using Firefox 3.6.3 in Windows Vista".
+				<br /><br />
+				You need to hook the code pri_print_browser() in your theme - inside the comment_loop - , in order for it to work.</p>
+				<br />
+				<h3 class="title">Customization</h3>				
+				<table class="form-table">'' cannot be parsed correct.
+HTML code '$'<tr valign="top"><th scope="row">Width x Height:</th>'' cannot be parsed correct.
+HTML code '$'<tr valign="top"><th scope="row">The Before String:</th>'' cannot be parsed correct.
+HTML code '$'<tr valign="top"><th scope="row">The Between String:</th>'' cannot be parsed correct.
+HTML code '$'<tr valign="top"><th scope="row">The After String:</th>'' cannot be parsed correct.
+HTML code '$'<tr valign="top"><th scope="row">Show Icons?</th>'' cannot be parsed correct.
+HTML code '$'<td valign="top"><input type=radio value="true" name="bs_show_icons" '' cannot be parsed correct.
+HTML code '$'checked '' cannot be parsed correct.
+HTML code '$'>Yes, show them! &nbsp; <input type=radio value="false" name="bs_show_icons" '' cannot be parsed correct.
+HTML code '$'checked '' cannot be parsed correct.
+HTML code '$' />No, do not show them.</b>
+					<p class=\'help\'>If you choose not to show, put a space after the Before String, otherwise the Browser Name will be "glued" with the Before String.</p></td></tr>'' cannot be parsed correct.
+HTML code '$'<tr valign="top"><th scope="row">Show position:</th>'' cannot be parsed correct.
+HTML code '$'<td valign="top"><input type=radio value="automagically" name="bs_position" '' cannot be parsed correct.
+HTML code '$'checked '' cannot be parsed correct.
+HTML code '$'>Automagically add on the start of each comment &nbsp; <input type=radio value="manually" name="bs_position" '' cannot be parsed correct.
+HTML code '$'checked '' cannot be parsed correct.
+HTML code '$' />I\'ll manually add the hook pri_print_browser() to my theme</b>
+					<p class=\'help\'>Choosing automagically will put the "sniff" right on the beginning of each comment. Choose this if you are not familiar with theme editing. Otherwise, choose manually and hook all by yourself :)</p></td></tr>'' cannot be parsed correct.
+HTML code '$'<input type="hidden" name="bs_submit" value="true"></input>
+					</table>
+					
+					<p class="submit"><input type="submit" value="Save Options &raquo;"></input></p></form>
+					'' cannot be parsed correct.
+HTML code '$'
+				<table cellspacing="10">
+				<tr>
+				<td style="width:50%" valign="top">
+				<div>
+				If you wanto to know more about Browser Sniff, it\'s functions and the authors, visit <a href="http://brunopedrassani.com/" target="_blank">http://brunopedrassani.com/</a><br />
+				</div>
+				</td>
+				</tr>
+				</table>
+			'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</form></div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.722723.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.051727.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 2 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.400291.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Start running DeletionDetector
+### Finish running MySQLiDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+browsersniff.php:45
+  - RETRIEVAL call to get_option("bs_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+browsersniff.php:175
+  - RETRIEVAL call to get_option("bs_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+browsersniff.php:182
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).
+  - Data types: user, user_meta
+browsersniff.php:207
+  - RETRIEVAL call to get_option("bs_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+browsersniff.php:959
+  - RETRIEVAL call to get_option("bs_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+browsersniff.php:40
+  - STORAGE call to update_option("bs_options", serialize($tmp)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressRetrievalDetector.get_option("bs_options") - {'option'}
+	WordPressStorageDetector.update_option("bs_options", serialize($tmp)) - {'option'}
+	WordPressRetrievalDetector.get_option("bs_options") - {'option'}
+	WordPressRetrievalDetector.get_option("bs_options") - {'option'}
+	WordPressRetrievalDetector.get_option("bs_options") - {'option'}
+user
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+user_meta
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.358991.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 4 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.068786.
+
+4 STORE_REACHES edges created
+4 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 1 nodes as PERSONAL
+In total, tainted 1 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.152638.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:34.721477!
+RETRIEVAL call to get_option("bs_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_option("bs_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bs_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("bs_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("bs_options", serialize($tmp)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

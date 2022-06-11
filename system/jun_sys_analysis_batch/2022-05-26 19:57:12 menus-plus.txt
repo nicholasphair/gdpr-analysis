@@ -1,0 +1,693 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on menus-plus
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.425714.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.851572.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.178195.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.405021.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 656 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.959698.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.547540.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.084311.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 262 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:04.286667.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 4504
+Added 3586 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4504
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.314178.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/menus-plus/menusplus.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.200887.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+4504 PHP_REACHES edges created
+4504 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1610 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.093257.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:04.677362.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 46 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.974773.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 61 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.155600.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.330424.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.379131.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011719.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.034819.
+
+107 PHP_REACHES edges created
+107 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 92 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.147845.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+38 SQL operations to process.
+CREATE TABLE $wpdbmenusplus (
+			id int NOT NULL AUTO_INCREMENT,
+			wp_id int NULL,
+			list_order int DEFAULT '0' NOT NULL, 
+			type text NOT NULL,
+			class text NULL,
+			url text NULL,
+			label text NULL,
+			children text NULL,
+			children_order text NULL,
+			children_order_dir text NULL,
+			menu_id int DEFAULT '1' NOT NULL,
+			target text NULL,
+			depth int DEFAULT '0' NOT NULL,
+			title text NULL,
+			PRIMARY  KEY id (id)
+		) DEFAULT CHARACTER SET $wpdb;
+SQL command (CREATE TABLE $wpdbmenusplus ( id int NOT NULL AUTO_INCREMENT, wp_id int NULL, list_order int DEFAULT '0' NOT NULL, type text NOT NULL, class text NULL, url text NULL, label text NULL, children text NULL, children_order text NULL, children_order_dir text NULL, menu_id int DEFAULT '1' NOT NULL, target text NULL, depth int DEFAULT '0' NOT NULL, title text NULL, PRIMARY KEY id (id) ) DEFAULT CHARACTER SET $wpdb;) cannot be parsed correct.
+CREATE TABLE $wpdbmenusplus_menus (
+			id int NOT NULL AUTO_INCREMENT,
+			parent_id int NULL,
+			menu_title text NULL,
+			menu_description text NULL,
+			PRIMARY  KEY id (id)
+		) DEFAULT CHARACTER SET $wpdb;
+SQL command (CREATE TABLE $wpdbmenusplus_menus ( id int NOT NULL AUTO_INCREMENT, parent_id int NULL, menu_title text NULL, menu_description text NULL, PRIMARY KEY id (id) ) DEFAULT CHARACTER SET $wpdb;) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus
+SQL command (SELECT * FROM $wpdbmenusplus_menus) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus WHERE id = $_GET_id
+SQL command (SELECT * FROM $wpdbmenusplus WHERE id = $_GET_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE parent_id is NULL ORDER BY menu_title ASC
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE parent_id is NULL ORDER BY menu_title ASC) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE parent_id = $_POST_menu_id
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE parent_id = $_POST_menu_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus WHERE menu_id = $_POST_menu_id ORDER BY list_order ASC
+SQL command (SELECT * FROM $wpdbmenusplus WHERE menu_id = $_POST_menu_id ORDER BY list_order ASC) cannot be parsed correct.
+SELECT list_order FROM $wpdbmenusplus WHERE menu_id = $this->prep_item_post($_POST)
+SQL command (SELECT list_order FROM $wpdbmenusplus WHERE menu_id = $this->prep_item_post($_POST)) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus WHERE menu_id = $passed_menu_id ORDER BY list_order ASC
+SQL command (SELECT * FROM $wpdbmenusplus WHERE menu_id = $passed_menu_id ORDER BY list_order ASC) cannot be parsed correct.
+SELECT ID, post_title FROM $wpdb WHERE ID = '$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_wp_id'
+SQL command (SELECT ID, post_title FROM $wpdb WHERE ID = '$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_wp_id') cannot be parsed correct.
+SELECT * FROM $wpdb WHERE post_type = 'post' AND post_status = 'publish' ORDER BY post_date DESC
+SQL command (SELECT * FROM $wpdb WHERE post_type = 'post' AND post_status = 'publish' ORDER BY post_date DESC) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE parent_id is NULL ORDER BY id ASC
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE parent_id is NULL ORDER BY id ASC) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE id = $_GET_menu_id
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE id = $_GET_menu_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus WHERE wp_id = $_GET_menu_id
+SQL command (SELECT * FROM $wpdbmenusplus WHERE wp_id = $_GET_menu_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE id = $_GET_menu_id
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE id = $_GET_menu_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus ORDER BY id
+SQL command (SELECT * FROM $wpdbmenusplus_menus ORDER BY id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE id = $_GET_menu_id
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE id = $_GET_menu_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE id = $_GET_menu_id
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE id = $_GET_menu_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE id = $_POST_menu_id
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE id = $_POST_menu_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE id = $child
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE id = $child) cannot be parsed correct.
+SELECT parent_id FROM $wpdbmenusplus_menus WHERE id = $_POST_menu_id
+SQL command (SELECT parent_id FROM $wpdbmenusplus_menus WHERE id = $_POST_menu_id) cannot be parsed correct.
+SELECT parent_id FROM $wpdbmenusplus_menus WHERE id = $_POST_menu_id
+SQL command (SELECT parent_id FROM $wpdbmenusplus_menus WHERE id = $_POST_menu_id) cannot be parsed correct.
+SELECT menu_title FROM $wpdbmenusplus_menus WHERE id = $wpdb->get_row("SELECT parent_id FROM "$menus_table" WHERE id = "$menu_id, OBJECT)_parent_id
+SQL command (SELECT menu_title FROM $wpdbmenusplus_menus WHERE id = $wpdb->get_row("SELECT parent_id FROM "$menus_table" WHERE id = "$menu_id, OBJECT)_parent_id) cannot be parsed correct.
+SELECT * FROM $wpdb WHERE term_ID='$item_wp_id'
+SQL command (SELECT * FROM $wpdb WHERE term_ID='$item_wp_id') cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus WHERE id = $item_wp_id
+SQL command (SELECT * FROM $wpdbmenusplus_menus WHERE id = $item_wp_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus WHERE id = $_POST_id
+SQL command (SELECT * FROM $wpdbmenusplus WHERE id = $_POST_id) cannot be parsed correct.
+SELECT * FROM $wpdbmenusplus_menus ORDER BY id ASC
+SQL command (SELECT * FROM $wpdbmenusplus_menus ORDER BY id ASC) cannot be parsed correct.
+SELECT menu_title FROM $wpdbmenusplus_menus WHERE id = $wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_wp_id
+SQL command (SELECT menu_title FROM $wpdbmenusplus_menus WHERE id = $wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_wp_id) cannot be parsed correct.
+SELECT * from $wpdbmenusplus_menus WHERE parent_id is NULL
+SQL command (SELECT * from $wpdbmenusplus_menus WHERE parent_id is NULL) cannot be parsed correct.
+DELETE from $wpdbmenusplus WHERE menu_id = $_POST_menu_id
+SQL command (DELETE from $wpdbmenusplus WHERE menu_id = $_POST_menu_id) cannot be parsed correct.
+DELETE from $wpdbmenusplus_menus WHERE id = $_POST_menu_id
+SQL command (DELETE from $wpdbmenusplus_menus WHERE id = $_POST_menu_id) cannot be parsed correct.
+DELETE from $wpdbmenusplus_menus WHERE id = $child
+SQL command (DELETE from $wpdbmenusplus_menus WHERE id = $child) cannot be parsed correct.
+DELETE from $wpdbmenusplus WHERE wp_id = $child
+SQL command (DELETE from $wpdbmenusplus WHERE wp_id = $child) cannot be parsed correct.
+DELETE from $wpdbmenusplus WHERE menu_id = $child
+SQL command (DELETE from $wpdbmenusplus WHERE menu_id = $child) cannot be parsed correct.
+DELETE from $wpdbmenusplus WHERE id = trim($id, "mp_remove_")
+SQL command (DELETE from $wpdbmenusplus WHERE id = trim($id, "mp_remove_")) cannot be parsed correct.
+DELETE FROM $wpdbmenusplus_menus WHERE id = $wpdb->get_row("SELECT * FROM "$items_table" WHERE id = "$id, OBJECT)_wp_id
+SQL command (DELETE FROM $wpdbmenusplus_menus WHERE id = $wpdb->get_row("SELECT * FROM "$items_table" WHERE id = "$id, OBJECT)_wp_id) cannot be parsed correct.
+DELETE FROM $wpdbmenusplus WHERE wp_id = $wpdb->get_row("SELECT * FROM "$items_table" WHERE id = "$id, OBJECT)_wp_id
+SQL command (DELETE FROM $wpdbmenusplus WHERE wp_id = $wpdb->get_row("SELECT * FROM "$items_table" WHERE id = "$id, OBJECT)_wp_id) cannot be parsed correct.
+DELETE FROM $wpdbmenusplus WHERE menu_id = $wpdb->get_row("SELECT * FROM "$items_table" WHERE id = "$id, OBJECT)_wp_id
+SQL command (DELETE FROM $wpdbmenusplus WHERE menu_id = $wpdb->get_row("SELECT * FROM "$items_table" WHERE id = "$id, OBJECT)_wp_id) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [464, 479, 497, 1666, 4076, 3677, 4274, 6011, 7058, 7370, 6483, 6834, 3013, 3031, 3201, 3622, 2788, 2897, 3997, 4176, 3759, 3825, 3865, 4446, 4507, 5920, 7027, 7587, 5688, 5710, 5722, 5756, 5768, 5780, 5849, 5942, 5954, 5966]
+Added 0 SQL nodes. 0 out of 38 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:11.112673.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'_e("Category")'' cannot be parsed correct.
+HTML code '$'<option value="order">My Category Order</option>'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'_e("Page")'' cannot be parsed correct.
+HTML code '$'<option value="menu_order">My Page Order</option>'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'_e("Post")'' cannot be parsed correct.
+HTML code '$'get_option("mp_version")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'admin_url("images/loading.gif")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'admin_url("images/loading.gif")'' cannot be parsed correct.
+HTML code '$'$_GET_type'' cannot be parsed correct.
+HTML code '$'$meta_type'' cannot be parsed correct.
+HTML code '$'$meta_label'' cannot be parsed correct.
+HTML code '$'$meta_class'' cannot be parsed correct.
+HTML code '$'$meta_title'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM "$menus_table" WHERE id = "$id, OBJECT)_menu_title'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM "$items_table" WHERE wp_id = "$id, OBJECT)_class'' cannot be parsed correct.
+HTML code '$'$meta_depth'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'$meta_depth'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'_e("Post", "menus-plus")'' cannot be parsed correct.
+HTML code '$'$meta_class'' cannot be parsed correct.
+HTML code '$'$meta_title'' cannot be parsed correct.
+HTML code '$'$meta_url'' cannot be parsed correct.
+HTML code '$'$meta_label'' cannot be parsed correct.
+HTML code '$'$meta_class'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM "$items_table" WHERE wp_id = "$id, OBJECT)_url'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM "$items_table" WHERE wp_id = "$id, OBJECT)_title'' cannot be parsed correct.
+HTML code '$'admin_url("images/loading.gif")'' cannot be parsed correct.
+HTML code '$'$_GET_menu_id'' cannot be parsed correct.
+HTML code '$'admin_url("images/loading.gif")'' cannot be parsed correct.
+HTML code '$'$_GET_id'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$this->get_menu_id($menu_id_from_get)'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$meta_title'' cannot be parsed correct.
+HTML code '$'admin_url("images/loading.gif")'' cannot be parsed correct.
+HTML code '$'$_GET_id'' cannot be parsed correct.
+HTML code '$'admin_url("images/loading.gif")'' cannot be parsed correct.
+HTML code '$'$type'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM "$menus_table" WHERE id = "$menu_id, ARRAY_A)_menu_title'' cannot be parsed correct.
+HTML code '$'admin_url("images/loading.gif")'' cannot be parsed correct.
+HTML code '$'$type'' cannot be parsed correct.
+HTML code '$'admin_url("images/loading.gif")'' cannot be parsed correct.
+HTML code '$'$type'' cannot be parsed correct.
+HTML code '$'$this->menu_parent($menu_id) : '' cannot be parsed correct.
+HTML code '$'<option style="margin-left$this->menu_walker($id);"$_POST_menu_id value=$item_id"$item_menu_title</option>'' cannot be parsed correct.
+HTML code '$'<option style="margin-left$this->menu_walker($child);"$_POST_menu_id value=$child"$wpdb->get_row("SELECT * FROM "$menus_table" WHERE id = "$child, OBJECT)_menu_title</option>'' cannot be parsed correct.
+HTML code '$'$item_id'' cannot be parsed correct.
+HTML code '$'$wpdb->get_row("SELECT * FROM "$wpdb->terms" WHERE term_ID=\\'"$wp_id"\\'", OBJECT)_name'' cannot be parsed correct.
+HTML code '$'Post'' cannot be parsed correct.
+HTML code '$'$item_wp_id'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$item_id'' cannot be parsed correct.
+HTML code '$'$item_wp_id'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")'' cannot be parsed correct.
+HTML code '$'$item_id'' cannot be parsed correct.
+HTML code '$'$item_menu_id'' cannot be parsed correct.
+HTML code '$'$label'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'$item_id'' cannot be parsed correct.
+HTML code '$'plugin_dir_url()'' cannot be parsed correct.
+HTML code '$'$wpdb'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'$wpdb'' cannot be parsed correct.
+HTML code '$'{"id": "$this->prep_item_post($_POST)_id"}'' cannot be parsed correct.
+HTML code '$'<li class=$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_class"'' cannot be parsed correct.
+HTML code '$'<a href=get_bloginfo("siteurl")" title="$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_title"$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_label</a>'' cannot be parsed correct.
+HTML code '$'str_replace("</li>", "", $top)'' cannot be parsed correct.
+HTML code '$'wp_list_pages($array)'' cannot be parsed correct.
+HTML code '$'wp_list_pages($array)'' cannot be parsed correct.
+HTML code '$'<li class=$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_class"'' cannot be parsed correct.
+HTML code '$'<a href=get_permalink($wp_id)" title="$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_title"$post_post_title</a>'' cannot be parsed correct.
+HTML code '$'<li class=$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_class"'' cannot be parsed correct.
+HTML code '$'<a href=$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_url" target="$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_target" title="$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_title"$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_label</a>'' cannot be parsed correct.
+HTML code '$'<li class=$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_class"><a href="$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_url" title="$wpdb->get_row("SELECT * FROM "$menus_table" ORDER BY id ASC", ARRAY_A)_title"$wpdb->get_row("SELECT menu_title FROM "$menus_table" WHERE id = "$wp_id)_menu_title</a>'' cannot be parsed correct.
+HTML code '$'<option value=$item_ID"$item_ID >$item_post_title</option>'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("title")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("title")'' cannot be parsed correct.
+HTML code '$'wp_parse_args($instance, $defaults)_title'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("menu")'' cannot be parsed correct.
+HTML code '$'$this->get_field_id("menu")'' cannot be parsed correct.
+HTML code '$'$this->get_field_name("menu")'' cannot be parsed correct.
+HTML code '$'<option value=$item_id"$item_id >$item_menu_title</option>'' cannot be parsed correct.
+HTML code '$'$before_widget'' cannot be parsed correct.
+HTML code '$'$before_titleapply_filters("widget_title", $instance["title"])$after_title'' cannot be parsed correct.
+HTML code '$'<ul class=\'menus-plus-widget\' id=\'menus-plus-$instance_menu\'>'' cannot be parsed correct.
+HTML code '$'$after_widget'' cannot be parsed correct.
+HTML code '$'class="parent_menu_box"'' cannot be parsed correct.
+HTML code '$'</div>
+						</td>
+						<td>
+							<input class="widefat" value="&lt;?php menusplus('' cannot be parsed correct.
+HTML code '$'</div>
+						</td>
+						<td>
+							<input class="widefat" value=\'[menusplus menu="'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'2'' cannot be parsed correct.
+HTML code '$'2'' cannot be parsed correct.
+HTML code '$'2'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'3'' cannot be parsed correct.
+HTML code '$'empty'' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'<ul>'' cannot be parsed correct.
+HTML code '$'</ul></li>'' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'</li>'' cannot be parsed correct.
+HTML code '$'<ul class=\'children\'>'' cannot be parsed correct.
+HTML code '$'</ul></li>'' cannot be parsed correct.
+HTML code '$'</ul>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:15.919217.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.040552.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 1 do_action/apply_filters calls and 24 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.787557.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running CubridDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running FrontBaseDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running DbaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running HashDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PostgreSQLDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running maxdbDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running Sqlite3Detector
+### Start running WordpressHashingFnDetector
+### Finish running MySQLiDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressStorageDetector
+### Finish running WordpressHashingFnDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running VariableDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+menusplus.php:123
+  - RETRIEVAL call to dbDelta("CREATE TABLE "$items_table" ("$items_fields") "$charset_collate";"). Passed arguments: 0: $queries (string[]|string). Returns (array).
+menusplus.php:124
+  - RETRIEVAL call to dbDelta("CREATE TABLE "$menus_table" ("$menus_fields") "$charset_collate";"). Passed arguments: 0: $queries (string[]|string). Returns (array).
+menusplus.php:186
+  - RETRIEVAL call to get_option("mp_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:190
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:191
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:192
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:193
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:194
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:196
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:209
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:212
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:220
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:226
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1047
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1073
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1128
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1154
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1198
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1219
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1249
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1268
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1293
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1321
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1346
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1378
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1420
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1435
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1450
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1723
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+menusplus.php:1729
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+menusplus.php:139
+  - STORAGE call to update_option("mp_version", $mp_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	WordPressRetrievalDetector.dbDelta("CREATE TABLE "$menus_table" ("$menus_fields") "$charset_collate";") - set()
+	WordPressRetrievalDetector.dbDelta("CREATE TABLE "$items_table" ("$items_fields") "$charset_collate";") - set()
+option
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressStorageDetector.update_option("mp_version", $mp_version) - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("mp_version") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.292680.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 28 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.326987.
+
+28 STORE_REACHES edges created
+28 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006435.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:01:03.724688!
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta("CREATE TABLE "$items_table" ("$items_fields") "$charset_collate";"). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta("CREATE TABLE "$menus_table" ("$menus_fields") "$charset_collate";"). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("mp_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("mp_version", $mp_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

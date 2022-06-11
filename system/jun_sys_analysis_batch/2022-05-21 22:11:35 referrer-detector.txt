@@ -1,0 +1,502 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on referrer-detector
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.001926.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.054898.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 119 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.445582.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.383199.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 280 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.625135.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.782393.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.101897.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 126 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.684941.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3472
+Added 2947 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 10383
+Added 6911 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.663196.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/config.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/entry.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/option.class.php' cannot be parsed correct.
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/rd.class.php
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/rd.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/referrer_detector.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/stats.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/support.class.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/uninstall.php' cannot be parsed correct.
+Added new directory node for: js
+Added new filesystem node for: /home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/js/index.html
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/referrer-detector/js/index.html' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.876622.
+
+5 Nodes Created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+3472 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+6911 PHP_REACHES edges created
+1 DIRECTORY_OF edges created
+1 FILE_OF edges created
+2 DIRECTORY_OF edges created
+1 FILE_OF edges created
+10388 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 1202 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.332848.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 4 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.484826.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 20 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.902134.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 12 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.198312.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.237252.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.198291.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012020.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.046250.
+
+4 CALLS edges created
+32 PHP_REACHES edges created
+36 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 37 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.111583.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+20 SQL operations to process.
+CREATE TABLE $this_config_entries_table_name (
+              `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+              `name` varchar(50) NOT NULL,
+              `url` varchar(255) NOT NULL,
+              `icon` varchar(255) NOT NULL,
+              `welcome_text` text NOT NULL,
+              `enabled` tinyint(4) NOT NULL default '1',
+              PRIMARY KEY (`id`),
+              KEY `url` (`url`)
+            );
+SQL command (CREATE TABLE $this_config_entries_table_name ( `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, `name` varchar(50) NOT NULL, `url` varchar(255) NOT NULL, `icon` varchar(255) NOT NULL, `welcome_text` text NOT NULL, `enabled` tinyint(4) NOT NULL default '1', PRIMARY KEY (`id`), KEY `url` (`url`) );) cannot be parsed correct.
+CREATE TABLE `$this_config_stats_table_name` (
+              `id` bigint(20) NOT NULL auto_increment,
+              `referrer` varchar(50) collate latin1_general_ci NOT NULL,
+              `time` datetime NOT NULL,
+              PRIMARY KEY  (`id`),
+              KEY `referrer` (`referrer`)
+            );
+SQL command (CREATE TABLE `$this_config_stats_table_name` ( `id` bigint(20) NOT NULL auto_increment, `referrer` varchar(50) collate latin1_general_ci NOT NULL, `time` datetime NOT NULL, PRIMARY KEY (`id`), KEY `referrer` (`referrer`) );) cannot be parsed correct.
+SELECT * FROM $this_config_entries_table_name ORDER BY `name`
+SQL command (SELECT * FROM $this_config_entries_table_name ORDER BY `name`) cannot be parsed correct.
+SELECT url, icon, welcome_text FROM `$this_config_entries_table_name` WHERE url REGEXP'[*,]'
+SQL command (SELECT url, icon, welcome_text FROM `$this_config_entries_table_name` WHERE url REGEXP'[*,]') cannot be parsed correct.
+sprintf("SELECT * FROM `"$this->config["entries_table_name"]"` WHERE `id` IN (%s)", mysql_escape_string($_POST["ids"]))
+SQL command (sprintf("SELECT * FROM `"$this->config["entries_table_name"]"` WHERE `id` IN (%s)", mysql_escape_string($_POST["ids"]))) cannot be parsed correct.
+SELECT `referrer`, COUNT(`id`) AS 'views'
+            FROM `$this_config_stats_table_name`
+            WHERE `time` >= 'date("Y-m-d 00:00:00")'
+            AND `time` < 'date("Y-m-d 00:00:00")'
+            GROUP BY `referrer`
+            ORDER BY `referrer`
+SQL command (SELECT `referrer`, COUNT(`id`) AS 'views' FROM `$this_config_stats_table_name` WHERE `time` >= 'date("Y-m-d 00:00:00")' AND `time` < 'date("Y-m-d 00:00:00")' GROUP BY `referrer` ORDER BY `referrer`) cannot be parsed correct.
+SELECT * FROM `$this_config_entries_table_name` WHERE `id`=intval($_POST["id"])
+SQL command (SELECT * FROM `$this_config_entries_table_name` WHERE `id`=intval($_POST["id"])) cannot be parsed correct.
+SELECT icon, welcome_text FROM $this_config_entries_table_name
+							WHERE url=$url AND enabled=1
+SELECT icon, welcome_text FROM $this_config_entries_table_name
+							WHERE url=$url AND enabled=1
+SQL command (SELECT icon, welcome_text FROM $this_config_entries_table_name WHERE url=$url AND enabled=1) cannot be parsed correct.
+INSERT INTO `$this_config_entries_table_name` (`name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES
+        ('Google', 'google.*', '$this_config_plugin_dirimages/icons/google.png', 'Welcome <strong>Googler</strong>! If you find this page useful, why not <a href=get_bloginfo("rss2_url")">subscribe to the RSS feed</a> for more interesting posts in the future?', 1),
+        ('Bing', 'bing.*', $this_config_plugin_dirimages/icons/bing.png', '<strong>Bingo</strong>, and welcome! If you find this page useful, why not <a href=get_bloginfo("rss2_url")">subscribe to the RSS feed</a> for more interesting posts in the future?', 1),
+        ('BuySellAds', 'buysellads.com', $this_config_plugin_dirimages/icons/buysellads.png', 'Welcome! If you are a BuySellAds advertiser, you have come to the right place!', 1),
+        ('Digg', 'digg.com', '$this_config_plugin_dirimages/icons/digg.png', 'Hello fellow <strong>Digger</strong>! If you find this story useful, please <a href="http://digg.com/submit?url={url}">digg it</a>!', 1),
+        ('StumbleUpon', 'stumbleupon.com', '$this_config_plugin_dirimages/icons/stumbleupon.png', 'Hello fellow <strong>Stumbler</strong>! Don\'t forget to <a href="http://www.stumbleupon.com/submit?url={url}" rel="nofollow">give me a thumbs up</a> if you like this page!', 1),
+        ('Technograti', 'technorati.com', '$this_config_plugin_dirimages/icons/technorati.png', 'Hello fellow <strong>Technorati</strong> user! Don\'t forget to <a href="http://technorati.com/faves?add={url}" rel="nofollow">favorite this blog</a> if you like it!', 1),
+        ('Twitter', 'twitter.com', '$this_config_plugin_dirimages/icons/twitter.png', 'Hello fellow <strong>Twitter</strong> user! Don\'t forget to <a href="http://twitthis.com/twit?url={url}" rel="nofollow">Twit this post</a> if you like it, or <a href="http://twitter.com/" rel="nofollow">follow me</a> on Twitter if you find me interesting.', 1),
+        ('Del.icio.us', 'del.icio.us,delicious.com', '$this_config_plugin_dirimages/icons/delicious.png', 'Hello fellow <strong>Delicious</strong> user! Feel free to <a href="http://delicious.com/post?url={url}" rel="nofollow">bookmark this page</a> for future reference if you like it!', 1),
+        ('Yahoo', '*.yahoo.*', '$this_config_plugin_dirimages/icons/yahoo.png', 'Welcome fellow <strong>Yahooligan</strong>! If you find this page useful, you might want to <a href=get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1),
+        ('Live', 'search.live.com', '$this_config_plugin_dirimages/icons/live.png', 'Welcome fellow <strong>Live Search</strong> user! If you find this page useful, you might want to <a href=get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1),
+        ('Lifehacker', 'lifehacker.com', '', 'Hello fellow <strong>Lifehacker</strong> reader! If you find this page useful, you might want to <a href="get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1),
+        ('TechCrunch', 'techcrunch.com', '$this_config_plugin_dirimages/icons/techcrunch.png', 'Hello fellow <strong>TechCrunch</strong> reader! If you find this page useful, you might want to <a href=get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1),
+        ('9rules', '9rules.com', '$this_config_plugin_dirimages/icons/9rules.png', 'Hello fellow <strong>9rules</strong> reader! If you find this page useful, you might want to <a href=get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1),
+        ('Gizmodo', 'gizmodo.com', '', 'Hello fellow <strong>Gizmodo</strong> reader! If you find this page useful, you might want to <a href="get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1),
+        ('TechRadar', 'techradar.com', '', 'Hello fellow <strong>TechRadar</strong> reader! If you find this page useful, you might want to <a href="get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1),
+        ('Reddit', 'reddit.com', '$this_config_plugin_dirimages/icons/reddit.png', 'Hello fellow <strong>Reddit</strong> user! If you find this story useful, please <a href="http://www.reddit.com/submit?url={url}">vote it up</a>!', 1);
+SQL command (INSERT INTO `$this_config_entries_table_name` (`name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES ('Google', 'google.*', '$this_config_plugin_dirimages/icons/google.png', 'Welcome <strong>Googler</strong>! If you find this page useful, why not <a href=get_bloginfo("rss2_url")">subscribe to the RSS feed</a> for more interesting posts in the future?', 1), ('Bing', 'bing.*', $this_config_plugin_dirimages/icons/bing.png', '<strong>Bingo</strong>, and welcome! If you find this page useful, why not <a href=get_bloginfo("rss2_url")">subscribe to the RSS feed</a> for more interesting posts in the future?', 1), ('BuySellAds', 'buysellads.com', $this_config_plugin_dirimages/icons/buysellads.png', 'Welcome! If you are a BuySellAds advertiser, you have come to the right place!', 1), ('Digg', 'digg.com', '$this_config_plugin_dirimages/icons/digg.png', 'Hello fellow <strong>Digger</strong>! If you find this story useful, please <a href="http://digg.com/submit?url={url}">digg it</a>!', 1), ('StumbleUpon', 'stumbleupon.com', '$this_config_plugin_dirimages/icons/stumbleupon.png', 'Hello fellow <strong>Stumbler</strong>! Don\'t forget to <a href="http://www.stumbleupon.com/submit?url={url}" rel="nofollow">give me a thumbs up</a> if you like this page!', 1), ('Technograti', 'technorati.com', '$this_config_plugin_dirimages/icons/technorati.png', 'Hello fellow <strong>Technorati</strong> user! Don\'t forget to <a href="http://technorati.com/faves?add={url}" rel="nofollow">favorite this blog</a> if you like it!', 1), ('Twitter', 'twitter.com', '$this_config_plugin_dirimages/icons/twitter.png', 'Hello fellow <strong>Twitter</strong> user! Don\'t forget to <a href="http://twitthis.com/twit?url={url}" rel="nofollow">Twit this post</a> if you like it, or <a href="http://twitter.com/" rel="nofollow">follow me</a> on Twitter if you find me interesting.', 1), ('Del.icio.us', 'del.icio.us,delicious.com', '$this_config_plugin_dirimages/icons/delicious.png', 'Hello fellow <strong>Delicious</strong> user! Feel free to <a href="http://delicious.com/post?url={url}" rel="nofollow">bookmark this page</a> for future reference if you like it!', 1), ('Yahoo', '*.yahoo.*', '$this_config_plugin_dirimages/icons/yahoo.png', 'Welcome fellow <strong>Yahooligan</strong>! If you find this page useful, you might want to <a href=get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1), ('Live', 'search.live.com', '$this_config_plugin_dirimages/icons/live.png', 'Welcome fellow <strong>Live Search</strong> user! If you find this page useful, you might want to <a href=get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1), ('Lifehacker', 'lifehacker.com', '', 'Hello fellow <strong>Lifehacker</strong> reader! If you find this page useful, you might want to <a href="get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1), ('TechCrunch', 'techcrunch.com', '$this_config_plugin_dirimages/icons/techcrunch.png', 'Hello fellow <strong>TechCrunch</strong> reader! If you find this page useful, you might want to <a href=get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1), ('9rules', '9rules.com', '$this_config_plugin_dirimages/icons/9rules.png', 'Hello fellow <strong>9rules</strong> reader! If you find this page useful, you might want to <a href=get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1), ('Gizmodo', 'gizmodo.com', '', 'Hello fellow <strong>Gizmodo</strong> reader! If you find this page useful, you might want to <a href="get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1), ('TechRadar', 'techradar.com', '', 'Hello fellow <strong>TechRadar</strong> reader! If you find this page useful, you might want to <a href="get_bloginfo("rss2_url")" rel="nofollow">subscribe to the RSS feed</a> for updates on this topic.', 1), ('Reddit', 'reddit.com', '$this_config_plugin_dirimages/icons/reddit.png', 'Hello fellow <strong>Reddit</strong> user! If you find this story useful, please <a href="http://www.reddit.com/submit?url={url}">vote it up</a>!', 1);) cannot be parsed correct.
+sprintf("DELETE FROM `"$this->config["entries_table_name"]"` WHERE `id` IN (%s)", implode(",", $to_delete))
+SQL command (sprintf("DELETE FROM `"$this->config["entries_table_name"]"` WHERE `id` IN (%s)", implode(",", $to_delete))) cannot be parsed correct.
+sprintf("UPDATE `"$this->config["entries_table_name"]"` SET url=\'%s\' WHERE `id`="$first_id, implode(",", $new_url))
+SQL command (sprintf("UPDATE `"$this->config["entries_table_name"]"` SET url=\'%s\' WHERE `id`="$first_id, implode(",", $new_url))) cannot be parsed correct.
+INSERT INTO `$this_config_entries_table_name`(`name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES($_POST_name, %s, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES($_POST_name, $_POST_url, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES($_P$_POST_iconT_name, $_POST_url, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES($_P$_POST_iconT_name,base64_encode(serialize($messages))_POST_url, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES($_P$_POST_iconT_name,base64_encode(serialize($mes"placeholder_4"ges))_POST_url, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES($_P$_POST_iconT_name,base64_encode(serialize($mes"placeholder_4"ges))_POST_url, %s, %s, %d)
+SQL command (INSERT INTO `$this_config_entries_table_name`(`name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES($_P$_POST_iconT_name,base64_encode(serialize($mes"placeholder_4"ges))_POST_url, %s, %s, %d)) cannot be parsed correct.
+sprintf("UPDATE `%s` SET `enabled`=%d WHERE `id`=%d", $this->config["entries_table_name"], $is_activating10, $_POST["id"])
+SQL command (sprintf("UPDATE `%s` SET `enabled`=%d WHERE `id`=%d", $this->config["entries_table_name"], $is_activating10, $_POST["id"])) cannot be parsed correct.
+DELETE FROM `$this_config_entries_table_name` WHERE `id`=$_POST_id LIMIT 1
+DELETE FROM `$this_config_entries_table_name` WHERE `id`=$_POST_id LIMIT 1
+SQL command (DELETE FROM `$this_config_entries_table_name` WHERE `id`=$_POST_id LIMIT 1) cannot be parsed correct.
+TRUNCATE $this_config_entries_table_name
+SQL command (TRUNCATE $this_config_entries_table_name) cannot be parsed correct.
+INSERT INTO `$this_config_entries_table_name`(`id`, `name`, `url`, `icon`, `welcome_text`, `enabled`)
+							VALUES("placeholder_0", %s, %s, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`id`, `name`, `url`, `icon`, `welcome_text`, `enabled`)
+							VALUES("placeholder_0", "placeholder_1", %s, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`id`, `name`, `url`, `icon`, `welcome_text`, `enabled`)
+							VALUES("pla"placeholder_2"holder_0", "placeholder_1", %s, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`id`, `name`, `url`, `icon`, `welcome_text`, `enabled`)
+							VALUES("pla"placeholder_2"holder"placeholder_3"", "placeholder_1", %s, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`id`, `name`, `url`, `icon`, `welcome_text`, `enabled`)
+							VALUES("pla"pla"placeholder_4"holder_2"holder"placeholder_3"", "placeholder_1", %s, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`id`, `name`, `url`, `icon`, `welcome_text`, `enabled`)
+							VALUES("pla"pla"placeh"placeholder_5"der_4"holder_2"holder"placeholder_3"", "placeholder_1", %s, %s, %s, %d)
+INSERT INTO `$this_config_entries_table_name`(`id`, `name`, `url`, `icon`, `welcome_text`, `enabled`)
+							VALUES("pla"pla"placeh"placeholder_5"der_4"holder_2"holder"placeholder_3"", "placeholder_1", %s, %s, %s, %d)
+SQL command (INSERT INTO `$this_config_entries_table_name`(`id`, `name`, `url`, `icon`, `welcome_text`, `enabled`) VALUES("pla"pla"placeh"placeholder_5"der_4"holder_2"holder"placeholder_3"", "placeholder_1", %s, %s, %s, %d)) cannot be parsed correct.
+UPDATE `$this_config_entries_table_name` SET `name`=$_POST_name, `url`=%s, `icon`=%s, `welcome_text`=%s, `enabled`=%d WHERE `id`=%d
+UPDATE `$this_config_entries_table_name` SET `name`=$_POST_name, `url`=$_POST_url, `icon`=%s, `welcome_text`=%s, `enabled`=%d WHERE `id`=%d
+UPDATE `$this_config_entries_table_name` SET `name`=$_POST_name$_POST_icon`url`=$_POST_url, `icon`=%s, `welcome_text`=%s, `enabled`=%d WHERE `id`=%d
+UPDATE `$this_config_entries_table_name` SET `name`=$_POST_name$_POST_icon`url`=$_POST_urlbase64_encode(serialize($messages))`icon`=%s, `welcome_text`=%s, `enabled`=%d WHERE `id`=%d
+UPDATE `$this_config_entries_table_name` SET `name`=$_POST_name$_POST_icon`url`=$_POST_urlbase64_encode(serialize($messages))`icon`=%s, `we"placeholder_4"ome_text`=%s, `enabled`=%d WHERE `id`=%d
+UPDATE `$this_config_entries_table_name` SET `name`=$_POST_name$_POST_icon`url`=$_POST_urlbase64_encode(serialize($messages))`icon`=%intval($_POST["id"]) `we"placeholder_4"ome_text`=%s, `enabled`=%d WHERE `id`=%d
+UPDATE `$this_config_entries_table_name` SET `name`=$_POST_name$_POST_icon`url`=$_POST_urlbase64_encode(serialize($messages))`icon`=%intval($_POST["id"]) `we"placeholder_4"ome_text`=%s, `enabled`=%d WHERE `id`=%d
+SQL command (UPDATE `$this_config_entries_table_name` SET `name`=$_POST_name$_POST_icon`url`=$_POST_urlbase64_encode(serialize($messages))`icon`=%intval($_POST["id"]) `we"placeholder_4"ome_text`=%s, `enabled`=%d WHERE `id`=%d) cannot be parsed correct.
+DROP TABLE `$rdetector_config_entries_table_name`
+SQL command (DROP TABLE `$rdetector_config_entries_table_name`) cannot be parsed correct.
+DROP TABLE `$rdetector_config_stats_table_name`
+SQL command (DROP TABLE `$rdetector_config_stats_table_name`) cannot be parsed correct.
+INSERT INTO $this_config_stats_table_name(`referrer`, `time`) VALUES('$referrer', now())
+SQL command (INSERT INTO $this_config_stats_table_name(`referrer`, `time`) VALUES('$referrer', now())) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1217, 4220, 1411, 3096, 2950, 4650, 2433, 3538, 1379, 3015, 3040, 2208, 2324, 3172, 3421, 3490, 2871, 5091, 5103, 4958]
+Added 0 SQL nodes. 0 out of 20 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:08.339561.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this->get_table()'' cannot be parsed correct.
+HTML code '$'$this->format_html($wpdb->insert_id, $_POST["name"], $_POST["url"], $_POST["icon"], $messages["default"], isset($_POST["enabled"]))'' cannot be parsed correct.
+HTML code '$'$this->get_table()'' cannot be parsed correct.
+HTML code '$'$this->format_html(intval($_POST["id"]), $_POST["name"], $_POST["url"], $_POST["icon"], $messages["default"], isset($_POST["enabled"]))'' cannot be parsed correct.
+HTML code '$'<div class="rdetector_placeholder_special" style="display: none"></div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:00.812195.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.043049.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.440047.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running HashDetector
+### Start running MySQLDetector
+### Finish running MongoDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running MySQLDetector
+### Start running ParadoxDetector
+### Finish running Oci8Detector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running ArrayElementDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PasswordHashingDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PHPRetrievalDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running Sqlite3Detector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running PHPIncludedDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running maxdbDetector
+### Finish running MySQLiDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+config.php:18
+  - MD5 called with parameters [rdetector_config, plugin_name, wpadmin_index]. Ignore if [rdetector_config, plugin_name, wpadmin_index] does not contain personal information. 
+
+config.php:8
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+config.php:14
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+entry.class.php:37
+  - RETRIEVAL call to dbDelta($q). Passed arguments: 0: $queries (string[]|string). Returns (array).
+entry.class.php:275
+  - RETRIEVAL call to get_option("rdetector_excluded_urls") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+option.class.php:30
+  - RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+option.class.php:96
+  - RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+option.class.php:101
+  - RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+stats.class.php:32
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+option.class.php:76
+  - STORAGE call to update_option("rdetector_excluded_urls", implode(",", $urls)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+option.class.php:85
+  - STORAGE call to update_option($key, $_POST[$key]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+option.class.php:96
+  - STORAGE call to add_option($key, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+option.class.php:96
+  - STORAGE call to update_option($key, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+uninstall.php:21
+  - STORAGE call to delete_option($rd_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:24
+  - STORAGE call to delete_option("rd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+uninstall.php:21
+  - DELETION call to delete_option($rd_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:24
+  - DELETION call to delete_option("rd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+uninstall.php:21
+  - Uninstall deletion call: DELETION call to delete_option($rd_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:24
+  - Uninstall deletion call: DELETION call to delete_option("rd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($q) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressStorageDetector.delete_option("rd_db_version") - {'option'}
+	WordPressStorageDetector.update_option($key, $_POST[$key]) - {'option'}
+	WordPressRetrievalDetector.get_option($key) - {'option'}
+	DeletionDetector.delete_option($rd_key) - {'option'}
+	DeletionDetector.delete_option("rd_db_version") - {'option'}
+	UninstallDetector.delete_option($rd_key) - {'option'}
+	WordPressRetrievalDetector.get_option("rdetector_excluded_urls") - {'option'}
+	WordPressStorageDetector.delete_option($rd_key) - {'option'}
+	WordPressRetrievalDetector.get_option($key) - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option($key) - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressStorageDetector.update_option("rdetector_excluded_urls", implode(",", $urls)) - {'option'}
+	WordPressStorageDetector.add_option($key, $value) - {'option'}
+	WordPressStorageDetector.update_option($key, $value) - {'option'}
+	UninstallDetector.delete_option("rd_db_version") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.082833.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 36 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.127095.
+
+36 STORE_REACHES edges created
+36 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 1 nodes as ENCRYPTED
+In total, tainted 1 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.148671.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:44.415138!
+DELETION call to delete_option($rd_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("rd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+MD5 called with parameters [rdetector_config, plugin_name, wpadmin_index]. Ignore if [rdetector_config, plugin_name, wpadmin_index] does not contain personal information.,md5,None
+Uninstall deletion call: DELETION call to delete_option($rd_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option("rd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("rdetector_excluded_urls") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($q). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to update_option("rdetector_excluded_urls", implode(",", $urls)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($key, $_POST[$key]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option($key, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($key, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option($rd_key) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("rd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

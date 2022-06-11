@@ -1,0 +1,668 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on rss-digest
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.370543.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.944233.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.304540.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.578819.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 320 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:01.147487.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.680312.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.129312.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 164 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.956571.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2163
+Added 1679 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2163
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.208453.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/rss-digest/rss-digest.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.183434.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2163 PHP_REACHES edges created
+2163 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 740 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.047771.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:03.275795.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 48 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.245155.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 32 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.149681.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.337835.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.621012.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.012599.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.038753.
+
+80 PHP_REACHES edges created
+80 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 48 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.131353.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+4 SQL operations to process.
+CREATE TABLE $wpdbSCRD_DEBUG_LOG_TABLE (
+              id mediumint(9) NOT NULL AUTO_INCREMENT,
+              time datetime NOT NULL,
+              severity tinytext NOT NULL,
+              message text NOT NULL,
+              UNIQUE KEY id (id)
+            );
+SQL command (CREATE TABLE $wpdbSCRD_DEBUG_LOG_TABLE ( id mediumint(9) NOT NULL AUTO_INCREMENT, time datetime NOT NULL, severity tinytext NOT NULL, message text NOT NULL, UNIQUE KEY id (id) );) cannot be parsed correct.
+SELECT * FROM `$wpdbSCRD_DEBUG_LOG_TABLE` ORDER BY 'id' ASC LIMIT $max_pages, SCRD_LOG_PAGER_LIMIT
+SQL command (SELECT * FROM `$wpdbSCRD_DEBUG_LOG_TABLE` ORDER BY 'id' ASC LIMIT $max_pages, SCRD_LOG_PAGER_LIMIT) cannot be parsed correct.
+INSERT INTO `$wpdbSCRD_DEBUG_LOG_TABLE` (time, severity, message)
+                                   VALUES (
+                                     'date("Y-m-d H:i:s", time())',
+                                     '$severity',
+                                     '$e->getMessage()'
+                                     )
+SQL command (INSERT INTO `$wpdbSCRD_DEBUG_LOG_TABLE` (time, severity, message) VALUES ( 'date("Y-m-d H:i:s", time())', '$severity', '$e->getMessage()' )) cannot be parsed correct.
+TRUNCATE TABLE `$wpdbSCRD_DEBUG_LOG_TABLE`
+SQL command (TRUNCATE TABLE `$wpdbSCRD_DEBUG_LOG_TABLE`) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [3739, 3359, 3134, 3167]
+Added 0 SQL nodes. 0 out of 4 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.437819.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_bloginfo("wpurl")'' cannot be parsed correct.
+HTML code '$'get_option("scrd_feed_url", "")'' cannot be parsed correct.
+HTML code '$'$post_days_checkboxes'' cannot be parsed correct.
+HTML code '$'$hours_options'' cannot be parsed correct.
+HTML code '$'$minutes_options'' cannot be parsed correct.
+HTML code '$'$timezone_string'' cannot be parsed correct.
+HTML code '$'$current_time $timezone_string'' cannot be parsed correct.
+HTML code '$'get_option("scrd_digest_title", SCRD_DEFAULT_TITLE)'' cannot be parsed correct.
+HTML code '$'$append_date_to_title_options'' cannot be parsed correct.
+HTML code '$'$post_header'' cannot be parsed correct.
+HTML code '$'$post_footer'' cannot be parsed correct.
+HTML code '$'$cat_options'' cannot be parsed correct.
+HTML code '$'get_option("scrd_post_tags", "")'' cannot be parsed correct.
+HTML code '$'$status_options'' cannot be parsed correct.
+HTML code '$'$author_options'' cannot be parsed correct.
+HTML code '$'$give_credit_options'' cannot be parsed correct.
+HTML code '$'$include_description_options'' cannot be parsed correct.
+HTML code '$'get_option("scrd_max_items", SCRD_MAX_ITEMS)'' cannot be parsed correct.
+HTML code '$'get_option("scrd_min_items", SCRD_MIN_ITEMS)'' cannot be parsed correct.
+HTML code '$'get_bloginfo("wpurl")'' cannot be parsed correct.
+HTML code '$'get_plugin_data()_Version'' cannot be parsed correct.
+HTML code '$'phpversion()'' cannot be parsed correct.
+HTML code '$'<link rel="stylesheet" type="text/css" href="plugins_url("rss-digest/rss-digest-admin.css")" /'' cannot be parsed correct.
+HTML code '$'<script type="text/javascript" src="get_bloginfo("wpurl")/index.php?scrd_action=scrd_js_admin"></script'' cannot be parsed correct.
+HTML code '$'phpversion()'' cannot be parsed correct.
+HTML code '$'get_bloginfo("version")'' cannot be parsed correct.
+HTML code '$'get_bloginfo("version")'' cannot be parsed correct.
+HTML code '$'$_SERVER_SERVER_SOFTWARE'' cannot be parsed correct.
+HTML code '$'get_option("scrd_last_digest_time", "Unknown")'' cannot be parsed correct.
+HTML code '$'scrd_get_next_digest_time()'' cannot be parsed correct.
+HTML code '$'clean_url(get_option("scrd_feed_url", ""), ["http", "https"], "")'' cannot be parsed correct.
+HTML code '$'clean_url(get_option("scrd_feed_url", ""), ["http", "https"], "")'' cannot be parsed correct.
+HTML code '$'$e->getMessage()'' cannot be parsed correct.
+HTML code '$'$rss->get_title()'' cannot be parsed correct.
+HTML code '$'$rss->get_item_quantity()'' cannot be parsed correct.
+HTML code '$'$item->get_date("l " . get_option("date_format", "F j, Y") . ", " . get_option("time_format", "H:m p"))'' cannot be parsed correct.
+HTML code '$'scrd_get_last_item_time($feed_url)'' cannot be parsed correct.
+HTML code '$'$debug_log_checked'' cannot be parsed correct.
+HTML code '$'get_bloginfo("wpurl")'' cannot be parsed correct.
+HTML code '$'get_bloginfo("wpurl")'' cannot be parsed correct.
+HTML code '$'get_bloginfo("wpurl")'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$' <span><strong>$max_pages</strong></span>'' cannot be parsed correct.
+HTML code '$'$row_class scrd_$result'' cannot be parsed correct.
+HTML code '$'$result'' cannot be parsed correct.
+HTML code '$'$result'' cannot be parsed correct.
+HTML code '$'$result'' cannot be parsed correct.
+HTML code '$'<link rel="stylesheet" type="text/css" href="plugins_url("rss-digest/rss-digest.css")" /'' cannot be parsed correct.
+HTML code '$'</tr><tr class="plugin-update-tr"><td colspan="5" class="plugin-update"><div class=\'error\' style=\'margin:5px; padding:3px; text-align:left;\'>Your host is not compatible with RSS Digest. The following items must be upgraded:<br/> <h2 style=\'display:none;\'></h2><div class=\'error\' style=\'margin:5px; padding:3px; text-align:left;\'>Your host is not compatible with RSS Digest. The following items must be upgraded:<br/> </td></tr>'' cannot be parsed correct.
+HTML code '$'<div class=\'scrd_log_pane\'>'' cannot be parsed correct.
+HTML code '$'  <div class=\'scrd_pager\'>'' cannot be parsed correct.
+HTML code '$'<span class="disabled">Previous Page</span>'' cannot be parsed correct.
+HTML code '$'<span class="disabled">Next Page</span>'' cannot be parsed correct.
+HTML code '$'  </div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:06.552505.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045411.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 10 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.500558.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running IngresDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPRetrievalDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PHPIncludedDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running VariableDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running MySQLiDetector
+### Start running GenericEncryptionDetector
+### Finish running UserInputDetector
+### Start running DeletionDetector
+### Finish running WP_UserDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+rss-digest.php:286
+  - MD5 called with parameters [feed]. Ignore if [feed] does not contain personal information. 
+
+rss-digest.php:64
+  - RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rss-digest.php:87
+  - RETRIEVAL call to get_option("scrd_post_hour", SCRD_DEFAULT_HOUR) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:88
+  - RETRIEVAL call to get_option("scrd_post_minute", SCRD_DEFAULT_MINUTE) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:100
+  - RETRIEVAL call to get_option("scrd_post_days", SCRD_DEFAULT_POST_DAYS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:144
+  - RETRIEVAL call to get_option("scrd_include_description", SCRD_DEFAULT_INCLUDE_DESC) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:157
+  - RETRIEVAL call to get_option("scrd_post_header", SCRD_DEFAULT_POST_HEADER) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:158
+  - RETRIEVAL call to get_option("scrd_post_footer", SCRD_DEFAULT_POST_FOOTER) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:173
+  - RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:178
+  - RETRIEVAL call to get_option("scrd_max_items", SCRD_MAX_ITEMS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:206
+  - RETRIEVAL call to get_option("scrd_min_items", SCRD_MIN_ITEMS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:229
+  - RETRIEVAL call to get_option("scrd_give_credit", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:240
+  - RETRIEVAL call to get_option("scrd_post_category", SCRD_DEFAULT_CATEGORY) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:241
+  - RETRIEVAL call to get_option("scrd_post_status", SCRD_DEFAULT_STATUS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:242
+  - RETRIEVAL call to get_option("scrd_post_author", SCRD_DEFAULT_AUTHOR) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:243
+  - RETRIEVAL call to get_option("scrd_post_tags", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:253
+  - RETRIEVAL call to get_option("scrd_digest_title", SCRD_DEFAULT_TITLE) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:254
+  - RETRIEVAL call to get_option("scrd_append_date_to_title", SCRD_DEFAULT_APPEND_DATE) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:255
+  - RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:262
+  - RETRIEVAL call to get_option("scrd_plugin_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rss-digest.php:272
+  - RETRIEVAL call to get_option("scrd_plugin_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+rss-digest.php:466
+  - RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:489
+  - RETRIEVAL call to get_option("scrd_digest_title", SCRD_DEFAULT_TITLE) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:509
+  - RETRIEVAL call to get_option("scrd_post_tags", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:532
+  - RETRIEVAL call to get_option("scrd_max_items", SCRD_MAX_ITEMS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:537
+  - RETRIEVAL call to get_option("scrd_min_items", SCRD_MIN_ITEMS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:579
+  - RETRIEVAL call to get_option("scrd_debug_log", SCRD_DEFAULT_DEBUG) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:582
+  - RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:583
+  - RETRIEVAL call to get_option("scrd_last_digest_time", "Unknown") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:585
+  - RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:585
+  - RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:588
+  - RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:588
+  - RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:590
+  - RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:590
+  - RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:594
+  - RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:594
+  - RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:606
+  - RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:606
+  - RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:693
+  - RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:893
+  - RETRIEVAL call to get_option("scrd_debug_log", SCRD_DEFAULT_DEBUG) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:1018
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+rss-digest.php:1028
+  - RETRIEVAL call to get_option("scrd_last_digest", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+rss-digest.php:1038
+  - RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option 
+
+rss-digest.php:80
+  - STORAGE call to update_option("scrd_last_digest_time", $right_now) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+rss-digest.php:281
+  - STORAGE call to update_option("scrd_plugin_options", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+rss-digest.php:295
+  - STORAGE call to wp_insert_post($post_data). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+rss-digest.php:296
+  - STORAGE call to add_post_meta($post_id, "_rss_digest_post", "1") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).
+  - Data types: post_meta
+rss-digest.php:739
+  - STORAGE call to update_option("scrd_" . $option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+rss-digest.php:746
+  - STORAGE call to update_option("scrd_debug_log", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+rss-digest.php:754
+  - STORAGE call to update_option("scrd_post_days", $post_days) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+rss-digest.php:770
+  - STORAGE call to delete_option("scrd_" . $option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+rss-digest.php:772
+  - STORAGE call to delete_option("scrd_last_digest_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+rss-digest.php:773
+  - STORAGE call to delete_option("scrd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+rss-digest.php:1020
+  - STORAGE call to add_option("scrd_db_version", SCRD_DB_VERSION) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+rss-digest.php:1029
+  - STORAGE call to delete_option("scrd_last_digest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+rss-digest.php:1031
+  - STORAGE call to delete_option("scrd_next_digest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+rss-digest.php:261
+  - CRYPTOGRAPHY call to scrd_get_feed_hash($feed).
+rss-digest.php:271
+  - CRYPTOGRAPHY call to scrd_get_feed_hash($feed). 
+
+rss-digest.php:770
+  - DELETION call to delete_option("scrd_" . $option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+rss-digest.php:772
+  - DELETION call to delete_option("scrd_last_digest_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+rss-digest.php:773
+  - DELETION call to delete_option("scrd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+rss-digest.php:1029
+  - DELETION call to delete_option("scrd_last_digest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+rss-digest.php:1031
+  - DELETION call to delete_option("scrd_next_digest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	GenericEncryptionDetector.scrd_get_feed_hash($feed) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	GenericEncryptionDetector.scrd_get_feed_hash($feed) - set()
+	WordPressStorageDetector.wp_insert_post($post_data) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("time_format", "H:m p") - {'option'}
+	WordPressStorageDetector.update_option("scrd_post_days", $post_days) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_max_items", SCRD_MAX_ITEMS) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_feed_url", "") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_days", SCRD_DEFAULT_POST_DAYS) - {'option'}
+	WordPressStorageDetector.update_option("scrd_last_digest_time", $right_now) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_footer", SCRD_DEFAULT_POST_FOOTER) - {'option'}
+	WordPressStorageDetector.update_option("scrd_" . $option, $value) - {'option'}
+	DeletionDetector.delete_option("scrd_last_digest") - {'option'}
+	WordPressRetrievalDetector.get_option("time_format", "H:m p") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format", "F j, Y") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_plugin_options") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format", "F j, Y") - {'option'}
+	WordPressStorageDetector.delete_option("scrd_last_digest_time") - {'option'}
+	DeletionDetector.delete_option("scrd_next_digest") - {'option'}
+	WordPressRetrievalDetector.get_option("date_format", "F j, Y") - {'option'}
+	WordPressStorageDetector.delete_option("scrd_" . $option) - {'option'}
+	WordPressStorageDetector.delete_option("scrd_next_digest") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_digest_title", SCRD_DEFAULT_TITLE) - {'option'}
+	WordPressRetrievalDetector.get_option("date_format", "F j, Y") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_hour", SCRD_DEFAULT_HOUR) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_plugin_options") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_tags", "") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_feed_url", "") - {'option'}
+	WordPressStorageDetector.update_option("scrd_debug_log", $value) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_category", SCRD_DEFAULT_CATEGORY) - {'option'}
+	WordPressStorageDetector.delete_option("scrd_last_digest") - {'option'}
+	DeletionDetector.delete_option("scrd_last_digest_time") - {'option'}
+	DeletionDetector.delete_option("scrd_db_version") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_status", SCRD_DEFAULT_STATUS) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_min_items", SCRD_MIN_ITEMS) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_feed_url", "") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_max_items", SCRD_MAX_ITEMS) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_debug_log", SCRD_DEFAULT_DEBUG) - {'option'}
+	WordPressRetrievalDetector.get_option("time_format", "H:m p") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_append_date_to_title", SCRD_DEFAULT_APPEND_DATE) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_last_digest_time", "Unknown") - {'option'}
+	WordPressRetrievalDetector.get_option("time_format", "H:m p") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_include_description", SCRD_DEFAULT_INCLUDE_DESC) - {'option'}
+	DeletionDetector.delete_option("scrd_" . $option) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_header", SCRD_DEFAULT_POST_HEADER) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_digest_title", SCRD_DEFAULT_TITLE) - {'option'}
+	WordPressRetrievalDetector.get_option("timezone_string") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_debug_log", SCRD_DEFAULT_DEBUG) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_last_digest", 0) - {'option'}
+	WordPressStorageDetector.delete_option("scrd_db_version") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_feed_url", "") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_minute", SCRD_DEFAULT_MINUTE) - {'option'}
+	WordPressRetrievalDetector.get_option("date_format", "F j, Y") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_give_credit", 1) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_tags", "") - {'option'}
+	WordPressRetrievalDetector.get_option("time_format", "H:m p") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_post_author", SCRD_DEFAULT_AUTHOR) - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_feed_url", "") - {'option'}
+	WordPressStorageDetector.update_option("scrd_plugin_options", $options) - {'option'}
+	WordPressRetrievalDetector.get_option("date_format", "F j, Y") - {'option'}
+	WordPressRetrievalDetector.get_option("scrd_min_items", SCRD_MIN_ITEMS) - {'option'}
+	WordPressStorageDetector.add_option("scrd_db_version", SCRD_DB_VERSION) - {'option'}
+post_meta
+	WordPressStorageDetector.add_post_meta($post_id, "_rss_digest_post", "1") - {'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.308969.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 462 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.399072.
+
+462 STORE_REACHES edges created
+462 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 45 nodes as ENCRYPTED
+In total, tainted 45 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.796748.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:44.315782!
+DELETION call to delete_option("scrd_last_digest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("scrd_next_digest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("scrd_" . $option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("scrd_last_digest_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("scrd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+CRYPTOGRAPHY call to scrd_get_feed_hash($feed).,None,None
+CRYPTOGRAPHY call to scrd_get_feed_hash($feed).,None,None
+MD5 called with parameters [feed]. Ignore if [feed] does not contain personal information.,md5,None
+RETRIEVAL call to get_option("scrd_post_days", SCRD_DEFAULT_POST_DAYS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to get_option("scrd_last_digest", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_include_description", SCRD_DEFAULT_INCLUDE_DESC) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_post_header", SCRD_DEFAULT_POST_HEADER) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_post_footer", SCRD_DEFAULT_POST_FOOTER) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_max_items", SCRD_MAX_ITEMS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_min_items", SCRD_MIN_ITEMS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_give_credit", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_post_category", SCRD_DEFAULT_CATEGORY) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_post_status", SCRD_DEFAULT_STATUS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_post_author", SCRD_DEFAULT_AUTHOR) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_post_tags", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_digest_title", SCRD_DEFAULT_TITLE) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_append_date_to_title", SCRD_DEFAULT_APPEND_DATE) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_plugin_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_plugin_options") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_digest_title", SCRD_DEFAULT_TITLE) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_post_tags", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_max_items", SCRD_MAX_ITEMS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_min_items", SCRD_MIN_ITEMS) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_debug_log", SCRD_DEFAULT_DEBUG) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_last_digest_time", "Unknown") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("date_format", "F j, Y") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("time_format", "H:m p") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("timezone_string") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_feed_url", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_post_hour", SCRD_DEFAULT_HOUR) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_post_minute", SCRD_DEFAULT_MINUTE) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("scrd_debug_log", SCRD_DEFAULT_DEBUG) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+STORAGE call to add_option("scrd_db_version", SCRD_DB_VERSION) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("scrd_last_digest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("scrd_next_digest") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("scrd_plugin_options", $options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_insert_post($post_data). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to add_post_meta($post_id, "_rss_digest_post", "1") alters data types {'post_meta'}. Passed arguments: 0: $post_id (int), 1: $meta_key (string), 2: $meta_value (mixed). Returns (int|false).,None,None
+STORAGE call to update_option("scrd_" . $option, $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("scrd_debug_log", $value) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("scrd_post_days", $post_days) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("scrd_" . $option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("scrd_last_digest_time") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("scrd_db_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("scrd_last_digest_time", $right_now) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

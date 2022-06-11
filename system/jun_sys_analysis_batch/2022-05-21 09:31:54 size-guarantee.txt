@@ -1,0 +1,611 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on size-guarantee
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.675514.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.896588.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 88 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.589890.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.652581.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 211 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.643896.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 2 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.597813.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.102537.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 128 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.936718.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2016
+Added 1585 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2260
+Added 244 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.063621.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/size-guarantee.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/admin/class-size-guarantee-admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/admin/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/admin/partials/size-guarantee-admin-display.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/includes/class-size-guarantee-activator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/includes/class-size-guarantee-deactivator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/includes/class-size-guarantee-i18n.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/includes/class-size-guarantee-loader.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/includes/class-size-guarantee.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/includes/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/public/class-size-guarantee-public.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/public/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/size-guarantee/public/partials/size-guarantee-public-display.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.426988.
+
+88 PHP_REACHES edges created
+2 REACHES edges created
+211 PHP_REACHES edges created
+2 CALLS edges created
+1000 PHP_REACHES edges created
+1713 PHP_REACHES edges created
+244 PHP_REACHES edges created
+2260 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 680 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.918750.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 2 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.786494.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 37 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.369293.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 11 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.176663.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.053851.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.430849.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.014222.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.032914.
+
+2 CALLS edges created
+48 PHP_REACHES edges created
+50 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 60 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.108135.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+1 SQL operations to process.
+SELECT * FROM $wpdbwoocommerce_api_keys WHERE $wpdbwoocommerce_api_keys.user_id = get_current_user_id() AND $wpdbwoocommerce_api_keys.description LIKE '%size%' AND $wpdbwoocommerce_api_keys.permissions = 'read'
+SQL command (SELECT * FROM $wpdbwoocommerce_api_keys WHERE $wpdbwoocommerce_api_keys.user_id = get_current_user_id() AND $wpdbwoocommerce_api_keys.description LIKE '%size%' AND $wpdbwoocommerce_api_keys.permissions = 'read') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [550]
+Added 0 SQL nodes. 0 out of 1 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:01.601291.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'SIZE_GUARANTEE_PLUGIN_PATHmedia/size_guarantee_logo.png'' cannot be parsed correct.
+HTML code '$'json_encode($response)'' cannot be parsed correct.
+HTML code '$'0'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'$hook'' cannot be parsed correct.
+HTML code '$'<br><br><div  data-store_id=get_option(size_guarantee_prefix . "store_id")"  data-api_key="get_option(size_guarantee_group, [])"  id="size-guarantee-popup"></div><br> <script async src="https://shopify.sizeguarantee.com/popup/app.js"></script>'' cannot be parsed correct.
+HTML code '$'" alt=\'Size Guarantee\'>	
+		
+	               '' cannot be parsed correct.
+HTML code '$'<a class="button" id="size_gurantee_success_btn" >Store connected</a>'' cannot be parsed correct.
+HTML code '$'<a class="button" id="size_gurantee_error_btn">Store Not connected</a>'' cannot be parsed correct.
+HTML code '$' > '' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$' > Enabled</option> 	
+	            <option value="0"  '' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'> Disabled</option>	
+	        </select>	
+		
+		
+	        '' cannot be parsed correct.
+HTML code '$'<br><br> <span class="size_guarantee-front-error"> Invalid API Key, Unable to show Know Your Size Button</span>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.360294.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.078955.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 5 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.453092.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running SqliteDetector
+### Start running UserInputDetector
+### Finish running SybaseDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running VariableDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressRemoteDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+admin/class-size-guarantee-admin.php:346
+  - API call to wp_remote_post(SIZE_GUARANTEE_API_BASE_URL . "/vaidate/apikey", $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+admin/class-size-guarantee-admin.php:411
+  - API call to wp_remote_post($endpoint, $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+size-guarantee.php:117
+  - API call to wp_remote_post(SIZE_GUARANTEE_API_BASE_URL . "/vaidate/apikey", $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+admin/class-size-guarantee-admin.php:194
+  - RETRIEVAL call to get_option($this->size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:195
+  - RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:196
+  - RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_secret", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:260
+  - RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:261
+  - RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:328
+  - RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:329
+  - RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:365
+  - RETRIEVAL call to get_option($this->size_guarantee_group, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:466
+  - RETRIEVAL call to get_option($this->size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:510
+  - RETRIEVAL call to get_option($this->size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:533
+  - RETRIEVAL call to get_option($this->size_guarantee_prefix . "api_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:566
+  - RETRIEVAL call to get_option($this->size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin/class-size-guarantee-admin.php:601
+  - RETRIEVAL call to get_option($this->size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+size-guarantee.php:96
+  - RETRIEVAL call to get_option(size_guarantee_group, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+size-guarantee.php:100
+  - RETRIEVAL call to get_option(size_guarantee_prefix . "key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+size-guarantee.php:101
+  - RETRIEVAL call to get_option(size_guarantee_prefix . "secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+size-guarantee.php:172
+  - RETRIEVAL call to get_option(size_guarantee_group, []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+size-guarantee.php:202
+  - RETRIEVAL call to get_option(size_guarantee_group, []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+size-guarantee.php:206
+  - RETRIEVAL call to get_option(size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+size-guarantee.php:207
+  - RETRIEVAL call to get_option(size_guarantee_prefix . "store_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+uninstall.php:43
+  - RETRIEVAL call to get_option("size_cs_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+uninstall.php:44
+  - RETRIEVAL call to get_option("size_cs_secret", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option 
+
+admin/class-size-guarantee-admin.php:310
+  - STORAGE call to update_option($this->size_guarantee_prefix . "cs_key", $consumer_key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/class-size-guarantee-admin.php:311
+  - STORAGE call to update_option($this->size_guarantee_prefix . "cs_secret", $consumer_secret) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/class-size-guarantee-admin.php:354
+  - STORAGE call to update_option($this->size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/class-size-guarantee-admin.php:362
+  - STORAGE call to update_option($this->size_guarantee_prefix . "connect", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/class-size-guarantee-admin.php:363
+  - STORAGE call to update_option($this->size_guarantee_prefix . "api_key", $apikey) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/class-size-guarantee-admin.php:369
+  - STORAGE call to update_option($this->size_guarantee_group, $size_guarantee_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin/class-size-guarantee-admin.php:376
+  - STORAGE call to update_option($this->size_guarantee_prefix . "store_id", $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/class-size-guarantee-activator.php:34
+  - STORAGE call to add_option("size-guarantee-connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/class-size-guarantee-activator.php:35
+  - STORAGE call to add_option("size_guarantee_store_id", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/class-size-guarantee-activator.php:36
+  - STORAGE call to add_option("size_guarantee_style", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+includes/class-size-guarantee-activator.php:37
+  - STORAGE call to add_option("size-guarantee-connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+size-guarantee.php:119
+  - STORAGE call to update_option("cronAPI", json_encode($responceData)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+size-guarantee.php:122
+  - STORAGE call to update_option(size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+size-guarantee.php:126
+  - STORAGE call to update_option(size_guarantee_prefix . "connect", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+size-guarantee.php:127
+  - STORAGE call to update_option(size_guarantee_prefix . "store_id", $store_id) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+size-guarantee.php:130
+  - STORAGE call to update_option(size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+size-guarantee.php:135
+  - STORAGE call to update_option(size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+uninstall.php:50
+  - STORAGE call to delete_option(size_guarantee_prefix . "key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:51
+  - STORAGE call to delete_option(size_guarantee_prefix . "secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:52
+  - STORAGE call to delete_option(size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:53
+  - STORAGE call to delete_option(size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+admin/class-size-guarantee-admin.php:274
+  - CRYPTOGRAPHY call to wc_rand_hash().
+admin/class-size-guarantee-admin.php:284
+  - CRYPTOGRAPHY call to wc_rand_hash().
+admin/class-size-guarantee-admin.php:290
+  - CRYPTOGRAPHY call to wc_api_hash($consumer_key). 
+
+admin/class-size-guarantee-admin.php:280
+  - Data from table $wpdbwoocommerce_api_keys deleted: "$wpdb->delete($apiTable, ["id" => $key_id])"
+uninstall.php:47
+  - Data from table $wpdbwoocommerce_api_keys deleted: "$wpdb->delete($apiTable, ["consumer_secret" => $size_cs_secret])"
+uninstall.php:50
+  - DELETION call to delete_option(size_guarantee_prefix . "key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:51
+  - DELETION call to delete_option(size_guarantee_prefix . "secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:52
+  - DELETION call to delete_option(size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:53
+  - DELETION call to delete_option(size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+uninstall.php:50
+  - Uninstall deletion call: DELETION call to delete_option(size_guarantee_prefix . "key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:51
+  - Uninstall deletion call: DELETION call to delete_option(size_guarantee_prefix . "secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:52
+  - Uninstall deletion call: DELETION call to delete_option(size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+uninstall.php:53
+  - Uninstall deletion call: DELETION call to delete_option(size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+none
+	DeletionDetector.$wpdb->delete($apiTable, ["consumer_secret" => $size_cs_secret]) - set()
+	GenericEncryptionDetector.wc_api_hash($consumer_key) - set()
+	GenericEncryptionDetector.wc_rand_hash() - set()
+	GenericEncryptionDetector.wc_rand_hash() - set()
+	DeletionDetector.$wpdb->delete($apiTable, ["id" => $key_id]) - set()
+option
+	DeletionDetector.delete_option(size_guarantee_prefix . "connect") - {'option'}
+	WordPressStorageDetector.update_option($this->size_guarantee_prefix . "cs_key", $consumer_key) - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_group) - {'option'}
+	WordPressStorageDetector.add_option("size_guarantee_style", 0) - {'option'}
+	WordPressRetrievalDetector.get_option(size_guarantee_group, []) - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_group, "") - {'option'}
+	WordPressStorageDetector.add_option("size_guarantee_store_id", 0) - {'option'}
+	WordPressStorageDetector.update_option($this->size_guarantee_prefix . "cs_secret", $consumer_secret) - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_group) - {'option'}
+	WordPressStorageDetector.update_option(size_guarantee_prefix . "connect", 0) - {'option'}
+	WordPressStorageDetector.update_option(size_guarantee_prefix . "connect", 0) - {'option'}
+	UninstallDetector.delete_option(size_guarantee_prefix . "key") - {'option'}
+	UninstallDetector.delete_option(size_guarantee_prefix . "secret") - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_prefix . "connect") - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_prefix . "cs_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_prefix . "cs_secret", "") - {'option'}
+	WordPressRetrievalDetector.get_option(size_guarantee_prefix . "connect") - {'option'}
+	WordPressRetrievalDetector.get_option("size_cs_secret", "") - {'option'}
+	WordPressStorageDetector.update_option($this->size_guarantee_group, $size_guarantee_options) - {'option'}
+	WordPressStorageDetector.delete_option(size_guarantee_group) - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_prefix . "connect", 0) - {'option'}
+	WordPressStorageDetector.update_option(size_guarantee_prefix . "connect", 0) - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_prefix . "cs_secret") - {'option'}
+	WordPressStorageDetector.delete_option(size_guarantee_prefix . "secret") - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_group) - {'option'}
+	UninstallDetector.delete_option(size_guarantee_prefix . "connect") - {'option'}
+	WordPressStorageDetector.delete_option(size_guarantee_prefix . "connect") - {'option'}
+	WordPressStorageDetector.update_option($this->size_guarantee_prefix . "connect", 1) - {'option'}
+	WordPressStorageDetector.delete_option(size_guarantee_prefix . "key") - {'option'}
+	UninstallDetector.delete_option(size_guarantee_group) - {'option'}
+	WordPressStorageDetector.update_option($this->size_guarantee_prefix . "store_id", $data) - {'option'}
+	WordPressRetrievalDetector.get_option(size_guarantee_group, "") - {'option'}
+	WordPressRetrievalDetector.get_option("size_cs_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_prefix . "cs_key") - {'option'}
+	WordPressStorageDetector.update_option($this->size_guarantee_prefix . "connect", 0) - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_prefix . "api_key", "") - {'option'}
+	WordPressStorageDetector.add_option("size-guarantee-connect", 0) - {'option'}
+	WordPressStorageDetector.update_option($this->size_guarantee_prefix . "api_key", $apikey) - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_prefix . "cs_key") - {'option'}
+	WordPressStorageDetector.add_option("size-guarantee-connect", 0) - {'option'}
+	WordPressStorageDetector.update_option("cronAPI", json_encode($responceData)) - {'option'}
+	WordPressStorageDetector.update_option(size_guarantee_prefix . "store_id", $store_id) - {'option'}
+	WordPressRetrievalDetector.get_option(size_guarantee_group, []) - {'option'}
+	WordPressRetrievalDetector.get_option(size_guarantee_prefix . "secret") - {'option'}
+	WordPressRetrievalDetector.get_option($this->size_guarantee_prefix . "cs_secret") - {'option'}
+	DeletionDetector.delete_option(size_guarantee_prefix . "key") - {'option'}
+	DeletionDetector.delete_option(size_guarantee_group) - {'option'}
+	WordPressStorageDetector.update_option(size_guarantee_prefix . "connect", 1) - {'option'}
+	WordPressRetrievalDetector.get_option(size_guarantee_prefix . "key") - {'option'}
+	WordPressRetrievalDetector.get_option(size_guarantee_prefix . "store_id") - {'option'}
+	DeletionDetector.delete_option(size_guarantee_prefix . "secret") - {'option'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:11.317190.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 462 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.387890.
+
+462 STORE_REACHES edges created
+462 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 198 nodes as ENCRYPTED
+In total, tainted 198 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:02.680235.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:37.311805!
+Data from table $wpdbwoocommerce_api_keys deleted: "$wpdb->delete($apiTable, ["id" => $key_id])",None,None
+Data from table $wpdbwoocommerce_api_keys deleted: "$wpdb->delete($apiTable, ["consumer_secret" => $size_cs_secret])",None,None
+DELETION call to delete_option(size_guarantee_prefix . "key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option(size_guarantee_prefix . "secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option(size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option(size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+CRYPTOGRAPHY call to wc_rand_hash().,None,None
+CRYPTOGRAPHY call to wc_rand_hash().,None,None
+CRYPTOGRAPHY call to wc_api_hash($consumer_key).,None,None
+Uninstall deletion call: DELETION call to delete_option(size_guarantee_prefix . "key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option(size_guarantee_prefix . "secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option(size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Uninstall deletion call: DELETION call to delete_option(size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+API call to wp_remote_post(SIZE_GUARANTEE_API_BASE_URL . "/vaidate/apikey", $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+API call to wp_remote_post($endpoint, $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+API call to wp_remote_post(SIZE_GUARANTEE_API_BASE_URL . "/vaidate/apikey", $options). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,[]
+RETRIEVAL call to get_option($this->size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_secret", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_prefix . "cs_secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_group, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_prefix . "api_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($this->size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option(size_guarantee_prefix . "key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(size_guarantee_prefix . "secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(size_guarantee_group, []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option(size_guarantee_group, []) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option(size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(size_guarantee_prefix . "store_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option(size_guarantee_group, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("size_cs_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("size_cs_secret", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+STORAGE call to update_option($this->size_guarantee_prefix . "cs_key", $consumer_key) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->size_guarantee_prefix . "cs_secret", $consumer_secret) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->size_guarantee_prefix . "connect", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->size_guarantee_prefix . "api_key", $apikey) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->size_guarantee_group, $size_guarantee_options) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($this->size_guarantee_prefix . "store_id", $data) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("size-guarantee-connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("size_guarantee_store_id", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("size_guarantee_style", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("size-guarantee-connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("cronAPI", json_encode($responceData)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option(size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option(size_guarantee_prefix . "connect", 1) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option(size_guarantee_prefix . "store_id", $store_id) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option(size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option(size_guarantee_prefix . "connect", 0) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option(size_guarantee_prefix . "key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option(size_guarantee_prefix . "secret") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option(size_guarantee_group) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option(size_guarantee_prefix . "connect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

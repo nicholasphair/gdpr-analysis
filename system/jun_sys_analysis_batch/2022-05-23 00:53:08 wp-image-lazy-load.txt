@@ -1,0 +1,555 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on wp-image-lazy-load
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.698174.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.852955.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.198368.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.685465.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 68 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.895335.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.645690.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.122468.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 68 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.210005.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 862
+Added 725 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1613
+Added 751 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.973052.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-image-lazy-load/image_lazy_load.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.147506.
+
+1 REACHES edges created
+861 PHP_REACHES edges created
+751 PHP_REACHES edges created
+1613 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 260 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.095178.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.220445.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 12 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.788846.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 3 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.179024.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.024467.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.205518.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.011567.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.045536.
+
+15 PHP_REACHES edges created
+15 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 12 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.164866.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.106450.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'plugins_url("/assets/pixels.png", )'' cannot be parsed correct.
+HTML code '$'<option value=\'false\' selected=selected>No</option>
+             <option value=\'true\'>Yes</option>'' cannot be parsed correct.
+HTML code '$'<option value=\'false\'>No</option>
+            <option value=\'true\' selected=selected>Yes</option>'' cannot be parsed correct.
+HTML code '$'$animationduration'' cannot be parsed correct.
+HTML code '$'<option value=\'false\' selected=selected>No</option>
+             <option value=\'true\'>Yes</option>'' cannot be parsed correct.
+HTML code '$'<option value=\'false\'>No</option>
+            <option value=\'true\' selected=selected>Yes</option>'' cannot be parsed correct.
+HTML code '$'admin_url("admin-post.php")'' cannot be parsed correct.
+HTML code '$'admin_url("admin-post.php")'' cannot be parsed correct.
+HTML code '$'plugins_url("/assets/banner-772x250.png", )'' cannot be parsed correct.
+HTML code '$'<option value=\'false\' selected=selected>No</option>
+             <option value=\'true\'>Yes</option>'' cannot be parsed correct.
+HTML code '$'<option value=\'false\'>No</option>
+            <option value=\'true\' selected=selected>Yes</option>'' cannot be parsed correct.
+HTML code '$'<option value=\'false\' selected=selected>No</option>
+             <option value=\'true\'>Yes</option>'' cannot be parsed correct.
+HTML code '$'<option value=\'false\'>No</option>
+            <option value=\'true\' selected=selected>Yes</option>'' cannot be parsed correct.
+HTML code '$'$skipallparent'' cannot be parsed correct.
+HTML code '$'$skipparent'' cannot be parsed correct.
+HTML code '$'$loadonposition'' cannot be parsed correct.
+HTML code '$'$start_dir/readdir($dirlist)
+'' cannot be parsed correct.
+HTML code '$'<option value=\'linear\' selected=selected>linear</option>
+             <option value=\'ease\'>ease</option>
+             <option value=\'ease-in\'>ease-in</option>
+             <option value=\'ease-out\'>ease-out</option>
+             <option value=\'ease-in-out\'>ease-in-out</option>'' cannot be parsed correct.
+HTML code '$'<option value=\'linear\'>linear</option>
+             <option value=\'ease\' selected=selected>ease</option>
+             <option value=\'ease-in\'>ease-in</option>
+             <option value=\'ease-out\'>ease-out</option>
+             <option value=\'ease-in-out\'>ease-in-out</option>'' cannot be parsed correct.
+HTML code '$'<option value=\'linear\'>linear</option>
+             <option value=\'ease\'>ease</option>
+             <option value=\'ease-in\' selected=selected>ease-in</option>
+             <option value=\'ease-out\'>ease-out</option>
+             <option value=\'ease-in-out\'>ease-in-out</option>'' cannot be parsed correct.
+HTML code '$'<option value=\'linear\'>linear</option>
+             <option value=\'ease\'>ease</option>
+             <option value=\'ease-in\'>ease-in</option>
+             <option value=\'ease-out\' selected=selected>ease-out</option>
+             <option value=\'ease-in-out\'>ease-in-out</option>'' cannot be parsed correct.
+HTML code '$'<option value=\'linear\'>linear</option>
+             <option value=\'ease\'>ease</option>
+             <option value=\'ease-in\'>ease-in</option>
+             <option value=\'ease-out\'>ease-out</option>
+             <option value=\'ease-in-out selected=selected\'>ease-in-out</option>'' cannot be parsed correct.
+HTML code '$'<strong style=\'color:green;\'>Your theme files have been modified for <img> lazy loading.</strong>'' cannot be parsed correct.
+HTML code '$'<strong style=\'color:red;\'>Your theme files lazy loading modification for <img> have been reverted.</strong>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.952494.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.072618.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 10 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.650667.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FrontBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FirebirdInterBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running HashDetector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running ArrayElementDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PropertyDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running MySQLiDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running PHPRetrievalDetector
+### Start running WordPressStorageDetector
+### Finish running PHPStorageDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+image_lazy_load.php:416
+  - RETRIEVAL call to fread($fh, filesize($newpath)).
+  - Data types: file 
+
+image_lazy_load.php:422
+  - STORAGE call to fwrite($fh, $Data).
+  - Data types: file 
+
+image_lazy_load.php:49
+  - RETRIEVAL call to get_option("wpimagelazyload_phplazyload") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:64
+  - RETRIEVAL call to get_option("wpimagelazyload_animation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:73
+  - RETRIEVAL call to get_option("wpimagelazyload_animationduration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:74
+  - RETRIEVAL call to get_option("wpimagelazyload_animationtiming") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:109
+  - RETRIEVAL call to get_option("wpimagelazyload_skipiframe") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:110
+  - RETRIEVAL call to get_option("wpimagelazyload_skipparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:111
+  - RETRIEVAL call to get_option("wpimagelazyload_skipallparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:112
+  - RETRIEVAL call to get_option("wpimagelazyload_skipvideo") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:113
+  - RETRIEVAL call to get_option("wpimagelazyload_loadonposition") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:137
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:161
+  - RETRIEVAL call to get_option("wpimagelazyload_skipiframe") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:161
+  - RETRIEVAL call to get_option("wpimagelazyload_skipiframe") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:162
+  - RETRIEVAL call to get_option("wpimagelazyload_skipparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:162
+  - RETRIEVAL call to get_option("wpimagelazyload_skipparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:163
+  - RETRIEVAL call to get_option("wpimagelazyload_skipallparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:163
+  - RETRIEVAL call to get_option("wpimagelazyload_skipallparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:164
+  - RETRIEVAL call to get_option("wpimagelazyload_skipvideo") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:164
+  - RETRIEVAL call to get_option("wpimagelazyload_skipvideo") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:165
+  - RETRIEVAL call to get_option("wpimagelazyload_loadonposition") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:165
+  - RETRIEVAL call to get_option("wpimagelazyload_loadonposition") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:166
+  - RETRIEVAL call to get_option("wpimagelazyload_animation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:166
+  - RETRIEVAL call to get_option("wpimagelazyload_animation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:167
+  - RETRIEVAL call to get_option("wpimagelazyload_animationduration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:167
+  - RETRIEVAL call to get_option("wpimagelazyload_animationduration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:168
+  - RETRIEVAL call to get_option("wpimagelazyload_animationtiming") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:168
+  - RETRIEVAL call to get_option("wpimagelazyload_animationtiming") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:169
+  - RETRIEVAL call to get_option("wpimagelazyload_phplazyload") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:169
+  - RETRIEVAL call to get_option("wpimagelazyload_phplazyload") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:183
+  - RETRIEVAL call to get_option("wpimagelazyload_skipiframe") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:199
+  - RETRIEVAL call to get_option("wpimagelazyload_skipvideo") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:314
+  - RETRIEVAL call to get_option("wpimagelazyload_phplazyload") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+image_lazy_load.php:342
+  - RETRIEVAL call to get_option("wpimagelazyload_themefilesmofidied") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+image_lazy_load.php:16
+  - STORAGE call to add_option("wpimagelazyload_skipiframe", "true", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:18
+  - STORAGE call to add_option("wpimagelazyload_skipparent", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:20
+  - STORAGE call to add_option("wpimagelazyload_skipvideo", "false", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:22
+  - STORAGE call to add_option("wpimagelazyload_skipallparent", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:24
+  - STORAGE call to add_option("wpimagelazyload_loadonposition", "0", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:27
+  - STORAGE call to add_option("wpimagelazyload_animation", "false", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:29
+  - STORAGE call to add_option("wpimagelazyload_animationduration", "5", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:31
+  - STORAGE call to add_option("wpimagelazyload_animationtiming", "ease", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:34
+  - STORAGE call to add_option("wpimagelazyload_phplazyload", "false", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:36
+  - STORAGE call to add_option("wpimagelazyload_themefilesmofidied", "false", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:384
+  - STORAGE call to update_option("wpimagelazyload_themefilesmofidied", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+image_lazy_load.php:395
+  - STORAGE call to update_option("wpimagelazyload_themefilesmofidied", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.fwrite($fh, $Data) - {'file'}
+	PHPRetrievalDetector.fread($fh, filesize($newpath)) - {'file'}
+option
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipparent") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_loadonposition") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_skipparent", "", "", "yes") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_skipallparent", "", "", "yes") - {'option'}
+	WordPressStorageDetector.update_option("wpimagelazyload_themefilesmofidied", "true") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_phplazyload") - {'option'}
+	WordPressStorageDetector.update_option("wpimagelazyload_themefilesmofidied", "false") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_themefilesmofidied", "false", "", "yes") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_skipiframe", "true", "", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_animationtiming") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipvideo") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipvideo") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_loadonposition") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_animationtiming") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_phplazyload", "false", "", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_animationduration") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_animation", "false", "", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_animation") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_animationduration", "5", "", "yes") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_loadonposition", "0", "", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipallparent") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_phplazyload") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipallparent") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipvideo") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipparent") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_animation") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_loadonposition") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_animation") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipiframe") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_animationduration") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipiframe") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipiframe") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_phplazyload") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_animationduration") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_animationtiming", "ease", "", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipparent") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_phplazyload") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipiframe") - {'option'}
+	WordPressStorageDetector.add_option("wpimagelazyload_skipvideo", "false", "", "yes") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_themefilesmofidied") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_animationtiming") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipallparent") - {'option'}
+	WordPressRetrievalDetector.get_option("wpimagelazyload_skipvideo") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:09.216727.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 385 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.435861.
+
+385 STORE_REACHES edges created
+385 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.010670.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:27.780829!
+RETRIEVAL call to fread($fh, filesize($newpath)).,None,None
+STORAGE call to fwrite($fh, $Data).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipiframe") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipallparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipvideo") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_loadonposition") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipiframe") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipiframe") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipallparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipallparent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipvideo") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipvideo") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_loadonposition") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_loadonposition") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_animation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_animation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_animationduration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_animationduration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_animationtiming") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_animationtiming") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_phplazyload") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_phplazyload") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipiframe") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_skipvideo") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_phplazyload") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_themefilesmofidied") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_phplazyload") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_animation") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_animationduration") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wpimagelazyload_animationtiming") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("wpimagelazyload_skipiframe", "true", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wpimagelazyload_skipparent", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wpimagelazyload_skipvideo", "false", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wpimagelazyload_skipallparent", "", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wpimagelazyload_loadonposition", "0", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wpimagelazyload_animation", "false", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wpimagelazyload_animationduration", "5", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wpimagelazyload_animationtiming", "ease", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wpimagelazyload_phplazyload", "false", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("wpimagelazyload_themefilesmofidied", "false", "", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 3: $autoload (string|bool), 2: $deprecated (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wpimagelazyload_themefilesmofidied", "true") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("wpimagelazyload_themefilesmofidied", "false") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

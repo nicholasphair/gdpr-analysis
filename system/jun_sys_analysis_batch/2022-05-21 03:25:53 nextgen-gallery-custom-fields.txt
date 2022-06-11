@@ -1,0 +1,477 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on nextgen-gallery-custom-fields
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.701768.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.083719.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.234884.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.658182.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 299 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.783863.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.632437.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.102481.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 77 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.749095.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2621
+Added 2244 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2621
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.583736.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/nextgen-gallery-custom-fields/ngg-custom-fields.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.165868.
+
+1 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2620 PHP_REACHES edges created
+2621 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 917 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.140407.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:06.260862.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 23 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.442223.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 26 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.161007.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.497761.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.336907.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010586.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.065659.
+
+49 PHP_REACHES edges created
+49 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 23 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.122758.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+38 SQL operations to process.
+CREATE TABLE $wpdbnggcf_fields (
+				id BIGINT(19) NOT NULL AUTO_INCREMENT,
+				field_name TEXT NULL,
+				field_type TEXT NULL,
+				ngg_type INT NOT NULL DEFAULT 1,
+				drop_options TEXT NULL,
+				dateadded DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL,
+				UNIQUE KEY id (id)
+			) ;
+SQL command (CREATE TABLE $wpdbnggcf_fields ( id BIGINT(19) NOT NULL AUTO_INCREMENT, field_name TEXT NULL, field_type TEXT NULL, ngg_type INT NOT NULL DEFAULT 1, drop_options TEXT NULL, dateadded DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL, UNIQUE KEY id (id) ) ;) cannot be parsed correct.
+ALTER TABLE $wpdbnggcf_fields CHARSET utf8;
+SQL command (ALTER TABLE $wpdbnggcf_fields CHARSET utf8;) cannot be parsed correct.
+ALTER TABLE $wpdbnggcf_fields MODIFY field_name varchar(255) CHARSET utf8;
+SQL command (ALTER TABLE $wpdbnggcf_fields MODIFY field_name varchar(255) CHARSET utf8;) cannot be parsed correct.
+ALTER TABLE $wpdbnggcf_fields MODIFY field_type varchar(255) CHARSET utf8;
+SQL command (ALTER TABLE $wpdbnggcf_fields MODIFY field_type varchar(255) CHARSET utf8;) cannot be parsed correct.
+ALTER TABLE $wpdbnggcf_fields MODIFY drop_options TEXT CHARSET utf8;
+SQL command (ALTER TABLE $wpdbnggcf_fields MODIFY drop_options TEXT CHARSET utf8;) cannot be parsed correct.
+CREATE TABLE $wpdbnggcf_fields_link (
+				id BIGINT(19) NOT NULL AUTO_INCREMENT,
+				field_id BIGINT(19) NOT NULL DEFAULT 0,
+				gid BIGINT(19) NOT NULL DEFAULT 0,
+				UNIQUE KEY id (id)
+			) DEFAULT CHARACTER SET $wpdb;
+SQL command (CREATE TABLE $wpdbnggcf_fields_link ( id BIGINT(19) NOT NULL AUTO_INCREMENT, field_id BIGINT(19) NOT NULL DEFAULT 0, gid BIGINT(19) NOT NULL DEFAULT 0, UNIQUE KEY id (id) ) DEFAULT CHARACTER SET $wpdb;) cannot be parsed correct.
+ALTER TABLE $wpdbnggcf_fields_link CHARSET utf8;
+SQL command (ALTER TABLE $wpdbnggcf_fields_link CHARSET utf8;) cannot be parsed correct.
+CREATE TABLE $wpdbnggcf_field_values (
+				id BIGINT(19) NOT NULL AUTO_INCREMENT,
+				pid bigint(19) DEFAULT '0' NOT NULL,
+				fid bigint(19) DEFAULT '0' NOT NULL,
+				field_value TEXT NULL,
+				ngg_type INT NOT NULL DEFAULT 1,
+				dateadded DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL,
+				UNIQUE KEY id (id)
+			) ;
+SQL command (CREATE TABLE $wpdbnggcf_field_values ( id BIGINT(19) NOT NULL AUTO_INCREMENT, pid bigint(19) DEFAULT '0' NOT NULL, fid bigint(19) DEFAULT '0' NOT NULL, field_value TEXT NULL, ngg_type INT NOT NULL DEFAULT 1, dateadded DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL, UNIQUE KEY id (id) ) ;) cannot be parsed correct.
+ALTER TABLE $wpdbnggcf_field_values CHARSET utf8;
+SQL command (ALTER TABLE $wpdbnggcf_field_values CHARSET utf8;) cannot be parsed correct.
+ALTER TABLE $wpdbnggcf_field_values MODIFY field_value TEXT CHARSET utf8;
+SQL command (ALTER TABLE $wpdbnggcf_field_values MODIFY field_value TEXT CHARSET utf8;) cannot be parsed correct.
+INSERT INTO $wpdbnggcf_fields_link (`id`, `field_id`, `gid`) VALUES(null, '$wpdb->escape($val->id)', '$wpdb->escape($gal->gid)')
+SQL command (INSERT INTO $wpdbnggcf_fields_link (`id`, `field_id`, `gid`) VALUES(null, '$wpdb->escape($val->id)', '$wpdb->escape($gal->gid)')) cannot be parsed correct.
+SELECT * FROM $wpdbnggcf_field_values WHERE fid = '$fid' AND pid = '$pid' AND ngg_type = 'NGGCF_IMAGES'
+SQL command (SELECT * FROM $wpdbnggcf_field_values WHERE fid = '$fid' AND pid = '$pid' AND ngg_type = 'NGGCF_IMAGES') cannot be parsed correct.
+UPDATE $wpdbnggcf_field_values SET field_value = '$wpdb->escape($val)' WHERE id = $wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "nggcf_field_values WHERE fid = \'"$fid"\' AND pid = \'"$pid"\' AND ngg_type = \'" . NGGCF_IMAGES . "\'")_id
+SQL command (UPDATE $wpdbnggcf_field_values SET field_value = '$wpdb->escape($val)' WHERE id = $wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "nggcf_field_values WHERE fid = \'"$fid"\' AND pid = \'"$pid"\' AND ngg_type = \'" . NGGCF_IMAGES . "\'")_id) cannot be parsed correct.
+INSERT INTO $wpdbnggcf_field_values (id, pid, fid, field_value, dateadded, ngg_type) VALUES (null, '$pid', '$fid', '$wpdb->escape($val)', 'date("Y-m-d H:i:s", time())', 'NGGCF_IMAGES')
+SQL command (INSERT INTO $wpdbnggcf_field_values (id, pid, fid, field_value, dateadded, ngg_type) VALUES (null, '$pid', '$fid', '$wpdb->escape($val)', 'date("Y-m-d H:i:s", time())', 'NGGCF_IMAGES')) cannot be parsed correct.
+SELECT * FROM $wpdbnggcf_field_values WHERE fid='$fid' AND pid='$post_nggcf_gallery_ngg_gallery_id' AND ngg_type = 'NGGCF_GALLERY'
+SQL command (SELECT * FROM $wpdbnggcf_field_values WHERE fid='$fid' AND pid='$post_nggcf_gallery_ngg_gallery_id' AND ngg_type = 'NGGCF_GALLERY') cannot be parsed correct.
+UPDATE $wpdbnggcf_field_values SET field_value = '$wpdb->escape($val)' WHERE id = $wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "nggcf_field_values WHERE fid=\'" . $fid . "\' AND pid=\'" . $galleryId . "\' AND ngg_type = \'" . NGGCF_GALLERY . "\'")_id
+SQL command (UPDATE $wpdbnggcf_field_values SET field_value = '$wpdb->escape($val)' WHERE id = $wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "nggcf_field_values WHERE fid=\'" . $fid . "\' AND pid=\'" . $galleryId . "\' AND ngg_type = \'" . NGGCF_GALLERY . "\'")_id) cannot be parsed correct.
+INSERT INTO $wpdbnggcf_field_values (id, pid, fid, field_value, dateadded, ngg_type) VALUES (null, '$post_nggcf_gallery_ngg_gallery_id', '$fid', '$wpdb->escape($val)', 'date("Y-m-d H:i:s", time())', 'NGGCF_GALLERY')
+SQL command (INSERT INTO $wpdbnggcf_field_values (id, pid, fid, field_value, dateadded, ngg_type) VALUES (null, '$post_nggcf_gallery_ngg_gallery_id', '$fid', '$wpdb->escape($val)', 'date("Y-m-d H:i:s", time())', 'NGGCF_GALLERY')) cannot be parsed correct.
+UPDATE $wpdbnggcf_fields SET drop_options = '$wpdb->escape($config["drop_options"])' WHERE id = '$wpdb->escape($config["id"])'
+SQL command (UPDATE $wpdbnggcf_fields SET drop_options = '$wpdb->escape($config["drop_options"])' WHERE id = '$wpdb->escape($config["id"])') cannot be parsed correct.
+UPDATE $wpdbnggcf_fields SET field_name = '$wpdb->escape($config["field_name"])' WHERE id = '$wpdb->escape($config["id"])'
+SQL command (UPDATE $wpdbnggcf_fields SET field_name = '$wpdb->escape($config["field_name"])' WHERE id = '$wpdb->escape($config["id"])') cannot be parsed correct.
+SELECT * FROM $wpdbnggcf_fields WHERE id = $val
+SQL command (SELECT * FROM $wpdbnggcf_fields WHERE id = $val) cannot be parsed correct.
+DELETE FROM $wpdbnggcf_field_values WHERE fid = $val AND pid = $val
+SQL command (DELETE FROM $wpdbnggcf_field_values WHERE fid = $val AND pid = $val) cannot be parsed correct.
+SELECT * FROM $wpdbngg_pictures WHERE galleryid = $val
+SQL command (SELECT * FROM $wpdbngg_pictures WHERE galleryid = $val) cannot be parsed correct.
+DELETE FROM $wpdbnggcf_field_values WHERE fid = $val AND pid IN (implode(", ", $list))
+SQL command (DELETE FROM $wpdbnggcf_field_values WHERE fid = $val AND pid IN (implode(", ", $list))) cannot be parsed correct.
+DELETE FROM $wpdbnggcf_fields_link WHERE id = $val
+SQL command (DELETE FROM $wpdbnggcf_fields_link WHERE id = $val) cannot be parsed correct.
+INSERT INTO $wpdbnggcf_fields_link (`id`, `field_id`, `gid`) VALUES(null, '$wpdb->escape($config["id"])', '$wpdb->escape($key)')
+SQL command (INSERT INTO $wpdbnggcf_fields_link (`id`, `field_id`, `gid`) VALUES(null, '$wpdb->escape($config["id"])', '$wpdb->escape($key)')) cannot be parsed correct.
+SELECT * FROM $wpdbnggcf_fields WHERE field_name = '$wpdb->escape($config["field_name"])' AND ngg_type = '$wpdb->escape($config["ngg_type"])'
+SQL command (SELECT * FROM $wpdbnggcf_fields WHERE field_name = '$wpdb->escape($config["field_name"])' AND ngg_type = '$wpdb->escape($config["ngg_type"])') cannot be parsed correct.
+INSERT INTO $wpdbnggcf_fields (`id`, `field_name`, `field_type`, `drop_options`, `ngg_type`) VALUES (null, '$wpdb->escape($config["field_name"])', '$wpdb->escape($config["field_type"])', '$wpdb->escape($config["drop_options"])', '$wpdb->escape($config["ngg_type"])')
+SQL command (INSERT INTO $wpdbnggcf_fields (`id`, `field_name`, `field_type`, `drop_options`, `ngg_type`) VALUES (null, '$wpdb->escape($config["field_name"])', '$wpdb->escape($config["field_type"])', '$wpdb->escape($config["drop_options"])', '$wpdb->escape($config["ngg_type"])')) cannot be parsed correct.
+INSERT INTO $wpdbnggcf_fields_link (`id`, `field_id`, `gid`) VALUES(null, '$wpdb->escape($fid)', '$wpdb->escape($key)')
+SQL command (INSERT INTO $wpdbnggcf_fields_link (`id`, `field_id`, `gid`) VALUES(null, '$wpdb->escape($fid)', '$wpdb->escape($key)')) cannot be parsed correct.
+DELETE FROM $wpdbnggcf_field_values WHERE fid = $fid
+SQL command (DELETE FROM $wpdbnggcf_field_values WHERE fid = $fid) cannot be parsed correct.
+DELETE FROM $wpdbnggcf_fields WHERE id = $fid
+SQL command (DELETE FROM $wpdbnggcf_fields WHERE id = $fid) cannot be parsed correct.
+SELECT field.* FROM $wpdbnggcf_fields_link AS link LEFT JOIN $wpdbnggcf_fields AS field ON link.field_id = field.id WHERE field.ngg_type = $wpdb->escape($ngg_type) AND link.gid = '$wpdb->escape($gid)'
+SQL command (SELECT field.* FROM $wpdbnggcf_fields_link AS link LEFT JOIN $wpdbnggcf_fields AS field ON link.field_id = field.id WHERE field.ngg_type = $wpdb->escape($ngg_type) AND link.gid = '$wpdb->escape($gid)') cannot be parsed correct.
+SELECT gal.*, link.id AS link_id, link.field_id AS nggcf_field_id FROM $wpdbnggcf_fields_link AS link LEFT JOIN $wpdbngg_gallery AS gal ON link.gid = gal.gid WHERE link.field_id = '$wpdb->escape($fid)'
+SQL command (SELECT gal.*, link.id AS link_id, link.field_id AS nggcf_field_id FROM $wpdbnggcf_fields_link AS link LEFT JOIN $wpdbngg_gallery AS gal ON link.gid = gal.gid WHERE link.field_id = '$wpdb->escape($fid)') cannot be parsed correct.
+SELECT vals.*, cols.field_name, cols.id AS field_id, cols.field_type FROM $wpdbnggcf_field_values AS vals LEFT JOIN $wpdbnggcf_fields AS cols ON vals.fid = cols.id WHERE vals.pid = '$wpdb->escape($pid)' AND cols.ngg_type = 'NGGCF_IMAGES'
+SQL command (SELECT vals.*, cols.field_name, cols.id AS field_id, cols.field_type FROM $wpdbnggcf_field_values AS vals LEFT JOIN $wpdbnggcf_fields AS cols ON vals.fid = cols.id WHERE vals.pid = '$wpdb->escape($pid)' AND cols.ngg_type = 'NGGCF_IMAGES') cannot be parsed correct.
+SELECT vals.*, cols.field_name, cols.id AS field_id, cols.field_type FROM $wpdbnggcf_field_values AS vals LEFT JOIN $wpdbnggcf_fields AS cols ON vals.fid = cols.id WHERE cols.ngg_type = 'NGGCF_GALLERY' AND vals.pid = '$wpdb->escape($gid)'
+SQL command (SELECT vals.*, cols.field_name, cols.id AS field_id, cols.field_type FROM $wpdbnggcf_field_values AS vals LEFT JOIN $wpdbnggcf_fields AS cols ON vals.fid = cols.id WHERE cols.ngg_type = 'NGGCF_GALLERY' AND vals.pid = '$wpdb->escape($gid)') cannot be parsed correct.
+INSERT INTO $wpdbnggcf_fields_link (`id`, `field_id`, `gid`) VALUES(null, '$wpdb->escape($key)', '$wpdb->escape($gid)')
+SQL command (INSERT INTO $wpdbnggcf_fields_link (`id`, `field_id`, `gid`) VALUES(null, '$wpdb->escape($key)', '$wpdb->escape($gid)')) cannot be parsed correct.
+SELECT * FROM $wpdbnggcf_fields WHERE field_name = '$wpdb->escape(htmlspecialchars_decode($gallery_column_key))'
+SQL command (SELECT * FROM $wpdbnggcf_fields WHERE field_name = '$wpdb->escape(htmlspecialchars_decode($gallery_column_key))') cannot be parsed correct.
+SELECT * FROM $wpdbnggcf_field_values WHERE fid = '$wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "nggcf_fields WHERE field_name = \'" . $wpdb->escape(htmlspecialchars_decode($gallery_column_key)) . "\'")_id' AND pid = '$pid'
+SQL command (SELECT * FROM $wpdbnggcf_field_values WHERE fid = '$wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "nggcf_fields WHERE field_name = \'" . $wpdb->escape(htmlspecialchars_decode($gallery_column_key)) . "\'")_id' AND pid = '$pid') cannot be parsed correct.
+SELECT * FROM $wpdbnggcf_field_values WHERE pid = '$wpdb->escape($gallery->gid)' AND fid = '$val' AND ngg_type = 'NGGCF_GALLERY'
+SQL command (SELECT * FROM $wpdbnggcf_field_values WHERE pid = '$wpdb->escape($gallery->gid)' AND fid = '$val' AND ngg_type = 'NGGCF_GALLERY') cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [154, 160, 171, 182, 193, 227, 233, 267, 273, 284, 400, 491, 518, 559, 653, 683, 724, 870, 952, 1032, 1061, 1108, 1148, 1178, 1262, 1278, 1396, 1462, 1526, 1549, 1672, 1706, 1772, 1866, 3135, 3413, 3443, 3757]
+Added 0 SQL nodes. 0 out of 38 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:12.365925.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=images'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($val->field_name)'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($val->field_name)'' cannot be parsed correct.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=gallery'' cannot be parsed correct.
+HTML code '$'nggcf_save_field($conf)'' cannot be parsed correct.
+HTML code '$'nggcf_save_field($conf)'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=gallery'' cannot be parsed correct.
+HTML code '$'block'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'none'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($val->field_name)'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=gallery'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=images'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=gallery'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=gallery'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'blocknone'' cannot be parsed correct.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=images'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'<input type=\'checkbox\' name=\'conf[galleries][$gval]\' value=\'1\' checked /> $gval<br />'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'blocknone'' cannot be parsed correct.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=images'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($val->drop_options)'' cannot be parsed correct.
+HTML code '$'admin_url()admin.php?page=$_GET_page&mode=gallery'' cannot be parsed correct.
+HTML code '$'NGGCF_GALLERY'' cannot be parsed correct.
+HTML code '$'<input type=\'checkbox\' name=\'conf[galleries][$val]\' value=\'1\' checked /> $val<br />'' cannot be parsed correct.
+HTML code '$'NGGCF_FIELD_TYPE_INPUT'' cannot be parsed correct.
+HTML code '$'NGGCF_FIELD_TYPE_TEXTAREA'' cannot be parsed correct.
+HTML code '$'NGGCF_FIELD_TYPE_SELECT'' cannot be parsed correct.
+HTML code '$'NGGCF_FIELD_TYPE_SELECT'' cannot be parsed correct.
+HTML code '$'NGGCF_FIELD_TYPE_SELECT'' cannot be parsed correct.
+HTML code '$'$val'' cannot be parsed correct.
+HTML code '$'$pid'' cannot be parsed correct.
+HTML code '$'$custCol'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'$pid'' cannot be parsed correct.
+HTML code '$'$custCol'' cannot be parsed correct.
+HTML code '$'$value'' cannot be parsed correct.
+HTML code '$'$pid'' cannot be parsed correct.
+HTML code '$'$custCol'' cannot be parsed correct.
+HTML code '$'trim(esc_attr($val))'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+HTML code '$'trim(esc_attr($val))'' cannot be parsed correct.
+HTML code '$'<strong>Custom Columns</strong><hr /><input type="hidden" name="nggcf_gallery[ngg_gallery_id]" value="" /'' cannot be parsed correct.
+HTML code '$'htmlspecialchars($val->field_name)<br />'' cannot be parsed correct.
+HTML code '$'<input name="nggcf_gallery$val]" style="width:95%;" value="$value" /'' cannot be parsed correct.
+HTML code '$'<textarea name="nggcf_gallery$val]" style="width:95%;">$value</textarea>'' cannot be parsed correct.
+HTML code '$'<select name="nggcf_gallery$val]"'' cannot be parsed correct.
+HTML code '$'<option value=trim(esc_attr($optVal))" selected="selected">trim(esc_attr($optVal))</option>'' cannot be parsed correct.
+HTML code '$']" value="1" checked /> '' cannot be parsed correct.
+HTML code '$'<br />
+				'' cannot be parsed correct.
+HTML code '$']" value="1" checked /> '' cannot be parsed correct.
+HTML code '$'<br />
+				'' cannot be parsed correct.
+HTML code '$'" method="POST" action="'' cannot be parsed correct.
+HTML code '$'" style="display:'' cannot be parsed correct.
+HTML code '$'Text Input'' cannot be parsed correct.
+HTML code '$'Text Area'' cannot be parsed correct.
+HTML code '$'Drop Down'' cannot be parsed correct.
+HTML code '$'!'' cannot be parsed correct.
+HTML code '$'				<input name="nggcf_fields'' cannot be parsed correct.
+HTML code '$']['' cannot be parsed correct.
+HTML code '$']" style="width:95%;" value="'' cannot be parsed correct.
+HTML code '$'" />
+			'' cannot be parsed correct.
+HTML code '$'				<textarea name="nggcf_fields'' cannot be parsed correct.
+HTML code '$']['' cannot be parsed correct.
+HTML code '$']" style="width:95%;">'' cannot be parsed correct.
+HTML code '$'</textarea>
+				'' cannot be parsed correct.
+HTML code '$'				<select name="nggcf_fields'' cannot be parsed correct.
+HTML code '$']['' cannot be parsed correct.
+HTML code '$']">
+				<option value=""></option>
+				'' cannot be parsed correct.
+HTML code '$'						<option value='' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'</option>
+						'' cannot be parsed correct.
+HTML code '$'				</select>
+				'' cannot be parsed correct.
+HTML code '$'<option value=""></option>'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'<br />'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:08.313787.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.061744.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 11 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.499912.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running DbaseDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ArrayElementDetector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PhpCurlDetector
+### Start running PHPRetrievalDetector
+### Finish running PasswordHashingDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressStorageDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running maxdbDetector
+### Start running GenericEncryptionDetector
+### Finish running VariableDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running MySQLiDetector
+### Finish running UserInputDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+ngg-custom-fields.php:73
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+ngg-custom-fields.php:87
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).
+ngg-custom-fields.php:102
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+By data type:
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.747965.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.041530.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.009087.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:50.571436!
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

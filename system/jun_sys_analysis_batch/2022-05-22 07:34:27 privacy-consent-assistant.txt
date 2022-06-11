@@ -1,0 +1,673 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on privacy-consent-assistant
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.743638.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.903719.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 6 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.380895.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.543676.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 567 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.695526.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 1 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.521325.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.094329.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 191 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.730941.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 3021
+Added 2255 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 4428
+Added 1407 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.287878.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/privacy-consent-assistant/admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/privacy-consent-assistant/trm-gdpr-assistant.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.442712.
+
+6 PHP_REACHES edges created
+1 REACHES edges created
+567 PHP_REACHES edges created
+1 CALLS edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2446 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+1407 PHP_REACHES edges created
+4428 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 928 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.872396.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.631778.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 21 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.232732.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 51 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.168331.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.059069.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.262329.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010466.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.044716.
+
+72 PHP_REACHES edges created
+72 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 51 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.117823.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+4 SQL operations to process.
+SHOW TABLES LIKE '$wpdb%'
+SQL command (SHOW TABLES LIKE '$wpdb%') cannot be parsed correct.
+SELECT column_name FROM information_schema.columns WHERE table_name = 'array_shift($table_object_vars)'
+SQL command (SELECT column_name FROM information_schema.columns WHERE table_name = 'array_shift($table_object_vars)') cannot be parsed correct.
+SELECT * FROM `array_shift($table_object_vars)` WHERE `array_shift($column_object_vars)` LIKE '%filter_var($_POST["gdpr_needle"], FILTER_SANITIZE_STRING)%'
+SQL command (SELECT * FROM `array_shift($table_object_vars)` WHERE `array_shift($column_object_vars)` LIKE '%filter_var($_POST["gdpr_needle"], FILTER_SANITIZE_STRING)%') cannot be parsed correct.
+SELECT blog_id FROM $wpdb
+SQL command (SELECT blog_id FROM $wpdb) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [699, 743, 786, 1881]
+Added 0 SQL nodes. 0 out of 4 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:02.310846.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'class="current"'' cannot be parsed correct.
+HTML code '$'class="current"'' cannot be parsed correct.
+HTML code '$'admin_url("edit.php?post_type=gdpr-policy")'' cannot be parsed correct.
+HTML code '$'hideshow'' cannot be parsed correct.
+HTML code '$'$this->stringify($field)'' cannot be parsed correct.
+HTML code '$'trm_gdpr_$field'' cannot be parsed correct.
+HTML code '$'stripslashes(get_option("trm_gdpr_"$field))'' cannot be parsed correct.
+HTML code '$'$this->stringify($field)'' cannot be parsed correct.
+HTML code '$'trm_gdpr_$field'' cannot be parsed correct.
+HTML code '$'stripslashes(get_option("trm_gdpr_"$field))'' cannot be parsed correct.
+HTML code '$'$policy'' cannot be parsed correct.
+HTML code '$'trm_gdpr_overwrite_$this->optionize($policy)'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'selected'' cannot be parsed correct.
+HTML code '$'<option get_option("trm_gdpr_overwrite_"$option) value=\'$page\'>$page</option>'' cannot be parsed correct.
+HTML code '$'$this->policy_pages()_$option_url'' cannot be parsed correct.
+HTML code '$'trm_gdpr_custom_$this->optionize($policy)'' cannot be parsed correct.
+HTML code '$'get_option("trm_gdpr_custom_"$option)'' cannot be parsed correct.
+HTML code '$'showhide'' cannot be parsed correct.
+HTML code '$'stripslashes(get_option("trm_gdpr_default_notice_form_consent"))'' cannot be parsed correct.
+HTML code '$'stripslashes(get_option("trm_gdpr_default_notice_consent_bar"))'' cannot be parsed correct.
+HTML code '$'<div $id class=\'trm-gdpr-ui $initial_class\'>'' cannot be parsed correct.
+HTML code '$'$this->optionize("trm_gdpr_"$feature)'' cannot be parsed correct.
+HTML code '$'checked(get_option($option), 1)'' cannot be parsed correct.
+HTML code '$'$feature'' cannot be parsed correct.
+HTML code '$'$this->icon("close")'' cannot be parsed correct.
+HTML code '$'stripslashes(get_option("trm_gdpr_close_consent_functions"))'' cannot be parsed correct.
+HTML code '$'stripslashes(get_option("trm_gdpr_dynamic_style"))'' cannot be parsed correct.
+HTML code '$'showhide'' cannot be parsed correct.
+HTML code '$'$this->icon("search")'' cannot be parsed correct.
+HTML code '$'<h2>Search Results for: <strong style=\'color: #0095ee; font-weight: 700;\'>filter_var($_POST["gdpr_needle"], FILTER_SANITIZE_STRING)</strong></h2>'' cannot be parsed correct.
+HTML code '$'<div class="postbox"><h2 class="hndle"><span>array_shift($table_object_vars)</span></h2>'' cannot be parsed correct.
+HTML code '$'<th>$col</th>'' cannot be parsed correct.
+HTML code '$'<td >[REDACTED]</td><td >$val </td>'' cannot be parsed correct.
+HTML code '$'<style>get_option("trm_gdpr_dynamic_style")</style>'' cannot be parsed correct.
+HTML code '$'<div id=\'trm-gdpr-versions\' data-versions=\'\' data-revised=\'\'></div>'' cannot be parsed correct.
+HTML code '$'$this->wrap_element("<span>" . stripslashes($this->consent_notices()->consent_bar) . "</span><i onclick="closeTRMGDPRconsent(this);" . $close_consent_functions . " return false;" class="close-consent">" . $this->icon("close") . "</i>", "trm-gdpr-consent-bar", "consent-bar")'' cannot be parsed correct.
+HTML code '$'substr($html, 0, -4)'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'" value="'' cannot be parsed correct.
+HTML code '$'<div style="border-left: 4px solid #0095ee; padding: 8px 14px; box-shadow: 0 2px 6px -2px rgba(0,0,0,.3); margin-bottom: 18px; background: #fff;"><strong>Note:</strong> This is for reference only. Deletion and Reporting will come out in a future release.</div>'' cannot be parsed correct.
+HTML code '$'<table><thead><tr>'' cannot be parsed correct.
+HTML code '$'</tr></thead><tbody>'' cannot be parsed correct.
+HTML code '$'<tr>'' cannot be parsed correct.
+HTML code '$'</tr>'' cannot be parsed correct.
+HTML code '$'</tbody></table></div>'' cannot be parsed correct.
+HTML code '$'Please search for valid contact details.'' cannot be parsed correct.
+HTML code '$'<style>.trm-gdpr-active .creds a[href*="/terms"],.trm-gdpr-active .creds a[href*="/privacy"]{display:none}</style>'' cannot be parsed correct.
+HTML code '$'<div id="trm-gdpr-subfooter" class="trm-gdpr-ui">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:06.729174.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045049.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 18 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.640974.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbplusDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running ArrayElementDetector
+### Start running PhpCurlDetector
+### Finish running HashDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PHPRetrievalDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running maxdbDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running MySQLiDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running GenericEncryptionDetector
+### Finish running WordPressRemoteDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running VariableDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finished running detectors
+trm-gdpr-assistant.php:205
+  - RETRIEVAL call to file_get_contents(plugin_dir_path() . "css/dynamic.css").
+  - Data types: file 
+
+trm-gdpr-assistant.php:586
+  - variable '$company_address' of personal types {'address'} is found.
+  - Data types: address
+trm-gdpr-assistant.php:588
+  - variable '$company_address' of personal types {'address'} is found.
+  - Data types: address
+trm-gdpr-assistant.php:591
+  - variable '$company_address' of personal types {'address'} is found.
+  - Data types: address
+trm-gdpr-assistant.php:592
+  - variable '$company_address' of personal types {'address'} is found.
+  - Data types: address
+trm-gdpr-assistant.php:595
+  - variable '$company_address' of personal types {'address'} is found.
+  - Data types: address
+trm-gdpr-assistant.php:596
+  - variable '$company_address' of personal types {'address'} is found.
+  - Data types: address
+trm-gdpr-assistant.php:616
+  - variable '$company_email' of personal types {'email'} is found.
+  - Data types: email
+trm-gdpr-assistant.php:618
+  - variable '$company_email' of personal types {'email'} is found.
+  - Data types: email
+trm-gdpr-assistant.php:619
+  - variable '$company_email' of personal types {'email'} is found.
+  - Data types: email
+trm-gdpr-assistant.php:621
+  - variable '$company_email' of personal types {'email'} is found.
+  - Data types: email
+trm-gdpr-assistant.php:622
+  - variable '$company_email' of personal types {'email'} is found.
+  - Data types: email
+trm-gdpr-assistant.php:624
+  - variable '$company_email' of personal types {'email'} is found.
+  - Data types: email 
+
+trm-gdpr-assistant.php:364
+  - API call to wp_remote_get("https://plugins.svn.wordpress.org/privacy-consent-assistant/assets/policies/"$label".txt"). Passed arguments: 0: $url (string). Returns (array|WP_Error).
+  - Data types: remote 
+
+admin.php:42
+  - RETRIEVAL call to get_option("trm_gdpr_"$field) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:50
+  - RETRIEVAL call to get_option("trm_gdpr_"$field) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:61
+  - RETRIEVAL call to get_option("trm_gdpr_overwrite_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:74
+  - RETRIEVAL call to get_option("trm_gdpr_custom_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:87
+  - RETRIEVAL call to get_option("trm_gdpr_overwrite_notice_form_consent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:97
+  - RETRIEVAL call to get_option("trm_gdpr_default_notice_form_consent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:104
+  - RETRIEVAL call to get_option("trm_gdpr_overwrite_notice_consent_bar") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:114
+  - RETRIEVAL call to get_option("trm_gdpr_default_notice_consent_bar") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:132
+  - RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:141
+  - RETRIEVAL call to get_option("trm_gdpr_close_consent_functions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+admin.php:145
+  - RETRIEVAL call to get_option("trm_gdpr_dynamic_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:136
+  - RETRIEVAL call to get_post_field("post_content", $atts["ID"]) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $field (string), 1: $post (int|WP_Post). Returns (string).
+  - Data types: post, post_meta, wp_post
+trm-gdpr-assistant.php:162
+  - RETRIEVAL call to get_option("__trm_gdpr_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:164
+  - RETRIEVAL call to get_option("__trm_gdpr_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:203
+  - RETRIEVAL call to get_option("trm_gdpr_dynamic_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:252
+  - RETRIEVAL call to get_option("trm_gdpr_overwrite_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:256
+  - RETRIEVAL call to get_option("trm_gdpr_inserted_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:257
+  - RETRIEVAL call to get_option("trm_gdpr_inserted_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:262
+  - RETRIEVAL call to get_option("trm_gdpr_custom_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:282
+  - RETRIEVAL call to get_option("trm_gdpr_overwrite_notice_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:285
+  - RETRIEVAL call to get_option("trm_gdpr_default_notice_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:341
+  - RETRIEVAL call to get_option("trm_gdpr_dynamic_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:343
+  - RETRIEVAL call to get_option("trm_gdpr_disable_hide_existing_links") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:363
+  - RETRIEVAL call to get_transient("__cached_svn_" . $label) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+trm-gdpr-assistant.php:382
+  - RETRIEVAL call to get_option("trm_gdpr_disable_form_consent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:456
+  - RETRIEVAL call to get_option("trm_gdpr_dynamic_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:497
+  - RETRIEVAL call to get_option("trm_gdpr_disable_consent_bar") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:498
+  - RETRIEVAL call to get_option("trm_gdpr_close_consent_functions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:498
+  - RETRIEVAL call to get_option("trm_gdpr_close_consent_functions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:509
+  - RETRIEVAL call to get_option("trm_gdpr_disable_subfooter") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:555
+  - RETRIEVAL call to get_option("trm_gdpr_governing_state") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:561
+  - RETRIEVAL call to get_option("trm_gdpr_governing_country") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:568
+  - RETRIEVAL call to get_option("trm_gdpr_company_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:586
+  - RETRIEVAL call to get_option("trm_gdpr_company_address") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:602
+  - RETRIEVAL call to get_option("trm_gdpr_company_phone") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+trm-gdpr-assistant.php:616
+  - RETRIEVAL call to get_option("trm_gdpr_company_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+admin.php:14
+  - STORAGE call to update_option($field, $this->validate_option($_POST[$field], $type)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+admin.php:16
+  - STORAGE call to update_option($field, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+trm-gdpr-assistant.php:167
+  - STORAGE call to update_option("trm_gdpr_default_notice_consent_bar", $consent_bar) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+trm-gdpr-assistant.php:168
+  - STORAGE call to update_option("__trm_gdpr_version", $data["Version"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+trm-gdpr-assistant.php:207
+  - STORAGE call to update_option("trm_gdpr_dynamic_style", $dynamic_file) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+trm-gdpr-assistant.php:210
+  - STORAGE call to update_option("trm_gdpr_dynamic_style", "/* TRM GDPR Dynamic Styles */
+") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+trm-gdpr-assistant.php:229
+  - STORAGE call to wp_insert_post($policy_page). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).
+trm-gdpr-assistant.php:233
+  - STORAGE call to update_option("trm_gdpr_inserted_"$option, $id) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+trm-gdpr-assistant.php:238
+  - STORAGE call to update_option("trm_gdpr_default_notice_form_consent", $form_consent) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+trm-gdpr-assistant.php:242
+  - STORAGE call to update_option("trm_gdpr_default_notice_consent_bar", $consent_bar) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+trm-gdpr-assistant.php:365
+  - STORAGE call to set_transient("__cached_svn_" . $label, $response, WEEK_IN_SECONDS) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).
+  - Data types: site
+trm-gdpr-assistant.php:460
+  - STORAGE call to update_option("trm_gdpr_dynamic_style", $dynamic_style . $added_style) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+address
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+file
+	PHPRetrievalDetector.file_get_contents(plugin_dir_path() . "css/dynamic.css") - {'file'}
+none
+	WordPressStorageDetector.wp_insert_post($policy_page) - set()
+option
+	WordPressRetrievalDetector.get_option("trm_gdpr_close_consent_functions") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_"$field) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_default_notice_form_consent") - {'option'}
+	WordPressStorageDetector.update_option("trm_gdpr_default_notice_form_consent", $form_consent) - {'option'}
+	WordPressStorageDetector.update_option("trm_gdpr_dynamic_style", $dynamic_style . $added_style) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_custom_"$option) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_close_consent_functions") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_dynamic_style") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_company_address") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_governing_state") - {'option'}
+	WordPressStorageDetector.update_option($field, "") - {'option'}
+	WordPressStorageDetector.update_option("trm_gdpr_inserted_"$option, $id) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_overwrite_"$option) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_dynamic_style") - {'option'}
+	WordPressRetrievalDetector.get_option($option) - {'option'}
+	WordPressStorageDetector.update_option("trm_gdpr_dynamic_style", $dynamic_file) - {'option'}
+	WordPressStorageDetector.update_option("trm_gdpr_dynamic_style", "/* TRM GDPR Dynamic Styles */
+") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_company_phone") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_default_notice_consent_bar") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_overwrite_notice_"$option) - {'option'}
+	WordPressRetrievalDetector.get_option("__trm_gdpr_version") - {'option'}
+	WordPressStorageDetector.update_option($field, $this->validate_option($_POST[$field], $type)) - {'option'}
+	WordPressStorageDetector.update_option("__trm_gdpr_version", $data["Version"]) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_overwrite_"$option) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_company_name") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_inserted_"$option) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_custom_"$option) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_"$field) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_disable_form_consent") - {'option'}
+	WordPressRetrievalDetector.get_option("__trm_gdpr_version") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_disable_subfooter") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_dynamic_style") - {'option'}
+	WordPressStorageDetector.update_option("trm_gdpr_default_notice_consent_bar", $consent_bar) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_overwrite_notice_form_consent") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_governing_country") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_disable_consent_bar") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_close_consent_functions") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_disable_hide_existing_links") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_dynamic_style") - {'option'}
+	WordPressStorageDetector.update_option("trm_gdpr_default_notice_consent_bar", $consent_bar) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_default_notice_"$option) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_overwrite_notice_consent_bar") - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_inserted_"$option) - {'option'}
+	WordPressRetrievalDetector.get_option("trm_gdpr_company_email") - {'option'}
+post
+	WordPressRetrievalDetector.get_post_field("post_content", $atts["ID"]) - {'post', 'post_meta', 'wp_post'}
+post_meta
+	WordPressRetrievalDetector.get_post_field("post_content", $atts["ID"]) - {'post', 'post_meta', 'wp_post'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+site
+	WordPressRetrievalDetector.get_transient("__cached_svn_" . $label) - {'site'}
+	WordPressStorageDetector.set_transient("__cached_svn_" . $label, $response, WEEK_IN_SECONDS) - {'site'}
+wp_post
+	WordPressRetrievalDetector.get_post_field("post_content", $atts["ID"]) - {'post', 'post_meta', 'wp_post'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.439987.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 341 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.413082.
+
+341 STORE_REACHES edges created
+341 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 51 nodes as PERSONAL
+In total, tainted 51 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.334154.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:46.404634!
+RETRIEVAL call to file_get_contents(plugin_dir_path() . "css/dynamic.css").,None,None
+variable '$company_address' of personal types {'address'} is found.,,None
+variable '$company_address' of personal types {'address'} is found.,,None
+variable '$company_address' of personal types {'address'} is found.,,None
+variable '$company_address' of personal types {'address'} is found.,,None
+variable '$company_address' of personal types {'address'} is found.,,None
+variable '$company_address' of personal types {'address'} is found.,,None
+variable '$company_email' of personal types {'email'} is found.,,None
+variable '$company_email' of personal types {'email'} is found.,,None
+variable '$company_email' of personal types {'email'} is found.,,None
+variable '$company_email' of personal types {'email'} is found.,,None
+variable '$company_email' of personal types {'email'} is found.,,None
+variable '$company_email' of personal types {'email'} is found.,,None
+API call to wp_remote_get("https://plugins.svn.wordpress.org/privacy-consent-assistant/assets/policies/"$label".txt"). Passed arguments: 0: $url (string). Returns (array|WP_Error).,https,[]
+RETRIEVAL call to get_option("trm_gdpr_overwrite_notice_consent_bar") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_default_notice_consent_bar") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option($option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_close_consent_functions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_dynamic_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_"$field) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_"$field) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_overwrite_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_custom_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_overwrite_notice_form_consent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_default_notice_form_consent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_post_field("post_content", $atts["ID"]) alters data types {'post', 'post_meta', 'wp_post'}. Passed arguments: 0: $field (string), 1: $post (int|WP_Post). Returns (string).,None,None
+RETRIEVAL call to get_option("__trm_gdpr_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("__trm_gdpr_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_dynamic_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_overwrite_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_inserted_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_inserted_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_custom_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_overwrite_notice_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_default_notice_"$option) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_dynamic_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_disable_hide_existing_links") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("__cached_svn_" . $label) alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_disable_form_consent") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_dynamic_style") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_disable_consent_bar") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_close_consent_functions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_close_consent_functions") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_disable_subfooter") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_governing_state") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_governing_country") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_company_name") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_company_address") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_company_phone") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("trm_gdpr_company_email") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option($field, $this->validate_option($_POST[$field], $type)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($field, "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("trm_gdpr_default_notice_consent_bar", $consent_bar) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("__trm_gdpr_version", $data["Version"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("trm_gdpr_dynamic_style", $dynamic_file) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("trm_gdpr_dynamic_style", "/* TRM GDPR Dynamic Styles */
+") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_insert_post($policy_page). Passed arguments: 0: $postarr (array). Returns (int|WP_Error).,None,None
+STORAGE call to update_option("trm_gdpr_inserted_"$option, $id) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("trm_gdpr_default_notice_form_consent", $form_consent) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("trm_gdpr_default_notice_consent_bar", $consent_bar) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to set_transient("__cached_svn_" . $label, $response, WEEK_IN_SECONDS) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed), 2: $expiration (int). Returns (bool).,None,None
+STORAGE call to update_option("trm_gdpr_dynamic_style", $dynamic_style . $added_style) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

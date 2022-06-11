@@ -1,0 +1,631 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on seo-enforcer
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.545141.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.805116.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 9 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.326368.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.602824.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 264 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.541702.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.593363.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.093904.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 111 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.890006.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1489
+Added 1105 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1658
+Added 169 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.995224.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/seo-enforcer/seoe_admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/seo-enforcer/seoe.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.258186.
+
+1000 PHP_REACHES edges created
+1489 PHP_REACHES edges created
+169 PHP_REACHES edges created
+1658 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 553 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.038397.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.903554.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 9 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.964421.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 5 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.157983.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.294351.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.105127.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006119.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.039264.
+
+14 PHP_REACHES edges created
+14 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 17 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.118789.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.112516.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$this_dep_error'' cannot be parsed correct.
+HTML code '$'<strong>$message</strong>'' cannot be parsed correct.
+HTML code '$'
+				<style>
+				#seoe_settings .lcol {
+					clear: left;
+					float: left;
+					font-weight: bold;
+					width: 150px;
+					margin-right: 10px;
+					margin-bottom: 10px;
+				}
+				#seoe_settings .rcol {
+					max-width: 50%;
+					float: left;
+					margin-bottom: 10px;
+				}
+				</style>
+
+				<div class="wrap">
+					<form method="post" action="?page=$this">
+					<input type="hidden" name="mode" value="options">
+
+					<h1>SEOE_NAME</h1>
+
+					<h2>Admin Area</h2>
+
+					<div id="seoe_settings">
+						<div style="$left_style">
+							<div class="lcol">
+								<label for="seoe_post_notices">Enable SEO Notices</label>
+							</div>
+							<div class="rcol">
+								<input type="checkbox" name="seoe_post_notices" id="seoe_post_notices" value="1" checked> Yes<br />
+								<em>Show notices on the admin screens where WordPress SEO or Shopp SEO are used.</em>
+							</div>
+
+							<h2 style="clear: both;">Frontend</h2>
+
+							<h3>Title Tag</h3>
+
+							<div class="lcol">
+								<label for="seoe_title">Check:</label>
+							</div>
+							<div class="rcol">
+								<input type="checkbox" name="seoe_title" id="seoe_title" value="1" checked> Yes<br />
+								<em>Turns on the title tag check features for the below settings.</em>
+							</div>
+							<div class="lcol">
+								<label for="seoe_title_length">Length:</label>
+							</div>
+							<div class="rcol">
+								<input type="text" name="seoe_title_length" id="seoe_title_length" size="4" value="$seoe_title_lengthSEOE_TITLE_LENGTH"> characters
+							</div>
+							<div class="lcol">
+								Truncation:
+							</div>
+							<div class="rcol">
+								<input type="radio" name="seoe_title_trunc_type" id="seoe_title_trunc_type1" value="1" checked> <label for="seoe_title_trunc_type1">Terminate at character count, IE: This Title is too</label><br />
+								<input type="radio" name="seoe_title_trunc_type" id="seoe_title_trunc_type2" value="2" checked> <label for="seoe_title_trunc_type2">Terminate with "...", IE: This Title is too...</label>
+							</div>
+							<div class="lcol">
+								<label for="seoe_title_trunc_ex">Truncation Exceptions:</label>
+							</div>
+							<div class="rcol">
+								<input type="text" name="seoe_title_trunc_ex" id="seoe_title_trunc_ex" size="50" value="$seoe_title_trunc_ex"><br /><em>List of post or page IDs that are an exception to the Title Truncation if enabled. List IDs separated by a comma.<br />
+								Example: 50,99,60. If you want to list your blog index then enter: blog</em>
+							</div>
+
+							<h3 style="clear: both;">Meta Description</h3>
+
+							<div class="lcol">
+								<label for="seoe_desc">Check:</label>
+							</div>
+							<div class="rcol">
+								<input type="checkbox" name="seoe_desc" id="seoe_desc" value="1" checked> Yes<br />
+								<em>Turns on the title meta description check features for the below settings.</em>
+							</div>
+							<div class="lcol">
+								<label for="seoe_desc_length">Length:</label> 
+							</div>
+							<div class="rcol">
+								<input type="text" name="seoe_desc_length" id="seoe_desc_length" size="4" value="$seoe_desc_lengthSEOE_DESC_LENGTH"> characters
+							</div>
+							<div class="lcol">
+								Truncation:
+							</div>
+							<div class="rcol">
+								<input type="radio" name="seoe_desc_trunc_type" id="seoe_desc_trunc_type1" value="1" checked> <label for="seoe_desc_trunc_type1">Terminate at character count, IE: This Description is too</label><br />
+								<input type="radio" name="seoe_desc_trunc_type" id="seoe_desc_trunc_type2" value="2" checked> <label for="seoe_desc_trunc_type2">Terminate with "...", IE: This Title is too...</label>
+							</div>
+							<div class="lcol">
+								<label for="seoe_desc_trunc_ex">Truncation Exceptions:</label>
+							</div>
+							<div class="rcol">
+								<input type="text" name="seoe_desc_trunc_ex" id="seoe_desc_trunc_ex" size="50" value="$seoe_desc_trunc_ex"><br />
+								<em>List of post or page IDs that are an exception to the Description Truncation if enabled. List IDs separated by a comma.<br />
+								Example: 50,99,60. If you want to list your blog index then enter: blog</em>
+							</div>
+
+							<h3 style="clear: both;">H1</h3>
+
+							<div class="lcol">
+								<label for="seoe_h1">Check:</label>
+							</div>
+							<div class="rcol">
+								<input type="checkbox" name="seoe_h1" id="seoe_h1" value="1" checked> Yes<br />
+								<em>Enforce no H1 tags in the content since it should be done by the theme. This will replace any H1 tags in content with an H2 tag instead.</em>
+							</div>
+							<div class="lcol">
+								<label for="seoe_h1_ex">Exceptions:</label>
+							</div>
+							<div class="rcol">
+								<input type="text" name="seoe_h1_ex" id="seoe_h1_ex" size="50" value="$seoe_h1_ex"><br />
+								<em>List of post or page IDs that are an exception to the HQ check if enabled. List IDs separated by a comma, IE: 50,99,60. If you want to list your blog index then enter: blog</em>
+							</div>
+
+							<h3 style="clear: both;">Image</h3>
+
+							<div class="lcol">
+								<label for="seoe_img">Check:</label> 
+							</div>
+							<div class="rcol">
+								<input type="checkbox" name="seoe_img" id="seoe_img" value="1" checked> Yes<br />
+								<em>This will check if your images have the alt and title attribute.<br />
+									If neither is present then an alt and title will be created using the image name.<br />
+									If either an alt or title is present, but not both, then the missing attribute will be created using the value of the one that is present.</em>
+							</div>
+							<p style="clear: both;">
+							<input type="submit" value="Save" class="button button-primary">
+							</form>
+							</p>
+						</div>
+						<div style="float: right; width: 20%; border-left: 1px solid #c5c5c5; padding-left: 2%; padding-right: 2%;">
+							<a href="https://wordpress.org/plugins/shopp-seo/" target="_blank"><img src="plugins_url("images/", )shopp_seo.png" style="max-width: 100%;"></a>
+							<p>
+							If you use Shopp then check out <a href="https://wordpress.org/plugins/shopp-seo/" target="_blank">Shopp SEO</a> to fix the integration of WordPress SEO and Shopp.						
+							</p>
+						</div>
+					</div>
+				</div>'' cannot be parsed correct.
+HTML code '$'<div class="update-nag" style="display: none;" id="seoe_title_error">The SEO Title field should be manually filled in.</div>'' cannot be parsed correct.
+HTML code '$'<div class="update-nag" style="display: none;" id="seoe_desc_error">The Meta Description field should be manually filled in.</div>'' cannot be parsed correct.
+HTML code '$'<div class="error" style="display: none;" id="seoe_title_length"><p>The SEO Title field is longer than the recommended length of <span id="title_length_set_notice"></span> by <span id="title_length_char_notice"></span> characters</p></div>'' cannot be parsed correct.
+HTML code '$'<div class="error" style="display: none;" id="seoe_desc_length"><p>The Meta Description is longer than the recommended length of  <span id="desc_length_set_notice"></span> by <span id="desc_length_char_notice"></span> characters</p></div>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.293103.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.059320.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 4 do_action/apply_filters calls and 10 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.663510.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PasswordHashingDetector
+### Start running PHPIncludedDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running TokyoTyrantDetector
+### Start running VariableDetector
+### Finish running PropertyDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running WP_UserDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finished running detectors
+seoe.php:67
+  - RETRIEVAL call to get_option("seoe_settings_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:75
+  - RETRIEVAL call to get_option("seoe_post_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:76
+  - RETRIEVAL call to get_option("seoe_title") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:77
+  - RETRIEVAL call to get_option("seoe_title_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:78
+  - RETRIEVAL call to get_option("seoe_title_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:79
+  - RETRIEVAL call to get_option("seoe_title_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:80
+  - RETRIEVAL call to get_option("seoe_desc") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:81
+  - RETRIEVAL call to get_option("seoe_desc_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:82
+  - RETRIEVAL call to get_option("seoe_desc_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:83
+  - RETRIEVAL call to get_option("seoe_h1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:84
+  - RETRIEVAL call to get_option("seoe_h1_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:115
+  - RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:192
+  - RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:227
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:227
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:271
+  - RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:311
+  - RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe.php:353
+  - RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe_admin.php:10
+  - RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe_admin.php:24
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+seoe_admin.php:24
+  - RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+seoe.php:70
+  - STORAGE call to update_option("seoe_settings_version", SEOE_SETTINGS_VER) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+seoe.php:86
+  - STORAGE call to update_option("seoe_settings", serialize($settings)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+seoe.php:88
+  - STORAGE call to delete_option("seoe_post_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:89
+  - STORAGE call to delete_option("seoe_title") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:90
+  - STORAGE call to delete_option("seoe_title_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:91
+  - STORAGE call to delete_option("seoe_title_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:92
+  - STORAGE call to delete_option("seoe_title_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:93
+  - STORAGE call to delete_option("seoe_desc_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:94
+  - STORAGE call to delete_option("seoe_desc_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:95
+  - STORAGE call to delete_option("seoe_h1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:96
+  - STORAGE call to delete_option("seoe_h1_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:99
+  - STORAGE call to update_option("seoe_settings_version", SEOE_SETTINGS_VER) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+seoe_admin.php:189
+  - STORAGE call to update_option("seoe_settings", serialize($settings)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+seoe.php:88
+  - DELETION call to delete_option("seoe_post_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:89
+  - DELETION call to delete_option("seoe_title") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:90
+  - DELETION call to delete_option("seoe_title_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:91
+  - DELETION call to delete_option("seoe_title_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:92
+  - DELETION call to delete_option("seoe_title_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:93
+  - DELETION call to delete_option("seoe_desc_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:94
+  - DELETION call to delete_option("seoe_desc_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:95
+  - DELETION call to delete_option("seoe_h1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+seoe.php:96
+  - DELETION call to delete_option("seoe_h1_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	DeletionDetector.delete_option("seoe_h1_ex") - {'option'}
+	WordPressStorageDetector.delete_option("seoe_desc_trunc_type") - {'option'}
+	WordPressStorageDetector.update_option("seoe_settings_version", SEOE_SETTINGS_VER) - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_h1_ex") - {'option'}
+	WordPressStorageDetector.update_option("seoe_settings_version", SEOE_SETTINGS_VER) - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_settings") - {'option'}
+	DeletionDetector.delete_option("seoe_title_trunc_ex") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_settings_version") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_settings") - {'option'}
+	DeletionDetector.delete_option("seoe_title_length") - {'option'}
+	WordPressStorageDetector.delete_option("seoe_title_length") - {'option'}
+	WordPressStorageDetector.delete_option("seoe_post_notices") - {'option'}
+	WordPressStorageDetector.update_option("seoe_settings", serialize($settings)) - {'option'}
+	WordPressStorageDetector.delete_option("seoe_h1") - {'option'}
+	DeletionDetector.delete_option("seoe_title_trunc_type") - {'option'}
+	DeletionDetector.delete_option("seoe_desc_trunc_ex") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_settings") - {'option'}
+	DeletionDetector.delete_option("seoe_title") - {'option'}
+	WordPressStorageDetector.delete_option("seoe_title") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_desc_trunc_type") - {'option'}
+	WordPressStorageDetector.delete_option("seoe_desc_trunc_ex") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	DeletionDetector.delete_option("seoe_h1") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressStorageDetector.delete_option("seoe_h1_ex") - {'option'}
+	WordPressStorageDetector.delete_option("seoe_title_trunc_ex") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_h1") - {'option'}
+	WordPressStorageDetector.update_option("seoe_settings", serialize($settings)) - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_desc_trunc_ex") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_post_notices") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_title") - {'option'}
+	WordPressRetrievalDetector.get_option("active_plugins") - {'option'}
+	WordPressStorageDetector.delete_option("seoe_title_trunc_type") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_title_length") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_desc") - {'option'}
+	DeletionDetector.delete_option("seoe_post_notices") - {'option'}
+	DeletionDetector.delete_option("seoe_desc_trunc_type") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_settings") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_title_trunc_type") - {'option'}
+	WordPressRetrievalDetector.get_option("seoe_title_trunc_ex") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.726522.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 273 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.281360.
+
+273 STORE_REACHES edges created
+273 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.004997.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:28.664693!
+DELETION call to delete_option("seoe_post_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("seoe_title") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("seoe_title_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("seoe_title_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("seoe_title_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("seoe_desc_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("seoe_desc_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("seoe_h1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("seoe_h1_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_settings_version") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_post_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_title") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_title_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_title_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_title_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_desc") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_desc_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_desc_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_h1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_h1_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("seoe_settings") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("active_plugins") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("seoe_settings_version", SEOE_SETTINGS_VER) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("seoe_settings", serialize($settings)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("seoe_post_notices") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("seoe_title") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("seoe_title_length") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("seoe_title_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("seoe_title_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("seoe_desc_trunc_type") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("seoe_desc_trunc_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("seoe_h1") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("seoe_h1_ex") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("seoe_settings_version", SEOE_SETTINGS_VER) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("seoe_settings", serialize($settings)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

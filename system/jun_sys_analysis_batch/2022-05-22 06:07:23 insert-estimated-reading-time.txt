@@ -1,0 +1,666 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on insert-estimated-reading-time
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.519749.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.122921.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.295815.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.444389.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 68 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.738995.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.658461.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.117129.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 33 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:00.796832.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 785
+Added 684 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 785
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.065961.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/insert-estimated-reading-time/insert-estimated-reading-time.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.304160.
+
+785 PHP_REACHES edges created
+785 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 273 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.024742.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.153146.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 17 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.449392.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 14 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.172529.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.020694.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.456646.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.015038.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.040787.
+
+31 PHP_REACHES edges created
+31 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 17 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.162055.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.110547.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'htmlentities(stripslashes(get_option("iert_format")), ENT_QUOTES, mb_internal_encoding())'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'selected="selected"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'$post_type'' cannot be parsed correct.
+HTML code '$'$post_type'' cannot be parsed correct.
+HTML code '$'checked="checked"'' cannot be parsed correct.
+HTML code '$'$post_type'' cannot be parsed correct.
+HTML code '$'$post_type'' cannot be parsed correct.
+HTML code '$'get_estimated_reading_time(get_the_content())'' cannot be parsed correct.
+HTML code '$'<div class="updated fade"><p><strong>Options saved.</strong></p></div>'' cannot be parsed correct.
+HTML code '$'get_option("iert_chars_per_minute")'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$'>'' cannot be parsed correct.
+HTML code '$' />
+					</td>
+				</tr>
+
+				<tr valign="top">
+					<th scope="row">
+						<label for="iert_is_show_front_page">'' cannot be parsed correct.
+HTML code '$' />
+					</td>
+				</tr>
+
+				<tr valign="top">
+					<th scope="row">
+						<label for="iert_is_show_single">'' cannot be parsed correct.
+HTML code '$' />
+					</td>
+				</tr>
+
+				<tr valign="top">
+					<th scope="row">
+						<label for="iert_is_show_page">'' cannot be parsed correct.
+HTML code '$' />
+					</td>
+				</tr>
+
+				<tr valign="top">
+					<th scope="row">
+						'' cannot be parsed correct.
+HTML code '$'" name="iert_is_show_'' cannot be parsed correct.
+HTML code '$'" value="true" '' cannot be parsed correct.
+HTML code '$' />
+							<label for="iert_is_show'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</label>
+							<br/>
+						'' cannot be parsed correct.
+HTML code '$'" />
+			</p>
+
+		</form>
+	</div>
+'' cannot be parsed correct.
+HTML code '$'</h2>
+
+		<form method="post">
+			'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.337886.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.053157.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 3 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.360083.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running CubridDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running OpenSSLDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running ArrayElementDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running maxdbDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running MySQLiDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running DeletionDetector
+### Finished running detectors
+insert-estimated-reading-time.php:24
+  - RETRIEVAL call to get_option("iert_is_show_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:31
+  - RETRIEVAL call to get_option("iert_is_show_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:38
+  - RETRIEVAL call to get_option("iert_is_show_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:45
+  - RETRIEVAL call to get_option("iert_is_show_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:61
+  - RETRIEVAL call to get_option("iert_is_show_" . $post_type->name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:79
+  - RETRIEVAL call to get_option("iert_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:80
+  - RETRIEVAL call to get_option("iert_time_output") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:81
+  - RETRIEVAL call to get_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:127
+  - RETRIEVAL call to get_option("iert_updater_1_2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:128
+  - RETRIEVAL call to get_option("iert_is_hide_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:129
+  - RETRIEVAL call to get_option("iert_is_hide_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:130
+  - RETRIEVAL call to get_option("iert_is_hide_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:131
+  - RETRIEVAL call to get_option("iert_is_hide_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:192
+  - RETRIEVAL call to get_option("iert_is_show_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:193
+  - RETRIEVAL call to get_option("iert_is_show_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:194
+  - RETRIEVAL call to get_option("iert_is_show_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:195
+  - RETRIEVAL call to get_option("iert_is_show_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:196
+  - RETRIEVAL call to get_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:197
+  - RETRIEVAL call to get_option("iert_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:198
+  - RETRIEVAL call to get_option("iert_time_output") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:201
+  - RETRIEVAL call to get_option("iert_is_show_" . $post_type->name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+insert-estimated-reading-time.php:220
+  - RETRIEVAL call to get_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+insert-estimated-reading-time.php:102
+  - STORAGE call to add_option("iert_chars_per_minute", "400") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:103
+  - STORAGE call to add_option("iert_format", __("<p class="estimated-reading-time">Estimated reading time: %min% minute(s)</p>", IERT_DOMAIN)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:104
+  - STORAGE call to add_option("iert_time_output", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:105
+  - STORAGE call to add_option("iert_is_show_home", null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:106
+  - STORAGE call to add_option("iert_is_show_front_page", null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:107
+  - STORAGE call to add_option("iert_is_show_single", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:108
+  - STORAGE call to add_option("iert_is_show_page", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:109
+  - STORAGE call to add_option("iert_updater_1_2", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:119
+  - STORAGE call to add_option("iert_is_show_" . $post_type->name, null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:128
+  - STORAGE call to update_option("iert_is_show_home", !get_option("iert_is_hide_home")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:129
+  - STORAGE call to update_option("iert_is_show_front_page", !get_option("iert_is_hide_front_page")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:130
+  - STORAGE call to update_option("iert_is_show_single", !get_option("iert_is_hide_single")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:131
+  - STORAGE call to update_option("iert_is_show_page", !get_option("iert_is_hide_page")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:132
+  - STORAGE call to delete_option("iert_is_hide_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:133
+  - STORAGE call to delete_option("iert_is_hide_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:134
+  - STORAGE call to delete_option("iert_is_hide_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:135
+  - STORAGE call to delete_option("iert_is_hide_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:136
+  - STORAGE call to add_option("iert_updater_1_2", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:144
+  - STORAGE call to delete_option("iert_is_show_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:145
+  - STORAGE call to delete_option("iert_is_show_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:146
+  - STORAGE call to delete_option("iert_is_show_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:147
+  - STORAGE call to delete_option("iert_is_show_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:148
+  - STORAGE call to delete_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:149
+  - STORAGE call to delete_option("iert_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:150
+  - STORAGE call to delete_option("iert_time_output") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:151
+  - STORAGE call to delete_option("iert_updater_1_2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:161
+  - STORAGE call to delete_option("iert_is_show_" . $post_type->name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:179
+  - STORAGE call to update_option("iert_chars_per_minute", $_POST["iert_chars_per_minute"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:180
+  - STORAGE call to update_option("iert_format", $_POST["iert_format"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:181
+  - STORAGE call to update_option("iert_time_output", $_POST["iert_time_output"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:346
+  - STORAGE call to update_option($name, $post[$name]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:348
+  - STORAGE call to update_option($name, null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+insert-estimated-reading-time.php:132
+  - DELETION call to delete_option("iert_is_hide_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:133
+  - DELETION call to delete_option("iert_is_hide_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:134
+  - DELETION call to delete_option("iert_is_hide_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:135
+  - DELETION call to delete_option("iert_is_hide_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:144
+  - DELETION call to delete_option("iert_is_show_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:145
+  - DELETION call to delete_option("iert_is_show_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:146
+  - DELETION call to delete_option("iert_is_show_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:147
+  - DELETION call to delete_option("iert_is_show_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:148
+  - DELETION call to delete_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:149
+  - DELETION call to delete_option("iert_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:150
+  - DELETION call to delete_option("iert_time_output") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:151
+  - DELETION call to delete_option("iert_updater_1_2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option
+insert-estimated-reading-time.php:161
+  - DELETION call to delete_option("iert_is_show_" . $post_type->name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressStorageDetector.update_option("iert_is_show_single", !get_option("iert_is_hide_single")) - {'option'}
+	WordPressStorageDetector.update_option("iert_is_show_home", !get_option("iert_is_hide_home")) - {'option'}
+	DeletionDetector.delete_option("iert_time_output") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_home") - {'option'}
+	WordPressStorageDetector.add_option("iert_updater_1_2", true) - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_hide_front_page") - {'option'}
+	WordPressStorageDetector.update_option($name, null) - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_hide_page") - {'option'}
+	WordPressStorageDetector.add_option("iert_chars_per_minute", "400") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_" . $post_type->name) - {'option'}
+	WordPressStorageDetector.add_option("iert_is_show_home", null) - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_hide_single") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_front_page") - {'option'}
+	WordPressStorageDetector.delete_option("iert_updater_1_2") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_format") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_" . $post_type->name) - {'option'}
+	WordPressStorageDetector.add_option("iert_is_show_single", true) - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_hide_home") - {'option'}
+	WordPressStorageDetector.delete_option("iert_is_show_single") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_page") - {'option'}
+	DeletionDetector.delete_option("iert_is_show_front_page") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_time_output") - {'option'}
+	WordPressStorageDetector.delete_option("iert_format") - {'option'}
+	DeletionDetector.delete_option("iert_is_show_single") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_chars_per_minute") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_page") - {'option'}
+	WordPressStorageDetector.delete_option("iert_is_show_front_page") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_updater_1_2") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_single") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_chars_per_minute") - {'option'}
+	WordPressStorageDetector.add_option("iert_is_show_" . $post_type->name, null) - {'option'}
+	WordPressStorageDetector.delete_option("iert_is_hide_front_page") - {'option'}
+	WordPressStorageDetector.delete_option("iert_is_hide_single") - {'option'}
+	WordPressStorageDetector.delete_option("iert_is_show_home") - {'option'}
+	WordPressStorageDetector.add_option("iert_format", __("<p class="estimated-reading-time">Estimated reading time: %min% minute(s)</p>", IERT_DOMAIN)) - {'option'}
+	WordPressStorageDetector.update_option($name, $post[$name]) - {'option'}
+	DeletionDetector.delete_option("iert_is_show_page") - {'option'}
+	WordPressStorageDetector.update_option("iert_chars_per_minute", $_POST["iert_chars_per_minute"]) - {'option'}
+	DeletionDetector.delete_option("iert_is_show_" . $post_type->name) - {'option'}
+	WordPressStorageDetector.delete_option("iert_is_show_page") - {'option'}
+	DeletionDetector.delete_option("iert_is_hide_page") - {'option'}
+	DeletionDetector.delete_option("iert_updater_1_2") - {'option'}
+	WordPressStorageDetector.add_option("iert_time_output", "1") - {'option'}
+	DeletionDetector.delete_option("iert_is_show_home") - {'option'}
+	DeletionDetector.delete_option("iert_chars_per_minute") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_home") - {'option'}
+	WordPressStorageDetector.update_option("iert_time_output", $_POST["iert_time_output"]) - {'option'}
+	WordPressStorageDetector.delete_option("iert_is_show_" . $post_type->name) - {'option'}
+	WordPressStorageDetector.update_option("iert_is_show_page", !get_option("iert_is_hide_page")) - {'option'}
+	WordPressStorageDetector.delete_option("iert_is_hide_page") - {'option'}
+	WordPressStorageDetector.delete_option("iert_chars_per_minute") - {'option'}
+	WordPressStorageDetector.add_option("iert_is_show_front_page", null) - {'option'}
+	WordPressStorageDetector.update_option("iert_is_show_front_page", !get_option("iert_is_hide_front_page")) - {'option'}
+	WordPressStorageDetector.update_option("iert_format", $_POST["iert_format"]) - {'option'}
+	WordPressStorageDetector.delete_option("iert_is_hide_home") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_front_page") - {'option'}
+	DeletionDetector.delete_option("iert_is_hide_single") - {'option'}
+	WordPressStorageDetector.delete_option("iert_time_output") - {'option'}
+	WordPressStorageDetector.add_option("iert_is_show_page", true) - {'option'}
+	WordPressRetrievalDetector.get_option("iert_is_show_single") - {'option'}
+	DeletionDetector.delete_option("iert_is_hide_front_page") - {'option'}
+	DeletionDetector.delete_option("iert_is_hide_home") - {'option'}
+	WordPressStorageDetector.add_option("iert_updater_1_2", true) - {'option'}
+	WordPressRetrievalDetector.get_option("iert_chars_per_minute") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_time_output") - {'option'}
+	DeletionDetector.delete_option("iert_format") - {'option'}
+	WordPressRetrievalDetector.get_option("iert_format") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.505409.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 704 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.424054.
+
+704 STORE_REACHES edges created
+704 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.097510.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:28.828627!
+DELETION call to delete_option("iert_is_hide_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_is_hide_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_is_hide_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_is_hide_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_is_show_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_is_show_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_is_show_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_is_show_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_time_output") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_updater_1_2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+DELETION call to delete_option("iert_is_show_" . $post_type->name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+RETRIEVAL call to get_option("iert_updater_1_2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_hide_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_hide_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_hide_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_hide_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_time_output") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_" . $post_type->name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_is_show_" . $post_type->name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_time_output") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to add_option("iert_chars_per_minute", "400") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("iert_format", __("<p class="estimated-reading-time">Estimated reading time: %min% minute(s)</p>", IERT_DOMAIN)) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("iert_time_output", "1") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("iert_is_show_home", null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("iert_is_show_front_page", null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("iert_is_show_single", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("iert_is_show_page", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("iert_updater_1_2", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("iert_is_show_" . $post_type->name, null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("iert_is_show_home", !get_option("iert_is_hide_home")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("iert_is_show_front_page", !get_option("iert_is_hide_front_page")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("iert_is_show_single", !get_option("iert_is_hide_single")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("iert_is_show_page", !get_option("iert_is_hide_page")) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("iert_is_hide_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_is_hide_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_is_hide_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_is_hide_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to add_option("iert_updater_1_2", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("iert_is_show_home") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_is_show_front_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_is_show_single") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_is_show_page") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_chars_per_minute") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_format") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_time_output") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_updater_1_2") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to delete_option("iert_is_show_" . $post_type->name) alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+STORAGE call to update_option("iert_chars_per_minute", $_POST["iert_chars_per_minute"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("iert_format", $_POST["iert_format"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("iert_time_output", $_POST["iert_time_output"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($name, $post[$name]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option($name, null) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

@@ -1,0 +1,432 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on wp-database-optimizer-tools
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.468643.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.998930.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 26 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.415391.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.407660.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 364 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.820926.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.608062.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.099738.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 159 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:02.631233.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2454
+Added 1905 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2454
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.245462.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-database-optimizer-tools/repairDB.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-database-optimizer-tools/wp-database-optimizer-tools.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-database-optimizer-tools/css/style.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wp-database-optimizer-tools/databasebackup/backup.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.511620.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2454 PHP_REACHES edges created
+2454 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 847 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.125757.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.733328.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 61 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:03.072326.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 35 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.212285.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.160808.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.875558.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.010190.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.050121.
+
+96 PHP_REACHES edges created
+96 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 110 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.156535.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+11 SQL operations to process.
+SHOW TABLES
+SQL command (SHOW TABLES) cannot be parsed correct.
+DESCRIBE $table
+SQL command (DESCRIBE $table) cannot be parsed correct.
+SHOW CREATE TABLE $table
+SQL command (SHOW CREATE TABLE $table) cannot be parsed correct.
+SELECT * FROM $table 
+SQL command (SELECT * FROM $table ) cannot be parsed correct.
+REPAIR TABLE $selected_tables
+SQL command (REPAIR TABLE $selected_tables) cannot be parsed correct.
+SHOW TABLES
+SQL command (SHOW TABLES) cannot be parsed correct.
+DELETE FROM $wpdb WHERE post_type = 'revision'
+SQL command (DELETE FROM $wpdb WHERE post_type = 'revision') cannot be parsed correct.
+DELETE FROM $wpdb WHERE post_status = 'trash'
+SQL command (DELETE FROM $wpdb WHERE post_status = 'trash') cannot be parsed correct.
+DELETE FROM $wpdb WHERE post_status = 'auto-draft'
+SQL command (DELETE FROM $wpdb WHERE post_status = 'auto-draft') cannot be parsed correct.
+DELETE FROM $wpdb WHERE comment_approved = 'spam';
+SQL command (DELETE FROM $wpdb WHERE comment_approved = 'spam';) cannot be parsed correct.
+DELETE FROM $wpdb WHERE comment_approved = '0';
+SQL command (DELETE FROM $wpdb WHERE comment_approved = '0';) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [419, 851, 997, 1303, 2275, 2349, 2723, 2759, 2795, 2831, 2867]
+Added 0 SQL nodes. 0 out of 11 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.618599.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'get_option("siteurl")/wp-content/plugins/wp-database-optimizer-tools/images/info.png'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")/wp-content/plugins/wp-database-optimizer-tools/images/good.png'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")/wp-content/plugins/wp-database-optimizer-tools/images/warning.png'' cannot be parsed correct.
+HTML code '$'get_option("siteurl")/wp-content/plugins/wp-database-optimizer-tools/images/error.png'' cannot be parsed correct.
+HTML code '$'WP_BACKUP_URL'' cannot be parsed correct.
+HTML code '$'<li><code>$table</code> <span class=\'instructions\'> <input type=\'checkbox\' id=\'exclude-spam\' name=\'exclude-spam[]\' value=\'$table\' $checked /> <label for=\'exclude-spam\'>t("Exclude spam comments")</label></span></li>'' cannot be parsed correct.
+HTML code '$'<li><code>$table</code> <span class=\'instructions\'> <input type=\'checkbox\' id=\'exclude-revisions\' name=\'exclude-revisions[]\' value=\'$table\' $checked /> <label for=\'exclude-revisions\'>t("Exclude post revisions")<label></span></li>'' cannot be parsed correct.
+HTML code '$'<li><code>$table</code></li>'' cannot be parsed correct.
+HTML code '$'$table'' cannot be parsed correct.
+HTML code '$'$table'' cannot be parsed correct.
+HTML code '$'<!-- Last Action --><div id="message" class="updated fade"><p>$text</p></div>'' cannot be parsed correct.
+HTML code '$'<tr  class="alternate"><th align="left" scope="row">$table_name</th>
+'' cannot be parsed correct.
+HTML code '$'<td><input type="radio" id="$table_name-no" name="repair[$table_name]" value="no" />&nbsp;<label for="$table_name-no"No</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="$table_name-yes" name="repair[$table_name]" value="yes" checked="checked" />&nbsp;<label for="$table_name-yes"Yes</label></td></tr>'' cannot be parsed correct.
+HTML code '$'cleanDB("revision")'' cannot be parsed correct.
+HTML code '$'cleanDB("autodraft")'' cannot be parsed correct.
+HTML code '$'cleanDB("spam")'' cannot be parsed correct.
+HTML code '$'cleanDB("unapproved")'' cannot be parsed correct.
+HTML code '$'cleanDB("trash")'' cannot be parsed correct.
+HTML code '$'cleanDB("unapproved")'' cannot be parsed correct.
+HTML code '$'<tr class="alternate">
+					<td class=\'column-name\'>mysql_fetch_array($result)_0</td>
+					<td class=\'column-name\'>round($total, 3) Kb</td>
+					<td class=\'column-name\'>Already Optimized</td>
+					<td class=\'column-name\'>0 Kb</td>
+					</tr>
+'' cannot be parsed correct.
+HTML code '$'<tr$alternate>
+					<td class=\'column-name\'>$row_0</td>
+					<td class=\'column-name\'>round($total, 3) Kb</td>
+          <td class=\'column-name\' style="color: #0000FF;">Optimized</td>
+					<td class=\'column-name\'>round($gain, 3) Kb</td>
+					</tr>
+'' cannot be parsed correct.
+HTML code '$'<tr$alternate>
+					<td class=\'column-name\'>$row_0</td>
+					<td class=\'column-name\'>round($total, 3) Kb</td>
+          <td class=\'column-name\' style="color: #FF0000;">Need to Optimize</td>
+					<td class=\'column-name\'>round($gain, 3) Kb</td>
+					</tr>
+'' cannot be parsed correct.
+HTML code '$'</strong></p>
+			'' cannot be parsed correct.
+HTML code '$'</h2>
+
+'' cannot be parsed correct.
+HTML code '$'</h4>
+		<a id="download-url" href="'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+	'' cannot be parsed correct.
+HTML code '$'</h4><ul>'' cannot be parsed correct.
+HTML code '$'" name="action" />
+</form>
+'' cannot be parsed correct.
+HTML code '$'
+    
+    
+    
+    <div class="wrap">'' cannot be parsed correct.
+HTML code '$'<div id="warning" >'' cannot be parsed correct.
+HTML code '$'<strong>You did not select any action to perform</strong></div>'' cannot be parsed correct.
+HTML code '$'</p>
+
+
+<a name="report">&nbsp;</a>
+
+<table class="widefat fixed" cellspacing="0">
+<thead>
+	<tr>
+	<th scope="col">'' cannot be parsed correct.
+HTML code '$'</th>
+	<th scope="col">'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:04.726062.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.052279.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 1 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.299263.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running CubridDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running FileProDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MySQLDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running OpenSSLDetector
+### Start running PhpVarDetector
+### Finish running PHPRetrievalDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PHPIncludedDetector
+### Start running Sqlite3Detector
+### Finish running PostgreSQLDetector
+### Start running SqliteDetector
+### Finish running PropertyDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running SqlServerDetector
+### Start running WordpressHashingFnDetector
+### Finish running PHPStorageDetector
+### Start running WordPressRemoteDetector
+### Finish running maxdbDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running WordpressHashingFnDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+Error in GenericDatabaseUsageDetector:
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+databasebackup/backup.php:17
+  - MD5 called with parameters [DB_PASSWORD, md5]. Ignore if [DB_PASSWORD, md5] does not contain personal information.
+databasebackup/backup.php:17
+  - MD5 called with parameters [DB_PASSWORD]. Ignore if [DB_PASSWORD] does not contain personal information. 
+
+databasebackup/backup.php:48
+  - STORAGE call to touch(WP_BACKUP_DIR . "index.php").
+  - Data types: file
+databasebackup/backup.php:269
+  - STORAGE call to fwrite($this->fp, $this->sql).
+  - Data types: file 
+
+css/style.php:16
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+css/style.php:21
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+css/style.php:26
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+css/style.php:31
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+databasebackup/backup.php:20
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+databasebackup/backup.php:323
+  - RETRIEVAL call to get_option("wp_db_backup_excs") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wp-database-optimizer-tools.php:59
+  - RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+databasebackup/backup.php:94
+  - STORAGE call to update_option("wp_db_backup_excs", ["revisions" => $exc_revisions, "spam" => $exc_spam]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+file
+	PHPStorageDetector.fwrite($this->fp, $this->sql) - {'file'}
+	PHPStorageDetector.touch(WP_BACKUP_DIR . "index.php") - {'file'}
+none
+	PHPIncludedDetector.(unknown) - set()
+	PHPIncludedDetector.(unknown) - set()
+option
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressStorageDetector.update_option("wp_db_backup_excs", ["revisions" => $exc_revisions, "spam" => $exc_spam]) - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+	WordPressRetrievalDetector.get_option("wp_db_backup_excs") - {'option'}
+	WordPressRetrievalDetector.get_option("siteurl") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.776757.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 7 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.097257.
+
+7 STORE_REACHES edges created
+7 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 2 nodes as ENCRYPTED
+In total, tainted 2 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.216612.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:39.897608!
+MD5 called with parameters [DB_PASSWORD]. Ignore if [DB_PASSWORD] does not contain personal information.,md5,None
+MD5 called with parameters [DB_PASSWORD, md5]. Ignore if [DB_PASSWORD, md5] does not contain personal information.,md5,None
+STORAGE call to fwrite($this->fp, $this->sql).,None,None
+STORAGE call to touch(WP_BACKUP_DIR . "index.php").,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wp_db_backup_excs") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("siteurl") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("wp_db_backup_excs", ["revisions" => $exc_revisions, "spam" => $exc_spam]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

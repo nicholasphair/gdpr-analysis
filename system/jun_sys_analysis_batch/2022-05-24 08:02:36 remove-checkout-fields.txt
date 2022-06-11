@@ -1,0 +1,618 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on remove-checkout-fields
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.569177.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.053984.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.224897.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 12 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:01.087154.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 147 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.728749.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.582070.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.111329.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 81 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.703832.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1011
+Added 771 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1181
+Added 170 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:00.999095.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/remove-checkout-fields/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/remove-checkout-fields/admin/admin.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.321695.
+
+12 REACHES edges created
+999 PHP_REACHES edges created
+170 PHP_REACHES edges created
+1181 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 413 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.893789.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.800972.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.351553.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.139425.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.072302.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.039129.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.006719.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.036657.
+
+1 PHP_REACHES edges created
+1 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.158931.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+4 SQL operations to process.
+SELECT * FROM $wpdbcheckout_remove
+SQL command (SELECT * FROM $wpdbcheckout_remove) cannot be parsed correct.
+UPDATE $wpdbcheckout_remove SET fName='trim($user_fName)', lName = 'trim($user_lName)', company = 'trim($user_Company)' , addr1 = 'trim($user_addr1)', addr2 = 'trim($user_addr2)', city = 'trim($user_city)', zipcode = 'trim($user_zipcode)', country = 'trim($user_country)', state = 'trim($user_state)', phone = 'trim($user_phone)', email = 'trim($user_email)', notes = 'trim($user_notes)' WHERE id='1'
+SQL command (UPDATE $wpdbcheckout_remove SET fName='trim($user_fName)', lName = 'trim($user_lName)', company = 'trim($user_Company)' , addr1 = 'trim($user_addr1)', addr2 = 'trim($user_addr2)', city = 'trim($user_city)', zipcode = 'trim($user_zipcode)', country = 'trim($user_country)', state = 'trim($user_state)', phone = 'trim($user_phone)', email = 'trim($user_email)', notes = 'trim($user_notes)' WHERE id='1') cannot be parsed correct.
+CREATE TABLE $wpdbcheckout_remove (
+    id int(11) NOT NULL auto_increment,
+    fName varchar(1),
+    lName varchar(1),
+    company varchar(1),
+    addr1 varchar(1),
+    addr2 varchar(1),
+    city varchar(1),
+    zipcode varchar(1),
+    country varchar(1),
+    state varchar (1),
+    phone varchar (1),
+    email varchar (1),
+    notes varchar (1),
+    UNIQUE KEY id (id)
+    ) $wpdb->get_charset_collate();
+SQL command (CREATE TABLE $wpdbcheckout_remove ( id int(11) NOT NULL auto_increment, fName varchar(1), lName varchar(1), company varchar(1), addr1 varchar(1), addr2 varchar(1), city varchar(1), zipcode varchar(1), country varchar(1), state varchar (1), phone varchar (1), email varchar (1), notes varchar (1), UNIQUE KEY id (id) ) $wpdb->get_charset_collate();) cannot be parsed correct.
+SELECT * FROM $wpdbcheckout_remove
+SQL command (SELECT * FROM $wpdbcheckout_remove) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [250, 1020, 1136, 1216]
+Added 0 SQL nodes. 0 out of 4 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:04.204165.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<h2 class="wooLiveSalenav-tabnav-tab-wrapper">'' cannot be parsed correct.
+HTML code '$'1'' cannot be parsed correct.
+HTML code '$'     '' cannot be parsed correct.
+HTML code '$'   
+        </div>
+         <div class="row1">
+            <label>Last Name</label>
+             '' cannot be parsed correct.
+HTML code '$'    
+        </div>
+        <div class="row1">
+            <label>Company</label>
+            '' cannot be parsed correct.
+HTML code '$'   
+        </div>
+        <div class="row1">
+            <label>Address 1</label>
+              '' cannot be parsed correct.
+HTML code '$'              </div>
+        <div class="row1">
+            <label>Address 2</label>
+            '' cannot be parsed correct.
+HTML code '$'        </div>
+        <div class="row1">
+            <label>City</label>
+              '' cannot be parsed correct.
+HTML code '$'    
+       </div>
+         <div class="row1">
+            <label>Post/Zip Code</label>
+                  '' cannot be parsed correct.
+HTML code '$'      </div>
+        <div class="row1">
+            <label>Country/region</label>
+            '' cannot be parsed correct.
+HTML code '$'  
+                  </div>
+         <div class="row1">
+             <label>State/County</label>
+              '' cannot be parsed correct.
+HTML code '$'             </div>
+         <div class="row1">
+            <label>Phone</label>
+                '' cannot be parsed correct.
+HTML code '$'    
+        </div>
+         <div class="row1">
+            <label>Email</label>
+              '' cannot be parsed correct.
+HTML code '$'   
+        </div>
+        <div class="row1">
+            <label>Notes</label>
+              '' cannot be parsed correct.
+HTML code '$'    
+        </div>
+          <div class="row-btn">
+        <button class="btn" type="button" name="btn_sub">Submit</button>
+           </div>
+    </form>
+        </div>
+        '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:01.345586.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.093611.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 17 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:01.176571.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running DbplusDetector
+### Start running InformixDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IngresDetector
+### Finish running InformixDetector
+### Start running maxdbDetector
+### Finish running FrontBaseDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MongoDbDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running ArrayElementDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running maxdbDetector
+### Start running WP_UserDetector
+### Finish running MySQLiDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running UninstallDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UserInputDetector
+### Finish running WordPressStorageDetector
+### Finish running VariableDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+admin/admin.php:213
+  - Request variable '$_POST["zipcode"]' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:215
+  - Request variable '$_POST["country"]' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:221
+  - Request variable '$_POST["email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+admin/admin.php:69
+  - object property '$print->zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:71
+  - object property '$print->country' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:77
+  - object property '$print->email' of personal types {'email'} is found.
+  - Data types: email
+index.php:60
+  - object property '$print->zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+index.php:61
+  - object property '$print->country' of personal types {'country'} is found.
+  - Data types: country
+index.php:64
+  - object property '$print->email' of personal types {'email'} is found.
+  - Data types: email 
+
+admin/admin.php:69
+  - variable '$userzipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:70
+  - variable '$userzipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:70
+  - variable '$userzipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:71
+  - variable '$usercountry' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:72
+  - variable '$usercountry' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:72
+  - variable '$usercountry' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:77
+  - variable '$useremail' of personal types {'email'} is found.
+  - Data types: email
+admin/admin.php:78
+  - variable '$useremail' of personal types {'email'} is found.
+  - Data types: email
+admin/admin.php:78
+  - variable '$useremail' of personal types {'email'} is found.
+  - Data types: email
+admin/admin.php:137
+  - variable '$userzipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:145
+  - variable '$usercountry' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:169
+  - variable '$useremail' of personal types {'email'} is found.
+  - Data types: email
+admin/admin.php:211
+  - variable '$user_city' of personal types {'city'} is found.
+  - Data types: city
+admin/admin.php:212
+  - variable '$user_city' of personal types {'city'} is found.
+  - Data types: city
+admin/admin.php:212
+  - variable '$user_city' of personal types {'city'} is found.
+  - Data types: city
+admin/admin.php:213
+  - variable '$user_zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:214
+  - variable '$user_zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:214
+  - variable '$user_zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:215
+  - variable '$user_country' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:216
+  - variable '$user_country' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:216
+  - variable '$user_country' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:217
+  - variable '$user_state' of personal types {'state'} is found.
+  - Data types: state
+admin/admin.php:218
+  - variable '$user_state' of personal types {'state'} is found.
+  - Data types: state
+admin/admin.php:218
+  - variable '$user_state' of personal types {'state'} is found.
+  - Data types: state
+admin/admin.php:221
+  - variable '$user_email' of personal types {'email'} is found.
+  - Data types: email
+admin/admin.php:222
+  - variable '$user_email' of personal types {'email'} is found.
+  - Data types: email
+admin/admin.php:222
+  - variable '$user_email' of personal types {'email'} is found.
+  - Data types: email
+admin/admin.php:227
+  - variable '$user_email' of personal types {'email'} is found.
+  - Data types: email
+admin/admin.php:227
+  - variable '$user_country' of personal types {'country'} is found.
+  - Data types: country
+admin/admin.php:227
+  - variable '$user_state' of personal types {'state'} is found.
+  - Data types: state
+admin/admin.php:227
+  - variable '$user_zipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+admin/admin.php:227
+  - variable '$user_city' of personal types {'city'} is found.
+  - Data types: city
+index.php:60
+  - variable '$userzipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+index.php:61
+  - variable '$usercountry' of personal types {'country'} is found.
+  - Data types: country
+index.php:64
+  - variable '$useremail' of personal types {'email'} is found.
+  - Data types: email
+index.php:116
+  - variable '$userzipcode' of personal types {'zipcode'} is found.
+  - Data types: zipcode
+index.php:124
+  - variable '$usercountry' of personal types {'country'} is found.
+  - Data types: country
+index.php:148
+  - variable '$useremail' of personal types {'email'} is found.
+  - Data types: email 
+
+index.php:40
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+index.php:41
+  - STORAGE call to add_option("test_db_version", $test_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+city
+	VariableDetector.(unknown) - {'city'}
+	VariableDetector.(unknown) - {'city'}
+	VariableDetector.(unknown) - {'city'}
+	VariableDetector.(unknown) - {'city'}
+country
+	ArrayElementDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	PropertyDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	PropertyDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+	VariableDetector.(unknown) - {'country'}
+email
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressStorageDetector.add_option("test_db_version", $test_db_version) - {'option'}
+state
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+	VariableDetector.(unknown) - {'state'}
+zipcode
+	VariableDetector.(unknown) - {'zipcode'}
+	PropertyDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	PropertyDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	ArrayElementDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+	VariableDetector.(unknown) - {'zipcode'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:07.620680.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.035428.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 66 nodes as PERSONAL
+In total, tainted 66 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.820358.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:31.935047!
+Request variable '$_POST["zipcode"]' of personal types {'zipcode'} is found.,,None
+Request variable '$_POST["country"]' of personal types {'country'} is found.,,None
+Request variable '$_POST["email"]' of personal types {'email'} is found.,,None
+object property '$print->zipcode' of personal types {'zipcode'} is found.,,None
+object property '$print->country' of personal types {'country'} is found.,,None
+object property '$print->email' of personal types {'email'} is found.,,None
+object property '$print->zipcode' of personal types {'zipcode'} is found.,,None
+object property '$print->country' of personal types {'country'} is found.,,None
+object property '$print->email' of personal types {'email'} is found.,,None
+variable '$userzipcode' of personal types {'zipcode'} is found.,,None
+variable '$usercountry' of personal types {'country'} is found.,,None
+variable '$useremail' of personal types {'email'} is found.,,None
+variable '$user_city' of personal types {'city'} is found.,,None
+variable '$user_city' of personal types {'city'} is found.,,None
+variable '$user_city' of personal types {'city'} is found.,,None
+variable '$user_zipcode' of personal types {'zipcode'} is found.,,None
+variable '$user_zipcode' of personal types {'zipcode'} is found.,,None
+variable '$user_zipcode' of personal types {'zipcode'} is found.,,None
+variable '$user_country' of personal types {'country'} is found.,,None
+variable '$user_country' of personal types {'country'} is found.,,None
+variable '$user_country' of personal types {'country'} is found.,,None
+variable '$user_state' of personal types {'state'} is found.,,None
+variable '$user_state' of personal types {'state'} is found.,,None
+variable '$user_state' of personal types {'state'} is found.,,None
+variable '$user_email' of personal types {'email'} is found.,,None
+variable '$user_email' of personal types {'email'} is found.,,None
+variable '$user_email' of personal types {'email'} is found.,,None
+variable '$user_country' of personal types {'country'} is found.,,None
+variable '$user_state' of personal types {'state'} is found.,,None
+variable '$user_city' of personal types {'city'} is found.,,None
+variable '$user_zipcode' of personal types {'zipcode'} is found.,,None
+variable '$user_email' of personal types {'email'} is found.,,None
+variable '$userzipcode' of personal types {'zipcode'} is found.,,None
+variable '$userzipcode' of personal types {'zipcode'} is found.,,None
+variable '$userzipcode' of personal types {'zipcode'} is found.,,None
+variable '$usercountry' of personal types {'country'} is found.,,None
+variable '$usercountry' of personal types {'country'} is found.,,None
+variable '$usercountry' of personal types {'country'} is found.,,None
+variable '$useremail' of personal types {'email'} is found.,,None
+variable '$useremail' of personal types {'email'} is found.,,None
+variable '$useremail' of personal types {'email'} is found.,,None
+variable '$userzipcode' of personal types {'zipcode'} is found.,,None
+variable '$usercountry' of personal types {'country'} is found.,,None
+variable '$useremail' of personal types {'email'} is found.,,None
+variable '$userzipcode' of personal types {'zipcode'} is found.,,None
+variable '$usercountry' of personal types {'country'} is found.,,None
+variable '$useremail' of personal types {'email'} is found.,,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to add_option("test_db_version", $test_db_version) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings

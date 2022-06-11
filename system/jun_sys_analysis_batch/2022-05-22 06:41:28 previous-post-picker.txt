@@ -1,0 +1,356 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on previous-post-picker
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.350170.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.852444.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.271567.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.467224.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 229 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.755002.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.707022.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.123600.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 84 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.636039.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1445
+Added 1132 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1445
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.135791.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/previous-post-picker/PreviousPostPicker.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.168616.
+
+1000 PHP_REACHES edges created
+1445 PHP_REACHES edges created
+1445 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 512 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.071996.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.082960.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 30 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:02.131691.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 25 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.160992.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.053206.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.526076.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008504.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.041440.
+
+55 PHP_REACHES edges created
+55 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 30 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.131765.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+4 SQL operations to process.
+SELECT post_author, count(*) as auth_count FROM $wpdb WHERE post_type = 'post' GROUP BY post_author ORDER BY auth_count
+SQL command (SELECT post_author, count(*) as auth_count FROM $wpdb WHERE post_type = 'post' GROUP BY post_author ORDER BY auth_count) cannot be parsed correct.
+SELECT post_author, count(*) as auth_count FROM $wpdb WHERE post_type = 'post' GROUP BY post_author ORDER BY auth_count
+SQL command (SELECT post_author, count(*) as auth_count FROM $wpdb WHERE post_type = 'post' GROUP BY post_author ORDER BY auth_count) cannot be parsed correct.
+
+		     SELECT post_author
+		     FROM $wpdb
+		     WHERE $wpdb.ID = '$post_ID'
+		     
+SQL command ( SELECT post_author FROM $wpdb WHERE $wpdb.ID = '$post_ID' ) cannot be parsed correct.
+
+		     SELECT $wpdb.ID, post_title, display_name, post_date
+		     FROM $wpdb, $wpdb, $wpdb as tr, $wpdb as tt WHERE $wpdb.post_type = 'post'
+                     AND $wpdb.post_author = $wpdb.ID AND tr.term_taxonomy_id = tt.term_taxonomy_id AND tr.object_id = $wpdb.ID AND tt.term_id IN ($in_cats) AND tt.taxonomy = 'category' AND tt.term_id IN ($in_tags) AND tt.taxonomy = 'post_tag' AND $wpdb.post_author IN (1)$excluding GROUP BY $wpdb.ID ORDER BY $wpdb.post_date DESC$limit
+SQL command ( SELECT $wpdb.ID, post_title, display_name, post_date FROM $wpdb, $wpdb, $wpdb as tr, $wpdb as tt WHERE $wpdb.post_type = 'post' AND $wpdb.post_author = $wpdb.ID AND tr.term_taxonomy_id = tt.term_taxonomy_id AND tr.object_id = $wpdb.ID AND tt.term_id IN ($in_cats) AND tt.taxonomy = 'category' AND tt.term_id IN ($in_tags) AND tt.taxonomy = 'post_tag' AND $wpdb.post_author IN (1)$excluding GROUP BY $wpdb.ID ORDER BY $wpdb.post_date DESC$limit) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1049, 747, 794, 1874]
+Added 0 SQL nodes. 0 out of 4 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:03.410020.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'wp_specialchars($author["auth_name"])'' cannot be parsed correct.
+HTML code '$'$tag_tag_ID'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+HTML code '$'wp_specialchars($tag["tag_name"])'' cannot be parsed correct.
+HTML code '$'<h3 class="dbx-handle">Show previous posts</h3>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_post_nbr" class="selectit"><input name="ppp_post_nbr" type="text" size="2" id="ppp_post_nbr" value="get_option("PpP_params")_post_nbr"/Posts number</label>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_sel_cat_id" class="selectit"><input id="ppp_sel_cat_id" name="ppp_sel_cat" type="checkbox" PpP_checked($PpP_params["sel_cat"], "1") value="1"/>Select categories</label>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_show_current_cat" class="selectit"><input id="ppp_show_current_cat" name="ppp_show_cat" type="radio" PpP_checked($PpP_params["show_cat"], "curcat") value="curcat"/>Current post\'s categories</label>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_show_other_cat" class="selectit"><input id="ppp_show_other_cat" name="ppp_show_cat" type="radio" PpP_checked($PpP_params["show_cat"], "xtrcat") value="xtrcat"/>Other categories</label>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_sel_tag_id" class="selectit"><input id="ppp_sel_tag_id" name="ppp_sel_tag" type="checkbox" PpP_checked($PpP_params["sel_tag"], "1") value="1"/>Select tags</label>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_show_current_tag" class="selectit"><input id="ppp_show_current_tag" name="ppp_show_tag" type="radio" PpP_checked($PpP_params["show_tag"], "curtag") value="curtag"/>Current post\'s tags</label>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_show_other_tag" class="selectit"><input id="ppp_show_other_tag" name="ppp_show_tag" type="radio" PpP_checked($PpP_params["show_tag"], "xtrtag") value="xtrtag"/>Other tags</label>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_sel_auth_id" class="selectit"><input id="ppp_sel_auth_id" name="ppp_sel_auth" type="checkbox" PpP_checked($PpP_params["sel_auth"], "1") value="1"/>Select authors</label>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_show_current_auth" class="selectit"><input id="ppp_show_current_auth" name="ppp_show_auth" type="radio" PpP_checked($PpP_params["show_auth"], "curauth") value="curauth"/>Current post\'s author</label>'' cannot be parsed correct.
+HTML code '$'<label for="ppp_show_other_auth" class="selectit"><input id="ppp_show_other_auth" name="ppp_show_auth" type="radio" PpP_checked($PpP_params["show_auth"], "xtrauth") value="xtrauth"/>Other authors</label>'' cannot be parsed correct.
+HTML code '$'<h3 class="dbx-handle">Previous posts list</h3></div>'' cannot be parsed correct.
+HTML code '$'$category_cat_ID'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+HTML code '$'wp_specialchars($category["cat_name"])'' cannot be parsed correct.
+HTML code '$'$author_auth_ID'' cannot be parsed correct.
+HTML code '$' selected'' cannot be parsed correct.
+HTML code '$'<tr style="background-color: #bbb;" align="left"><th>Title</th><th>Category</th><th>Tags</th><th>Author</th><th>Date</th></tr>'' cannot be parsed correct.
+HTML code '$'<tr><td><a href=get_permalink($prev_post->ID)"$prev_post</a></td><td>PpP_get_categories($prev_post->ID)</td><td>PpP_get_post_tags($prev_post->ID)</td><td>$prev_post</td><td>$prev_post</td></tr>'' cannot be parsed correct.
+HTML code '$'<tr><td colspan="4">No previous post to show</td></tr>'' cannot be parsed correct.
+HTML code '$' style="margin: 0px; padding: 0px;" class="selectit"/> '' cannot be parsed correct.
+HTML code '$'</option>'' cannot be parsed correct.
+HTML code '$'<option value='' cannot be parsed correct.
+HTML code '$' style="margin: 0px; padding: 0px;" class="selectit"/> '' cannot be parsed correct.
+HTML code '$'</option>'' cannot be parsed correct.
+HTML code '$'<fieldset id="ppp_parmdiv" class="dbx-box">'' cannot be parsed correct.
+HTML code '$'<div class="dbx-content">'' cannot be parsed correct.
+HTML code '$'<div id="p1" style="border: 1px solid #ddd;">'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<div id="p2" style="border: 1px solid #ddd;">'' cannot be parsed correct.
+HTML code '$'<div id="p2-1" style="border: 1px solid #ddd;">'' cannot be parsed correct.
+HTML code '$'<select name="ppp_category[]" size="5" multiple id="ppp_categorychecklist" style="margin: 0; padding: 0" onclick="ppp_show_other_cat.checked=true">'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'</div></div>'' cannot be parsed correct.
+HTML code '$'<div id="p3" style="border: 1px solid #ddd;">'' cannot be parsed correct.
+HTML code '$'<div id="p3-1" style="border: 1px solid #ddd;">'' cannot be parsed correct.
+HTML code '$'<select name="ppp_tag[]" size="5" multiple id="ppp_tagchecklist" style="margin: 0; padding: 0" onclick="ppp_show_other_tag.checked=true">'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'</div></div>'' cannot be parsed correct.
+HTML code '$'<div id="p4" style="border: 1px solid #ddd;">'' cannot be parsed correct.
+HTML code '$'<div id="p4-1" style="border: 1px solid #ddd;">'' cannot be parsed correct.
+HTML code '$'<select name="ppp_author[]" size="5" multiple id="ppp_authorchecklist" style="margin: 0; padding: 0" onclick="ppp_show_other_auth.checked=true">'' cannot be parsed correct.
+HTML code '$'</select>'' cannot be parsed correct.
+HTML code '$'</div></div>'' cannot be parsed correct.
+HTML code '$'</div></fieldset>'' cannot be parsed correct.
+HTML code '$'<div class="dbx-b-ox-wrapper">'' cannot be parsed correct.
+HTML code '$'<fieldset id="ppp_prev_post_list" class="dbx-box">'' cannot be parsed correct.
+HTML code '$'<div class="dbx-h-andle-wrapper">'' cannot be parsed correct.
+HTML code '$'<div class="dbx-c-ontent-wrapper">'' cannot be parsed correct.
+HTML code '$'<div class="dbx-content">'' cannot be parsed correct.
+HTML code '$'</div></div></fieldset></div>'' cannot be parsed correct.
+HTML code '$'<option value='' cannot be parsed correct.
+HTML code '$' style="margin: 0px; padding: 0px;" class="selectit"/> '' cannot be parsed correct.
+HTML code '$'</option>'' cannot be parsed correct.
+HTML code '$'<option value='' cannot be parsed correct.
+HTML code '$'<table style="margin: 0; padding: 0;">'' cannot be parsed correct.
+HTML code '$'</table>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:05.514063.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.044557.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 3 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.281566.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running CubridDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running FrontBaseDetector
+### Start running IngresDetector
+### Finish running DbplusDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running HashDetector
+### Start running PasswordHashingDetector
+### Finish running ParadoxDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPStorageDetector
+### Start running SqliteDetector
+### Finish running PHPRetrievalDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running Sqlite3Detector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running PropertyDetector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRemoteDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressRetrievalDetector
+### Finish running SqlServerDetector
+### Start running WordPressStorageDetector
+### Finish running VariableDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running UserInputDetector
+### Start running GenericEncryptionDetector
+### Finish running MySQLiDetector
+### Start running DeletionDetector
+### Finish running maxdbDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running GenericEncryptionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running WordPressStorageDetector
+### Finish running UninstallDetector
+### Finish running DeletionDetector
+### Finished running detectors
+PreviousPostPicker.php:17
+  - RETRIEVAL call to get_option("PpP_params") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+PreviousPostPicker.php:289
+  - STORAGE call to update_option("PpP_params", $PpP_params) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressStorageDetector.update_option("PpP_params", $PpP_params) - {'option'}
+	WordPressRetrievalDetector.get_option("PpP_params") - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.387587.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 1 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.034982.
+
+1 STORE_REACHES edges created
+1 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005925.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:30.020146!
+RETRIEVAL call to get_option("PpP_params") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+STORAGE call to update_option("PpP_params", $PpP_params) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

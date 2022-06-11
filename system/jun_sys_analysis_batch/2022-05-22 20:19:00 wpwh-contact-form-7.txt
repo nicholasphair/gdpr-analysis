@@ -1,0 +1,354 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on wpwh-contact-form-7
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.322144.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.920292.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 4 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.307835.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 2 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.563570.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 273 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.761280.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.563618.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.086070.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 104 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.823381.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2107
+Added 1724 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2107
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.041989.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/wpwh-contact-form-7/wpwh-cf7.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.202022.
+
+4 PHP_REACHES edges created
+2 REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2101 PHP_REACHES edges created
+2107 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 756 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.005636.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:02.313358.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 18 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.257581.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 18 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.163857.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.305605.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.261956.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.008265.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.046618.
+
+36 PHP_REACHES edges created
+36 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 38 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.133178.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.124378.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'sprintf(WPWHPRO()->helpers->create_admin_notice("<strong>Contact Form 7 Webhook Integration</strong> is active, but <strong>Contact Form 7</strong> isn\\'t. Please activate it to use the functionality for <strong>Contact Form 7</strong>. <a href="%s" target="_blank" rel="noopener">More Info</a>", "warning", false), "https://contactform7.com/")'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("This webhook trigger is used to send data, on the submission of a contact form (Via the Contact Form 7 plugin), to one or multiple given webhook URL\\'s.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("This description is uniquely made for the <strong>Send Data On Contact Form 7 Submits</strong> (cf7_forms) webhook trigger.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("How to use <strong>Send Data On Contact Form 7 Submits</strong> (cf7_forms)", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("To get started, you need to add your receiving URL endpoint, that accepts webhook requests, from the third-party provider or service you want to use.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("Once you have this URL, please place it into the <strong>Webhook URL</strong> field above.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("For better identification of the webhook URL, we recommend to also fill the <strong>Webhook Name</strong> field. This field will be used as the slug for your webhook URL. In case you leave it empty, we will automatically generate a random number as an identifier.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("After you added your <strong>Webhook URL</strong>, press the <strong>Add</strong> button to finish adding the entry.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("That\\'s it! Now you can receive data on the URL once the trigger fires.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("Next to the <strong>Webhook URL</strong>, you will find a settings item, which you can use to customize the payload/request.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("When does this trigger fire?", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("This trigger is registered on the <strong>wpcf7_mail_sent</strong> hook of the Contact Form 7 plugin:", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("Here is the call within our code we use to fire this trigger:", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("Tipps", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("You can also make the temporary files from Contact Form 7 available for webhook calls. To do that, simply check out the settings of your added webhook endpoint. There you will find a feature called <strong>Preserve uploaded form files</strong>. It allows you to temporarily or permanently cache given files to make them available even after CF7 has deleted them from their structure.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("You can also rename the webhook keys within the request by defining an additional attribute within the contact form template. Here is an example:", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("The above example changes the key within the payload from "your-email" to "new_key". To define it, simply set the argument "wpwhkey" and separate the new key using a double point (:)."", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("In case you don\\'t need a specified webhook URL at the moment, you can simply deactivate it by clicking the <strong>Deactivate</strong> link next to the <strong>Webhook URL</strong>. This results in the specified URL not being fired once the trigger fires.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("You can use the <strong>Send demo</strong> button to send a static request to your specified <strong>Webhook URL</strong>. Please note that the data sent within the request might differ from your live data.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("Within the <strong>Settings</strong> link next to your <strong>Webhook URL</strong>, you can use customize the functionality of the request. It contains certain default settings like changing the request type the data is sent in, or custom settings, depending on your trigger. An explanation for each setting is right next to it. (Please don\\'t forget to save the settings once you changed them - the button is at the end of the popup.)", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("You can also check the response you get from the demo webhook call. To check it, simply open the console of your browser and you will find an entry there, which gives you all the details about the response.", $translation_ident)'' cannot be parsed correct.
+HTML code '$'WPWHPRO()->helpers->translate("In case you would like to learn more about our plugin, please check out our documentation at:", $translation_ident)'' cannot be parsed correct.
+HTML code '$'sprintf("<strong>Contact Form 7 Integration</strong> is active, but <strong>WP Webhooks</strong> or <strong>WP Webhooks Pro</strong> isn\\'t. Please activate it to use the functionality for <strong>Contact Form 7</strong>. <a href="%s" target="_blank" rel="noopener">More Info</a>", "https://de.wordpress.org/plugins/wp-webhooks/")'' cannot be parsed correct.
+HTML code '$'ob_get_clean()'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:03.616402.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.116362.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 4 do_action/apply_filters calls and 9 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.627773.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running DbplusDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running Oci8Detector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PhpCurlDetector
+### Start running PhpVarDetector
+### Finish running OpenSSLDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running Sqlite3Detector
+### Start running SqliteDetector
+### Finish running PropertyDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running TokyoTyrantDetector
+### Start running UserInputDetector
+### Finish running SqlServerDetector
+### Start running VariableDetector
+### Finish running PHPRetrievalDetector
+### Start running WordpressHashingFnDetector
+### Finish running maxdbDetector
+### Start running WordPressRemoteDetector
+### Finish running MySQLiDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running WordPressRemoteDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running UserInputDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running PHPStorageDetector
+### Finish running WordPressRetrievalDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+wpwh-cf7.php:45
+  - RETRIEVAL call to file_get_contents($upload_path . "/.htaccess").
+  - Data types: file 
+
+wpwh-cf7.php:48
+  - STORAGE call to file_put_contents($upload_path . "/.htaccess", $rules).
+  - Data types: file
+wpwh-cf7.php:52
+  - STORAGE call to file_put_contents($upload_path . "/.htaccess", $rules).
+  - Data types: file
+wpwh-cf7.php:113
+  - STORAGE call to file_put_contents($folder . "/index.php", "<?php" . PHP_EOL . "// Silence is golden.").
+  - Data types: file 
+
+wpwh-cf7.php:97
+  - RETRIEVAL call to get_transient("wpwhcf7_preserved_files") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).
+  - Data types: site
+wpwh-cf7.php:220
+  - RETRIEVAL call to $stag->get_option("wpwhkey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+wpwh-cf7.php:338
+  - RETRIEVAL call to get_posts(["post_type" => "wpcf7_contact_form", "post_status" => "publish", "numberposts" => -1]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).
+wpwh-cf7.php:598
+  - RETRIEVAL call to get_post($form_id) alters data types {'post', 'wp_post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).
+  - Data types: post, wp_post, post_meta
+wpwh-cf7.php:599
+  - RETRIEVAL call to get_post_meta($form_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).
+  - Data types: post_meta 
+
+wpwh-cf7.php:107
+  - STORAGE call to set_transient("wpwhcf7_preserved_files", $preserved_files) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).
+  - Data types: site 
+
+By data type:
+file
+	PHPStorageDetector.file_put_contents($folder . "/index.php", "<?php" . PHP_EOL . "// Silence is golden.") - {'file'}
+	PHPStorageDetector.file_put_contents($upload_path . "/.htaccess", $rules) - {'file'}
+	PHPStorageDetector.file_put_contents($upload_path . "/.htaccess", $rules) - {'file'}
+	PHPRetrievalDetector.file_get_contents($upload_path . "/.htaccess") - {'file'}
+none
+	WordPressRetrievalDetector.get_posts(["post_type" => "wpcf7_contact_form", "post_status" => "publish", "numberposts" => -1]) - set()
+option
+	WordPressRetrievalDetector.$stag->get_option("wpwhkey") - {'option'}
+post
+	WordPressRetrievalDetector.get_post($form_id) - {'post', 'wp_post', 'post_meta'}
+post_meta
+	WordPressRetrievalDetector.get_post_meta($form_id) - {'post_meta'}
+	WordPressRetrievalDetector.get_post($form_id) - {'post', 'wp_post', 'post_meta'}
+site
+	WordPressStorageDetector.set_transient("wpwhcf7_preserved_files", $preserved_files) - {'site'}
+	WordPressRetrievalDetector.get_transient("wpwhcf7_preserved_files") - {'site'}
+wp_post
+	WordPressRetrievalDetector.get_post($form_id) - {'post', 'wp_post', 'post_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:06.485428.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 4 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.106885.
+
+4 STORE_REACHES edges created
+4 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.005290.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:30.293060!
+RETRIEVAL call to file_get_contents($upload_path . "/.htaccess").,None,None
+STORAGE call to file_put_contents($folder . "/index.php", "<?php" . PHP_EOL . "// Silence is golden.").,None,None
+STORAGE call to file_put_contents($upload_path . "/.htaccess", $rules).,None,None
+STORAGE call to file_put_contents($upload_path . "/.htaccess", $rules).,None,None
+RETRIEVAL call to $stag->get_option("wpwhkey") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_posts(["post_type" => "wpcf7_contact_form", "post_status" => "publish", "numberposts" => -1]). Passed arguments: 0: $args (array). Returns (WP_Post[]|int[]).,None,None
+RETRIEVAL call to get_post($form_id) alters data types {'post', 'wp_post', 'post_meta'}. Passed arguments: 0: $post (int|WP_Post|null). Returns (WP_Post|array|null).,None,None
+RETRIEVAL call to get_post_meta($form_id) alters data types {'post_meta'}. Passed arguments: 0: $post_id (int). Returns (mixed).,None,None
+RETRIEVAL call to get_transient("wpwhcf7_preserved_files") alters data types {'site'}. Passed arguments: 0: $transient (string). Returns (mixed).,None,None
+STORAGE call to set_transient("wpwhcf7_preserved_files", $preserved_files) alters data types {'site'}. Passed arguments: 0: $transient (string), 1: $value (mixed). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

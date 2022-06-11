@@ -1,0 +1,517 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on bulk-postmeta-editor
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.337638.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:00.802440.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 29 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.460641.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 1 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.589003.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 131 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.717658.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 2 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.672293.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.114065.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 53 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.064228.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1420
+Added 1204 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 1420
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.079312.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/bulk-postmeta-edior.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/uninstall.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/admin/class-bulk-postmeta-edior-admin.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/admin/index.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/includes/class-bulk-postmeta-edior-activator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/includes/class-bulk-postmeta-edior-deactivator.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/includes/class-bulk-postmeta-edior-i18n.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/includes/class-bulk-postmeta-edior-loader.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/includes/class-bulk-postmeta-edior.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/bulk-postmeta-editor/includes/index.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:01.151902.
+
+29 PHP_REACHES edges created
+1 REACHES edges created
+131 PHP_REACHES edges created
+2 CALLS edges created
+1000 PHP_REACHES edges created
+1257 PHP_REACHES edges created
+1420 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 526 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:01.078077.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 2 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.723620.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 26 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.298056.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 13 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.190083.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.186533.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.291830.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.013580.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.038466.
+
+2 CALLS edges created
+39 PHP_REACHES edges created
+41 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 52 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.132715.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+11 SQL operations to process.
+SELECT * FROM $wpdbbulk_edit WHERE meta_key = {"1": ["str_replace(\"bulk_edit_meta_\", \"\", $_REQUEST[\"page\"])"]}
+SELECT * FROM $wpdbbulk_edit WHERE meta_key = {"1": ["str_replace(\"bulk_edit_meta_\", \"\", $_REQUEST[\"page\"])"]}
+SQL command (SELECT * FROM $wpdbbulk_edit WHERE meta_key = {"1": ["str_replace(\"bulk_edit_meta_\", \"\", $_REQUEST[\"page\"])"]}) cannot be parsed correct.
+SELECT 
+								post.ID AS post_id,
+								post.post_title,
+								post.post_name,
+								post.post_status,
+								post.post_type,
+								meta.*
+							FROM $wpdbposts AS post
+								INNER JOIN $wpdbpostmeta
+									AS meta
+									ON meta.post_id = post.ID
+									AND meta.meta_key = array_merge($args, $exploded)
+							WHERE post.post_type IN (ltrim(str_repeat(",%s", count($args) - 1), ","))
+							AND post.post_status <> 'trash'
+							ORDER BY post_title ASC
+None
+SELECT bulk.*
+				FROM $wpdbbulk_edit AS bulk
+				ORDER BY meta_key ASC
+SQL command (SELECT bulk.* FROM $wpdbbulk_edit AS bulk ORDER BY meta_key ASC) cannot be parsed correct.
+SELECT bulk.*
+					FROM $wpdbbulk_edit AS bulk
+					ORDER BY meta_key ASC
+SQL command (SELECT bulk.* FROM $wpdbbulk_edit AS bulk ORDER BY meta_key ASC) cannot be parsed correct.
+SELECT bulk.*
+							FROM $wpdbbulk_edit AS bulk
+							ORDER BY meta_key ASC
+SQL command (SELECT bulk.* FROM $wpdbbulk_edit AS bulk ORDER BY meta_key ASC) cannot be parsed correct.
+SELECT DISTINCT meta_key
+								FROM $wpdbpostmeta
+								WHERE meta_key <> ''
+								AND meta_key NOT IN (ltrim(str_repeat(",$done", count($done)), ","))
+								ORDER BY meta_key ASC
+SELECT DISTINCT meta_key
+								FROM $wpdbpostmeta
+								WHERE meta_key <> ''
+								AND meta_key NOT IN (ltrim(str_repeat(",$done", count($done)), ","))
+								ORDER BY meta_key ASC
+SQL command (SELECT DISTINCT meta_key FROM $wpdbpostmeta WHERE meta_key <> '' AND meta_key NOT IN (ltrim(str_repeat(",$done", count($done)), ",")) ORDER BY meta_key ASC) cannot be parsed correct.
+SELECT DISTINCT meta_key
+								FROM $wpdbpostmeta
+								WHERE meta_key <> ''
+								ORDER BY meta_key ASC
+SQL command (SELECT DISTINCT meta_key FROM $wpdbpostmeta WHERE meta_key <> '' ORDER BY meta_key ASC) cannot be parsed correct.
+SELECT DISTINCT post_type 
+								FROM $wpdbposts 
+								WHERE post_type <> '' 
+								AND post_type <> 'revision'
+								AND post_type <> 'attachment'
+								AND post_type <> 'wpcf7_contact_form'
+								AND post_type <> 'nav_menu_item'
+								AND post_type <> 'optionsframework'
+								ORDER BY post_type ASC
+SQL command (SELECT DISTINCT post_type FROM $wpdbposts WHERE post_type <> '' AND post_type <> 'revision' AND post_type <> 'attachment' AND post_type <> 'wpcf7_contact_form' AND post_type <> 'nav_menu_item' AND post_type <> 'optionsframework' ORDER BY post_type ASC) cannot be parsed correct.
+INSERT INTO $wpdbbulk_edit (
+					meta_key,
+					meta_label,
+					field_type,
+					post_types
+				) VALUES (
+					{"1": ["$_REQUEST_new_meta_key"], "2": ["$_REQUEST_new_meta_label"], "3": ["$_REQUEST_new_field_type"], "4": ["implode(\", \", $_REQUEST[\"post_types\"])"]},
+					%s,
+					%s,
+					%s
+				)
+None
+DELETE FROM $wpdbbulk_edit WHERE meta_key = {"1": ["$_REQUEST_delete"]}
+DELETE FROM $wpdbbulk_edit WHERE meta_key = {"1": ["$_REQUEST_delete"]}
+SQL command (DELETE FROM $wpdbbulk_edit WHERE meta_key = {"1": ["$_REQUEST_delete"]}) cannot be parsed correct.
+CREATE TABLE IF NOT EXISTS `$wpdbbulk_edit` (
+					`ID` INT(32) UNSIGNED NOT NULL AUTO_INCREMENT,
+					`meta_key` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
+					`meta_label` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
+					`post_types` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
+					`field_type` VARCHAR(50) NOT NULL COLLATE 'utf8_general_ci',
+					`field_values` TEXT NULL COLLATE 'utf8_general_ci',
+					PRIMARY KEY (`ID`),
+					UNIQUE INDEX `meta_key` (`meta_key`)
+				)
+				ENGINE=InnoDB
+				AUTO_INCREMENT=1
+SQL command (CREATE TABLE IF NOT EXISTS `$wpdbbulk_edit` ( `ID` INT(32) UNSIGNED NOT NULL AUTO_INCREMENT, `meta_key` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci', `meta_label` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci', `post_types` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci', `field_type` VARCHAR(50) NOT NULL COLLATE 'utf8_general_ci', `field_values` TEXT NULL COLLATE 'utf8_general_ci', PRIMARY KEY (`ID`), UNIQUE INDEX `meta_key` (`meta_key`) ) ENGINE=InnoDB AUTO_INCREMENT=1) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [1005, 1165, 146, 246, 390, 550, 580, 637, 807, 886, 1966]
+Added 0 SQL nodes. 0 out of 11 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:05.024005.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$wpdb->get_results($wpdb->prepare($sql, $args))_0_meta_label'' cannot be parsed correct.
+HTML code '$'admin.php?page=$_REQUEST_page'' cannot be parsed correct.
+HTML code '$'$bulk_post'' cannot be parsed correct.
+HTML code '$'$bulk_post'' cannot be parsed correct.
+HTML code '$'$bulk_post'' cannot be parsed correct.
+HTML code '$'$bulk_post'' cannot be parsed correct.
+HTML code '$'<ul>
+								<li><strong>Slug: </strong>$bulk_post</li>
+								<li><strong>Status: </strong>ucfirst($bulk_post->post_status)</li>	
+								<li><strong>Type: </strong>ucwords(str_replace(["-", "_"], " ", $bulk_post->post_type))</li>	
+								<li>
+									<a class="button" target="_blank" href="get_permalink($bulk_post->post_id)">View</a>
+									<a class="button" target="_blank" href="post.php?post=$bulk_post&action=edit">Edit</a>
+								</li>				
+							</ul'' cannot be parsed correct.
+HTML code '$'$bulk_post'' cannot be parsed correct.
+HTML code '$'$bulk_post'' cannot be parsed correct.
+HTML code '$'$bulk_post'' cannot be parsed correct.
+HTML code '$'<ul>
+								<li><strong>Slug: </strong>$bulk_post</li>
+								<li><strong>Status: </strong>ucfirst($bulk_post->post_status)</li>	
+								<li><strong>Type: </strong>ucwords(str_replace(["-", "_"], " ", $bulk_post->post_type))</li>	
+								<li>
+									<a class="button" target="_blank" href="get_permalink($bulk_post->post_id)">View</a>
+									<a class="button" target="_blank" href="post.php?post=$bulk_post&action=edit">Edit</a>
+								</li>				
+							</ul'' cannot be parsed correct.
+HTML code '$'<ul>
+								<li><strong>Slug: </strong>$bulk_post</li>
+								<li><strong>Status: </strong>ucfirst($bulk_post->post_status)</li>	
+								<li><strong>Type: </strong>ucwords(str_replace(["-", "_"], " ", $bulk_post->post_type))</li>	
+								<li>
+									<a class="button" target="_blank" href="get_permalink($bulk_post->post_id)">View</a>
+									<a class="button" target="_blank" href="post.php?post=$bulk_post&action=edit">Edit</a>
+								</li>				
+							</ul'' cannot be parsed correct.
+HTML code '$'<ul>
+								<li><strong>Slug: </strong>$bulk_post</li>
+								<li><strong>Status: </strong>ucfirst($bulk_post->post_status)</li>	
+								<li><strong>Type: </strong>ucwords(str_replace(["-", "_"], " ", $bulk_post->post_type))</li>	
+								<li>
+									<a class="button" target="_blank" href="get_permalink($bulk_post->post_id)">View</a>
+									<a class="button" target="_blank" href="post.php?post=$bulk_post&action=edit">Edit</a>
+								</li>				
+							</ul'' cannot be parsed correct.
+HTML code '$'$bulk_edit'' cannot be parsed correct.
+HTML code '$'$bulk_edit'' cannot be parsed correct.
+HTML code '$'admin.php?page=bulk_edit_admin_settings'' cannot be parsed correct.
+HTML code '$'$bulk_edit'' cannot be parsed correct.
+HTML code '$'$bulk_edit'' cannot be parsed correct.
+HTML code '$'$bulk_edit'' cannot be parsed correct.
+HTML code '$'ucwords(str_replace(["-", "_"], " ", $bulk_edit->post_types))'' cannot be parsed correct.
+HTML code '$'$bulk_edit'' cannot be parsed correct.
+HTML code '$'admin.php?page=bulk_edit_admin_settings&amp;delete=$bulk_edit'' cannot be parsed correct.
+HTML code '$'$bulk_edit'' cannot be parsed correct.
+HTML code '$'$meta_key'' cannot be parsed correct.
+HTML code '$'$meta_key'' cannot be parsed correct.
+HTML code '$'$post_type'' cannot be parsed correct.
+HTML code '$'$post_type'' cannot be parsed correct.
+HTML code '$'$post_type'' cannot be parsed correct.
+HTML code '$'$post_type'' cannot be parsed correct.
+HTML code '$'ucwords(str_replace(["-", "_"], " ", $post_type->post_type))'' cannot be parsed correct.
+HTML code '$'Could not add new bulk editor set - some fields were missing'' cannot be parsed correct.
+HTML code '$'Successfully deleted the editor set, <code>$meta_key</code>.'' cannot be parsed correct.
+HTML code '$'Could not delete the editor, <code>$meta_key</code>. Sorry.'' cannot be parsed correct.
+HTML code '$'New bulk editor field set added'' cannot be parsed correct.
+HTML code '$'Whoops! Something has gone awry, sorry. Please try again.'' cannot be parsed correct.
+HTML code '$'No fields have been set up, yet. Please visit the <a href="admin.php?page=bulk_edit_admin_settings">settings</a> page to get started.'' cannot be parsed correct.
+HTML code '$'Could not find any updates to make'' cannot be parsed correct.
+HTML code '$'Updated 0 fields'' cannot be parsed correct.
+HTML code '$'</h1>
+			<form method="post" action="'' cannot be parsed correct.
+HTML code '$'">
+				<fieldset>
+				'' cannot be parsed correct.
+HTML code '$'</h3>
+							
+							'' cannot be parsed correct.
+HTML code '$']" 
+										name="edit_meta['' cannot be parsed correct.
+HTML code '$']" 
+										value="'' cannot be parsed correct.
+HTML code '$'"
+										class="bulk-postmeta-input" />
+									'' cannot be parsed correct.
+HTML code '$'									'' cannot be parsed correct.
+HTML code '$']" 
+											name="edit_meta['' cannot be parsed correct.
+HTML code '$']" >
+										'' cannot be parsed correct.
+HTML code '$'										</textarea>
+									</div>
+									<div class="bulk-postmeta-list">
+										'' cannot be parsed correct.
+HTML code '$'									</div>
+									'' cannot be parsed correct.
+HTML code '$'									</div>
+									'' cannot be parsed correct.
+HTML code '$'									</div>
+									'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</a>
+					</li>
+				'' cannot be parsed correct.
+HTML code '$'			'' cannot be parsed correct.
+HTML code '$'">
+				<fieldset>
+				'' cannot be parsed correct.
+HTML code '$'</td>
+										<td>'' cannot be parsed correct.
+HTML code '$'</td>
+										<td>'' cannot be parsed correct.
+HTML code '$'</td>
+										<td>'' cannot be parsed correct.
+HTML code '$'</td>
+										<td>
+											<a class="bulk-edit" href="admin.php?page=bulk_edit_meta_'' cannot be parsed correct.
+HTML code '$'" title="Edit Fields"><span class="dashicons dashicons-edit"></span></a>
+											<a class="bulk-delete" href="'' cannot be parsed correct.
+HTML code '$'" title="Delete '' cannot be parsed correct.
+HTML code '$'"><span class="dashicons dashicons-dismiss"></span></a>
+										</td>
+									</tr>
+									'' cannot be parsed correct.
+HTML code '$'"'' cannot be parsed correct.
+HTML code '$'</option>
+								'' cannot be parsed correct.
+HTML code '$']" 
+									id="post_types['' cannot be parsed correct.
+HTML code '$']" 
+									value="'' cannot be parsed correct.
+HTML code '$'" />
+								<label for="post_types['' cannot be parsed correct.
+HTML code '$']">
+								'' cannot be parsed correct.
+HTML code '$'								</label>
+							</p>
+						'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:06.458951.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.053311.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 4 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.450643.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running FileProDetector
+### Start running FrontBaseDetector
+### Finish running DbaseDetector
+### Start running HashDetector
+### Finish running FirebirdInterBaseDetector
+### Start running IBMDb2Detector
+### Finish running CubridDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running IngresDetector
+### Start running MongoDbDetector
+### Finish running InformixDetector
+### Start running MongoDetector
+### Finish running IBMDb2Detector
+### Start running MsqlDetector
+### Finish running MongoDetector
+### Start running MySQLDetector
+### Finish running MongoDbDetector
+### Start running MySQLiDetector
+### Finish running MsqlDetector
+### Start running Oci8Detector
+### Finish running MySQLDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running ArrayElementDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running PasswordHashingDetector
+### Start running PHPRetrievalDetector
+### Finish running OpenSSLDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PHPIncludedDetector
+### Start running PhpVarDetector
+### Finish running PhpCurlDetector
+### Start running PostgreSQLDetector
+### Finish running PostgreSQLDetector
+### Start running PropertyDetector
+### Finish running PHPStorageDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running PropertyDetector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running Sqlite3Detector
+### Start running UserInputDetector
+### Finish running MySQLiDetector
+### Start running VariableDetector
+### Finish running maxdbDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressStorageDetector
+### Finish running PhpVarDetector
+### Start running WP_UserDetector
+### Finish running WordPressRemoteDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running WordPressRetrievalDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running VariableDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running WordPressStorageDetector
+### Finish running UserInputDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finished running detectors
+admin/class-bulk-postmeta-edior-admin.php:162
+  - STORAGE call to $this->delete_option() alters data types {'option'}. Returns (bool).
+  - Data types: option 
+
+admin/class-bulk-postmeta-edior-admin.php:162
+  - DELETION call to $this->delete_option() alters data types {'option'}. Returns (bool).
+  - Data types: option 
+
+By data type:
+option
+	WordPressStorageDetector.$this->delete_option() - {'option'}
+	DeletionDetector.$this->delete_option() - {'option'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:05.748174.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 0 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.040219.
+
+0 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+In total, tainted 0 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:00.006664.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:36.256029!
+DELETION call to $this->delete_option() alters data types {'option'}. Returns (bool).,None,None
+STORAGE call to $this->delete_option() alters data types {'option'}. Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found no personal data in the plugin. No analysis needed. 
+
+[main] Complaint? True 
+
+No findings

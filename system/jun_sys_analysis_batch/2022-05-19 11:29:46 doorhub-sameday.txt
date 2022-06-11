@@ -1,0 +1,520 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on doorhub-sameday
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:01.377032.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.008865.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 0 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.227083.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.505736.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 114 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.672860.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.838180.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.148010.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 69 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:03.607495.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 1311
+Added 1128 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 9247
+Added 7936 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:02.201895.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/doorhub-sameday/doorhub-sameday.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/doorhub-sameday/functions.php' cannot be parsed correct.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/doorhub-sameday/admin/admin_settings.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.422280.
+
+1000 PHP_REACHES edges created
+1311 PHP_REACHES edges created
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+3000 PHP_REACHES edges created
+4000 PHP_REACHES edges created
+5000 PHP_REACHES edges created
+6000 PHP_REACHES edges created
+7000 PHP_REACHES edges created
+7936 PHP_REACHES edges created
+9247 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 506 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.936141.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.574830.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 1 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.408391.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.138712.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.203342.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.039540.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.005093.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.041150.
+
+1 PHP_REACHES edges created
+1 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 1 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.109396.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+3 SQL operations to process.
+CREATE TABLE `$table_prefixdoorhub_api_settings_sameday` ( 
+SQL command (CREATE TABLE `$table_prefixdoorhub_api_settings_sameday` ( ) cannot be parsed correct.
+SELECT * FROM $wpdbdoorhub_api_settings_sameday
+SQL command (SELECT * FROM $wpdbdoorhub_api_settings_sameday) cannot be parsed correct.
+SELECT * FROM $wpdbdoorhub_api_settings_sameday
+SQL command (SELECT * FROM $wpdbdoorhub_api_settings_sameday) cannot be parsed correct.
+The following function calls could not successfully be analyzed for SQL content: [465, 49, 545]
+Added 0 SQL nodes. 0 out of 3 calls were analyzed successfully.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:02.095487.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'$_SESSION_date'' cannot be parsed correct.
+HTML code '$'$_SESSION_distributionId'' cannot be parsed correct.
+HTML code '$'wp_remote_retrieve_response_code($response)'' cannot be parsed correct.
+HTML code '$'400'' cannot be parsed correct.
+HTML code '$'<section class=\'woocommerce-order-details\' id=\'section_2\'><h1 class=\'woocommerce-order-details__title entry-title\'>DoorHub Status For SameDay Services</h1>'' cannot be parsed correct.
+HTML code '$'<p class=\'woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received\'>$_SESSION</p>'' cannot be parsed correct.
+HTML code '$'<input style="width: 400px;" type="text" required value="$wpdb->get_results("SELECT * FROM "$tablename)_0_key" name="doorhhuub_api_key" />'' cannot be parsed correct.
+HTML code '$'<table class=\'woocommerce-table woocommerce-table--order-details shop_table order_details\'>
+        
+       
+            <tfoot>
+            <tr>
+		<th scope=\'row\'>Order Ref:</th>
+		<td>$decoded_data</td>
+		</tr>
+                <tr>
+		<th scope=\'row\'>Delivery Id:</th>
+		<td>$decoded_data</td>
+		</tr>
+		<tr>
+		<th scope=\'row\'>Customer Name:</th>
+		<td>$decoded_data</td>
+		</tr>
+		<tr>
+		<th scope=\'row\'>Customer Phone:</th>
+		<td>$decoded_data</td>
+		</tr>
+		<tr>
+		<th scope=\'row\'>Seller Name:</th>
+		<td>$decoded_data</td>
+		</tr>
+		<tr>
+		<th scope=\'row\'>Pickup Address:</th>
+		<td>$decoded_data</td>
+               </tr>
+                <tr>
+		<th scope=\'row\'>DropOff Address:</th>
+		<td>$decoded_data</td>
+                </tr>
+                 <tr>
+		<th scope=\'row\'>Delivery Charges:</th>
+		<td>$decoded_data</td>
+                </tr>
+                <tr>
+		<th scope=\'row\'>Delivery Date:</th>
+		<td>$_SESSION</td>
+                 </tr>
+                 <tr>
+		<th scope=\'row\'>Delivery Time:</th>
+		<td>$_SESSION</td>
+                 </tr>
+        	<th scope=\'row\'>Order Status:</th>
+		<td>$_SESSION</td>
+                 </tr>
+               </tfoot>
+              
+	</table>'' cannot be parsed correct.
+HTML code '$'json_encode($_SESSION["hidden-fields"])'' cannot be parsed correct.
+HTML code '$'json_decode($body)_message'' cannot be parsed correct.
+HTML code '$'json_decode($body)_message'' cannot be parsed correct.
+HTML code '$'<h2>DoorHub SameDay Services Details</h2>
+	<table style="margin-bottom: 40px;color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; width: 100%; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif" border="1" cellpadding="6" cellspacing="0" class="td">
+<tfoot>
+<tr><th class="td" colspan="2" style="color: #636363;border: 1px solid #e5e5e5;vertical-align: middle;padding: 12px;text-align: left;border-top-width: 4px;">Order Ref:</th>
+<td class="td" style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left; border-top-width: 4px"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$_SESSION</td>
+</tr>
+<tr><th class="td" colspan="2" style="color: #636363;border: 1px solid #e5e5e5;vertical-align: middle;padding: 12px;text-align: left;border-top-width: 4px;">Delivery Id:</th>
+<td class="td" style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left; border-top-width: 4px"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$_SESSION</td>
+</tr>
+<tr><th class="td" colspan="2" style="color: #636363;border: 1px solid #e5e5e5;vertical-align: middle;padding: 12px;text-align: left;border-top-width: 4px;">Contact Person:</th>
+<td class="td" style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left; border-top-width: 4px"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$_SESSION</td>
+</tr>
+<tr><th class="td" colspan="2" style="color: #636363;border: 1px solid #e5e5e5;vertical-align: middle;padding: 12px;text-align: left;border-top-width: 4px;">Contact Phone:</th>
+<td class="td" style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left; border-top-width: 4px"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$_SESSION</td>
+</tr>
+
+
+<tr><th class="td" colspan="2" style="color: #636363;border: 1px solid #e5e5e5;vertical-align: middle;padding: 12px;text-align: left;border-top-width: 4px;">DropOff Address:</th>
+<td class="td" style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left; border-top-width: 4px"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$_SESSION</td>
+</tr>
+
+<tr><th class="td" colspan="2" style="color: #636363;border: 1px solid #e5e5e5;vertical-align: middle;padding: 12px;text-align: left;border-top-width: 4px;">Delivery Date:</th>
+<td class="td" style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left; border-top-width: 4px"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$_SESSION</td>
+</tr>
+<tr><th class="td" colspan="2" style="color: #636363;border: 1px solid #e5e5e5;vertical-align: middle;padding: 12px;text-align: left;border-top-width: 4px;">Delivery Time:</th>
+<td class="td" style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left; border-top-width: 4px"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$_SESSION</td>
+</tr>
+
+</tfoot>
+</table>'' cannot be parsed correct.
+HTML code '$'<div class="parent-div" style="display:none"><h3>Doorhub Delivery Service</h3>'' cannot be parsed correct.
+HTML code '$'<input  class="d-time time_input" style="margin:5px;$display" name="delivery_time_sameday" type="radio" $checked id="delivery_time_sameday$distribution" value="$distribution" DELIVERY"><lable class="d-time" id="delivery_time_sameday_lable_$distribution" style="strtotime($distribution->orderBefore)" for="$distribution"substr($distribution->starTime, 0, 5) To substr($distribution->endTime, 0, 5)</lable></br>'' cannot be parsed correct.
+HTML code '$'<div class="wrap">'' cannot be parsed correct.
+HTML code '$'<h2>DoorHub API Key For SameDay Services</h2>'' cannot be parsed correct.
+HTML code '$'<form action="options-general.php?page=update_api_key_sameday" method="post">'' cannot be parsed correct.
+HTML code '$'
+        <div class=\'notice is-dismissible notice-info\'>
+      <p><strong>DoorHub for WooCommerce
+        is ready.</strong> You can update DoorHub API key for sameday here.</p></div>
+        <lable><b>DoorHub API Key: </b></lable>'' cannot be parsed correct.
+HTML code '$'
+        <div class=\'notice is-dismissible notice-info\'>
+      <p><strong>DoorHub for WooCommerce
+        is almost ready.</strong> To complete your configuration, Please add API key.</p></div>
+        <lable><b>DoorHub API Key: </b></lable>'' cannot be parsed correct.
+HTML code '$'<input style="width: 400px;" type="text" required name="doorhhuub_api_key" />'' cannot be parsed correct.
+HTML code '$'</form>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'<label for="msg">Key Saved Successfully</label>'' cannot be parsed correct.
+HTML code '$'<script>location.reload();</script>'' cannot be parsed correct.
+HTML code '$'<script>location.reload();</script>'' cannot be parsed correct.
+HTML code '$'<label for="msg">Key Updated Successfully</label>'' cannot be parsed correct.
+HTML code '$'<button id=\'cancel_order_sameday\' style=\'margin-bottom: 10px;\' class=\'red\'>Cancel DoorHub Order</button>'' cannot be parsed correct.
+HTML code '$' </section>'' cannot be parsed correct.
+HTML code '$'<div class="warehouse-div" style="display:none;margin-top:10px;" >'' cannot be parsed correct.
+HTML code '$'<div style="margin-top: 15px;" id="calender">
+                    <div class="form-group">
+                        <label for="">Schedual Delivery Date</label>
+                        <input type="hidden" value="false"  id="date_bit" />
+                        <div class="input-group date"  id="calander1">
+                         <input type="text"  id="datetime" class="form-control" />
+                          <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-calendar"></span>
+                               </span>
+                           </div>
+                     </div>
+                     </div>'' cannot be parsed correct.
+HTML code '$'<h5 class="sorry-message">Sorry! Currenlty No time slot is available.</h5>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'</div>'' cannot be parsed correct.
+HTML code '$'
+           <style>
+#sameday_checkbox_field label.checkbox {
+    display: block;
+}
+#sameday_checkbox_field label.checkbox input[type=checkbox]{
+    position: absolute;
+    right: 0;
+}
+</style>
+               '' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:05.825526.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.054279.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 18 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.955383.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running DbaseDetector
+### Start running FrontBaseDetector
+### Finish running FileProDetector
+### Start running HashDetector
+### Finish running DbplusDetector
+### Start running IBMDb2Detector
+### Finish running FirebirdInterBaseDetector
+### Start running InformixDetector
+### Finish running CubridDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running HashDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MsqlDetector
+### Start running OpenSSLDetector
+### Finish running MongoDbDetector
+### Start running ParadoxDetector
+### Finish running Oci8Detector
+### Start running PasswordHashingDetector
+### Finish running OpenSSLDetector
+### Start running PhpCurlDetector
+### Finish running ParadoxDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running ArrayElementDetector
+### Start running PHPRetrievalDetector
+### Finish running PhpCurlDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running PasswordHashingDetector
+### Start running PhpVarDetector
+### Finish running PHPIncludedDetector
+### Start running PostgreSQLDetector
+### Finish running PhpVarDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running PHPStorageDetector
+### Start running SqlServerDetector
+### Finish running SqliteDetector
+### Start running SybaseDetector
+### Finish running PropertyDetector
+### Start running TokyoTyrantDetector
+### Finish running SybaseDetector
+### Start running UserInputDetector
+### Finish running Sqlite3Detector
+### Start running VariableDetector
+### Finish running TokyoTyrantDetector
+### Start running WordpressHashingFnDetector
+### Finish running SqlServerDetector
+### Start running WordPressRemoteDetector
+### Finish running WordpressHashingFnDetector
+### Start running WordPressRetrievalDetector
+### Finish running VariableDetector
+### Start running WordPressStorageDetector
+### Finish running UserInputDetector
+### Start running WP_UserDetector
+### Finish running WordPressRetrievalDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running WP_UserDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericEncryptionDetector
+### Start running DeletionDetector
+### Finish running WordPressStorageDetector
+### Start running UninstallDetector
+### Finish running GenericDatabaseUsageDetector
+### Finish running maxdbDetector
+### Finish running MySQLiDetector
+### Finish running DeletionDetector
+### Finish running UninstallDetector
+### Finish running WordPressRemoteDetector
+### Finished running detectors
+functions.php:214
+  - Request variable '$_POST["address"]' of personal types {'address'} is found.
+  - Data types: address 
+
+functions.php:214
+  - variable '$customer_address' of personal types {'address'} is found.
+  - Data types: address
+functions.php:223
+  - variable '$customer_address' of personal types {'address'} is found.
+  - Data types: address
+functions.php:252
+  - variable '$customer_address' of personal types {'address'} is found.
+  - Data types: address
+functions.php:256
+  - variable '$customer_address' of personal types {'address'} is found.
+  - Data types: address 
+
+functions.php:27
+  - API call to wp_remote_get("https://doorhub.io/api/sameday/v1/company/warehouse", ["timeout" => 10, "headers" => ["Authorization" => "Bearer " . $results[0]->key, "Api-Version" => "v1"]]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+functions.php:217
+  - API call to wp_remote_post("https://doorhub.io/api/sameday/v1/warehouse/customer/address/check", ["timeout" => 10, "method" => "POST", "headers" => ["Authorization" => "Bearer " . $_SESSION["doorhub_API_key_sameday"], "Api-Version" => "v1", "Content-type: application/json"], "body" => ["dropOffAddress" => $customer_address]]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+functions.php:269
+  - API call to wp_remote_post("https://doorhub.io/api/sameday/v1/warehouse/order/checkout", ["timeout" => 10, "method" => "POST", "headers" => ["Authorization" => "Bearer " . $_SESSION["doorhub_API_key_sameday"], "Api-Version" => "v1", "Content-type: application/x-www-form-urlencoded"], "body" => $body]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote
+functions.php:517
+  - API call to wp_remote_post("https://doorhub.io/api/sameday/v1/warehouse/order/cancel", ["timeout" => 10, "method" => "PATCH ", "headers" => ["Authorization" => "Bearer " . $_SESSION["doorhub_API_key_sameday"], "Api-Version" => "v1"], "body" => ["orderRef" => $_SESSION["place_order_response"]->data->orderRef]]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).
+  - Data types: remote 
+
+doorhub-sameday.php:23
+  - RETRIEVAL call to get_option("my_plugin_do_activation_redirect", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+doorhub-sameday.php:51
+  - RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array). 
+
+doorhub-sameday.php:19
+  - STORAGE call to add_option("my_plugin_do_activation_redirect", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+doorhub-sameday.php:24
+  - STORAGE call to delete_option("my_plugin_do_activation_redirect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+doorhub-sameday.php:24
+  - DELETION call to delete_option("my_plugin_do_activation_redirect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).
+  - Data types: option 
+
+By data type:
+address
+	ArrayElementDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+	VariableDetector.(unknown) - {'address'}
+none
+	WordPressRetrievalDetector.dbDelta($sql) - set()
+option
+	WordPressStorageDetector.delete_option("my_plugin_do_activation_redirect") - {'option'}
+	DeletionDetector.delete_option("my_plugin_do_activation_redirect") - {'option'}
+	WordPressRetrievalDetector.get_option("my_plugin_do_activation_redirect", false) - {'option'}
+	WordPressStorageDetector.add_option("my_plugin_do_activation_redirect", true) - {'option'}
+remote
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+	WordPressRemoteDetector.(unknown) - {'remote'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:08.461242.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 2 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.085151.
+
+2 STORE_REACHES edges created
+2 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 35 nodes as PERSONAL
+In total, tainted 35 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+In total, tainted 0 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.084145.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:39.492602!
+Request variable '$_POST["address"]' of personal types {'address'} is found.,,None
+DELETION call to delete_option("my_plugin_do_activation_redirect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+variable '$customer_address' of personal types {'address'} is found.,,None
+variable '$customer_address' of personal types {'address'} is found.,,None
+variable '$customer_address' of personal types {'address'} is found.,,None
+variable '$customer_address' of personal types {'address'} is found.,,None
+API call to wp_remote_post("https://doorhub.io/api/sameday/v1/warehouse/customer/address/check", ["timeout" => 10, "method" => "POST", "headers" => ["Authorization" => "Bearer " . $_SESSION["doorhub_API_key_sameday"], "Api-Version" => "v1", "Content-type: application/json"], "body" => ["dropOffAddress" => $customer_address]]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://doorhub.io/api/sameday/v1/warehouse/customer/address/check']
+API call to wp_remote_post("https://doorhub.io/api/sameday/v1/warehouse/order/checkout", ["timeout" => 10, "method" => "POST", "headers" => ["Authorization" => "Bearer " . $_SESSION["doorhub_API_key_sameday"], "Api-Version" => "v1", "Content-type: application/x-www-form-urlencoded"], "body" => $body]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://doorhub.io/api/sameday/v1/warehouse/order/checkout']
+API call to wp_remote_get("https://doorhub.io/api/sameday/v1/company/warehouse", ["timeout" => 10, "headers" => ["Authorization" => "Bearer " . $results[0]->key, "Api-Version" => "v1"]]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://doorhub.io/api/sameday/v1/company/warehouse']
+API call to wp_remote_post("https://doorhub.io/api/sameday/v1/warehouse/order/cancel", ["timeout" => 10, "method" => "PATCH ", "headers" => ["Authorization" => "Bearer " . $_SESSION["doorhub_API_key_sameday"], "Api-Version" => "v1"], "body" => ["orderRef" => $_SESSION["place_order_response"]->data->orderRef]]). Passed arguments: 0: $url (string), 1: $args (array). Returns (array|WP_Error).,https,['https://doorhub.io/api/sameday/v1/warehouse/order/cancel']
+RETRIEVAL call to get_option("my_plugin_do_activation_redirect", false) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to dbDelta($sql). Passed arguments: 0: $queries (string[]|string). Returns (array).,None,None
+STORAGE call to add_option("my_plugin_do_activation_redirect", true) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to delete_option("my_plugin_do_activation_redirect") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (bool).,None,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party at "https://doorhub.io/api/sameday/v1/warehouse/customer/address/check" used with data types ['address'], found in file functions.php at line 217 . Personal data flows from sources with nodeID [1177, 1229, 1183]  
+
+[third_party] Third party at "https://doorhub.io/api/sameday/v1/warehouse/order/checkout" used with data types ['address'], found in file functions.php at line 269 . Personal data flows from sources with nodeID [1330, 1366]  
+
+[third_party] Third party usage is CONFIRMED for data types ['address'] 
+
+[encryption] API call that sends PII to "https://doorhub.io/api/sameday/v1/warehouse/customer/address/check" uses https. PII is insecurely encrypted with []. Found in file functions.php at line 217 
+
+[encryption] API call that sends PII to "https://doorhub.io/api/sameday/v1/warehouse/order/checkout" uses https. PII is insecurely encrypted with []. Found in file functions.php at line 269 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? True 
+
+[main] Is encryption in violation? True 
+
+[main] Complaint? False 
+
+No findings

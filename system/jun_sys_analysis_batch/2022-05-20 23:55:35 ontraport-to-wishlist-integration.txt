@@ -1,0 +1,621 @@
+Timeout in resolving values
+Timeout in running neo4j query
+Running Main.py on ontraport-to-wishlist-integration
+
+###########################
+### Preprocessing stage ###
+###########################
+### Starting preproccessing!
+Registering plugin to plugin database... Plugin registration done
+╔[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) begin.
+╚[1] Preprocessing step "Add AST_JS label to JS nodes" (__label_js_nodes) finished successfully in 0:00:00.439457.
+
+0 edges imported to Neo4j
+Preprocessing step 0 done!
+╔[2] Preprocessing step "Create DB indices" (__create_indices) begin.
+Creating indices for commonly used features... done.
+╚[2] Preprocessing step "Create DB indices" (__create_indices) finished successfully in 0:00:01.039980.
+
+0 edges imported to Neo4j
+Preprocessing step 1 done!
+Analzying PHP class hierarchy...
+Start filling class hierarchy information
+Finished filling class hierarchy information
+Start filling function information
+Finished filling function information
+0 edges imported to Neo4j
+Preprocessing step 2 done!
+╔[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) begin.
+Added 12 PHP_REACHES edges.
+╚[3] Preprocessing step "connect data flows for class properties" (__handle_class_properties) finished successfully in 0:00:00.360250.
+
+╔[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) begin.
+Added 0 REACHES edges for AST_PARAM to variables
+╚[4] Preprocessing step "Connect AST_PARAM edges" (__connect_ASTPARAM_to_var) finished successfully in 0:00:00.405746.
+
+╔[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) begin.
+Added 281 :PHP_REACHES for original :REACHES edges.
+╚[5] Preprocessing step "Create PHP_REACHES edges" (__php_reach_edges) finished successfully in 0:00:00.924105.
+
+╔[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) begin.
+Added 0 CALLS edges.
+╚[6] Preprocessing step "Create parent-to-self edges" (__parent_self_edges) finished successfully in 0:00:00.760022.
+
+╔[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) begin.
+╚[7] Preprocessing step "Connect data flows for class constants" (__class_constant_hierarchy) finished successfully in 0:00:00.100275.
+
+╔[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) begin.
+Added 130 PHP_REACHES edges.
+╚[8] Preprocessing step "Create AST assign hierarchy PHP_REACHES edges" (__ast_assign_function_edges) finished successfully in 0:00:01.941017.
+
+╔[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) begin.
+Building hierarchical edges for PHP...
+Number of rows: 2051
+Added 1628 PHP_REACHES edges. 
+Building hierarchical edges for JS...
+Number of rows: 2051
+Added 0 JS_REACHES edges. 
+╚[9] Preprocessing step "Build hierarchical data flow edges for php and js" (__build_php_js_hierarchical_edges) finished successfully in 0:00:01.273978.
+
+╔[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) begin.
+HTML code from file '/home/ec2-user/GDPR-CCPA-violation-checker/navex_docker/tempApp/ontraport-to-wishlist-integration/ontraport-wishlist-integration.php' cannot be parsed correct.
+╚[10] Preprocessing step "Building HTML ASTs" (__build_html_ast) finished successfully in 0:00:00.181397.
+
+1000 PHP_REACHES edges created
+2000 PHP_REACHES edges created
+2051 PHP_REACHES edges created
+2051 edges imported to Neo4j
+Preprocessing step 3 done!
+╔[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) begin.
+Deleted 800 incorrect PHP_REACHES edges. Deleted 0 incorrect JS_REACHES edges.
+╚[11] Preprocessing step "Remove wrong/excessive hierarchical edges" (__remove_wrong_hierarchical_edges) finished successfully in 0:00:00.992788.
+
+0 edges imported to Neo4j
+Preprocessing step 4 done!
+╔[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[12] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:01.327096.
+
+╔[13] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 38 PHP_REACHES edges to function parameters.
+╚[13] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:01.774655.
+
+╔[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 31 PHP_REACHES edges.
+╚[14] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.250469.
+
+╔[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) begin.
+Added 0 CALLS edges.
+╚[15] Preprocessing step "Handle class hierarchy and make CALLS edges and certain data flows" (__handle_class_hierarchy) finished successfully in 0:00:00.160499.
+
+╔[16] Preprocessing step "Create function call edges" (__function_call_edges) begin.
+Added 0 PHP_REACHES edges to function parameters.
+╚[16] Preprocessing step "Create function call edges" (__function_call_edges) finished successfully in 0:00:00.418549.
+
+╔[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) begin.
+Added 0 PHP_REACHES edges.
+╚[17] Preprocessing step "Create PHP_REACHES edges between function returns and callers" (__ast_call_return_edges) finished successfully in 0:00:00.013811.
+
+╔[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) begin.
+Added 0 HTML_TO_PHP_REACHES edges. Successfully connect 0 out of 0 inputs to PHP. 
+╚[18] Preprocessing step "Create HTML_TO_PHP_REACHES edges between form inputs and PHP request vars" (__html_to_php_reaches) finished successfully in 0:00:00.034178.
+
+69 PHP_REACHES edges created
+69 edges imported to Neo4j
+Preprocessing step 5 done!
+╔[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) begin.
+Deleted 73 PHP_REACHES edges that overtaint function call data flows.
+╚[19] Preprocessing step "Overtaint Function Calls" (__overtaintFunctionCalls) finished successfully in 0:00:00.154071.
+
+0 edges imported to Neo4j
+Preprocessing step 6 done!
+╔[20] Preprocessing step "Create SQL AST" (__add_sql_ast) begin.
+No SQL nodes to process.
+╚[20] Preprocessing step "Create SQL AST" (__add_sql_ast) finished successfully in 0:00:00.160208.
+
+╔[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) begin.
+HTML code '$'<div class="updated">
+        		<p><strong>ONTRAPORT to Wishlist Member Integration:</strong> How do I get License Key?<br />Please visit this URL <a href="$this_plugin_links_license_link" target="_blank">$this_plugin_links_license_link</a> to get a License Key .</p>
+	    	</div>'' cannot be parsed correct.
+HTML code '$'<div class="error">
+        		<p><strong>ONTRAPORT to Wishlist Member Integration:</strong> get_option("ontraport-wishlist-helper_message", "")</p>
+	    	</div>'' cannot be parsed correct.
+HTML code '$'get_option("ontraportWishlistHelper_license_key", "")'' cannot be parsed correct.
+HTML code '$'get_option("ontraport-wishlist-helper_message", "")'' cannot be parsed correct.
+HTML code '$'<input id=\'oap_id\' name=\'wlhelper_oap_id[text_string]\' size=\'40\' type=\'text\' value=\'\' />'' cannot be parsed correct.
+HTML code '$'<input id=\'oap_password_field\' name=\'wlhelper_oap_key[text_string]\' size=\'40\' type=\'text\' value=\'get_option("wlhelper_oap_key")_text_string\' />'' cannot be parsed correct.
+HTML code '$'<input id=\'oap_key\' name=\'wlhelper_oap_wlpwdsection[text_string]\' size=\'40\' type=\'text\' value=\'\' />'' cannot be parsed correct.
+HTML code '$'<input id=\'oap_key\' name=\'wlhelper_oap_wlpwd[text_string]\' size=\'40\' type=\'text\' value=\'get_option("wlhelper_oap_wlpwd")_text_string\' />'' cannot be parsed correct.
+HTML code '$'" /></td>
+                   	</tr>
+              	</table>
+			'' cannot be parsed correct.
+HTML code '$'<p></p>'' cannot be parsed correct.
+╚[21] Preprocessing step "Build HTML AST for HTML embedded in PHP code (HTML to PHP traversal)" (__build_html_ast_in_php) finished successfully in 0:00:02.174259.
+
+╔[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) begin.
+Successfully connected PHP to HTML ASTs in 0 out of 0 files. Added 0 PHP_TO_HTML_REACHES edges.
+╚[22] Preprocessing step "Connect HTML AST and PHP AST trees (PHP to HTML traversal)" (__connect_html_php_ast) finished successfully in 0:00:00.045093.
+
+╔[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) begin.
+Found 0 do_action/apply_filters calls and 9 add_action/add_filter calls. Now connecting do-add pairs.
+Added 0 :PHP_REACHES edges.
+╚[23] Preprocessing step "Create do_action and apply_filter edges" (__do_action_to_function) finished successfully in 0:00:00.595512.
+
+0 edges imported to Neo4j
+Preprocessing step 7 done!
+╔[24] Preprocessing step "Security/storage detectors" (__security_detectors) begin.
+### Running detectors
+### Start running ArrayElementDetector
+### Start running CubridDetector
+### Start running DbaseDetector
+### Start running DbplusDetector
+### Start running DefuseDetector
+### Finish running DefuseDetector
+### Start running FileProDetector
+### Start running FirebirdInterBaseDetector
+### Finish running CubridDetector
+### Start running FrontBaseDetector
+### Finish running FirebirdInterBaseDetector
+### Start running HashDetector
+### Finish running FileProDetector
+### Start running IBMDb2Detector
+### Finish running DbaseDetector
+### Start running InformixDetector
+### Finish running DbplusDetector
+### Start running IngresDetector
+### Finish running FrontBaseDetector
+### Start running maxdbDetector
+### Finish running InformixDetector
+### Start running MongoDbDetector
+### Finish running IngresDetector
+### Start running MongoDetector
+### Finish running MongoDetector
+### Start running MsqlDetector
+### Finish running IBMDb2Detector
+### Start running MySQLDetector
+### Finish running MsqlDetector
+### Start running MySQLiDetector
+### Finish running MySQLDetector
+### Start running Oci8Detector
+### Finish running MongoDbDetector
+### Start running OpenSSLDetector
+### Finish running Oci8Detector
+### Start running ParadoxDetector
+### Finish running ParadoxDetector
+### Start running PasswordHashingDetector
+### Finish running HashDetector
+### Start running PhpCurlDetector
+### Finish running PasswordHashingDetector
+### Start running PHPDataObjectDetector
+### Finish running PHPDataObjectDetector
+### Start running PHPIncludedDetector
+### Finish running OpenSSLDetector
+### Start running PHPRetrievalDetector
+### Finish running PHPIncludedDetector
+### Start running PHPSecLibDetector
+### Finish running PHPSecLibDetector
+### Start running PHPStorageDetector
+### Finish running ArrayElementDetector
+### Start running PhpVarDetector
+### Finish running PhpVarDetector
+### Start running PostgreSQLDetector
+### Finish running PHPStorageDetector
+### Start running PropertyDetector
+### Finish running PostgreSQLDetector
+### Start running Sqlite3Detector
+### Finish running PHPRetrievalDetector
+### Start running SqliteDetector
+### Finish running SqliteDetector
+### Start running SqlServerDetector
+### Finish running Sqlite3Detector
+### Start running SybaseDetector
+### Finish running SybaseDetector
+### Start running TokyoTyrantDetector
+### Finish running PropertyDetector
+### Start running UserInputDetector
+### Finish running maxdbDetector
+### Start running VariableDetector
+### Finish running MySQLiDetector
+### Start running WordpressHashingFnDetector
+### Finish running TokyoTyrantDetector
+### Start running WordPressRemoteDetector
+### Finish running SqlServerDetector
+### Start running WordPressRetrievalDetector
+### Finish running WordPressRemoteDetector
+### Start running WordPressStorageDetector
+### Finish running UserInputDetector
+### Start running WP_UserDetector
+### Finish running WP_UserDetector
+### Start running GenericDatabaseUsageDetector
+### Finish running VariableDetector
+### Start running GenericEncryptionDetector
+### Finish running GenericDatabaseUsageDetector
+### Start running DeletionDetector
+### Finish running GenericEncryptionDetector
+### Start running UninstallDetector
+### Finish running WordpressHashingFnDetector
+### Finish running WordPressStorageDetector
+### Finish running PhpCurlDetector
+### Finish running DeletionDetector
+### Finish running WordPressRetrievalDetector
+### Finish running UninstallDetector
+### Finished running detectors
+ontraport-wishlist-integration.php:363
+  - Request variable '$_GET["email"]' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:415
+  - Request variable '$_GET["email"]' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:436
+  - Request variable '$_GET["email"]' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:459
+  - Request variable '$_GET["email"]' of personal types {'email'} is found.
+  - Data types: email 
+
+ontraport-wishlist-integration.php:223
+  - External request to URL https://api.ontraport.com/.
+  - Data types: remote 
+
+ontraport-wishlist-integration.php:496
+  - RETRIEVAL call to file_get_contents("https://api.ontraport.com/1/object?objectID=14&id=" . $tag_id, false, $context).
+  - Data types: file 
+
+ontraport-wishlist-integration.php:126
+  - object property '$user->user_email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:285
+  - object property '$current_user->user_email' of personal types {'email'} is found.
+  - Data types: email 
+
+ontraport-wishlist-integration.php:126
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:131
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:245
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:246
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:264
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:285
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:287
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:293
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:363
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:415
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:436
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email
+ontraport-wishlist-integration.php:459
+  - variable '$email' of personal types {'email'} is found.
+  - Data types: email 
+
+ontraport-wishlist-integration.php:347
+  - CRYPTOGRAPHY call to wp_set_password($source["pass"], $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).
+  - Data types: user_meta
+ontraport-wishlist-integration.php:350
+  - CRYPTOGRAPHY call to wp_set_password($correctedpass, $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).
+  - Data types: user_meta
+ontraport-wishlist-integration.php:384
+  - CRYPTOGRAPHY call to wp_set_password($source["pass"], $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).
+  - Data types: user_meta
+ontraport-wishlist-integration.php:402
+  - CRYPTOGRAPHY call to wp_update_user(["ID" => $userid, "first_name" => $source["fname"], "last_name" => $source["lname"], "display_name" => $source["fname"], "nickname" => $source["fname"]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).
+  - Data types: user, user_meta 
+
+ontraport-wishlist-integration.php:20
+  - RETRIEVAL call to get_option("ontraport-wishlist-helper_plugin_link_support_link", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:20
+  - RETRIEVAL call to get_option("ontraport-wishlist-helper_plugin_link_license_link", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:47
+  - RETRIEVAL call to get_option("ontraport-wishlist-helper_plugin_authenticated", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:83
+  - RETRIEVAL call to get_option("ontraportWishlistHelper_license_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:125
+  - RETRIEVAL call to get_user_by("login", $login) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).
+  - Data types: user, user_meta
+ontraport-wishlist-integration.php:127
+  - RETRIEVAL call to get_option("wlhelper_oap_wlpwdsection") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:197
+  - RETRIEVAL call to get_option("ontraportWishlistHelper_license_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:203
+  - RETRIEVAL call to get_option("ontraport-wishlist-helper_message", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:212
+  - RETRIEVAL call to get_option("wlhelper_oap_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:213
+  - RETRIEVAL call to get_option("wlhelper_oap_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:240
+  - RETRIEVAL call to get_option("wlhelper_oap_wlpwdsection") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:241
+  - RETRIEVAL call to get_option("wlhelper_oap_wlpwd") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:283
+  - RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).
+  - Data types: user, user_meta
+ontraport-wishlist-integration.php:480
+  - RETRIEVAL call to get_option("wlhelper_oap_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:481
+  - RETRIEVAL call to get_option("wlhelper_oap_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:518
+  - RETRIEVAL call to get_option("ontraportWishlistHelper_license_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:526
+  - RETRIEVAL call to get_option("ontraport-wishlist-helper_message", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:558
+  - RETRIEVAL call to get_option("wlhelper_oap_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:567
+  - RETRIEVAL call to get_option("wlhelper_oap_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:576
+  - RETRIEVAL call to get_option("wlhelper_oap_wlpwdsection") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:585
+  - RETRIEVAL call to get_option("wlhelper_oap_wlpwd") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option
+ontraport-wishlist-integration.php:605
+  - RETRIEVAL call to get_option("wlhelper_oap_wlpwd") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).
+  - Data types: option 
+
+ontraport-wishlist-integration.php:28
+  - STORAGE call to add_option("ontraportWishlistHelper_license_key", $_POST["ontraportWishlistHelper_license_key"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:28
+  - STORAGE call to update_option("ontraportWishlistHelper_license_key", $_POST["ontraportWishlistHelper_license_key"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:80
+  - STORAGE call to update_option("ontraport-wishlist-helper_plugin_link_support_link", $response->message->support_link) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:81
+  - STORAGE call to update_option("ontraport-wishlist-helper_plugin_link_license_link", $response->message->license_link) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:97
+  - STORAGE call to update_option("ontraport-wishlist-helper_plugin_authenticated", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:99
+  - STORAGE call to update_option("ontraport-wishlist-helper_message", $response->message) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:102
+  - STORAGE call to update_option("ontraport-wishlist-helper_plugin_authenticated", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:104
+  - STORAGE call to update_option("ontraport-wishlist-helper_message", $response->message) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:108
+  - STORAGE call to update_option("ontraport-wishlist-helper_plugin_authenticated", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:109
+  - STORAGE call to update_option("ontraport-wishlist-helper_message", "Please enter valid license key") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).
+  - Data types: option
+ontraport-wishlist-integration.php:347
+  - STORAGE call to wp_set_password($source["pass"], $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).
+  - Data types: user_meta
+ontraport-wishlist-integration.php:350
+  - STORAGE call to wp_set_password($correctedpass, $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).
+  - Data types: user_meta
+ontraport-wishlist-integration.php:384
+  - STORAGE call to wp_set_password($source["pass"], $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).
+  - Data types: user_meta
+ontraport-wishlist-integration.php:402
+  - STORAGE call to wp_update_user(["ID" => $userid, "first_name" => $source["fname"], "last_name" => $source["lname"], "display_name" => $source["fname"], "nickname" => $source["fname"]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).
+  - Data types: user, user_meta 
+
+By data type:
+email
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	PropertyDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	ArrayElementDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+	VariableDetector.(unknown) - {'email'}
+file
+	PHPRetrievalDetector.file_get_contents("https://api.ontraport.com/1/object?objectID=14&id=" . $tag_id, false, $context) - {'file'}
+option
+	WordPressRetrievalDetector.get_option("ontraport-wishlist-helper_plugin_link_license_link", "") - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_wlpwdsection") - {'option'}
+	WordPressRetrievalDetector.get_option("ontraport-wishlist-helper_message", "") - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_key") - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_id") - {'option'}
+	WordPressStorageDetector.update_option("ontraportWishlistHelper_license_key", $_POST["ontraportWishlistHelper_license_key"]) - {'option'}
+	WordPressStorageDetector.update_option("ontraport-wishlist-helper_plugin_link_support_link", $response->message->support_link) - {'option'}
+	WordPressStorageDetector.update_option("ontraport-wishlist-helper_message", "Please enter valid license key") - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_wlpwd") - {'option'}
+	WordPressStorageDetector.update_option("ontraport-wishlist-helper_plugin_authenticated", "yes") - {'option'}
+	WordPressStorageDetector.update_option("ontraport-wishlist-helper_message", $response->message) - {'option'}
+	WordPressStorageDetector.update_option("ontraport-wishlist-helper_message", $response->message) - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_key") - {'option'}
+	WordPressRetrievalDetector.get_option("ontraportWishlistHelper_license_key", "") - {'option'}
+	WordPressStorageDetector.update_option("ontraport-wishlist-helper_plugin_authenticated", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("ontraport-wishlist-helper_message", "") - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_id") - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_id") - {'option'}
+	WordPressRetrievalDetector.get_option("ontraportWishlistHelper_license_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_wlpwdsection") - {'option'}
+	WordPressStorageDetector.add_option("ontraportWishlistHelper_license_key", $_POST["ontraportWishlistHelper_license_key"]) - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_wlpwd") - {'option'}
+	WordPressStorageDetector.update_option("ontraport-wishlist-helper_plugin_authenticated", "no") - {'option'}
+	WordPressStorageDetector.update_option("ontraport-wishlist-helper_plugin_link_license_link", $response->message->license_link) - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_wlpwdsection") - {'option'}
+	WordPressRetrievalDetector.get_option("ontraport-wishlist-helper_plugin_authenticated", "no") - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_wlpwd") - {'option'}
+	WordPressRetrievalDetector.get_option("ontraport-wishlist-helper_plugin_link_support_link", "") - {'option'}
+	WordPressRetrievalDetector.get_option("ontraportWishlistHelper_license_key", "") - {'option'}
+	WordPressRetrievalDetector.get_option("wlhelper_oap_key") - {'option'}
+remote
+	PhpCurlDetector.(unknown) - {'remote'}
+user
+	WordPressStorageDetector.wp_update_user(["ID" => $userid, "first_name" => $source["fname"], "last_name" => $source["lname"], "display_name" => $source["fname"], "nickname" => $source["fname"]]) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_user_by("login", $login) - {'user', 'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	WordpressHashingFnDetector.wp_update_user(["ID" => $userid, "first_name" => $source["fname"], "last_name" => $source["lname"], "display_name" => $source["fname"], "nickname" => $source["fname"]]) - {'user', 'user_meta'}
+user_meta
+	WordPressStorageDetector.wp_set_password($source["pass"], $userid) - {'user_meta'}
+	WordpressHashingFnDetector.wp_set_password($source["pass"], $userid) - {'user_meta'}
+	WordPressStorageDetector.wp_set_password($source["pass"], $userid) - {'user_meta'}
+	WordPressStorageDetector.wp_update_user(["ID" => $userid, "first_name" => $source["fname"], "last_name" => $source["lname"], "display_name" => $source["fname"], "nickname" => $source["fname"]]) - {'user', 'user_meta'}
+	WordpressHashingFnDetector.wp_set_password($correctedpass, $userid) - {'user_meta'}
+	WordPressRetrievalDetector.get_user_by("login", $login) - {'user', 'user_meta'}
+	WordPressStorageDetector.wp_set_password($correctedpass, $userid) - {'user_meta'}
+	WordPressRetrievalDetector.get_currentuserinfo() - {'user', 'user_meta'}
+	WordpressHashingFnDetector.wp_update_user(["ID" => $userid, "first_name" => $source["fname"], "last_name" => $source["lname"], "display_name" => $source["fname"], "nickname" => $source["fname"]]) - {'user', 'user_meta'}
+	WordpressHashingFnDetector.wp_set_password($source["pass"], $userid) - {'user_meta'}
+╚[24] Preprocessing step "Security/storage detectors" (__security_detectors) finished successfully in 0:00:10.519724.
+
+0 edges imported to Neo4j
+Preprocessing step 8 done!
+╔[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) begin.
+Adding storage reaches edges... Finished collecting storage and retrieval nodes from detectors
+Finished collecting sql insert, update, and select nodes
+Finished collecting SQL statement info
+Start inserting STORE_REACHES
+Done adding storage edges. Added 208 edges in all.
+╚[25] Preprocessing step "Create source to sink edges" (__storage_to_retrieval) finished successfully in 0:00:00.278302.
+
+208 STORE_REACHES edges created
+208 edges imported to Neo4j
+Preprocessing step 9 done!
+╔[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) begin.
+Finished collecting propagation info for personal nodes
+Wrote source sink information to database
+Tainted 35 nodes as PERSONAL
+In total, tainted 35 nodes as PERSONAL
+Finished collecting propagation info for encrypted nodes
+Tainted 20 nodes as ENCRYPTED
+In total, tainted 20 nodes as ENCRYPTED
+╚[26] Preprocessing step "Label all of the personal data nodes and encrypted nodes" (__taint_nodes) finished successfully in 0:00:01.596090.
+
+0 edges imported to Neo4j
+Preprocessing step 10 done!
+### Preprocessing done in 0:00:37.753860!
+Request variable '$_GET["email"]' of personal types {'email'} is found.,,None
+Request variable '$_GET["email"]' of personal types {'email'} is found.,,None
+Request variable '$_GET["email"]' of personal types {'email'} is found.,,None
+Request variable '$_GET["email"]' of personal types {'email'} is found.,,None
+RETRIEVAL call to file_get_contents("https://api.ontraport.com/1/object?objectID=14&id=" . $tag_id, false, $context).,None,None
+External request to URL https://api.ontraport.com/.,https,['https://api.ontraport.com/']
+object property '$user->user_email' of personal types {'email'} is found.,,None
+object property '$current_user->user_email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+variable '$email' of personal types {'email'} is found.,,None
+RETRIEVAL call to get_user_by("login", $login) alters data types {'user', 'user_meta'}. Passed arguments: 0: $field (string), 1: $value (int|string). Returns (WP_User|false).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_wlpwdsection") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ontraportWishlistHelper_license_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ontraport-wishlist-helper_plugin_link_license_link", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ontraport-wishlist-helper_plugin_link_support_link", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ontraport-wishlist-helper_message", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_wlpwdsection") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_wlpwd") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_currentuserinfo() alters data types {'user', 'user_meta'}. Returns (bool|WP_User).,None,None
+RETRIEVAL call to get_option("ontraport-wishlist-helper_plugin_authenticated", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ontraportWishlistHelper_license_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ontraport-wishlist-helper_message", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_id") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_key") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_wlpwdsection") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_wlpwd") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("wlhelper_oap_wlpwd") alters data types {'option'}. Passed arguments: 0: $option (string). Returns (mixed).,None,None
+RETRIEVAL call to get_option("ontraportWishlistHelper_license_key", "") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $default (mixed). Returns (mixed).,None,None
+STORAGE call to update_option("ontraport-wishlist-helper_plugin_authenticated", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ontraport-wishlist-helper_message", $response->message) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ontraport-wishlist-helper_plugin_authenticated", "no") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ontraport-wishlist-helper_message", "Please enter valid license key") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ontraportWishlistHelper_license_key", $_POST["ontraportWishlistHelper_license_key"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to add_option("ontraportWishlistHelper_license_key", $_POST["ontraportWishlistHelper_license_key"]) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to wp_set_password($source["pass"], $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).,None,None
+STORAGE call to wp_set_password($correctedpass, $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).,None,None
+STORAGE call to wp_set_password($source["pass"], $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).,None,None
+STORAGE call to wp_update_user(["ID" => $userid, "first_name" => $source["fname"], "last_name" => $source["lname"], "display_name" => $source["fname"], "nickname" => $source["fname"]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).,None,None
+STORAGE call to update_option("ontraport-wishlist-helper_plugin_link_support_link", $response->message->support_link) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ontraport-wishlist-helper_plugin_link_license_link", $response->message->license_link) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ontraport-wishlist-helper_plugin_authenticated", "yes") alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+STORAGE call to update_option("ontraport-wishlist-helper_message", $response->message) alters data types {'option'}. Passed arguments: 0: $option (string), 1: $value (mixed). Returns (bool).,None,None
+CRYPTOGRAPHY call to wp_set_password($source["pass"], $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).,hash,None
+CRYPTOGRAPHY call to wp_set_password($correctedpass, $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).,hash,None
+CRYPTOGRAPHY call to wp_set_password($source["pass"], $userid) alters data types {'user_meta'}. Passed arguments: 0: $password (string), 1: $user_id (int).,hash,None
+CRYPTOGRAPHY call to wp_update_user(["ID" => $userid, "first_name" => $source["fname"], "last_name" => $source["lname"], "display_name" => $source["fname"], "nickname" => $source["fname"]]) alters data types {'user', 'user_meta'}. Passed arguments: 0: $userdata (array|object|WP_User). Returns (int|WP_Error).,hash,None
+Finding all hooks in the current plugin...
+Storing all hook information in the current plugin...
+
+############################
+### Incompliance Finding ###
+############################
+
+We found following evidences that your plugin is in violation of General Data Protection Regulation (GDPR).
+[main] Found at least one personal data usage in the plugin. Analyzing the plugin. 
+
+[has_storage] WP User info of types (['user', 'user_meta']) stored through WordPress function "wp_set_password($source["pass"], $userid)", found in file ontraport-wishlist-integration.php at line 347. 
+
+[has_storage] WP User info of types (['user_meta']) stored through WordPress function "wp_set_password($source["pass"], $userid)", found in file ontraport-wishlist-integration.php at line 384. 
+
+[has_storage] WP User info of types (['user', 'user_meta']) stored through WordPress function "wp_update_user(["ID" => $userid, "first_name" => $source["fname"], "last_name" => $source["lname"], "display_name" => $source["fname"], "nickname" => $source["fname"]])", found in file ontraport-wishlist-integration.php at line 402. 
+
+[has_storage] WP User info of types (['user_meta']) stored through WordPress function "wp_set_password($correctedpass, $userid)", found in file ontraport-wishlist-integration.php at line 350. 
+
+[has_storage] Storage check is NONE 
+
+[third_party] Third party usage is NONE for data types [] 
+
+[main] Applicable GDPR requirements: ['encryption', 'third_party'] 
+
+[main] Is third_party in violation? False 
+
+[main] Is encryption in violation? False 
+
+[main] Complaint? True 
+
+No findings
