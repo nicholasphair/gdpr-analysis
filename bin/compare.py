@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
+from collections import Counter
 import csv
 import json
-from collections import Counter
+import sys
 
-folder = 'data'
-MANUAL_ANALYSIS = 'ma.csv'
+folder = sys.argv[1]
+MANUAL_ANALYSIS = '../manual/manual_analysis.csv'
 SYSTEM_ANALYSIS = f'{folder}/success.csv'
 OUTPUT = f'{folder}/results.csv'
 STATS = f'{folder}/stats.json'
