@@ -5,7 +5,7 @@
 
 **manual_analysis_meta.csv** - frequently used metadata concerning only the
 plugins used for manual analysis. Most of the columns are self-explanatory,
-with the exception of `path`. `path` is the location in the zip file that
+with the exception of `path`. `path` is the location in the [zip file][1] that
 contains all of the plugins. You can use this value to extract only the plugin
 you want.   
 
@@ -15,3 +15,4 @@ unzip plugins.zip <path>
 ```
 
 
+[1]: https://drive.google.com/file/d/1v7yo_XIe3-_J3fLWwVuYuW5ozs42r7Ty/view?usp=sharing
