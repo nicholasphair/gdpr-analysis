@@ -105,7 +105,7 @@ for file in *.txt; do
   parse_results_no_pii='/No analysis needed/,$p'
   if sed -n "$parse_results" "$file" | tee "$output" | grep Complaint > /dev/null; then
     process_success "$output"
-  elif sed -n "$parse_results_no_pii" "$file" | tee "$output" | grep Complaint > /dev/null; then
+  elif sed -n "$parse_results_no_pii" "$file" | tee "$output" | grep 'Found no personal data' > /dev/null; then
     process_success "$output"
   else
     process_failure "$output"
